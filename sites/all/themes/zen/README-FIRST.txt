@@ -6,7 +6,7 @@ they download the Zen theme is that there are A LOT of files -- way more than
 other themes.
 
 Don't worry! You don't need to learn everything all at once in order to make a
-drupal theme. Zen will do the bits you haven't learned and patiently wait for
+Drupal theme. Zen will do the bits you haven't learned and patiently wait for
 you to discover the documentation and inline comments about them.
 
 
@@ -51,10 +51,10 @@ Theme .info file
   Drupal needs to know: its name, description, features, template regions, CSS
   files, and JavaScript. Don't worry about all these lines just yet.
 
-CSS
+Sass
   Once you have created your sub-theme, look at the README.txt in your
-  sub-theme's css folder. Don't freak out about all the files in this directory;
-  just read the README.txt file for an explanation.
+  sub-theme's sass folder. Don't freak out about all the files in this
+  directory; just read the README.txt file for an explanation.
 
 Templates
   Now take a look at the README.txt in your sub-theme's templates folder.
@@ -64,33 +64,21 @@ ONLINE READING
 --------------
 
 Full documentation on the Zen theme can be found in Drupal's Handbook:
-  http://drupal.org/node/193318
+  https://drupal.org/documentation/theme/zen
 
 Excellent documentation on Drupal theming can be found in the Theme Guide:
-  http://drupal.org/theme-guide
+  https://drupal.org/theme-guide
 
 
 INSTALLATION
 ------------
 
- 1. Download Zen from http://drupal.org/project/zen
+ 1. Download Zen from https://drupal.org/project/zen
 
  2. Unpack the downloaded file, take the entire zen folder and place it in your
-    Drupal installation under one of the following locations:
-      sites/all/themes
-        making it available to the default Drupal site and to all Drupal sites
-        in a multi-site configuration
-      sites/default/themes
-        making it available to only the default Drupal site
-      sites/example.com/themes
-        making it available to only the example.com site if there is a
-        sites/example.com/settings.php configuration file
-
-    Please note: you will need to manually create the "themes" folder under
-    "sites/default/".
-
-    For more information about acceptable theme installation directories, read
-    the sites/default/default.settings.php file in your Drupal installation.
+    Drupal installation under sites/all/themes. Alternative installation folders
+    can be used; for more information read the sites/example.sites.php file in
+    your Drupal installation.
 
  3. Log in as an administrator on your Drupal site and go to the Appearance page
     at admin/appearance. You will see the Zen theme listed under the Disabled
