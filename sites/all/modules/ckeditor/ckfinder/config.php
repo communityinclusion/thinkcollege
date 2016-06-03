@@ -313,6 +313,21 @@ For more complex configuration options visit our Developer's Guide
 $config['XSendfile'] = false;
 
 
+function CheckAuthentication()
+{
+	// WARNING : DO NOT simply return "true". By doing so, you are allowing
+	// "anyone" to upload and list the files in your server. You must implement
+	// some kind of session validation here. Even something very simple as...
+
+	// return isset($_SESSION['IsAuthorized']) && $_SESSION['IsAuthorized'];
+
+	// ... where $_SESSION['IsAuthorized'] is set to "true" as soon as the
+	// user logs in your system. To be able to use session variables don't
+	// forget to add session_start() at the top of this file.
+
+	return true;
+}
+
 include_once "plugins/imageresize/plugin.php";
 include_once "plugins/fileeditor/plugin.php";
 include_once "plugins/zip/plugin.php";
