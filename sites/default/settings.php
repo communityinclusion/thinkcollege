@@ -306,7 +306,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * shared base domain. Doing so assures that users remain logged in as they
  * cross between your various domains.
  */
-// $cookie_domain = 'devel.thinkcollege.net';
+ $cookie_domain = 'dev-pantheon-think-college.pantheonsite.io';
 
 /**
  * Variable overrides:
