@@ -20,6 +20,7 @@
  * @link authorize Authorized operation helper functions @endlink
  */
 
+
 /**
  * Defines the root directory of the Drupal installation.
  */
