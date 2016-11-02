@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,h6 {
 	font-family:'museo-sans',sans-serif;
 }
 
-.footer {
+.footer-main {
 	background-color:#20527C;
 	color:#fff;
 	padding:20px 80px;
@@ -54,12 +54,9 @@ h1,h2,h3,h4,h5,h6 {
 	background-color:#fff;
 	color:#20527C;
 	padding:20px 80px;
+
 }
 
-.copyright ul li:after {
-	content:" | ";
-	padding:0 10px;
-}
 
 .footer h2 {
 	border-bottom:1px solid #fff;
