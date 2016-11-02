@@ -282,8 +282,7 @@ top: -1.56em;
 
 @media (min-width: 768px)
 .navbar-nav {
-    float: left;
-    margin: 0 0 0 140px;
+    margin: 0 0 0 140px!important;
 }
 
 /*
