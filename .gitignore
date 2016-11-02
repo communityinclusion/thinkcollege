@@ -3,6 +3,7 @@
 /sites/*/private
 /files/*
 /cache
+/sites/default/settings.php
 
 # ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
 /sites/default/**/files
@@ -45,3 +46,5 @@ Thumbs.db
 # Pantheon files directory symlink #
 ####################################
 sites/default/files
+
+sites/default/settings.php
