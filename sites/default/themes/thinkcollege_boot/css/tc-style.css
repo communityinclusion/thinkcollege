@@ -20,13 +20,12 @@ HEX: #E3CE9A
 
 Gray
 HEX: #797A7D
-background: #FFCCCC
-normal text: #FFF46D
-links: #38FF0E
-headings: #77F6FF
-main content bg: #DCAFFF
+background:
+normal text:
+links:
+headings:
+main content bg:
 
-Note: Do not use this color scheme in a real design. It will look horrible.
 */
 body {
 	font-family:'lato',sans-serif;
@@ -281,6 +280,11 @@ top: -1.56em;
 }
 
 
+@media (min-width: 768px)
+.navbar-nav {
+    float: left;
+    margin: 0 0 0 140px;
+}
 
 /*
 .navbar-nav>li>a {
