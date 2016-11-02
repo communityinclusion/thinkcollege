@@ -75,6 +75,7 @@
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
+       <div class="close-ribbon"><img src="http://www.themajorlift.com/dev/img/thinkcollege_white-sm.png" width="95" /></div>
     <div class="navbar-header">
       <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
