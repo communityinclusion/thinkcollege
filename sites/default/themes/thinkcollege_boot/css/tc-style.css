@@ -114,7 +114,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-color:#C96B29;
 }
 
-.page-header{margin-top:160px;}
+.header{margin-top:160px;}
 
 /*---------------------------- NAVIGATION ----------------------------*/
 
@@ -168,7 +168,8 @@ top: -1.56em;
 }
 
 .navbar-default {
-	margin:0 0 60px;
+	/*margin:0 0 60px;*/
+	width:100%;
 	background-color:#20527c;
 	border-top:30px solid #fff;
 	font-family:"museo-sans",sans-serif;

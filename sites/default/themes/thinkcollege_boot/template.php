@@ -6,7 +6,7 @@
  */
 
 
- function explorevr_boot_form_element(&$variables) {
+ function thinkcollege_boot_form_element(&$variables) {
    $element = &$variables['element'];
 	// print_r($element);
    $is_checkbox = FALSE;
@@ -131,13 +131,13 @@
 
    return $output;
 }
-function explorevr_boot_preprocess_page(&$vars) {
+function thinkcollege_boot_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     drupal_set_title(''); //removes welcome message (page title)
   }
 }
 
-function explorevr_boot_preprocess_html(&$vars) {
+function thinkcollege_boot_preprocess_html(&$vars) {
 $filepath = path_to_theme() . '/font-awesome/css/font-awesome.min.css';
 drupal_add_css($filepath, array(
 'group' => CSS_THEME,
