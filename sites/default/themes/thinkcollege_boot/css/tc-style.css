@@ -35,10 +35,6 @@ body {
 
 }
 
-.navbar-brand {
-	height:auto;
-}
-
 h1,h2,h3,h4,h5,h6 {
 	font-family:'museo-sans',sans-serif;
 }
@@ -54,9 +50,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-color:#fff;
 	color:#20527C;
 	padding:20px 80px;
-
 }
-
 
 .footer h2 {
 	border-bottom:1px solid #fff;
@@ -85,8 +79,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight:700;
 }
 
-
-
 .btn-danger {
 	background-color:#20527C;
 	border:transparent;
@@ -97,8 +89,6 @@ h1,h2,h3,h4,h5,h6 {
 .btn-danger:hover {
 	background-color:#C96B29;
 }
-
-
 
 .btn-info {
 	background-color:#4C8EC9;
@@ -194,6 +184,8 @@ top: -1.56em;
 	padding-left:10px;
 }
 
+
+ul.nav.menu.navbar-nav {margin-left:120px;}
 .navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
 	color:#fff;
 	background-color:#4c8ec9;
@@ -298,6 +290,9 @@ top: -1.56em;
 	font-size:1.2em;
 }
 
+.navbar-brand {
+	height:auto;
+}
 .side-box {
 	border-radius:4px;
 	border-top:10px solid #C96B29;
