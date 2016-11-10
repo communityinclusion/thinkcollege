@@ -1,5 +1,5 @@
 diff --git a/conditional_fields.module b/conditional_fields.module
-index 5b50edd..ce6325b 100644
+index 5b50edd..09d906d 100644
 --- a/conditional_fields.module
 +++ b/conditional_fields.module
 @@ -541,7 +541,7 @@ function conditional_fields_form_after_build($form, &$form_state) {
@@ -11,22 +11,30 @@ index 5b50edd..ce6325b 100644
          _conditional_fields_element_add_property($dependent_form_field, '#element_validate', 'conditional_fields_dependent_validate', 'append');
        }
  
-@@ -675,7 +675,46 @@ function conditional_fields_dependent_validate($element, &$form_state, $form) {
+@@ -675,7 +675,53 @@ function conditional_fields_dependent_validate($element, &$form_state, $form) {
    $dependent = $element[$element['#language']];
  
    // Check if this field's dependencies were triggered.
 -  if (conditional_fields_evaluate_dependencies($dependent, $form, $form_state)) {
 +  $triggered = conditional_fields_evaluate_dependencies($dependent, $form, $form_state);
-+  $return = FALSE;
++
++  // If true - previous validation errors (like 'required') will be shown.
++  $show_previous_errors = TRUE;
 +
 +  if ($evaluated_dependencies = conditional_fields_evaluate_dependencies($dependent, $form, $form_state, FALSE)) {
 +    foreach ($evaluated_dependencies[$dependent['#field_name']] as $operator) {
 +      foreach ($operator as $state => $result) {
-+        if (($result && $state == 'visible' && $triggered) || (!$result && $state == '!visible' && !$triggered)) {
-+          $return = TRUE;
++        // Silently suppress errors if became invisible or optional
++        // (skip further processing).
++        if ($triggered && in_array($state, array('!required', '!visible'))) {
++          $show_previous_errors = FALSE;
 +        }
-+        if (($result && $state == 'required' && $triggered) || (!$result && $state == '!required' && !$triggered)) {
-+          $return = TRUE;
++        // The same with hidden fields that did not become visible.
++        if (!$triggered && $state == 'visible') {
++          $show_previous_errors = FALSE;
++        }
++        if ($triggered && $state == 'required') {
++          $show_previous_errors = FALSE;
 +          $key_exists = NULL;
 +          $input_state = drupal_array_get_nested_value($form_state['values'], $dependent['#parents'], $key_exists);
 +          if ($key_exists) {
@@ -38,15 +46,14 @@ index 5b50edd..ce6325b 100644
 +            $field = field_info_field($dependent['#field_name']);
 +            $input_state = _field_filter_items($field, $input_state);
 +          }
++          // If conditionally required field is empty, show the error.
 +          if (empty($input_state)) {
 +            $title = '';
 +            if (isset($dependent['#title'])) {
 +              $title = $dependent['#title'];
 +            }
-+            else {
-+              if (isset($dependent[0]['#title'])) {
-+                $title = $dependent[0]['#title'];
-+              }
++            elseif (isset($dependent[0]['#title'])) {
++              $title = $dependent[0]['#title'];
 +            }
 +            form_error($element, t('!name field is required.', array('!name' => $title)));
 +          }
@@ -55,11 +62,11 @@ index 5b50edd..ce6325b 100644
 +    }
 +  }
 +
-+  if ($return) {
++  if ($show_previous_errors) {
      return;
    }
  
-@@ -685,7 +724,7 @@ function conditional_fields_dependent_validate($element, &$form_state, $form) {
+@@ -685,7 +731,7 @@ function conditional_fields_dependent_validate($element, &$form_state, $form) {
  
    // Optional behavior: reset the field to its default values.
    // Default values are always valid, so it's safe to skip validation.
@@ -68,7 +75,7 @@ index 5b50edd..ce6325b 100644
      $form_state_addition['reset'] = TRUE;
    }
  
-@@ -756,10 +795,7 @@ function conditional_fields_form_validate($form, &$form_state) {
+@@ -756,10 +802,7 @@ function conditional_fields_form_validate($form, &$form_state) {
        continue;
      }
  
@@ -80,7 +87,7 @@ index 5b50edd..ce6325b 100644
        $dependent_info = field_form_get_state($dependent['#field_parents'], $dependent['#field_name'], $dependent['#language'], $form_state);
        $field_values_location[$dependent['#field_name']][$dependent['#language']] = field_get_default_value($dependent_info['instance']['entity_type'], NULL, $dependent_info['field'], $dependent_info['instance'], $dependent['#language']);
      }
-@@ -999,22 +1035,31 @@ function conditional_fields_evaluate_grouping($groups) {
+@@ -999,22 +1042,31 @@ function conditional_fields_evaluate_grouping($groups) {
   * @param $dependent
   *   The field form element in the current language.
   */
@@ -116,7 +123,7 @@ index 5b50edd..ce6325b 100644
  }
  
  /**
-@@ -1059,9 +1104,29 @@ function conditional_fields_evaluate_dependency($context, $values, $options) {
+@@ -1059,9 +1111,28 @@ function conditional_fields_evaluate_dependency($context, $values, $options) {
    if ($options['values_set'] == CONDITIONAL_FIELDS_DEPENDENCY_VALUES_WIDGET) {
      $dependency_values = $context == 'view' ? $options['value'] : $options['value_form'];
  
@@ -139,7 +146,6 @@ index 5b50edd..ce6325b 100644
 +      $dependency_values = (int)($options['condition'] === 'checked');
 +    }
 +
-+
      // Simple case: both values are strings or integers. Should never happen in
      // view context, but does no harm to check anyway.
 -    if (!is_array($values)) {
@@ -147,7 +153,7 @@ index 5b50edd..ce6325b 100644
        // Options elements consider "_none" value same as empty.
        $values = $values === '_none' ? '' : $values;
  
-@@ -1087,14 +1152,28 @@ function conditional_fields_evaluate_dependency($context, $values, $options) {
+@@ -1087,14 +1158,30 @@ function conditional_fields_evaluate_dependency($context, $values, $options) {
        // If $dependency_values is not an array, we can only assume that it
        // should map to the first key of the first value of $values.
        if (!is_array($dependency_values)) {
@@ -157,7 +163,7 @@ index 5b50edd..ce6325b 100644
 +        if(is_null(current($values))) {
 +          return FALSE;
 +        }
-+        
++
 +        if (count($options['value'])) {
 +          $key = current(array_keys((array) current($values)));
 +          $dependency_values = array(array($key => $options['value'][0][$key]));
@@ -174,7 +180,9 @@ index 5b50edd..ce6325b 100644
 +        return array_values($dependency_values) == array_values($values);
 +      }
 +      else {
-+        return $dependency_values == array_values($values);
++        // If dependency value is not array (checked/unchecked state), compare
++        // to the first value.
++        return $dependency_values == $values[0]['value'];
 +      }
      }
  
