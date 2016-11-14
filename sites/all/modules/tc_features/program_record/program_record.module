@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Program record feature.
+ */
+
+include_once 'program_record.features.inc';
