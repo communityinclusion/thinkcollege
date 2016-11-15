@@ -1,4 +1,4 @@
-name = ThinkColleg_boot
+name = ThinkColleg_boot_old
 description = A Think College Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap
