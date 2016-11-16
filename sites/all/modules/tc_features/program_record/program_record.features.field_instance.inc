@@ -18,7 +18,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -517,7 +517,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -640,9 +640,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 35,
       ),
       'default' => array(
@@ -690,9 +691,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 33,
       ),
       'default' => array(
@@ -852,7 +854,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -906,7 +908,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -960,7 +962,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1124,7 +1126,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
@@ -1226,9 +1228,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 52,
       ),
       'default' => array(
@@ -1492,9 +1495,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 61,
       ),
       'default' => array(
@@ -1544,9 +1548,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 27,
       ),
       'default' => array(
@@ -1754,7 +1759,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'above',
@@ -2361,7 +2366,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'default' => array(
         'label' => 'above',
@@ -2527,11 +2532,11 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'thumbnail',
         ),
         'type' => 'image',
         'weight' => 3,
@@ -2596,7 +2601,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
@@ -2649,11 +2654,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
-        'module' => 'email',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 19,
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'default' => array(
         'label' => 'above',
@@ -2701,10 +2705,10 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_url',
         'weight' => 9,
       ),
       'default' => array(
@@ -2942,7 +2946,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'default' => array(
         'label' => 'above',
@@ -2996,7 +3000,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'default' => array(
         'label' => 'above',
@@ -3101,7 +3105,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'default' => array(
         'label' => 'above',
@@ -3156,7 +3160,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'default' => array(
         'label' => 'above',
@@ -3264,7 +3268,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -3317,7 +3321,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3707,9 +3711,15 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
         'weight' => 47,
       ),
       'default' => array(
@@ -4035,7 +4045,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4089,7 +4099,7 @@ function program_record_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',

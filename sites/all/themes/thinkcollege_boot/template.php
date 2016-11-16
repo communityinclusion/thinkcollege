@@ -143,3 +143,10 @@ drupal_add_css($filepath, array(
 'group' => CSS_THEME,
 ));
 }
+
+/*
+ * Implements hook_preprocess_node().
+ */
+function thinkcollege_boot_preprocess_node(&$vars) {
+  $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+}

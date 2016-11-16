@@ -90,7 +90,7 @@ function program_record_strongarm() {
         'custom_settings' => TRUE,
       ),
       'modal' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
