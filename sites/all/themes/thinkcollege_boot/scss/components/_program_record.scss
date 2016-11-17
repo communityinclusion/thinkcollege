@@ -74,4 +74,15 @@
       border-top:#ccc 1px solid;
     }
   }
+
+  .modal {
+    font-size: 1.6rem;
+    font-family: "lato", sans-serif;
+    color: #331d35;
+    .program-location {
+      .field {
+        display: inline-block;
+      }
+    }
+  }
 }

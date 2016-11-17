@@ -173,100 +173,94 @@ $classes .= ' node-program-record-card';
 
     <div class="row">
       <div class="col-sm-12 buttons">
-        <a class="btn btn-danger" href="#">
-          <i style="color:#fff;" class="fa fa-heart fa-lg" aria-hidden="true"></i> Favorite</a>
-
-
+        <a class="btn btn-danger" href="#"><i style="color:#fff;" class="fa fa-heart fa-lg" aria-hidden="true"></i>Favorite</a>
 
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php print $id; ?>">QUICK LOOK</button>
+      </div>
+    </div>
+  </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal-<?php print $id; ?>" role="dialog">
-          <div class="modal-dialog">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal-<?php print $id; ?>" role="dialog">
+    <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">×</button>
-                <h4 class="modal-title"><?php print $title; ?> - Program Details</h4>
-              </div>
-              <div class="modal-body">
-                <dl class="detail">
-                  <dt>
-                  <p class="answer"><strong>Location:</strong></p></dt>
-                  <dd>
-                    <div class="program-university">
-                      <?php print render($content['field_prog_col_univ_name']); ?>
-                    </div>
-
-                    <div class="program-location">
-                      <?php print render($content['field_prog_city']); ?>, <?php print render($content['field_prog_state']); ?>
-                    </div>
-                  </dd>
-                </dl>
-
-                <dl class="detail">
-                  <dt>
-                    <p class="answer"><strong>Requirements for Admission:</strong></p></dt>
-                  <dd>
-                    <?php print render($content['field_prog_admiss_requirements']); ?>
-                  </dd>
-                </dl>
-
-                <dl class="detail">
-                  <dt>
-                    <p class="answer"><strong>Admission deadline:</strong></p>
-                  </dt>
-                  <dd>
-                    <?php print render($content['field_prog_admit_deadline']); ?>
-                </dl>
-
-                <dl class="detail">
-                  <dt>
-                    <p class="answer"><strong>Number of students in this program:</strong></p>
-                  </dt>
-                  <dd>
-                    <?php print render($content['field_prog_hs_coll']); ?>
-                  </dd>
-                </dl>
-
-                <dl class="detail">
-                  <dt>
-                    <p class="answer"><strong>Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?:</strong></p>
-                  </dt>
-                  <dd>
-                    <?php print render($content['field_prog_ctp_y_n']); ?>
-                  </dd>
-                </dl>
-
-                <dl class="detail">
-                  <dt>
-                    <p class="answer"><strong>Tuition:</strong></p>
-                  </dt>
-                  <dd>
-                    <?php print render($content['field_prog_tuition']); ?>
-                  </dd>
-                </dl>
-
-                <dl class="detail">
-                  <dt><p class="answer"><strong>Does program offer housing for students?</strong></p></dt>
-                  <dd>
-                    <?php print render($content['field_prog_housing_y_n']); ?>
-                  </dd>
-                </dl>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-
-          </div>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title"><?php print $title; ?> - Program Details</h4>
         </div>
+        <div class="modal-body">
+          <dl class="detail">
+            <dt>
+            <p class="answer"><strong>Location:</strong></p></dt>
+            <dd>
+              <div class="program-university">
+                <?php print render($content['field_prog_col_univ_name']); ?>
+              </div>
 
+              <div class="program-location">
+                <?php print render($content['field_prog_city']); ?>, <?php print render($content['field_prog_state']); ?>
+              </div>
+            </dd>
+          </dl>
+
+          <dl class="detail">
+            <dt>
+            <p class="answer"><strong>Requirements for Admission:</strong></p></dt>
+            <dd>
+              <?php print render($content['field_prog_admiss_requirements']); ?>
+            </dd>
+          </dl>
+
+          <dl class="detail">
+            <dt>
+            <p class="answer"><strong>Admission deadline:</strong></p>
+            </dt>
+            <dd>
+              <?php print render($content['field_prog_admit_deadline']); ?>
+          </dl>
+
+          <dl class="detail">
+            <dt>
+            <p class="answer"><strong>Number of students in this program:</strong></p>
+            </dt>
+            <dd>
+              <?php print render($content['field_prog_hs_coll']); ?>
+            </dd>
+          </dl>
+
+          <dl class="detail">
+            <dt>
+            <p class="answer"><strong>Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?:</strong></p>
+            </dt>
+            <dd>
+              <?php print render($content['field_prog_ctp_y_n']); ?>
+            </dd>
+          </dl>
+
+          <dl class="detail">
+            <dt>
+            <p class="answer"><strong>Tuition:</strong></p>
+            </dt>
+            <dd>
+              <?php print render($content['field_prog_tuition']); ?>
+            </dd>
+          </dl>
+
+          <dl class="detail">
+            <dt><p class="answer"><strong>Does program offer housing for students?</strong></p></dt>
+            <dd>
+              <?php print render($content['field_prog_housing_y_n']); ?>
+            </dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
 
     </div>
-
   </div>
 </article>

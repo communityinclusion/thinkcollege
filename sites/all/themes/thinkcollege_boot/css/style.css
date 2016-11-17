@@ -8889,6 +8889,16 @@ button.close {
   padding-top: 10px;
   border-top: #ccc 1px solid;
 }
+/* line 78, ../scss/components/_program_record.scss */
+.node-program-record-card .modal {
+  font-size: 1.6rem;
+  font-family: "lato", sans-serif;
+  color: #331d35;
+}
+/* line 83, ../scss/components/_program_record.scss */
+.node-program-record-card .modal .program-location .field {
+  display: inline-block;
+}
 
 /* line 19, ../scss/_overrides.scss */
 html.overlay-open .navbar-fixed-top {
