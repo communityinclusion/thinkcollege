@@ -8900,6 +8900,19 @@ button.close {
   display: inline-block;
 }
 
+/* line 91, ../scss/components/_program_record.scss */
+article.node-program-record {
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* line 97, ../scss/components/_program_record.scss */
+#block-menu-menu-program-record-scrollspy {
+  position: fixed;
+  top: 200px;
+}
+
 /* line 19, ../scss/_overrides.scss */
 html.overlay-open .navbar-fixed-top {
   z-index: 400;

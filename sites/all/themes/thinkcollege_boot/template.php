@@ -131,6 +131,7 @@
 
    return $output;
 }
+
 function thinkcollege_boot_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     drupal_set_title(''); //removes welcome message (page title)
@@ -138,10 +139,18 @@ function thinkcollege_boot_preprocess_page(&$vars) {
 }
 
 function thinkcollege_boot_preprocess_html(&$vars) {
-$filepath = path_to_theme() . '/font-awesome/css/font-awesome.min.css';
-drupal_add_css($filepath, array(
-'group' => CSS_THEME,
-));
+  $filepath = path_to_theme() . '/font-awesome/css/font-awesome.min.css';
+  drupal_add_css($filepath, array(
+    'group' => CSS_THEME,
+  ));
+
+  // Add ScrollSpy stuff for Program Record "full content" pages.
+  /*
+  if (in_array('node-type-program-record', $vars['body_attributes_array']['class'])) {
+    $vars['attributes_array']['data-spy'] = 'scroll';
+    $vars['attributes_array']['data-target'] = 'block-menu-menu-program-record-scrollspy';
+  }
+  */
 }
 
 /*
@@ -149,4 +158,9 @@ drupal_add_css($filepath, array(
  */
 function thinkcollege_boot_preprocess_node(&$vars) {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+
+  if ($vars['node']->type == 'program_record') {
+    $vars['attributes_array']['data-spy'] = 'scroll';
+    $vars['attributes_array']['data-target'] = 'block-menu-menu-program-record-scrollspy';
+  }
 }
