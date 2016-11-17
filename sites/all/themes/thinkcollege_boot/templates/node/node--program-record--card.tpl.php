@@ -79,6 +79,7 @@
  * @ingroup templates
  */
 //krumo($content);
+$classes .= ' node-program-record-card';
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="program-box">

@@ -1,4 +1,5 @@
-@import "components/program_record";
+// ThinkCollege colors
+$tcorange: #C96B29;
 
 // Media query variables.
 $tablet:  "screen and (min-width: 768px)";
@@ -11,6 +12,8 @@ $wide:    "screen and (min-width: 1200px)";
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
 }
+
+@import "components/program_record";
 
 html {
   &.overlay-open .navbar-fixed-top {
