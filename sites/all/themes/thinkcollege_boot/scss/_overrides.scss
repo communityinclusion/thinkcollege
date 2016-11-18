@@ -10,6 +10,9 @@ $wide:    "screen and (min-width: 1200px)";
           box-shadow: $shadow;
 }
 
+@import 'components/header';
+@import 'components/footer';
+
 html {
   &.overlay-open .navbar-fixed-top {
     z-index: 400;
