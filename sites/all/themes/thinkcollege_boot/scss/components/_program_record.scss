@@ -87,7 +87,6 @@
   }
 }
 
-
 article.node-program-record {
   position: relative;
   overflow-y: scroll;
@@ -95,6 +94,11 @@ article.node-program-record {
 }
 
 #block-menu-menu-program-record-scrollspy {
-  position: fixed;
-  top: 200px;
+  &.affix {
+    top: 33px;
+  }
+  li.active a {
+    text-decoration: none;
+    background-color: #eeeeee;
+  }
 }

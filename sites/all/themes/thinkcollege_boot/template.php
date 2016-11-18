@@ -145,12 +145,10 @@ function thinkcollege_boot_preprocess_html(&$vars) {
   ));
 
   // Add ScrollSpy stuff for Program Record "full content" pages.
-  /*
   if (in_array('node-type-program-record', $vars['body_attributes_array']['class'])) {
     $vars['attributes_array']['data-spy'] = 'scroll';
-    $vars['attributes_array']['data-target'] = 'block-menu-menu-program-record-scrollspy';
+    $vars['attributes_array']['data-target'] = '#block-menu-menu-program-record-scrollspy';
   }
-  */
 }
 
 /*
@@ -158,9 +156,29 @@ function thinkcollege_boot_preprocess_html(&$vars) {
  */
 function thinkcollege_boot_preprocess_node(&$vars) {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+}
 
-  if ($vars['node']->type == 'program_record') {
-    $vars['attributes_array']['data-spy'] = 'scroll';
-    $vars['attributes_array']['data-target'] = 'block-menu-menu-program-record-scrollspy';
+/*
+ * Implements hook_preprocess_block().
+ */
+function thinkcollege_boot_preprocess_block(&$vars) {
+  // Add Bootstrap "affix" settings for Program Record ScrollSpy menu block.
+  if ($vars['block_html_id'] == 'block-menu-menu-program-record-scrollspy') {
+    $vars['attributes_array']['data-spy'] = 'affix';
+    $vars['attributes_array']['data-offset-top'] = '100';
+    $vars['attributes_array']['data-offset-bottom'] = '660';
+    $vars['attributes_array']['data-clampedwidth'] = '.region-sidebar-first';
   }
+}
+
+/**
+ * Implements theme_link().
+ */
+function thinkcollege_boot_link($vars) {
+  // Allow #fragment links to be used via ':#fragment' - used in Program Record ScrollSpy menu.
+  if (strpos($vars['path'], ':#') !== FALSE) {
+    return '<a href="#' . check_plain(substr($vars['path'], 2)) . '"' . drupal_attributes($vars['options']['attributes']) . '>' . ($vars['options']['html'] ? $vars['text'] : check_plain($vars['text'])) . '</a>';
+  }
+
+  return '<a href="' . check_plain(url($vars['path'], $vars['options'])) . '"' . drupal_attributes($vars['options']['attributes']) . '>' . ($vars['options']['html'] ? $vars['text'] : check_plain($vars['text'])) . '</a>';
 }

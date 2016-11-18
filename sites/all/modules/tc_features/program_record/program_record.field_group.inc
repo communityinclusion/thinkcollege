@@ -32,14 +32,15 @@ function program_record_field_group_info() {
       6 => 'field_please_select_any_all_of_t',
       7 => 'field_prog_perc_acad_time',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Academics',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'academics',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_academic|node|program_record|default'] = $field_group;
@@ -136,12 +137,13 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Acceptance, Retention and Completion Rates',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'acceptance-retention-completion',
         'classes' => 'group-prog-accept-ret-comp field-group-fieldset',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_accept_ret_comp|node|program_record|default'] = $field_group;
@@ -163,14 +165,15 @@ function program_record_field_group_info() {
       1 => 'field_prog_school_dist_contact',
       2 => 'field_prog_schl_dist_email',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Affiliate Information',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'affiliate-information',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_affiliate|node|program_record|default'] = $field_group;
@@ -231,14 +234,15 @@ function program_record_field_group_info() {
       9 => 'field_prog_addl_scholarships',
       10 => 'field_prog_scholarship_link',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Costs for Current Academic Year',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'costs-current-year',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_cost|node|program_record|default'] = $field_group;
@@ -304,14 +308,15 @@ function program_record_field_group_info() {
       2 => 'field_prog_perc_employed_af_grad',
       3 => 'field_prog_vocational_credential',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Employment',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'employment',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_employment|node|program_record|default'] = $field_group;
@@ -364,14 +369,15 @@ function program_record_field_group_info() {
       1 => 'field_prog_overall_time_dist',
       2 => 'field_prog_extracurric_explain',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Extracurricular',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'extracurricular',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_extracurr|node|program_record|default'] = $field_group;
@@ -423,14 +429,15 @@ function program_record_field_group_info() {
       1 => 'field_prog_studt_housing_options',
       2 => 'field_prog_other_hous_explain',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Housing',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'housing',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_housing|node|program_record|default'] = $field_group;
@@ -602,14 +609,15 @@ function program_record_field_group_info() {
       5 => 'field_prog_which_disabilities',
       6 => 'field_prog_which_dis_specify',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Requirements for Attendance',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'requirements-for-attendance',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_requir|node|program_record|default'] = $field_group;
@@ -637,13 +645,19 @@ function program_record_field_group_info() {
       7 => 'group_prog_requir',
       8 => 'group_program_info',
     ),
-    'format_type' => 'htabs',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Tabs',
       'instance_settings' => array(
-        'classes' => '',
         'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_tabs|node|program_record|default'] = $field_group;
@@ -684,14 +698,15 @@ function program_record_field_group_info() {
       20 => 'field_prog_contact_phone',
       21 => 'field_prog_photo',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Program Information',
       'instance_settings' => array(
-        'description' => '',
+        'id' => 'program-information',
         'classes' => '',
-        'id' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_program_info|node|program_record|default'] = $field_group;
