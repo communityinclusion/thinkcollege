@@ -1,0 +1,132 @@
+<?php
+
+/**
+ * Implements hook_views_api().
+ */
+/*
+function tc_favorite_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'tc_favorite') . '/views',
+  );
+}
+*/
+
+/**
+ * Implements hook_menu().
+ */
+function tc_favorite_menu() {
+  $items = array();
+
+  $items['collegesearch/favorite/%'] = array(
+    'title' => 'Favorite',
+    'page callback' => '_tc_favorite_favorite',
+    'page arguments' => array(2),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['collegesearch/favorite/remove/%'] = array(
+    'title' => 'Remove Favorite',
+    'page callback' => '_tc_favorite_favorite_remove',
+    'page arguments' => array(3),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Custom callback function for search result "favorite" functionality.
+ */
+function _tc_favorite_favorite($nid) {
+  // Keep things safe.
+  $nid = check_plain($nid);
+  if (!intval($nid)) {
+    drupal_goto('<front>');
+  };
+
+  // Get existing favorites.
+  $favorites = array();
+  if (isset($_SESSION['tc_favorite'])) {
+    $favorites = unserialize($_SESSION['tc_favorite']);
+  }
+
+  // If the $nid isn't already a favorite, add it.
+  if (!array_key_exists($nid, $favorites)) {
+    $node = node_load($nid);
+    $favorites[$nid] = $node->title;
+  }
+
+  // Save back to the session.
+  $_SESSION['tc_favorite'] = serialize($favorites);
+
+  return drupal_goto(drupal_get_destination());
+}
+
+/**
+ * Custom callback function for search result "remove favorite" functionality.
+ */
+function _tc_favorite_favorite_remove($nid) {
+  // Keep things safe.
+  $nid = check_plain($nid);
+  if (!intval($nid)) {
+    drupal_goto('<front>');
+  };
+
+  // Get existing favorites.
+  $favorites = array();
+  if (isset($_SESSION['tc_favorite'])) {
+    $favorites = unserialize($_SESSION['tc_favorite']);
+  }
+
+  // Remove the favorite.
+  unset($favorites[$nid]);
+
+  // Save back to the session.
+  $_SESSION['tc_favorite'] = serialize($favorites);
+
+  return drupal_goto(drupal_get_destination());
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function tc_favorite_block_info() {
+  $blocks['tc_favorite_favorites'] = array(
+    'info' => t('ThinkCollege - User search results favorites'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function tc_favorite_block_view($delta = '') {
+  switch ($delta) {
+    case 'tc_favorite_favorites':
+      $block['subject'] = t('Saved');
+      $block['content'] = _tc_favorite_favorites_block();
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Custom function for the "Saved" block's contents.
+ */
+function _tc_favorite_favorites_block() {
+  $output = '';
+  if (isset($_SESSION['tc_favorite'])) {
+    $favorites = unserialize($_SESSION['tc_favorite']);
+    foreach($favorites as $nid => $title) {
+      $output .= '<div class="saved"><p><a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() .'">X</a> '. $title . '</p></div>';
+    }
+  }
+
+  $result = array(
+    '#markup' => $output,
+  );
+  return $result;
+}
