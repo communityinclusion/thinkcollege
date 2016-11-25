@@ -121,12 +121,117 @@ function _tc_favorite_favorites_block() {
   if (isset($_SESSION['tc_favorite'])) {
     $favorites = unserialize($_SESSION['tc_favorite']);
     foreach($favorites as $nid => $title) {
-      $output .= '<div class="saved"><p><a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() .'">X</a> '. $title . '</p></div>';
+      $titlelink = l($title, 'node/'. $nid);
+      $output .= '<div class="saved"><p><a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() .'">X</a> '. $titlelink . '</p></div>';
     }
+
+    // Email and print buttons.
+    $output .= '<div class="btn-group">';
+    $output .= '<button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>';
+    $output .= '<a type="button" class="btn btn-default">Print</a>';
+    $output .= '</div>';
+
+    // Modal for email form.
+    $emailform = drupal_get_form('_tc_favorite_email_form');
+    $output .= '<div class="modal fade" id="tc_favorite_email_modal" role="dialog">';
+    $output .= '  <div class="modal-dialog">';
+    $output .= '    <div class="modal-content">';
+    $output .= '      <div class="modal-header">Email saved programs</div>';
+    $output .= '      <div class="modal-body">';
+    $output .= drupal_render($emailform);
+    $output .= '      </div>';
+    $output .= '    </div>';
+    $output .= '  </div>';
+    $output .= '</div>';
+
   }
 
   $result = array(
     '#markup' => $output,
   );
   return $result;
+}
+
+/**
+ * Custom callback returns email favorites form.
+ */
+function _tc_favorite_email_form() {
+  $form = array();
+
+  $form['tc_favorite_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email address'),
+    '#size' => 60,
+    '#description' => t('Enter the email address to which these programs will be sent to.'),
+  );
+
+  $form['tc_favorite_email_submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Send'),
+  );
+
+  return $form;
+}
+
+/**
+ * Custom callback returns email favorites form validation.
+ */
+function _tc_favorite_email_form_validate($form, &$form_state) {
+  if (!valid_email_address($form_state['values']['tc_favorite_email'])) {
+    form_set_error('tc_favorite_email', t('Please enter a valid email address'));
+  }
+}
+
+/**
+ * Custom callback returns email favorites form submit.
+ */
+function _tc_favorite_email_form_submit($form, &$form_state) {
+  $params = array();
+  _tc_favorite_email_send($form_state['values']['tc_favorite_email'], $params);
+}
+
+
+/**
+ * Implements hook_mail().
+ */
+function tc_favorite_mail($key, &$message, $params) {
+  global $base_url;
+
+  switch ($key) {
+    case 'tc_email_favorites':
+      // Get the list of favorite Nids.
+      if (isset($_SESSION['tc_favorite'])) {
+        $favorites_array = unserialize($_SESSION['tc_favorite']);
+        $favorites_string = implode('+', array_keys($favorites_array));
+      }
+
+      $favorites_link = $base_url . '/search/favorites/' . $favorites_string;
+      $params['message'] = 'Link to your favorites: ' . $favorites_link;
+      $message['subject'] = t('ThinkCollege! program favorites');
+      $message['body'][] = check_plain($params['message']);
+      break;
+  }
+}
+
+/**
+ * Sends an e-mail.
+ */
+function _tc_favorite_email_send($email_address, $params) {
+  // All system mails need to specify the module and template key (mirrored from
+  // hook_mail()) that the message they want to send comes from.
+  $module = 'tc_favorite';
+  $key = 'tc_email_favorites';
+
+  // Specify 'to' and 'from' addresses.
+  $to = $email_address;
+  $from = variable_get('site_mail', 'admin@example.com');
+  $language = language_default();
+  $result = drupal_mail($module, $key, $to, $language, $params, $from);
+  if ($result['result'] == TRUE) {
+    drupal_set_message(t('Your message has been sent.'));
+  }
+  else {
+    drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+  }
+
 }
