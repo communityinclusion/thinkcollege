@@ -104,10 +104,16 @@ function tc_favorite_block_info() {
  * Implements hook_block_view().
  */
 function tc_favorite_block_view($delta = '') {
+  $block = array();
   switch ($delta) {
     case 'tc_favorite_favorites':
       $block['subject'] = t('Saved');
       $block['content'] = _tc_favorite_favorites_block();
+
+      // Check to see if there is any content in the block. If not, don't display.
+      if ($block['content']['#markup'] == '') {
+        return null;
+      }
       break;
   }
   return $block;
@@ -118,37 +124,39 @@ function tc_favorite_block_view($delta = '') {
  */
 function _tc_favorite_favorites_block() {
   $output = '';
+  $result = array();
   if (isset($_SESSION['tc_favorite'])) {
     $favorites = unserialize($_SESSION['tc_favorite']);
-    foreach($favorites as $nid => $title) {
-      $titlelink = l($title, 'node/'. $nid);
-      $output .= '<div class="saved"><p><a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() .'">X</a> '. $titlelink . '</p></div>';
+    if (count($favorites)) {
+      foreach($favorites as $nid => $title) {
+        $titlelink = l($title, 'node/'. $nid);
+        $output .= '<div class="saved"><p><a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() .'">X</a> '. $titlelink . '</p></div>';
+      }
+
+      // Email and print buttons.
+      $output .= '<div class="btn-group">';
+      $output .= '<button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>';
+      $output .= '<a type="button" class="btn btn-default">Print</a>';
+      $output .= '</div>';
+
+      // Modal for email form.
+      $emailform = drupal_get_form('_tc_favorite_email_form');
+      $output .= '<div class="modal fade" id="tc_favorite_email_modal" role="dialog">';
+      $output .= '  <div class="modal-dialog">';
+      $output .= '    <div class="modal-content">';
+      $output .= '      <div class="modal-header">Email saved programs</div>';
+      $output .= '      <div class="modal-body">';
+      $output .= drupal_render($emailform);
+      $output .= '      </div>';
+      $output .= '    </div>';
+      $output .= '  </div>';
+      $output .= '</div>';
     }
 
-    // Email and print buttons.
-    $output .= '<div class="btn-group">';
-    $output .= '<button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>';
-    $output .= '<a type="button" class="btn btn-default">Print</a>';
-    $output .= '</div>';
-
-    // Modal for email form.
-    $emailform = drupal_get_form('_tc_favorite_email_form');
-    $output .= '<div class="modal fade" id="tc_favorite_email_modal" role="dialog">';
-    $output .= '  <div class="modal-dialog">';
-    $output .= '    <div class="modal-content">';
-    $output .= '      <div class="modal-header">Email saved programs</div>';
-    $output .= '      <div class="modal-body">';
-    $output .= drupal_render($emailform);
-    $output .= '      </div>';
-    $output .= '    </div>';
-    $output .= '  </div>';
-    $output .= '</div>';
-
+    $result = array(
+      '#markup' => $output,
+    );
   }
-
-  $result = array(
-    '#markup' => $output,
-  );
   return $result;
 }
 
@@ -200,6 +208,7 @@ function tc_favorite_mail($key, &$message, $params) {
   switch ($key) {
     case 'tc_email_favorites':
       // Get the list of favorite Nids.
+      $favorites_string = '';
       if (isset($_SESSION['tc_favorite'])) {
         $favorites_array = unserialize($_SESSION['tc_favorite']);
         $favorites_string = implode('+', array_keys($favorites_array));
