@@ -108,12 +108,14 @@ function tc_favorite_block_view($delta = '') {
   switch ($delta) {
     case 'tc_favorite_favorites':
       $block['subject'] = t('Saved');
-      $block['content'] = _tc_favorite_favorites_block();
 
-      // Check to see if there is any content in the block. If not, don't display.
-      if ($block['content']['#markup'] == '') {
+      $favorites_block_vars = _tc_favorite_favorites_block();
+      // Check to see if there is any content in the block. If not, do not display the block.
+      if (!count($favorites_block_vars['favorites'])) {
         return null;
       }
+      $block['content'] = theme('block__tc_favorite__favorites', $favorites_block_vars);
+
       break;
   }
   return $block;
@@ -123,41 +125,34 @@ function tc_favorite_block_view($delta = '') {
  * Custom function for the "Saved" block's contents.
  */
 function _tc_favorite_favorites_block() {
-  $output = '';
   $result = array();
   if (isset($_SESSION['tc_favorite'])) {
+    $emailform = drupal_get_form('_tc_favorite_email_form');
     $favorites = unserialize($_SESSION['tc_favorite']);
-    if (count($favorites)) {
-      foreach($favorites as $nid => $title) {
-        $titlelink = l($title, 'node/'. $nid);
-        $output .= '<div class="saved"><p><a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() .'">X</a> '. $titlelink . '</p></div>';
-      }
-
-      // Email and print buttons.
-      $output .= '<div class="btn-group">';
-      $output .= '<button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>';
-      $output .= '<a type="button" class="btn btn-default">Print</a>';
-      $output .= '</div>';
-
-      // Modal for email form.
-      $emailform = drupal_get_form('_tc_favorite_email_form');
-      $output .= '<div class="modal fade" id="tc_favorite_email_modal" role="dialog">';
-      $output .= '  <div class="modal-dialog">';
-      $output .= '    <div class="modal-content">';
-      $output .= '      <div class="modal-header">Email saved programs</div>';
-      $output .= '      <div class="modal-body">';
-      $output .= drupal_render($emailform);
-      $output .= '      </div>';
-      $output .= '    </div>';
-      $output .= '  </div>';
-      $output .= '</div>';
-    }
 
     $result = array(
-      '#markup' => $output,
+      'template' => 'block__tc_favorite__favorites',
+      'favorites' => $favorites,
+      'emailform' => $emailform,
     );
   }
   return $result;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tc_favorite_theme($existing, $type, $theme, $path) {
+  return array(
+    'block__tc_favorite__favorites' => array(
+      'template' => 'block--tc-favorite--favorites',
+      'path' => drupal_get_path('module', 'tc_favorite') . '/templates',
+      'variables' => array(
+        'favorites' => null,
+        'emailform' => null,
+      ),
+    ),
+  );
 }
 
 /**
