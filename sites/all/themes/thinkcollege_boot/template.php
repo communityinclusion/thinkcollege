@@ -156,6 +156,26 @@ function thinkcollege_boot_preprocess_html(&$vars) {
  */
 function thinkcollege_boot_preprocess_node(&$vars) {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+
+  // Determine display of various Program Record icons.
+  if ($vars['type'] == 'program_record') {
+    $node = $vars['node'];
+
+    $vars['tc_housing_icon'] = FALSE;
+    if ($node->field_prog_housing_y_n['und'][0]['value'] == 'Yes') {
+      $vars['tc_housing_icon'] = TRUE;
+    }
+
+    $vars['tc_financial_aid_icon'] = FALSE;
+    if ($node->field_prog_ctp_y_n['und'][0]['value'] == 'Yes') {
+      $vars['tc_financial_aid_icon'] = TRUE;
+    }
+
+    $vars['tc_tpsid_icon'] = FALSE;
+    if ($node->field_prog_is_was_tpsid['und'][0]['value'] == 'Yes') {
+      $vars['tc_tpsid_icon'] = TRUE;
+    }
+  }
 }
 
 /*

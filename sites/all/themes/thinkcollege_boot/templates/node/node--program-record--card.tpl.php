@@ -79,12 +79,39 @@
  * @ingroup templates
  */
 //krumo($content);
+global $base_url;
 $classes .= ' node-program-record-card';
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="program-box">
     <div class="row">
       <div class="col-sm-12 program-heading">
+
+        <div class="program_icon_box">
+
+          <?php if($tc_tpsid_icon): ?>
+            <div class="program_icon">
+              <div class="tpsid_icon">TPSID</div>
+            </div>
+          <?php endif ?>
+
+          <?php if($tc_financial_aid_icon): ?>
+            <div class="program_icon">
+              <div class="cost_icon">
+                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/usd.svg" alt="icon name">
+              </div>
+            </div>
+          <?php endif ?>
+
+          <?php if($tc_housing_icon): ?>
+            <div class="program_icon">
+              <div class="home_icon">
+                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name">
+              </div>
+            </div>
+          <?php endif ?>
+        </div>
+
         <div class="program-search-program-name">
           <?php print $title; ?>
         </div>
