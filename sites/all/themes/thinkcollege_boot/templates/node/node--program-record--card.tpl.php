@@ -98,7 +98,7 @@ $classes .= ' node-program-record-card';
           <?php if($tc_financial_aid_icon): ?>
             <div class="program_icon">
               <div class="cost_icon">
-                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/usd.svg" alt="icon name">
+                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name">
               </div>
             </div>
           <?php endif ?>

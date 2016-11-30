@@ -172,7 +172,7 @@ function thinkcollege_boot_preprocess_node(&$vars) {
     }
 
     $vars['tc_tpsid_icon'] = FALSE;
-    if ($node->field_prog_is_was_tpsid['und'][0]['value'] == 'Yes') {
+    if ($node->field_prog_is_was_tpsid['und'][0]['value'] != 'No') {
       $vars['tc_tpsid_icon'] = TRUE;
     }
   }
