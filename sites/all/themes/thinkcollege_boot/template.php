@@ -145,7 +145,7 @@ function thinkcollege_boot_preprocess_html(&$vars) {
   ));
 
   // Add ScrollSpy stuff for Program Record "full content" pages.
-  if (in_array('node-type-program-record', $vars['body_attributes_array']['class'])) {
+  if (in_array('node-type-program-record', $vars['classes_array'])) {
     $vars['attributes_array']['data-spy'] = 'scroll';
     $vars['attributes_array']['data-target'] = '#block-menu-menu-program-record-scrollspy';
   }
