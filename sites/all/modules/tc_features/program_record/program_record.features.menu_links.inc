@@ -10,17 +10,17 @@
 function program_record_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-program-record-scrollspy_academics::#academic.
-  $menu_links['menu-program-record-scrollspy_academics::#academic'] = array(
+  // Exported menu link: menu-program-record-scrollspy_academic::#academic.
+  $menu_links['menu-program-record-scrollspy_academic::#academic'] = array(
     'menu_name' => 'menu-program-record-scrollspy',
     'link_path' => ':#academic',
     'router_path' => '',
-    'link_title' => 'Academics',
+    'link_title' => 'Academic',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-program-record-scrollspy_academics::#academic',
+      'identifier' => 'menu-program-record-scrollspy_academic::#academic',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -249,7 +249,7 @@ function program_record_menu_default_menu_links() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Academics');
+  t('Academic');
   t('Acceptance rates');
   t('Affiliates');
   t('Cost');
