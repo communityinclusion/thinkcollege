@@ -20,8 +20,8 @@ function program_record_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
-    'label' => 'Academics',
-    'weight' => '84',
+    'label' => 'Academic',
+    'weight' => '83',
     'children' => array(
       0 => 'field_prog_course_types',
       1 => 'field_prog_more_course_detail',
@@ -34,9 +34,9 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Academics',
+      'label' => 'Academic',
       'instance_settings' => array(
-        'id' => 'academics',
+        'id' => 'academic',
         'classes' => '',
         'description' => '',
       ),
@@ -125,8 +125,8 @@ function program_record_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
-    'label' => 'Acceptance, Retention and Completion Rates',
-    'weight' => '82',
+    'label' => 'Acceptance, Rentention, and Completion Rates',
+    'weight' => '86',
     'children' => array(
       0 => 'field_prog_num_applied',
       1 => 'field_prog_15_16_accepted',
@@ -137,9 +137,9 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Acceptance, Retention and Completion Rates',
+      'label' => 'Acceptance, Rentention, and Completion Rates',
       'instance_settings' => array(
-        'id' => 'acceptance-retention-completion',
+        'id' => 'acceptance-rates',
         'classes' => 'group-prog-accept-ret-comp field-group-fieldset',
         'description' => '',
       ),
@@ -158,7 +158,7 @@ function program_record_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
-    'label' => 'Affiliate Information',
+    'label' => 'Affiliates',
     'weight' => '80',
     'children' => array(
       0 => 'field_prog_school_dist',
@@ -167,7 +167,7 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Affiliate Information',
+      'label' => 'Affiliates',
       'instance_settings' => array(
         'id' => 'affiliate-information',
         'classes' => '',
@@ -219,8 +219,8 @@ function program_record_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
-    'label' => 'Costs for Current Academic Year',
-    'weight' => '83',
+    'label' => 'Cost',
+    'weight' => '81',
     'children' => array(
       0 => 'field_prog_ctp_y_n',
       1 => 'field_prog_pay_methods',
@@ -236,9 +236,9 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Costs for Current Academic Year',
+      'label' => 'Cost',
       'instance_settings' => array(
-        'id' => 'costs-current-year',
+        'id' => 'cost',
         'classes' => '',
         'description' => '',
       ),
@@ -301,7 +301,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Employment',
-    'weight' => '85',
+    'weight' => '87',
     'children' => array(
       0 => 'field_prog_other_career_dev',
       1 => 'field_prog_perc_w_compet_employ',
@@ -363,7 +363,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Extracurricular',
-    'weight' => '87',
+    'weight' => '85',
     'children' => array(
       0 => 'field_prog_student_orgs_y_n',
       1 => 'field_prog_overall_time_dist',
@@ -423,7 +423,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Housing',
-    'weight' => '86',
+    'weight' => '84',
     'children' => array(
       0 => 'field_prog_housing_y_n',
       1 => 'field_prog_studt_housing_options',
@@ -624,8 +624,8 @@ function program_record_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
-    'label' => 'Requirements for Attendance',
-    'weight' => '81',
+    'label' => 'Requirements',
+    'weight' => '82',
     'children' => array(
       0 => 'field_prog_admit_deadline',
       1 => 'field_prog_admiss_link',
@@ -637,9 +637,9 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Requirements for Attendance',
+      'label' => 'Requirements',
       'instance_settings' => array(
-        'id' => 'requirements-for-attendance',
+        'id' => 'requirements',
         'classes' => '',
         'description' => '',
       ),
@@ -698,7 +698,7 @@ function program_record_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
-    'label' => 'Program Information',
+    'label' => 'General',
     'weight' => '79',
     'children' => array(
       0 => 'body',
@@ -726,9 +726,9 @@ function program_record_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Program Information',
+      'label' => 'General',
       'instance_settings' => array(
-        'id' => 'program-information',
+        'id' => 'general',
         'classes' => '',
         'description' => '',
       ),
@@ -739,16 +739,20 @@ function program_record_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Academic');
   t('Academics');
+  t('Acceptance, Rentention, and Completion Rates');
   t('Acceptance, Retention and Completion Rates');
-  t('Affiliate Information');
   t('Affiliates');
+  t('Cost');
   t('Costs for Current Academic Year');
   t('Employment');
   t('Extracurricular');
+  t('General');
   t('Housing');
   t('Instructions and Preliminary questions');
   t('Program Information');
+  t('Requirements');
   t('Requirements for Attendance');
   t('Tabs');
   t('Top three program priorities');

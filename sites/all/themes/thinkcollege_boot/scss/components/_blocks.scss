@@ -1,6 +1,6 @@
 .region-sidebar-first .block {
   border-radius: 4px;
-  border-top: 10px solid #C96B29;
+  border-top: 10px solid $tcorange;
   -webkit-box-shadow: 0 0 7px 0 #AAA;
   -moz-box-shadow: 0 0 7px 0 #AAA;
   box-shadow: 0 0 7px 0 #AAA;
@@ -8,6 +8,28 @@
   margin-bottom: 15px;
   background-color: #fff;
   font-size: 16px;
+
+  &#block-menu-menu-program-record-scrollspy {
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+    ul li {
+      a {
+        background-color: $tcblue;
+        color: #FFF;
+        padding: 5px;
+        margin: 10px 0;
+        text-transform: uppercase;
+        border-radius: 4px;
+        font-size: 0.8em;
+        text-align: center;
+      }
+
+      &.active a {
+        background-color: $tcorange;
+      }
+    }
+  }
 
   h2 {
     text-align: left;
