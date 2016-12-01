@@ -505,6 +505,32 @@ function program_record_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_prog_priorities|node|program_record|default';
+  $field_group->group_name = 'group_prog_priorities';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'program_record';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Top three program priorities',
+    'weight' => '2',
+    'children' => array(),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Top three program priorities',
+      'instance_settings' => array(
+        'id' => 'top-three-priorities',
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_prog_priorities|node|program_record|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_prog_prog_info|node|program_record|form';
   $field_group->group_name = 'group_prog_prog_info';
   $field_group->entity_type = 'node';
@@ -725,6 +751,7 @@ function program_record_field_group_info() {
   t('Program Information');
   t('Requirements for Attendance');
   t('Tabs');
+  t('Top three program priorities');
 
   return $field_groups;
 }
