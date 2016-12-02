@@ -10,24 +10,39 @@
   font-size: 16px;
 
   &#block-menu-menu-program-record-scrollspy {
+    &.affix {
+      top: 33px;
+    }
     border: none;
     box-shadow: none;
     background-color: inherit;
-    ul li {
-      a {
-        background-color: $tcblue;
-        color: #FFF;
-        padding: 15px 5px;
-        margin: 10px 0;
-        text-transform: uppercase;
-        border-radius: 4px;
-        font-size: 0.8em;
-        text-align: center;
-      }
+    ul.menu {
+      li {
+        a {
+          background-color: $tcblue;
+          color: #FFF;
+          padding: 15px 5px;
+          margin: 10px 0;
+          text-transform: uppercase;
+          border-radius: 4px;
+          font-size: 0.8em;
+          text-align: center;
+        }
 
-      &.active a {
-        background-color: $tcorange;
+        &.active a {
+          background-color: $tcorange;
+        }
       }
+    }
+  }
+
+
+
+  #block-menu-menu-program-record-scrollspy {
+
+    ul.menu li.active a {
+      text-decoration: none;
+      background-color: #eeeeee;
     }
   }
 

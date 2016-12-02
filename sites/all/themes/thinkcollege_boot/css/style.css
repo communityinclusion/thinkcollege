@@ -8935,16 +8935,6 @@ article.node-program-record {
   height: 100%;
 }
 
-/* line 124, ../scss/components/_program_record.scss */
-#block-menu-menu-program-record-scrollspy.affix {
-  top: 33px;
-}
-/* line 127, ../scss/components/_program_record.scss */
-#block-menu-menu-program-record-scrollspy li.active a {
-  text-decoration: none;
-  background-color: #eeeeee;
-}
-
 /* line 1, ../scss/components/_blocks.scss */
 .region-sidebar-first .block {
   border-radius: 4px;
@@ -8963,8 +8953,12 @@ article.node-program-record {
   box-shadow: none;
   background-color: inherit;
 }
-/* line 17, ../scss/components/_blocks.scss */
-.region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul li a {
+/* line 13, ../scss/components/_blocks.scss */
+.region-sidebar-first .block#block-menu-menu-program-record-scrollspy.affix {
+  top: 33px;
+}
+/* line 21, ../scss/components/_blocks.scss */
+.region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul.menu li a {
   background-color: #20527c;
   color: #FFF;
   padding: 15px 5px;
@@ -8974,23 +8968,28 @@ article.node-program-record {
   font-size: 0.8em;
   text-align: center;
 }
-/* line 28, ../scss/components/_blocks.scss */
-.region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul li.active a {
+/* line 32, ../scss/components/_blocks.scss */
+.region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul.menu li.active a {
   background-color: #c96b29;
 }
-/* line 34, ../scss/components/_blocks.scss */
+/* line 43, ../scss/components/_blocks.scss */
+.region-sidebar-first .block #block-menu-menu-program-record-scrollspy ul.menu li.active a {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+/* line 49, ../scss/components/_blocks.scss */
 .region-sidebar-first .block h2 {
   text-align: left;
   border-bottom: #ccc 1px solid;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
-/* line 41, ../scss/components/_blocks.scss */
+/* line 56, ../scss/components/_blocks.scss */
 .region-sidebar-first .block .saved {
   margin: 5px;
   background-color: #F7F7F7;
 }
-/* line 46, ../scss/components/_blocks.scss */
+/* line 61, ../scss/components/_blocks.scss */
 .region-sidebar-first .block .saved p {
   padding: 5px 10px;
   margin-bottom: 5px;

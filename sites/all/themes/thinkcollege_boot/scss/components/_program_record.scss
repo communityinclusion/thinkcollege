@@ -119,13 +119,3 @@ article.node-program-record {
   overflow-y: scroll;
   height: 100%;
 }
-
-#block-menu-menu-program-record-scrollspy {
-  &.affix {
-    top: 33px;
-  }
-  li.active a {
-    text-decoration: none;
-    background-color: #eeeeee;
-  }
-}
