@@ -102,26 +102,6 @@ function program_record_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-program-record-scrollspy_employment::#employment.
-  $menu_links['menu-program-record-scrollspy_employment::#employment'] = array(
-    'menu_name' => 'menu-program-record-scrollspy',
-    'link_path' => ':#employment',
-    'router_path' => '',
-    'link_title' => 'Employment',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-program-record-scrollspy_employment::#employment',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -42,
-    'customized' => 1,
-  );
   // Exported menu link: menu-program-record-scrollspy_extracurricular::#extracurricular.
   $menu_links['menu-program-record-scrollspy_extracurricular::#extracurricular'] = array(
     'menu_name' => 'menu-program-record-scrollspy',
@@ -226,26 +206,6 @@ function program_record_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-program-record-scrollspy_top-three-program-priorities::#top-three-priorities.
-  $menu_links['menu-program-record-scrollspy_top-three-program-priorities::#top-three-priorities'] = array(
-    'menu_name' => 'menu-program-record-scrollspy',
-    'link_path' => ':#top-three-priorities',
-    'router_path' => '',
-    'link_title' => 'Top three program priorities',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-program-record-scrollspy_top-three-program-priorities::#top-three-priorities',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -41,
-    'customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -253,12 +213,10 @@ function program_record_menu_default_menu_links() {
   t('Acceptance rates');
   t('Affiliates');
   t('Cost');
-  t('Employment');
   t('Extracurricular');
   t('General');
   t('Housing');
   t('Requirements');
-  t('Top three program priorities');
 
   return $menu_links;
 }

@@ -46,4 +46,21 @@ var Drupal = Drupal || {};
     }
   };
 
+  /*
+   * Hide Program Record ScrollSpy menu items if section is empty.
+   */
+  Drupal.behaviors.thinkcollegeHideProgramRecordScrollSpyMenuItem = {
+    attach: function (context) {
+      if ($('.node-program-record-full').length) {
+        // Hide all ScrollSpy menu items.
+        $('#block-menu-menu-program-record-scrollspy ul li a').hide();
+
+        // Loop through all the sections and show ScrollSpy menu items for each one.
+        $('.node-program-record-full .program-box').each(function( index ) {
+          $('#block-menu-menu-program-record-scrollspy ul li a[href=#' + $(this).attr('id') + ']').show();
+        });
+      }
+    }
+  };
+
 })(jQuery, Drupal);
