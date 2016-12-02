@@ -148,7 +148,7 @@ function thinkcollege_boot_preprocess_html(&$vars) {
   if (in_array('node-type-program-record', $vars['classes_array'])) {
     $vars['attributes_array']['data-spy'] = 'scroll';
     $vars['attributes_array']['data-target'] = '#block-menu-menu-program-record-scrollspy';
-    $vars['attributes_array']['data-offset'] = '150';
+    $vars['attributes_array']['data-offset'] = '50';
   }
 }
 

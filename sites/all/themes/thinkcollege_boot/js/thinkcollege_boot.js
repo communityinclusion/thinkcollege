@@ -63,4 +63,30 @@ var Drupal = Drupal || {};
     }
   };
 
+  /*
+   * Smooth scrolling for Program Record ScrollSpy stuff.
+   */
+  Drupal.behaviors.thinkcollegeHideProgramRecordScrollSpySmooth = {
+    attach: function (context) {
+      $("#block-menu-menu-program-record-scrollspy ul li a[href^='#']").on('click', function(e) {
+
+        // prevent default anchor click behavior
+        e.preventDefault();
+
+        // store hash
+        var hash = this.hash;
+
+        // animate
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - 50
+        }, 800, function(){
+          // when done, add hash to url
+          // (default click behaviour)
+          window.location.hash = hash;
+        });
+
+      });
+    }
+  };
+
 })(jQuery, Drupal);
