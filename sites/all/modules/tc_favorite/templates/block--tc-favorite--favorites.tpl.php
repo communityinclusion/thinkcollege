@@ -14,7 +14,6 @@ if (count($favorites)) {
 
   <div class="btn-group">
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>
-    <a type="button" class="btn btn-default">Print</a>
   </div>
 
   <div class="modal fade" id="tc_favorite_email_modal" role="dialog">
