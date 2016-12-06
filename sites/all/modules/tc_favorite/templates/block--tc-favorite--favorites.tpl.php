@@ -31,4 +31,9 @@ if (count($favorites)) {
     </div>
   </div>
   <?php
+} else {
+  ?>
+  <div>Click the "Save" Button to add a program to this list.</div>
+  <?php
 }
+

@@ -200,7 +200,7 @@ $classes .= ' node-program-record-card';
 
     <div class="row">
       <div class="col-sm-12 buttons">
-        <a class="btn btn-danger" href="/collegesearch/favorite/<?php print $node->nid; ?>?destination=<?php print current_path(); ?>"><i style="color:#fff;" class="fa fa-heart fa-lg" aria-hidden="true"></i>Favorite</a>
+        <a class="btn btn-danger" href="/collegesearch/favorite/<?php print $node->nid; ?>?destination=<?php print current_path(); ?>"><i style="color:#fff;" class="fa fa-heart fa-lg" aria-hidden="true"></i>Save</a>
 
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php print $id; ?>">QUICK LOOK</button>

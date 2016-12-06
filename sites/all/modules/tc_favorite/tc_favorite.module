@@ -108,14 +108,8 @@ function tc_favorite_block_view($delta = '') {
   switch ($delta) {
     case 'tc_favorite_favorites':
       $block['subject'] = t('Saved');
-
       $favorites_block_vars = _tc_favorite_favorites_block();
-      // Check to see if there is any content in the block. If not, do not display the block.
-      if (!count($favorites_block_vars['favorites'])) {
-        return null;
-      }
       $block['content'] = theme('block__tc_favorite__favorites', $favorites_block_vars);
-
       break;
   }
   return $block;
@@ -210,8 +204,8 @@ function tc_favorite_mail($key, &$message, $params) {
       }
 
       $favorites_link = $base_url . '/search/favorites/' . $favorites_string;
-      $params['message'] = 'Link to your favorites: ' . $favorites_link;
-      $message['subject'] = t('ThinkCollege! program favorites');
+      $params['message'] = 'To view your list of saved colleges, click this url: ' . $favorites_link;
+      $message['subject'] = t('Your saved college search from ThinkCollege.net');
       $message['body'][] = check_plain($params['message']);
       break;
   }
