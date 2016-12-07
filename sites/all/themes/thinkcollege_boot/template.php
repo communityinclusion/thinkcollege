@@ -180,6 +180,13 @@ function thinkcollege_boot_preprocess_node(&$vars) {
 }
 
 /*
+ * Implements hook_preprocess_field().
+ */
+function thinkcollege_boot_preprocess_field(&$vars) {
+  $vars['theme_hook_suggestions'][] = 'field__' . $vars['element']['#bundle'] . '__' . $vars['element']['#view_mode'];
+}
+
+/*
  * Implements hook_preprocess_block().
  */
 function thinkcollege_boot_preprocess_block(&$vars) {
@@ -202,4 +209,27 @@ function thinkcollege_boot_link($vars) {
   }
 
   return '<a href="' . check_plain(url($vars['path'], $vars['options'])) . '"' . drupal_attributes($vars['options']['attributes']) . '>' . ($vars['options']['html'] ? $vars['text'] : check_plain($vars['text'])) . '</a>';
+}
+
+/**
+ * Implementation of hook_field_attach_view_alter().
+ *
+ * Via https://www.drupal.org/node/2417017
+ *
+ * This makes the Display Label available in $content in template files.
+ */
+function thinkcollege_boot_field_attach_view_alter(&$output, $context) {
+  foreach($output as $key => $item) {
+    if (!empty($item['#field_name'])) {
+      $field = field_info_instance($output['#entity_type'], $item['#field_name'], $output['#bundle']);
+      if (isset($field['display_label']) && strlen(trim($field['display_label'])) > 0) {
+        if (module_exists('i18n_field')) {
+          $output[$key]['#display_label'] = check_plain(i18n_field_translate_property($field, 'display_label'));
+        }
+        else {
+          $output[$key]['#display_label'] = check_plain($field['display_label']);
+        }
+      }
+    }
+  }
 }

@@ -83,299 +83,271 @@ global $base_url;
 $classes .= ' node-program-record-full';
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <div>
-    <div class="row">
-      <div class="col-sm-12 program-heading">
+  <div class="row">
+    <div class="col-md-7 program-heading">
+      <div class="program_icon_box">
 
-        <div class="program_icon_box">
+        <?php if($tc_tpsid_icon): ?>
+          <div class="program_icon">
+            <div class="tpsid_icon">TPSID</div>
+          </div>
+        <?php endif ?>
 
-          <?php if($tc_tpsid_icon): ?>
-            <div class="program_icon">
-              <div class="tpsid_icon">TPSID</div>
-            </div>
-          <?php endif ?>
-
-          <?php if($tc_financial_aid_icon): ?>
-            <div class="program_icon">
-              <div class="cost_icon">
-                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name">
-              </div>
-            </div>
-          <?php endif ?>
-
-          <?php if($tc_housing_icon): ?>
-            <div class="program_icon">
-              <div class="home_icon">
-                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name">
-              </div>
-            </div>
-          <?php endif ?>
-        </div>
-
-        <div class="program-search-program-name">
-          <?php print $title; ?>
-        </div>
-
-        <div class="program-university">
-          <?php print render($content['field_prog_col_univ_name']); ?>
-        </div>
-
-        <div class="program-location">
-          <?php print render($content['field_prog_city']); ?>, <?php print render($content['field_prog_state']); ?>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-7 col-xs-12">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="panel-body">
-              <div class="media">
-                <span class="pull-left">
-                  <?php print render($content['field_prog_photo']); ?>
-                </span>
-                <div class="media-body">
-                  <h4 class="media-heading">Description</h4>
-                  <?php print render($content['body']); ?>
-                </div>
-              </div>
+        <?php if($tc_financial_aid_icon): ?>
+          <div class="program_icon">
+            <div class="cost_icon">
+              <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name">
             </div>
           </div>
-        </div>
+        <?php endif ?>
+
+        <?php if($tc_housing_icon): ?>
+          <div class="program_icon">
+            <div class="home_icon">
+              <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name">
+            </div>
+          </div>
+        <?php endif ?>
       </div>
 
-      <div class="col-sm-5 col-xs-12 program-search-info">
-        <div class="row">
-          <div class="col-xs-3">
-            Address
-          </div>
-          <div class="col-xs-9">
-            <?php print $title; ?>
-            <?php print render($content['field_prog_street_address']); ?>
-            <?php print render($content['field_prog_address_line_2']); ?>
-            <?php print render($content['field_prog_city']); ?>,
-            <?php print render($content['field_prog_state']); ?>
-            <?php print render($content['field_zip_code']); ?>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-3">
-            Phone
-          </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_prog_contact_phone']); ?>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-3">
-            Web
-          </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_prog_program_website']); ?>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-3">
-            Contact
-          </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_progprogram_contact_person']); ?>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-3">
-            Email
-          </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_prog_program_contact_email']); ?>
-          </div>
-        </div>
+      <div class="program-search-program-name">
+        <?php print $title; ?>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12 buttons">
-        <a class="btn btn-danger" href="/collegesearch/favorite/<?php print $node->nid; ?>?destination=<?php print current_path(); ?>"><i style="color:#fff;" class="fa fa-heart fa-lg" aria-hidden="true"></i>Save</a>
-        <a class="btn btn-danger" href="/printpdf/<?php print $node->nid; ?>"><i style="color:#fff;" class="fa fa-heart fa-lg" aria-hidden="true"></i>Print as PDF</a>
+      <div class="program-university">
+        <?php print render($content['field_prog_col_univ_name']); ?>
       </div>
-    </div>
 
-    <?php
-    if (isset($content['field_prog_public_or_privat']) ||
-        isset($content['field_prog_type_of_school']) ||
-        isset($content['field_prog_is_was_tpsid']) ||
-        isset($content['field_prog_hs_coll']) ||
-        isset($content['field_how_many_students_total_at']) ||
-        isset($content['field_prog_summer_prog_y_n'])):
-    ?>
-      <div class="program-box" id="general">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>General</h2>
-          </div>
-          <div>
-            <?php print render($content['field_prog_public_or_privat']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_type_of_school']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_is_was_tpsid']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_hs_coll']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_how_many_students_total_at']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_summer_prog_y_n']); ?>
-          </div>
-        </div>
+      <div class="program-location">
+        <?php print $title; ?><br/>
+        <?php print render($content['field_prog_street_address']); ?><br/>
+        <?php print render($content['field_prog_address_line_2']); ?><br/>
+        <?php print render($content['field_prog_city']); ?>,
+        <?php print render($content['field_prog_state']); ?>
+        <?php print render($content['field_zip_code']); ?>
       </div>
-    <?php endif ?>
 
-    <?php
-    if (isset($content['field_prog_school_dist']) ||
-        isset($content['field_prog_school_dist']) ||
-        isset($content['field_prog_school_dist'])):
-    ?>
-      <div class="program-box" id="affiliates">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>Affiliates</h2>
-          </div>
-          <div>
-            <?php print render($content['field_prog_school_dist']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_school_dist_contact']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_schl_dist_email']); ?>
-          </div>
-        </div>
-      </div>
-    <?php endif ?>
-
-    <?php
-    if (isset($content['field_prog_tuition']) ||
-        isset($content['field__prog_room_and_board']) ||
-        isset($content['field_prog_other_costs']) ||
-        isset($content['field_prog_other_costs_amount']) ||
-        isset($content['field_prog_explain_other_costs']) ||
-        isset($content['field_prog_ctp_y_n']) ||
-        isset($content['field_prog_pay_methods']) ||
-        isset($content['field_prog_addl_scholarships'])):
-    ?>
-      <div class="program-box" id="cost">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>Cost</h2>
-          </div>
-          <div>
-            <?php print render($content['field_prog_tuition']); ?>
-          </div>
-          <div>
-            <?php print render($content['field__prog_room_and_board']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_other_costs']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_other_costs_amount']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_explain_other_costs']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_ctp_y_n']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_pay_methods']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_addl_scholarships']); ?>
-          </div>
-        </div>
-      </div>
-    <?php endif ?>
-
-    <?php
-    if (isset($content['field_prog_admiss_link']) ||
-        isset($content['field_prog_admiss_requirements']) ||
-        isset($content['field_prog_explain_other']) ||
-        isset($content['field_prog_which_disabilities'])):
-    ?>
-      <div class="program-box" id="requirements">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>Requirements</h2>
-          </div>
-          <div>
-            <?php print render($content['field_prog_admiss_link']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_admiss_requirements']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_explain_other']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_which_disabilities']); ?>
-          </div>
-        </div>
-      </div>
-    <?php endif ?>
-
-    <div class="program-box" id="academic">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2>Academic</h2>
-        </div>
+      <div class="well">
+        <table class="program-contact-info">
+          <tbody>
+            <tr>
+              <td>
+                <?php
+                if (isset($content['field_progprogram_contact_person']['#display_label'])) {
+                  print $content['field_progprogram_contact_person']['#display_label'];
+                }
+                else {
+                  print $content['field_progprogram_contact_person']['#title'];
+                }
+                ?>
+              </td>
+              <td><?php print $content['field_progprogram_contact_person'][0]['#markup']; ?></td>
+            </tr>
+            <tr>
+              <td>
+                <?php
+                if (isset($content['field_prog_program_contact_email']['#display_label'])) {
+                  print $content['field_prog_program_contact_email']['#display_label'];
+                }
+                else {
+                  print $content['field_prog_program_contact_email']['#title'];
+                }
+                ?>
+              </td>
+              <td><?php print $content['field_prog_program_contact_email'][0]['#markup']; ?></td>
+            </tr>
+            <tr>
+              <td>
+                <?php
+                if (isset($content['field_prog_contact_phone']['#display_label'])) {
+                  print $content['field_prog_contact_phone']['#display_label'];
+                }
+                else {
+                  print $content['field_prog_contact_phone']['#title'];
+                }
+                ?>
+              </td>
+              <td><?php print $content['field_prog_contact_phone'][0]['#markup']; ?></td>
+            </tr>
+            <tr>
+              <td>
+                <?php
+                if (isset($content['field_prog_program_website']['#display_label'])) {
+                  print $content['field_prog_program_website']['#display_label'];
+                }
+                else {
+                  print $content['field_prog_program_website']['#title'];
+                }
+                ?>
+              </td>
+              <td><?php print render($content['field_prog_program_website'][0]); ?></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <div class="program-box" id="housing">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2>Housing</h2>
-        </div>
+    <div class="col-md-5">
+      <div class="print-block">
+        <a href="/collegesearch/favorite/<?php print $node->nid; ?>?destination=<?php print current_path(); ?>"type="button" class="btn btn-default btn-xs"><i class="fa fa-heart" aria-hidden="true"></i> Save</a>
+        <a href="/print/<?php print $node->nid; ?>" type="button" class="btn btn-default btn-xs"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
+        <a href="/printpdf/<?php print $node->nid; ?>" type="button" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Save to PDF</a>
       </div>
+
+      <iframe width="100%" height="250" frameborder="0" src="https://a.tiles.mapbox.com/v4/ici-umass.03ffd59j/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiaWNpLXVtYXNzIiwiYSI6IjU0OTZjZTY1M2I4NWM1ZTMxYTNjNzZmZDYxNjUwODlhIn0.-5DkuMz0Ots5OwiC-sJYVQ"></iframe>
     </div>
-
-    <div class="program-box" id="extracurricular">
-      <div class="row">
-        <div class="col-sm-12">
-          <h2>Extracurricular</h2>
-        </div>
-      </div>
-    </div>
-
-    <?php
-    if (isset($content['field_prog_num_applied']) ||
-        isset($content['field_prog_15_16_accepted'])):
-    ?>
-      <div class="program-box" id="acceptance-rates">
-        <div class="row">
-          <div class="col-sm-12">
-            <h2>Acceptance, Rentention, and Completion Rates</h2>
-          </div>
-          <div>
-            <?php print render($content['field_prog_num_applied']); ?>
-          </div>
-          <div>
-            <?php print render($content['field_prog_15_16_accepted']); ?>
-          </div>
-        </div>
-      </div>
-    <?php endif ?>
-
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <?php print render($content['body']); ?>
+    </div>
+  </div>
+
+  <?php
+  if (isset($content['field_prog_public_or_privat']) ||
+      isset($content['field_prog_type_of_school']) ||
+      isset($content['field_prog_is_was_tpsid']) ||
+      isset($content['field_prog_hs_coll']) ||
+      isset($content['field_how_many_students_total_at']) ||
+      isset($content['field_prog_summer_prog_y_n'])):
+  ?>
+    <div class="program-box" id="general">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th colspan="2"><i class="fa fa-info-circle" aria-hidden="true"></i> General</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php // Each of these fields is rendered by field--program-record--full.tpl.php - this is what adds the <tr> and <td>. ?>
+          <?php print render($content['field_prog_public_or_privat']); ?>
+          <?php print render($content['field_prog_type_of_school']); ?>
+          <?php print render($content['field_prog_is_was_tpsid']); ?>
+          <?php print render($content['field_prog_hs_coll']); ?>
+          <?php print render($content['field_how_many_students_total_at']); ?>
+          <?php print render($content['field_prog_summer_prog_y_n']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
+
+  <?php
+  if (isset($content['field_prog_school_dist']) ||
+      isset($content['field_prog_school_dist']) ||
+      isset($content['field_prog_school_dist'])):
+  ?>
+    <div class="program-box" id="affiliates">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-users" aria-hidden="true"></i> Affiliates</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_school_dist']); ?>
+        <?php print render($content['field_prog_school_dist_contact']); ?>
+        <?php print render($content['field_prog_schl_dist_email']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
+
+  <?php
+  if (isset($content['field_prog_tuition']) ||
+      isset($content['field__prog_room_and_board']) ||
+      isset($content['field_prog_other_costs']) ||
+      isset($content['field_prog_other_costs_amount']) ||
+      isset($content['field_prog_explain_other_costs']) ||
+      isset($content['field_prog_ctp_y_n']) ||
+      isset($content['field_prog_pay_methods']) ||
+      isset($content['field_prog_addl_scholarships'])):
+  ?>
+    <div class="program-box" id="cost">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-money" aria-hidden="true"></i> Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_tuition']); ?>
+        <?php print render($content['field__prog_room_and_board']); ?>
+        <?php print render($content['field_prog_other_costs']); ?>
+        <?php print render($content['field_prog_other_costs_amount']); ?>
+        <?php print render($content['field_prog_explain_other_costs']); ?>
+        <?php print render($content['field_prog_ctp_y_n']); ?>
+        <?php print render($content['field_prog_pay_methods']); ?>
+        <?php print render($content['field_prog_addl_scholarships']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
+
+  <?php
+  if (isset($content['field_prog_admiss_link']) ||
+      isset($content['field_prog_admiss_requirements']) ||
+      isset($content['field_prog_explain_other']) ||
+      isset($content['field_prog_which_disabilities'])):
+  ?>
+    <div class="program-box" id="requirements">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Requirements</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_admiss_link']); ?>
+        <?php print render($content['field_prog_admiss_requirements']); ?>
+        <?php print render($content['field_prog_explain_other']); ?>
+        <?php print render($content['field_prog_which_disabilities']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
+
+  <div class="program-box" id="academic">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Academic</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-box" id="housing">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Housing</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-box" id="extracurricular">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Extracurricular</h2>
+      </div>
+    </div>
+  </div>
+
+  <?php
+  if (isset($content['field_prog_num_applied']) ||
+      isset($content['field_prog_15_16_accepted'])):
+  ?>
+    <div class="program-box" id="acceptance-rates">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-pie-chart" aria-hidden="true"></i> Acceptance, Rentention, and Completion Rates</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_num_applied']); ?>
+        <?php print render($content['field_prog_15_16_accepted']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
 
 </article>
