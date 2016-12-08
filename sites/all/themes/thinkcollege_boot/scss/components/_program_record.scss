@@ -72,6 +72,10 @@
     .buttons {
       padding-top:10px;
       border-top:#ccc 1px solid;
+      .btn-success {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
     }
 
     table {

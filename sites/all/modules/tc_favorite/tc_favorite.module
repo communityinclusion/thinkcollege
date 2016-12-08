@@ -91,6 +91,18 @@ function _tc_favorite_favorite_remove($nid) {
 }
 
 /**
+ * Custom function to see if a node is a favorite.
+ */
+function _tc_favorite_is_favorite($nid) {
+  // Get existing favorites.
+  $favorites = array();
+  if (isset($_SESSION['tc_favorite'])) {
+    $favorites = unserialize($_SESSION['tc_favorite']);
+  }
+  return in_array($nid, array_keys($favorites));
+}
+
+/**
  * Implements hook_block_info().
  */
 function tc_favorite_block_info() {
@@ -138,12 +150,21 @@ function _tc_favorite_favorites_block() {
  */
 function tc_favorite_theme($existing, $type, $theme, $path) {
   return array(
+    // Main Favorites (Saved) block.
     'block__tc_favorite__favorites' => array(
       'template' => 'block--tc-favorite--favorites',
       'path' => drupal_get_path('module', 'tc_favorite') . '/templates',
       'variables' => array(
         'favorites' => null,
         'emailform' => null,
+      ),
+    ),
+
+    // Saved button.
+    'tc_favorite_button' => array(
+      'variables' => array(
+        'nid' => null,
+        'size' => null,
       ),
     ),
   );
@@ -230,6 +251,33 @@ function _tc_favorite_email_send($email_address, $params) {
   }
   else {
     drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+  }
+
+}
+
+function theme_tc_favorite_button($variables) {
+  $nid = (int)check_plain($variables['nid']);
+  if (!$nid) {
+    return '';
+  }
+  if (isset($variables['size'])) {
+    $size = $variables['size'];
+  }
+  else {
+    $size = 'xs';
+  }
+  if (isset($variables['type'])) {
+    $type = $variables['type'];
+  }
+  else {
+    $type = 'default';
+  }
+
+  if (_tc_favorite_is_favorite($nid)) {
+    return '<a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() . '"type="button" class="btn btn-success btn-' . $size . '"><i class="fa fa-heart" aria-hidden="true"></i> Saved</a>';
+  }
+  else {
+    return '<a href="/collegesearch/favorite/' . $nid . '?destination=' . current_path() . '"type="button" class="btn btn-' . $type . ' btn-' . $size . '"><i class="fa fa-heart" aria-hidden="true"></i> Save</a>';
   }
 
 }
