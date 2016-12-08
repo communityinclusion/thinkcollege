@@ -5,3 +5,15 @@
  */
 
 include_once 'program_record.features.inc';
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function program_record_form_field_ui_display_overview_form_alter(&$form, &$form_state, $form_id) {
+  if (in_array($form['#view_mode'], array('full', 'card'))) {
+    // Add a reminder that the order of fields is controlled by a templates.
+    drupal_set_message(t('Field display for this view mode is determined by a template file in the "thinkcollege_boot" theme. Changing the 
+      visibility of a field, the order of fields (and field groups) on this page will have no effect.
+      Individual field display configurations are controlled by settings on this page.'));
+  }
+}

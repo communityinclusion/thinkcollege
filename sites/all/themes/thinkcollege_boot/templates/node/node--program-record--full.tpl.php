@@ -207,10 +207,14 @@ $classes .= ' node-program-record-full';
   <?php
   if (isset($content['field_prog_public_or_privat']) ||
       isset($content['field_prog_type_of_school']) ||
+      isset($content['field_prog_other_explain']) ||
       isset($content['field_prog_is_was_tpsid']) ||
       isset($content['field_prog_hs_coll']) ||
       isset($content['field_how_many_students_total_at']) ||
-      isset($content['field_prog_summer_prog_y_n'])):
+      isset($content['field_prog_when_will_progr_start']) ||
+      isset($content['field_prog_summer_prog_y_n']) ||
+      isset($content['field_prog_summer_descrip']) ||
+      isset($content['field_prog_summer_info_link'])):
   ?>
     <div class="program-box" id="general">
       <table class="table table-striped">
@@ -223,10 +227,14 @@ $classes .= ' node-program-record-full';
           <?php // Each of these fields is rendered by field--program-record--full.tpl.php - this is what adds the <tr> and <td>. ?>
           <?php print render($content['field_prog_public_or_privat']); ?>
           <?php print render($content['field_prog_type_of_school']); ?>
+          <?php print render($content['field_prog_other_explain']); ?>
           <?php print render($content['field_prog_is_was_tpsid']); ?>
           <?php print render($content['field_prog_hs_coll']); ?>
           <?php print render($content['field_how_many_students_total_at']); ?>
+          <?php print render($content['field_prog_when_will_progr_start']); ?>
           <?php print render($content['field_prog_summer_prog_y_n']); ?>
+          <?php print render($content['field_prog_summer_descrip']); ?>
+          <?php print render($content['field_prog_summer_info_link']); ?>
         </tbody>
       </table>
     </div>
@@ -307,33 +315,81 @@ $classes .= ' node-program-record-full';
     </div>
   <?php endif ?>
 
-  <div class="program-box" id="academic">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Academic</h2>
-      </div>
+  <?php
+  if (isset($content['field_prog_course_types']) ||
+    isset($content['field_prog_special_courses']) ||
+    isset($content['field_prog_spec_courses_mor_info']) ||
+    isset($content['field_prog_perc_acad_time']) ||
+    isset($content['field_prog_credential']) ||
+    isset($content['field_prog_perc_w_compet_employ']) ||
+    isset($content['field_prog_other_career_dev']) ||
+    isset($content['field_prog_vocational_credential'])):
+    ?>
+    <div class="program-box" id="academic">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Academics</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_course_types']); ?>
+        <?php print render($content['field_prog_special_courses']); ?>
+        <?php print render($content['field_prog_spec_courses_mor_info']); ?>
+        <?php print render($content['field_prog_perc_acad_time']); ?>
+        <?php print render($content['field_prog_credential']); ?>
+        <?php print render($content['field_prog_perc_w_compet_employ']); ?>
+        <?php print render($content['field_prog_other_career_dev']); ?>
+        <?php print render($content['field_prog_vocational_credential']); ?>
+        </tbody>
+      </table>
     </div>
-  </div>
+  <?php endif ?>
 
-  <div class="program-box" id="housing">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Housing</h2>
-      </div>
+  <?php
+  if (isset($content['field_prog_housing_y_n'])):
+    ?>
+    <div class="program-box" id="housing">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-home" aria-hidden="true"></i> Housing</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_housing_y_n']); ?>
+        </tbody>
+      </table>
     </div>
-  </div>
+  <?php endif ?>
 
-  <div class="program-box" id="extracurricular">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Extracurricular</h2>
-      </div>
+  <?php
+  if (isset($content['field_prog_student_orgs_y_n']) ||
+    isset($content['field_prog_overall_time_dist']) ||
+    isset($content['field_prog_extracurric_explain'])):
+    ?>
+    <div class="program-box" id="extracurricular">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Requirements</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_student_orgs_y_n']); ?>
+        <?php print render($content['field_prog_overall_time_dist']); ?>
+        <?php print render($content['field_prog_extracurric_explain']); ?>
+        </tbody>
+      </table>
     </div>
-  </div>
+  <?php endif ?>
 
   <?php
   if (isset($content['field_prog_num_applied']) ||
-      isset($content['field_prog_15_16_accepted'])):
+    isset($content['field_prog_15_16_accepted']) ||
+    isset($content['field_prog_new_studt_f14']) ||
+    isset($content['field_prog_studt_retn_f15']) ||
+    isset($content['field_prog_length_years'])):
   ?>
     <div class="program-box" id="acceptance-rates">
       <table class="table table-striped">
@@ -345,6 +401,9 @@ $classes .= ' node-program-record-full';
         <tbody>
         <?php print render($content['field_prog_num_applied']); ?>
         <?php print render($content['field_prog_15_16_accepted']); ?>
+        <?php print render($content['field_prog_new_studt_f14']); ?>
+        <?php print render($content['field_prog_studt_retn_f15']); ?>
+        <?php print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>
     </div>
