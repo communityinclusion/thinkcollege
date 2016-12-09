@@ -16,33 +16,31 @@
     border: none;
     box-shadow: none;
     background-color: inherit;
+    padding: 0;
+    margin: 0;
     ul.menu {
+      font-size: 1.05em;
       li {
+        margin-bottom: 3px;
         a {
           background-color: $tcblue;
           color: #FFF;
           padding: 15px 5px;
-          margin: 10px 0;
+          margin: 0;
           text-transform: uppercase;
           border-radius: 4px;
-          font-size: 0.8em;
+          font-size: 1.07em;
           text-align: center;
+          padding: 10px 15px;
+          font-weight: 600;
+          line-height: 24px;
         }
 
         &.active a {
+          text-decoration: none;
           background-color: $tcorange;
         }
       }
-    }
-  }
-
-
-
-  #block-menu-menu-program-record-scrollspy {
-
-    ul.menu li.active a {
-      text-decoration: none;
-      background-color: #eeeeee;
     }
   }
 

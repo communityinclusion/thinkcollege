@@ -8981,44 +8981,53 @@ article.node-program-record-full .program-box {
   border: none;
   box-shadow: none;
   background-color: inherit;
+  padding: 0;
+  margin: 0;
 }
 /* line 13, ../scss/components/_blocks.scss */
 .region-sidebar-first .block#block-menu-menu-program-record-scrollspy.affix {
   top: 33px;
 }
 /* line 21, ../scss/components/_blocks.scss */
+.region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul.menu {
+  font-size: 1.05em;
+}
+/* line 23, ../scss/components/_blocks.scss */
+.region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul.menu li {
+  margin-bottom: 3px;
+}
+/* line 25, ../scss/components/_blocks.scss */
 .region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul.menu li a {
   background-color: #20527c;
   color: #FFF;
   padding: 15px 5px;
-  margin: 10px 0;
+  margin: 0;
   text-transform: uppercase;
   border-radius: 4px;
-  font-size: 0.8em;
+  font-size: 1.07em;
   text-align: center;
+  padding: 10px 15px;
+  font-weight: 600;
+  line-height: 24px;
 }
-/* line 32, ../scss/components/_blocks.scss */
+/* line 39, ../scss/components/_blocks.scss */
 .region-sidebar-first .block#block-menu-menu-program-record-scrollspy ul.menu li.active a {
+  text-decoration: none;
   background-color: #c96b29;
 }
-/* line 43, ../scss/components/_blocks.scss */
-.region-sidebar-first .block #block-menu-menu-program-record-scrollspy ul.menu li.active a {
-  text-decoration: none;
-  background-color: #eeeeee;
-}
-/* line 49, ../scss/components/_blocks.scss */
+/* line 47, ../scss/components/_blocks.scss */
 .region-sidebar-first .block h2 {
   text-align: left;
   border-bottom: #ccc 1px solid;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
-/* line 56, ../scss/components/_blocks.scss */
+/* line 54, ../scss/components/_blocks.scss */
 .region-sidebar-first .block .saved {
   margin: 5px;
   background-color: #F7F7F7;
 }
-/* line 61, ../scss/components/_blocks.scss */
+/* line 59, ../scss/components/_blocks.scss */
 .region-sidebar-first .block .saved p {
   padding: 5px 10px;
   margin-bottom: 5px;

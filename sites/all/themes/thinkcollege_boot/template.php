@@ -136,6 +136,13 @@ function thinkcollege_boot_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     drupal_set_title(''); //removes welcome message (page title)
   }
+
+  if (isset($vars['node'])) {
+    if ($vars['node']->type == 'program_record') {
+      //krumo($vars['node']);
+      $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+    }
+  }
 }
 
 function thinkcollege_boot_preprocess_html(&$vars) {
