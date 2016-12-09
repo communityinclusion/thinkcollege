@@ -11,19 +11,21 @@ include_once 'program_record.features.inc';
  */
 function program_record_form_field_ui_display_overview_form_alter(&$form, &$form_state, $form_id) {
   // Add a reminder that the order of fields is controlled by a templates.
-  switch ($form['#view_mode']) {
-    case 'full':
-      drupal_set_message(t('Field display for this view mode is determined by the "node--program-record--full.tpl.php" template file. Changing the 
+  if ($form['#bundle'] == 'program_record') {
+    switch ($form['#view_mode']) {
+      case 'full':
+        drupal_set_message(t('Field display for this view mode is determined by the "node--program-record--full.tpl.php" template file. Changing the 
         visibility of a field, the order of fields (and field groups) on this page will have no effect.
         Individual field display configurations are controlled by settings on this page.'));
-      break;
-    case 'card':
-      drupal_set_message(t('Field display for this view mode is determined by the "node--program-record--card.tpl.php" template file. Changing the 
+        break;
+      case 'card':
+        drupal_set_message(t('Field display for this view mode is determined by the "node--program-record--card.tpl.php" template file. Changing the 
         visibility of a field, the order of fields (and field groups) on this page will have no effect.
         Individual field display configurations are controlled by settings on this page.'));
-      break;
-    case 'default':
-      drupal_set_message(t('The "Default" display only controls the order and grouping of fields on the PDF version of Program Record nodes.'));
-      break;
+        break;
+      case 'default':
+        drupal_set_message(t('The "Default" display only controls the order and grouping of fields on the PDF version of Program Record nodes.'));
+        break;
+    }
   }
 }
