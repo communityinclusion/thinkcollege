@@ -95,9 +95,6 @@ function program_record_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
-      'print' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -117,7 +114,7 @@ function program_record_strongarm() {
       'display' => array(
         'webform' => array(
           'default' => array(
-            'weight' => '23',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'card' => array(
