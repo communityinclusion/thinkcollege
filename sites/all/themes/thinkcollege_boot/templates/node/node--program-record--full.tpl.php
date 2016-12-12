@@ -85,6 +85,23 @@ $classes .= ' node-program-record-full';
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="row">
     <div class="col-md-7 program-heading">
+      <div class="program-search-program-name">
+        <?php print $title; ?>
+      </div>
+
+      <div class="program-university">
+        <?php print render($content['field_prog_col_univ_name']); ?>
+      </div>
+
+      <div class="program-location">
+        <?php print $title; ?><br/>
+        <?php print render($content['field_prog_street_address']); ?><br/>
+        <?php print render($content['field_prog_address_line_2']); ?><br/>
+        <?php print render($content['field_prog_city']); ?>,
+        <?php print render($content['field_prog_state']); ?>
+        <?php print render($content['field_zip_code']); ?>
+      </div>
+
       <div class="program_icon_box">
 
         <?php if($tc_tpsid_icon): ?>
@@ -108,23 +125,6 @@ $classes .= ' node-program-record-full';
             </div>
           </div>
         <?php endif ?>
-      </div>
-
-      <div class="program-search-program-name">
-        <?php print $title; ?>
-      </div>
-
-      <div class="program-university">
-        <?php print render($content['field_prog_col_univ_name']); ?>
-      </div>
-
-      <div class="program-location">
-        <?php print $title; ?><br/>
-        <?php print render($content['field_prog_street_address']); ?><br/>
-        <?php print render($content['field_prog_address_line_2']); ?><br/>
-        <?php print render($content['field_prog_city']); ?>,
-        <?php print render($content['field_prog_state']); ?>
-        <?php print render($content['field_zip_code']); ?>
       </div>
 
       <div class="well">

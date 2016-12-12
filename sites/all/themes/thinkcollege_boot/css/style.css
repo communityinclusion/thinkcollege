@@ -8844,11 +8844,67 @@ article.node-program-record-card .program-box .program-heading, article.node-pro
 /* line 32, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box .program-heading .program_icon_box, article.node-program-record-full .program-box .program-heading .program_icon_box {
   margin-left: 28px;
+  margin-bottom: 0;
   display: block;
 }
 /* line 36, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box .program-heading .program_icon_box .program_icon, article.node-program-record-full .program-box .program-heading .program_icon_box .program_icon {
   float: right;
+}
+/* line 42, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box .program-search-info, article.node-program-record-full .program-box .program-search-info {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 10pt;
+  font-family: 'lato', sans-serif;
+}
+/* line 48, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box .program-search-info .row, article.node-program-record-full .program-box .program-search-info .row {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-bottom: 3px #fff solid;
+  flex-grow: !important;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color: #F7F7F7;
+}
+/* line 57, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box .program-search-info .row .field-name-field-prog-city, article.node-program-record-card .program-box .program-search-info .row .field-name-field-prog-state, article.node-program-record-card .program-box .program-search-info .row .field-name-field-zip-code, article.node-program-record-full .program-box .program-search-info .row .field-name-field-prog-city, article.node-program-record-full .program-box .program-search-info .row .field-name-field-prog-state, article.node-program-record-full .program-box .program-search-info .row .field-name-field-zip-code {
+  display: inline-block;
+}
+/* line 63, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box .buttons, article.node-program-record-full .program-box .buttons {
+  padding-top: 10px;
+  border-top: #ccc 1px solid;
+}
+/* line 66, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box .buttons .btn-success, article.node-program-record-full .program-box .buttons .btn-success {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 73, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box table thead, article.node-program-record-full .program-box table thead {
+  border-top: none;
+}
+/* line 75, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box table thead th, article.node-program-record-full .program-box table thead th {
+  font-family: "museo-sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+  background-color: #4C8EC9;
+}
+/* line 83, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box table td, article.node-program-record-full .program-box table td {
+  width: 50%;
+  color: #555;
+}
+/* line 89, ../scss/components/_program_record.scss */
+article.node-program-record-card .program_icon_box, article.node-program-record-full .program_icon_box {
+  margin-bottom: 10px;
+}
+/* line 91, ../scss/components/_program_record.scss */
+article.node-program-record-card .program_icon_box .program_icon, article.node-program-record-full .program_icon_box .program_icon {
   margin: 3px;
   padding: 5px;
   display: inline-block;
@@ -8861,73 +8917,25 @@ article.node-program-record-card .program-box .program-heading .program_icon_box
   -moz-border-radius: 4px;
   vertical-align: middle;
 }
-/* line 50, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box .program-heading .program_icon_box .tpsid_icon, article.node-program-record-full .program-box .program-heading .program_icon_box .tpsid_icon {
+/* line 104, ../scss/components/_program_record.scss */
+article.node-program-record-card .program_icon_box .tpsid_icon, article.node-program-record-full .program_icon_box .tpsid_icon {
   text-align: center;
   line-height: 30px;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   font-size: 11px;
 }
-/* line 60, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box .program-search-info, article.node-program-record-full .program-box .program-search-info {
-  padding-top: 15px;
-  padding-bottom: 10px;
-  font-size: 10pt;
-  font-family: 'lato', sans-serif;
-}
-/* line 66, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box .program-search-info .row, article.node-program-record-full .program-box .program-search-info .row {
-  padding-top: 5px;
-  padding-bottom: 10px;
-  border-bottom: 3px #fff solid;
-  flex-grow: !important;
-  margin-right: 5px;
-  margin-left: 5px;
-  background-color: #F7F7F7;
-}
-/* line 75, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box .program-search-info .row .field-name-field-prog-city, article.node-program-record-card .program-box .program-search-info .row .field-name-field-prog-state, article.node-program-record-card .program-box .program-search-info .row .field-name-field-zip-code, article.node-program-record-full .program-box .program-search-info .row .field-name-field-prog-city, article.node-program-record-full .program-box .program-search-info .row .field-name-field-prog-state, article.node-program-record-full .program-box .program-search-info .row .field-name-field-zip-code {
-  display: inline-block;
-}
-/* line 81, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box .buttons, article.node-program-record-full .program-box .buttons {
-  padding-top: 10px;
-  border-top: #ccc 1px solid;
-}
-/* line 84, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box .buttons .btn-success, article.node-program-record-full .program-box .buttons .btn-success {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/* line 91, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box table thead, article.node-program-record-full .program-box table thead {
-  border-top: none;
-}
-/* line 93, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box table thead th, article.node-program-record-full .program-box table thead th {
-  font-family: "museo-sans", sans-serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: #fff;
-  background-color: #4C8EC9;
-}
-/* line 101, ../scss/components/_program_record.scss */
-article.node-program-record-card .program-box table td, article.node-program-record-full .program-box table td {
-  width: 50%;
-  color: #555;
-}
-/* line 108, ../scss/components/_program_record.scss */
+/* line 113, ../scss/components/_program_record.scss */
 article.node-program-record-card .modal, article.node-program-record-full .modal {
   font-size: 1.6rem;
   font-family: "lato", sans-serif;
   color: #331d35;
 }
-/* line 113, ../scss/components/_program_record.scss */
+/* line 118, ../scss/components/_program_record.scss */
 article.node-program-record-card .modal .program-location .field, article.node-program-record-full .modal .program-location .field {
   display: inline-block;
 }
-/* line 119, ../scss/components/_program_record.scss */
+/* line 124, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-search-program-name, article.node-program-record-full .program-search-program-name {
   display: block;
   color: #444;
@@ -8935,7 +8943,7 @@ article.node-program-record-card .program-search-program-name, article.node-prog
   font-weight: 700;
   font-family: "museo-sans", sans-serif;
 }
-/* line 127, ../scss/components/_program_record.scss */
+/* line 132, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-university, article.node-program-record-full .program-university {
   display: block;
   color: #E76E35;
@@ -8943,23 +8951,23 @@ article.node-program-record-card .program-university, article.node-program-recor
   margin: 1px 0 0;
   font-family: 'lato', sans-serif, sans-serif;
 }
-/* line 135, ../scss/components/_program_record.scss */
+/* line 140, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-location, article.node-program-record-full .program-location {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 10pt;
-  margin: 5px 0 12px;
+  margin: 5px 0;
   font-family: "museo-sans", sans-serif;
 }
-/* line 141, ../scss/components/_program_record.scss */
+/* line 146, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-location .field, article.node-program-record-full .program-location .field {
   display: inline-block;
 }
-/* line 147, ../scss/components/_program_record.scss */
+/* line 152, ../scss/components/_program_record.scss */
 article.node-program-record-card table.program-contact-info td, article.node-program-record-full table.program-contact-info td {
   width: 50%;
 }
-/* line 154, ../scss/components/_program_record.scss */
+/* line 159, ../scss/components/_program_record.scss */
 article.node-program-record-full .program-box {
   margin-top: 20px;
 }
