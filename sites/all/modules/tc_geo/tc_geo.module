@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_action_info().
+ */
+function tc_geo_action_info() {
+  return array(
+    '_tc_geo_copy_address_data' => array(
+      'type' => 'node',
+      'label' => t('Copy address data to AddressField field'),
+      'configurable' => FALSE,
+      'triggers' => array('node_update'),
+      'permissions' => array('administer site configuration'),
+    ),
+  );
+}
+
+/**
+ * Custom action to move data from original address fields to AddressField field.
+ */
+function _tc_geo_copy_address_data(&$node, $context) {
+  $node_wrapper = entity_metadata_wrapper('node', $node);
+  $node_wrapper->field_address->country = 'US';
+  $node_wrapper->field_address->administrative_area = $node->field_prog_state['und'][0]['value'];
+  $node_wrapper->field_address->locality = $node->field_prog_city['und'][0]['value'];
+  $node_wrapper->field_address->postal_code = $node->field_zip_code['und'][0]['value'];
+  $node_wrapper->field_address->thoroughfare = $node->field_prog_street_address['und'][0]['value'];
+  $node_wrapper->field_address->premise = $node->field_prog_address_line_2['und'][0]['value'];
+  $node_wrapper->save();
+  drupal_set_message(t('Address data has been copied.'));
+}
