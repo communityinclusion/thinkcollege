@@ -20,13 +20,18 @@ function tc_geo_action_info() {
  */
 function _tc_geo_copy_address_data(&$node, $context) {
   $node_wrapper = entity_metadata_wrapper('node', $node);
-  drupal_set_message('Starting copying address data for ' . $node_wrapper->label());
-  $node_wrapper->field_address->country = 'US';
-  $node_wrapper->field_address->administrative_area = $node->field_prog_state['und'][0]['value'];
-  $node_wrapper->field_address->locality = $node->field_prog_city['und'][0]['value'];
-  $node_wrapper->field_address->postal_code = $node->field_zip_code['und'][0]['value'];
-  $node_wrapper->field_address->thoroughfare = $node->field_prog_street_address['und'][0]['value'];
-  $node_wrapper->field_address->premise = $node->field_prog_address_line_2['und'][0]['value'];
-  $node_wrapper->save();
-  drupal_set_message('Saved');
+  // If the state isn't set, assume there's no address
+  if (isset($node->field_prog_city['und'][0]['value'])) {
+    if (trim($node->field_prog_city['und'][0]['value']) != '') {
+      drupal_set_message('Starting copying address data for ' . $node_wrapper->label());
+      $node_wrapper->field_address->country = 'US';
+      $node_wrapper->field_address->administrative_area = $node->field_prog_state['und'][0]['value'];
+      $node_wrapper->field_address->locality = $node->field_prog_city['und'][0]['value'];
+      $node_wrapper->field_address->postal_code = $node->field_zip_code['und'][0]['value'];
+      $node_wrapper->field_address->thoroughfare = $node->field_prog_street_address['und'][0]['value'];
+      $node_wrapper->field_address->premise = $node->field_prog_address_line_2['und'][0]['value'];
+      $node_wrapper->save();
+      drupal_set_message('Saved');
+    }
+  }
 }
