@@ -170,18 +170,24 @@ function thinkcollege_boot_preprocess_node(&$vars) {
     $node = $vars['node'];
 
     $vars['tc_housing_icon'] = FALSE;
-    if ($node->field_prog_housing_y_n['und'][0]['value'] == 'Yes') {
-      $vars['tc_housing_icon'] = TRUE;
+    if (isset($node->field_prog_housing_y_n['und'][0]['value'])) {
+      if ($node->field_prog_housing_y_n['und'][0]['value'] == 'Yes') {
+        $vars['tc_housing_icon'] = TRUE;
+      }
     }
 
     $vars['tc_financial_aid_icon'] = FALSE;
-    if ($node->field_prog_ctp_y_n['und'][0]['value'] == 'Yes') {
-      $vars['tc_financial_aid_icon'] = TRUE;
+    if (isset($node->field_prog_ctp_y_n['und'][0]['value'])) {
+      if ($node->field_prog_ctp_y_n['und'][0]['value'] == 'Yes') {
+        $vars['tc_financial_aid_icon'] = TRUE;
+      }
     }
 
     $vars['tc_tpsid_icon'] = FALSE;
-    if ($node->field_prog_is_was_tpsid['und'][0]['value'] != 'No') {
-      $vars['tc_tpsid_icon'] = TRUE;
+    if (isset($node->field_prog_is_was_tpsid['und'][0]['value'])) {
+      if ($node->field_prog_is_was_tpsid['und'][0]['value'] != 'No') {
+        $vars['tc_tpsid_icon'] = TRUE;
+      }
     }
   }
 }
