@@ -54,3 +54,4 @@ sites/default/settings.php
 ################
 .idea
 *.dd
+sites/all/modules/development
