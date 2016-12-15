@@ -550,7 +550,8 @@ function program_record_field_group_info() {
       20 => 'field_prog_contact_phone',
       21 => 'field_prog_photo',
       22 => 'field_prog_other_explain',
-      23 => 'title',
+      23 => 'field_address',
+      24 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
