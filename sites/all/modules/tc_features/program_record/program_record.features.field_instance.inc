@@ -58,7 +58,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Program Description',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'display_summary' => 1,
       'text_processing' => 1,
@@ -152,7 +152,7 @@ function program_record_field_default_field_instances() {
     'bundle' => 'program_record',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If no address is available, set the "Country" to "None".',
     'display' => array(
       'card' => array(
         'label' => 'above',
@@ -651,7 +651,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_accredited',
     'label' => 'This program is operated by and/or is a program of an accredited institute of higher education.',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -907,7 +907,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_admiss_requirements',
     'label' => 'Which of the following are basic requirements for admission to your program?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1023,7 +1023,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_age_range',
     'label' => 'Enter required age range',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1146,7 +1146,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_city',
     'label' => 'City',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1207,7 +1207,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_col_univ_name',
     'label' => 'College/university where the program is located',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1268,7 +1268,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_contact_phone',
     'label' => 'Program contact person phone',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1448,7 +1448,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_course_types',
     'label' => 'Students enrolled in this program take the following types of courses that are offered by the college/university',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1507,7 +1507,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_credential',
     'label' => 'Do students earn a credential of any kind when they complete this program?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1567,7 +1567,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_ctp_y_n',
     'label' => 'Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1868,7 +1868,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_housing_y_n',
     'label' => 'Does program offer housing for students?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1928,7 +1928,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_hs_coll',
     'label' => 'Students in this program (check all that apply)',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1987,7 +1987,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_is_was_tpsid',
     'label' => 'Is/was this program a federally funded TPSID program? ',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2104,7 +2104,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_length_years',
     'label' => 'What is the planned length of this program?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2366,7 +2366,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_other_career_dev',
     'label' => 'What other types of career development activities do students participate in (check all that apply)?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2681,7 +2681,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_overall_time_dist',
     'label' => 'How much overall time on campus is spent only with other students in this program?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2740,7 +2740,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_pay_methods',
     'label' => 'How do students pay to attend this program (check all that apply)?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2858,7 +2858,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_perc_acad_time',
     'label' => 'How much academic time is spent only with other students in this program?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3128,7 +3128,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_program_contact_email',
     'label' => 'Program Contact Email',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3322,7 +3322,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_public_or_privat',
     'label' => 'Is the college or univ. where the program is located public or private institution? ',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3631,7 +3631,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_serves_id',
     'label' => 'This program serves students who meet the definition of intellectual disability. ',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3751,7 +3751,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_special_courses',
     'label' => 'Do students take special courses that are only for students in this program? ',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3876,7 +3876,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_state',
     'label' => 'State/Province',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3936,7 +3936,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_street_address',
     'label' => 'Prog. Street Address',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -3998,7 +3998,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_student_orgs_y_n',
     'label' => 'Do students in your program join registered student organizations at the Institute of Higher Education (IHE)?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -4457,7 +4457,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_type_of_school',
     'label' => 'What type of school is this?',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -4637,7 +4637,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_which_dis_specify',
     'label' => 'Specify "other" disabilities',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -4700,7 +4700,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_prog_which_disabilities',
     'label' => 'Please indicate which disabilities students in this program have',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -4759,7 +4759,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_progprogram_contact_person',
     'label' => 'Program Contact Person',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -4820,7 +4820,7 @@ function program_record_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_zip_code',
     'label' => 'Zip Code',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -4867,6 +4867,7 @@ function program_record_field_default_field_instances() {
   t('How many students, total, attended this program in the most recently completed academic year?');
   t('How much academic time is spent only with other students in this program?');
   t('How much overall time on campus is spent only with other students in this program?');
+  t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');
   t('If you selected "Other" for type of school, above, explain here.');
   t('Is the college or univ. where the program is located public or private institution? ');
