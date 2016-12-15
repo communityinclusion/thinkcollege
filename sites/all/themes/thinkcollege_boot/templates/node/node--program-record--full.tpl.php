@@ -197,8 +197,7 @@ $classes .= ' node-program-record-full';
         <a href="/print/<?php print $node->nid; ?>" type="button" class="btn btn-default btn-xs"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
         <a href="/printpdf/<?php print $node->nid; ?>" type="button" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Save to PDF</a>
       </div>
-
-      <iframe width="100%" height="250" frameborder="0" src="https://a.tiles.mapbox.com/v4/ici-umass.03ffd59j/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiaWNpLXVtYXNzIiwiYSI6IjU0OTZjZTY1M2I4NWM1ZTMxYTNjNzZmZDYxNjUwODlhIn0.-5DkuMz0Ots5OwiC-sJYVQ"></iframe>
+      <?php print render($content['field_lat_lon'][0]); ?>
     </div>
   </div>
 
