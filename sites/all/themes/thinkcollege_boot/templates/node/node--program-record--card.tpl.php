@@ -121,7 +121,7 @@ $classes .= ' node-program-record-card';
         </div>
 
         <div class="program-location">
-          <?php print render($content['field_prog_city']); ?>, <?php print render($content['field_prog_state']); ?>
+          <?php print render($content['field_address']['#items'][0]['locality']); ?>, <?php print render($content['field_address']['#items'][0]['administrative_area']); ?>
         </div>
       </div>
     </div>
@@ -151,12 +151,16 @@ $classes .= ' node-program-record-card';
             Address
           </div>
           <div class="col-xs-9">
-            <?php print $title; ?>
-            <?php print render($content['field_prog_street_address']); ?>
-            <?php print render($content['field_prog_address_line_2']); ?>
-            <?php print render($content['field_prog_city']); ?>,
-            <?php print render($content['field_prog_state']); ?>
-            <?php print render($content['field_zip_code']); ?>
+            <?php print $title; ?><br/>
+            <?php print render($content['field_address']['#items'][0]['thoroughfare']); ?><br/>
+            <?php
+            if (isset($content['field_address']['#items'][0]['premise'])) {
+              print render($content['field_address']['#items'][0]['premise']) . '<br/>';
+            }
+            ?>
+            <?php print render($content['field_address']['#items'][0]['locality']); ?>,
+            <?php print render($content['field_address']['#items'][0]['administrative_area']); ?>
+            <?php print render($content['field_address']['#items'][0]['postal_code']); ?>
           </div>
         </div>
 

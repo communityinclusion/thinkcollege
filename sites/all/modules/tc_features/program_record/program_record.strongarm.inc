@@ -118,7 +118,7 @@ function program_record_strongarm() {
             'visible' => FALSE,
           ),
           'card' => array(
-            'weight' => '75',
+            'weight' => '77',
             'visible' => FALSE,
           ),
           'modal' => array(
