@@ -2527,6 +2527,48 @@ function field_bases_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_summer_program_display'.
+  $field_bases['field_summer_program_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_summer_program_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$yn_value = field_get_items($entity_type, $entity, \'field_prog_summer_prog_y_n\')[0][\'value\'];
+if (isset(field_get_items($entity_type, $entity, \'field_prog_summer_descrip\')[0][\'value\'])) {
+  $desc_value = field_get_items($entity_type, $entity, \'field_prog_summer_descrip\')[0][\'value\'];
+}
+
+// If there\'s a summer program, display the description. 
+if ($yn_value == "Yes") {
+  $entity_field[0][\'value\'] = $desc_value;
+}
+else {
+  unset($entity_field[0][\'value\']);
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_type_of_school_display'.
   $field_bases['field_type_of_school_display'] = array(
     'active' => 1,

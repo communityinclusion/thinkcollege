@@ -115,6 +115,7 @@ features[field_base][] = field_resourc_publication_date
 features[field_base][] = field_resourc_publication_types
 features[field_base][] = field_resourc_state_related
 features[field_base][] = field_resourc_topics
+features[field_base][] = field_summer_program_display
 features[field_base][] = field_type_of_school_display
 features[field_base][] = field_zip_code
 features[field_base][] = og_membership_request

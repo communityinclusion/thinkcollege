@@ -265,7 +265,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 26,
+        'weight' => 25,
       ),
       'modal' => array(
         'label' => 'above',
@@ -280,7 +280,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Number of students',
     'entity_type' => 'node',
     'field_name' => 'field_how_many_students_total_at',
     'label' => 'How many students, total, attended this program in the most recently completed academic year?',
@@ -811,7 +811,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 74,
+        'weight' => 75,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1123,7 +1123,7 @@ function program_record_field_default_field_instances() {
         'module' => 'static_field',
         'settings' => array(),
         'type' => 'static_field',
-        'weight' => 68,
+        'weight' => 67,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1185,7 +1185,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 75,
+        'weight' => 76,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1368,7 +1368,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 71,
+        'weight' => 70,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1424,7 +1424,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 72,
+        'weight' => 71,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1662,7 +1662,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 70,
+        'weight' => 69,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1967,7 +1967,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 25,
+        'weight' => 24,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2026,7 +2026,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 24,
+        'weight' => 23,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2084,7 +2084,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 69,
+        'weight' => 68,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2596,7 +2596,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 67,
+        'weight' => 73,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3912,7 +3912,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 76,
+        'weight' => 77,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3970,7 +3970,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 73,
+        'weight' => 74,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4216,10 +4216,9 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 29,
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4294,7 +4293,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Link to summer program info',
     'entity_type' => 'node',
     'field_name' => 'field_prog_summer_info_link',
     'label' => 'Provide a link to information about your summer program, if available',
@@ -4352,10 +4351,9 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 28,
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4490,7 +4488,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 72,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4611,7 +4609,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 27,
+        'weight' => 26,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4626,7 +4624,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'This program will be serving students in',
     'entity_type' => 'node',
     'field_name' => 'field_prog_when_will_progr_start',
     'label' => 'If this program has not yet started serving students, please specify the school year when the first class will be accepted: ',
@@ -4828,6 +4826,57 @@ function program_record_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-program_record-field_summer_program_display'.
+  $field_instances['node-program_record-field_summer_program_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 90,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Description of our summer transition program',
+    'entity_type' => 'node',
+    'field_name' => 'field_summer_program_display',
+    'label' => 'Summer program (display)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 129,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-program_record-field_type_of_school_display'.
   $field_instances['node-program_record-field_type_of_school_display'] = array(
     'bundle' => 'program_record',
@@ -4852,7 +4901,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 23,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4902,7 +4951,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 77,
+        'weight' => 78,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5009,6 +5058,7 @@ function program_record_field_default_field_instances() {
   t('State/Province');
   t('Students enrolled in this program take the following types of courses that are offered by the college/university');
   t('Students in this program (check all that apply)');
+  t('Summer program (display)');
   t('This program is operated by and/or is a program of an accredited institute of higher education.');
   t('This program serves students who meet the definition of intellectual disability. ');
   t('Tuition amount (numbers and decimals only, no commas or dollar signs)');
