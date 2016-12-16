@@ -209,7 +209,7 @@ $classes .= ' node-program-record-full';
 
   <?php
   if (isset($content['field_prog_public_or_privat']) ||
-      isset($content['field_prog_type_of_school']) ||
+      isset($content['field_type_of_school_display']) ||
       isset($content['field_prog_other_explain']) ||
       isset($content['field_prog_is_was_tpsid']) ||
       isset($content['field_prog_hs_coll']) ||
@@ -229,7 +229,7 @@ $classes .= ' node-program-record-full';
         <tbody>
           <?php // Each of these fields is rendered by field--program-record--full.tpl.php - this is what adds the <tr> and <td>. ?>
           <?php print render($content['field_prog_public_or_privat']); ?>
-          <?php print render($content['field_prog_type_of_school']); ?>
+          <?php print render($content['field_type_of_school_display']); ?>
           <?php print render($content['field_prog_other_explain']); ?>
           <?php print render($content['field_prog_is_was_tpsid']); ?>
           <?php print render($content['field_prog_hs_coll']); ?>
