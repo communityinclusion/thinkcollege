@@ -126,7 +126,7 @@ function program_record_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '79',
+            'weight' => '80',
             'visible' => FALSE,
           ),
         ),

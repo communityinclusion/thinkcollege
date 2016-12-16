@@ -1645,7 +1645,9 @@ function field_bases_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'email',
-    'settings' => array(),
+    'settings' => array(
+      'profile2_private' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'email',
   );
@@ -1696,6 +1698,7 @@ function field_bases_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -1717,6 +1720,7 @@ function field_bases_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -2279,6 +2283,63 @@ function field_bases_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_requirements_display'.
+  $field_bases['field_requirements_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_requirements_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$type_values = field_get_items($entity_type, $entity, \'field_prog_admiss_requirements\');
+if (isset(field_get_items($entity_type, $entity, \'field_prog_age_range\')[0][\'value\'])) {
+  $age_range = field_get_items($entity_type, $entity, \'field_prog_age_range\')[0][\'value\'];
+}
+if (isset(field_get_items($entity_type, $entity, \'field_prog_explain_other\')[0][\'value\'])) {
+  $other_value = field_get_items($entity_type, $entity, \'field_prog_explain_other\')[0][\'value\'];
+}
+
+$output = array();
+foreach ($type_values as $key => $type_value) {
+  if ($type_value[\'value\'] == \'Age range \') {
+    $output[] = $age_range;
+  }
+  else if ($type_value[\'value\'] == \'Other\') {
+    $output[] = $other_value;
+  }
+  else {
+    $output[] = $type_value[\'value\'];
+  }
+}
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
+}
+else {
+  unset($entity_field[0][\'value\']);
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_resourc_apa_citation'.

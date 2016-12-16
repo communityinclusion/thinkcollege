@@ -295,10 +295,11 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  if (isset($content['field_prog_admiss_link']) ||
-      isset($content['field_prog_admiss_requirements']) ||
-      isset($content['field_prog_explain_other']) ||
-      isset($content['field_prog_which_disabilities'])):
+  if (isset($content['field_prog_admit_deadline']) ||
+      isset($content['field_prog_admiss_link']) ||
+      isset($content['field_requirements_display']) ||
+      isset($content['field_prog_which_disabilities']) ||
+      isset($content['field_prog_which_dis_specify'])):
   ?>
     <div class="program-box" id="requirements">
       <table class="table table-striped">
@@ -308,10 +309,11 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
+        <?php print render($content['field_prog_admit_deadline']); ?>
         <?php print render($content['field_prog_admiss_link']); ?>
-        <?php print render($content['field_prog_admiss_requirements']); ?>
-        <?php print render($content['field_prog_explain_other']); ?>
+        <?php print render($content['field_requirements_display']); ?>
         <?php print render($content['field_prog_which_disabilities']); ?>
+        <?php print render($content['field_prog_which_dis_specify']); ?>
         </tbody>
       </table>
     </div>
