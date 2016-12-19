@@ -291,15 +291,14 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_15_16_accepted']) ||
     isset($content['field_prog_explain_nums']) ||
     isset($content['field_prog_15_16_admit_rate']) ||
-    isset($content['field_prog_new_studt_f14']) ||
-    isset($content['field_prog_studt_retn_f15']) ||
+    isset($content['field_prog_retention_rate']) ||
     isset($content['field_prog_length_years'])):
     ?>
     <div class="program-box" id="acceptance-rates">
       <table class="table table-striped">
         <thead>
         <tr>
-          <th colspan="2"><i class="fa fa-pie-chart" aria-hidden="true"></i> Acceptance, Rentention, and Completion Rates</th>
+          <th colspan="2"><i class="fa fa-pie-chart" aria-hidden="true"></i> Acceptance, Retention, and Completion Rates</th>
         </tr>
         </thead>
         <tbody>
@@ -307,8 +306,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_15_16_accepted']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
         <?php print render($content['field_prog_15_16_admit_rate']); ?>
-        <?php print render($content['field_prog_new_studt_f14']); ?>
-        <?php print render($content['field_prog_studt_retn_f15']); ?>
+        <?php print render($content['field_prog_retention_rate']); ?>
         <?php print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>

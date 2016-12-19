@@ -561,7 +561,12 @@ function field_bases_field_default_field_bases() {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$entity_field[0][\'value\'] = ($entity->field_prog_15_16_accepted[\'und\'][0][\'value\']  /  $entity->field_prog_num_applied[\'und\'][0][\'value\']) * 100;',
+      'code' => 'if (!$entity->field_prog_num_applied[\'und\'][0][\'value\'] || !$entity->field_prog_15_16_accepted[\'und\'][0][\'value\']) {
+  unset($entity_field[0][\'value\']);
+}
+else {
+  $entity_field[0][\'value\'] = ($entity->field_prog_15_16_accepted[\'und\'][0][\'value\']  /  $entity->field_prog_num_applied[\'und\'][0][\'value\']) * 100;
+}',
       'database' => array(
         'data_default' => '',
         'data_index' => 0,
@@ -1633,6 +1638,42 @@ function field_bases_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_retention_rate'.
+  $field_bases['field_prog_retention_rate'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_retention_rate',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => 'if (!$entity->field_prog_new_studt_f14[\'und\'][0][\'value\'] || !$entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']) {
+  unset($entity_field[0][\'value\']);
+}
+else {
+  $entity_field[0][\'value\'] = ($entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']  /  $entity->field_prog_new_studt_f14[\'und\'][0][\'value\']) * 100;
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'numeric',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_prog_schl_dist_email'.
