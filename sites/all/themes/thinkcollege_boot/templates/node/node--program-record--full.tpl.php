@@ -264,6 +264,58 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
+  if (isset($content['field_prog_admit_deadline']) ||
+    isset($content['field_prog_admiss_link']) ||
+    isset($content['field_requirements_display'])):
+    ?>
+    <div class="program-box" id="requirements">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Requirements</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_admit_deadline']); ?>
+        <?php print render($content['field_prog_admiss_link']); ?>
+        <?php print render($content['field_requirements_display']); ?>
+        <?php //print render($content['field_prog_which_disabilities']); ?>
+        <?php //print render($content['field_prog_which_dis_specify']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
+
+  <?php
+  if (isset($content['field_prog_num_applied']) ||
+    isset($content['field_prog_15_16_accepted']) ||
+    isset($content['field_prog_explain_nums']) ||
+    isset($content['field_prog_15_16_admit_rate']) ||
+    isset($content['field_prog_new_studt_f14']) ||
+    isset($content['field_prog_studt_retn_f15']) ||
+    isset($content['field_prog_length_years'])):
+    ?>
+    <div class="program-box" id="acceptance-rates">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa fa-pie-chart" aria-hidden="true"></i> Acceptance, Rentention, and Completion Rates</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php print render($content['field_prog_num_applied']); ?>
+        <?php print render($content['field_prog_15_16_accepted']); ?>
+        <?php print render($content['field_prog_explain_nums']); ?>
+        <?php print render($content['field_prog_15_16_admit_rate']); ?>
+        <?php print render($content['field_prog_new_studt_f14']); ?>
+        <?php print render($content['field_prog_studt_retn_f15']); ?>
+        <?php print render($content['field_prog_length_years']); ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif ?>
+
+  <?php
   if (isset($content['field_prog_tuition']) ||
       isset($content['field__prog_room_and_board']) ||
       isset($content['field_prog_other_costs']) ||
@@ -289,31 +341,6 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_ctp_y_n']); ?>
         <?php print render($content['field_prog_pay_methods']); ?>
         <?php print render($content['field_prog_addl_scholarships']); ?>
-        </tbody>
-      </table>
-    </div>
-  <?php endif ?>
-
-  <?php
-  if (isset($content['field_prog_admit_deadline']) ||
-      isset($content['field_prog_admiss_link']) ||
-      isset($content['field_requirements_display']) ||
-      isset($content['field_prog_which_disabilities']) ||
-      isset($content['field_prog_which_dis_specify'])):
-  ?>
-    <div class="program-box" id="requirements">
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Requirements</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php print render($content['field_prog_admit_deadline']); ?>
-        <?php print render($content['field_prog_admiss_link']); ?>
-        <?php print render($content['field_requirements_display']); ?>
-        <?php print render($content['field_prog_which_disabilities']); ?>
-        <?php print render($content['field_prog_which_dis_specify']); ?>
         </tbody>
       </table>
     </div>
@@ -351,6 +378,25 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
+  /*
+  if (isset($content['field_prog_course_types']) ||
+    isset($content['field_prog_special_courses']) ||
+    isset($content['field_prog_vocational_credential'])):*/
+    ?>
+    <div class="program-box" id="employment">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th colspan="2"><i class="fa" aria-hidden="true"></i> Employment</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  <?php //endif ?>
+
+  <?php
   if (isset($content['field_prog_housing_y_n'])):
     ?>
     <div class="program-box" id="housing">
@@ -376,38 +422,13 @@ $classes .= ' node-program-record-full';
       <table class="table table-striped">
         <thead>
         <tr>
-          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Requirements</th>
+          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Extracurricular</th>
         </tr>
         </thead>
         <tbody>
         <?php print render($content['field_prog_student_orgs_y_n']); ?>
         <?php print render($content['field_prog_overall_time_dist']); ?>
         <?php print render($content['field_prog_extracurric_explain']); ?>
-        </tbody>
-      </table>
-    </div>
-  <?php endif ?>
-
-  <?php
-  if (isset($content['field_prog_num_applied']) ||
-    isset($content['field_prog_15_16_accepted']) ||
-    isset($content['field_prog_new_studt_f14']) ||
-    isset($content['field_prog_studt_retn_f15']) ||
-    isset($content['field_prog_length_years'])):
-  ?>
-    <div class="program-box" id="acceptance-rates">
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th colspan="2"><i class="fa fa-pie-chart" aria-hidden="true"></i> Acceptance, Rentention, and Completion Rates</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php print render($content['field_prog_num_applied']); ?>
-        <?php print render($content['field_prog_15_16_accepted']); ?>
-        <?php print render($content['field_prog_new_studt_f14']); ?>
-        <?php print render($content['field_prog_studt_retn_f15']); ?>
-        <?php print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>
     </div>

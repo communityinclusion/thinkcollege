@@ -27,7 +27,7 @@ function program_record_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: menu-program-record-scrollspy_acceptance-rates::#acceptance-rates.
@@ -47,7 +47,7 @@ function program_record_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -43,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: menu-program-record-scrollspy_affiliates::#affiliates.
@@ -99,7 +99,7 @@ function program_record_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -46,
     'customized' => 1,
   );
   // Exported menu link: menu-program-record-scrollspy_extracurricular::#extracurricular.
@@ -119,7 +119,7 @@ function program_record_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -42,
     'customized' => 1,
   );
   // Exported menu link: menu-program-record-scrollspy_general::#general.
@@ -171,7 +171,7 @@ function program_record_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -43,
     'customized' => 1,
   );
   // Exported menu link: menu-program-record-scrollspy_requirements::#requirements.
@@ -203,7 +203,7 @@ function program_record_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -48,
     'customized' => 1,
   );
 
