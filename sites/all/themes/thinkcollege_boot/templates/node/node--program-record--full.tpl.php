@@ -315,15 +315,14 @@ $classes .= ' node-program-record-full';
 
   <?php
   if (isset($content['field_prog_tuition']) ||
-      isset($content['field__prog_room_and_board']) ||
+      isset($content['field_prog_room_and_board_displa']) ||
       isset($content['field_prog_specific_fees']) ||
       isset($content['field_prog_cost_of_the_program']) ||
-      isset($content['field_prog_other_costs']) ||
-      isset($content['field_prog_other_costs_amount']) ||
-      isset($content['field_prog_explain_other_costs']) ||
+      isset($content['field_prog_other_costs_display']) ||
       isset($content['field_prog_ctp_y_n']) ||
-      isset($content['field_prog_pay_methods']) ||
-      isset($content['field_prog_addl_scholarships'])):
+      isset($content['field_prog_students_pay_display']) ||
+      isset($content['field_prog_addl_scholarships']) ||
+      isset($content['field_prog_scholarship_link'])):
   ?>
     <div class="program-box" id="cost">
       <table class="table table-striped">
@@ -334,15 +333,14 @@ $classes .= ' node-program-record-full';
         </thead>
         <tbody>
         <?php print render($content['field_prog_tuition']); ?>
-        <?php print render($content['field__prog_room_and_board']); ?>
+        <?php print render($content['field_prog_room_and_board_displa']); ?>
         <?php print render($content['field_prog_specific_fees']); ?>
         <?php print render($content['field_prog_cost_of_the_program']); ?>
-        <?php print render($content['field_prog_other_costs']); ?>
-        <?php print render($content['field_prog_other_costs_amount']); ?>
-        <?php print render($content['field_prog_explain_other_costs']); ?>
+        <?php print render($content['field_prog_other_costs_display']); ?>
         <?php print render($content['field_prog_ctp_y_n']); ?>
-        <?php print render($content['field_prog_pay_methods']); ?>
+        <?php print render($content['field_prog_students_pay_display']); ?>
         <?php print render($content['field_prog_addl_scholarships']); ?>
+        <?php print render($content['field_prog_scholarship_link']); ?>
         </tbody>
       </table>
     </div>

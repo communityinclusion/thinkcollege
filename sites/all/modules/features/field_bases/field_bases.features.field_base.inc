@@ -1370,6 +1370,45 @@ else {
     'type' => 'number_decimal',
   );
 
+  // Exported field_base: 'field_prog_other_costs_display'.
+  $field_bases['field_prog_other_costs_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_other_costs_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$other_costs = field_get_items($entity_type, $entity, \'field_prog_other_costs\')[0][\'value\'];
+if ($other_costs != "No") {
+  $other_costs_amount = field_get_items($entity_type, $entity, \'field_prog_other_costs_amount\')[0][\'value\'];
+  $other_costs_explain = field_get_items($entity_type, $entity, \'field_prog_explain_other_costs\')[0][\'value\'];
+  $entity_field[0][\'value\'] = \'$\' . number_format($other_costs_amount, 2) . \'</br>\' . $other_costs_explain;
+}
+else {
+  unset($entity_field[0][\'value\']);
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_prog_other_explain'.
   $field_bases['field_prog_other_explain'] = array(
     'active' => 1,
@@ -1714,6 +1753,42 @@ else {
     'type' => 'computed',
   );
 
+  // Exported field_base: 'field_prog_room_and_board_displa'.
+  $field_bases['field_prog_room_and_board_displa'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_room_and_board_displa',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$housing = field_get_items($entity_type, $entity, \'field_prog_housing_y_n\')[0][\'value\'];
+if ($housing != "No") {
+  $entity_field[0][\'value\'] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field__prog_room_and_board\')[0][\'value\'], 2);
+}
+else {
+  unset($entity_field[0][\'value\']);
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_prog_schl_dist_email'.
   $field_bases['field_prog_schl_dist_email'] = array(
     'active' => 1,
@@ -2042,6 +2117,58 @@ else {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_students_pay_display'.
+  $field_bases['field_prog_students_pay_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_students_pay_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$pay_values = field_get_items($entity_type, $entity, \'field_prog_pay_methods\');
+
+if (isset(field_get_items($entity_type, $entity, \'field_prog_pay_other\')[0][\'value\'])) {
+  $other_value = field_get_items($entity_type, $entity, \'field_prog_pay_other\')[0][\'value\'];
+}
+
+$output = array();
+foreach ($pay_values as $key => $pay_value) {
+  if ($pay_value[\'value\'] == \'Other\') {
+    $output[] = $other_value;
+  }
+  else {
+    $output[] = $pay_value[\'value\'];
+  }
+}
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
+}
+else {
+  unset($entity_field[0][\'value\']);
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_prog_studt_housing_options'.
