@@ -843,6 +843,44 @@ else {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_prog_cost_of_the_program'.
+  $field_bases['field_prog_cost_of_the_program'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_cost_of_the_program',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$provide_cost = field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'];
+$describe = field_get_items($entity_type, $entity, \'field_prog_costs_describe\')[0][\'value\'];
+if ($provide_cost == "No") {
+  $entity_field[0][\'value\'] = $describe;
+}
+else {
+  unset($entity_field[0][\'value\']);
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_prog_cost_y_n'.
   $field_bases['field_prog_cost_y_n'] = array(
     'active' => 1,

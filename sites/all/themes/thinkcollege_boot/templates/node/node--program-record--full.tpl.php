@@ -316,6 +316,8 @@ $classes .= ' node-program-record-full';
   <?php
   if (isset($content['field_prog_tuition']) ||
       isset($content['field__prog_room_and_board']) ||
+      isset($content['field_prog_specific_fees']) ||
+      isset($content['field_prog_cost_of_the_program']) ||
       isset($content['field_prog_other_costs']) ||
       isset($content['field_prog_other_costs_amount']) ||
       isset($content['field_prog_explain_other_costs']) ||
@@ -333,6 +335,8 @@ $classes .= ' node-program-record-full';
         <tbody>
         <?php print render($content['field_prog_tuition']); ?>
         <?php print render($content['field__prog_room_and_board']); ?>
+        <?php print render($content['field_prog_specific_fees']); ?>
+        <?php print render($content['field_prog_cost_of_the_program']); ?>
         <?php print render($content['field_prog_other_costs']); ?>
         <?php print render($content['field_prog_other_costs_amount']); ?>
         <?php print render($content['field_prog_explain_other_costs']); ?>

@@ -108,7 +108,7 @@ function program_record_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '12',
         ),
       ),
       'display' => array(
@@ -126,7 +126,7 @@ function program_record_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '81',
+            'weight' => '82',
             'visible' => FALSE,
           ),
         ),

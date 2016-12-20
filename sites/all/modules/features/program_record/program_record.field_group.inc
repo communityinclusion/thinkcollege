@@ -53,10 +53,10 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_prog_cost';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Academics',
-    'weight' => '127',
+    'weight' => '7',
     'children' => array(
       0 => 'field_prog_course_types',
       1 => 'field_prog_more_course_detail',
@@ -269,8 +269,6 @@ function program_record_field_group_info() {
       10 => 'field_prog_scholarship_link',
       11 => 'field_prog_cost_y_n',
       12 => 'field_prog_costs_describe',
-      13 => 'group_prog_acad',
-      14 => 'group_prog_employment',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -322,10 +320,10 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_prog_cost';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Employment',
-    'weight' => '128',
+    'weight' => '8',
     'children' => array(
       0 => 'field_prog_other_career_dev',
       1 => 'field_prog_perc_w_compet_employ',
@@ -386,7 +384,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Extracurricular',
-    'weight' => '8',
+    'weight' => '10',
     'children' => array(
       0 => 'field_prog_student_orgs_y_n',
       1 => 'field_prog_overall_time_dist',
@@ -444,7 +442,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Housing',
-    'weight' => '7',
+    'weight' => '9',
     'children' => array(
       0 => 'field_prog_housing_y_n',
       1 => 'field_prog_studt_housing_options',
