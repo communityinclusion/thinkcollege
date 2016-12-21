@@ -376,10 +376,10 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  /*
-  if (isset($content['field_prog_course_types']) ||
-    isset($content['field_prog_special_courses']) ||
-    isset($content['field_prog_vocational_credential'])):*/
+  if (isset($content['field_prog_perc_w_compet_employ']) ||
+    isset($content['field_prog_other_career_display']) ||
+    isset($content['field_prog_perc_employed_af_grad']) ||
+    isset($content['field_prog_vocational_credential'])):
     ?>
     <div class="program-box" id="employment">
       <table class="table table-striped">
@@ -389,10 +389,14 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
+        <?php print render($content['field_prog_perc_w_compet_employ']); ?>
+        <?php print render($content['field_prog_other_career_display']); ?>
+        <?php print render($content['field_prog_perc_employed_af_grad']); ?>
+        <?php print render($content['field_prog_vocational_credential']); ?>
         </tbody>
       </table>
     </div>
-  <?php //endif ?>
+  <?php endif ?>
 
   <?php
   if (isset($content['field_prog_housing_y_n'])):

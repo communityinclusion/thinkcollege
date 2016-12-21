@@ -105,7 +105,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 67,
+        'weight' => 68,
       ),
       'modal' => array(
         'label' => 'above',
@@ -688,7 +688,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 60,
+        'weight' => 61,
       ),
       'modal' => array(
         'label' => 'above',
@@ -805,7 +805,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 82,
+        'weight' => 83,
       ),
       'modal' => array(
         'label' => 'above',
@@ -941,7 +941,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 71,
+        'weight' => 72,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1056,7 +1056,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 72,
+        'weight' => 73,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1115,7 +1115,7 @@ function program_record_field_default_field_instances() {
         'module' => 'static_field',
         'settings' => array(),
         'type' => 'static_field',
-        'weight' => 61,
+        'weight' => 62,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1177,7 +1177,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 83,
+        'weight' => 84,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1411,7 +1411,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 62,
+        'weight' => 63,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1467,7 +1467,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 63,
+        'weight' => 64,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1588,7 +1588,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 64,
+        'weight' => 65,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1763,7 +1763,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 73,
+        'weight' => 74,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1823,7 +1823,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 70,
+        'weight' => 71,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1884,7 +1884,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 58,
+        'weight' => 59,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1947,7 +1947,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 53,
+        'weight' => 54,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2123,7 +2123,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 76,
+        'weight' => 77,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2255,7 +2255,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'More about course access',
     'entity_type' => 'node',
     'field_name' => 'field_prog_more_course_detail',
     'label' => 'Optional: include more details on college course access',
@@ -2441,9 +2441,8 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 50,
       ),
       'modal' => array(
@@ -2459,7 +2458,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Other types of career development activities for students',
+    'display_label' => 'Other career development activities are',
     'entity_type' => 'node',
     'field_name' => 'field_prog_other_career_dev',
     'label' => 'What other types of career development activities do students participate in (check all that apply)?',
@@ -2473,6 +2472,57 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 85,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-program_record-field_prog_other_career_display'.
+  $field_instances['node-program_record-field_prog_other_career_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 98,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 51,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Other career development activities are',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_other_career_display',
+    'label' => 'Career development (display)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 132,
     ),
   );
 
@@ -2502,7 +2552,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 68,
+        'weight' => 69,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2568,7 +2618,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 69,
+        'weight' => 70,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2679,7 +2729,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 80,
+        'weight' => 81,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2739,7 +2789,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 55,
+        'weight' => 56,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2802,7 +2852,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 57,
+        'weight' => 58,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2860,7 +2910,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 65,
+        'weight' => 66,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2915,7 +2965,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 66,
+        'weight' => 67,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3039,7 +3089,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 51,
+        'weight' => 52,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3054,7 +3104,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Percent of students in this program that had paid work after exiting the program',
     'entity_type' => 'node',
     'field_name' => 'field_prog_perc_employed_af_grad',
     'label' => 'Of students who completed your program last year, what percentage found paid competitive employment within 90 days of exiting?',
@@ -3126,7 +3176,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Percent of students in this program have paid work while attending the program',
     'entity_type' => 'node',
     'field_name' => 'field_prog_perc_w_compet_employ',
     'label' => 'What % of students in the most recently completed academic year had paid, competitive, integrated work while in the program? ',
@@ -3853,7 +3903,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 59,
+        'weight' => 60,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4096,7 +4146,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 84,
+        'weight' => 85,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4154,7 +4204,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 81,
+        'weight' => 82,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4216,7 +4266,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 56,
+        'weight' => 57,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4326,7 +4376,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 54,
+        'weight' => 55,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4453,7 +4503,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 78,
+        'weight' => 79,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4588,7 +4638,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 77,
+        'weight' => 78,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4723,7 +4773,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 79,
+        'weight' => 80,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4781,7 +4831,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 52,
+        'weight' => 53,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4796,7 +4846,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'We offer the following specialized credentials',
     'entity_type' => 'node',
     'field_name' => 'field_prog_vocational_credential',
     'label' => 'Do you offer a certificate or credential that has a specific career focus (e.g., business, culinary arts, etc.)? If so, describe',
@@ -4902,7 +4952,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 75,
+        'weight' => 76,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4964,7 +5014,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 74,
+        'weight' => 75,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5285,7 +5335,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 85,
+        'weight' => 86,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5326,6 +5376,7 @@ function program_record_field_default_field_instances() {
   t('Admission application deadline');
   t('Can you provide specific dollar amounts for tuition, fees, room and board?');
   t('Can you tell us how many students applied to, were accepted to, or entered your program in the most recent academic year?');
+  t('Career development (display)');
   t('Check your information before and after saving');
   t('City');
   t('College/university where the program is located');
