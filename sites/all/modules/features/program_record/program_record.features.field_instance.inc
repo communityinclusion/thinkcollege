@@ -105,7 +105,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 68,
+        'weight' => 71,
       ),
       'modal' => array(
         'label' => 'above',
@@ -120,7 +120,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Room and board',
+    'display_label' => 'Room and board:',
     'entity_type' => 'node',
     'field_name' => 'field__prog_room_and_board',
     'label' => 'Room and Board (numbers and decimals only, no commas or dollar signs)',
@@ -224,6 +224,57 @@ function program_record_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-program_record-field_admission_rate_display'.
+  $field_instances['node-program_record-field_admission_rate_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 100,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Admission rate:',
+    'entity_type' => 'node',
+    'field_name' => 'field_admission_rate_display',
+    'label' => 'Admission rate (display)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 134,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-program_record-field_how_many_students_total_at'.
   $field_instances['node-program_record-field_how_many_students_total_at'] = array(
     'bundle' => 'program_record',
@@ -274,7 +325,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Number of students',
+    'display_label' => 'Number of students:',
     'entity_type' => 'node',
     'field_name' => 'field_how_many_students_total_at',
     'label' => 'How many students, total, attended this program in the most recently completed academic year?',
@@ -457,7 +508,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Credential students earn upon completing the program',
+    'display_label' => 'Credential students earn upon completing the program:',
     'entity_type' => 'node',
     'field_name' => 'field_name_of_credential_degree_',
     'label' => 'Name of credential (degree/certificate) awarded to students who complete this program',
@@ -519,7 +570,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'The credential is',
+    'display_label' => 'The credential is:',
     'entity_type' => 'node',
     'field_name' => 'field_please_select_any_all_of_t',
     'label' => 'Please select any/all of the conditions below that describe the credential awarded by this program',
@@ -607,61 +658,6 @@ function program_record_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program_record-field_prog_15_16_admit_rate'.
-  $field_instances['node-program_record-field_prog_15_16_admit_rate'] = array(
-    'bundle' => 'program_record',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 47,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'computed_field',
-        'settings' => array(),
-        'type' => 'computed_field_plain',
-        'weight' => 28,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'display_label' => 'Admission rate',
-    'entity_type' => 'node',
-    'field_name' => 'field_prog_15_16_admit_rate',
-    'label' => 'Last year\'s admission rate',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'computed_field',
-      'settings' => array(),
-      'type' => 'computed',
-      'weight' => 95,
-    ),
-  );
-
   // Exported field_instance: 'node-program_record-field_prog_accredited'.
   $field_instances['node-program_record-field_prog_accredited'] = array(
     'bundle' => 'program_record',
@@ -688,7 +684,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 61,
+        'weight' => 59,
       ),
       'modal' => array(
         'label' => 'above',
@@ -761,7 +757,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Scholarships available',
+    'display_label' => 'Scholarships available:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_addl_scholarships',
     'label' => 'Describe any scholarships to students in your program',
@@ -805,7 +801,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 83,
+        'weight' => 86,
       ),
       'modal' => array(
         'label' => 'above',
@@ -879,7 +875,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Link to admissions process',
+    'display_label' => 'Link to admissions process:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_admiss_link',
     'label' => 'Please provide a link to program\'s admissions process, if available',
@@ -941,7 +937,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 72,
+        'weight' => 75,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1013,7 +1009,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Deadline to apply to this program',
+    'display_label' => 'Deadline to apply to this program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_admit_deadline',
     'label' => 'Admission application deadline',
@@ -1056,7 +1052,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 73,
+        'weight' => 76,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1115,7 +1111,7 @@ function program_record_field_default_field_instances() {
         'module' => 'static_field',
         'settings' => array(),
         'type' => 'static_field',
-        'weight' => 62,
+        'weight' => 60,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1177,7 +1173,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 84,
+        'weight' => 87,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1368,7 +1364,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Cost of the program',
+    'display_label' => 'Cost of the program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_cost_of_the_program',
     'label' => 'Cost of the program (display)',
@@ -1411,7 +1407,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 63,
+        'weight' => 61,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1467,7 +1463,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 64,
+        'weight' => 62,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1545,7 +1541,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Students take these types of "typical" courses (with students who don\'t have disabilities)',
+    'display_label' => 'Students take these types of "typical" courses (with students who don\'t have disabilities):',
     'entity_type' => 'node',
     'field_name' => 'field_prog_course_types',
     'label' => 'Students enrolled in this program take the following types of courses that are offered by the college/university',
@@ -1588,7 +1584,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 65,
+        'weight' => 68,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1722,7 +1718,7 @@ function program_record_field_default_field_instances() {
     'display_label' => '',
     'entity_type' => 'node',
     'field_name' => 'field_prog_explain_nums',
-    'label' => 'Explain anything you need to about your application, acceptance and attendance numbers (optional)',
+    'label' => 'Explain anything you need to about your application, acceptance and attendance numbers (optional):',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -1763,7 +1759,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 74,
+        'weight' => 77,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1823,7 +1819,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 71,
+        'weight' => 74,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1884,7 +1880,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 59,
+        'weight' => 57,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1899,7 +1895,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Students have participated in these social/extracurricular activities and organizations:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_extracurric_explain',
     'label' => 'Please describe social/extracurricular activities and organizations students have participated in',
@@ -1947,7 +1943,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 54,
+        'weight' => 53,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1962,7 +1958,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Housing is provided to students:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_housing_y_n',
     'label' => 'Does program offer housing for students?',
@@ -2022,7 +2018,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Students in this program',
+    'display_label' => 'Students in this program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_hs_coll',
     'label' => 'Students in this program (check all that apply)',
@@ -2123,7 +2119,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 77,
+        'weight' => 80,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2197,7 +2193,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Program length',
+    'display_label' => 'Program length:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_length_years',
     'label' => 'What is the planned length of this program?',
@@ -2255,7 +2251,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'More about course access',
+    'display_label' => 'More about course access:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_more_course_detail',
     'label' => 'Optional: include more details on college course access',
@@ -2443,7 +2439,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 67,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2458,7 +2454,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Other career development activities are',
+    'display_label' => 'Other career development activities are:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_other_career_dev',
     'label' => 'What other types of career development activities do students participate in (check all that apply)?',
@@ -2500,7 +2496,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 51,
+        'weight' => 50,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2509,7 +2505,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Other career development activities are',
+    'display_label' => 'Other career development activities are:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_other_career_display',
     'label' => 'Career development (display)',
@@ -2552,7 +2548,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 69,
+        'weight' => 72,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2618,7 +2614,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 70,
+        'weight' => 73,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2688,7 +2684,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Additional costs',
+    'display_label' => 'Additional costs:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_other_costs_display',
     'label' => 'Other costs (display)',
@@ -2729,7 +2725,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 81,
+        'weight' => 84,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2786,10 +2782,9 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 56,
+        'type' => 'hidden',
+        'weight' => 66,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2852,7 +2847,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 58,
+        'weight' => 56,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2867,7 +2862,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Proportion of time spent only with other students in this program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_overall_time_dist',
     'label' => 'How much overall time on campus is spent only with other students in this program?',
@@ -2910,7 +2905,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 66,
+        'weight' => 69,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2965,7 +2960,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 67,
+        'weight' => 70,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3042,7 +3037,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Time spent only with other students in this program',
+    'display_label' => 'Time spent only with other students in this program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_perc_acad_time',
     'label' => 'How much academic time is spent only with other students in this program?',
@@ -3089,7 +3084,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 52,
+        'weight' => 51,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3104,7 +3099,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Percent of students in this program that had paid work after exiting the program',
+    'display_label' => 'Percent of students in this program that had paid work after exiting the program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_perc_employed_af_grad',
     'label' => 'Of students who completed your program last year, what percentage found paid competitive employment within 90 days of exiting?',
@@ -3176,7 +3171,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Percent of students in this program have paid work while attending the program',
+    'display_label' => 'Percent of students in this program have paid work while attending the program:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_perc_w_compet_employ',
     'label' => 'What % of students in the most recently completed academic year had paid, competitive, integrated work while in the program? ',
@@ -3506,7 +3501,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Public or private',
+    'display_label' => 'Public or private:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_public_or_privat',
     'label' => 'Is the college or univ. where the program is located public or private institution? ',
@@ -3523,8 +3518,9 @@ function program_record_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program_record-field_prog_retention_rate'.
-  $field_instances['node-program_record-field_prog_retention_rate'] = array(
+  // Exported field_instance:
+  // 'node-program_record-field_prog_retention_rate_displa'.
+  $field_instances['node-program_record-field_prog_retention_rate_displa'] = array(
     'bundle' => 'program_record',
     'deleted' => 0,
     'description' => '',
@@ -3540,13 +3536,13 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_plain',
-        'weight' => 92,
+        'weight' => 101,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'computed_field',
         'settings' => array(),
-        'type' => 'computed_field_plain',
+        'type' => 'computed_field_unsanitized',
         'weight' => 29,
       ),
       'teaser' => array(
@@ -3556,10 +3552,10 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Retention rate:',
     'entity_type' => 'node',
-    'field_name' => 'field_prog_retention_rate',
-    'label' => 'Retention rate',
+    'field_name' => 'field_prog_retention_rate_displa',
+    'label' => 'Retention rate (display)',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -3569,7 +3565,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 17,
+      'weight' => 135,
     ),
   );
 
@@ -3607,7 +3603,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Room and board',
+    'display_label' => 'Room and board:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_room_and_board_displa',
     'label' => 'Room and Board (display)',
@@ -3664,7 +3660,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Email',
+    'display_label' => 'Email:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_schl_dist_email',
     'label' => 'School District or Agency Contact Person E-mail',
@@ -3722,7 +3718,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Links to scholarship information',
+    'display_label' => 'Links to scholarship information:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_scholarship_link',
     'label' => 'Provide web links to scholarships available to students in your program',
@@ -3796,7 +3792,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'School district or agency partner',
+    'display_label' => 'School district or agency partner:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_school_dist',
     'label' => 'School district or agency partner (if applicable)',
@@ -3857,7 +3853,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Contact person',
+    'display_label' => 'Contact person:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_school_dist_contact',
     'label' => 'School District or Agency Contact Person',
@@ -3903,7 +3899,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 60,
+        'weight' => 58,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3976,7 +3972,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Information on special classes',
+    'display_label' => 'Information on special classes:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_spec_courses_mor_info',
     'label' => 'Please provide more information on classes that are only for students in the program',
@@ -4099,7 +4095,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Program fees',
+    'display_label' => 'Program fees:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_specific_fees',
     'label' => 'Program specific fees (numbers and decimals only, no commas or dollar signs)',
@@ -4146,7 +4142,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 85,
+        'weight' => 88,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4204,7 +4200,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 82,
+        'weight' => 85,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4266,7 +4262,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 57,
+        'weight' => 55,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4281,7 +4277,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Students participate in student organizations on campus:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_student_orgs_y_n',
     'label' => 'Do students in your program join registered student organizations at the Institute of Higher Education (IHE)?',
@@ -4332,7 +4328,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Students pay for the program in the following ways',
+    'display_label' => 'Students pay for the program in the following ways:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_students_pay_display',
     'label' => 'Students pay (display)',
@@ -4346,6 +4342,57 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'computed',
       'weight' => 130,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-program_record-field_prog_studt_housing_display'.
+  $field_instances['node-program_record-field_prog_studt_housing_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 99,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 54,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Housing options available:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_studt_housing_display',
+    'label' => 'Housing options (display)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 133,
     ),
   );
 
@@ -4373,10 +4420,9 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 55,
+        'type' => 'hidden',
+        'weight' => 65,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4503,7 +4549,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 79,
+        'weight' => 82,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4578,7 +4624,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Link to summer program info',
+    'display_label' => 'Link to summer program info:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_summer_info_link',
     'label' => 'Provide a link to information about your summer program, if available',
@@ -4638,7 +4684,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 78,
+        'weight' => 81,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4726,7 +4772,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Tuition',
+    'display_label' => 'Tuition:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_tuition',
     'label' => 'Tuition amount (numbers and decimals only, no commas or dollar signs)',
@@ -4773,7 +4819,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 80,
+        'weight' => 83,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4831,7 +4877,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 53,
+        'weight' => 52,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4846,7 +4892,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'We offer the following specialized credentials',
+    'display_label' => 'We offer the following specialized credentials:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_vocational_credential',
     'label' => 'Do you offer a certificate or credential that has a specific career focus (e.g., business, culinary arts, etc.)? If so, describe',
@@ -4909,7 +4955,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'This program will be serving students in',
+    'display_label' => 'This program will be serving students in:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_when_will_progr_start',
     'label' => 'If this program has not yet started serving students, please specify the school year when the first class will be accepted: ',
@@ -4952,7 +4998,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 76,
+        'weight' => 79,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5014,7 +5060,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 75,
+        'weight' => 78,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5141,7 +5187,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Requirements for admission to this program',
+    'display_label' => 'Requirements for admission to this program:',
     'entity_type' => 'node',
     'field_name' => 'field_requirements_display',
     'label' => 'Requirements for Admission (display)',
@@ -5192,7 +5238,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Students take courses that are only for students in this program',
+    'display_label' => 'Students take courses that are only for students in this program:',
     'entity_type' => 'node',
     'field_name' => 'field_students_take_courses_disp',
     'label' => 'Students take courses (display)',
@@ -5243,7 +5289,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Description of our summer transition program',
+    'display_label' => 'Description of our summer transition program:',
     'entity_type' => 'node',
     'field_name' => 'field_summer_program_display',
     'label' => 'Summer program (display)',
@@ -5294,7 +5340,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Type of school',
+    'display_label' => 'Type of school:',
     'entity_type' => 'node',
     'field_name' => 'field_type_of_school_display',
     'label' => 'Type of school (display)',
@@ -5335,7 +5381,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 86,
+        'weight' => 89,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5374,6 +5420,7 @@ function program_record_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Address');
   t('Admission application deadline');
+  t('Admission rate (display)');
   t('Can you provide specific dollar amounts for tuition, fees, room and board?');
   t('Can you tell us how many students applied to, were accepted to, or entered your program in the most recent academic year?');
   t('Career development (display)');
@@ -5391,9 +5438,10 @@ function program_record_field_default_field_instances() {
   t('Does your program offer a summer transition program?');
   t('Enter required age range');
   t('Explain "other" requirements');
-  t('Explain anything you need to about your application, acceptance and attendance numbers (optional)');
+  t('Explain anything you need to about your application, acceptance and attendance numbers (optional):');
   t('Explain other costs');
   t('For the most recently completed academic year, how many students applied to your program (number only, no text)? ');
+  t('Housing options (display)');
   t('Housing options for students in this program (check all that apply)');
   t('How do students pay to attend this program (check all that apply)?');
   t('How do students pay, Other?');
@@ -5409,7 +5457,6 @@ function program_record_field_default_field_instances() {
   t('Is the college or univ. where the program is located public or private institution? ');
   t('Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?');
   t('Is/was this program a federally funded TPSID program? ');
-  t('Last year\'s admission rate');
   t('Lat/Lon');
   t('Name of credential (degree/certificate) awarded to students who complete this program');
   t('Numbers only in this field');
@@ -5438,7 +5485,7 @@ function program_record_field_default_field_instances() {
   t('Provide a link to information about your summer program, if available');
   t('Provide web links to scholarships available to students in your program');
   t('Requirements for Admission (display)');
-  t('Retention rate');
+  t('Retention rate (display)');
   t('Room and Board (display)');
   t('Room and Board (numbers and decimals only, no commas or dollar signs)');
   t('School District or Agency Contact Person');

@@ -279,8 +279,6 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_admit_deadline']); ?>
         <?php print render($content['field_prog_admiss_link']); ?>
         <?php print render($content['field_requirements_display']); ?>
-        <?php //print render($content['field_prog_which_disabilities']); ?>
-        <?php //print render($content['field_prog_which_dis_specify']); ?>
         </tbody>
       </table>
     </div>
@@ -290,8 +288,8 @@ $classes .= ' node-program-record-full';
   if (isset($content['field_prog_num_applied']) ||
     isset($content['field_prog_15_16_accepted']) ||
     isset($content['field_prog_explain_nums']) ||
-    isset($content['field_prog_15_16_admit_rate']) ||
-    isset($content['field_prog_retention_rate']) ||
+    isset($content['field_admission_rate_display']) ||
+    isset($content['field_prog_retention_rate_displa']) ||
     isset($content['field_prog_length_years'])):
     ?>
     <div class="program-box" id="acceptance-rates">
@@ -305,8 +303,8 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_num_applied']); ?>
         <?php print render($content['field_prog_15_16_accepted']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
-        <?php print render($content['field_prog_15_16_admit_rate']); ?>
-        <?php print render($content['field_prog_retention_rate']); ?>
+        <?php print render($content['field_admission_rate_display']); ?>
+        <?php print render($content['field_prog_retention_rate_displa']); ?>
         <?php print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>
@@ -399,7 +397,8 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  if (isset($content['field_prog_housing_y_n'])):
+  if (isset($content['field_prog_housing_y_n']) ||
+    isset($content['field_prog_studt_housing_display'])):
     ?>
     <div class="program-box" id="housing">
       <table class="table table-striped">
@@ -410,6 +409,7 @@ $classes .= ' node-program-record-full';
         </thead>
         <tbody>
         <?php print render($content['field_prog_housing_y_n']); ?>
+        <?php print render($content['field_prog_studt_housing_display']); ?>
         </tbody>
       </table>
     </div>

@@ -127,6 +127,41 @@ function field_bases_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
+  // Exported field_base: 'field_admission_rate_display'.
+  $field_bases['field_admission_rate_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_admission_rate_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => 'if (!isset($entity->field_prog_num_applied[\'und\'][0]) || !isset($entity->field_prog_15_16_accepted[\'und\'][0])) {
+  unset($entity_field[0][\'value\']);
+}
+else {
+  $entity_field[0][\'value\'] = number_format(($entity->field_prog_15_16_accepted[\'und\'][0][\'value\']  /  $entity->field_prog_num_applied[\'und\'][0][\'value\']) * 100, 2) . \'%\';
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_categories'.
   $field_bases['field_categories'] = array(
     'active' => 1,
@@ -548,41 +583,6 @@ function field_bases_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'number_integer',
-  );
-
-  // Exported field_base: 'field_prog_15_16_admit_rate'.
-  $field_bases['field_prog_15_16_admit_rate'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_15_16_admit_rate',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'computed_field',
-    'settings' => array(
-      'code' => 'if (!$entity->field_prog_num_applied[\'und\'][0][\'value\'] || !$entity->field_prog_15_16_accepted[\'und\'][0][\'value\']) {
-  unset($entity_field[0][\'value\']);
-}
-else {
-  $entity_field[0][\'value\'] = ($entity->field_prog_15_16_accepted[\'und\'][0][\'value\']  /  $entity->field_prog_num_applied[\'und\'][0][\'value\']) * 100;
-}',
-      'database' => array(
-        'data_default' => '',
-        'data_index' => 0,
-        'data_length' => 32,
-        'data_not_NULL' => 0,
-        'data_precision' => 10,
-        'data_scale' => 2,
-        'data_size' => 'normal',
-        'data_type' => 'numeric',
-      ),
-      'display_format' => '$display_output = $entity_field_item[\'value\'];',
-      'profile2_private' => FALSE,
-      'store' => 1,
-    ),
-    'translatable' => 0,
-    'type' => 'computed',
   );
 
   // Exported field_base: 'field_prog_accredited'.
@@ -1754,22 +1754,22 @@ else {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prog_retention_rate'.
-  $field_bases['field_prog_retention_rate'] = array(
+  // Exported field_base: 'field_prog_retention_rate_displa'.
+  $field_bases['field_prog_retention_rate_displa'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_prog_retention_rate',
+    'field_name' => 'field_prog_retention_rate_displa',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => 'if (!$entity->field_prog_new_studt_f14[\'und\'][0][\'value\'] || !$entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']) {
+      'code' => 'if (!isset($entity->field_prog_new_studt_f14[\'und\'][0]) || !isset($entity->field_prog_studt_retn_f15[\'und\'][0])) {
   unset($entity_field[0][\'value\']);
 }
 else {
-  $entity_field[0][\'value\'] = ($entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']  /  $entity->field_prog_new_studt_f14[\'und\'][0][\'value\']) * 100;
+  $entity_field[0][\'value\'] = number_format(($entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']  /  $entity->field_prog_new_studt_f14[\'und\'][0][\'value\']) * 100, 2) . \'%\';
 }
 ',
       'database' => array(
@@ -1780,7 +1780,7 @@ else {
         'data_precision' => 10,
         'data_scale' => 2,
         'data_size' => 'normal',
-        'data_type' => 'numeric',
+        'data_type' => 'varchar',
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
@@ -2190,6 +2190,57 @@ else {
   unset($entity_field[0][\'value\']);
 }
 ',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
+  // Exported field_base: 'field_prog_studt_housing_display'.
+  $field_bases['field_prog_studt_housing_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_studt_housing_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$housing_values = field_get_items($entity_type, $entity, \'field_prog_studt_housing_options\');
+
+if (isset(field_get_items($entity_type, $entity, \'field_prog_other_hous_explain\')[0][\'value\'])) {
+  $other_value = field_get_items($entity_type, $entity, \'field_prog_other_hous_explain\')[0][\'value\'];
+}
+
+$output = array();
+foreach ($housing_values as $key => $housing_value) {
+  if ($housing_value[\'value\'] == \'Other\') {
+    $output[] = $other_value;
+  }
+  else {
+    $output[] = $housing_value[\'value\'];
+  }
+}
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
+}
+else {
+  unset($entity_field[0][\'value\']);
+}',
       'database' => array(
         'data_default' => '',
         'data_index' => 0,
