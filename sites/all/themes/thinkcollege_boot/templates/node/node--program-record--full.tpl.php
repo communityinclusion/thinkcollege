@@ -348,30 +348,28 @@ $classes .= ' node-program-record-full';
 
   <?php
   if (isset($content['field_prog_course_types']) ||
-    isset($content['field_prog_special_courses']) ||
+    isset($content['field_prog_more_course_detail']) ||
+    isset($content['field_students_take_courses_disp']) ||
     isset($content['field_prog_spec_courses_mor_info']) ||
     isset($content['field_prog_perc_acad_time']) ||
-    isset($content['field_prog_credential']) ||
-    isset($content['field_prog_perc_w_compet_employ']) ||
-    isset($content['field_prog_other_career_dev']) ||
-    isset($content['field_prog_vocational_credential'])):
+    isset($content['field_name_of_credential_degree_']) ||
+    isset($content['field_please_select_any_all_of_t'])):
     ?>
     <div class="program-box" id="academic">
       <table class="table table-striped">
         <thead>
         <tr>
-          <th colspan="2"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Academics</th>
+          <th colspan="2"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Academic</th>
         </tr>
         </thead>
         <tbody>
         <?php print render($content['field_prog_course_types']); ?>
-        <?php print render($content['field_prog_special_courses']); ?>
+        <?php print render($content['field_prog_more_course_detail']); ?>
+        <?php print render($content['field_students_take_courses_disp']); ?>
         <?php print render($content['field_prog_spec_courses_mor_info']); ?>
         <?php print render($content['field_prog_perc_acad_time']); ?>
-        <?php print render($content['field_prog_credential']); ?>
-        <?php print render($content['field_prog_perc_w_compet_employ']); ?>
-        <?php print render($content['field_prog_other_career_dev']); ?>
-        <?php print render($content['field_prog_vocational_credential']); ?>
+        <?php print render($content['field_name_of_credential_degree_']); ?>
+        <?php print render($content['field_please_select_any_all_of_t']); ?>
         </tbody>
       </table>
     </div>
