@@ -285,9 +285,7 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  if (isset($content['field_prog_num_applied']) ||
-    isset($content['field_prog_15_16_accepted']) ||
-    isset($content['field_prog_explain_nums']) ||
+  if (isset($content['field_prog_explain_nums']) ||
     isset($content['field_admission_rate_display']) ||
     isset($content['field_prog_retention_rate_displa']) ||
     isset($content['field_prog_length_years'])):
@@ -300,8 +298,6 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
-        <?php print render($content['field_prog_num_applied']); ?>
-        <?php print render($content['field_prog_15_16_accepted']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
         <?php print render($content['field_admission_rate_display']); ?>
         <?php print render($content['field_prog_retention_rate_displa']); ?>

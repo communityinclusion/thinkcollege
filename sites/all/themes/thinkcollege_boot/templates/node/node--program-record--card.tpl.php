@@ -113,7 +113,7 @@ $classes .= ' node-program-record-card';
         </div>
 
         <div class="program-search-program-name">
-          <?php print $title; ?>
+          <?php print l($title, '/node/' . $node->nid); ?>
         </div>
 
         <div class="program-university">
