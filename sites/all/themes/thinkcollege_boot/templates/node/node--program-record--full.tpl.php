@@ -173,19 +173,22 @@ $classes .= ' node-program-record-full';
               </td>
               <td><?php print $content['field_prog_contact_phone'][0]['#markup']; ?></td>
             </tr>
-            <tr>
-              <td>
-                <?php
-                if (isset($content['field_prog_program_website']['#display_label'])) {
-                  print $content['field_prog_program_website']['#display_label'];
-                }
-                else {
-                  print $content['field_prog_program_website']['#title'];
-                }
-                ?>
-              </td>
-              <td><?php print render($content['field_prog_program_website'][0]); ?></td>
-            </tr>
+
+            <?php if (isset($content['field_prog_program_website'][0])) : ?>
+              <tr>
+                <td>
+                  <?php
+                  if (isset($content['field_prog_program_website']['#display_label'])) {
+                    print $content['field_prog_program_website']['#display_label'];
+                  }
+                  else {
+                    print $content['field_prog_program_website']['#title'];
+                  }
+                  ?>
+                </td>
+                <td><?php print render($content['field_prog_program_website'][0]); ?></td>
+              </tr>
+            <?php endif ?>
           </tbody>
         </table>
       </div>
