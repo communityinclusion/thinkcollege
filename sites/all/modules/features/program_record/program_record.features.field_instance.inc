@@ -396,7 +396,7 @@ function program_record_field_default_field_instances() {
             ),
             'shadowUrl' => '',
           ),
-          'leaflet_map' => 'OSM Mapnik',
+          'leaflet_map' => 'leaflet-mapbox',
           'popup' => array(
             'show' => 0,
             'text' => '',
