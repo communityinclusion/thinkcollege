@@ -854,8 +854,16 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$provide_cost = field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'];
-$describe = field_get_items($entity_type, $entity, \'field_prog_costs_describe\')[0][\'value\'];
+      'code' => '$provide_cost = "Not no";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'])) {
+  $provide_cost = field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'];
+}
+
+$describe = \'No details provided.\';
+if (isset(field_get_items($entity_type, $entity, \'field_prog_costs_describe\')[0][\'value\'])) {
+  $describe = field_get_items($entity_type, $entity, \'field_prog_costs_describe\')[0][\'value\'];
+}
+
 if ($provide_cost == "No") {
   $entity_field[0][\'value\'] = $describe;
 }
@@ -1334,8 +1342,10 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$dev_value = field_get_items($entity_type, $entity, \'field_prog_other_career_dev\')[0][\'value\'];
-
+      'code' => '$dev_value = \'None\';
+if (isset(field_get_items($entity_type, $entity, \'field_prog_other_career_dev\')[0][\'value\'])) {
+  $dev_value = field_get_items($entity_type, $entity, \'field_prog_other_career_dev\')[0][\'value\'];
+}
 if ($dev_value != "None") {
   $entity_field[0][\'value\'] = $dev_value;
 }
@@ -1418,11 +1428,21 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$other_costs = field_get_items($entity_type, $entity, \'field_prog_other_costs\')[0][\'value\'];
+      'code' => '$other_costs = "No";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_other_costs\')[0][\'value\'])) {
+  $other_costs = field_get_items($entity_type, $entity, \'field_prog_other_costs\')[0][\'value\'];
+}
 if ($other_costs != "No") {
-  $other_costs_amount = field_get_items($entity_type, $entity, \'field_prog_other_costs_amount\')[0][\'value\'];
-  $other_costs_explain = field_get_items($entity_type, $entity, \'field_prog_explain_other_costs\')[0][\'value\'];
-  $entity_field[0][\'value\'] = \'$\' . number_format($other_costs_amount, 2) . \'</br>\' . $other_costs_explain;
+  $output = array();
+  if (isset(field_get_items($entity_type, $entity, \'field_prog_other_costs_amount\')[0][\'value\'])) {
+    $output[] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field_prog_other_costs_amount\')[0][\'value\'], 2);
+  }
+  
+  if (isset(field_get_items($entity_type, $entity, \'field_prog_explain_other_costs\')[0][\'value\'])) {
+    $output[] = field_get_items($entity_type, $entity, \'field_prog_explain_other_costs\')[0][\'value\'];
+  }
+  
+  $entity_field[0][\'value\'] = implode(\'<br/>\', $output);
 }
 else {
   unset($entity_field[0][\'value\']);
@@ -1801,7 +1821,10 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$housing = field_get_items($entity_type, $entity, \'field_prog_housing_y_n\')[0][\'value\'];
+      'code' => '$housing = "No";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_housing_y_n\')[0][\'value\'])) {
+  $housing = field_get_items($entity_type, $entity, \'field_prog_housing_y_n\')[0][\'value\'];
+}
 if ($housing != "No") {
   $entity_field[0][\'value\'] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field__prog_room_and_board\')[0][\'value\'], 2);
 }
@@ -2893,7 +2916,10 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$take_value = field_get_items($entity_type, $entity, \'field_prog_special_courses\')[0][\'value\'];
+      'code' => '$take_value = \'No\';
+if (isset(field_get_items($entity_type, $entity, \'field_prog_special_courses\')[0][\'value\'])) {
+  $take_value = field_get_items($entity_type, $entity, \'field_prog_special_courses\')[0][\'value\'];
+}
 
 if ($take_value == "Yes") {
   $entity_field[0][\'value\'] = $take_value;
@@ -2931,7 +2957,11 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$yn_value = field_get_items($entity_type, $entity, \'field_prog_summer_prog_y_n\')[0][\'value\'];
+      'code' => '$yn_value = "No";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_summer_prog_y_n\')[0][\'value\'])) {
+  $yn_value = field_get_items($entity_type, $entity, \'field_prog_summer_prog_y_n\')[0][\'value\'];
+}
+
 if (isset(field_get_items($entity_type, $entity, \'field_prog_summer_descrip\')[0][\'value\'])) {
   $desc_value = field_get_items($entity_type, $entity, \'field_prog_summer_descrip\')[0][\'value\'];
 }

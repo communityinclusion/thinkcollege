@@ -138,6 +138,55 @@ function program_record_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_api_version';
+  $strongarm->value = '4';
+  $export['leaflet_mapbox_api_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_code';
+  $strongarm->value = '';
+  $export['leaflet_mapbox_code'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_description';
+  $strongarm->value = '';
+  $export['leaflet_mapbox_description'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_label';
+  $strongarm->value = 'ThinkCollege MapBox Street';
+  $export['leaflet_mapbox_label'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_style_url';
+  $strongarm->value = 'mapbox://styles/ici-umass/cioc5s9ps000atbmf58itrjol';
+  $export['leaflet_mapbox_style_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_token';
+  $strongarm->value = 'pk.eyJ1IjoiaWNpLXVtYXNzIiwiYSI6IjU0OTZjZTY1M2I4NWM1ZTMxYTNjNzZmZDYxNjUwODlhIn0.-5DkuMz0Ots5OwiC-sJYVQ';
+  $export['leaflet_mapbox_token'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'leaflet_mapbox_zoomlevel';
+  $strongarm->value = '2';
+  $export['leaflet_mapbox_zoomlevel'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_program_record';
   $strongarm->value = array();
   $export['menu_options_program_record'] = $strongarm;

@@ -173,19 +173,22 @@ $classes .= ' node-program-record-full';
               </td>
               <td><?php print $content['field_prog_contact_phone'][0]['#markup']; ?></td>
             </tr>
-            <tr>
-              <td>
-                <?php
-                if (isset($content['field_prog_program_website']['#display_label'])) {
-                  print $content['field_prog_program_website']['#display_label'];
-                }
-                else {
-                  print $content['field_prog_program_website']['#title'];
-                }
-                ?>
-              </td>
-              <td><?php print render($content['field_prog_program_website'][0]); ?></td>
-            </tr>
+
+            <?php if (isset($content['field_prog_program_website'][0])) : ?>
+              <tr>
+                <td>
+                  <?php
+                  if (isset($content['field_prog_program_website']['#display_label'])) {
+                    print $content['field_prog_program_website']['#display_label'];
+                  }
+                  else {
+                    print $content['field_prog_program_website']['#title'];
+                  }
+                  ?>
+                </td>
+                <td><?php print render($content['field_prog_program_website'][0]); ?></td>
+              </tr>
+            <?php endif ?>
           </tbody>
         </table>
       </div>
@@ -285,9 +288,7 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  if (isset($content['field_prog_num_applied']) ||
-    isset($content['field_prog_15_16_accepted']) ||
-    isset($content['field_prog_explain_nums']) ||
+  if (isset($content['field_prog_explain_nums']) ||
     isset($content['field_admission_rate_display']) ||
     isset($content['field_prog_retention_rate_displa']) ||
     isset($content['field_prog_length_years'])):
@@ -300,8 +301,6 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
-        <?php print render($content['field_prog_num_applied']); ?>
-        <?php print render($content['field_prog_15_16_accepted']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
         <?php print render($content['field_admission_rate_display']); ?>
         <?php print render($content['field_prog_retention_rate_displa']); ?>
