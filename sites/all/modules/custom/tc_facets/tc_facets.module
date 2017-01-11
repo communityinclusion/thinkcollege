@@ -1,0 +1,178 @@
+<?php
+
+/**
+ * @file
+ * Custom facets layouts Using Bootstrap for TC
+ *
+ * Author: Lee Walker
+ * lee@codejourneymen.com
+ */
+
+/**
+ * Implements hook_element_info_alter().
+ *
+ * Removed "N/A" options from radio buttons.
+ */
+function tc_facets_element_info_alter(&$type) {
+  $type['radios']['#process'][] = '_tc_facets_remove_radio_na';
+}
+
+function _tc_facets_remove_radio_na($element) {
+  unset($element['#options']['_none']);
+  unset($element['_none']);
+  return $element;
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Set some placeholder text for Solr search box for "College Search".
+ */
+function tc_facets_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == "views_exposed_form") {
+    $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Program or Keyword";
+  }
+}
+
+/**
+ * Implements HOOK_facet_items_alter().
+ *
+ * From facetapi_bonus module.
+ * Rename facet titles.
+ */
+function tc_facets_facet_items_alter(&$build, &$settings) {
+  if ($settings->facet == "field_prog_which_disabilities") {
+    $build['Other disabilities']["#markup"] = "Other Disabilities";
+  }
+  else if ($settings->facet == "tc_financial_aid") {
+    $build['Yes']["#markup"] = "Offer Financial Aid";
+  }
+  else if ($settings->facet == "tc_housing") {
+    $build['Yes']["#markup"] = "Housing";
+  }
+  else if ($settings->facet == "tc_tpsid") {
+    $build['Yes']["#markup"] = "Program is a federally funded TPSID program";
+  }
+  else if ($settings->facet == "field_prog_length_years") {
+    $build['Varies']["#markup"] = "Varies by student";
+  }
+  else if ($settings->facet == "field_prog_type_of_school") {
+    $build['Other']["#markup"] = "Other";
+  }
+  else if ($settings->facet == "tc_dual_enroll") {
+    $build['Yes']["#markup"] = "Dual Enrollment *";
+  }
+}
+
+/**
+ * Implements hook_facetapi_sort_info().
+ *
+ * TC facets have some specific sort requirements that don't fit a standard
+ * model (alphabetical, numeric etc) so define them here.
+ */
+function tc_facets_facetapi_sort_info() {
+  $sorts = array();
+
+  $sorts['tc_disability_sort'] = array(
+    'label' => t('TC:Disability Sort'),
+    'callback' => 'tc_facets_facetapi_sort_disability',
+    'description' => t('Special sort order for TC Disability facet.'),
+    'weight' => -50,
+  );
+
+  $sorts['tc_school_type_sort'] = array(
+    'label' => t('TC:School Type Sort'),
+    'callback' => 'tc_facets_facetapi_sort_school_type',
+    'description' => t('Special sort order for TC school type facet.'),
+    'weight' => -50,
+  );
+
+  return $sorts;
+}
+
+/**
+ * Sort in specific Disability order.
+ *
+ * Intellectual
+ * Autism
+ * Both
+ * Other
+ */
+function tc_facets_facetapi_sort_disability(array $a, array $b) {
+  $ac =0;
+  $bc = 0;
+  if ($a['#indexed_value'] == "Intellectual disability") {
+    $ac = 0;
+  }
+  else if ($a['#indexed_value'] == "Autism") {
+    $ac = 1;
+  }
+  else if ($a['#indexed_value'] == "BOTH intellectual disability and autism") {
+    $ac = 3;
+  }
+  else if ($a['#indexed_value'] == "Other disabilities") {
+    $ac = 4;
+  }
+
+  if ($b['#indexed_value'] == "Intellectual disability") {
+    $bc = 0;
+  }
+  else if ($b['#indexed_value'] == "Autism") {
+    $bc = 1;
+  }
+  else if ($b['#indexed_value'] == "BOTH intellectual disability and autism") {
+    $bc = 3;
+  }
+  else if ($b['#indexed_value'] == "Other disabilities") {
+    $bc = 4;
+  }
+
+  if ($ac == $bc) {
+    return 0;
+  }
+  return ($ac < $bc) ? -1 : 1;
+}
+
+
+/**
+ * Sort facets in specific School Type order.
+ *
+ * 2-year community college or junior college
+ * 4-year college or university
+ * Both
+ * Other
+ */
+function tc_facets_facetapi_sort_school_type(array $a, array $b) {
+  $ac =0;
+  $bc = 0;
+  if ($a['#indexed_value'] == "2-year community college or junior college") {
+    $ac = 0;
+  }
+  else if ($a['#indexed_value'] == "4-year college or university") {
+    $ac = 1;
+  }
+  else if ($a['#indexed_value'] == "Technical or vocational/trade school") {
+    $ac = 3;
+  }
+  else if ($a['#indexed_value'] == "Other") {
+    $ac = 4;
+  }
+
+  if ($b['#indexed_value'] == "2-year community college or junior college") {
+    $bc = 0;
+  }
+  else if ($b['#indexed_value'] == "4-year college or university") {
+    $bc = 1;
+  }
+  else if ($b['#indexed_value'] == "Technical or vocational/trade school") {
+    $bc = 3;
+  }
+  else if ($b['#indexed_value'] == "Other") {
+    $bc = 4;
+  }
+
+  if ($ac == $bc) {
+    return 0;
+  }
+  return ($ac < $bc) ? -1 : 1;
+}
