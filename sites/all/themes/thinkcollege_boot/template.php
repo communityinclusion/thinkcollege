@@ -159,7 +159,7 @@ function thinkcollege_boot_preprocess_html(&$vars) {
   }
 }
 
-/*
+/**
  * Implements hook_preprocess_node().
  */
 function thinkcollege_boot_preprocess_node(&$vars) {
@@ -192,14 +192,14 @@ function thinkcollege_boot_preprocess_node(&$vars) {
   }
 }
 
-/*
+/**
  * Implements hook_preprocess_field().
  */
 function thinkcollege_boot_preprocess_field(&$vars) {
   $vars['theme_hook_suggestions'][] = 'field__' . $vars['element']['#bundle'] . '__' . $vars['element']['#view_mode'];
 }
 
-/*
+/**
  * Implements hook_preprocess_block().
  */
 function thinkcollege_boot_preprocess_block(&$vars) {
@@ -209,6 +209,23 @@ function thinkcollege_boot_preprocess_block(&$vars) {
     $vars['attributes_array']['data-offset-top'] = '100';
     $vars['attributes_array']['data-offset-bottom'] = '660';
     $vars['attributes_array']['data-clampedwidth'] = '.region-sidebar-first';
+  }
+
+  /*
+   * Individual facet <section> blocks are not automatically marked with their
+   * facet name as a class, we need to target them directly, so add the
+   * field_name to the <section> class.
+   */
+  if ($vars['block']->module == "facetapi") {
+    $vars['classes_array'][] = $vars['title_suffix']['contextual_links']['#element']['#facet']['field'];
+
+    /*
+     * One facet (TPSID) is displayed as a bootstrap well as per requirements.
+     */
+    if ($vars['title_suffix']['contextual_links']['#element']['#facet']['field'] == "tc_tpsid") {
+      $vars['classes_array'][] = "well well-sm";
+    }
+
   }
 }
 
@@ -246,3 +263,49 @@ function thinkcollege_boot_field_attach_view_alter(&$output, $context) {
     }
   }
 }
+
+/**
+ * Implements THEME_facetapi_title().
+ *
+ * @param object $variables
+ *   Values associated with facets.
+ *
+ * @return string
+ *   Renamed Facet title, or blank.
+ */
+function thinkcollege_boot_facetapi_title($variables) {
+  // Rename specific TC facet title labels.
+  switch ($variables['title']) {
+    case "State/Province":
+      $variables['title'] = "Location";
+      break;
+    case "Please indicate which disabilities students in this program have":
+      $variables['title'] = "Disability";
+      break;
+    case "Does program offer housing for students?":
+      $variables['title'] = "Housing";
+      break;
+    case "Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?":
+      $variables['title'] = "Offer Financial Aid";
+      break;
+    case "Is the college or univ. where the program is located public or private institution? ":
+      $variables['title'] = "Public or Private";
+      break;
+    case "What type of school is this?":
+      $variables['title'] = "Type of School";
+      break;
+    case "What is the planned length of this program?":
+      $variables['title'] = "Planned Length of Program";
+      break;
+    case "Is/was this program a federally funded TPSID program? ":
+      $variables['title'] = "Program is a federally funded TPSID program";
+      break;
+    case "TC:Dual Enrollment":
+      $variables['title'] = "Program features";
+      break;
+  }
+  $title = "<div class='tc-facet-title'><span class='facet-title'>";
+  $tit = t('@title', array('@title' => $variables['title']));
+  return $title . $tit . "</span></div>";
+}
+
