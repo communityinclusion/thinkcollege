@@ -98,9 +98,8 @@ function program_record_field_group_info() {
       2 => 'field_prog_new_studt_f14',
       3 => 'field_prog_studt_retn_f15',
       4 => 'field_prog_length_years',
-      5 => 'field_prog_15_16_admit_rate',
-      6 => 'field_prog_know_how_many',
-      7 => 'field_prog_explain_nums',
+      5 => 'field_prog_know_how_many',
+      6 => 'field_prog_explain_nums',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

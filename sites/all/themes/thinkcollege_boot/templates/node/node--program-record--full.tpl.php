@@ -110,14 +110,16 @@ $classes .= ' node-program-record-full';
 
         <?php if($tc_tpsid_icon): ?>
           <div class="program_icon">
-            <div class="tpsid_icon">TPSID</div>
+            <div class="tpsid_icon">
+              <a href="#" data-toggle="tooltip" title="" style="color:#fff;text-decoration: none" data-original-title="Transition and Postsecondary Programs for Students with Intellectual Disabilities">	<div class="tpsid_icon"> TPSID</div></a>
+            </div>
           </div>
         <?php endif ?>
 
         <?php if($tc_financial_aid_icon): ?>
           <div class="program_icon">
             <div class="cost_icon">
-              <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name">
+              <a href="#" data-toggle="tooltip" title="" data-original-title="Program is able to provide federal financial aid as a Comprehensive Transition Program (CTP)"><img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name"></a>
             </div>
           </div>
         <?php endif ?>
@@ -125,7 +127,7 @@ $classes .= ' node-program-record-full';
         <?php if($tc_housing_icon): ?>
           <div class="program_icon">
             <div class="home_icon">
-              <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name">
+              <a href="#" data-toggle="tooltip" title="" data-original-title="Program offers housing for students"><img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name"></a>
             </div>
           </div>
         <?php endif ?>
@@ -269,7 +271,8 @@ $classes .= ' node-program-record-full';
   <?php
   if (isset($content['field_prog_admit_deadline']) ||
     isset($content['field_prog_admiss_link']) ||
-    isset($content['field_requirements_display'])):
+    isset($content['field_requirements_display']) ||
+    isset($content['field_disabilities_display_'])):
     ?>
     <div class="program-box" id="requirements">
       <table class="table table-striped">
@@ -282,6 +285,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_admit_deadline']); ?>
         <?php print render($content['field_prog_admiss_link']); ?>
         <?php print render($content['field_requirements_display']); ?>
+        <?php print render($content['field_disabilities_display_']); ?>
         </tbody>
       </table>
     </div>
@@ -311,9 +315,9 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  if (isset($content['field_prog_tuition']) ||
+  if (isset($content['field_tuition_display']) ||
       isset($content['field_prog_room_and_board_displa']) ||
-      isset($content['field_prog_specific_fees']) ||
+      isset($content['field_prog_specific_fees_display']) ||
       isset($content['field_prog_cost_of_the_program']) ||
       isset($content['field_prog_other_costs_display']) ||
       isset($content['field_prog_ctp_y_n']) ||
@@ -329,9 +333,9 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
-        <?php print render($content['field_prog_tuition']); ?>
+        <?php print render($content['field_tuition_display']); ?>
         <?php print render($content['field_prog_room_and_board_displa']); ?>
-        <?php print render($content['field_prog_specific_fees']); ?>
+        <?php print render($content['field_prog_specific_fees_display']); ?>
         <?php print render($content['field_prog_cost_of_the_program']); ?>
         <?php print render($content['field_prog_other_costs_display']); ?>
         <?php print render($content['field_prog_ctp_y_n']); ?>
@@ -382,7 +386,7 @@ $classes .= ' node-program-record-full';
       <table class="table table-striped">
         <thead>
         <tr>
-          <th colspan="2"><i class="fa" aria-hidden="true"></i> Employment</th>
+          <th colspan="2"><i class="fa fa-briefcase" aria-hidden="true"></i> Employment</th>
         </tr>
         </thead>
         <tbody>
@@ -423,7 +427,7 @@ $classes .= ' node-program-record-full';
       <table class="table table-striped">
         <thead>
         <tr>
-          <th colspan="2"><i class="fa fa-list" aria-hidden="true"></i> Extracurricular</th>
+          <th colspan="2"><i class="fa fa fa-futbol-o" aria-hidden="true"></i> Extracurricular</th>
         </tr>
         </thead>
         <tbody>

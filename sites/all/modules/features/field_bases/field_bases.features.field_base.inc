@@ -190,6 +190,58 @@ else {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_disabilities_display_'.
+  $field_bases['field_disabilities_display_'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_disabilities_display_',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$disability_values = field_get_items($entity_type, $entity, \'field_prog_which_disabilities\');
+
+if (isset(field_get_items($entity_type, $entity, \'field_prog_which_dis_specify\')[0][\'value\'])) {
+  $other_value = field_get_items($entity_type, $entity, \'field_prog_which_dis_specify\')[0][\'value\'];
+}
+
+$output = array();
+foreach ($disability_values as $key => $value) {
+  if ($value[\'value\'] == \'Other disabilities\') {
+    $output[] = $other_value;
+  }
+  else {
+    $output[] = $value[\'value\'];
+  }
+}
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
+}
+else {
+  unset($entity_field[0][\'value\']);
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_event_cal_categories'.
   $field_bases['field_event_cal_categories'] = array(
     'active' => 1,
@@ -420,10 +472,10 @@ else {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'IHE approved' => 'IHE approved',
+        'IHE approved' => 'Approved by Institute of Higher Education',
         'Continuing education credential' => 'Continuing education credential',
-        'Awarded by program not officially recognized by IHE' => 'Awarded by program, not officially recognized by Institutes of Higher Education (IHE)',
-        'Open to all students at the IHE' => 'Open to all students at the IHE',
+        'Awarded by program not officially recognized by IHE' => 'warded by program, not officially recognized by Institute of Higher Education',
+        'Open to all students at the IHE' => 'Open to all students at Institute of Higher Education',
         'Just for students in this program' => 'Just for students in this program',
       ),
       'allowed_values_function' => '',
@@ -883,7 +935,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
-      'store' => 1,
+      'store' => 0,
     ),
     'translatable' => 0,
     'type' => 'computed',
@@ -1825,7 +1877,13 @@ else {
 if (isset(field_get_items($entity_type, $entity, \'field_prog_housing_y_n\')[0][\'value\'])) {
   $housing = field_get_items($entity_type, $entity, \'field_prog_housing_y_n\')[0][\'value\'];
 }
-if ($housing != "No") {
+
+$provide_cost = "No";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'])) {
+  $provide_cost = field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'];
+}
+
+if (($housing == "Yes") && ($provide_cost == "Yes")) {
   $entity_field[0][\'value\'] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field__prog_room_and_board\')[0][\'value\'], 2);
 }
 else {
@@ -2033,6 +2091,46 @@ else {
     ),
     'translatable' => 0,
     'type' => 'number_decimal',
+  );
+
+  // Exported field_base: 'field_prog_specific_fees_display'.
+  $field_bases['field_prog_specific_fees_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_specific_fees_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$provide_cost = "No";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'])) {
+  $provide_cost = field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'];
+}
+
+if ($provide_cost == \'Yes\') {
+  $entity_field[0][\'value\'] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field_prog_specific_fees\')[0][\'value\'], 2);
+}
+else {
+  unset($entity_field[0][\'value\']);
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_prog_state'.
@@ -2983,6 +3081,46 @@ else {
         'data_scale' => 2,
         'data_size' => 'normal',
         'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
+  // Exported field_base: 'field_tuition_display'.
+  $field_bases['field_tuition_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_tuition_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$provide_cost = "No";
+if (isset(field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'])) {
+  $provide_cost = field_get_items($entity_type, $entity, \'field_prog_cost_y_n\')[0][\'value\'];
+}
+
+if ($provide_cost == \'Yes\') {
+  $entity_field[0][\'value\'] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field_prog_tuition\')[0][\'value\'], 2);
+}
+else {
+  unset($entity_field[0][\'value\']);
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,

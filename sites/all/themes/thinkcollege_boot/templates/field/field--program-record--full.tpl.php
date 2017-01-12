@@ -86,6 +86,20 @@ $nontablefields = array(
 <?php else: ?>
   <tr class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <td><?php print $label ?></td>
-    <td><?php print render($items[0]); ?></td>
+    <td>
+      <?php
+      if (count($items) > 1) {
+        $processed_items = array();
+        foreach ($items as $key => $value) {
+          $processed_items[] = $value['#markup'];
+        }
+        print theme('item_list', array('items' => $processed_items));
+      }
+      else {
+        print render($items[0]);
+      }
+      ?>
+      <?php //print render($items[0]); ?>
+    </td>
   </tr>
 <?php endif ?>

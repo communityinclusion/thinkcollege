@@ -91,14 +91,16 @@ $classes .= ' node-program-record-card';
 
           <?php if($tc_tpsid_icon): ?>
             <div class="program_icon">
-              <div class="tpsid_icon">TPSID</div>
+              <div class="tpsid_icon">
+                <a href="#" data-toggle="tooltip" title="" style="color:#fff;text-decoration: none" data-original-title="Transition and Postsecondary Programs for Students with Intellectual Disabilities">	<div class="tpsid_icon"> TPSID</div></a>
+              </div>
             </div>
           <?php endif ?>
 
           <?php if($tc_financial_aid_icon): ?>
             <div class="program_icon">
               <div class="cost_icon">
-                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name">
+                <a href="#" data-toggle="tooltip" title="" data-original-title="Program is able to provide federal financial aid as a Comprehensive Transition Program (CTP)"><img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/financialaid.svg" alt="icon name"></a>
               </div>
             </div>
           <?php endif ?>
@@ -106,7 +108,7 @@ $classes .= ' node-program-record-card';
           <?php if($tc_housing_icon): ?>
             <div class="program_icon">
               <div class="home_icon">
-                <img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name">
+                <a href="#" data-toggle="tooltip" title="" data-original-title="Program offers housing for students"><img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/home.svg" alt="icon name"></a>
               </div>
             </div>
           <?php endif ?>
@@ -136,7 +138,6 @@ $classes .= ' node-program-record-card';
                   <?php print render($content['field_prog_photo']); ?>
                 </span>
                 <div class="media-body">
-                  <h4 class="media-heading">Description</h4>
                   <?php print render($content['body']); ?>
                 </div>
               </div>
