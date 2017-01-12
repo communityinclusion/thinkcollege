@@ -1,0 +1,13 @@
+name = TC In DB Search Server
+description = A testing Search server (that doesn't use Solr)
+core = 7.x
+package = ThinkCollege
+version = 7.x-0.1
+dependencies[] = entity
+dependencies[] = facetapi
+dependencies[] = facetapi_bonus
+dependencies[] = search_api
+dependencies[] = search_api_db
+features[features_api][] = api:2
+features[search_api_server][] = db_server
+project path = sites/all/modules/features

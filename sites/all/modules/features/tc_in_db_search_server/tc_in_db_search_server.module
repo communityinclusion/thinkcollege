@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TC In DB Search Server feature.
+ */
+
+include_once 'tc_in_db_search_server.features.inc';
