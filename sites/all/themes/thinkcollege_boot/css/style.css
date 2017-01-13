@@ -10122,36 +10122,45 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   background-color: #fff;
   font-size: 16px;
 }
+/* line 53, ../scss/_search_overrides.scss */
+.page-college-search .region-sidebar-first .block {
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: none;
+  margin: none;
+}
 
-/* line 57, ../scss/_search_overrides.scss */
+/* line 65, ../scss/_search_overrides.scss */
 section.tc_financial_aid h2,
 section.tc_housing h2 {
   display: none;
 }
-/* line 60, ../scss/_search_overrides.scss */
+/* line 68, ../scss/_search_overrides.scss */
 section.tc_financial_aid ul,
 section.tc_housing ul {
   margin-bottom: 0;
 }
 
-/* line 66, ../scss/_search_overrides.scss */
+/* line 74, ../scss/_search_overrides.scss */
 section.tc_dual_enroll ul {
   margin-bottom: 0;
 }
 
-/* line 71, ../scss/_search_overrides.scss */
+/* line 79, ../scss/_search_overrides.scss */
 div.aside {
   padding: 10px;
   font-size: 85%;
   color: grey;
 }
 
-/* line 77, ../scss/_search_overrides.scss */
+/* line 85, ../scss/_search_overrides.scss */
 ul.facetapi-facetapi-checkbox-links {
   padding-left: 5px;
 }
 
-/* line 81, ../scss/_search_overrides.scss */
+/* line 89, ../scss/_search_overrides.scss */
 input[type="checkbox"].facetapi-checkbox {
   margin-right: 5px;
 }

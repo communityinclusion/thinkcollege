@@ -50,6 +50,14 @@
   margin-bottom: 15px;
   background-color: #fff;
   font-size: 16px;
+  .block {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: none;
+    margin: none;
+  }
 }
 
 section.tc_financial_aid,
