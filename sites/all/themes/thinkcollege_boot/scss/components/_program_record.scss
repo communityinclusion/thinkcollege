@@ -57,6 +57,13 @@ article {
           .field-name-field-prog-city, .field-name-field-prog-state, .field-name-field-zip-code {
             display: inline-block;
           }
+
+          .field-item {
+            /* This allows long web addresses to wrap cleanly without breaking out of their box. */
+            word-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
+          }
         }
       }
 

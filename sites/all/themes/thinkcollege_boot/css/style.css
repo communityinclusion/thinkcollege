@@ -8872,21 +8872,28 @@ article.node-program-record-card .program-box .program-search-info .row, article
 article.node-program-record-card .program-box .program-search-info .row .field-name-field-prog-city, article.node-program-record-card .program-box .program-search-info .row .field-name-field-prog-state, article.node-program-record-card .program-box .program-search-info .row .field-name-field-zip-code, article.node-program-record-full .program-box .program-search-info .row .field-name-field-prog-city, article.node-program-record-full .program-box .program-search-info .row .field-name-field-prog-state, article.node-program-record-full .program-box .program-search-info .row .field-name-field-zip-code {
   display: inline-block;
 }
-/* line 63, ../scss/components/_program_record.scss */
+/* line 61, ../scss/components/_program_record.scss */
+article.node-program-record-card .program-box .program-search-info .row .field-item, article.node-program-record-full .program-box .program-search-info .row .field-item {
+  /* This allows long web addresses to wrap cleanly without breaking out of their box. */
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+/* line 70, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box .buttons, article.node-program-record-full .program-box .buttons {
   padding-top: 10px;
   border-top: #ccc 1px solid;
 }
-/* line 66, ../scss/components/_program_record.scss */
+/* line 73, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box .buttons .btn-success, article.node-program-record-full .program-box .buttons .btn-success {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 73, ../scss/components/_program_record.scss */
+/* line 80, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box table thead, article.node-program-record-full .program-box table thead {
   border-top: none;
 }
-/* line 75, ../scss/components/_program_record.scss */
+/* line 82, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box table thead th, article.node-program-record-full .program-box table thead th {
   font-family: "museo-sans", sans-serif;
   text-transform: uppercase;
@@ -8894,16 +8901,16 @@ article.node-program-record-card .program-box table thead th, article.node-progr
   color: #fff;
   background-color: #4C8EC9;
 }
-/* line 83, ../scss/components/_program_record.scss */
+/* line 90, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-box table td, article.node-program-record-full .program-box table td {
   width: 50%;
   color: #555;
 }
-/* line 89, ../scss/components/_program_record.scss */
+/* line 96, ../scss/components/_program_record.scss */
 article.node-program-record-card .program_icon_box, article.node-program-record-full .program_icon_box {
   margin-bottom: 10px;
 }
-/* line 91, ../scss/components/_program_record.scss */
+/* line 98, ../scss/components/_program_record.scss */
 article.node-program-record-card .program_icon_box .program_icon, article.node-program-record-full .program_icon_box .program_icon {
   margin: 3px;
   padding: 5px;
@@ -8917,7 +8924,7 @@ article.node-program-record-card .program_icon_box .program_icon, article.node-p
   -moz-border-radius: 4px;
   vertical-align: middle;
 }
-/* line 104, ../scss/components/_program_record.scss */
+/* line 111, ../scss/components/_program_record.scss */
 article.node-program-record-card .program_icon_box .tpsid_icon, article.node-program-record-full .program_icon_box .tpsid_icon {
   text-align: center;
   line-height: 30px;
@@ -8925,17 +8932,17 @@ article.node-program-record-card .program_icon_box .tpsid_icon, article.node-pro
   font-family: 'Lato', sans-serif;
   font-size: 11px;
 }
-/* line 113, ../scss/components/_program_record.scss */
+/* line 120, ../scss/components/_program_record.scss */
 article.node-program-record-card .modal, article.node-program-record-full .modal {
   font-size: 1.6rem;
   font-family: "lato", sans-serif;
   color: #331d35;
 }
-/* line 118, ../scss/components/_program_record.scss */
+/* line 125, ../scss/components/_program_record.scss */
 article.node-program-record-card .modal .program-location .field, article.node-program-record-full .modal .program-location .field {
   display: inline-block;
 }
-/* line 124, ../scss/components/_program_record.scss */
+/* line 131, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-search-program-name, article.node-program-record-full .program-search-program-name {
   display: block;
   color: #444;
@@ -8943,7 +8950,7 @@ article.node-program-record-card .program-search-program-name, article.node-prog
   font-weight: 700;
   font-family: "museo-sans", sans-serif;
 }
-/* line 132, ../scss/components/_program_record.scss */
+/* line 139, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-university, article.node-program-record-full .program-university {
   display: block;
   color: #E76E35;
@@ -8951,7 +8958,7 @@ article.node-program-record-card .program-university, article.node-program-recor
   margin: 1px 0 0;
   font-family: 'lato', sans-serif, sans-serif;
 }
-/* line 140, ../scss/components/_program_record.scss */
+/* line 147, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-location, article.node-program-record-full .program-location {
   text-transform: uppercase;
   font-weight: 700;
@@ -8959,15 +8966,15 @@ article.node-program-record-card .program-location, article.node-program-record-
   margin: 5px 0;
   font-family: "museo-sans", sans-serif;
 }
-/* line 146, ../scss/components/_program_record.scss */
+/* line 153, ../scss/components/_program_record.scss */
 article.node-program-record-card .program-location .field, article.node-program-record-full .program-location .field {
   display: inline-block;
 }
-/* line 152, ../scss/components/_program_record.scss */
+/* line 159, ../scss/components/_program_record.scss */
 article.node-program-record-card table.program-contact-info td, article.node-program-record-full table.program-contact-info td {
   width: 50%;
 }
-/* line 159, ../scss/components/_program_record.scss */
+/* line 166, ../scss/components/_program_record.scss */
 article.node-program-record-full .program-box {
   margin-top: 20px;
 }

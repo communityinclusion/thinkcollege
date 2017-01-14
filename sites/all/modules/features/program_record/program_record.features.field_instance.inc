@@ -19,9 +19,21 @@ function program_record_field_default_field_instances() {
     'display' => array(
       'card' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 450,
+          'trim_link' => 0,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
         'weight' => 4,
       ),
       'default' => array(
@@ -204,6 +216,7 @@ function program_record_field_default_field_instances() {
       'module' => 'addressfield',
       'settings' => array(
         'available_countries' => array(
+          'CA' => 'CA',
           'US' => 'US',
         ),
         'default_country' => 'US',
