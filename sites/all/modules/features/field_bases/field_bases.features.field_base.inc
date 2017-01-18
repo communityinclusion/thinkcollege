@@ -1394,12 +1394,15 @@ else {
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '$dev_value = \'None\';
-if (isset(field_get_items($entity_type, $entity, \'field_prog_other_career_dev\')[0][\'value\'])) {
-  $dev_value = field_get_items($entity_type, $entity, \'field_prog_other_career_dev\')[0][\'value\'];
+      'code' => '$dev_values = field_get_items($entity_type, $entity, \'field_prog_other_career_dev\');
+
+$output = array();
+foreach ($dev_values as $key => $dev_value) {
+   $output[] = $dev_value[\'value\'];
 }
-if ($dev_value != "None") {
-  $entity_field[0][\'value\'] = $dev_value;
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
 }
 else {
   unset($entity_field[0][\'value\']);
@@ -1412,7 +1415,7 @@ else {
         'data_precision' => 10,
         'data_scale' => 2,
         'data_size' => 'normal',
-        'data_type' => 'text',
+        'data_type' => 'longtext',
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
