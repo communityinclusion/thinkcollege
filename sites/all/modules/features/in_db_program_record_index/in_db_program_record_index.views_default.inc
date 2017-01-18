@@ -79,7 +79,7 @@ function in_db_program_record_index_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'solr_seach_block');
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'college-search';
+  $handler->display->display_options['path'] = 'db-college-search';
   $handler->display->display_options['menu']['title'] = 'College Search (DB)';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
