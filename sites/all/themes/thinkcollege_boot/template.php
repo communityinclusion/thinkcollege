@@ -303,6 +303,12 @@ function thinkcollege_boot_facetapi_title($variables) {
     case "TC:Dual Enrollment":
       $variables['title'] = "Program features";
       break;
+    case "TC:State/Province":
+      $variables['title'] = "Location";
+      break;
+    case "TC:School Type":
+      $variables['title'] = "Type of School";
+      break;
   }
   $title = "<div class='tc-facet-title'><span class='facet-title'>";
   $tit = t('@title', array('@title' => $variables['title']));
