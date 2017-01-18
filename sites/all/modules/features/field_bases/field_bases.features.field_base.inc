@@ -2505,6 +2505,44 @@ else {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_prog_tpsid_display'.
+  $field_bases['field_prog_tpsid_display'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_tpsid_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$tpsid_values = field_get_items($entity_type, $entity, \'field_prog_is_was_tpsid\');
+
+$entity_field[0][\'value\'] = \'No\';
+foreach ($tpsid_values as $key => $tpsid_value) {
+  if ($tpsid_value[\'value\'] == \'TPSID 2015-2020\') {
+    $entity_field[0][\'value\'] = \'Yes\';
+  }
+}
+',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_prog_tuition'.
   $field_bases['field_prog_tuition'] = array(
     'active' => 1,

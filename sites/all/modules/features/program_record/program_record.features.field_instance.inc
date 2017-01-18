@@ -117,7 +117,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 72,
+        'weight' => 73,
       ),
       'modal' => array(
         'label' => 'above',
@@ -261,7 +261,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 29,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -311,7 +311,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -373,7 +373,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'modal' => array(
         'label' => 'above',
@@ -685,7 +685,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'modal' => array(
         'label' => 'above',
@@ -864,7 +864,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 87,
+        'weight' => 88,
       ),
       'modal' => array(
         'label' => 'above',
@@ -923,7 +923,7 @@ function program_record_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1000,7 +1000,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 76,
+        'weight' => 77,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1057,7 +1057,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1115,7 +1115,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 77,
+        'weight' => 78,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1236,7 +1236,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 88,
+        'weight' => 89,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1647,7 +1647,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 69,
+        'weight' => 70,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1763,7 +1763,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1822,7 +1822,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 78,
+        'weight' => 79,
       ),
       'modal' => array(
         'label' => 'above',
@@ -1882,7 +1882,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 75,
+        'weight' => 76,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2066,7 +2066,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2122,9 +2122,8 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 16,
       ),
       'modal' => array(
@@ -2182,7 +2181,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 81,
+        'weight' => 82,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2241,7 +2240,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 33,
+        'weight' => 34,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2369,7 +2368,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 31,
+        'weight' => 32,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2440,7 +2439,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2502,7 +2501,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 68,
+        'weight' => 69,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2611,7 +2610,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 73,
+        'weight' => 74,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2677,7 +2676,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 74,
+        'weight' => 75,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2788,7 +2787,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 85,
+        'weight' => 86,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2847,7 +2846,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 67,
+        'weight' => 68,
       ),
       'modal' => array(
         'label' => 'above',
@@ -2968,7 +2967,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 70,
+        'weight' => 71,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3023,7 +3022,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 71,
+        'weight' => 72,
       ),
       'modal' => array(
         'label' => 'above',
@@ -3606,7 +3605,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3657,7 +3656,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 34,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4137,7 +4136,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 65,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4198,7 +4197,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 36,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4250,7 +4249,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 89,
+        'weight' => 90,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4308,7 +4307,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 86,
+        'weight' => 87,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4530,7 +4529,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 66,
+        'weight' => 67,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4597,7 +4596,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => 32,
+        'weight' => 33,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4657,7 +4656,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 83,
+        'weight' => 84,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4717,7 +4716,7 @@ function program_record_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4792,7 +4791,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 82,
+        'weight' => 83,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4821,6 +4820,56 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_tpsid_display'.
+  $field_instances['node-program_record-field_prog_tpsid_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 105,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Is this program a federally funded TPSID program?',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_tpsid_display',
+    'label' => 'TPSID (display)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 139,
     ),
   );
 
@@ -4859,7 +4908,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 65,
+        'weight' => 66,
       ),
       'modal' => array(
         'label' => 'above',
@@ -4921,7 +4970,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 84,
+        'weight' => 85,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5042,7 +5091,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5100,7 +5149,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 80,
+        'weight' => 81,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5162,7 +5211,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 79,
+        'weight' => 80,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5280,7 +5329,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5382,7 +5431,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5432,7 +5481,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 35,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5533,7 +5582,7 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 90,
+        'weight' => 91,
       ),
       'modal' => array(
         'label' => 'above',
@@ -5652,6 +5701,7 @@ function program_record_field_default_field_instances() {
   t('Students pay (display)');
   t('Students take courses (display)');
   t('Summer program (display)');
+  t('TPSID (display)');
   t('This program is operated by and/or is a program of an accredited institute of higher education.');
   t('This program serves students who meet the definition of intellectual disability. ');
   t('Tuition (display)');

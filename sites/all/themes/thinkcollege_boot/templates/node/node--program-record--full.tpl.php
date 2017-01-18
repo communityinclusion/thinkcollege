@@ -216,7 +216,7 @@ $classes .= ' node-program-record-full';
   if (isset($content['field_prog_public_or_privat']) ||
       isset($content['field_type_of_school_display']) ||
       isset($content['field_prog_other_explain']) ||
-      isset($content['field_prog_is_was_tpsid']) ||
+      isset($content['field_prog_tpsid_display']) ||
       isset($content['field_prog_hs_coll']) ||
       isset($content['field_how_many_students_total_at']) ||
       isset($content['field_prog_when_will_progr_start']) ||
@@ -236,7 +236,7 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_public_or_privat']); ?>
           <?php print render($content['field_type_of_school_display']); ?>
           <?php print render($content['field_prog_other_explain']); ?>
-          <?php print render($content['field_prog_is_was_tpsid']); ?>
+          <?php print render($content['field_prog_tpsid_display']); ?>
           <?php print render($content['field_prog_hs_coll']); ?>
           <?php print render($content['field_how_many_students_total_at']); ?>
           <?php print render($content['field_prog_when_will_progr_start']); ?>
