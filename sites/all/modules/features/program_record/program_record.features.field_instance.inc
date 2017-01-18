@@ -21,15 +21,15 @@ function program_record_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'smart_trim',
         'settings' => array(
-          'more_link' => 0,
-          'more_text' => 'Read more',
+          'more_link' => 1,
+          'more_text' => ' Read more',
           'summary_handler' => 'full',
           'trim_length' => 450,
           'trim_link' => 0,
           'trim_options' => array(
             'text' => 'text',
           ),
-          'trim_preserve_tags' => '',
+          'trim_preserve_tags' => '<a>',
           'trim_suffix' => '...',
           'trim_type' => 'chars',
         ),
