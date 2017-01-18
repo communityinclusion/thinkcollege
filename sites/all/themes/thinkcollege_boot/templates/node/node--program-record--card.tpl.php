@@ -165,41 +165,49 @@ $classes .= ' node-program-record-card';
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-3">
-            Phone
+        <?php if (isset($content['field_prog_contact_phone'])): ?>
+          <div class="row">
+            <div class="col-xs-3">
+              Phone
+            </div>
+            <div class="col-xs-9">
+              <?php print render($content['field_prog_contact_phone']); ?>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_prog_contact_phone']); ?>
-          </div>
-        </div>
+        <?php endif ?>
 
-        <div class="row">
-          <div class="col-xs-3">
-            Web
+        <?php if (isset($content['field_prog_program_website'])): ?>
+          <div class="row">
+            <div class="col-xs-3">
+              Web
+            </div>
+            <div class="col-xs-9">
+              <?php print render($content['field_prog_program_website']); ?>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_prog_program_website']); ?>
-          </div>
-        </div>
+        <?php endif ?>
 
-        <div class="row">
-          <div class="col-xs-3">
-            Contact
+        <?php if (isset($content['field_progprogram_contact_person'])): ?>
+          <div class="row">
+            <div class="col-xs-3">
+              Contact
+            </div>
+            <div class="col-xs-9">
+              <?php print render($content['field_progprogram_contact_person']); ?>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_progprogram_contact_person']); ?>
-          </div>
-        </div>
+        <?php endif ?>
 
-        <div class="row">
-          <div class="col-xs-3">
-            Email
+        <?php if (isset($content['field_prog_program_contact_email'])): ?>
+          <div class="row">
+            <div class="col-xs-3">
+              Email
+            </div>
+            <div class="col-xs-9">
+              <?php print render($content['field_prog_program_contact_email']); ?>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <?php print render($content['field_prog_program_contact_email']); ?>
-          </div>
-        </div>
+        <?php endif ?>
       </div>
     </div>
 
