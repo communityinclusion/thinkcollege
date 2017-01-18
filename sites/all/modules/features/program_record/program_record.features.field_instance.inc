@@ -1645,8 +1645,9 @@ function program_record_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 70,
       ),
       'modal' => array(
