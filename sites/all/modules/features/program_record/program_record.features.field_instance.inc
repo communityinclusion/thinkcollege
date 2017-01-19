@@ -5315,8 +5315,9 @@ function program_record_field_default_field_instances() {
     'display' => array(
       'card' => array(
         'label' => 'above',
+        'module' => 'computed_field',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'computed_field_unsanitized',
         'weight' => 0,
       ),
       'default' => array(

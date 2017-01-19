@@ -234,65 +234,75 @@ $classes .= ' node-program-record-card';
             <dt>
             <p class="answer"><strong>Location:</strong></p></dt>
             <dd>
-              <div class="program-university">
-                <?php print render($content['field_prog_col_univ_name']); ?>
-              </div>
-
-              <div class="program-location">
-                <?php print render($content['field_prog_city']); ?>, <?php print render($content['field_prog_state']); ?>
-              </div>
+              <?php print render($content['field_address']['#items'][0]['thoroughfare']); ?><br/>
+              <?php
+              if (isset($content['field_address']['#items'][0]['premise'])) {
+                print render($content['field_address']['#items'][0]['premise']) . '<br/>';
+              }
+              ?>
+              <?php print render($content['field_address']['#items'][0]['locality']); ?>,
+              <?php print render($content['field_address']['#items'][0]['administrative_area']); ?>
+              <?php print render($content['field_address']['#items'][0]['postal_code']); ?>
             </dd>
           </dl>
+          <?php if (isset($content['field_requirements_display'])): ?>
+            <dl class="detail">
+              <?php print render($content['field_requirements_display']); ?>
+            </dl>
+          <?php endif; ?>
 
-          <dl class="detail">
-            <dt>
-            <p class="answer"><strong>Requirements for Admission:</strong></p></dt>
-            <dd>
-              <?php print render($content['field_prog_admiss_requirements']); ?>
-            </dd>
-          </dl>
+          <?php if (isset($content['field_prog_admit_deadline'])): ?>
+            <dl class="detail">
+              <dt>
+              <p class="answer"><strong>Admission deadline:</strong></p>
+              </dt>
+              <dd>
+                <?php print render($content['field_prog_admit_deadline']); ?>
+            </dl>
+          <?php endif; ?>
 
-          <dl class="detail">
-            <dt>
-            <p class="answer"><strong>Admission deadline:</strong></p>
-            </dt>
-            <dd>
-              <?php print render($content['field_prog_admit_deadline']); ?>
-          </dl>
+          <?php if (isset($content['field_prog_hs_coll'])): ?>
+            <dl class="detail">
+              <dt>
+              <p class="answer"><strong>Number of students in this program:</strong></p>
+              </dt>
+              <dd>
+                <?php print render($content['field_prog_hs_coll']); ?>
+              </dd>
+            </dl>
+          <?php endif; ?>
 
-          <dl class="detail">
-            <dt>
-            <p class="answer"><strong>Number of students in this program:</strong></p>
-            </dt>
-            <dd>
-              <?php print render($content['field_prog_hs_coll']); ?>
-            </dd>
-          </dl>
+          <?php if (isset($content['field_prog_ctp_y_n'])): ?>
+            <dl class="detail">
+              <dt>
+              <p class="answer"><strong>Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?:</strong></p>
+              </dt>
+              <dd>
+                <?php print render($content['field_prog_ctp_y_n']); ?>
+              </dd>
+            </dl>
+          <?php endif; ?>
 
-          <dl class="detail">
-            <dt>
-            <p class="answer"><strong>Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?:</strong></p>
-            </dt>
-            <dd>
-              <?php print render($content['field_prog_ctp_y_n']); ?>
-            </dd>
-          </dl>
+          <?php if (isset($content['field_tuition_display'])): ?>
+            <dl class="detail">
+              <dt>
+              <p class="answer"><strong>Tuition:</strong></p>
+              </dt>
+              <dd>
+                <?php print render($content['field_tuition_display']); ?>
+              </dd>
+            </dl>
+          <?php endif; ?>
 
-          <dl class="detail">
-            <dt>
-            <p class="answer"><strong>Tuition:</strong></p>
-            </dt>
-            <dd>
-              <?php print render($content['field_prog_tuition']); ?>
-            </dd>
-          </dl>
+          <?php if (isset($content['field_prog_housing_y_n'])): ?>
+            <dl class="detail">
+              <dt><p class="answer"><strong>Does program offer housing for students?</strong></p></dt>
+              <dd>
+                <?php print render($content['field_prog_housing_y_n']); ?>
+              </dd>
+            </dl>
+          <?php endif; ?>
 
-          <dl class="detail">
-            <dt><p class="answer"><strong>Does program offer housing for students?</strong></p></dt>
-            <dd>
-              <?php print render($content['field_prog_housing_y_n']); ?>
-            </dd>
-          </dl>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
