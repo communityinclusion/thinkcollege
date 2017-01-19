@@ -156,7 +156,9 @@ $classes .= ' node-program-record-card';
             <?php print render($content['field_address']['#items'][0]['thoroughfare']); ?><br/>
             <?php
             if (isset($content['field_address']['#items'][0]['premise'])) {
-              print render($content['field_address']['#items'][0]['premise']) . '<br/>';
+              if (trim($content['field_address']['#items'][0]['premise']) != '') {
+                print render($content['field_address']['#items'][0]['premise']) . '<br/>';
+              }
             }
             ?>
             <?php print render($content['field_address']['#items'][0]['locality']); ?>,
@@ -237,7 +239,9 @@ $classes .= ' node-program-record-card';
               <?php print render($content['field_address']['#items'][0]['thoroughfare']); ?><br/>
               <?php
               if (isset($content['field_address']['#items'][0]['premise'])) {
-                print render($content['field_address']['#items'][0]['premise']) . '<br/>';
+                if (trim($content['field_address']['#items'][0]['premise']) != '') {
+                  print render($content['field_address']['#items'][0]['premise']) . '<br/>';
+                }
               }
               ?>
               <?php print render($content['field_address']['#items'][0]['locality']); ?>,
