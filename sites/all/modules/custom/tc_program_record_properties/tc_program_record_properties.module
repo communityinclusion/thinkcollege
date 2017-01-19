@@ -225,9 +225,9 @@ function tc_program_record_properties_property_dual_enroll($item) {
  */
 function tc_program_record_properties_property_state_province($item) {
 
-  if (array_key_exists('field_prog_state', $item)) {
-    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_state)) {
-     return tc_program_record_properties_get_state_province_name($item->field_prog_state[LANGUAGE_NONE][0]['value']);
+  if (array_key_exists('field_address', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_address)) {
+     return tc_program_record_properties_get_state_province_name($item->field_address[LANGUAGE_NONE][0]['administrative_area']);
     }
   }
   // will be N/A
