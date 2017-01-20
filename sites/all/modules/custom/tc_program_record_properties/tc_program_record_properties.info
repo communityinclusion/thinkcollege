@@ -1,0 +1,7 @@
+name = Think College Program Record Properties
+description = Program Record Entity custom Properties for Solr indexing
+core = 7.x
+php = 5.3
+package = ThinkCollege
+version = 7.x-0.1
+

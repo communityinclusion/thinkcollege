@@ -1,6 +1,7 @@
-.region-sidebar-first .block {
+.region-sidebar-first .block,
+.region-sidebar-first-top .block {
   border-radius: 4px;
-  border-top: 10px solid #C96B29;
+  border-top: 10px solid $tcorange;
   -webkit-box-shadow: 0 0 7px 0 #AAA;
   -moz-box-shadow: 0 0 7px 0 #AAA;
   box-shadow: 0 0 7px 0 #AAA;
@@ -8,6 +9,41 @@
   margin-bottom: 15px;
   background-color: #fff;
   font-size: 16px;
+
+  &#block-menu-menu-program-record-scrollspy {
+    &.affix {
+      top: 33px;
+    }
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    ul.menu {
+      font-size: 1.05em;
+      li {
+        margin-bottom: 3px;
+        a {
+          background-color: $tcblue;
+          color: #FFF;
+          padding: 15px 5px;
+          margin: 0;
+          text-transform: uppercase;
+          border-radius: 4px;
+          font-size: 1.07em;
+          text-align: center;
+          padding: 10px 15px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        &.active a {
+          text-decoration: none;
+          background-color: $tcorange;
+        }
+      }
+    }
+  }
 
   h2 {
     text-align: left;

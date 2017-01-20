@@ -1,0 +1,113 @@
+.page-college-search {
+  #edit-search-api-views-fulltext-wrapper {
+    position: relative;
+    margin-bottom: .2em;
+    padding: 10px 0;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .tc-facet-title {
+    position: relative;
+    margin-bottom: .2em;
+    padding: 10px 0 10px 10px;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  #edit-search-api-views-fulltext {
+    background-color: #e6e6e6;
+  }
+
+  .views-exposed-form {
+    .views-exposed-widget.views-reset-button {
+      position: absolute;
+      top: -20px;
+      right: 0px;
+      padding: 0;
+
+      #edit-reset {
+        font-size: 0.7em;
+        padding: 1px 5px;
+        color: #337ab7;
+      }
+    }
+    .views-exposed-widget.views-submit-button {
+      display: none;
+    }
+  }
+
+  .region-sidebar-first {
+    border-radius: 4px;
+    border-top: 10px solid $tcorange;
+    -webkit-box-shadow: 0 0 7px 0 #AAA;
+    -moz-box-shadow: 0 0 7px 0 #AAA;
+    box-shadow: 0 0 7px 0 #AAA;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    font-size: 16px;
+    .block {
+      border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+    h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  section.tc_financial_aid,
+  section.tc_housing {
+    h2 {
+      display: none;
+    }
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  section.tc_dual_enroll {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  div.aside {
+    padding: 10px;
+    font-size: 85%;
+    color: grey;
+  }
+
+  ul.facetapi-facetapi-checkbox-links {
+    padding-left: 5px;
+  }
+
+  input[type="checkbox"].facetapi-checkbox {
+    margin-right: 5px;
+  }
+
+  .region-sidebar-first {
+    .well {
+      min-height: 20px;
+      padding: 19px;
+      margin-bottom: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #e3e3e3;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+    .well-sm {
+      padding: 9px;
+      border-radius: 3px;
+    }
+  }
+}

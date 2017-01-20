@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the In DB Program Record Index feature.
+ */
+
+include_once 'in_db_program_record_index.features.inc';

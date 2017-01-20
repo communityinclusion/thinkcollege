@@ -1,0 +1,7 @@
+name = Think College Geo
+description = Custom geospatial and mapping functionality for Program Record nodes.
+core = 7.x
+package = ThinkCollege
+version = 7.x-0.1
+dependencies[] = views_bulk_operations
+dependencies[] = addressfield

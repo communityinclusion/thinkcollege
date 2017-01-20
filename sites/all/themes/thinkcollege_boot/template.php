@@ -131,15 +131,187 @@
 
    return $output;
 }
+
 function thinkcollege_boot_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     drupal_set_title(''); //removes welcome message (page title)
   }
+
+  if (isset($vars['node'])) {
+    if ($vars['node']->type == 'program_record') {
+      //krumo($vars['node']);
+      $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+    }
+  }
 }
 
 function thinkcollege_boot_preprocess_html(&$vars) {
-$filepath = path_to_theme() . '/font-awesome/css/font-awesome.min.css';
-drupal_add_css($filepath, array(
-'group' => CSS_THEME,
-));
+  $filepath = path_to_theme() . '/font-awesome/css/font-awesome.min.css';
+  drupal_add_css($filepath, array(
+    'group' => CSS_THEME,
+  ));
+
+  // Add ScrollSpy stuff for Program Record "full content" pages.
+  if (in_array('node-type-program-record', $vars['classes_array'])) {
+    $vars['attributes_array']['data-spy'] = 'scroll';
+    $vars['attributes_array']['data-target'] = '#block-menu-menu-program-record-scrollspy';
+    $vars['attributes_array']['data-offset'] = '50';
+  }
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function thinkcollege_boot_preprocess_node(&$vars) {
+  $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+
+  // Determine display of various Program Record icons.
+  if ($vars['type'] == 'program_record') {
+    $node = $vars['node'];
+
+    $vars['tc_housing_icon'] = FALSE;
+    if (isset($node->field_prog_housing_y_n['und'][0]['value'])) {
+      if ($node->field_prog_housing_y_n['und'][0]['value'] == 'Yes') {
+        $vars['tc_housing_icon'] = TRUE;
+      }
+    }
+
+    $vars['tc_financial_aid_icon'] = FALSE;
+    if (isset($node->field_prog_ctp_y_n['und'][0]['value'])) {
+      if ($node->field_prog_ctp_y_n['und'][0]['value'] == 'Yes') {
+        $vars['tc_financial_aid_icon'] = TRUE;
+      }
+    }
+
+    $vars['tc_tpsid_icon'] = FALSE;
+    if (isset($node->field_prog_tpsid_display['und'][0]['value'])) {
+      if ($node->field_prog_tpsid_display['und'][0]['value'] == 'Yes') {
+        $vars['tc_tpsid_icon'] = TRUE;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function thinkcollege_boot_preprocess_field(&$vars) {
+  $vars['theme_hook_suggestions'][] = 'field__' . $vars['element']['#bundle'] . '__' . $vars['element']['#view_mode'];
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function thinkcollege_boot_preprocess_block(&$vars) {
+  // Add Bootstrap "affix" settings for Program Record ScrollSpy menu block.
+  if ($vars['block_html_id'] == 'block-menu-menu-program-record-scrollspy') {
+    $vars['attributes_array']['data-spy'] = 'affix';
+    $vars['attributes_array']['data-offset-top'] = '100';
+    $vars['attributes_array']['data-offset-bottom'] = '660';
+    $vars['attributes_array']['data-clampedwidth'] = '.region-sidebar-first';
+  }
+
+  /*
+   * Individual facet <section> blocks are not automatically marked with their
+   * facet name as a class, we need to target them directly, so add the
+   * field_name to the <section> class.
+   */
+  if ($vars['block']->module == "facetapi") {
+    $vars['classes_array'][] = $vars['title_suffix']['contextual_links']['#element']['#facet']['field'];
+
+    /*
+     * One facet (TPSID) is displayed as a bootstrap well as per requirements.
+     */
+    if ($vars['title_suffix']['contextual_links']['#element']['#facet']['field'] == "tc_tpsid") {
+      $vars['classes_array'][] = "well well-sm";
+    }
+
+  }
+}
+
+/**
+ * Implements theme_link().
+ */
+function thinkcollege_boot_link($vars) {
+  // Allow #fragment links to be used via ':#fragment' - used in Program Record ScrollSpy menu.
+  if (strpos($vars['path'], ':#') !== FALSE) {
+    return '<a href="#' . check_plain(substr($vars['path'], 2)) . '"' . drupal_attributes($vars['options']['attributes']) . '>' . ($vars['options']['html'] ? $vars['text'] : check_plain($vars['text'])) . '</a>';
+  }
+
+  return '<a href="' . check_plain(url($vars['path'], $vars['options'])) . '"' . drupal_attributes($vars['options']['attributes']) . '>' . ($vars['options']['html'] ? $vars['text'] : check_plain($vars['text'])) . '</a>';
+}
+
+/**
+ * Implementation of hook_field_attach_view_alter().
+ *
+ * Via https://www.drupal.org/node/2417017
+ *
+ * This makes the Display Label available in $content in template files.
+ */
+function thinkcollege_boot_field_attach_view_alter(&$output, $context) {
+  foreach($output as $key => $item) {
+    if (!empty($item['#field_name'])) {
+      $field = field_info_instance($output['#entity_type'], $item['#field_name'], $output['#bundle']);
+      if (isset($field['display_label']) && strlen(trim($field['display_label'])) > 0) {
+        if (module_exists('i18n_field')) {
+          $output[$key]['#display_label'] = check_plain(i18n_field_translate_property($field, 'display_label'));
+        }
+        else {
+          $output[$key]['#display_label'] = check_plain($field['display_label']);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements THEME_facetapi_title().
+ *
+ * @param object $variables
+ *   Values associated with facets.
+ *
+ * @return string
+ *   Renamed Facet title, or blank.
+ */
+function thinkcollege_boot_facetapi_title($variables) {
+  // Rename specific TC facet title labels.
+  switch ($variables['title']) {
+    case "State/Province":
+      $variables['title'] = "Location";
+      break;
+    case "Please indicate which disabilities students in this program have":
+      $variables['title'] = "Disability";
+      break;
+    case "Does program offer housing for students?":
+      $variables['title'] = "Housing";
+      break;
+    case "Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?":
+      $variables['title'] = "Offer Financial Aid";
+      break;
+    case "Is the college or univ. where the program is located public or private institution? ":
+      $variables['title'] = "Public or Private";
+      break;
+    case "What type of school is this?":
+      $variables['title'] = "Type of School";
+      break;
+    case "What is the planned length of this program?":
+      $variables['title'] = "Planned Length of Program";
+      break;
+    case "Is/was this program a federally funded TPSID program? ":
+      $variables['title'] = "Program is a federally funded TPSID program";
+      break;
+    case "TC:Dual Enrollment":
+      $variables['title'] = "Program features";
+      break;
+    case "TC:State/Province":
+      $variables['title'] = "Location";
+      break;
+    case "TC:School Type":
+      $variables['title'] = "Type of School";
+      break;
+  }
+  $title = "<div class='tc-facet-title'><span class='facet-title'>";
+  $tit = t('@title', array('@title' => $variables['title']));
+  return $title . $tit . "</span></div>";
+}
+

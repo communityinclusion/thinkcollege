@@ -1,0 +1,338 @@
+<?php
+
+/**
+ * @ file
+ * Additional custom Entity properties to be indexed into Solr
+ * for better search API facets.
+ *
+ * Author: Lee Walker
+ * lee@codejourneymen.com
+ */
+
+/**
+ * Implements hook_entity_property_info_alter().
+ *
+ * Add extra properties to document CT to allow for Solr to index
+ * in sortable values.
+ */
+function tc_program_record_properties_entity_property_info_alter(&$info) {
+  /*
+   * Add an extra field for all authors combined into a single string to some
+   * bundles/CT's.
+   * Solr will index this, and allow it to be sorted on first character.
+   */
+  if (isset($info['node']['bundles'])) {
+    // For each content type.
+    foreach ($info['node']['bundles'] as $bundle_type => $bundle) {
+      switch ($bundle_type) {
+        case 'program_record':
+          /*
+           * Housing has a yes-no-N/A, and we just want yes/no.
+           * No & N/A are No.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_housing'] = array(
+            'type' => 'text',
+            'label' => 'TC:Housing',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_housing',
+          );
+          /*
+           * Financial Aid has a yes-no-N/A-kinda/maybe, and we just want yes/no.
+           * No & N/A & kinda/maybe are No.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_financial_aid'] = array(
+            'type' => 'text',
+            'label' => 'TC:Financial Aid',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_financial_aid',
+          );
+          /*
+           * TPSID has a yes-no-N/A-kinda/maybe, and we just want yes/no.
+           * No & N/A & kinda/maybe are No.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_tpsid'] = array(
+            'type' => 'text',
+            'label' => 'TC:TPSID',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_tpsid',
+          );
+          /*
+           * Dual enrollment is from a selected field option being picked.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_dual_enroll'] = array(
+            'type' => 'text',
+            'label' => 'TC:Dual Enrollment',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_dual_enroll',
+          );
+          /*
+           * State/Province for Solr facet produces one for full name and
+           * one for 2 letter state code. So lets build a new property
+           * that's not a text_multiple tm_* in Solr terms.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_state_province'] = array(
+            'type' => 'text',
+            'label' => 'TC:State/Province',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_state_province',
+          );
+          /*
+           * State/Province for Solr facet produces one for full name and
+           * one for 2 letter state code. So lets build a new property
+           * that's not a text_multiple tm_* in Solr terms.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_school_type'] = array(
+            'type' => 'text',
+            'label' => 'TC:School Type',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_school_type',
+          );
+          break;
+      }
+    }
+  }
+}
+
+/**
+ * We need a list of Yes/No for Housing.
+ * There is a N/A option alogn with yes/no that we are not interested in
+ * filtering on in search, so Yes = Yes, everything else  = No.
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ *
+ * @param object $item
+ *    Node  - A Program Record CT.
+ *
+ * @return string
+ *    'Yes' or 'No'.
+ */
+function tc_program_record_properties_property_housing($item) {
+
+  if (array_key_exists('field_prog_housing_y_n', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_housing_y_n)) {
+      if ($item->field_prog_housing_y_n[LANGUAGE_NONE][0]['value']== "Yes") {
+        return("Yes");
+      }
+      else {
+        return("No");
+      }
+    }
+  }
+  // will be N/A
+  return "No";
+}
+
+/**
+ * We need a list of Yes/No for Financial Aid.
+ *
+ * There is a N/A option along with TPSID 2015-2020/TPSID 2010-2015/no that
+ * we are not interested in filtering on in search.
+ * So Yes = Yes, everything else  = No.
+ * Also there are a couple of year range specific answers options for financial aid
+ * those are also No.
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ *
+ * @param object $item
+ *    Node  - A Program Record CT.
+ *
+ * @return string
+ *    'Yes' or 'No'.
+ */
+function tc_program_record_properties_property_financial_aid($item) {
+
+  if (array_key_exists('field_prog_ctp_y_n', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_ctp_y_n)) {
+      if ($item->field_prog_ctp_y_n[LANGUAGE_NONE][0]['value']== "Yes") {
+        return("Yes");
+      }
+      else {
+        return("No");
+      }
+    }
+  }
+  // will be N/A
+  return "No";
+
+}
+
+/**
+ * We need a list of Yes/No for TPSID.
+ *
+ * There is a N/A option along with TPSID 2015-2020/TPSID 2010-2015/no that
+ * we are not interested in filtering on in search.
+ * So Yes = Yes, everything else  = No.
+ * Also there are a couple of year range specific answers options for financial aid
+ * those are also No.
+ * So TPSID 2015-2020 is currently YES. Btw after 2020 when there is a new
+ * (im guessing) TPSID 2020-2025 value added we'll need to update this function.
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ *
+ * @param $item
+ * @return string
+ */
+function tc_program_record_properties_property_tpsid($item) {
+
+  if (array_key_exists('field_prog_is_was_tpsid', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_is_was_tpsid)) {
+      if ($item->field_prog_is_was_tpsid[LANGUAGE_NONE][0]['value']== "TPSID 2015-2020") {
+        return("Yes");
+      }
+      else {
+        return("No");
+      }
+    }
+  }
+  // will be N/A
+  return "No";
+}
+
+
+/**
+ * Does the school allow dual enrollment?
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ *
+ * @param $item
+ * @return string
+ */
+function tc_program_record_properties_property_dual_enroll($item) {
+
+  if (array_key_exists('field_prog_hs_coll', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_hs_coll)) {
+      if ($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value']== "Are still enrolled in high school") {
+        return("Yes");
+      }
+      else {
+        return("No");
+      }
+    }
+  }
+  // will be N/A
+  return "No";
+}
+
+/**
+ * What is the state/province.
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ * Solr state facet returns state name and state code in the list of facets,
+ * we just want state name.
+ *
+ * @param $item
+ * @return string
+ */
+function tc_program_record_properties_property_state_province($item) {
+
+  if (array_key_exists('field_address', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_address)) {
+     return tc_program_record_properties_get_state_province_name($item->field_address[LANGUAGE_NONE][0]['administrative_area']);
+    }
+  }
+  // will be N/A
+  return "Unknown";
+}
+
+/**
+ * What is the School Type?
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ * Solr school type facet returns school type name and school type code in
+ * the list of facets, we just want school type name.
+ *
+ * @param $item
+ * @return string
+ */
+function tc_program_record_properties_property_school_type($item) {
+
+  if (array_key_exists('field_prog_type_of_school', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_type_of_school)) {
+      $x = $item->field_prog_type_of_school[LANGUAGE_NONE][0]['value'];
+      if ($x == "\\N") {
+        $x = "Other";
+      }
+      return $x;
+    }
+  }
+  // will be N/A
+  return "Other";
+}
+
+
+function tc_program_record_properties_get_state_province_name($abbreviation) {
+  $states_provinces = array(
+    'AL' => 'Alabama',
+    'AK' => 'Alaska',
+    'AZ' => 'Arizona',
+    'AR' => 'Arkansas',
+    'CA' => 'California',
+    'CO' => 'Colorado',
+    'CT' => 'Connecticut',
+    'DE' => 'Delaware',
+    'FL' => 'Florida',
+    'GA' => 'Georgia',
+    'HI' => 'Hawaii',
+    'ID' => 'Idaho',
+    'IL' => 'Illinois',
+    'IN' => 'Indiana',
+    'IA' => 'Iowa',
+    'KS' => 'Kansas',
+    'KY' => 'Kentucky',
+    'LA' => 'Louisiana',
+    'ME' => 'Maine',
+    'MD' => 'Maryland',
+    'MA' => 'Massachusetts',
+    'MI' => 'Michigan',
+    'MN' => 'Minnesota',
+    'MS' => 'Mississippi',
+    'MO' => 'Missouri',
+    'MT' => 'Montana',
+    'NE' => 'Nebraska',
+    'NV' => 'Nevada',
+    'NH' => 'New Hampshire',
+    'NJ' => 'New Jersey',
+    'NM' => 'New Mexico',
+    'NY' => 'New York',
+    'NC' => 'North Carolina',
+    'ND' => 'North Dakota',
+    'OH' => 'Ohio',
+    'OK' => 'Oklahoma',
+    'OR' => 'Oregon',
+    'PA' => 'Pennsylvania',
+    'RI' => 'Rhode Island',
+    'SC' => 'South Carolina',
+    'SD' => 'South Dakota',
+    'TN' => 'Tennessee',
+    'TX' => 'Texas',
+    'UT' => 'Utah',
+    'VT' => 'Vermont',
+    'VA' => 'Virginia',
+    'WA' => 'Washington',
+    'WV' => 'West Virginia',
+    'WI' => 'Wisconsin',
+    'WY' => 'Wyoming',
+    'DC' => 'District of Columbia',
+    'AS' => 'American Samoa',
+    'GU' => 'Guam',
+    'MP' => 'Northern Mariana Islands',
+    'PR' => 'Puerto Rico',
+    'UM' => 'United States Minor Outlying Islands',
+    'VI' => 'Virgin Islands, U.S.',
+    //CANADIAN PROVINCES
+    'AB' => 'Alberta',
+    'BC' => 'British Columbia',
+    'MB' => 'Manitoba',
+    'NB' => 'New Brunswick',
+    'NL' => 'Newfoundland and Labrador',
+    'NS' => 'Nova Scotia',
+    'NT' => 'Northwest Territories',
+    'NU' => 'Nunavut',
+    'ON' => 'Ontario',
+    'PE' => 'Prince Edward Island',
+    'QC' => 'Quebec',
+    'SK' => 'Saskatchewan',
+    'YT' => 'Yukon',
+  );
+  return $states_provinces[$abbreviation];
+}

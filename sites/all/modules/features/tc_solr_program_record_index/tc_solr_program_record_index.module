@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TC Solr Program Record Index feature.
+ */
+
+include_once 'tc_solr_program_record_index.features.inc';
