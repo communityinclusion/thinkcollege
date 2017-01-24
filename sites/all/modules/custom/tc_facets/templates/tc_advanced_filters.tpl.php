@@ -1,4 +1,6 @@
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAdvancedFilters" aria-expanded="false" aria-controls="collapseAdvancedFilters">
+<button id="tc-adv-filters" class="btn btn-primary" type="button"
+        data-toggle="collapse" data-target="#collapseAdvancedFilters"
+        aria-expanded="false" aria-controls="collapseAdvancedFilters">
   ADVANCED FILTERS
 </button>
 <div class="collapse" id="collapseAdvancedFilters">
