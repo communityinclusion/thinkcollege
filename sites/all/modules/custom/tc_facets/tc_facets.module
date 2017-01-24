@@ -176,3 +176,50 @@ function tc_facets_facetapi_sort_school_type(array $a, array $b) {
   }
   return ($ac < $bc) ? -1 : 1;
 }
+
+/**
+ * Implements hook_block_info().
+ */
+function tc_facets_block_info() {
+  $blocks = array();
+
+  $blocks['tc_advanced_filters'] = array(
+    'info' => t('TC facets: Advanced Filters'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function tc_facets_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'tc_advanced_filters':
+      $variables['label'] = 'Advanced Filter Label';
+      $block['subject'] = t('Advanced Filters');
+      $block['content'] = theme('tc_advanced_filters', $variables);
+    break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tc_facets_theme($existing, $type, $theme, $path) {
+  $return = array(
+
+    'tc_advanced_filters' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_advanced_filters'
+    ),
+  );
+
+  return $return;
+}
+
