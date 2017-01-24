@@ -1,0 +1,12 @@
+Patches that have been applied to Think College contrib modules
+---------------------------------------------------------------
+
+1/24/2017 - Lee Walker - lee@codejourneymen.com
+Issue in FacetAPI Issue Queue.
+https://www.drupal.org/node/2327997
+The "show less" trigger on facets for search doesn't work with Bootstrap.
+Patch file 
+https://www.drupal.org/files/issues/facetapi-2327997-15-show-fewer-links.patch.diff
+How to apply patch:
+patch -p1 < facetapi-2327997-15-show-fewer-links.patch.diff
+
