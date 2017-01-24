@@ -168,3 +168,11 @@ article {
     }
   }
 }
+
+// Hide the "How to search" block after a search.
+body.tc-college-search-results {
+  #block-block-5 {
+    display: none;
+  }
+}
+

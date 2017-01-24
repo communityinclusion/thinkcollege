@@ -5,3 +5,18 @@
  */
 
 include_once 'tc_solr_program_record_index.features.inc';
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function tc_solr_program_record_index_preprocess_html(&$variables) {
+  // Add body classes the college-search page depending on whether or not a search has taken place.
+  if (current_path() == 'college-search') {
+    if (drupal_get_query_parameters()) {
+      $variables['classes_array'][] = "tc-college-search-results";
+    }
+    else {
+      $variables['classes_array'][] = "tc-college-search-start";
+    }
+  }
+}
