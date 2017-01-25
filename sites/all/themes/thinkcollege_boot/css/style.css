@@ -10602,11 +10602,11 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .page-college-search .tc-facet-title {
   position: relative;
   margin-bottom: .2em;
-  padding: 10px 0 10px 10px;
+  padding: 0 0 0 10px;
   color: #9a9a9a;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 /* line 21, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
@@ -10644,7 +10644,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   padding: 10px;
   margin-bottom: 15px;
   background-color: #fff;
-  font-size: 16px;
+  font-size: 1.5rem;
 }
 
 /* line 53, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
@@ -10663,41 +10663,46 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   padding-bottom: 0;
 }
 
-/* line 69, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 65, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-college-search .region-sidebar-first .facetapi-limit-link {
+  padding-left: 10px;
+}
+
+/* line 72, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search section.tc_financial_aid h2,
 .page-college-search section.tc_housing h2 {
   display: none;
 }
 
-/* line 72, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 75, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search section.tc_financial_aid ul,
 .page-college-search section.tc_housing ul {
   margin-bottom: 0;
 }
 
-/* line 78, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 81, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search section.tc_dual_enroll ul {
   margin-bottom: 0;
 }
 
-/* line 83, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search div.aside {
   padding: 10px;
   font-size: 85%;
   color: grey;
 }
 
-/* line 89, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 92, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search ul.facetapi-facetapi-checkbox-links {
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
-/* line 93, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 96, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search input[type="checkbox"].facetapi-checkbox {
   margin-right: 5px;
 }
 
-/* line 98, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 101, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search .region-sidebar-first .well {
   min-height: 20px;
   padding: 19px;
@@ -10709,13 +10714,13 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/* line 108, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 111, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search .region-sidebar-first .well-sm {
   padding: 9px;
   border-radius: 3px;
 }
 
-/* line 113, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 116, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search #tc-adv-filters {
   width: 100%;
 }
