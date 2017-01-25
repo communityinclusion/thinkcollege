@@ -121,7 +121,7 @@ h1,h2,h3,h4,h5,h6 {
 .close-ribbon {
 	position:absolute;
 	top:0;
-	left:1em;
+	/*left:1em;*/
 	z-index:1;
 	color:#eee;
 	font-size:3.5em;
