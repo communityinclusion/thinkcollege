@@ -193,7 +193,7 @@ body {
 
 // Navigation.
 
-.navbar-nav + ul{
+ul.navbar-nav {
  @media #{$tablet} {
   margin-left:120px;
   }

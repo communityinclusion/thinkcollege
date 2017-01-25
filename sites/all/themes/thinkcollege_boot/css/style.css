@@ -9711,7 +9711,7 @@ body #admin-menu .dropdown li {
 
 @media screen and (min-width: 768px) {
   /* line 196, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
-  .navbar-nav + ul {
+  ul.navbar-nav {
     margin-left: 120px;
   }
 }
