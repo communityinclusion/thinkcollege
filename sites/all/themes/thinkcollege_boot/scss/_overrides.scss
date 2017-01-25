@@ -192,6 +192,23 @@ body {
 }
 
 // Navigation.
+
+.navbar-nav + ul{
+ @media #{$tablet} {
+  margin-left:120px;
+  }
+}
+
+.navbar-nav {
+  .dropdown-menu  {
+     li {
+        color:#fff;
+     }
+    background-color:$tclightblue;
+    border-radius: 0
+  }
+}
+
 ul.secondary {
   float: left;
   @media #{$tablet} {
