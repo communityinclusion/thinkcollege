@@ -9204,7 +9204,6 @@ button.close {
 /* line 3, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_program_record.scss */
 article.node-program-record {
   position: relative;
-  overflow-y: scroll;
   height: 100%;
 }
 
