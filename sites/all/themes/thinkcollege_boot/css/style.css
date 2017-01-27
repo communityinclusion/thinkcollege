@@ -10978,7 +10978,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 
 /* line 86, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search div.aside {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   font-size: 85%;
   color: grey;
 }
@@ -11014,6 +11014,8 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 /* line 116, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search #tc-adv-filters {
   width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=../css/style.map */
