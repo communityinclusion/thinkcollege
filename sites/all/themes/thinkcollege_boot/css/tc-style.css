@@ -267,6 +267,29 @@ top: -1.56em;
 	font-size:1.2em;
 }
 
+
+/* college search and inno exchange page heade*/
+/*
+.page-college-search #page-header, .page-innovation-exchange #page-header {
+    background-color: #fff;
+    background-image: url("http://themajorlift.com/dev/img/congruent_outline.png");
+    opacity: .8;
+    height: 160px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+
+  }
+  */
+
+  form#search-block-form {
+    margin: 0;
+    margin-top: 20px;
+    float: right;
+    width: 20%;
+}
+
 table {70%}
 table.details td {
 	width:50%;

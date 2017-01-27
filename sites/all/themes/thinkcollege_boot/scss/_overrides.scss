@@ -710,6 +710,14 @@ td.radio {
   margin-top: 1.8em;
 }
 
+.views-exposed-form label{
+  font-size: 1.6rem;
+  position: relative;
+    margin-bottom: .2em;
+    padding: 0 0 0 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;}
 // Radio and checkbox in table fixes
 table {
   .radio input[type="radio"],

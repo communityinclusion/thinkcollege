@@ -85,7 +85,7 @@ $nontablefields = array(
   </div>
 <?php else: ?>
   <tr class="<?php print $classes; ?>"<?php print $attributes; ?>>
-    <td><?php print $label ?></td>
+    <th><?php print $label ?></th>
     <td>
       <?php
       if (count($items) > 1) {
