@@ -1,0 +1,245 @@
+.header{margin-top:160px;}
+
+/*---------------------------- NAVIGATION ----------------------------*/
+
+/*
+.navbar-default .navbar-brand {color:#fff!important;}
+.navbar-default .navbar-nav>li>a {color:#fff!important;}
+*/
+
+.close-ribbon img {
+	position:relative;
+}
+
+.close-ribbon {
+	position:absolute;
+	top:0;
+	/*left:1em;*/
+	z-index:1;
+	color:#eee;
+	font-size:3.5em;
+	cursor:pointer;
+	width:1.6em;
+	line-height:.4em;
+}
+
+
+
+
+/*controls the square part of the banner/ribbon */
+.close-ribbon:after {
+	content:"";
+	font-size:.6em;
+	position:absolute;
+	height:1.3em;
+	border:1.9em solid #C96B29;
+	z-index:-1;
+	top:-.65em;
+	border-top-width:1em;
+/*border-bottom-color: transparent;*/
+/*the pointed ribbon*/
+	right:-.8em;
+}
+
+/*controls the small shadow */
+.close-ribbon:before {
+	content:"";
+	font-size:.5em;
+	position:absolute;
+	border-style:solid;
+	border-color:transparent transparent #B71C1C;
+top: -1.56em;
+    right: -1.75em;
+	border-width:.8em .8em .8em 0;
+	z-index:-1;
+}
+
+
+/*
+.close-ribbon {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    z-index: 1;
+    color: #eee;
+    font-size: 4em;
+    cursor: pointer;
+    width: 1.5em;
+    line-height: 0.5em;
+}
+.close-ribbon:after {
+  content: "";
+  font-size: 0.5em;
+  position: absolute;
+  height: .8em;
+  border: 1.5em solid #C96B29;
+  z-index: -1;
+  top: -1em;
+  border-top-width: 1.5em;
+  right: 0;
+
+}
+.close-ribbon:before {
+  content: "";
+  font-size: 0.5em;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent #B71C1C transparent;
+  top: -2em;
+  left: 3em;
+  border-width: 1em 1em 1em 0;
+  z-index: -1;
+}
+
+*/
+
+
+.navbar-default {
+	/*margin:0 0 60px;*/
+	width:100%;
+	background-color:#20527c;
+	border-top:30px solid #fff;
+	font-family:"museo-sans",sans-serif;
+}
+
+.navbar-default .navbar-brand {
+	color:#fff;
+}
+
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus {
+	color:#fff;
+}
+
+.navbar-default .navbar-text {
+	color:#fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:#fff;
+/*border-bottom:2px #fff solid;
+	margin:10px 0 0 10px;
+	/*line-height:16px;*/
+	font-size:.8em;
+	padding-right:10px;
+	padding-left:10px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
+	color:#fff;
+	background-color:#4c8ec9;
+	padding-right:10px;
+	padding-left:10px;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu {
+ background-color: $tclightblue;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+	color:#fff;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+	color:#fff;
+ background-color: $tclightblue;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+/* background-color: #4c8ec9;*/
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+	color:#fff;
+/*  background-color: #4c8ec9; */
+}
+
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus {
+	color:#fff;
+	background-color:#4c8ec9;
+}
+
+.navbar-default .navbar-nav > .open > a,.navbar-default .navbar-nav > .open > a:hover,.navbar-default .navbar-nav > .open > a:focus {
+	color:#fff;
+ background-color: $tclightblue;
+}
+
+.navbar-default .navbar-toggle {
+	border-color:#4c8ec9;
+}
+
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
+	background-color:#4c8ec9;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color:#fff;
+}
+
+.navbar-default .navbar-collapse,.navbar-default .navbar-form {
+	border-color:#fff;
+}
+
+.navbar-default .navbar-link {
+	color:#fff;
+}
+
+.navbar-default .navbar-link:hover {
+	color:#fff;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color:#fff;
+	}
+
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color:#fff;
+	}
+
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color:#fff;
+	/*  background-color: #4c8ec9; */
+	}
+}
+
+/*
+.navbar-brand{
+    margin-top: -30px;}
+*/
+.navbar {
+	border-radius:0;
+}
+
+/*
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 40px;
+    margin-top: 15px;}
+
+*/
+
+
+/*
+.navbar-default .navbar-brand {color:#fff!important;}
+.navbar-default .navbar-nav>li>a {color:#fff!important;}
+*/
+.nav {
+	font-size:1.2em;
+}
+
+
+/* college search and inno exchange page heade*/
+/*
+.page-college-search #page-header, .page-innovation-exchange #page-header {
+    background-color: #fff;
+    background-image: url("http://themajorlift.com/dev/img/congruent_outline.png");
+    opacity: .8;
+    height: 160px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+
+  }
+  */
