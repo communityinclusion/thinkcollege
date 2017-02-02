@@ -9410,67 +9410,54 @@ body.tc-college-search-results #block-block-5 {
 /*
 .navbar-default .navbar-brand {color:#fff!important;}
 .navbar-default .navbar-nav>li>a {color:#fff!important;}
-*/
-/* line 10, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+
 .close-ribbon img {
-  position: relative;
+	position:relative;
 }
 
-/* line 14, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .close-ribbon {
-  position: absolute;
-  top: 0;
-  /*left:1em;*/
-  z-index: 1;
-  color: #eee;
-  font-size: 3.5em;
-  cursor: pointer;
-  width: 1.6em;
-  line-height: .4em;
+	position:absolute;
+	top:0;
+
+	z-index:1;
+	color:#eee;
+	font-size:3.5em;
+	cursor:pointer;
+	width:1.6em;
+	line-height:.4em;
 }
 
+
+*/
 /*controls the square part of the banner/ribbon */
-/* line 30, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
-.close-ribbon:after {
-  content: "";
-  font-size: .6em;
-  position: absolute;
-  height: 1.3em;
-  border: 1.9em solid #C96B29;
-  z-index: -1;
-  top: -.65em;
-  border-top-width: 1em;
-  /*border-bottom-color: transparent;*/
-  /*the pointed ribbon*/
-  right: -.8em;
-}
-
+/*.close-ribbon:after {
+	content:"";
+	font-size:.6em;
+	position:absolute;
+	height:1.3em;
+	border:1.9em solid #C96B29;
+	z-index:-1;
+	top:-.65em;
+	border-top-width:1em;
+	right:-.8em;
+}*/
+/*the pointed ribbon*/
 /*controls the small shadow */
-/* line 45, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
-.close-ribbon:before {
-  content: "";
-  font-size: .5em;
-  position: absolute;
-  border-style: solid;
-  border-color: transparent transparent #B71C1C;
-  top: -1.56em;
-  right: -1.75em;
-  border-width: .8em .8em .8em 0;
-  z-index: -1;
+/*.close-ribbon:before {
+	content:"";
+	font-size:.5em;
+	position:absolute;
+	border-style:solid;
+	border-color:transparent transparent #B71C1C;
+top: -1.56em;
+    right: -1.75em;
+	border-width:.8em .8em .8em 0;
+	z-index:-1;
 }
 
-/*
-.close-ribbon {
-    position: absolute;
-    top: 0;
-    left: 1em;
-    z-index: 1;
-    color: #eee;
-    font-size: 4em;
-    cursor: pointer;
-    width: 1.5em;
-    line-height: 0.5em;
-}
+
+
+
 .close-ribbon:after {
   content: "";
   font-size: 0.5em;
@@ -9495,43 +9482,88 @@ body.tc-college-search-results #block-block-5 {
   z-index: -1;
 }
 
+.close-ribbon {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    z-index: 1;
+    color: #eee;
+    font-size: 4em;
+    cursor: pointer;
+    width: 1.5em;
+    line-height: 0.5em;
+}
+
+
+
+}
+
 */
-/* line 97, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 100, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+.close-ribbon {
+  position: absolute;
+  top: -50px;
+  z-index: 1;
+  font-size: 4em;
+  cursor: pointer;
+  line-height: 0.5em;
+  width: 110px;
+  font-weight: bold;
+  padding: 20px 6px 30px 6px;
+  margin: 30px 10px 10px -71px;
+  background-color: #C96B29;
+}
+
+/* line 113, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+.close-ribbon:before, .close-ribbon:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* line 115, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+.close-ribbon:after {
+  right: -20px;
+  top: 0px;
+  border-width: 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #B71C1C #B71C1C;
+}
+
+/* line 122, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default {
   margin: 0 0 60px;
   width: 100%;
   background-color: #20527c;
   border-top: 30px solid #fff;
-  font-family: "museo-sans",sans-serif;
 }
 
-/* line 105, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 130, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-brand {
   color: #fff;
 }
 
-/* line 109, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #fff;
 }
 
-/* line 113, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 138, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-text {
   color: #fff;
 }
 
-/* line 117, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 142, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > li > a {
   color: #fff;
-  /*border-bottom:2px #fff solid;
-	margin:10px 0 0 10px;
-	/*line-height:16px;*/
-  font-size: .8em;
+  /*font-size:1.1em;*/
   padding-right: 10px;
   padding-left: 10px;
+  text-transform: uppercase;
 }
 
-/* line 127, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 150, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #fff;
   background-color: #4c8ec9;
@@ -9539,85 +9571,85 @@ body.tc-college-search-results #block-block-5 {
   padding-left: 10px;
 }
 
-/* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 157, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > li > .dropdown-menu {
   background-color: #4C8EC9;
 }
 
-/* line 138, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 161, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
   color: #fff;
 }
 
-/* line 144, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 167, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover, .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
   color: #fff;
   background-color: #4C8EC9;
 }
 
-/* line 149, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 172, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
   /* background-color: #4c8ec9;*/
 }
 
-/* line 153, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 176, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
   color: #fff;
   /*  background-color: #4c8ec9; */
 }
 
-/* line 158, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 181, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #4c8ec9;
 }
 
-/* line 163, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 186, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: #fff;
   background-color: #4C8EC9;
 }
 
-/* line 168, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 191, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-toggle {
   border-color: #4c8ec9;
 }
 
-/* line 172, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 195, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #4c8ec9;
 }
 
-/* line 176, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 199, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 
-/* line 180, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 203, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #fff;
 }
 
-/* line 184, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 207, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-link {
   color: #fff;
 }
 
-/* line 188, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 211, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default .navbar-link:hover {
   color: #fff;
 }
 
 @media (max-width: 767px) {
-  /* line 193, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+  /* line 216, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #fff;
   }
-  /* line 197, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+  /* line 220, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #fff;
   }
-  /* line 201, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+  /* line 224, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
     /*  background-color: #4c8ec9; */
@@ -9628,7 +9660,7 @@ body.tc-college-search-results #block-block-5 {
 .navbar-brand{
     margin-top: -30px;}
 */
-/* line 211, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 234, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar {
   border-radius: 0;
 }
@@ -9645,7 +9677,7 @@ body.tc-college-search-results #block-block-5 {
 .navbar-default .navbar-brand {color:#fff!important;}
 .navbar-default .navbar-nav>li>a {color:#fff!important;}
 */
-/* line 229, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
+/* line 252, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .nav {
   font-size: 1.2em;
 }
@@ -9754,29 +9786,29 @@ body.tc-college-search-results #block-block-5 {
   margin-bottom: 5px;
 }
 
-/* line 28, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 39, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
 }
 
-/* line 33, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 44, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.js fieldset.collapsed {
   border-left-width: 1px;
   border-right-width: 1px;
   height: auto;
 }
 
-/* line 39, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 50, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.js input.form-autocomplete {
   background-image: none;
 }
 
-/* line 43, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 54, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.js input.form-autocomplete {
   background-image: none;
 }
 
-/* line 47, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 58, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.js .autocomplete-throbber {
   background-position: 100% 2px;
   background-repeat: no-repeat;
@@ -9786,85 +9818,85 @@ html.js .autocomplete-throbber {
   width: 15px;
 }
 
-/* line 55, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 66, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.js .autocomplete-throbber.throbbing {
   background-position: 100% -18px;
 }
 
-/* line 60, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 71, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body {
   position: relative;
 }
 
-/* line 64, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 75, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
   margin-left: 260px;
 }
 
-/* line 69, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 80, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-is-fixed-top {
   padding-top: 64px !important;
 }
 
-/* line 72, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 83, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-is-fixed-bottom {
   padding-bottom: 64px !important;
 }
 
-/* line 75, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.toolbar {
   padding-top: 30px !important;
 }
 
-/* line 77, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 88, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.toolbar .navbar-fixed-top {
   top: 30px;
 }
 
-/* line 80, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 91, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.toolbar.navbar-is-fixed-top {
   padding-top: 94px !important;
 }
 
-/* line 84, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 95, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.toolbar-drawer {
   padding-top: 64px !important;
 }
 
-/* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 97, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.toolbar-drawer .navbar-fixed-top {
   top: 64px;
 }
 
-/* line 89, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 100, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.toolbar-drawer.navbar-is-fixed-top {
   padding-top: 128px !important;
 }
 
-/* line 95, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 106, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.admin-menu .navbar-fixed-top {
   top: 29px;
 }
 
-/* line 98, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 109, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.admin-menu.navbar-is-fixed-top {
   padding-top: 93px !important;
 }
 
-/* line 102, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 113, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body div#admin-toolbar {
   z-index: 1600;
 }
 
-/* line 106, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 117, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body #toolbar, body #admin-menu, body #admin-toolbar {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 110, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 121, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body #admin-menu {
   margin: 0;
   padding: 0;
@@ -9872,38 +9904,38 @@ body #admin-menu {
   z-index: 1600;
 }
 
-/* line 115, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 126, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body #admin-menu .dropdown li {
   line-height: normal;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 123, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .navbar.container {
     max-width: 720px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  /* line 123, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .navbar.container {
     max-width: 940px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 123, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .navbar.container {
     max-width: 1140px;
   }
 }
 
-/* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 145, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar.container, .navbar.container-fluid {
   margin-top: 20px;
 }
 
-/* line 138, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 149, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar.container > .container,
 .navbar.container-fluid > .container-fluid {
   margin: 0;
@@ -9911,40 +9943,40 @@ body #admin-menu .dropdown li {
   width: auto;
 }
 
-/* line 147, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 158, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 #overlay-container,
 .overlay-modal-background,
 .overlay-element {
   z-index: 1500;
 }
 
-/* line 152, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 163, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 #toolbar {
   z-index: 1600;
 }
 
-/* line 156, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 167, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .modal {
   z-index: 1620;
 }
 
-/* line 159, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 170, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .modal-dialog {
   z-index: 1630;
 }
 
-/* line 162, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 173, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .ctools-modal-dialog .modal-body {
   width: 100% !important;
   overflow: auto;
 }
 
-/* line 166, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 177, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .modal-backdrop {
   z-index: 1610;
 }
 
-/* line 169, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 180, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .footer {
   margin-top: 45px;
   padding-top: 35px;
@@ -9952,14 +9984,14 @@ body #admin-menu .dropdown li {
   border-top: 1px solid #E5E5E5;
 }
 
-/* line 177, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 188, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .element-invisible {
   margin: 0;
   padding: 0;
   width: 1px;
 }
 
-/* line 184, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 195, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar .logo {
   margin-right: -15px;
   padding-left: 15px;
@@ -9967,7 +9999,7 @@ body #admin-menu .dropdown li {
 }
 
 @media screen and (min-width: 768px) {
-  /* line 184, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 195, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .navbar .logo {
     margin-right: 0;
     padding-left: 0;
@@ -9975,135 +10007,135 @@ body #admin-menu .dropdown li {
 }
 
 @media screen and (min-width: 768px) {
-  /* line 196, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 207, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   ul.navbar-nav {
     margin-left: 120px;
   }
 }
 
-/* line 203, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 214, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar-nav .dropdown-menu {
   background-color: #4C8EC9;
   border-radius: 0;
 }
 
-/* line 204, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 215, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar-nav .dropdown-menu li {
   color: #fff;
 }
 
-/* line 212, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 223, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 ul.secondary {
   float: left;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 212, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 223, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   ul.secondary {
     float: right;
   }
 }
 
-/* line 220, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 231, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .page-header {
   margin-top: 0;
 }
 
-/* line 227, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 238, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .region-sidebar-first .block:first-child h2.block-title,
 .region-sidebar-second .block:first-child h2.block-title {
   margin-top: 0;
 }
 
-/* line 233, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 244, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 239, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 250, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .region-help > .glyphicon {
   font-size: 18px;
   float: left;
   margin: -0.05em 0.5em 0 0;
 }
 
-/* line 244, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 255, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .region-help .block {
   overflow: hidden;
 }
 
-/* line 250, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 261, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 form#search-block-form {
   margin: 0;
 }
 
-/* line 253, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 264, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar #block-search-form {
   float: none;
   margin: 5px 0 5px 5px;
 }
 
 @media screen and (min-width: 992px) {
-  /* line 253, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 264, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .navbar #block-search-form {
     float: right;
   }
 }
 
-/* line 260, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 271, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar #block-search-form .input-group-btn {
   width: auto;
 }
 
-/* line 264, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 275, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar-search .control-group {
   margin-bottom: 0px;
 }
 
-/* line 269, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 280, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 ul.action-links {
   margin: 12px 0;
   padding: 0;
 }
 
-/* line 272, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 283, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 ul.action-links li {
   display: inline;
   margin: 0;
   padding: 0 6px 0 0;
 }
 
-/* line 277, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 288, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 ul.action-links .glyphicon {
   padding-right: 0.5em;
 }
 
-/* line 283, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 294, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 input, textarea, select, .uneditable-input {
   max-width: 100%;
   width: auto;
 }
 
-/* line 287, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 298, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 input.error {
   color: #a94442;
   border-color: #ebccd1;
 }
 
-/* line 291, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 302, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset legend.panel-heading {
   float: left;
   line-height: 1em;
   margin: 0;
 }
 
-/* line 296, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 307, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset .panel-body {
   clear: both;
   display: inherit;
 }
 
-/* line 300, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 311, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset .panel-heading a.panel-title {
   color: inherit;
   display: block;
@@ -10111,110 +10143,110 @@ fieldset .panel-heading a.panel-title {
   padding: 10px 15px;
 }
 
-/* line 305, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 316, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset .panel-heading a.panel-title:hover {
   text-decoration: none;
 }
 
-/* line 309, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 320, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
 }
 
-/* line 313, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 324, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 317, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 328, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-actions {
   clear: both;
 }
 
-/* line 321, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 332, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .managed-files.table td:first-child {
   width: 100%;
 }
 
-/* line 325, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 336, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 div.image-widget-data {
   float: none;
   overflow: hidden;
 }
 
-/* line 329, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 340, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 table.sticky-header {
   z-index: 1;
 }
 
-/* line 332, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 343, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .resizable-textarea textarea {
   border-radius: 4px 4px 0 0;
 }
 
-/* line 335, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 346, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .text-format-wrapper {
   margin-bottom: 15px;
 }
 
-/* line 338, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 349, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .text-format-wrapper > .form-type-textarea,
 .text-format-wrapper .filter-wrapper {
   margin-bottom: 0;
 }
 
-/* line 343, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 354, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .filter-wrapper {
   border-radius: 0 0 4px 4px;
 }
 
-/* line 345, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 356, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .filter-wrapper .panel-body {
   padding: 7px;
 }
 
-/* line 348, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 359, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .filter-wrapper .form-type-select {
   min-width: 30%;
 }
 
-/* line 350, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 361, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .filter-wrapper .form-type-select .filter-list {
   width: 100%;
 }
 
-/* line 355, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 366, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .filter-help {
   margin-top: 5px;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 355, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 366, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .filter-help {
     float: right;
   }
 }
 
-/* line 361, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 372, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .filter-help .glyphicon {
   margin: 0 5px 0 0;
   vertical-align: text-top;
 }
 
-/* line 367, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 378, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .radio:first-child, .checkbox:first-child {
   margin-top: 0;
 }
 
-/* line 370, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 381, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .radio:last-child, .checkbox:last-child {
   margin-bottom: 0;
 }
 
-/* line 374, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 385, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .help-block, .control-group .help-inline {
   color: #777777;
   font-size: 12px;
@@ -10222,36 +10254,36 @@ table.sticky-header {
   padding: 0;
 }
 
-/* line 380, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 391, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .panel-heading {
   display: block;
 }
 
-/* line 383, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 394, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 a.tabledrag-handle .handle {
   height: auto;
   width: auto;
 }
 
-/* line 389, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 400, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .error {
   color: #a94442;
 }
 
-/* line 392, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 403, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 div.error,
 table tr.error {
   background-color: #f2dede;
   color: #a94442;
 }
 
-/* line 397, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 408, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-group.error,
 .form-group.has-error {
   background: none;
 }
 
-/* line 400, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 411, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-group.error label, .form-group.error .control-label,
 .form-group.has-error label,
 .form-group.has-error .control-label {
@@ -10259,7 +10291,7 @@ table tr.error {
   font-weight: 600;
 }
 
-/* line 404, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 415, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-group.error input, .form-group.error textarea, .form-group.error select, .form-group.error .uneditable-input,
 .form-group.has-error input,
 .form-group.has-error textarea,
@@ -10268,19 +10300,19 @@ table tr.error {
   color: #555555;
 }
 
-/* line 407, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 418, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-group.error .help-block, .form-group.error .help-inline,
 .form-group.has-error .help-block,
 .form-group.has-error .help-inline {
   color: #777777;
 }
 
-/* line 413, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 424, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .nav-tabs {
   margin-bottom: 10px;
 }
 
-/* line 416, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 427, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 ul li.collapsed,
 ul li.expanded,
 ul li.leaf {
@@ -10288,12 +10320,12 @@ ul li.leaf {
   list-style-image: none;
 }
 
-/* line 422, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 433, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs--secondary {
   margin: 0 0 10px;
 }
 
-/* line 427, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 438, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .submitted {
   margin-bottom: 1em;
   font-style: italic;
@@ -10301,28 +10333,28 @@ ul li.leaf {
   color: #777;
 }
 
-/* line 435, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 446, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm {
   position: relative;
 }
 
-/* line 437, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 448, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm label {
   display: block;
 }
 
-/* line 439, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 450, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm label .label {
   float: right;
 }
 
-/* line 443, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 454, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm .password-help {
   padding-left: 2em;
 }
 
 @media (min-width: 768px) {
-  /* line 443, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 454, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .form-type-password-confirm .password-help {
     border-left: 1px solid #ddd;
     left: 50%;
@@ -10332,13 +10364,13 @@ ul li.leaf {
 }
 
 @media (min-width: 992px) {
-  /* line 443, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 454, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .form-type-password-confirm .password-help {
     left: 33.33333%;
   }
 }
 
-/* line 455, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 466, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm .progress {
   background: transparent;
   -moz-border-radius: 0 0 5px 5px;
@@ -10351,43 +10383,43 @@ ul li.leaf {
   margin: -5px 0px 0;
 }
 
-/* line 464, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 475, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm .form-type-password {
   clear: left;
 }
 
-/* line 467, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 478, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm .form-control-feedback {
   right: 15px;
 }
 
-/* line 470, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 481, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-type-password-confirm .help-block {
   clear: both;
 }
 
-/* line 477, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 488, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 ul.pagination li > a.progress-disabled {
   float: left;
 }
 
-/* line 484, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 495, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-autocomplete .glyphicon {
   color: #777777;
   font-size: 120%;
 }
 
-/* line 487, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 498, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-autocomplete .glyphicon.glyphicon-spin {
   color: #337ab7;
 }
 
-/* line 491, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 502, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-autocomplete .input-group-addon {
   background-color: white;
 }
 
-/* line 497, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 508, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .ajax-progress-bar {
   border-radius: 0 0 4px 4px;
   border: 1px solid #ccc;
@@ -10396,13 +10428,13 @@ ul.pagination li > a.progress-disabled {
   width: 100%;
 }
 
-/* line 503, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 514, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .ajax-progress-bar .progress {
   height: 8px;
   margin: 0;
 }
 
-/* line 507, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 518, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .ajax-progress-bar .percentage,
 .ajax-progress-bar .message {
   color: #777777;
@@ -10412,7 +10444,7 @@ ul.pagination li > a.progress-disabled {
   padding: 0;
 }
 
-/* line 517, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 528, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .glyphicon-spin {
   display: inline-block;
   -moz-animation: spin 1s infinite linear;
@@ -10421,7 +10453,7 @@ ul.pagination li > a.progress-disabled {
   animation: spin 1s infinite linear;
 }
 
-/* line 524, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 535, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 a .glyphicon-spin {
   display: inline-block;
   text-decoration: none;
@@ -10455,11 +10487,11 @@ a .glyphicon-spin {
 }
 
 @-ms-keyframes spin {
-  /* line 553, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 564, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   0% {
     -ms-transform: rotate(0deg);
   }
-  /* line 556, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 567, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   100% {
     -ms-transform: rotate(359deg);
   }
@@ -10479,94 +10511,94 @@ a .glyphicon-spin {
  * @see http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
  * @see http://bootply.com/74926
  */
-/* line 574, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 585, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabbable {
   margin-bottom: 20px;
 }
 
-/* line 578, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 589, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs, .tabs-left > .nav-tabs, .tabs-right > .nav-tabs {
   border-bottom: 0;
 }
 
-/* line 580, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 591, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs .summary, .tabs-left > .nav-tabs .summary, .tabs-right > .nav-tabs .summary {
   color: #777777;
   font-size: 12px;
 }
 
-/* line 586, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 597, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tab-pane > .panel-heading {
   display: none;
 }
 
-/* line 589, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 600, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tab-content > .active {
   display: block;
 }
 
-/* line 595, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 606, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs {
   border-top: 1px solid #ddd;
 }
 
-/* line 597, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 608, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs > li {
   margin-top: -1px;
   margin-bottom: 0;
 }
 
-/* line 600, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 611, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs > li > a {
   border-radius: 0 0 4px 4px;
 }
 
-/* line 602, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 613, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
   border-top-color: #ddd;
   border-bottom-color: transparent;
 }
 
-/* line 610, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 621, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
   border-color: transparent #ddd #ddd #ddd;
 }
 
-/* line 622, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 633, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs,
 .tabs-right > .nav-tabs {
   padding-bottom: 20px;
   width: 220px;
 }
 
-/* line 625, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 636, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > li,
 .tabs-right > .nav-tabs > li {
   float: none;
 }
 
-/* line 627, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 638, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > li:focus,
 .tabs-right > .nav-tabs > li:focus {
   outline: 0;
 }
 
-/* line 630, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 641, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
   margin-right: 0;
   margin-bottom: 3px;
 }
 
-/* line 633, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 644, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > li > a:focus,
 .tabs-right > .nav-tabs > li > a:focus {
   outline: 0;
 }
 
-/* line 639, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 650, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .tab-content,
 .tabs-right > .tab-content {
   border-radius: 0 4px 4px 4px;
@@ -10578,23 +10610,23 @@ a .glyphicon-spin {
   padding: 10px 15px;
 }
 
-/* line 650, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 661, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: -1px;
 }
 
-/* line 653, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 664, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > li > a {
   border-radius: 4px 0 0 4px;
 }
 
-/* line 655, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 666, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > li > a:hover, .tabs-left > .nav-tabs > li > a:focus {
   border-color: #eeeeee #ddd #eeeeee #eeeeee;
 }
 
-/* line 660, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 671, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-left > .nav-tabs > .active > a,
 .tabs-left > .nav-tabs > .active > a:hover,
 .tabs-left > .nav-tabs > .active > a:focus {
@@ -10604,18 +10636,18 @@ a .glyphicon-spin {
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/* line 671, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 682, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: -1px;
 }
 
-/* line 674, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 685, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-right > .nav-tabs > li > a {
   border-radius: 0 4px 4px 0;
 }
 
-/* line 676, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 687, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-right > .nav-tabs > li > a:hover, .tabs-right > .nav-tabs > li > a:focus {
   border-color: #eeeeee #eeeeee #eeeeee #ddd;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -10623,14 +10655,14 @@ a .glyphicon-spin {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/* line 682, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 693, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .tabs-right > .nav-tabs > .active > a,
 .tabs-right > .nav-tabs > .active > a:hover,
 .tabs-right > .nav-tabs > .active > a:focus {
   border-color: #ddd #ddd #ddd transparent;
 }
 
-/* line 691, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 702, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 th.checkbox,
 td.checkbox,
 th.radio,
@@ -10638,24 +10670,24 @@ td.radio {
   display: table-cell;
 }
 
-/* line 700, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 711, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .views-display-settings .label {
   font-size: 100%;
   color: #666666;
 }
 
-/* line 704, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 715, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .views-display-settings .footer {
   padding: 0;
   margin: 4px 0 0 0;
 }
 
-/* line 709, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 720, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .views-exposed-form .views-exposed-widget .btn {
   margin-top: 1.8em;
 }
 
-/* line 713, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 724, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .views-exposed-form label {
   font-size: 1.6rem;
   position: relative;
@@ -10666,13 +10698,13 @@ td.radio {
   font-size: 1.6rem;
 }
 
-/* line 723, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 734, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 table .radio input[type="radio"],
 table .checkbox input[type="checkbox"] {
   max-width: inherit;
 }
 
-/* line 730, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 741, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .form-horizontal .form-group label {
   position: relative;
   min-height: 1px;
@@ -10685,50 +10717,50 @@ table .checkbox input[type="checkbox"] {
 }
 
 @media (min-width: 768px) {
-  /* line 730, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 741, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   .form-horizontal .form-group label {
     float: left;
     width: 16.66667%;
   }
 }
 
-/* line 747, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 758, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .alert a {
   font-weight: bold;
 }
 
-/* line 751, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 762, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .alert-success a, .alert-success a:hover, .alert-success a:focus {
   color: #2b542c;
 }
 
-/* line 756, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 767, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .alert-info a, .alert-info a:hover, .alert-info a:focus {
   color: #245269;
 }
 
-/* line 761, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 772, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .alert-warning a, .alert-warning a:hover, .alert-warning a:focus {
   color: #66512c;
 }
 
-/* line 766, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 777, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .alert-danger a, .alert-danger a:hover, .alert-danger a:focus {
   color: #843534;
 }
 
-/* line 772, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 783, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 div.image-style-new,
 div.image-style-new div {
   display: block;
 }
 
-/* line 776, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 787, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 div.image-style-new div.input-group {
   display: table;
 }
 
-/* line 780, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 791, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 td.module,
 .table-striped > tbody > tr:nth-child(odd) > td.module,
 .table > tbody > tr > td.module {
@@ -10736,22 +10768,22 @@ td.module,
   font-weight: 700;
 }
 
-/* line 788, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 799, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .book-toc > .dropdown-menu {
   overflow: hidden;
 }
 
-/* line 790, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 801, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .book-toc > .dropdown-menu > .dropdown-header {
   white-space: nowrap;
 }
 
-/* line 793, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 804, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .book-toc > .dropdown-menu > li:nth-child(1) > a {
   font-weight: bold;
 }
 
-/* line 796, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 807, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .book-toc > .dropdown-menu .dropdown-menu {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -10765,38 +10797,38 @@ td.module,
   width: 100%;
 }
 
-/* line 805, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 816, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .book-toc > .dropdown-menu .dropdown-menu > li {
   padding-left: 20px;
 }
 
-/* line 807, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 818, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .book-toc > .dropdown-menu .dropdown-menu > li > a {
   margin-left: -40px;
   padding-left: 60px;
 }
 
-/* line 816, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 827, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 #features-filter .form-item.form-type-checkbox {
   padding-left: 20px;
 }
 
-/* line 819, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 830, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset.features-export-component {
   font-size: 12px;
 }
 
-/* line 821, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 832, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 html.js #features-export-form fieldset.features-export-component, fieldset.features-export-component {
   margin: 0 0 10px;
 }
 
-/* line 824, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 835, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset.features-export-component .panel-heading {
   padding: 5px 10px;
 }
 
-/* line 826, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 837, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset.features-export-component .panel-heading a.panel-title {
   font-size: 12px;
   font-weight: 500;
@@ -10804,18 +10836,18 @@ fieldset.features-export-component .panel-heading a.panel-title {
   padding: 5px 10px;
 }
 
-/* line 833, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 844, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset.features-export-component .panel-body {
   padding: 0 10px;
 }
 
-/* line 837, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 848, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 div.features-export-list {
   margin: -11px 0 10px;
   padding: 0 10px;
 }
 
-/* line 844, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 855, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset.features-export-component .component-select .form-type-checkbox,
 div.features-export-list .form-type-checkbox {
   line-height: 1em;
@@ -10824,58 +10856,58 @@ div.features-export-list .form-type-checkbox {
   padding: 3px 3px 3px 25px !important;
 }
 
-/* line 849, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 860, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox],
 div.features-export-list .form-type-checkbox input[type=checkbox] {
   margin-top: 0;
 }
 
-/* line 856, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 867, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top {
   top: 79px;
 }
 
-/* line 859, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 870, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top {
   top: 39px;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* line 864, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+  /* line 875, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
   body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
     left: 240px;
     left: 24rem;
   }
 }
 
-/* line 869, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 880, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar-administration #navbar-administration.navbar-oriented .navbar-bar {
   z-index: 1032;
 }
 
-/* line 872, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 883, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 .navbar-administration #navbar-administration .navbar-tray {
   z-index: 1031;
 }
 
-/* line 875, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 886, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration {
   padding-top: 103px !important;
 }
 
-/* line 878, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 889, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open {
   padding-top: 143px !important;
 }
 
-/* line 881, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 892, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin-left: 240px;
   margin-left: 24rem;
 }
 
-/* line 885, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
+/* line 896, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
 #navbar-administration.navbar-oriented .navbar-tray-vertical {
   width: 24rem;
 }
