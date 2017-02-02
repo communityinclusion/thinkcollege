@@ -25,8 +25,7 @@ $wide:    "screen and (min-width: 1200px)";
 $lato-font-stack: 'Lato', sans-serif !default;
 $museo-sans-stack: 'museo-sans',sans-serif;
 $museo-cond-stack: 'museo-sans-condensed',sans-serif;
-
-$font-size-base:          16px !default;
+$font-size-base: 16px !default;
 
 
 
@@ -72,6 +71,8 @@ body {
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
   position: relative;
+	font-family:$lato-font-stack;
+  font-size: $font-size-base;
   &.admin-expanded.admin-vertical.admin-nw .navbar,
   &.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 260px;
@@ -206,7 +207,7 @@ body {
 
 ul.navbar-nav {
  @media #{$tablet} {
-  margin-left:120px;
+  margin-left:140px;
   }
 }
 
@@ -235,7 +236,7 @@ ul.secondary {
 // Sidebar blocks.
 .region-sidebar-first,
 .region-sidebar-second {
-  .block:first-child h2.block-title {
+  .block:first-child h3.block-title {
     margin-top: 0;
   }
 }
