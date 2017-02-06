@@ -9387,7 +9387,7 @@ article.node-program-record-card .print-block, article.node-program-record-full 
 }
 
 /* line 161, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_program_record.scss */
-article.node-program-record-card table.program-contact-info td, article.node-program-record-full table.program-contact-info td {
+article.node-program-record-card .program-contact-info td, article.node-program-record-full .program-contact-info td {
   width: 50%;
 }
 
