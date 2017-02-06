@@ -6367,6 +6367,10 @@ body.tc-college-search-results #block-block-5 {
     padding-bottom: 10px;
     text-transform: uppercase;
     font-family: 'museo-sans-condensed', sans-serif; }
+  .region-sidebar-first .block .tc_financial_aid .block-title,
+  .region-sidebar-first .block .tc_housing .block-title,
+  .region-sidebar-first-top .block .tc_financial_aid .block-title, .region-sidebar-first-top .block .tc_housing .block-title {
+    display: none; }
   .region-sidebar-first .block .saved,
   .region-sidebar-first-top .block .saved {
     margin: 5px;
