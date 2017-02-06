@@ -7107,6 +7107,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .page-college-search .views-exposed-form .views-exposed-widget.views-submit-button {
   display: none; }
 
+.page-college-search .views-exposed-form .views-exposed-widgets.clearfix {
+  position: relative; }
+
 .page-college-search .region-sidebar-first {
   border-radius: 4px;
   border-top: 10px solid #C96B29;
