@@ -1,8 +1,8 @@
-<h2 class="block-title">
+<h3 class="block-title">
   <div class="tc-facet-title">
     <span class="facet-title">Program Features</span>
   </div>
-</h2>
+</h3>
 <?php
   // Dual Enrollment
   $whole_block_de = block_load('facetapi','KA5QG3mUdAl4CWJKXaleJaI0xLV9mABI');
