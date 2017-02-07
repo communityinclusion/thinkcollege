@@ -73,6 +73,15 @@
  * @ingroup themeable
  */
 ?>
+  <header role="banner" id="page-header">
+      <div class="container">
+    <?php if (!empty($site_slogan)): ?>
+      <p class="lead"><?php print $site_slogan; ?></p>
+      </div>
+    <?php endif; ?>
+
+    <?php print render($page['header']); ?>
+  </header> <!-- /#page-header -->
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
        <div class="close-ribbon"><img src="http://www.themajorlift.com/dev/img/thinkcollege_white-sm.png" width="95" /></div>
@@ -116,13 +125,7 @@
 
 <div class="main-container container">
 
-  <header role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
 
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
 
   <div class="row">
 

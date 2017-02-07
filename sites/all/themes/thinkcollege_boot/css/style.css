@@ -6230,7 +6230,7 @@ body.tc-college-search-results #block-block-5 {
   margin: 0 0 20px;
   width: 100%;
   background-color: #20527c;
-  border-top: 40px solid #fff; }
+  border-top: 10px solid #fff; }
 
 .navbar-default .navbar-brand {
   color: #fff; }
@@ -6389,6 +6389,19 @@ body.tc-college-search-results #block-block-5 {
   .region-sidebar-first-top .block .saved p {
     padding: 5px 10px;
     margin-bottom: 5px; }
+
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 0px;
+  border-bottom: 1px #000 solid; }
+  .breadcrumb > li {
+    font-family: "museo-sans-condensed", sans-serif; }
+    .breadcrumb > li a {
+      color: #C96B29; }
 
 html.overlay-open .navbar-fixed-top {
   z-index: 400; }

@@ -1492,11 +1492,11 @@ if ($other_costs != "No") {
   if (isset(field_get_items($entity_type, $entity, \'field_prog_other_costs_amount\')[0][\'value\'])) {
     $output[] = \'$\' . number_format(field_get_items($entity_type, $entity, \'field_prog_other_costs_amount\')[0][\'value\'], 2);
   }
-  
+
   if (isset(field_get_items($entity_type, $entity, \'field_prog_explain_other_costs\')[0][\'value\'])) {
     $output[] = field_get_items($entity_type, $entity, \'field_prog_explain_other_costs\')[0][\'value\'];
   }
-  
+
   $entity_field[0][\'value\'] = implode(\'<br/>\', $output);
 }
 else {
@@ -2687,7 +2687,7 @@ foreach ($tpsid_values as $key => $tpsid_value) {
         'Intellectual disability' => 'Intellectual disability',
         'Autism' => 'Autism',
         'BOTH intellectual disability and autism' => 'BOTH intellectual disability and autism',
-        'Other disabilities' => 'Other disabilities (please specify)',
+        'Other disabilities' => 'Other disabilities',
       ),
       'allowed_values_function' => '',
       'allowed_values_php' => '',
@@ -3105,7 +3105,7 @@ if (isset(field_get_items($entity_type, $entity, \'field_prog_summer_descrip\')[
   $desc_value = field_get_items($entity_type, $entity, \'field_prog_summer_descrip\')[0][\'value\'];
 }
 
-// If there\'s a summer program, display the description. 
+// If there\'s a summer program, display the description.
 if ($yn_value == "Yes") {
   $entity_field[0][\'value\'] = $desc_value;
 }

@@ -24,7 +24,19 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+/*
+.billboard {
+  height:160px;
+  background: url('https://dl.dropboxusercontent.com/u/25498294/congruent_outline-bl_v3.png') repeat-x;
+  position:absolute;
+   left:0;
+   top:0;
+   margin-bottom: 10px;
+   width:100%;}
 
+
+.billboard h1 {color:#fff;}
+*/
 .footer h2 {
 	border-bottom:1px solid #fff;
 	font-size:18px;
