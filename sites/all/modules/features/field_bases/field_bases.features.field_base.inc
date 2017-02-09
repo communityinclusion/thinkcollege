@@ -1844,7 +1844,7 @@ else {
   unset($entity_field[0][\'value\']);
 }
 else {
-  $entity_field[0][\'value\'] = number_format(($entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']  /  $entity->field_prog_new_studt_f14[\'und\'][0][\'value\']) * 100, 2) . \'%\';
+  $entity_field[0][\'value\'] = number_format(($entity->field_prog_studt_retn_f15[\'und\'][0][\'value\']  /  $entity->field_prog_new_studt_f14[\'und\'][0][\'value\']) * 100, 0) . \'%\';
 }
 ',
       'database' => array(
