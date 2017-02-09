@@ -123,3 +123,13 @@
 
   }
 }
+
+/* Remove search results when no search terms */
+.page-college-search.tc-college-search-start {
+  .main-container {
+    section.col-sm-9 {
+      display: none;
+    }
+  }
+
+}
