@@ -87,6 +87,16 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
             'sanitized' => TRUE,
             'getter callback' => 'tc_program_record_properties_property_school_type',
           );
+          /*
+           * title is indexed as 'fulltext' which means we can't sort on it in the view.
+           * Add another to be indexed as 'string' so we can sort.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_school_title'] = array(
+            'type' => 'text',
+            'label' => 'TC:School Title',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_school_title',
+          );
           break;
       }
     }
@@ -259,6 +269,19 @@ function tc_program_record_properties_property_school_type($item) {
   return "Other";
 }
 
+/**
+ * Add another title.
+ * Node title is indexed as 'fulltext' which breaks views sorting on title.
+ * Add another title to be indexed as 'string' so we can sort in views.
+ *
+ * @param $item
+ * @return string
+ */
+function tc_program_record_properties_property_school_title($item) {
+  if (array_key_exists('title', $item)) {
+    return $item->title;
+  }
+}
 
 function tc_program_record_properties_get_state_province_name($abbreviation) {
   $states_provinces = array(
