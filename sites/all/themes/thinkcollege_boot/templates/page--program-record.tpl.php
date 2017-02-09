@@ -73,6 +73,15 @@
  * @ingroup themeable
  */
 ?>
+  <header role="banner" id="page-header">
+     <div class="container">
+    <?php if (!empty($site_slogan)): ?>
+      <p class="lead"><?php print $site_slogan; ?></p>
+      </div>
+    <?php endif; ?>
+
+    <?php print render($page['header']); ?>
+  </header> <!-- /#page-header -->
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
        <div class="close-ribbon"><img src="http://www.themajorlift.com/dev/img/thinkcollege_white-sm.png" width="95" /></div>
@@ -116,17 +125,11 @@
 
 <div class="main-container container">
 
-  <header role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
 
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
 
   <div class="row">
 
-    <?php if (!empty($page['sidebar_first'])): ?>
+          <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-md-3 hidden-sm hidden-xs" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
@@ -138,11 +141,13 @@
       <?php endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
+         <div class="billboard">
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
+    </div>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>

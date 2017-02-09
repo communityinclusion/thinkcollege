@@ -160,6 +160,17 @@ article {
     table.program-contact-info {
       td {
         width: 50%;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          -ms-word-break: break-all;
+          word-break: break-all;
+
+     /* Non standard for webkit */
+       word-break: break-word;
+       -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        hyphens: auto;
+          font-size:10pt;
       }
     }
   }
