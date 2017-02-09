@@ -142,7 +142,7 @@ function field_bases_field_default_field_bases() {
   unset($entity_field[0][\'value\']);
 }
 else {
-  $entity_field[0][\'value\'] = number_format(($entity->field_prog_15_16_accepted[\'und\'][0][\'value\']  /  $entity->field_prog_num_applied[\'und\'][0][\'value\']) * 100, 2) . \'%\';
+  $entity_field[0][\'value\'] = number_format(($entity->field_prog_15_16_accepted[\'und\'][0][\'value\']  /  $entity->field_prog_num_applied[\'und\'][0][\'value\']) * 100, 0) . \'%\';
 }',
       'database' => array(
         'data_default' => '',
