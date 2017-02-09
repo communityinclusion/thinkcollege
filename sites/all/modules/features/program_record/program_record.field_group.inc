@@ -21,16 +21,16 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Academic',
-    'weight' => '83',
+    'weight' => '84',
     'children' => array(
       0 => 'field_prog_course_types',
-      1 => 'field_prog_other_career_dev',
-      2 => 'field_prog_special_courses',
-      3 => 'field_prog_spec_courses_mor_info',
-      4 => 'field_prog_credential',
-      5 => 'field_prog_perc_w_compet_employ',
-      6 => 'field_prog_vocational_credential',
-      7 => 'field_prog_perc_acad_time',
+      1 => 'field_prog_more_course_detail',
+      2 => 'field_prog_spec_courses_mor_info',
+      3 => 'field_prog_credential',
+      4 => 'field_name_of_credential_degree_',
+      5 => 'field_please_select_any_all_of_t',
+      6 => 'field_prog_perc_acad_time',
+      7 => 'field_students_take_courses_disp',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -125,13 +125,12 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Acceptance, Rentention, and Completion Rates',
-    'weight' => '86',
+    'weight' => '82',
     'children' => array(
-      0 => 'field_prog_num_applied',
-      1 => 'field_prog_15_16_accepted',
-      2 => 'field_prog_new_studt_f14',
-      3 => 'field_prog_studt_retn_f15',
-      4 => 'field_prog_length_years',
+      0 => 'field_prog_length_years',
+      1 => 'field_prog_explain_nums',
+      2 => 'field_admission_rate_display',
+      3 => 'field_prog_retention_rate_displa',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -218,16 +217,17 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Cost',
-    'weight' => '81',
+    'weight' => '83',
     'children' => array(
       0 => 'field_prog_ctp_y_n',
-      1 => 'field_prog_pay_methods',
-      2 => 'field_prog_other_costs',
-      3 => 'field_prog_explain_other_costs',
-      4 => 'field_prog_tuition',
-      5 => 'field__prog_room_and_board',
-      6 => 'field_prog_other_costs_amount',
-      7 => 'field_prog_addl_scholarships',
+      1 => 'field_prog_addl_scholarships',
+      2 => 'field_prog_scholarship_link',
+      3 => 'field_prog_cost_of_the_program',
+      4 => 'field_prog_other_costs_display',
+      5 => 'field_prog_room_and_board_displa',
+      6 => 'field_prog_specific_fees_display',
+      7 => 'field_prog_students_pay_display',
+      8 => 'field_tuition_display',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -291,14 +291,17 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Employment',
-    'weight' => '87',
+    'weight' => '85',
     'children' => array(
-      0 => 'field_prog_perc_employed_af_grad',
+      0 => 'field_prog_perc_w_compet_employ',
+      1 => 'field_prog_perc_employed_af_grad',
+      2 => 'field_prog_vocational_credential',
+      3 => 'field_prog_other_career_display',
     ),
-    'format_type' => 'hidden',
+    'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Employment',
       'instance_settings' => array(
@@ -353,7 +356,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Extracurricular',
-    'weight' => '85',
+    'weight' => '87',
     'children' => array(
       0 => 'field_prog_student_orgs_y_n',
       1 => 'field_prog_overall_time_dist',
@@ -413,9 +416,10 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Housing',
-    'weight' => '84',
+    'weight' => '86',
     'children' => array(
       0 => 'field_prog_housing_y_n',
+      1 => 'field_prog_studt_housing_display',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -491,7 +495,7 @@ function program_record_field_group_info() {
   $field_groups['group_prog_preliminary|node|program_record|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_prog_priorities|node|program_record|default';
   $field_group->group_name = 'group_prog_priorities';
@@ -609,12 +613,12 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_prog_tabs';
   $field_group->data = array(
     'label' => 'Requirements',
-    'weight' => '82',
+    'weight' => '81',
     'children' => array(
-      0 => 'field_prog_admiss_link',
-      1 => 'field_prog_admiss_requirements',
-      2 => 'field_prog_explain_other',
-      3 => 'field_prog_which_disabilities',
+      0 => 'field_prog_admit_deadline',
+      1 => 'field_prog_admiss_link',
+      2 => 'field_disabilities_display_',
+      3 => 'field_requirements_display',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -640,16 +644,17 @@ function program_record_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => '12',
+    'weight' => '9',
     'children' => array(
       0 => 'group_prog_academic',
       1 => 'group_prog_accept_ret_comp',
       2 => 'group_prog_affiliate',
       3 => 'group_prog_cost',
-      4 => 'group_prog_extracurr',
-      5 => 'group_prog_housing',
-      6 => 'group_prog_requir',
-      7 => 'group_program_info',
+      4 => 'group_prog_employment',
+      5 => 'group_prog_extracurr',
+      6 => 'group_prog_housing',
+      7 => 'group_prog_requir',
+      8 => 'group_program_info',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -658,7 +663,7 @@ function program_record_field_group_info() {
         'id' => '',
         'classes' => '',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
@@ -681,16 +686,14 @@ function program_record_field_group_info() {
     'label' => 'General',
     'weight' => '79',
     'children' => array(
-      0 => 'field_prog_type_of_school',
-      1 => 'field_prog_hs_coll',
-      2 => 'field_prog_public_or_privat',
-      3 => 'field_prog_is_was_tpsid',
-      4 => 'field_prog_when_will_progr_start',
-      5 => 'field_prog_summer_prog_y_n',
-      6 => 'field_prog_summer_descrip',
-      7 => 'field_prog_summer_info_link',
-      8 => 'field_how_many_students_total_at',
-      9 => 'field_prog_other_explain',
+      0 => 'field_prog_hs_coll',
+      1 => 'field_prog_public_or_privat',
+      2 => 'field_prog_when_will_progr_start',
+      3 => 'field_prog_summer_info_link',
+      4 => 'field_how_many_students_total_at',
+      5 => 'field_prog_tpsid_display',
+      6 => 'field_summer_program_display',
+      7 => 'field_type_of_school_display',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
