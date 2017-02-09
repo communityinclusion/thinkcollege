@@ -34,6 +34,13 @@ function tc_favorite_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['collegesearch/favorites/my'] = array(
+    'title' => 'See Favorites',
+    'page callback' => '_tc_favorite_favorites_my',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -88,6 +95,24 @@ function _tc_favorite_favorite_remove($nid) {
   $_SESSION['tc_favorite'] = serialize($favorites);
 
   return drupal_goto(drupal_get_destination());
+}
+
+/**
+ * Custom callback function for redirect the user to the view showing their favorites.
+ */
+function _tc_favorite_favorites_my() {
+  $favorites_array = array();
+  if (isset($_SESSION['tc_favorite'])) {
+    $favorites_array = unserialize($_SESSION['tc_favorite']);
+  }
+
+  $favorites_string = '';
+  if (isset($_SESSION['tc_favorite'])) {
+    $favorites_string = implode('+', array_keys($favorites_array));
+  }
+  $favorites_link = $base_url . '/search/favorites/' . $favorites_string;
+
+  return drupal_goto($favorites_link);
 }
 
 /**
