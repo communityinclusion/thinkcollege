@@ -10991,7 +10991,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 
 /* Remove search results when no search terms */
 /* line 130, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
-.page-college-search.tc-college-search-start .main-container section.col-sm-9 {
+.page-college-search.tc-college-search-start .main-container .view-tc-solr-college-search {
   display: none;
 }
 
