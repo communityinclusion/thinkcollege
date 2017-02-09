@@ -145,6 +145,39 @@ function thinkcollege_boot_preprocess_page(&$vars) {
   }
 }
 
+
+
+
+/**
+ * Since we have a sidebar_first_top, we have to make sure that the content region
+ * resizes properly when there is a sidebar_first_top but no sidebar_first content.
+ *
+ * Do it in theme_process_page so we don't have to copy the entire
+ * bootstrap_preprocess_page function here.
+ */
+function thinkcollege_boot_process_page(&$variables) {
+  // Add information about the number of sidebars.
+  if ((!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_first_top'])) && !empty($variables['page']['sidebar_second'])) {
+    $variables['content_column_class'] = ' class="col-sm-6"';
+  }
+  elseif (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_first_top'] || !empty($variables['page']['sidebar_second']))) {
+    $variables['content_column_class'] = ' class="col-sm-9"';
+  }
+  else {
+    $variables['content_column_class'] = ' class="col-sm-12"';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 function thinkcollege_boot_preprocess_html(&$vars) {
   $filepath = path_to_theme() . '/font-awesome/css/font-awesome.min.css';
   drupal_add_css($filepath, array(
