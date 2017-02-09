@@ -474,7 +474,7 @@ else {
       'allowed_values' => array(
         'IHE approved' => 'Approved by Institute of Higher Education',
         'Continuing education credential' => 'Continuing education credential',
-        'Awarded by program not officially recognized by IHE' => 'warded by program, not officially recognized by Institute of Higher Education',
+        'Awarded by program not officially recognized by IHE' => 'Awarded by program, not officially recognized by Institute of Higher Education',
         'Open to all students at the IHE' => 'Open to all students at Institute of Higher Education',
         'Just for students in this program' => 'Just for students in this program',
       ),
