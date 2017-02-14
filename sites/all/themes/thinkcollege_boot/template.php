@@ -377,8 +377,11 @@ function thinkcollege_boot_breadcrumb($variables) {
   $output = '';
   $breadcrumb = $variables['breadcrumb'];
 
-  unset($breadcrumb[sizeof($breadcrumb)-1]);
-  array_splice($breadcrumb, 1, 0, '<a href="'.  base_path() . 'college-search" class="active">Think College Search</a>');
+  // Special ordering in TC search.
+  if (current_path() == "college-search") {
+    unset($breadcrumb[sizeof($breadcrumb) - 1]);
+    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
+  }
 
   // Determine if we are to display the breadcrumb.
   $bootstrap_breadcrumb = bootstrap_setting('breadcrumb');
