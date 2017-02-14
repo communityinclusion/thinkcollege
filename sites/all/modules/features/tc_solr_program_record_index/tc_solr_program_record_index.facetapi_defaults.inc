@@ -18,6 +18,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'field_prog_length_years';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -36,7 +37,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -50,6 +51,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'field_prog_state';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -84,6 +86,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'field_prog_which_disabilities';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -102,7 +105,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -116,6 +119,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'tc_dual_enroll';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -134,7 +138,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -148,6 +152,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'tc_financial_aid';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -156,6 +161,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -163,7 +171,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -177,6 +185,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'tc_housing';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -185,6 +194,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -192,7 +204,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -206,6 +218,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'tc_school_type';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -214,6 +227,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -221,7 +237,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -235,14 +251,18 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'tc_state_province';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
-    'operator' => 'and',
-    'hard_limit' => '50',
+    'operator' => 'or',
+    'hard_limit' => '-1',
     'dependencies' => array(
       'facets' => array(),
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -250,7 +270,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -264,6 +284,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = '';
   $facet->facet = 'tc_tpsid';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'operator' => 'and',
     'hard_limit' => '50',
@@ -272,6 +293,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -279,7 +303,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );
@@ -293,6 +317,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'author';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -329,6 +354,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'body:value';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -365,6 +391,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field__prog_room_and_board';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -401,6 +428,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_categories';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -437,6 +465,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_how_many_students_total_at';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -473,6 +502,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_name_of_credential_degree_';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -509,6 +539,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_please_select_any_all_of_t';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -545,6 +576,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_15_16_accepted';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -581,6 +613,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_15_16_admit_rate';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -617,6 +650,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_accredited';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -653,6 +687,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_address_line_2';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -689,6 +724,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_admiss_requirements';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -725,6 +761,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_admit_deadline';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -761,6 +798,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_age_range';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -797,6 +835,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_city';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -833,6 +872,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_col_univ_name';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -869,6 +909,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_contact_phone';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -905,6 +946,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_cost_of_the_program';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -941,6 +983,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_cost_y_n';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -977,6 +1020,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_course_types';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1013,6 +1057,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_credential';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1049,6 +1094,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_ctp_y_n';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1085,6 +1131,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_explain_other';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1121,6 +1168,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_housing_y_n';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1157,6 +1205,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_hs_coll';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1193,6 +1242,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_is_was_tpsid';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1229,6 +1279,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_know_how_many';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1265,10 +1316,36 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_length_years';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'rewrite_items' => array(
+        'status' => 1,
+        'weight' => '-48',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+    ),
     'active_sorts' => array(
       'display' => 'display',
       'active' => 0,
@@ -1279,18 +1356,18 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'natural' => 0,
     ),
     'sort_weight' => array(
+      'display' => '-50',
       'active' => '-49',
       'count' => '-48',
-      'display' => '-50',
       'tc_school_type_sort' => '-47',
       'tc_disability_sort' => '-46',
       'indexed' => '-45',
       'natural' => '-44',
     ),
     'sort_order' => array(
+      'display' => '4',
       'active' => '3',
       'count' => '3',
-      'display' => '4',
       'tc_school_type_sort' => '4',
       'tc_disability_sort' => '4',
       'indexed' => '4',
@@ -1306,6 +1383,13 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'value' => '',
       'format' => 'full_html',
     ),
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
+    'rewrite_items' => 1,
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'What is the planned length of this program?',
   );
   $export['search_api@program_records_index:block:field_prog_length_years'] = $facet;
 
@@ -1317,6 +1401,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_new_studt_f14';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1353,6 +1438,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_num_applied';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1389,6 +1475,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_other_career_dev';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1425,6 +1512,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_other_costs';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1461,6 +1549,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_other_costs_amount';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1497,6 +1586,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_other_costs_display';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1533,6 +1623,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_overall_time_dist';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1569,6 +1660,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_pay_methods';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1605,6 +1697,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_perc_acad_time';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1641,6 +1734,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_perc_employed_af_grad';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1677,6 +1771,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_perc_w_compet_employ';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1713,6 +1808,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_program_contact_email';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1749,6 +1845,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_program_email';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1785,31 +1882,51 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_public_or_privat';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
-    'widget' => 'facetapi_links',
+    'widget' => 'facetapi_checkbox_links',
     'filters' => array(),
     'active_sorts' => array(
-      'active' => 'active',
-      'count' => 'count',
       'display' => 'display',
+      'active' => 0,
+      'count' => 0,
+      'tc_school_type_sort' => 0,
+      'tc_disability_sort' => 0,
+      'indexed' => 0,
+      'natural' => 0,
     ),
     'sort_weight' => array(
-      'active' => -50,
-      'count' => -49,
-      'display' => -48,
+      'display' => '-50',
+      'active' => '-49',
+      'count' => '-48',
+      'tc_school_type_sort' => '-47',
+      'tc_disability_sort' => '-46',
+      'indexed' => '-45',
+      'natural' => '-44',
     ),
     'sort_order' => array(
-      'active' => 3,
-      'count' => 3,
-      'display' => 4,
+      'display' => '4',
+      'active' => '3',
+      'count' => '3',
+      'tc_school_type_sort' => '4',
+      'tc_disability_sort' => '4',
+      'indexed' => '4',
+      'natural' => '4',
     ),
     'empty_behavior' => 'none',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
-    'soft_limit' => 20,
+    'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'full_html',
+    ),
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'Is the college or univ. where the program is located public or private institution? ',
   );
   $export['search_api@program_records_index:block:field_prog_public_or_privat'] = $facet;
 
@@ -1821,6 +1938,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_retention_rate';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1857,6 +1975,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_room_and_board_displa';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1893,6 +2012,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_schl_dist_email';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1929,6 +2049,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_school_dist';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -1965,6 +2086,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_school_dist_contact';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2001,6 +2123,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_serves_id';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2037,6 +2160,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_special_courses';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2073,6 +2197,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_specific_fees';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2109,6 +2234,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_state';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -2161,6 +2287,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_street_address';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2197,6 +2324,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_student_orgs_y_n';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2233,6 +2361,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_students_pay_display';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2269,6 +2398,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_studt_housing_options';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2305,6 +2435,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_studt_retn_f15';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2341,6 +2472,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_summer_prog_y_n';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2377,6 +2509,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_tuition';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2413,6 +2546,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_type_of_school';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2449,6 +2583,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_when_will_progr_start';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2485,6 +2620,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_which_dis_specify';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2521,10 +2657,36 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_prog_which_disabilities';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
+    'filters' => array(
+      'active_items' => array(
+        'status' => 0,
+        'weight' => '-50',
+      ),
+      'exclude_items' => array(
+        'status' => 0,
+        'weight' => '-49',
+      ),
+      'rewrite_items' => array(
+        'status' => 1,
+        'weight' => '-48',
+      ),
+      'narrow_results' => array(
+        'status' => 0,
+        'weight' => '-47',
+      ),
+      'show_if_minimum_items' => array(
+        'status' => 0,
+        'weight' => '-46',
+      ),
+      'deepest_level_items' => array(
+        'status' => 0,
+        'weight' => '-45',
+      ),
+    ),
     'active_sorts' => array(
       'tc_disability_sort' => 'tc_disability_sort',
       'active' => 0,
@@ -2562,6 +2724,13 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'value' => '',
       'format' => 'full_html',
     ),
+    'exclude' => '',
+    'regex' => 0,
+    'show_minimum_items' => 2,
+    'rewrite_items' => 1,
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'Please indicate which disabilities students in this program have',
   );
   $export['search_api@program_records_index:block:field_prog_which_disabilities'] = $facet;
 
@@ -2573,6 +2742,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_progprogram_contact_person';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2609,6 +2779,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_requirements_display';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2645,6 +2816,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_resourc_topics';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2681,6 +2853,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_site_section';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2717,6 +2890,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_summer_program_display';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2753,6 +2927,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_tags';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2789,6 +2964,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_type_of_school_display';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2825,6 +3001,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'field_zip_code';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2861,6 +3038,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'nid';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2897,6 +3075,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'search_api_access_node';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2933,6 +3112,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'search_api_language';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -2969,6 +3149,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'status';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
@@ -3005,6 +3186,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'tc_dual_enroll';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -3075,6 +3257,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'regex' => 0,
     'show_minimum_items' => 2,
     'rewrite_items' => 1,
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'TC:Dual Enrollment',
   );
   $export['search_api@program_records_index:block:tc_dual_enroll'] = $facet;
 
@@ -3086,6 +3271,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'tc_financial_aid';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -3125,18 +3311,18 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'natural' => 0,
     ),
     'sort_weight' => array(
+      'display' => '-50',
       'active' => '-49',
       'count' => '-48',
-      'display' => '-50',
       'tc_school_type_sort' => '-47',
       'tc_disability_sort' => '-46',
       'indexed' => '-45',
       'natural' => '-44',
     ),
     'sort_order' => array(
+      'display' => '4',
       'active' => '3',
       'count' => '3',
-      'display' => '4',
       'tc_school_type_sort' => '4',
       'tc_disability_sort' => '4',
       'indexed' => '4',
@@ -3156,6 +3342,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'regex' => 0,
     'show_minimum_items' => 2,
     'rewrite_items' => 1,
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'TC:Financial Aid',
   );
   $export['search_api@program_records_index:block:tc_financial_aid'] = $facet;
 
@@ -3167,6 +3356,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'tc_housing';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -3206,18 +3396,18 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'natural' => 0,
     ),
     'sort_weight' => array(
+      'display' => '-50',
       'active' => '-49',
       'count' => '-48',
-      'display' => '-50',
       'tc_school_type_sort' => '-47',
       'tc_disability_sort' => '-46',
       'indexed' => '-45',
       'natural' => '-44',
     ),
     'sort_order' => array(
+      'display' => '4',
       'active' => '3',
       'count' => '3',
-      'display' => '4',
       'tc_school_type_sort' => '4',
       'tc_disability_sort' => '4',
       'indexed' => '4',
@@ -3237,6 +3427,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'value' => '',
       'format' => 'full_html',
     ),
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'TC:Housing',
   );
   $export['search_api@program_records_index:block:tc_housing'] = $facet;
 
@@ -3248,6 +3441,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'tc_school_type';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -3262,10 +3456,66 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'natural' => 0,
     ),
     'sort_weight' => array(
+      'tc_school_type_sort' => '-50',
       'active' => '-49',
       'count' => '-48',
       'display' => '-47',
-      'tc_school_type_sort' => '-50',
+      'tc_disability_sort' => '-46',
+      'indexed' => '-45',
+      'natural' => '-44',
+    ),
+    'sort_order' => array(
+      'tc_school_type_sort' => '4',
+      'active' => '3',
+      'count' => '3',
+      'display' => '4',
+      'tc_disability_sort' => '4',
+      'indexed' => '4',
+      'natural' => '4',
+    ),
+    'empty_behavior' => 'none',
+    'facet_more_text' => 'Show more',
+    'facet_fewer_text' => 'Show fewer',
+    'soft_limit' => '20',
+    'nofollow' => 1,
+    'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'full_html',
+    ),
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'TC:School Type',
+  );
+  $export['search_api@program_records_index:block:tc_school_type'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
+  $facet->name = 'search_api@program_records_index:block:tc_state_province';
+  $facet->searcher = 'search_api@program_records_index';
+  $facet->realm = 'block';
+  $facet->facet = 'tc_state_province';
+  $facet->enabled = TRUE;
+  $facet->hash = '0';
+  $facet->settings = array(
+    'weight' => 0,
+    'widget' => 'facetapi_checkbox_links',
+    'filters' => array(),
+    'active_sorts' => array(
+      'active' => 'active',
+      'display' => 'display',
+      'count' => 0,
+      'tc_school_type_sort' => 0,
+      'tc_disability_sort' => 0,
+      'indexed' => 0,
+      'natural' => 0,
+    ),
+    'sort_weight' => array(
+      'active' => '-50',
+      'count' => '-48',
+      'display' => '-49',
+      'tc_school_type_sort' => '-47',
       'tc_disability_sort' => '-46',
       'indexed' => '-45',
       'natural' => '-44',
@@ -3282,59 +3532,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'empty_behavior' => 'none',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
-    'soft_limit' => '20',
-    'nofollow' => 1,
-    'show_expanded' => 0,
-    'empty_text' => array(
-      'value' => '',
-      'format' => 'full_html',
-    ),
-  );
-  $export['search_api@program_records_index:block:tc_school_type'] = $facet;
-
-  $facet = new stdClass();
-  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
-  $facet->api_version = 1;
-  $facet->name = 'search_api@program_records_index:block:tc_state_province';
-  $facet->searcher = 'search_api@program_records_index';
-  $facet->realm = 'block';
-  $facet->facet = 'tc_state_province';
-  $facet->enabled = TRUE;
-  $facet->settings = array(
-    'weight' => 0,
-    'widget' => 'facetapi_checkbox_links',
-    'filters' => array(),
-    'active_sorts' => array(
-      'active' => 'active',
-      'count' => 'count',
-      'display' => 'display',
-      'tc_school_type_sort' => 0,
-      'tc_disability_sort' => 0,
-      'indexed' => 0,
-      'natural' => 0,
-    ),
-    'sort_weight' => array(
-      'active' => '-50',
-      'count' => '-49',
-      'display' => '-48',
-      'tc_school_type_sort' => '0',
-      'tc_disability_sort' => '0',
-      'indexed' => '0',
-      'natural' => '0',
-    ),
-    'sort_order' => array(
-      'active' => '3',
-      'count' => '3',
-      'display' => '4',
-      'tc_school_type_sort' => '4',
-      'tc_disability_sort' => '4',
-      'indexed' => '4',
-      'natural' => '4',
-    ),
-    'empty_behavior' => 'none',
-    'facet_more_text' => 'Show more',
-    'facet_fewer_text' => 'Show fewer',
-    'soft_limit' => '20',
+    'soft_limit' => '3',
     'nofollow' => 1,
     'show_expanded' => 0,
     'empty_text' => array(
@@ -3352,6 +3550,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'tc_tpsid';
   $facet->enabled = TRUE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_checkbox_links',
@@ -3391,18 +3590,18 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'natural' => 0,
     ),
     'sort_weight' => array(
+      'display' => '-50',
       'active' => '-49',
       'count' => '-48',
-      'display' => '-50',
       'tc_school_type_sort' => '-47',
       'tc_disability_sort' => '-46',
       'indexed' => '-45',
       'natural' => '-44',
     ),
     'sort_order' => array(
+      'display' => '4',
       'active' => '3',
       'count' => '3',
-      'display' => '4',
       'tc_school_type_sort' => '4',
       'tc_disability_sort' => '4',
       'indexed' => '4',
@@ -3422,6 +3621,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'value' => '',
       'format' => 'full_html',
     ),
+    'display_count' => 0,
+    'title_override' => 0,
+    'title' => 'TC:TPSID',
   );
   $export['search_api@program_records_index:block:tc_tpsid'] = $facet;
 
@@ -3433,6 +3635,7 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
   $facet->realm = 'block';
   $facet->facet = 'title';
   $facet->enabled = FALSE;
+  $facet->hash = '0';
   $facet->settings = array(
     'weight' => 0,
     'widget' => 'facetapi_links',
