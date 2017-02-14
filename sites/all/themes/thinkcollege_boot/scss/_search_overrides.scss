@@ -36,7 +36,12 @@
       }
     }
     .views-exposed-widget.views-submit-button {
-      display: none;
+      button {
+        height: 0;
+        width: 0;
+        padding: 0;
+        margin: 0;
+      }
     }
     .views-exposed-widgets.clearfix {
     position: relative;
