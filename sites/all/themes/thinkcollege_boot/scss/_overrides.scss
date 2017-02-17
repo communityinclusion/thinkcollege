@@ -215,9 +215,12 @@ ul.navbar-nav {
   .dropdown-menu  {
      li {
         color:#fff;
+        &:hover a {background-color:$tclightblue}
      }
-    background-color:$tclightblue;
-    border-radius: 0
+    background-color:$tcblue;
+    border-radius: 0;
+    border:0;
+    padding: 0;
   }
 }
 
