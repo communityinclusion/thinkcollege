@@ -216,7 +216,7 @@ $classes .= ' node-program-record-card';
     <div class="row">
       <div class="col-sm-12 buttons">
         <?php print theme('tc_favorite_button', array('nid' => $node->nid, 'size' => 'default', 'type' => 'danger')); ?>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php print $id; ?>">QUICK LOOK</button>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php print $id; ?>"><i class="fa fa-search" aria-hidden="true"></i> QUICK LOOK</button>
       </div>
     </div>
   </div>
