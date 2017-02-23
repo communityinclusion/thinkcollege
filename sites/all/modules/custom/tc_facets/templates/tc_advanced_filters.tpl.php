@@ -18,6 +18,10 @@ if (sizeof($params) != 0) {
 ?>
 <div class="<?php echo $adv_classes; ?>" id="collapseAdvancedFilters">
     <?php
+    // Type of Disability
+    $whole_block = block_load('facetapi','xebpqfp0bvfa3ornoj5qoimterfrxoot');
+    $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
+    print drupal_render($renderable_array);
     // public / private
     $whole_block = block_load('facetapi','vqmkt1ucjsq01vwf5numawcjhodoiedi');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
