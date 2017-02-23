@@ -215,9 +215,12 @@ ul.navbar-nav {
   .dropdown-menu  {
      li {
         color:#fff;
+        &:hover a {background-color:$tclightblue}
      }
-    background-color:$tclightblue;
-    border-radius: 0
+    background-color:$tcblue;
+    border-radius: 0;
+    border:0;
+    padding: 0;
   }
 }
 
@@ -729,7 +732,8 @@ td.radio {
     padding: 0 0 0 10px;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.6rem;}
+    font-size: 1.6rem;
+    font-family:$museo-cond-stack}
 // Radio and checkbox in table fixes
 table {
   .radio input[type="radio"],
