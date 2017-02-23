@@ -365,3 +365,9 @@ header {
 	overflow:hidden;
 	vertical-align:middle;
 }
+
+.view-header {
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  }
