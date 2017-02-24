@@ -78,7 +78,7 @@
  *
  * @ingroup templates
  */
-//krumo($content);
+//krumo($node);
 global $base_url;
 $classes .= ' node-program-record-full';
 ?>
@@ -440,5 +440,7 @@ $classes .= ' node-program-record-full';
       </table>
     </div>
   <?php endif ?>
+
+  <div class="tc-node-last-updated">Last updated: <?php print format_date($node->changed, 'long'); ?></div>
 
 </article>
