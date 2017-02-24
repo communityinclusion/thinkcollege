@@ -250,8 +250,20 @@ function tc_favorite_mail($key, &$message, $params) {
       }
 
       $favorites_link = $base_url . '/search/favorites/' . $favorites_string;
-      $params['message'] = 'To view your list of saved colleges, click this url: ' . $favorites_link;
-      $message['subject'] = t('Your saved college search from ThinkCollege.net');
+      $params['message'] = 'Thanks for using Think College Search to find college programs for students with intellectual disabilities. To see the full list of all the programs you saved, click this link: ' . $favorites_link . '. If you have general questions, or issues with the Think College Search feature, contact us at thinkcollegeTA@gmail.com. For specific questions about a college’s program, contact the program directly.
+
+Best of luck with your search.
+
+Cate Weir
+Program Director
+Think College Institute for Community Inclusion
+School for Global Inclusion and Social Development
+University of Massachusetts
+Boston
+603-848-4901
+www.thinkcollege.net';
+
+      $message['subject'] = t('Your favorites from Think College Search');
       $message['body'][] = check_plain($params['message']);
       break;
   }
