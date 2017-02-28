@@ -45,6 +45,7 @@ scripts[] = 'bootstrap/assets/javascripts/bootstrap/popover.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/scrollspy.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/tab.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/transition.js'
+scripts[] = 'js/mapindex.js'
 scripts[] = 'js/thinkcollege_boot.js'
 ;scripts[] = 'js/bootstrap-accessibility.min.js'
 
