@@ -366,7 +366,7 @@ header {
 	vertical-align:middle;
 }
 
-.view-header {
+.view-header, .tc-node-last-updated {
   padding: 5px;
   margin-bottom: 10px;
   background-color: #f2f2f2;
