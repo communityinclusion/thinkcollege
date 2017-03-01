@@ -123,6 +123,16 @@
   </div>
 </header>
 
+   <?php if ($page['section_banner']): ?>
+  <div class="section-banner-block">
+  <div class="container">
+        <div id="section_banner">
+          <?php print render($page['section_banner']); ?>
+        </div>
+        </div>
+         </div>
+      <?php endif; ?>
+
 <div class="main-container container">
 
 
@@ -141,13 +151,11 @@
       <?php endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
-         <div class="billboard">
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-    </div>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>

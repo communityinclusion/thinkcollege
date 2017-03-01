@@ -123,6 +123,16 @@
   </div>
 </header>
 
+  <?php if ($page['section_banner']): ?>
+  <div class="section-banner-block">
+  <div class="container">
+        <div id="section_banner">
+          <?php print render($page['section_banner']); ?>
+        </div>
+        </div>
+         </div>
+      <?php endif; ?>
+
 <div class="main-container container">
 
 
