@@ -6,6 +6,15 @@ article {
     height: 100%;
   }
 
+  .node-program-record-card h1,.node-program-record-full h1 {
+    border-bottom:none;
+      display: block;
+      color: #444;
+      font-size: 18pt;
+      font-weight: 700;
+      font-family: "museo-sans", sans-serif;
+      }
+
   &.node-program-record-card,
   &.node-program-record-full {
     .program-box {
@@ -129,11 +138,7 @@ article {
     }
 
     .program-search-program-name {
-      display: block;
-      color: #444;
-      font-size: 18pt;
-      font-weight: 700;
-      font-family: "museo-sans", sans-serif;
+      display: none;
     }
 
     .program-university {
