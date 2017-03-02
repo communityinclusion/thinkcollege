@@ -1,3 +1,31 @@
+article.node-program-record-card .program-search-program-name
+{
+    border-bottom:none;
+      display: block;
+      color: #444;
+      font-size: 18pt;
+      font-weight: 700;
+      font-family: "museo-sans", sans-serif;
+    }
+
+article.node-program-record-full .program-search-program-name
+{display:none;}
+
+
+
+
+
+  .node-type-program-record h1 {
+    border-bottom:transparent 1px solid;
+      display: block;
+      color: #444;
+      font-size: 18pt;
+      font-weight: 700;
+      font-family: "museo-sans", sans-serif;
+      }
+ .program-heading .program-search-program-name {
+   display:none;
+ }
 
 article {
   &.node-program-record {
@@ -5,16 +33,6 @@ article {
    // overflow-y: scroll;
     height: 100%;
   }
-
-  .node-type-program-record h1 {
-    border-bottom:none;
-      display: block;
-      color: #444;
-      font-size: 18pt;
-      font-weight: 700;
-      font-family: "museo-sans", sans-serif;
-      }
-
   &.node-program-record-card,
   &.node-program-record-full {
     .program-box {
@@ -135,10 +153,6 @@ article {
           display: inline-block;
         }
       }
-    }
-
-    .program-search-program-name {
-      display: none;
     }
 
     .program-university {
