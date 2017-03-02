@@ -373,15 +373,12 @@ function thinkcollege_boot_breadcrumb($variables) {
   if (_bootstrap_use_path_breadcrumbs()) {
     return path_breadcrumbs_breadcrumb($variables);
   }
-  global $base_url;
-  $tempsite = false;
+
   $output = '';
   $breadcrumb = $variables['breadcrumb'];
+
   // Special ordering in TC search.
-  if (strpos($base_url, 'programs.thinkcollege.net') !== false) {
-    $tempsite = true;
-}
-  if (((current_path() == "college-search") || (drupal_get_title() == "College Search")) || ($tempsite && (drupal_is_front_page() || (drupal_get_title() == "College Search"))) {
+  if ((current_path() == "college-search") || (drupal_get_title() == "College Search")) {
     unset($breadcrumb[sizeof($breadcrumb) - 1]);
     array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
   }
