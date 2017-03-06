@@ -378,12 +378,16 @@ function thinkcollege_boot_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   global $base_url;
 
-  // Special ordering in TC search.
-  if ((current_path() == "college-search")
-    || (($base_url == "http://programs.thinkcollege.net") && (drupal_is_front_page()))
-    || (($base_url == "http://test-pantheon-think-college.pantheonsite.io") && (drupal_is_front_page()))) {
+  // Special ordering in TC search - for when search is at /college-search
+  if (current_path() == "college-search") {
     unset($breadcrumb[sizeof($breadcrumb) - 1]);
     array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
+  }
+  // Special ordering in TC search - for when search is at <front> and on test/live
+  if ( (($base_url == "http://programs.thinkcollege.net") && (drupal_is_front_page()))
+     || (($base_url == "http://test-pantheon-think-college.pantheonsite.io") && (drupal_is_front_page())) ) {
+//    unset($breadcrumb[sizeof($breadcrumb) - 1]);
+//    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
   }
 
   // Determine if we are to display the breadcrumb.
