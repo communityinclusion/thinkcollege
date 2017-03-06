@@ -376,9 +376,12 @@ function thinkcollege_boot_breadcrumb($variables) {
 
   $output = '';
   $breadcrumb = $variables['breadcrumb'];
+  global $base_url;
 
   // Special ordering in TC search.
-  if ((current_path() == "college-search") || (drupal_get_title() == "College Search")) {
+  if ((current_path() == "college-search")
+    || (($base_url == "http://programs.thinkcollege.net") && (drupal_is_front_page()))) {
+    || (($base_url == "http://test-pantheon-think-college.pantheonsite.io") && (drupal_is_front_page()))) {
     unset($breadcrumb[sizeof($breadcrumb) - 1]);
     array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
   }
