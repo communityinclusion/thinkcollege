@@ -376,19 +376,18 @@ function thinkcollege_boot_breadcrumb($variables) {
 
   $output = '';
   $breadcrumb = $variables['breadcrumb'];
-  global $base_url;
+  $breadcrumb = _thinkcollege_boot_fix_yes_facets($breadcrumb);
 
   // Special ordering in TC search - for when search is at /college-search
   if (current_path() == "college-search") {
-    unset($breadcrumb[sizeof($breadcrumb) - 1]);
-    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
-  }
-  // Special ordering in TC search - for when search is at <front> and on pantheon dev/test/live
-  if ( (($base_url == "http://programs.thinkcollege.net") && (drupal_is_front_page()))
-    || (($base_url == "http://test-pantheon-think-college.pantheonsite.io") && (drupal_is_front_page()))
-    || (($base_url == "http://dev-pantheon-think-college.pantheonsite.io") && (drupal_is_front_page())) ) {
-//    unset($breadcrumb[sizeof($breadcrumb) - 1]);
-//    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
+    if (!drupal_is_front_page()) {
+      unset($breadcrumb[sizeof($breadcrumb) - 1]);
+      array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
+    }
+    // Search is on front page - arrange breadcrumbs slightly differently.
+    else {
+      array_splice($breadcrumb, 0, 0, '<a href="' . base_path() . '" class="active">Think College Search</a>');
+    }
   }
 
   // Determine if we are to display the breadcrumb.
@@ -403,4 +402,72 @@ function thinkcollege_boot_breadcrumb($variables) {
     ));
   }
   return $output;
+}
+
+/**
+ * A few of the facets say "YES".
+ * This isn't very useful so make sure the "yes" actually shows something useful
+ * instead.
+ *
+ * @param $breadcrumb
+ * @return mixed
+ */
+function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
+  global $_REQUEST;
+  $x = $_REQUEST['f'];
+  foreach ($x as $id => $crumb) {
+    switch($crumb) {
+      case "tc_tpsid:Yes":
+        if (substr($breadcrumb[$id], 0, 2) == "<a") {
+          $breadcrumb[$id] = _str_lreplace("Yes", "TPSID Program", $breadcrumb[$id]);
+        }
+        else {
+          $breadcrumb[$id] = "TPSID Program";
+        }
+        break;
+      case "tc_dual_enroll:Yes":
+        if (substr($breadcrumb[$id], 0, 2) == "<a") {
+          $breadcrumb[$id] = _str_lreplace("Yes", "Dual Enroll", $breadcrumb[$id]);
+        }
+        else {
+          $breadcrumb[$id] = "Dual Enroll";
+        }
+       break;
+      case "tc_financial_aid:Yes":
+        if (substr($breadcrumb[$id], 0, 2) == "<a") {
+          $breadcrumb[$id] = _str_lreplace("Yes", "Financial Aid", $breadcrumb[$id]);
+        }
+        else {
+          $breadcrumb[$id] = "Financial Aid";
+        }
+        break;
+      case "tc_housing:Yes":
+        if (substr($breadcrumb[$id], 0, 2) == "<a") {
+          $breadcrumb[$id] = _str_lreplace("Yes", "Housing", $breadcrumb[$id]);
+        }
+        else {
+          $breadcrumb[$id] = "Housing";
+        }
+        break;
+    }
+
+  }
+  return $breadcrumb;
+}
+
+/**
+ * Replace the last occurrence of a $search in $subject with $replace.
+ *
+ * @param $search string to be replaced.
+ * @param $replace replacement string to be swapped out with $search.
+ * @param $subject string to replace $search inside of.
+ *
+ * @return mixed $subject with last occurrence of $search replaced with $replace.
+ */
+function _str_lreplace($search, $replace, $subject) {
+  $pos = strrpos($subject, $search);
+  if ($pos !== false) {
+    $subject = substr_replace($subject, $replace, $pos, strlen($search));
+  }
+  return $subject;
 }
