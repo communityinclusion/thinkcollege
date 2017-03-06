@@ -416,6 +416,10 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   global $_REQUEST;
   $x = $_REQUEST['f'];
   foreach ($x as $id => $crumb) {
+    // If we have a search term, we need to skip it for replacement.
+    if ($_REQUEST['search_api_views_fulltext']) {
+      $id++;
+    }
     switch($crumb) {
       case "tc_tpsid:Yes":
         if (substr($breadcrumb[$id], 0, 2) == "<a") {
