@@ -638,10 +638,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['allow_css_double_underscores'] = TRUE;
 //
-// Additional site configuration settings for developers, so they 
+// Additional site configuration settings for developers, so they
 // don't need to edit settings.php, only their own settings.local.php
 $local_settings = dirname(__FILE__) . '/settings.local.php';
 if (file_exists($local_settings)) {
   include_once($local_settings);
 }
-
