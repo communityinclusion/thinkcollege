@@ -6,29 +6,20 @@
 <?php
   // Dual Enrollment
 
-//  $delta = facetapi_hash_delta(facetapi_build_delta('search_api@dev_solr_server', 'block', 'tc_dual_enroll'));
   $delta = 'KA5QG3mUdAl4CWJKXaleJaI0xLV9mABI';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
-
-//  $whole_block_de = block_load('facetapi','ka5qg3MuDaL4cwjkxALEjAi0Xlv9Mabi');
-//  $renderable_array_de = _block_get_renderable_array(_block_render_blocks(array($whole_block_de)));
-//  print drupal_render($renderable_array_de);
-
   // Financial Aid
-//  $whole_block_fa = block_load('facetapi','GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc');
-//  $renderable_array_fa = _block_get_renderable_array(_block_render_blocks(array($whole_block_fa)));
-//  print drupal_render($renderable_array_fa);
   $delta = 'GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
   // length of programme
-//  $whole_block_lp = block_load('facetapi','QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG');
-//  $renderable_array_lp = _block_get_renderable_array(_block_render_blocks(array($whole_block_lp)));
-//  print drupal_render($renderable_array_lp);
   $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
+  $x = module_invoke('facetapi', 'block_view', $delta);
+  if ($x != null) {
   echo '<div class="aside">*Note that students who are dually enrolled might not be eligible for financial aid or housing</div>';
+}
 
 
