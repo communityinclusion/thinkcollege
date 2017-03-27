@@ -387,6 +387,46 @@ header {
 
 
 
+
+
+/** Resource details page **/
+
+article.node-resource .field-label {
+    height: 40px;
+    width: 200px;
+    background: #20527C;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 34px;
+}
+
+
+article.node-resource .field-label:after {
+    position: absolute;
+    right: -40px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 40px solid #20527C;
+}
+
+ article.node-resource .field-items {
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+article.node-resource .field-label:before {
+    content: "";
+    margin-left: 20px;
+}
+
+article.node-resource .field {
+    margin-bottom: 20px;
+}
 /** Map Styes **/
 
 
