@@ -29,10 +29,6 @@
   $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
-  $x = sizeof($renderable_array_de);
-  // A facet with no values will have 3 children, with renderable data 4 children.
-  if (sizeof($renderable_array_de) > 3) {
-    echo '<div class="aside">*Note that students who are dually enrolled might not be eligible for financial aid or housing</div>';
-  }
+  echo '<div class="aside">*Note that students who are dually enrolled might not be eligible for financial aid or housing</div>';
 
 
