@@ -23,10 +23,10 @@
   print render(module_invoke('facetapi', 'block_view', $delta));
 
   // length of programme
-//  $whole_block_lp = block_load('facetapi','c4QKVeEbjlARazcQU7OOaYqzQb56k9TF');
+//  $whole_block_lp = block_load('facetapi','QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG');
 //  $renderable_array_lp = _block_get_renderable_array(_block_render_blocks(array($whole_block_lp)));
 //  print drupal_render($renderable_array_lp);
-  $delta = 'c4QKVeEbjlARazcQU7OOaYqzQb56k9TF';
+  $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
   $x = sizeof($renderable_array_de);
