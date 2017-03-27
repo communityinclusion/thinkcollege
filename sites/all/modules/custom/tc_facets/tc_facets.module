@@ -199,12 +199,12 @@ function tc_facets_block_info() {
 
   $blocks['tc_advanced_filters'] = array(
     'info' => t('TC facets: Advanced Filters'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   $blocks['tc_program_features'] = array(
     'info' => t('TC facets: Program Features'),
-    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'cache' =>  DRUPAL_NO_CACHE,
   );
 
   return $blocks;
