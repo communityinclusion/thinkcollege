@@ -261,7 +261,6 @@ function thinkcollege_boot_preprocess_block(&$vars) {
     if ($vars['title_suffix']['contextual_links']['#element']['#facet']['field'] == "tc_tpsid") {
       $vars['classes_array'][] = "well well-sm";
     }
-
   }
 }
 
