@@ -1,0 +1,9 @@
+<?php
+function admin_css_preprocess_html(&$variables) {
+// Add conditional stylesheets for admin pages on admin theme.
+ global $theme;
+   if($theme == 'shiny') {
+    drupal_add_css(drupal_get_path('module', 'admin_css') . '/css/admin_css.css', array('weight' => CSS_THEME));
+  }
+}
+?>
