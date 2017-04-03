@@ -629,7 +629,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 48,
+      'weight' => 148,
     ),
   );
 
@@ -689,7 +689,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 49,
+      'weight' => 149,
     ),
   );
 
@@ -1652,7 +1652,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 42,
+      'weight' => 142,
     ),
   );
 
@@ -1711,7 +1711,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 47,
+      'weight' => 147,
     ),
   );
 
@@ -2364,7 +2364,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 43,
+      'weight' => 143,
     ),
   );
 
@@ -3126,7 +3126,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 46,
+      'weight' => 146,
     ),
   );
 
@@ -4071,7 +4071,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 45,
+      'weight' => 145,
     ),
   );
 
@@ -4129,7 +4129,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 44,
+      'weight' => 144,
     ),
   );
 
@@ -5192,8 +5192,6 @@ function program_record_field_default_field_instances() {
   $field_instances['node-program_record-field_prog_which_disabilities'] = array(
     'bundle' => 'program_record',
     'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -5201,25 +5199,20 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
+        'type' => 'list_default',
+        'weight' => 78,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 80,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

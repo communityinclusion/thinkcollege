@@ -4566,28 +4566,7 @@ function program_record_conditional_fields_default_fields() {
             3 => 0,
             4 => 0,
           ),
-          3 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          4 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
           5 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          6 => array(
             1 => 1,
             2 => 2,
             5 => 0,
@@ -4601,34 +4580,6 @@ function program_record_conditional_fields_default_fields() {
             3 => 0,
             4 => 0,
           ),
-          8 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          9 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          10 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          11 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
           12 => array(
             1 => 1,
             2 => 2,
@@ -4636,21 +4587,7 @@ function program_record_conditional_fields_default_fields() {
             3 => 0,
             4 => 0,
           ),
-          13 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          14 => array(
-            1 => 1,
-            2 => 2,
-            5 => 0,
-            3 => 0,
-            4 => 0,
-          ),
-          15 => array(
+          3 => array(
             1 => 1,
             2 => 2,
             5 => 0,
@@ -4672,19 +4609,7 @@ function program_record_conditional_fields_default_fields() {
             1 => 1,
             3 => 0,
           ),
-          3 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          4 => array(
-            1 => 1,
-            3 => 0,
-          ),
           5 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          6 => array(
             1 => 1,
             3 => 0,
           ),
@@ -4692,35 +4617,11 @@ function program_record_conditional_fields_default_fields() {
             1 => 1,
             3 => 0,
           ),
-          8 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          9 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          10 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          11 => array(
-            1 => 1,
-            3 => 0,
-          ),
           12 => array(
             1 => 1,
             3 => 0,
           ),
-          13 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          14 => array(
-            1 => 1,
-            3 => 0,
-          ),
-          15 => array(
+          3 => array(
             1 => 1,
             3 => 0,
           ),
@@ -4731,7 +4632,6 @@ function program_record_conditional_fields_default_fields() {
           'Other disabilities' => 'Other disabilities',
           'Intellectual disability' => NULL,
           'Autism' => NULL,
-          'BOTH intellectual disability and autism' => NULL,
         ),
         'value' => array(
           0 => array(
