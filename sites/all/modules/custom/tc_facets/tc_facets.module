@@ -73,7 +73,7 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "tc_dual_enroll") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Dual Enrollment *";
+      $build['Yes']["#markup"] = "Serves Student Enrolled in H.S.*";
     }
   }
 }

@@ -430,10 +430,10 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
         break;
       case "tc_dual_enroll:Yes":
         if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Dual Enroll", $breadcrumb[$id]);
+          $breadcrumb[$id] = _str_lreplace("Yes", "Enrolled in HS", $breadcrumb[$id]);
         }
         else {
-          $breadcrumb[$id] = "Dual Enroll";
+          $breadcrumb[$id] = "Enrolled in HS";
         }
        break;
       case "tc_financial_aid:Yes":
