@@ -4,15 +4,15 @@
   </div>
 </h3>
 <?php
-  // Dual Enrollment
+  // Dual Enrollment/ Serves HS students.
   $delta = 'KA5QG3mUdAl4CWJKXaleJaI0xLV9mABI';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
-  // Financial Aid
+  // Financial Aid.
   $delta = 'GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
-  // length of programme
+  // length of programme.
   $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';
   print render(module_invoke('facetapi', 'block_view', $delta));
 
