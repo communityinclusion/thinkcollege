@@ -1,21 +1,19 @@
 <?php
+
 function admin_css_preprocess_html(&$variables) {
 // Add conditional stylesheets for admin pages on admin theme.
- global $theme;
-   if($theme == 'shiny') {
+  global $theme;
+  if ($theme == 'shiny') {
     drupal_add_css(drupal_get_path('module', 'admin_css') . '/css/admin_css.css', array('weight' => CSS_THEME));
-drupal_add_js(drupal_get_path(drupal_get_path('module', 'admin_css') . '/js/admin_css.js'));
-
-
-
+    drupal_add_js(drupal_get_path('module', 'admin_css') . '/js/admin_css.js');
   }
 }
 
-
-function admin_css_form_alter(&$form, &$form_state, $form_id) { if (path_is_admin(current_path()))
-{  $form['resource_node_form']['#attached']['js'][] =
-drupal_get_path('module', 'admin_css') . '/js/admin_css.js';
-$form['resource_node_form']['#attached']['js'][] =
-drupal_get_path('module', 'admin_css') . '/js/jquery.matchHeight.js';
-}
+function admin_css_form_alter(&$form, &$form_state, $form_id) {
+  if (path_is_admin(current_path())) {
+    $form['resource_node_form']['#attached']['js'][] =
+      drupal_get_path('module', 'admin_css') . '/js/admin_css.js';
+    $form['resource_node_form']['#attached']['js'][] =
+      drupal_get_path('module', 'admin_css') . '/js/jquery.matchHeight.js';
+  }
 }
