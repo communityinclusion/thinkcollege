@@ -457,7 +457,6 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
           }
           break;
       }
-
     }
   }
   return $breadcrumb;
