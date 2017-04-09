@@ -284,15 +284,17 @@ function thinkcollege_boot_link($vars) {
  * This makes the Display Label available in $content in template files.
  */
 function thinkcollege_boot_field_attach_view_alter(&$output, $context) {
-  foreach($output as $key => $item) {
-    if (!empty($item['#field_name'])) {
-      $field = field_info_instance($output['#entity_type'], $item['#field_name'], $output['#bundle']);
-      if (isset($field['display_label']) && strlen(trim($field['display_label'])) > 0) {
-        if (module_exists('i18n_field')) {
-          $output[$key]['#display_label'] = check_plain(i18n_field_translate_property($field, 'display_label'));
-        }
-        else {
-          $output[$key]['#display_label'] = check_plain($field['display_label']);
+  if (isset($output['#entity_type'])) {
+    foreach($output as $key => $item) {
+      if (!empty($item['#field_name'])) {
+        $field = field_info_instance($output['#entity_type'], $item['#field_name'], $output['#bundle']);
+        if (isset($field['display_label']) && strlen(trim($field['display_label'])) > 0) {
+          if (module_exists('i18n_field')) {
+            $output[$key]['#display_label'] = check_plain(i18n_field_translate_property($field, 'display_label'));
+          }
+          else {
+            $output[$key]['#display_label'] = check_plain($field['display_label']);
+          }
         }
       }
     }
@@ -413,47 +415,50 @@ function thinkcollege_boot_breadcrumb($variables) {
  */
 function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   global $_REQUEST;
-  $x = $_REQUEST['f'];
-  foreach ($x as $id => $crumb) {
-    // If we have a search term, we need to skip it for replacement.
-    if ($_REQUEST['search_api_views_fulltext']) {
-      $id++;
-    }
-    switch($crumb) {
-      case "tc_tpsid:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "TPSID Program", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "TPSID Program";
-        }
-        break;
-      case "tc_dual_enroll:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Enrolled in HS", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "Enrolled in HS";
-        }
-       break;
-      case "tc_financial_aid:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Financial Aid", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "Financial Aid";
-        }
-        break;
-      case "tc_housing:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Housing", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "Housing";
-        }
-        break;
-    }
+  $breadcrumb = array();
+  if (isset($_REQUEST['f'])) {
+    $x = $_REQUEST['f'];
+    foreach ($x as $id => $crumb) {
+      // If we have a search term, we need to skip it for replacement.
+      if ($_REQUEST['search_api_views_fulltext']) {
+        $id++;
+      }
+      switch($crumb) {
+        case "tc_tpsid:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "TPSID Program", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "TPSID Program";
+          }
+          break;
+        case "tc_dual_enroll:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Enrolled in HS", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Enrolled in HS";
+          }
+         break;
+        case "tc_financial_aid:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Financial Aid", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Financial Aid";
+          }
+          break;
+        case "tc_housing:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Housing", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Housing";
+          }
+          break;
+      }
 
+    }
   }
   return $breadcrumb;
 }
