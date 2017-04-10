@@ -48,12 +48,12 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "tc_financial_aid") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Offer Financial Aid";
+      $build['Yes']["#markup"] = "Offers Financial Aid";
     }
   }
   else if ($settings->facet == "tc_housing") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Housing";
+      $build['Yes']["#markup"] = "Offers Housing";
     }
   }
   else if ($settings->facet == "tc_tpsid") {
@@ -73,7 +73,7 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "tc_dual_enroll") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Serves Student Enrolled in H.S.*";
+      $build['Yes']["#markup"] = "Serves Students in High School *";
     }
   }
 }

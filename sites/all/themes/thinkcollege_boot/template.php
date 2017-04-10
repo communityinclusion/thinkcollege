@@ -318,10 +318,10 @@ function thinkcollege_boot_facetapi_title($variables) {
       $variables['title'] = "Disability";
       break;
     case "Does program offer housing for students?":
-      $variables['title'] = "Housing";
+      $variables['title'] = "Offers Housing";
       break;
     case "Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?":
-      $variables['title'] = "Offer Financial Aid";
+      $variables['title'] = "Offers Financial Aid";
       break;
     case "Is the college or univ. where the program is located public or private institution? ":
       $variables['title'] = "Public or Private";
