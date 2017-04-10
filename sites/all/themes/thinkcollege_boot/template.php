@@ -153,6 +153,13 @@ function thinkcollege_boot_preprocess_page(&$vars) {
       $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
     }
   }
+
+  // (temporarily) Swap out the main menu ($primary_nav) for anonymous users.
+  if (user_is_anonymous()) {
+    $menu = menu_tree('menu-temporary-main-menu');
+    $menu['#theme_wrappers'][0] = 'menu_tree__primary';
+    $vars['primary_nav'] = $menu;
+  }
 }
 
 /**
@@ -475,4 +482,74 @@ function _str_lreplace($search, $replace, $subject) {
     $subject = substr_replace($subject, $replace, $pos, strlen($search));
   }
   return $subject;
+}
+
+/*
+ * THIS SHOULD ONLY BE ENABLED ON LOCAL SITES TO PERMIT DEVEL/dsm() DEBUGGING!!!!
+ * See https://www.drupal.org/node/2824575#comment-11951277
+ */
+function thinkcollege_boot_status_messages($variables) {
+	$display = $variables ['display'];
+	$output = '';
+
+	$status_heading = array (
+			'status' => t ( 'Status message' ),
+			'error' => t ( 'Error message' ),
+			'warning' => t ( 'Warning message' ),
+			'info' => t ( 'Informative message' )
+	);
+
+	// Map Drupal message types to their corresponding Bootstrap classes.
+	// @see http://twitter.github.com/bootstrap/components.html#alerts
+	$status_class = array (
+			'status' => 'success',
+			'error' => 'danger',
+			'warning' => 'warning',
+			// Not supported, but in theory a module could send any type of message.
+			// @see drupal_set_message()
+			// @see theme_status_messages()
+			'info' => 'info'
+	);
+
+	// Retrieve messages.
+	$message_list = drupal_get_messages ( $display );
+
+	// Allow the disabled_messages module to filter the messages, if enabled.
+	if (module_exists ( 'disable_messages' ) && variable_get ( 'disable_messages_enable', '1' )) {
+		$message_list = disable_messages_apply_filters ( $message_list );
+	}
+
+	foreach ( $message_list as $type => $messages ) {
+		$class = (isset ( $status_class [$type] )) ? ' alert-' . $status_class [$type] : '';
+		$output .= "\n";
+		$output .= "  ×\n";
+
+		if (! empty ( $status_heading [$type] )) {
+			if (! module_exists ( 'devel' )) {
+				$output .= '' . _bootstrap_filter_xss ( $status_heading [$type] ) . "\n";
+			} else {
+				$output .= '' . $status_heading [$type] . "\n";
+			}
+		}
+
+		if (count ( $messages ) > 1) {
+			$output .= " \n";
+			foreach ( $messages as $message ) {
+				if (! module_exists ( 'devel' )) {
+					$output .= '  ' . _bootstrap_filter_xss ( $message ) . "\n";
+				} else {
+					$output .= ' ' . $message . "\n";
+				}
+			}
+			$output .= " \n";
+		} else {
+			if (! module_exists ( 'devel' )) {
+				$output .= _bootstrap_filter_xss ( $messages [0] );
+			} else {
+				$output .= $messages [0];
+			}
+		}
+		$output .= "\n";
+	}
+	return $output;
 }
