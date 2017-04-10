@@ -133,6 +133,7 @@ function _tc_favorite_is_favorite($nid) {
 function tc_favorite_block_info() {
   $blocks['tc_favorite_favorites'] = array(
     'info' => t('ThinkCollege - User search results favorites'),
+    'cache' => DRUPAL_NO_CACHE,
   );
   return $blocks;
 }
