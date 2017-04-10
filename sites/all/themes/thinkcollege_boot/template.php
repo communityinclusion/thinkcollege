@@ -413,47 +413,49 @@ function thinkcollege_boot_breadcrumb($variables) {
  */
 function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   global $_REQUEST;
-  $x = $_REQUEST['f'];
-  foreach ($x as $id => $crumb) {
-    // If we have a search term, we need to skip it for replacement.
-    if ($_REQUEST['search_api_views_fulltext']) {
-      $id++;
-    }
-    switch($crumb) {
-      case "tc_tpsid:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "TPSID Program", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "TPSID Program";
-        }
-        break;
-      case "tc_dual_enroll:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Enrolled in HS", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "Enrolled in HS";
-        }
-       break;
-      case "tc_financial_aid:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Financial Aid", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "Financial Aid";
-        }
-        break;
-      case "tc_housing:Yes":
-        if (substr($breadcrumb[$id], 0, 2) == "<a") {
-          $breadcrumb[$id] = _str_lreplace("Yes", "Housing", $breadcrumb[$id]);
-        }
-        else {
-          $breadcrumb[$id] = "Housing";
-        }
-        break;
-    }
+  if (array_key_exists('f', $_REQUEST)) {
+    $x = $_REQUEST['f'];
+    foreach ($x as $id => $crumb) {
+      // If we have a search term, we need to skip it for replacement.
+      if ($_REQUEST['search_api_views_fulltext']) {
+        $id++;
+      }
+      switch ($crumb) {
+        case "tc_tpsid:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "TPSID Program", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "TPSID Program";
+          }
+          break;
+        case "tc_dual_enroll:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Enrolled in HS", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Enrolled in HS";
+          }
+          break;
+        case "tc_financial_aid:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Financial Aid", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Financial Aid";
+          }
+          break;
+        case "tc_housing:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Housing", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Housing";
+          }
+          break;
+      }
 
+    }
   }
   return $breadcrumb;
 }
