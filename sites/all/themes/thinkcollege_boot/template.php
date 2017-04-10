@@ -369,7 +369,6 @@ function thinkcollege_boot_facetapi_title($variables) {
  * @ingroup theme_functions
  */
 function thinkcollege_boot_breadcrumb($variables) {
-
   // Use the Path Breadcrumbs theme function if it should be used instead.
   if (_bootstrap_use_path_breadcrumbs()) {
     return path_breadcrumbs_breadcrumb($variables);
@@ -415,7 +414,6 @@ function thinkcollege_boot_breadcrumb($variables) {
  */
 function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   global $_REQUEST;
-  $breadcrumb = array();
   if (isset($_REQUEST['f'])) {
     $x = $_REQUEST['f'];
     foreach ($x as $id => $crumb) {
