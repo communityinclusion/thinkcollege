@@ -211,13 +211,32 @@ function tc_program_record_properties_property_dual_enroll($item) {
 
   if (array_key_exists('field_prog_hs_coll', $item)) {
     if (array_key_exists(LANGUAGE_NONE, $item->field_prog_hs_coll)) {
-      if ( ($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value'] == "Are still enrolled in high school") ||
-        ($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value'] == "Have graduated or exited from high school") ) {
-        return ("Yes");
+
+      // If there are 2 values checked.
+      if (array_key_exists('1', ($item->field_prog_hs_coll[LANGUAGE_NONE]))) {
+        if (($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value'] == "Are still enrolled in high school") ||
+          ($item->field_prog_hs_coll[LANGUAGE_NONE][1]['value'] == "Are still enrolled in high school")
+        ) {
+          return ("Yes");
+        }
+        else {
+          return ("No");
+        }
       }
+      // If there is only 1 value checked.
+      else if (array_key_exists('0', ($item->field_prog_hs_coll[LANGUAGE_NONE]))) {
+        if ($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value'] == "Are still enrolled in high school") {
+          return ("Yes");
+        }
+        else {
+          return ("No");
+        }
+      }
+      // If none are checked.
       else {
         return ("No");
       }
+
     }
   }
   // will be N/A

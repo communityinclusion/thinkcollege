@@ -327,10 +327,10 @@ function thinkcollege_boot_facetapi_title($variables) {
       $variables['title'] = "Disability";
       break;
     case "Does program offer housing for students?":
-      $variables['title'] = "Housing";
+      $variables['title'] = "Offers Housing";
       break;
     case "Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?":
-      $variables['title'] = "Offer Financial Aid";
+      $variables['title'] = "Offers Financial Aid";
       break;
     case "Is the college or univ. where the program is located public or private institution? ":
       $variables['title'] = "Public or Private";
@@ -421,14 +421,14 @@ function thinkcollege_boot_breadcrumb($variables) {
  */
 function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   global $_REQUEST;
-  if (isset($_REQUEST['f'])) {
+  if (array_key_exists('f', $_REQUEST)) {
     $x = $_REQUEST['f'];
     foreach ($x as $id => $crumb) {
       // If we have a search term, we need to skip it for replacement.
       if ($_REQUEST['search_api_views_fulltext']) {
         $id++;
       }
-      switch($crumb) {
+      switch ($crumb) {
         case "tc_tpsid:Yes":
           if (substr($breadcrumb[$id], 0, 2) == "<a") {
             $breadcrumb[$id] = _str_lreplace("Yes", "TPSID Program", $breadcrumb[$id]);
@@ -444,7 +444,7 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
           else {
             $breadcrumb[$id] = "Enrolled in HS";
           }
-         break;
+          break;
         case "tc_financial_aid:Yes":
           if (substr($breadcrumb[$id], 0, 2) == "<a") {
             $breadcrumb[$id] = _str_lreplace("Yes", "Financial Aid", $breadcrumb[$id]);
