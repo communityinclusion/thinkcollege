@@ -224,6 +224,7 @@ function tc_facets_block_info() {
  * Implements hook_block_view().
  */
 function tc_facets_block_view($delta = '') {
+  global $base_url;
   $block = array();
 
   switch ($delta) {
@@ -249,6 +250,7 @@ function tc_facets_block_view($delta = '') {
     case 'tc_state_program_count_map':
       $variables['label'] = 'Total Programs Available';
       $variables['states'] = unserialize(variable_get('tc_facets_states_count', 0));
+      $variables['base_url'] = $base_url;
       $block['subject'] = t('State Programs Available');
       $block['content'] = theme('tc_state_program_count_map', $variables);
       break;

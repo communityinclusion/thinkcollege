@@ -169,12 +169,9 @@ Drupal.behaviors.tc_facet_map = {
 
     var map = Map();
     map.init(data);
-    console.log("map ran");
-    console.log(data);
 
     function Map() {
 
-      console.log("map function called");
       /* TODO: Create a Map object with these functions and variables as methods and parameters
        (function(){
 
@@ -185,8 +182,6 @@ Drupal.behaviors.tc_facet_map = {
         popoverChildren = Array.prototype.slice.call(popover.childNodes),
         svgContent = document.getElementById('svg-content'),
         stateData;
-      console.log("popover");
-      console.log(popover);
 
       /*
        * Accepts state ID
@@ -302,7 +297,6 @@ Drupal.behaviors.tc_facet_map = {
        * Shows popover
        */
       function showPopover() {
-        console.log("show popover");
         popover.classList.add('in');
       }
 
@@ -331,7 +325,6 @@ Drupal.behaviors.tc_facet_map = {
           state.addEventListener('mouseenter', function (e) {
             e.stopPropagation();
             updatePopover(state.id, e);
-            console.log(state.id);
           });
         });
 
