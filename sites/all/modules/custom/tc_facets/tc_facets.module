@@ -363,10 +363,11 @@ function tc_facets_cron() {
  *
  * hook_preprocess_html().
  *
- * @param $varaibles
+ * @param $variables
  */
-function tc_facets_preprocess_html(&$varaibles) {
+/*
+function tc_facets_preprocess_html(&$variables) {
   drupal_add_css(drupal_get_path('module', 'tc_facets') . "/tc-college-map/css/mapstyle.css");
   drupal_add_js(drupal_get_path('module', 'tc_facets') . "/tc-college-map/js/mapindex.js");
-
 }
+*/
