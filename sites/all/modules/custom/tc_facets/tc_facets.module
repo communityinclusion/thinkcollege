@@ -207,6 +207,16 @@ function tc_facets_block_info() {
     'cache' =>  DRUPAL_NO_CACHE,
   );
 
+  $blocks['tc_total_program_count'] = array(
+    'info' => t('TC facets: Total count of Programs'),
+    'cache' =>  DRUPAL_NO_CACHE,
+  );
+
+  $blocks['tc_state_program_count_map'] = array(
+    'info' => t('TC facets: Count of Programs per state map'),
+    'cache' =>  DRUPAL_NO_CACHE,
+  );
+
   return $blocks;
 }
 
@@ -214,6 +224,7 @@ function tc_facets_block_info() {
  * Implements hook_block_view().
  */
 function tc_facets_block_view($delta = '') {
+  global $base_url;
   $block = array();
 
   switch ($delta) {
@@ -222,11 +233,28 @@ function tc_facets_block_view($delta = '') {
       $block['subject'] = t('Advanced Filters');
       $block['content'] = theme('tc_advanced_filters', $variables);
       break;
+
     case 'tc_program_features':
       $variables['label'] = 'Program Features Label';
       $block['subject'] = t('Program Features Filters');
       $block['content'] = theme('tc_program_features', $variables);
     break;
+
+    case 'tc_total_program_count':
+      $variables['label'] = 'Total Programs Available';
+      $variables['count'] = variable_get('tc_facets_total_programs', 0);
+      $block['subject'] = t('Total Programs Available');
+      $block['content'] = theme('tc_total_program_count', $variables);
+      break;
+
+    case 'tc_state_program_count_map':
+      $variables['label'] = 'Total Programs Available';
+      $variables['states'] = unserialize(variable_get('tc_facets_states_count', 0));
+      $variables['base_url'] = $base_url;
+      $block['subject'] = t('State Programs Available');
+      $block['content'] = theme('tc_state_program_count_map', $variables);
+      break;
+
   }
 
   return $block;
@@ -247,8 +275,98 @@ function tc_facets_theme($existing, $type, $theme, $path) {
       'variables' => array( ),
       'template' => 'templates/tc_program_features'
     ),
+
+    'tc_total_program_count' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_total_program_count'
+    ),
+
+    'tc_state_program_count_map' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_state_program_count_map'
+    ),
+
   );
 
   return $return;
 }
 
+/**
+ * Get a facet loadout for a search in code.
+ * This is used for library page to show facet counts on images.
+ *
+ * @param null $search_term
+ * @return array
+ */
+function _tc_facets_get_facet_info_from_search($search_term=NULL) {
+  $solr_info = _tc_facets_get_solr_connection('dev_solr_server');
+  $my_opts = unserialize($solr_info->options);
+
+  $options = array(
+    'scheme' => $my_opts['scheme'],
+    'host' => $my_opts['host'],
+    'port' => $my_opts['port'],
+    'path' => $my_opts['path'],
+    'http_user' => $my_opts['http_user'],
+    'http_pass' => $my_opts['http_pass'],
+  );
+
+  $searchConn = new SearchApiSolrConnection($options);
+  $params = array(
+    'start' => 0,
+    'rows' => 1,
+    'fl' => 'is_nid,tm_title,tm_field_prog_state,ss_tc_state_province',
+    'facet' => "true",
+    'facet.field' => 'ss_tc_state_province',
+  );
+
+  $result = $searchConn->search($search_term, $params);
+
+  $res = array();
+  $res['All Content'] = $result->response->numFound;
+  $res['state_counts'] = $result->facet_counts->facet_fields->ss_tc_state_province;
+  return $res;
+}
+
+/**
+ * Look at DB to see how we are connected to Solr.
+ *
+ * @param $solr_index_machine_name machine name of index to use for search.
+ * @return mixed
+ */
+function _tc_facets_get_solr_connection($solr_index_machine_name) {
+  $query = "select * from {search_api_server} where machine_name = '".$solr_index_machine_name."'";
+  return db_query($query)->fetchObject();
+}
+
+/**
+ * Load up total program count and facets values for state counts and store in
+ * variables table.
+ * @return string
+ */
+function tc_facets_data_update() {
+  $results = _tc_facets_get_facet_info_from_search();
+  variable_set('tc_facets_total_programs', $results['All Content']);
+  variable_set('tc_facets_states_count', serialize($results['state_counts']));
+}
+
+/**
+ * Implements hook_cron().
+ */
+function tc_facets_cron() {
+  // Update total program count, and count per state.
+  tc_facets_data_update();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * hook_preprocess_html().
+ *
+ * @param $varaibles
+ */
+function tc_facets_preprocess_html(&$varaibles) {
+  drupal_add_css(drupal_get_path('module', 'tc_facets') . "/tc-college-map/css/mapstyle.css");
+  drupal_add_js(drupal_get_path('module', 'tc_facets') . "/tc-college-map/js/mapindex.js");
+
+}
