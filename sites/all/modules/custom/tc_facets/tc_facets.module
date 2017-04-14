@@ -292,70 +292,23 @@ function tc_facets_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Get a facet loadout for a search in code.
- * This is used for library page to show facet counts on images.
+ * Implements hook_search_api_solr_search_results_alter().
  *
- * @param null $search_term
- * @return array
- */
-function _tc_facets_get_facet_info_from_search($search_term=NULL) {
-  $solr_info = _tc_facets_get_solr_connection('dev_solr_server');
-  $my_opts = unserialize($solr_info->options);
-
-  $options = array(
-    'scheme' => $my_opts['scheme'],
-    'host' => $my_opts['host'],
-    'port' => $my_opts['port'],
-    'path' => $my_opts['path'],
-    'http_user' => $my_opts['http_user'],
-    'http_pass' => $my_opts['http_pass'],
-  );
-
-  $searchConn = new SearchApiSolrConnection($options);
-  $params = array(
-    'start' => 0,
-    'rows' => 1,
-    'fl' => 'is_nid,tm_title,tm_field_prog_state,ss_tc_state_province',
-    'facet' => "true",
-    'facet.field' => 'ss_tc_state_province',
-  );
-
-  $result = $searchConn->search($search_term, $params);
-
-  $res = array();
-  $res['All Content'] = $result->response->numFound;
-  $res['state_counts'] = $result->facet_counts->facet_fields->ss_tc_state_province;
-  return $res;
-}
-
-/**
- * Look at DB to see how we are connected to Solr.
+ * We want to cache the total number of records - if there is no filter - ie max number of records.
+ * Also cache total number of programs per state.
+ * When a search with no filters is ran, these values we need are in that
+ * return value - so cache them.
  *
- * @param $solr_index_machine_name machine name of index to use for search.
- * @return mixed
+ * @param array $results
+ * @param \SearchApiQueryInterface $query
+ * @param $response
  */
-function _tc_facets_get_solr_connection($solr_index_machine_name) {
-  $query = "select * from {search_api_server} where machine_name = '".$solr_index_machine_name."'";
-  return db_query($query)->fetchObject();
-}
 
-/**
- * Load up total program count and facets values for state counts and store in
- * variables table.
- * @return string
- */
-function tc_facets_data_update() {
-  $results = _tc_facets_get_facet_info_from_search();
-  variable_set('tc_facets_total_programs', $results['All Content']);
-  variable_set('tc_facets_states_count', serialize($results['state_counts']));
-}
-
-/**
- * Implements hook_cron().
- */
-function tc_facets_cron() {
-  // Update total program count, and count per state.
-  tc_facets_data_update();
+function tc_facets_search_api_solr_search_results_alter(array &$results, SearchApiQueryInterface $query, $response) {
+  if (($_GET['q'] == 'college-search') && (sizeof($_GET) == 1)) {
+    variable_set('tc_facets_total_programs', $results['result count']);
+    variable_set('tc_facets_states_count', serialize($response->facet_counts->facet_fields->ss_tc_state_province));
+  }
 }
 
 /**
@@ -365,9 +318,14 @@ function tc_facets_cron() {
  *
  * @param $variables
  */
-/*
 function tc_facets_preprocess_html(&$variables) {
-  drupal_add_css(drupal_get_path('module', 'tc_facets') . "/tc-college-map/css/mapstyle.css");
-  drupal_add_js(drupal_get_path('module', 'tc_facets') . "/tc-college-map/js/mapindex.js");
+  // The clickable map is only on the initial search page. We don't want
+  // the javascript to run and not find the ID of a missing Div and error.
+  if (current_path() == "college-search") {
+    $params = drupal_get_query_parameters();
+    if (sizeof($params) == 0) {
+      drupal_add_css(drupal_get_path('module', 'tc_facets') . "/tc-college-map/css/mapstyle.css");
+      drupal_add_js(drupal_get_path('module', 'tc_facets') . "/tc-college-map/js/mapindex.js");
+    }
+  }
 }
-*/

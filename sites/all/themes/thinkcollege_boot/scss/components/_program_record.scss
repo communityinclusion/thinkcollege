@@ -1,31 +1,28 @@
-article.node-program-record-card .program-search-program-name
-{
-    border-bottom:none;
-      display: block;
-      color: #444;
-      font-size: 18pt;
-      font-weight: 700;
-      font-family: "museo-sans", sans-serif;
-    }
+article.node-program-record-card .program-search-program-name {
+  border-bottom:none;
+  display: block;
+  color: #444;
+  font-size: 18pt;
+  font-weight: 700;
+  font-family: "museo-sans", sans-serif;
+}
 
-article.node-program-record-full .program-search-program-name
-{display:none;}
+article.node-program-record-full .program-search-program-name {
+  display:none;
+}
 
+.node-type-program-record h1 {
+  border-bottom:transparent 1px solid;
+    display: block;
+    color: #444;
+    font-size: 18pt;
+    font-weight: 700;
+    font-family: "museo-sans", sans-serif;
+}
 
-
-
-
-  .node-type-program-record h1 {
-    border-bottom:transparent 1px solid;
-      display: block;
-      color: #444;
-      font-size: 18pt;
-      font-weight: 700;
-      font-family: "museo-sans", sans-serif;
-      }
- .program-heading .program-search-program-name {
-   display:none;
- }
+.program-heading .program-search-program-name {
+  display:none;
+}
 
 article {
   &.node-program-record {
@@ -174,22 +171,24 @@ article {
       }
     }
 
-    .print-block {margin-bottom:5px;}
+    .print-block {
+      margin-bottom:5px;
+    }
 
     table.program-contact-info {
       td {
         width: 50%;
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-          -ms-word-break: break-all;
-          word-break: break-all;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
 
-     /* Non standard for webkit */
-       word-break: break-word;
-       -webkit-hyphens: auto;
-       -moz-hyphens: auto;
+        /* Non standard for webkit */
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
         hyphens: auto;
-          font-size:10pt;
+        font-size:10pt;
       }
     }
   }
@@ -202,7 +201,9 @@ article {
 }
 
 // Hide the "How to search" block after a search.
+// Hide the "Map with Program Count" block after a search.
 body.tc-college-search-results {
+  #block-tc-facets-tc-state-program-count-map,
   #block-block-5 {
     display: none;
   }
