@@ -311,11 +311,14 @@ function theme_tc_favorite_button($variables) {
     $type = 'default';
   }
 
+  $destination_array = drupal_get_destination();
+  $destination = $destination_array['destination'];
+  $destination = str_ireplace('&', '%26', $destination);
   if (_tc_favorite_is_favorite($nid)) {
-    return '<a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . current_path() . '"type="button" class="btn btn-success btn-' . $size . '"><i class="fa fa-heart" aria-hidden="true"></i> Saved</a>';
+    return '<a href="/collegesearch/favorite/remove/' . $nid . '?destination=' . $destination . '"type="button" class="btn btn-success btn-' . $size . '"><i class="fa fa-heart" aria-hidden="true"></i> Saved</a>';
   }
   else {
-    return '<a href="/collegesearch/favorite/' . $nid . '?destination=' . current_path() . '"type="button" class="btn btn-' . $type . ' btn-' . $size . '"><i class="fa fa-heart" aria-hidden="true"></i> Save</a>';
+    return '<a href="/collegesearch/favorite/' . $nid . '?destination=' . $destination . '"type="button" class="btn btn-' . $type . ' btn-' . $size . '"><i class="fa fa-heart" aria-hidden="true"></i> Save</a>';
   }
 
 }
