@@ -12,3 +12,10 @@
 
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+// This is necessary for ScrollSpy to work properly on the Program Record detail page (for
+//   anonymous users).
+// It MUST be in this file, it cannot be moved into /components/_blocks.scss.
+.block-menu {
+  position: relative;
+}
