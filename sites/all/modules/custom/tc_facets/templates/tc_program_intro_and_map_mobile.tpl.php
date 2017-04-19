@@ -8,7 +8,7 @@
         src="<?php echo $info_img; ?>"
         style="float:right;padding:20px;" width="300px" />
 
-    Find and compare information about <span style="color:#20527C"><?php echo $count; ?></span>
+    Find and compare information on <span style="color:#20527C"><?php echo $count; ?></span>
     college programs for students with intellectual disabilities! Search by
     program name, location, and other keywords. See "Advanced Search"
     for more options to help you narrow your search
