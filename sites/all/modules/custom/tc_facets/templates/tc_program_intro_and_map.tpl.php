@@ -6,7 +6,7 @@
   <p class="lead">
     Find and compare information on <span style="color:#20527C"><?php echo $count; ?></span>
     college programs for students with intellectual disabilities! Search by
-    program name, location, and other keywords. See "Advanced Search"
+    program name, location, and other keywords. See "Advanced Filters"
     for more options to help you narrow your search
     and build a list of schools that are a good match for you.
   </p>
