@@ -200,12 +200,3 @@ article {
   }
 }
 
-// Hide the "How to search" block after a search.
-// Hide the "Map with Program Count" block after a search.
-body.tc-college-search-results {
-  #block-tc-facets-tc-state-program-count-map,
-  #block-block-5 {
-    display: none;
-  }
-}
-

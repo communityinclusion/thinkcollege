@@ -1,4 +1,4 @@
-<div class="info-box-mobile">
+<div class="info-box mobile">
   <h2 style="border-bottom: #ccc 1px solid; padding-bottom: 10px;">
     Find a college that's right for you!
   </h2>
