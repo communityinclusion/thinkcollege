@@ -217,6 +217,16 @@ function tc_facets_block_info() {
     'cache' =>  DRUPAL_NO_CACHE,
   );
 
+  $blocks['tc_program_intro_and_map'] = array(
+    'info' => t('TC facets: Program intro block with count and clickable map.'),
+    'cache' =>  DRUPAL_NO_CACHE,
+  );
+
+  $blocks['tc_program_intro_and_map_mobile'] = array(
+    'info' => t('TC facets: (Mobile) Program intro block with count and clickable map.'),
+    'cache' =>  DRUPAL_NO_CACHE,
+  );
+
   return $blocks;
 }
 
@@ -226,6 +236,8 @@ function tc_facets_block_info() {
 function tc_facets_block_view($delta = '') {
   global $base_url;
   $block = array();
+  $pth = drupal_get_path('module', 'tc_facets');
+  $variables = array('path' => $pth);
 
   switch ($delta) {
     case 'tc_advanced_filters':
@@ -255,6 +267,19 @@ function tc_facets_block_view($delta = '') {
       $block['content'] = theme('tc_state_program_count_map', $variables);
       break;
 
+    case 'tc_program_intro_and_map':
+      $variables['count'] = variable_get('tc_facets_total_programs', 270);
+      $variables['states'] = unserialize(variable_get('tc_facets_states_count', 0));
+      $block['subject'] = t('Intro text total Programs Available, and Map');
+      $block['content'] = theme('tc_program_intro_and_map', $variables);
+      break;
+
+    case 'tc_program_intro_and_map_mobile':
+      $variables['info_img'] = file_create_url($pth . '/images/students-on-computers-300w.jpg');
+      $variables['count'] = variable_get('tc_facets_total_programs', 270);
+      $block['subject'] = t('Intro text total Programs Available, and Map');
+      $block['content'] = theme('tc_program_intro_and_map_mobile', $variables);
+      break;
   }
 
   return $block;
@@ -284,6 +309,16 @@ function tc_facets_theme($existing, $type, $theme, $path) {
     'tc_state_program_count_map' => array(
       'variables' => array( ),
       'template' => 'templates/tc_state_program_count_map'
+    ),
+
+    'tc_program_intro_and_map' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_program_intro_and_map'
+    ),
+
+    'tc_program_intro_and_map_mobile' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_program_intro_and_map_mobile'
     ),
 
   );
