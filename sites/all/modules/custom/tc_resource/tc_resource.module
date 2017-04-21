@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function tc_resource_field_formatter_info() {
+  return array(
+    'field_date_new' => array(
+      'label' => t('TC: Display "NEW" if less than 3 months ago'),
+      'field types' => array('datetime'),
+    ),
+    'field_media_type_icon' => array(
+      'label' => t('TC: Display media type icon'),
+      'field types' => array('taxonomy_term_reference'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function tc_resource_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'field_date_new':
+      foreach ($items as $delta => $item) {
+        $date_received = strtotime($item['value']);
+        // If the $date received is less than 92 days (3 months) ago, show the "NEW", else show nothing.
+        if ((time() - $date_received) < (92 * 24 * 60 *60)) {
+          $element[$delta] = array(
+            '#type' => 'html_tag',
+            '#tag' => 'span',
+            '#attributes' => array(
+              'class' => array('sm', 'label', 'label-warning'),
+            ),
+            '#value' => t('NEW'),
+          );
+        }
+      }
+      break;
+
+    case 'field_media_type_icon':
+      $media_types = array(
+        1518 => array('tooltip' => 'Document', 'icon_path' => 'file-text.svg'),
+        1519 => array('tooltip' => 'Dataset', 'icon_path' => 'bar-chart-o.svg'),
+        1471 => array('tooltip' => 'Online Course/Webinar', 'icon_path' => 'desktop.svg'),
+        1469 => array('tooltip' => 'Audio', 'icon_path' => 'file-audio-o.svg'),
+        1470 => array('tooltip' => 'Video', 'icon_path' => 'file-video-o.svg'),
+        1472 => array('tooltip' => 'Web site', 'icon_path' => 'link.svg'),
+      );
+
+      foreach ($items as $delta => $item) {
+        $element[$delta] = array(
+          '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="' . $media_types[$item['tid']]['tooltip'] . '"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/' . $media_types[$item['tid']]['icon_path'] . '" alt="' . $media_types[$item['tid']]['tooltip'] . '"></a>',
+        );
+      }
+      break;
+  }
+
+  return $element;
+}
