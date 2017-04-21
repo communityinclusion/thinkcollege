@@ -13,6 +13,10 @@ function tc_resource_field_formatter_info() {
       'label' => t('TC: Display media type icon'),
       'field types' => array('taxonomy_term_reference'),
     ),
+    'field_publication_type_icon' => array(
+      'label' => t('TC: Display publication type icon'),
+      'field types' => array('taxonomy_term_reference'),
+    ),
   );
 }
 
@@ -54,6 +58,19 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
         $element[$delta] = array(
           '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="' . $media_types[$item['tid']]['tooltip'] . '"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/' . $media_types[$item['tid']]['icon_path'] . '" alt="' . $media_types[$item['tid']]['tooltip'] . '"></a>',
         );
+      }
+      break;
+
+    case 'field_publication_type_icon':
+      // Display the icon if the publication type is "Think College Publication" or one of its children.
+      $tc_publication_tid = 1504;
+      foreach ($items as $delta => $item) {
+        $parents = taxonomy_get_parents($item['tid']);
+        if (($item['tid'] == 1504) || (isset($parents[1504]))) {
+          $element[$delta] = array(
+            '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="Think College Publication"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/link.svg" alt="Think College Publication"></a>',
+          );
+        }
       }
       break;
   }
