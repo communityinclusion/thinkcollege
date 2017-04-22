@@ -16,6 +16,35 @@ article {
       font-size: 1.6rem;
       font-family: "lato", sans-serif;
       color: #331d35;
+
+      .topic {
+        border-radius: 4px;
+        font-size: 12px;
+        padding: 2px 5px;
+        margin-bottom: 3px;
+        color: #20527c;
+
+        .field {
+          display: inline-block;
+          .field-items {
+            margin-left: 0px;
+          }
+        }
+      }
+
+      .resource-title-listing .field {
+        display: inline-block;
+        .field-items {
+          margin-left: 0px;
+        }
+      }
+
+      .resource-description .field {
+        .field-items {
+          margin-left: 0px;
+        }
+      }
+
     }
   }
 }
