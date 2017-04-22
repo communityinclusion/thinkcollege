@@ -33,6 +33,7 @@ $font-size-base: 16px !default;
 @import 'components/header';
 @import 'components/footer';
 @import 'components/blocks';
+@import 'components/resource';
 
 html {
   &.overlay-open .navbar-fixed-top {

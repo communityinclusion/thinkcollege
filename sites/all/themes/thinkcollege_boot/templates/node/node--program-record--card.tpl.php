@@ -80,7 +80,7 @@
  */
 //krumo($content);
 global $base_url;
-$classes .= ' node-program-record-card';
+$classes .= ' node-program-record-card node-tc-card';
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="program-box">
