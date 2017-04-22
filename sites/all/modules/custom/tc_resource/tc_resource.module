@@ -17,6 +17,10 @@ function tc_resource_field_formatter_info() {
       'label' => t('TC: Display publication type icon'),
       'field types' => array('taxonomy_term_reference'),
     ),
+    'field_resourc_topics_display' => array(
+      'label' => t('TC: Display resource topics'),
+      'field types' => array('taxonomy_term_reference'),
+    ),
   );
 }
 
@@ -71,6 +75,24 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
             '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="Think College Publication"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/link.svg" alt="Think College Publication"></a>',
           );
         }
+      }
+      break;
+
+    case 'field_resourc_topics_display':
+      // Display each term and its parent as links.
+      foreach ($items as $delta => $item) {
+        $markup = '';
+        $term = taxonomy_term_load($item['tid']);
+        $parents = taxonomy_get_parents($item['tid']);
+        if (count($parents)) {
+          foreach($parents as $key => $value) {
+            $markup .= '<span class="topic-mainlabel">' . l($value->name, 'taxonomy/term/' . $value->tid) . '</span> &gt; ';
+          }
+        }
+        $markup .= l($term->name, 'taxonomy/term/' . $term->tid);
+        $element[$delta] = array(
+          '#markup' => $markup,
+        );
       }
       break;
   }
