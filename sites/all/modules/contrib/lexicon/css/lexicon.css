@@ -9,21 +9,26 @@ img.lexicon-indicator {
   cursor: help;
 }
 span.lexicon-term {
-  text-decoration: none;
-  border-bottom: 1px dotted;
+  text-decoration: none!important;
+  border-bottom: 2px solid #c5daed;;
   cursor: help;
 }
 
 a.lexicon-term {
-  text-decoration: none;
-  border-bottom: 1px dotted #080;
-  color: #080;
+  text-decoration: none!important;
+  border-bottom: 2px solid #c5daed;
   cursor: help;
 }
+
+a.lexicon-term:hover {
+  text-decoration: none!important;
+  background-color:#c5daed;
+}
+
+
 .lexicon-links {
   text-align: center;
-  background-color: #eeeeff;
-  color: #888888;
+  background-color: #c5daed;
 }
 .lexicon-links a {
   font-size: 140%;
