@@ -10,7 +10,7 @@ img.lexicon-indicator {
 }
 span.lexicon-term {
   text-decoration: none!important;
-  border-bottom: 2px solid #c5daed;;
+  border-bottom: 2px solid #c5daed;
   cursor: help;
 }
 
