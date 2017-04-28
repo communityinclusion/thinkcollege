@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 
 .section-banner-block {
-   background: url('/images/congruent_outline_bl-200px.png') repeat-x;
+   background: url('/sites/all/themes/thinkcollege_boot/images/congruent_outline_bl-200px.png') repeat-x;
    width:100%;
    margin-top: -20px;
    border-top: #fff 3px solid;
