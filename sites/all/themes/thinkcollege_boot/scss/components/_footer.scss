@@ -1,0 +1,55 @@
+.footer-main {
+	background-color:#20527C;
+	color:#fff;
+	padding:20px 80px;
+	font-size:16px;
+}
+
+.copyright {
+	background-color:#fff;
+	color:#20527C;
+	padding:20px 80px;
+
+}
+
+.footer h2 {
+	border-bottom:1px solid #fff;
+	font-size:18px;
+	font-weight:600;
+	line-height:27px;
+	padding:40px 0 10px;
+	text-transform:uppercase;
+}
+
+.footer ul {
+	font-size:16px;
+	list-style-type:none;
+	margin-left:0;
+	padding-left:0;
+	margin-top:15px;
+}
+
+.footer ul li a {
+	padding:0 0 5px;
+	display:block;
+}
+
+.footer a {
+	color:#C96B29;
+	font-weight:700;
+}
+
+
+/* Social icons in footer */
+#social-fb:hover {
+	color:#3B5998;
+}
+
+#social-tw:hover {
+	color:#4099FF;
+}
+
+
+#social-em:hover {
+	color:#f39c12;
+}
