@@ -11162,4 +11162,11 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   }
 }
 
+/*  Search Results List */
+/* line 196, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.search-result {
+  border-bottom: #bbb solid 1px;
+  padding-bottom: 1em;
+}
+
 /*# sourceMappingURL=../css/style.map */
