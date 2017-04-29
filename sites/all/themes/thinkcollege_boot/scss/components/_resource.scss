@@ -14,34 +14,61 @@ article {
       -moz-box-shadow: 0 0 7px 0 #AAA;
       box-shadow: 0 0 7px 0 #AAA;
       font-size: 1.6rem;
-      font-family: "lato", sans-serif;
+      font-family: $lato-font-stack;
       color: #331d35;
+      .field {
+        margin-bottom: 0px;
+      }
 
       .topic {
-        border-radius: 4px;
-        font-size: 12px;
         padding: 2px 5px;
         margin-bottom: 3px;
-        color: #20527c;
 
+        .topic-mainlabel {
+          font-weight: 700;
+        }
+
+        .field {
+          display: inline-block;
+          vertical-align: top;
+          margin-bottom: 10px;
+          .field-items {
+            margin-left: 0px;
+            font-size: 12px;
+            a {
+              color: $tcblue;
+            }
+          }
+        }
+      }
+
+      .resource-title-listing {
+        border-bottom: 1px solid #ccc;
+        padding: 0 0 10px 0;
+        a {
+          color: #069;
+          font-size: 20px;
+          font-weight: 700;
+          font-family: $museo-sans-stack;
+        }
         .field {
           display: inline-block;
           .field-items {
             margin-left: 0px;
           }
-        }
-      }
-
-      .resource-title-listing .field {
-        display: inline-block;
-        .field-items {
-          margin-left: 0px;
+          .label-warning {
+            background-color: $tcorange;
+          }
         }
       }
 
       .resource-description .field {
         .field-items {
           margin-left: 0px;
+        }
+        .more-link {
+          padding-left: 10px;
+          font-weight: bold;
         }
       }
 
