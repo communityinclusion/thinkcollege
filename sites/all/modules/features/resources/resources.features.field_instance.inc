@@ -24,6 +24,13 @@ function resources_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'smart_trim',
@@ -80,6 +87,13 @@ function resources_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 12,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -87,7 +101,7 @@ function resources_field_default_field_instances() {
         'weight' => 6,
       ),
     ),
-    'display_label' => 'URL',
+    'display_label' => 'Go to resource',
     'entity_type' => 'node',
     'field_name' => 'field_external_link',
     'label' => 'External link to resource',
@@ -130,6 +144,13 @@ function resources_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
@@ -168,6 +189,13 @@ function resources_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
@@ -215,6 +243,13 @@ function resources_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -250,6 +285,20 @@ function resources_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 3,
+      ),
+      'full' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
@@ -306,6 +355,13 @@ function resources_field_default_field_instances() {
         'type' => 'file_default',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -313,7 +369,7 @@ function resources_field_default_field_instances() {
         'weight' => 8,
       ),
     ),
-    'display_label' => '',
+    'display_label' => 'Download Resource',
     'entity_type' => 'node',
     'field_name' => 'field_resourc_file',
     'label' => 'File',
@@ -344,6 +400,13 @@ function resources_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -384,6 +447,20 @@ function resources_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 4,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
@@ -448,6 +525,13 @@ function resources_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 11,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'tc_resource',
@@ -489,6 +573,13 @@ function resources_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 7,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -523,6 +614,13 @@ function resources_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'full' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),

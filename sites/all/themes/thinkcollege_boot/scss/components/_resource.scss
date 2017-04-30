@@ -74,4 +74,50 @@ article {
 
     }
   }
+
+  &.node-resource.view-mode-full {
+    .col-sm-9 {
+      .field-label {
+        height: 40px;
+        width: 200px;
+        background: #20527C;
+        position: relative;
+        font-size: 18px;
+        color: #fff;
+        line-height: 34px;
+      }
+
+      .field-label:after {
+        position: absolute;
+        right: -20px;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid $tcblue;
+      }
+
+      .field-items {
+        margin-left: 60px;
+        font-size: 16px;
+      }
+
+      .field-label:before {
+        content: "";
+        margin-left: 20px;
+      }
+
+      .field {
+        margin-bottom: 20px;
+      }
+    }
+
+    .col-sm-3 {
+      .field {
+        border-top: 10px solid $tcblue;
+      }
+    }
+  }
+
 }
