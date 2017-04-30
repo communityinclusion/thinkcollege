@@ -52,13 +52,14 @@
     <?php foreach ($items as $delta => $item): ?>
       <?php
       $file = $item['#file'];
+      if ($file->description == "") $file->description = $file->filename;
       ?>
       <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>>
         <div class="tc-resource-icon"><?php print theme('file_icon', array('file' => $file)); ?></div>
         <div class="tc-resource-info">
           <!--<div class="tc-resource-name"><?php print l($file->filename, file_create_url($file->uri)); ?></div>//-->
           <div class="tc-resource-description"><?php print l($file->description, file_create_url($file->uri)); ?></div>
-          <div class="tc-resource-date"><?php print $file->timestamp; ?></div>
+          <div class="tc-resource-date"><?php print format_date($file->timestamp, 'custom', 'F j, Y'); ?></div>
         </div>
       </div>
     <?php endforeach; ?>
