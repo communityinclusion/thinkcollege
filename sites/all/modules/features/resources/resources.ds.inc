@@ -17,10 +17,15 @@ function resources_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'resource';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'comments' => array(
-      'weight' => '0',
+    'title' => array(
+      'weight' => '-99',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h1',
+        'class' => '',
+      ),
     ),
   );
   $export['node|resource|full'] = $ds_fieldsetting;
@@ -42,6 +47,36 @@ function resources_ds_layout_settings_info() {
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = 'bootstrap_8_4';
   $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'title',
+        1 => 'body',
+        2 => 'field_resourc_apa_citation',
+        4 => 'field_resourc_publication_date',
+        5 => 'field_resourc_authors',
+        6 => 'field_resourc_topics',
+        7 => 'field_resourc_media_types',
+        8 => 'field_resourc_publication_types',
+        10 => 'field_resourc_date_received',
+      ),
+      'right' => array(
+        3 => 'field_resourc_file',
+        9 => 'field_external_link',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'left',
+      'body' => 'left',
+      'field_resourc_apa_citation' => 'left',
+      'field_resourc_file' => 'right',
+      'field_resourc_publication_date' => 'left',
+      'field_resourc_authors' => 'left',
+      'field_resourc_topics' => 'left',
+      'field_resourc_media_types' => 'left',
+      'field_resourc_publication_types' => 'left',
+      'field_external_link' => 'right',
+      'field_resourc_date_received' => 'left',
+    ),
     'classes' => array(),
     'wrappers' => array(
       'left' => 'div',
@@ -53,36 +88,6 @@ function resources_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
-    'regions' => array(
-      'left' => array(
-        0 => 'body',
-        1 => 'comments',
-        2 => 'field_resourc_apa_citation',
-        3 => 'field_resourc_publication_date',
-        4 => 'field_resourc_authors',
-        5 => 'field_resourc_topics',
-        6 => 'field_resourc_state_related',
-        7 => 'field_resourc_media_types',
-        8 => 'field_resourc_publication_types',
-      ),
-      'right' => array(
-        0 => 'field_resourc_file',
-        1 => 'field_external_link',
-      ),
-    ),
-    'fields' => array(
-      'body' => 'left',
-      'comments' => 'left',
-      'field_resourc_apa_citation' => 'left',
-      'field_resourc_publication_date' => 'left',
-      'field_resourc_authors' => 'left',
-      'field_resourc_topics' => 'left',
-      'field_resourc_state_related' => 'left',
-      'field_resourc_media_types' => 'left',
-      'field_resourc_publication_types' => 'left',
-      'field_resourc_file' => 'right',
-      'field_external_link' => 'right',
-    ),
   );
   $export['node|resource|full'] = $ds_layout;
 

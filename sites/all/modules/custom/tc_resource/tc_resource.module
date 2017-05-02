@@ -21,6 +21,14 @@ function tc_resource_field_formatter_info() {
       'label' => t('TC: Display resource topics'),
       'field types' => array('taxonomy_term_reference'),
     ),
+    'field_download_resource' => array(
+      'label' => t('TC: Display resource + icon'),
+      'field types' => array('file'),
+    ),
+    'field_external_link' => array(
+      'label' => t('TC: Display external link + icon'),
+      'field types' => array('link_field'),
+    ),
   );
 }
 
@@ -72,7 +80,7 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
         $parents = taxonomy_get_parents($item['tid']);
         if (($item['tid'] == 1504) || (isset($parents[1504]))) {
           $element[$delta] = array(
-            '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="Think College Publication"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/link.svg" alt="Think College Publication"></a>',
+            '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="Think College Publication"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/parthenon_new.svg" alt="Think College Publication"></a>',
           );
         }
       }
@@ -90,6 +98,79 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
           }
         }
         $markup .= l($term->name, 'taxonomy/term/' . $term->tid);
+        $element[$delta] = array(
+          '#markup' => $markup,
+        );
+      }
+      break;
+
+    case 'field_download_resource':
+      foreach ($items as $delta => $item) {
+        if ($item['description'] == "") $item['description'] = $item['filename'];
+        switch ($item['filemime']) {
+          case 'application/pdf':
+            $icon = 'file-pdf-o.svg';
+            break;
+          case 'application/msword':
+          case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+            $icon = 'file-word-o.svg';
+            break;
+          case 'application/vnd.ms-excel':
+          case 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+            $icon = 'file-excel-o.svg';
+            break;
+          case 'application/vnd.ms-powerpoint':
+          case 'application/vnd.openxmlformats-officedocument.presentationml.presentation':
+            $icon = 'file-powerpoint-o.svg';
+            break;
+          case 'image/gif':
+          case 'image/png':
+          case 'image/jpg':
+          case 'image/jpeg':
+            $icon = 'file-image-o.svg';
+            break;
+          case 'text/html':
+            $icon = 'file-code-o.svg';
+            break;
+          case 'text/plain':
+          case 'text/rtf':
+          case 'application/vnd.oasis.opendocument.text':
+          case 'application/x-vnd.oasis.opendocument.text':
+            $icon = 'file-text-o.svg';
+            break;
+          case 'audio/mpeg':
+          case 'audio/*':
+          case 'audio/ogg':
+          case 'video/mp4':
+            $icon = 'file-audio-o.svg';
+            break;
+          default:
+          case 'application/rdf+xml':
+          case 'application/octet-stream':
+            $icon = 'file-o.svg';
+            break;
+        }
+        $markup  = '<div class="field-item">';
+        $markup .=   '<div class="tc-resource-icon"><img src="/' . drupal_get_path('module', 'tc_resource') . '/img/' . $icon . '" alt="Download resource"></div>';
+        $markup .=   '<div class="tc-resource-info">';
+        $markup .=     '<div class="tc-resource-description">' . l($item['description'], file_create_url($item['uri']), array('attributes' => array('target' => '_blank'))) . '</div>';
+        $markup .=     '<div class="tc-resource-date">' . format_date($item['timestamp'], 'custom', 'F j, Y') . '</div>';
+        $markup .=   '</div>';
+        $markup .= '</div>';
+
+        $element[$delta] = array(
+          '#markup' => $markup,
+        );
+      }
+      break;
+
+    case 'field_external_link':
+      foreach ($items as $delta => $item) {
+        $markup  =   '<div class="tc-resource-icon"><img src="/' . drupal_get_path('module', 'tc_resource') . '/img/external-link.svg" alt="Go to resource"></div>';
+        $markup .=   '<div class="tc-resource-info">';
+        $markup .=     '<div class="tc-resource-description">' . l($item['title'], $item['url'], array('html' => true, 'attributes' => array('target' => '_blank'))) . '</div>';
+        $markup .=   '</div>';
+
         $element[$delta] = array(
           '#markup' => $markup,
         );

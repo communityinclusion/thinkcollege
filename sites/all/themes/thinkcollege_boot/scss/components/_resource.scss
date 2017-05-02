@@ -77,39 +77,49 @@ article {
 
   &.node-resource.view-mode-full {
     .col-sm-8 {
-      .field-label {
-        height: 40px;
-        width: 200px;
-        background: #20527C;
-        position: relative;
-        font-size: 18px;
-        color: #fff;
-        line-height: 34px;
-      }
-
-      .field-label:after {
-        position: absolute;
-        right: -20px;
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid $tcblue;
-      }
-
-      .field-items {
-        margin-left: 60px;
-        font-size: 16px;
-      }
-
-      .field-label:before {
-        content: "";
-        margin-left: 20px;
-      }
-
       .field {
         margin-bottom: 20px;
+
+        .field-label {
+          height: 40px;
+          width: 200px;
+          background: #20527C;
+          position: relative;
+          font-size: 18px;
+          color: #fff;
+          line-height: 34px;
+        }
+
+        .field-label:after {
+          position: absolute;
+          right: -20px;
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 20px solid $tcblue;
+        }
+
+        &.field-label-inline {
+          .field-items {
+            margin-left: 60px;
+          }
+        }
+
+        .field-items {
+          font-size: 16px;
+          color: $dkgray;
+        }
+
+        &.field-name-body .field-items {
+          color: $mdgray;
+        }
+
+        .field-label:before {
+          content: "";
+          margin-left: 20px;
+        }
       }
     }
 
@@ -132,7 +142,7 @@ article {
               float: left;
             }
             .tc-resource-info {
-              margin-left: 20px;
+              margin-left: 35px;
               a {
                 font-size: 1em;
                 color: $dkgray;
@@ -147,5 +157,11 @@ article {
       }
     }
   }
+}
 
+// Hide the title on node pages - Display Suite handles this.
+.node-type-resource {
+  h1.page-header {
+    display: none;
+  }
 }

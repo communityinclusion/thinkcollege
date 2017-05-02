@@ -88,10 +88,10 @@ function resources_field_default_field_instances() {
         'weight' => 12,
       ),
       'full' => array(
-        'label' => 'above',
-        'module' => 'link',
+        'label' => 'abovec',
+        'module' => 'tc_resource',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'field_external_link',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -151,9 +151,8 @@ function resources_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -303,7 +302,7 @@ function resources_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'tc_day_and_date',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -311,7 +310,7 @@ function resources_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 99,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -365,10 +364,10 @@ function resources_field_default_field_instances() {
         'weight' => 2,
       ),
       'full' => array(
-        'label' => 'above',
-        'module' => 'file',
+        'label' => 'abovec',
+        'module' => 'tc_resource',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'field_download_resource',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -584,9 +583,8 @@ function resources_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'teaser' => array(
