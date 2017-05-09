@@ -1,0 +1,13 @@
+name = TC Resource Search
+description = Think College Search index and view for Searching Reosurces
+core = 7.x
+package = ThinkCollege
+version = 7.x-0.1
+dependencies[] = entity
+dependencies[] = search_api
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[search_api_index][] = tc_resource_index
+features[views_view][] = tc_resource_search
+features_exclude[dependencies][ctools] = ctools
