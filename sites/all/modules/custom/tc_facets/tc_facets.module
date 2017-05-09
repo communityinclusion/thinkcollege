@@ -30,7 +30,12 @@ function _tc_facets_remove_radio_na($element) {
  */
 function tc_facets_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == "views_exposed_form") {
-    $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Program or Keyword";
+    if ($form['#id'] == 'views-exposed-form-tc-resource-search-resource-search-text-input') {
+      $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Resource or Keyword";
+    }
+    else {
+      $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Program or Keyword";
+    }
   }
 }
 
@@ -202,6 +207,11 @@ function tc_facets_block_info() {
     'cache' => DRUPAL_NO_CACHE,
   );
 
+  $blocks['tc_resource_advanced_filters'] = array(
+    'info' => t('TC facets: Resource Advanced Filters'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
   $blocks['tc_program_features'] = array(
     'info' => t('TC facets: Program Features'),
     'cache' =>  DRUPAL_NO_CACHE,
@@ -232,6 +242,12 @@ function tc_facets_block_view($delta = '') {
       $variables['label'] = 'Advanced Filter Label';
       $block['subject'] = t('Advanced Filters');
       $block['content'] = theme('tc_advanced_filters', $variables);
+      break;
+
+    case 'tc_resource_advanced_filters':
+      $variables['label'] = 'Resource Advanced Filter Label';
+      $block['subject'] = t('Resource Advanced Filters');
+      $block['content'] = theme('tc_resource_advanced_filters', $variables);
       break;
 
     case 'tc_program_features':
@@ -269,6 +285,11 @@ function tc_facets_theme($existing, $type, $theme, $path) {
     'tc_advanced_filters' => array(
       'variables' => array( ),
       'template' => 'templates/tc_advanced_filters'
+    ),
+
+    'tc_resource_advanced_filters' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_resource_advanced_filters'
     ),
 
     'tc_program_features' => array(
