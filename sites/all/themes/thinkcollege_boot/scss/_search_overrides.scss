@@ -165,7 +165,31 @@
 }
 
 
-#block-facetapi-gkkn44mzr0b0a0uvm7labhst3ymihpyc .block-title, #block-facetapi-qvtddqhn4mirms8bzmvb8kcxeq6bq3yg .block-title  {
+#block-facetapi-gkkn44mzr0b0a0uvm7labhst3ymihpyc .block-title,
+#block-facetapi-qvtddqhn4mirms8bzmvb8kcxeq6bq3yg .block-title  {
   display:none
+}
+
+
+// Hide the "Find a college thats right for you + map" block after a search.
+// Hide the "Find a college thats right for you" block after a search.
+body.tc-college-search-results {
+  #block-tc-facets-tc-program-intro-and-map,
+  #block-tc-facets-tc-program-intro-and-map-mobile {
+    display: none;
   }
+}
+/* Don't show map intro on phone size */
+@media (max-width: $screen-sm-min) {
+  #block-tc-facets-tc-program-intro-and-map {
+    display: none;
+  }
+}
+/* Don't show mobile into on non-phone size */
+@media screen and (min-width: 768px) {
+  #block-tc-facets-tc-program-intro-and-map-mobile {
+    display: none;
+  }
+}
+
 
