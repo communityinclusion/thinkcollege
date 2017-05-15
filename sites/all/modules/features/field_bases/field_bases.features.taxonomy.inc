@@ -9,6 +9,29 @@
  */
 function field_bases_taxonomy_default_vocabularies() {
   return array(
+    'audience' => array(
+      'name' => 'Audience',
+      'machine_name' => 'audience',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'authors' => array(
       'name' => 'Authors',
       'machine_name' => 'authors',
@@ -33,7 +56,7 @@ function field_bases_taxonomy_default_vocabularies() {
       ),
     ),
     'categories' => array(
-      'name' => 'Old Site Categories',
+      'name' => 'Categories',
       'machine_name' => 'categories',
       'description' => '',
       'hierarchy' => 0,
