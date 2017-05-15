@@ -122,6 +122,10 @@
     margin-top: 20px;
 
   }
+  /* Hide search button on resource search page */
+  #edit-submit-tc-resource-search {
+    display: none;
+  }
 }
 
 /* Remove search results when no search terms */
