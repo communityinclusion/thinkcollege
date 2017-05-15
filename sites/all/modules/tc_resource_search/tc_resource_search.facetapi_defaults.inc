@@ -27,6 +27,9 @@ function tc_resource_search_facetapi_default_facet_settings() {
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -240,10 +243,10 @@ function tc_resource_search_facetapi_default_facet_settings() {
     'widget' => 'facetapi_checkbox_links',
     'filters' => array(),
     'active_sorts' => array(
-      'active' => 'active',
       'taxonomy_weight' => 'taxonomy_weight',
-      'count' => 0,
+      'active' => 0,
       'display' => 0,
+      'count' => 0,
       'tc_school_type_sort' => 0,
       'tc_disability_sort' => 0,
       'indexed' => 0,
@@ -251,23 +254,23 @@ function tc_resource_search_facetapi_default_facet_settings() {
     ),
     'sort_weight' => array(
       'active' => '-50',
-      'count' => '-47',
+      'taxonomy_weight' => '-49',
       'display' => '-48',
+      'count' => '-47',
       'tc_school_type_sort' => '-46',
       'tc_disability_sort' => '-45',
       'indexed' => '-44',
       'natural' => '-43',
-      'taxonomy_weight' => '-49',
     ),
     'sort_order' => array(
       'active' => '3',
-      'count' => '3',
+      'taxonomy_weight' => '4',
       'display' => '4',
+      'count' => '3',
       'tc_school_type_sort' => '4',
       'tc_disability_sort' => '4',
       'indexed' => '4',
       'natural' => '4',
-      'taxonomy_weight' => '4',
     ),
     'empty_behavior' => 'none',
     'display_count' => 1,
@@ -277,11 +280,14 @@ function tc_resource_search_facetapi_default_facet_settings() {
     'title' => 'Media Types',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'empty_text' => array(
       'value' => '',
       'format' => 'full_html',
     ),
+    'keep_open' => 0,
+    'expand' => 1,
+    'collapsible_children' => 0,
   );
   $export['search_api@tc_resource_index:block:field_resourc_media_types'] = $facet;
 
@@ -349,8 +355,8 @@ function tc_resource_search_facetapi_default_facet_settings() {
       'natural' => 0,
     ),
     'sort_weight' => array(
-      'active' => '-49',
       'taxonomy_weight' => '-50',
+      'active' => '-49',
       'count' => '-48',
       'display' => '-47',
       'tc_school_type_sort' => '-46',
@@ -359,8 +365,8 @@ function tc_resource_search_facetapi_default_facet_settings() {
       'natural' => '-43',
     ),
     'sort_order' => array(
-      'active' => '3',
       'taxonomy_weight' => '4',
+      'active' => '3',
       'count' => '3',
       'display' => '4',
       'tc_school_type_sort' => '4',
@@ -376,11 +382,14 @@ function tc_resource_search_facetapi_default_facet_settings() {
     'title' => 'Publication Types',
     'soft_limit' => '20',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'empty_text' => array(
       'value' => '',
       'format' => 'full_html',
     ),
+    'keep_open' => 0,
+    'expand' => 1,
+    'collapsible_children' => 0,
   );
   $export['search_api@tc_resource_index:block:field_resourc_publication_types'] = $facet;
 
@@ -467,8 +476,8 @@ function tc_resource_search_facetapi_default_facet_settings() {
       ),
     ),
     'active_sorts' => array(
-      'active' => 'active',
       'taxonomy_weight' => 'taxonomy_weight',
+      'active' => 0,
       'natural' => 0,
       'count' => 0,
       'display' => 0,
@@ -477,8 +486,8 @@ function tc_resource_search_facetapi_default_facet_settings() {
       'indexed' => 0,
     ),
     'sort_weight' => array(
-      'taxonomy_weight' => '-49',
-      'active' => '-50',
+      'active' => '-49',
+      'taxonomy_weight' => '-50',
       'natural' => '-48',
       'count' => '-47',
       'display' => '-46',
@@ -487,8 +496,8 @@ function tc_resource_search_facetapi_default_facet_settings() {
       'indexed' => '-43',
     ),
     'sort_order' => array(
-      'taxonomy_weight' => '4',
       'active' => '3',
+      'taxonomy_weight' => '4',
       'natural' => '4',
       'count' => '3',
       'display' => '4',
@@ -504,7 +513,7 @@ function tc_resource_search_facetapi_default_facet_settings() {
     'title' => 'Topics',
     'soft_limit' => '0',
     'nofollow' => 1,
-    'show_expanded' => 0,
+    'show_expanded' => 1,
     'empty_text' => array(
       'value' => '',
       'format' => 'full_html',
