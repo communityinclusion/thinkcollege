@@ -1,0 +1,5 @@
+name = Think College Layouts
+description = Layouts specific to the Think College site.
+core = 7.x
+package = ThinkCollege
+dependencies[] = panels
