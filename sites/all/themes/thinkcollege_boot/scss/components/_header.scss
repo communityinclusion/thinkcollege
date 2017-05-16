@@ -64,12 +64,13 @@ border-color: transparent transparent #B71C1C #B71C1C;}
 
 .navbar-default .navbar-nav > li > .dropdown-menu {
  background-color: $tcblue;
+ color:#fff;
 }
 
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
 	color:#fff;
 }
-.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:active,.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
 	color:#fff;
  background-color: $tclightblue;
 }
@@ -80,7 +81,7 @@ border-color: transparent transparent #B71C1C #B71C1C;}
 
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a,.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
 	color:#fff;
-/*  background-color: #4c8ec9; */
+   background-color: #4c8ec9;
 }
 
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus {
@@ -139,3 +140,68 @@ border-color: transparent transparent #B71C1C #B71C1C;}
 	font-size:1.2em;
 		text-transform: uppercase;
 }
+
+// Navigation.
+
+
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:active,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus
+{ background-color: $tclightblue;color:#fff;}
+
+
+ul.navbar-nav {
+ @media #{$tablet} {
+  margin-left:140px;
+  }
+}
+
+
+.navbar-nav {
+  .dropdown-menu  {
+     li {
+        color:#fff;
+        }
+    border-radius: 0;
+    border:0;
+    padding: 0;
+  }
+}
+
+ul.secondary {
+  float: left;
+  @media #{$tablet} {
+    float: right;
+  }
+}
+
+
+.open > .dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  display: block;
+  background-color: $tcblue;}
+
+
+ul.nav li.dropdown:hover ul.dropdown-menu li.expanded ul.dropdown-menu {display:none;}
+ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {display:block;}
+
+
+
+
+
+ @media (max-width:767px) {
+.navbar-default .navbar-nav .open .dropdown-menu .dropdown-menu {text-indent: 40px;}
+}
+ @media (max-width:767px) {
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:active
+{ background-color: $tclightblue;}
+}
+
+
+.dropdown-menu > li > a {color:#fff;}
+
+
+
+

@@ -286,6 +286,7 @@ function tc_facets_block_view($delta = '') {
     case 'tc_program_intro_and_map':
       $variables['count'] = variable_get('tc_facets_total_programs', 270);
       $variables['states'] = unserialize(variable_get('tc_facets_states_count', 0));
+      $variables['base_url'] = $base_url;
       $block['subject'] = t('Intro text total Programs Available, and Map');
       $block['content'] = theme('tc_program_intro_and_map', $variables);
       break;
@@ -293,6 +294,7 @@ function tc_facets_block_view($delta = '') {
     case 'tc_program_intro_and_map_mobile':
       $variables['info_img'] = file_create_url($pth . '/images/students-on-computers-300w.jpg');
       $variables['count'] = variable_get('tc_facets_total_programs', 270);
+      $variables['base_url'] = $base_url;
       $block['subject'] = t('Intro text total Programs Available, and Map');
       $block['content'] = theme('tc_program_intro_and_map_mobile', $variables);
       break;
