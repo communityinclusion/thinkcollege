@@ -1,0 +1,15 @@
+.field-name-field-tc-learn-sidebar article header { display: none; }
+
+@media (max-width:768px) {
+.node-type-tc-learn .ds-2col-fluid > .group-left { width: 100%;}
+  .node-type-tc-learn .ds-2col-fluid > .group-right { width: 100%;  }
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+.node-type-tc-learn .ds-2col-fluid > .group-left { width: 75%;}
+.node-type-tc-learn .ds-2col-fluid > .group-right { width: 20%;padding-left: 9px; }
+}
+
+@media (min-width: 1200px){
+.node-type-tc-learn .ds-2col-fluid > .group-left { width: 75%; max-width: 900px;}
+.node-type-tc-learn .ds-2col-fluid > .group-right { width: 20%; min-width: 250px;padding-left: 14px; }
+}
