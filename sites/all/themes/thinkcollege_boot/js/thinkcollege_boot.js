@@ -89,4 +89,19 @@ var Drupal = Drupal || {};
     }
   };
 
+
+  Drupal.behaviors.tcLearnVidWidth = {
+      attach: function (context) {
+    if ($('.field-name-field-tc-learn-sidebar').length) {
+      var sidebarWid = $('.field-name-field-tc-learn-sidebar').innerWidth();
+    $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
+
+$this.width() = sidebarWid;
+$this.height() = sidebarWid * .56;
+
+   });
+ }
+ }S
+  };
+
 })(jQuery, Drupal);
