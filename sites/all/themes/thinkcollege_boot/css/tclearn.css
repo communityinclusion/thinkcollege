@@ -1,9 +1,9 @@
 .field-name-field-tc-learn-sidebar article header { display: none; }
+  .node-type-tc-learn .ds-2col-fluid > .group-right border
 
-@media (max-width:768px) {
 .node-type-tc-learn .ds-2col-fluid > .group-left { width: 100%;}
   .node-type-tc-learn .ds-2col-fluid > .group-right { width: 100%;  }
-}
+
 @media (max-width: 1200px) and (min-width: 768px) {
 .node-type-tc-learn .ds-2col-fluid > .group-left { width: 75%;}
 .node-type-tc-learn .ds-2col-fluid > .group-right { width: 20%;padding-left: 9px; }
@@ -13,3 +13,8 @@
 .node-type-tc-learn .ds-2col-fluid > .group-left { width: 75%; max-width: 900px;}
 .node-type-tc-learn .ds-2col-fluid > .group-right { width: 20%; min-width: 250px;padding-left: 14px; }
 }
+.field-name-field-tc-learn-sidebar {border-radius: 9px 9px 9px 9px;
+-moz-border-radius: 9px 9px 9px 9px;
+-webkit-border-radius: 9px 9px 9px 9px;
+border: 3px solid #20527C;}
+.field-name-field-tc-learn-sidebar .field-items > .field-item { margin: 8px 5px 14px 5px}
