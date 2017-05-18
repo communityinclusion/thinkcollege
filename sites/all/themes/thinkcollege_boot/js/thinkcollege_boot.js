@@ -93,7 +93,7 @@ var Drupal = Drupal || {};
   Drupal.behaviors.tcLearnVidWidth = {
       attach: function (context) {
     if ($('.field-name-field-tc-learn-sidebar').length) {
-      var sidebarWid = $('.field-name-field-tc-learn-sidebar').innerWidth();
+      var sidebarWid = $(this).parent().width();
     $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
 var sidebarHeight = (sidebarWid * .56);
  $(this).width(sidebarWid);
