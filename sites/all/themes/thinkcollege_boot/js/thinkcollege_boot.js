@@ -93,16 +93,19 @@ var Drupal = Drupal || {};
   Drupal.behaviors.tcLearnVidWidth = {
       attach: function (context) {
     if ($('.field-name-field-tc-learn-sidebar').length) {
+      window.addEventListener('load', function() { resizeVids() });
+      window.addEventListener('resize', function() { resizeVids() });
 
-    $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
-        var sidebarWid = $(this).closest('div').width();
-var sidebarHeight = (sidebarWid * .56);
- $(this).width(sidebarWid);
-$(this).height(sidebarHeight);
-
-   });
  }
  }
   };
+function resizeVids() {
+  $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
+      var sidebarWid = $(this).closest('div').width();
+  var sidebarHeight = (sidebarWid * .56);
+  $(this).width(sidebarWid);
+  $(this).height(sidebarHeight);
 
+  });
+}
 })(jQuery, Drupal);
