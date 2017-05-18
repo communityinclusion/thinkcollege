@@ -90,6 +90,7 @@ var Drupal = Drupal || {};
   };
 
 
+
   Drupal.behaviors.tcLearnVidWidth = {
       attach: function (context) {
     if ($('.field-name-field-tc-learn-sidebar').length) {
