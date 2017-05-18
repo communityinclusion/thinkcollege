@@ -95,7 +95,7 @@ var Drupal = Drupal || {};
     if ($('.field-name-field-tc-learn-sidebar').length) {
       var sidebarWid = $('.field-name-field-tc-learn-sidebar').innerWidth();
     $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
-var sidebarHeight = ((sidebarWid * .56) - 6);
+sidebarHeight = (sidebarWid * .56);
  $(this).width(sidebarWid);
 $(this).height(sidebarHeight);
 
