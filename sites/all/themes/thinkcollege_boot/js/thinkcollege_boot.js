@@ -101,7 +101,7 @@ $(this).height(sidebarHeight);
 
    });
  }
- }S
+ }
   };
 
 })(jQuery, Drupal);
