@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tc_learn2 feature.
+ */
+
+include_once 'tc_learn2.features.inc';
