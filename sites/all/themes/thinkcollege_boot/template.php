@@ -275,6 +275,23 @@ function thinkcollege_boot_preprocess_block(&$vars) {
 }
 
 /**
+ * Implements template_preprocess_panels_pane().
+ */
+function thinkcollege_boot_preprocess_panels_pane(&$vars) {
+  /**
+   * Add JavaScript from https://github.com/kevinburke/customize-twitter-1.1 when
+   * Twitter block is rendered in order to add styling.
+   */
+  $pane = $vars['pane'];
+  if (isset($pane->subtype)) {
+    if ($pane->subtype == 'twitter_block-1') {
+      drupal_add_js(drupal_get_path('theme', 'thinkcollege_boot') . '/js/customize-twitter-1.1.min.js', array('scope' => 'footer', 'weight' => 10));
+      drupal_add_js('var options = { "url": "' . base_path() . drupal_get_path('theme', 'thinkcollege_boot') . '/css/twitter_block.css' . '" }; CustomizeTwitterWidget(options);', array('type' => 'inline', 'scope' => 'footer', 'weight' => 20));
+    }
+  }
+}
+
+/**
  * Implements theme_link().
  */
 function thinkcollege_boot_link($vars) {
