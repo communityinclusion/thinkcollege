@@ -1,24 +1,30 @@
 //
-// What's New
+// What's New views styles
 //
 
 .view-whats-new {
 // Landing page content pane
   &.content-pane {
   	.view-content {
-  		@include flexbox;
-  		@include flex-wrap(wrap);
-  		@include justify-content(space-between);
+  		@media #{$tablet} {
+	  		@include flexbox;
+	  		@include flex-wrap(wrap);
+	  		@include justify-content(space-between);
+  		}
   	}
   	.views-row {
-  		@extend %box-orange;
+  		@extend %box-blue;
   		padding: 0 10px 10px 10px;
 	    @media #{$tablet} {
 	  		width: 22%;
 	    }
+	    @media #{$wide} {
+	    	width: 23%;
+	    }
   	}
 
     .views-field-field-teaser-image {
+    	border-bottom: 1px solid $black;
   		margin: 0 -10px 15px -10px;
 	  	img {
 	  		width: 100%;
@@ -30,9 +36,19 @@
 	    font-size: 20px;
 	    margin-bottom: 5px;
 	    margin-top: 10px;
+	    a {
+	    	color: $black;
+	    }
     }
     .views-field-body {
     	font-size: 14px;
     }
   }
+}
+
+// Home page pane title
+.pane-whats-new-panel-pane-1 {
+	.pane-title {
+		@extend %title-underbar;
+	}
 }

@@ -38,9 +38,10 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['label'] = '';
+  $handler->display->display_options['fields']['event_calendar_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['event_calendar_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['event_calendar_date']['settings'] = array(
-    'format_type' => 'tc_month_abbrev_day_and_full_year',
+    'format_type' => 'search_api_facetapi_YEAR',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -52,21 +53,51 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_event_calendar_location']['id'] = 'field_event_calendar_location';
   $handler->display->display_options['fields']['field_event_calendar_location']['table'] = 'field_data_field_event_calendar_location';
   $handler->display->display_options['fields']['field_event_calendar_location']['field'] = 'field_event_calendar_location';
   $handler->display->display_options['fields']['field_event_calendar_location']['label'] = '';
+  $handler->display->display_options['fields']['field_event_calendar_location']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_calendar_location']['element_label_colon'] = FALSE;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'More information >';
+  /* Field: Date div */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Date div';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[event_calendar_date]';
+  $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
+  $handler->display->display_options['fields']['nothing']['element_class'] = 'event-date';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
+  /* Field: Text div */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Text div';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<h3 class="title">[title]</h3>
+<p class="location">[field_event_calendar_location]</p>
+<span class="link">[view_node]</span>';
+  $handler->display->display_options['fields']['nothing_1']['element_type'] = 'div';
+  $handler->display->display_options['fields']['nothing_1']['element_class'] = 'event-text';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Date -  start date (event_calendar_date) */
   $handler->display->display_options['sorts']['event_calendar_date_value']['id'] = 'event_calendar_date_value';
   $handler->display->display_options['sorts']['event_calendar_date_value']['table'] = 'field_data_event_calendar_date';
@@ -95,6 +126,8 @@ function landing_pages_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['pane_category']['name'] = 'ThinkCollege';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['upcoming_events'] = $view;
