@@ -1,0 +1,14 @@
+// Blocks
+
+%box-defaults {
+	@include box-shadow(0 0 7px 0 $gray-light);
+	@include border-radius(4px);
+  background-color: $white;
+  border-top: 10px solid $tcblue;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+}
+%box-orange {
+	@extend %box-defaults;
+	border-top-color: $tcorange;
+}

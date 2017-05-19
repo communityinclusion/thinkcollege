@@ -1,3 +1,12 @@
+//
+// Variables settings
+//
+
+// Basic colors
+$white: #fff;
+$gray-light: #AAA;
+$black: #000;
+
 // ThinkCollege colors
 $tcorange: #C96B29;
 $tcblue: #20527C;
@@ -7,12 +16,14 @@ $mdgray: #797A7D;
 $lightgray: #d5d5d5;
 $offwhite: #fafafa;
 
-
 $brand-primary:         #4c8ec9 !default;
 $brand-success:         #87a378 !default;
 $brand-info:            #20527c !default;
 $brand-warning:         #d47600 !default;
 $brand-danger:          #e3ce9a !default;
+
+// Additional colors
+$purple-dark: #331d35;
 
 // Media query variables.
 $tablet:  "screen and (min-width: 768px)";
@@ -25,6 +36,12 @@ $wide:    "screen and (min-width: 1200px)";
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
 }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+   -khtml-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
 
 // Typography
 $lato-font-stack: 'Lato', sans-serif !default;
@@ -33,11 +50,26 @@ $museo-cond-stack: 'museo-sans-condensed',sans-serif;
 $font-size-base: 16px !default;
 
 
+//
+// Imports
+//
+
+// Utilities
+@import "extends";
+@import "mixins-flex";
+
+// Components
 @import "components/program_record";
 @import 'components/header';
 @import 'components/footer';
 @import 'components/blocks';
 @import 'components/resource';
+@import 'components/views-whats-new';
+
+
+//
+// Base styles / overrides
+//
 
 html {
   &.overlay-open .navbar-fixed-top {
