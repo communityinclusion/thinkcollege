@@ -234,6 +234,30 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-2f95e191-86a0-4b5c-9543-525438d214eb'] = $pane;
   $display->panels['row4left'][0] = 'new-2f95e191-86a0-4b5c-9543-525438d214eb';
   $pane = new stdClass();
+  $pane->pid = 'new-5df125e8-9f84-432c-8d9e-02e3a6e25e5b';
+  $pane->panel = 'row4left';
+  $pane->type = 'block';
+  $pane->subtype = 'twitter_block-1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'Twitter',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => 'tc-home-twitter-block',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '5df125e8-9f84-432c-8d9e-02e3a6e25e5b';
+  $display->content['new-5df125e8-9f84-432c-8d9e-02e3a6e25e5b'] = $pane;
+  $display->panels['row4left'][1] = 'new-5df125e8-9f84-432c-8d9e-02e3a6e25e5b';
+  $pane = new stdClass();
   $pane->pid = 'new-09b11373-f669-4a20-8a57-51a3b1e5314f';
   $pane->panel = 'row4right';
   $pane->type = 'custom';
