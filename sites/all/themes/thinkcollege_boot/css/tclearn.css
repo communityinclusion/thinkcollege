@@ -18,6 +18,7 @@
 -webkit-border-radius: 9px 9px 9px 9px;
 border: 3px solid #20527C;}
 .field-name-field-tc-learn-sidebar .field-items > .field-item { margin: 8px 5px 14px 5px}
+.field-name-field-tc-learn-sidebar iframe {margin-left: -5px;}
 .book-navigation .menu.nav { display: none; }
 .toggleMe.wrong { background-color: #ffe2e0; color: #990000; border: 1px solid #990000; }
 .toggleMe.right { background-color: #e7ffe7; border: 1px solid #336633; }
@@ -25,4 +26,3 @@ border: 3px solid #20527C;}
 .featureText { line-height: 1.4em; letter-spacing: 1px; font-size: 85%; margin: 5px 8px;}
 .clearfix {display: inline-block;}
 .checkmark { position: absolute; width: 30px; height: 30px; margin-left: -65px; }
-
