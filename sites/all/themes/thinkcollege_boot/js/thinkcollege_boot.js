@@ -103,7 +103,7 @@ var Drupal = Drupal || {};
 function resizeVids() {
   $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
       var sidebarWidinit = $(this).closest('div.field-name-field-tc-learn-sidebar').width();
-      sidebarWid = (sidebarWidinit - 10);
+    var  sidebarWid = (sidebarWidinit - 10);
   var sidebarHeight = (sidebarWid * .56);
   $(this).width(sidebarWid);
   $(this).height(sidebarHeight);
