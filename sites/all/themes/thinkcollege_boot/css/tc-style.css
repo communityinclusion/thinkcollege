@@ -353,8 +353,9 @@ header {
 	}
 .ie-intro {
 	background-color: #C96B29;
-	padding: 15px; height:470px;
-    border: #fff solid 5px;
+	padding: 15px;
+	height:507px;
+  border: #fff solid 5px;
     }
 a.divLink {
     width: 100%;
@@ -418,41 +419,45 @@ a.divLink {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background: rgba(255,255,255, 0.3);
     text-align: left;
     display: block;
-    width: 40%;
+    width: 42%;
     height:100%;
 
 }
+
+
+
+
+
+
   h1.headline {
 
-    font-size:3.0em;
+ font-size:2.5em;
     color:#fff;
   }
 
 
-@media (max-width: 992px) {
-		  h1.headline {
+ h1.headline span {
 
-    font-size:2.5em;
-    color:#fff;
+ background-color: #C96B29;
+
   }
-	}
 
- @media (max-width: 768px) {
 
+
+ @media (max-width: 1200px) {
 	  h1.headline {
 
-    font-size:2.5em;
+    font-size:2em;
     color:#fff;
   }
   }
 
 
- @media (max-width: 480px) {
-
+ @media (max-width: 979px) {
 	  h1.headline {
 
     font-size:1.5em;
@@ -460,9 +465,23 @@ a.divLink {
   }
   }
 
+ @media (max-width: 767px) {
 
+	  h1.headline {
 
+    font-size:2.0em;
+    color:#fff;
+  }
+  }
 
+ @media (max-width: 480px) {
+
+	  h1.headline {
+
+    font-size:1em;
+    color:#fff;
+  }
+  }
 
 
 
