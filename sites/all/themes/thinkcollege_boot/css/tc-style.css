@@ -10,6 +10,13 @@ h1,h2,h3,h4,h5,h6 {
 	font-family:'museo-sans',sans-serif;
 }
 
+h3.block-title, h3.pane-title {
+    text-align: left;
+    border-bottom: #ccc 1px solid;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'museo-sans-condensed', sans-serif;
+    }
 
 #section_banner {
 
@@ -318,6 +325,149 @@ header {
   margin-bottom: 10px;
   background-color: #f2f2f2;
   }
+
+
+
+/*** Landing Page ***/
+.icontile {
+	background-color: #20527C;
+	border:#fff solid 5px;
+	padding:10px;
+	position: relative;
+	color:#fff;
+}
+
+.icontile h3 {
+	color:#fff;
+	text-align:center
+	}
+
+.icontile:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+    background-color: #C96B29
+}
+.ie-feature {
+	color:#fff;
+	}
+.ie-intro {
+	background-color: #C96B29;
+	padding: 15px; height:470px;
+    border: #fff solid 5px;
+    }
+a.divLink {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE */
+}
+
+
+
+
+@media (max-width: 992px) {
+  .ie-intro {
+  height:770px;
+  }
+}
+
+
+@media (max-width: 768px) {
+   .ie-intro {
+   	height:100%;
+   	}
+ .ie-intro ul li {
+	 display:inline-block;
+	 }
+ .ie-intro ul li:before {
+	 content: '\ffed';
+	 margin-right: .5em;
+	 padding-left:15px;
+	 }
+
+    .icontile img{
+	width:75px;
+	}
+
+}
+
+
+
+.one-element {
+
+  position: relative;
+
+   }
+ .one-element img {
+    width: 100%;
+    height: auto;
+
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    background: rgba(255,255,255, 0.3);
+    text-align: left;
+    display: block;
+    width: 40%;
+    height:100%;
+
+}
+  h1.headline {
+
+    font-size:3.0em;
+    color:#fff;
+  }
+
+
+@media (max-width: 992px) {
+		  h1.headline {
+
+    font-size:2.5em;
+    color:#fff;
+  }
+	}
+
+ @media (max-width: 768px) {
+
+	  h1.headline {
+
+    font-size:2.5em;
+    color:#fff;
+  }
+  }
+
+
+ @media (max-width: 480px) {
+
+	  h1.headline {
+
+    font-size:1.5em;
+    color:#fff;
+  }
+  }
+
+
+
+
+
+
+
+
+
 
 /** Map Styes **/
 
