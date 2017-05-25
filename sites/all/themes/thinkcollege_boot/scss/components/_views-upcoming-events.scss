@@ -1,0 +1,60 @@
+//
+// Upcoming Events views styles
+//
+
+.pane-upcoming-events-panel-pane-1 {
+	.pane-title {
+		@extend %title-underbar;
+	}
+}
+
+.view-upcoming-events {
+	.view-content {
+		@media #{$normal} {
+			@include flexbox;
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+		}
+	}
+	.views-row {
+		@include box-shadow(0 0 7px 0 $gray-light);
+		margin-bottom: 20px;
+		margin-top: 5px;
+		padding: 10px;
+    @media #{$normal} {
+  		width: 47.5%;
+    }
+    @media #{$wide} {
+    	width: 48%;
+    }
+	}
+	.event-date {
+		background-color: $tcblue;
+		color: $white;
+		float: left;
+		padding: 5px;
+		text-align: center;
+		width: 60px;
+	}
+	.event-text {
+		border-left: 4px solid $tcblue;
+		margin-left: 70px;
+		padding-left: 10px;
+		@media #{$normal} {
+			height: 100%;
+		}
+		.title {
+			font-size: 18px;
+			font-weight: 600;
+			margin-top: 0;
+		}
+		.location {
+			color: $tcorange;
+		}
+		.link {
+			display: block;
+			font-weight: 600;
+			text-align: right;
+		}
+	}
+}

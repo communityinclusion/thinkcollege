@@ -160,6 +160,9 @@ function thinkcollege_boot_preprocess_page(&$vars) {
     $menu['#theme_wrappers'][0] = 'menu_tree__primary';
     $vars['primary_nav'] = $menu;
   }
+
+  // Add logos template
+  $vars['think_college_logo'] = file_create_url(drupal_get_path('theme', 'thinkcollege_boot') . '/images/thinkcollege_new_white-sm.png');
 }
 
 /**
@@ -267,6 +270,23 @@ function thinkcollege_boot_preprocess_block(&$vars) {
      */
     if ($vars['title_suffix']['contextual_links']['#element']['#facet']['field'] == "tc_tpsid") {
       $vars['classes_array'][] = "well well-sm";
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_panels_pane().
+ */
+function thinkcollege_boot_preprocess_panels_pane(&$vars) {
+  /**
+   * Add JavaScript from https://github.com/kevinburke/customize-twitter-1.1 when
+   * Twitter block is rendered in order to add styling.
+   */
+  $pane = $vars['pane'];
+  if (isset($pane->css['css_id'])) {
+    if ($pane->css['css_id'] == 'tc-home-twitter-block') {
+      drupal_add_js(drupal_get_path('theme', 'thinkcollege_boot') . '/js/customize-twitter-1.1.min.js', array('scope' => 'footer', 'weight' => 10));
+      drupal_add_js('var options = { "url": "' . base_path() . drupal_get_path('theme', 'thinkcollege_boot') . '/css/twitter_block.css' . '" }; CustomizeTwitterWidget(options);', array('type' => 'inline', 'scope' => 'footer', 'weight' => 20));
     }
   }
 }
