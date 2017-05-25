@@ -26,6 +26,7 @@ function tc_custom_facets_facetapi_widgets() {
 function tc_custom_facets_theme() {
   return array(
 
+    // Theme for the whole set of nested facet items.
     'tc_custom_facets_item_list__nested_facet' => array(
 //      'render element' => 'element',
       'variables' => array(
@@ -36,6 +37,7 @@ function tc_custom_facets_theme() {
         'childof' => null),
     ),
 
+    // Called for each individual facet if inactive
     'facetapi_nested_links_inactive' => array(
       'variables' => array(
         'text' => NULL,
@@ -46,6 +48,7 @@ function tc_custom_facets_theme() {
       'file' => 'tc_custom_facets_facetapi_nested_links.theme.inc',
     ),
 
+    // Called for each individual facet if active
     'facetapi_nested_links_active' => array(
       'variables' => array(
         'text' => NULL,
@@ -89,7 +92,6 @@ function theme_tc_custom_facets_item_list__nested_facet($variables) {
   $attributes = $variables['attributes'];
   $childof = $variables['childof'];
 
-  dsm("freeeeeed");
   // Only output the list container and title, if there are any list items.
   // Check to see whether the block title exists before adding a header.
   // Empty headers are not semantic and present accessibility challenges.
@@ -97,7 +99,7 @@ function theme_tc_custom_facets_item_list__nested_facet($variables) {
   if ($childof != null) {
     $parent_attribute = 'child-of-' . $childof;
   }
-  $output = '<div class="item-list ' . $parent_attribute .'">';
+  $output = '<div class="item-list collapse in" id="' . $parent_attribute .'">';
   if (isset($title) && $title !== '') {
     $output .= '<h3>' . $title . '</h3>';
   }
