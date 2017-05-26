@@ -13,7 +13,7 @@
   		}
   	}
   	.views-row {
-  		@extend %box-blue;
+  		@extend %box-orange;
   		padding: 0 10px 10px 10px;
 	    @media #{$tablet} {
 	  		width: 22%;
@@ -24,21 +24,17 @@
   	}
 
     .views-field-field-teaser-image {
-    	border-bottom: 1px solid $black;
   		margin: 0 -10px 15px -10px;
 	  	img {
 	  		width: 100%;
 	  	}
     }
     .title {
-	    font-family: museo-sans, sans-serif;
+	    font-family: $museo-sans-stack;
 	    font-weight: 500;
 	    font-size: 20px;
 	    margin-bottom: 5px;
 	    margin-top: 10px;
-	    a {
-	    	color: $black;
-	    }
     }
     .views-field-body {
     	font-size: 14px;

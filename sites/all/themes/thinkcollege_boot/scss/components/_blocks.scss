@@ -97,4 +97,10 @@
 	@extend %box-defaults;
 	border-radius:4px!important;
 	border-top-color: $tcorange;
+  &-orange {
+    @extend %box-orange;
+  }
+  &-blue {
+    @extend %box-blue;
+  }
 }

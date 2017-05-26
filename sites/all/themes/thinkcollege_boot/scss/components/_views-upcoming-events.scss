@@ -34,7 +34,14 @@
 		float: left;
 		padding: 5px;
 		text-align: center;
+		text-transform: uppercase;
 		width: 60px;
+	}
+	.date-month-day {
+		font-size: 14px;
+	}
+	.date-year {
+		font-size: 18px;
 	}
 	.event-text {
 		border-left: 4px solid $tcblue;
