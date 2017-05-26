@@ -16,11 +16,11 @@
   </p>
 
   <p>
-    Once you have located colleges you are interested in, download our guide
-    <a href="http://www.thinkcollege.net/images/stories/HowTo%20TC_F.pdf ">
-      How To Think College guide on Conducting a College Search</a>.
+    Once you have located colleges you are interested in, download the
+    <a href="http://www.thinkcollege.net/images/stories/HowTo%20TC_F.pdf">
+      How To Think College guide to Conducting a College Search [PDF]</a>.
     It provides you with the right questions to ask in order to get the
-    answers you need about each program on your list.
+    answers you need about each program on your list.</p>
 
   <hr/>
 

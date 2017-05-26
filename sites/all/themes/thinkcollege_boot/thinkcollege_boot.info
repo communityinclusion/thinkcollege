@@ -29,7 +29,7 @@ stylesheets[all][] = css/tc-style.css
 ;stylesheets[all][] = overrides.css
 ;stylesheets[all][] = css/bootstrap-accessibility.css
 ;stylesheets[print][] = css/print.css
-
+stylesheets[all][] = css/tclearn.css
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;

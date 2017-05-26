@@ -89,4 +89,25 @@ var Drupal = Drupal || {};
     }
   };
 
+
+
+  Drupal.behaviors.tcLearnVidWidth = {
+      attach: function (context) {
+    if ($('.field-name-field-tc-learn-sidebar').length) {
+      window.addEventListener('load', function() { resizeVids() });
+      window.addEventListener('resize', function() { resizeVids() });
+
+ }
+ }
+  };
+function resizeVids() {
+  $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
+      var sidebarWidinit = $(this).closest('div.field-name-field-tc-learn-sidebar').width();
+    var  sidebarWid = (sidebarWidinit - 10);
+  var sidebarHeight = (sidebarWid * .56);
+  $(this).width(sidebarWid);
+  $(this).height(sidebarHeight);
+
+  });
+}
 })(jQuery, Drupal);
