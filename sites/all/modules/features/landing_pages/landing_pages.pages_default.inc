@@ -109,10 +109,17 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'This is the second title',
-    'title' => 'Title',
-    'title_heading' => 'h2',
-    'body' => 'How about some more text. How much text? I don\'t know - how much do you want?',
-    'format' => 'plain_text',
+    'title' => 'This is a Title',
+    'title_heading' => 'h3',
+    'body' => '<div class="media">
+<div class="media-left"><a href="#"><img alt="placeholder image" class="media-object" src="http://placehold.it/100x100" /> </a></div>
+
+<div class="media-body">
+<p class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, vitae doloremque voluptatum doloribus neque assumenda velit sapiente.</p>
+</div>
+</div>
+',
+    'format' => 'full_html',
     'substitute' => TRUE,
   );
   $pane->cache = array();
@@ -121,7 +128,7 @@ function landing_pages_default_page_manager_pages() {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'well',
+    'css_class' => 'panel panel-default',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -138,10 +145,17 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'This is a title',
-    'title' => 'Title',
-    'title_heading' => 'h2',
-    'body' => 'asdfas sadf asf asfasfsadfasdf ',
-    'format' => 'plain_text',
+    'title' => 'This is a Title',
+    'title_heading' => 'h3',
+    'body' => '<div class="media">
+<div class="media-left"><a href="#"><img alt="placeholder image" class="media-object" src="http://placehold.it/100x100" /> </a></div>
+
+<div class="media-body">
+<p class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, vitae doloremque voluptatum doloribus neque assumenda velit sapiente.</p>
+</div>
+</div>
+',
+    'format' => 'full_html',
     'substitute' => TRUE,
   );
   $pane->cache = array();
@@ -150,7 +164,7 @@ function landing_pages_default_page_manager_pages() {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'well',
+    'css_class' => 'panel panel-default',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -188,84 +202,62 @@ function landing_pages_default_page_manager_pages() {
     'admin_title' => 'Innovation Exchange',
     'title' => 'Innovation Exchange',
     'title_heading' => 'h3',
-    'body' => ' <div class="container ie-feature">
-	<div class="row">
-		<div class="col-md-3 col-sm-4 ie-intro">
+    'body' => '<div class="container ie-feature">
+<div class="row">
+<div class="col-md-3 col-sm-4 ie-intro">
+<h3 class="block-title">Click on a Topic to Find:</h3>
 
-
-				<h3 class="block-title">Click on a Topic
-to Find:</h3>
-
-	<ul>
-		<li class="lead">Topic Overviews</li>
+<ul>
+	<li class="lead">Topic Overviews</li>
 	<li class="lead">Key Resources</li>
 	<li class="lead">Related Websites</li>
 	<li class="lead">Affinity Groups</li>
 	<li class="lead">FAQ’s</li>
-	</ul>
+</ul>
+</div>
 
-
-
-
-
-		</div>
-		<div class="col-md-9 col-sm-8">
-			<div class="row">
-		<div class="col-md-4 col-sm-6 icontile">
-
-						 <h3>Employment</h3>
-
-						<img class="img-responsive"  src="http://themajorlift.com/dev/img/ie-employment.svg"  style="margin:0 auto;max-width:150px" />
- <p><a class="divLink" href="#">Webpage URL</a></p>
-
-				</div>
+<div class="col-md-9 col-sm-8">
+<div class="row">
+<div class="col-md-4 col-sm-6 icontile">
+<h3>Employment</h3>
+<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-employment.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="#">Webpage URL</a></p>
+</div>
 
 <div class="col-md-4 col-sm-6 icontile">
+<h3>Paying for College</h3>
+<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-financial-aid.svg" style="margin:0 auto;max-width:150px" width="150px" />
+<p><a class="divLink" href="#">Webpage URL</a></p>
+</div>
 
-
-						 <h3>Paying for College</h3>
-					<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-financial-aid.svg" width="150px" style="margin:0 auto;max-width:150px" />
- <p><a class="divLink" href="#">Webpage URL</a></p>
-
-				</div>
 <div class="col-md-4 col-sm-6 icontile">
+<h3>Vocational Rehab</h3>
+<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-transition.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="#">Webpage URL</a></p>
+</div>
 
-						  <h3>Vocational Rehab</h3>
-					<img class="img-responsive"  src="http://themajorlift.com/dev/img/ie-transition.svg" style="margin:0 auto;max-width:150px" />
- <p><a class="divLink" href="#">Webpage URL</a></p>
+<div class="col-md-4 col-sm-6 icontile">
+<h3>For Families</h3>
+<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-family.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="#">Webpage URL</a></p>
+</div>
 
-				</div>
+<div class="col-md-4 col-sm-6 icontile">
+<h3>Choose a Program</h3>
+<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-home.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="#">Webpage URL</a></p>
+</div>
 
-			<div class="col-md-4 col-sm-6 icontile">
-
-
-						  <h3>For Families</h3>
-						<img class="img-responsive"  src="http://themajorlift.com/dev/img/ie-family.svg" style="margin:0 auto;max-width:150px" />
- <p><a class="divLink" href="#">Webpage URL</a></p>
-
-				</div>
-			<div class="col-md-4 col-sm-6 icontile">
-
-
-						 <h3>Choose a Program</h3>
-						 	<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-home.svg" style="margin:0 auto;max-width:150px" />
- <p><a class="divLink" href="#">Webpage URL</a></p>
-
-				</div>
-		<div class="col-md-4 col-sm-6 icontile">
-
-
-						 <h3>Starting a Program</h3>
-						  <img class="img-responsive"  src="http://themajorlift.com/dev/img/ie-academic-building.svg" style="margin:0 auto;max-width:150px" />
- <p><a class="divLink" href="#">Webpage URL</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-</div>',
+<div class="col-md-4 col-sm-6 icontile">
+<h3>Starting a Program</h3>
+<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-academic-building.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="#">Webpage URL</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
@@ -289,9 +281,10 @@ to Find:</h3>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'College search image',
-    'title' => 'College search',
+    'title' => '',
     'title_heading' => 'h2',
-    'body' => 'There\'s going to be a big image in here.',
+    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/images/collegesearch-v3.png" /></a></p>
+',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
@@ -346,8 +339,9 @@ to Find:</h3>
   $pane->configuration = array(
     'admin_title' => 'Twitter',
     'title' => 'Twitter feed by ThinkCollegeICI',
-    'title_heading' => 'h2',
-    'body' => '<a class="twitter-timeline" data-height="500" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>',
+    'title_heading' => 'h3',
+    'body' => '<p><a class="twitter-timeline" data-height="500" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
@@ -357,7 +351,7 @@ to Find:</h3>
   );
   $pane->css = array(
     'css_id' => 'tc-home-twitter-block',
-    'css_class' => '',
+    'css_class' => 'box',
   );
   $pane->extras = array();
   $pane->position = 1;
