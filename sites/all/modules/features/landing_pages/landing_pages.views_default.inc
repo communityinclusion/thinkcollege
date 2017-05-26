@@ -33,15 +33,32 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Date */
+  /* Field: Date: Month + day */
   $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date']['ui_name'] = 'Date: Month + day';
   $handler->display->display_options['fields']['event_calendar_date']['label'] = '';
   $handler->display->display_options['fields']['event_calendar_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['event_calendar_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['event_calendar_date']['settings'] = array(
-    'format_type' => 'search_api_facetapi_YEAR',
+    'format_type' => 'month_day',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Date: Year */
+  $handler->display->display_options['fields']['event_calendar_date_2']['id'] = 'event_calendar_date_2';
+  $handler->display->display_options['fields']['event_calendar_date_2']['table'] = 'field_data_event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date_2']['field'] = 'event_calendar_date';
+  $handler->display->display_options['fields']['event_calendar_date_2']['ui_name'] = 'Date: Year';
+  $handler->display->display_options['fields']['event_calendar_date_2']['label'] = '';
+  $handler->display->display_options['fields']['event_calendar_date_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['event_calendar_date_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['event_calendar_date_2']['settings'] = array(
+    'format_type' => 'year',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -78,7 +95,8 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Date div';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[event_calendar_date]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="date-month-day">[event_calendar_date]</span>
+<span class="date-year">[event_calendar_date_2]</span>';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_class'] = 'event-date';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
