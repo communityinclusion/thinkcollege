@@ -311,6 +311,7 @@ function landing_pages_default_page_manager_pages() {
     'title' => 'Join the conversation',
     'title_heading' => 'h3',
     'body' => '<p>Connect with professionals, parents and students interested in postsecondary education for students with intellectual disabilities.</p>
+<p class="rtecenter"><a class="btn btn-primary" href="#" role="button">Sign up</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -1194,7 +1195,7 @@ text.hawaii {font-size: 14px;}
      y="264.15729">CA</text>
      </a> </g>
 
- 
+
 
 
 <g>
