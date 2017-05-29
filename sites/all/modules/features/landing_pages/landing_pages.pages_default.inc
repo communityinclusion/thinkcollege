@@ -300,6 +300,27 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-57641ce9-166f-488c-89f0-2a32066bb5d9'] = $pane;
   $display->panels['row3left'][0] = 'new-57641ce9-166f-488c-89f0-2a32066bb5d9';
   $pane = new stdClass();
+  $pane->pid = 'new-120fe444-ce23-4273-81b1-1b9fe6e7c0c6';
+  $pane->panel = 'row3right';
+  $pane->type = 'block';
+  $pane->subtype = 'tc_resource-tc_resource_find';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'Find a Resource',
+    'override_title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '120fe444-ce23-4273-81b1-1b9fe6e7c0c6';
+  $display->content['new-120fe444-ce23-4273-81b1-1b9fe6e7c0c6'] = $pane;
+  $display->panels['row3right'][0] = 'new-120fe444-ce23-4273-81b1-1b9fe6e7c0c6';
+  $pane = new stdClass();
   $pane->pid = 'new-2f95e191-86a0-4b5c-9543-525438d214eb';
   $pane->panel = 'row4left';
   $pane->type = 'custom';

@@ -180,3 +180,94 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
 
   return $element;
 }
+
+
+
+/**
+ * Implements hook_block_info().
+ */
+function tc_resource_block_info() {
+  $blocks = array();
+
+  $blocks['tc_resource_find'] = array(
+    'info' => t('TC Resource: Find a Resource'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function tc_resource_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'tc_resource_find':
+      $block['subject'] = t('Find a Resource');
+      $block['content'] = drupal_get_form('_tc_resource_find_block');
+      break;
+  }
+
+  return $block;
+}
+
+function _tc_resource_find_block() {
+  $form['search_api_views_fulltext'] = array(
+    '#type' => 'textfield',
+    //'#title' => t('Search'),
+    '#attributes' => array(
+      'placeholder' => t('SEARCH'),
+    ),
+  );
+
+  module_load_include('inc', 'field_ui', 'field_ui.admin');
+  $entity_type = 'node';
+  $bundle = 'resource';
+  $field_name = 'field_resourc_topics';
+  $field = field_info_field($field_name);
+  $instance = field_info_instance($entity_type, $field_name, $bundle);
+  $form_state = array();
+  $form += field_ui_default_value_widget($field, $instance, $form, $form_state);
+  $form[$field_name]['und']['#multiple'] = FALSE;
+  $form[$field_name]['und']['#title'] = t('Topic');
+  $form[$field_name]['und']['#options']['_none'] = t('Select Topic...');
+
+  $field_name = 'field_resourc_media_types';
+  $field = field_info_field($field_name);
+  $instance = field_info_instance($entity_type, $field_name, $bundle);
+  $form_state = array();
+  $form += field_ui_default_value_widget($field, $instance, $form, $form_state);
+  $form[$field_name]['und']['#multiple'] = FALSE;
+  $form[$field_name]['und']['#title'] = t('Media type');
+  $form[$field_name]['und']['#options']['_none'] = t('Select Media Type...');
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Search'),
+    '#weight' => 99,
+  );
+
+  return $form;
+}
+
+function _tc_resource_find_block_submit($form, &$form_state) {
+  $query_parameters = array();
+
+  if ($form_state['values']['search_api_views_fulltext'] != '') {
+    $query_parameters['search_api_views_fulltext'] = $form_state['values']['search_api_views_fulltext'];
+  };
+
+  if ($form_state['values']['field_resourc_topics'][LANGUAGE_NONE][0]['tid'] != '') {
+    $query_parameters['f'][] = 'field_resourc_topics:' . $form_state['values']['field_resourc_topics'][LANGUAGE_NONE][0]['tid'];
+  };
+
+  if ($form_state['values']['field_resourc_media_types'][LANGUAGE_NONE][0]['tid'] != '') {
+    $query_parameters['f'][] = 'field_resourc_media_types:' . $form_state['values']['field_resourc_media_types'][LANGUAGE_NONE][0]['tid'];
+  };
+
+  $options = array();
+  $options['query'] = $query_parameters;
+  drupal_goto('resource-search', $options);
+}
