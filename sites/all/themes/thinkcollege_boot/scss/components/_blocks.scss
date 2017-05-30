@@ -104,3 +104,12 @@
     @extend %box-blue;
   }
 }
+
+
+.pane-tc-resource-tc-resource-find {
+@extend %box-defaults;
+  &-blue {
+    @extend %box-blue;
+  }
+
+}

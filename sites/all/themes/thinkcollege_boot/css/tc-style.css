@@ -45,6 +45,16 @@ h3.block-title, h3.pane-title {
    }
 
 
+
+/** Landing Page ***/
+
+/*** resources search box **/
+
+
+
+
+
+
 .tc-row3left, .tc-row2,.tc-row1left, .tc-row1right
 {margin-bottom:25px}
 
@@ -355,7 +365,7 @@ header {
 	background-color: #C96B29;
 	padding: 15px;
 	height:516px;
-  border: #fff solid 5px;
+  border-right: #fff solid 5px;
     }
 a.divLink {
     width: 100%;
