@@ -109,16 +109,21 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'This is the second title',
-    'title' => 'This is a Title',
+    'title' => 'News',
     'title_heading' => 'h3',
-    'body' => '<div class="media">
+    'body' => '<ul>
+	<li>New <a href="http://www.thinkcollege.net/training/research-summits">Research Summit</a> scheduled for June 7.</li>
+	<li><a href="http://thinkcollege.net/convos">Think College Conversations</a>: a NEW way to talk with Think College and the community of people interested in inclusive postsecondary education.</li>
+	<li>The <a href="http://www.thinkcollege.net/images/stories/acc%20accrediation%20report_F.pdf">Report on Accreditation Standards for Postsecondary Education Programs for Students with Intellectual Disabilities</a> is now available.</li>
+	<li>Think College staff presented several sessions at the Council for Exceptional Children conference in Boston. Find resources from their sessions, as well as session evaluations, <a href="http://www.thinkcollege.net/conference-materials">HERE</a>.</li>
+</ul>
+<!--<div class="media">
 <div class="media-left"><a href="#"><img alt="placeholder image" class="media-object" src="http://placehold.it/100x100" /> </a></div>
-
 <div class="media-body">
 <p class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, vitae doloremque voluptatum doloribus neque assumenda velit sapiente.</p>
 </div>
 </div>
-',
+-->',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
@@ -136,42 +141,6 @@ function landing_pages_default_page_manager_pages() {
   $pane->uuid = '80971494-f604-407b-83ab-b9d34489eaf5';
   $display->content['new-80971494-f604-407b-83ab-b9d34489eaf5'] = $pane;
   $display->panels['row1right'][0] = 'new-80971494-f604-407b-83ab-b9d34489eaf5';
-  $pane = new stdClass();
-  $pane->pid = 'new-7f9d31e9-b00a-434a-adb4-d3600e30540d';
-  $pane->panel = 'row1right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'This is a title',
-    'title' => 'This is a Title',
-    'title_heading' => 'h3',
-    'body' => '<div class="media">
-<div class="media-left"><a href="#"><img alt="placeholder image" class="media-object" src="http://placehold.it/100x100" /> </a></div>
-
-<div class="media-body">
-<p class="media-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, vitae doloremque voluptatum doloribus neque assumenda velit sapiente.</p>
-</div>
-</div>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'panel panel-default',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '7f9d31e9-b00a-434a-adb4-d3600e30540d';
-  $display->content['new-7f9d31e9-b00a-434a-adb4-d3600e30540d'] = $pane;
-  $display->panels['row1right'][1] = 'new-7f9d31e9-b00a-434a-adb4-d3600e30540d';
   $pane = new stdClass();
   $pane->pid = 'new-68685f4d-7ba3-48ce-a6c2-65e06b32a276';
   $pane->panel = 'row2';
@@ -312,7 +281,9 @@ function landing_pages_default_page_manager_pages() {
     'override_title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
