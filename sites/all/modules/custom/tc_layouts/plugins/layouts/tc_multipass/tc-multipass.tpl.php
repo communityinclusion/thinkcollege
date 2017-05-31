@@ -13,34 +13,34 @@
 <div class="panel-display tc-multipass clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <div class="row">
-    <div class="col-sm-8 tc-row1left">
+    <div class="col-md-8 tc-row1left">
       <?php print $content['row1left']; ?>
     </div>
-    <div class="col-sm-4 tc-row1right">
+    <div class="col-md-4 tc-row1right">
       <?php print $content['row1right']; ?>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-12 tc-row2">
+    <div class="col-md-12 tc-row2">
       <?php print $content['row2']; ?>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-7 tc-row3left">
+    <div class="col-md-7 tc-row3left">
       <?php print $content['row3left']; ?>
     </div>
-    <div class="col-sm-5 tc-row3right">
+    <div class="col-md-5 tc-row3right">
       <?php print $content['row3right']; ?>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4 tc-row4left">
+    <div class="col-md-4 tc-row4left">
       <?php print $content['row4left']; ?>
     </div>
-    <div class="col-sm-8 tc-row4right">
+    <div class="col-md-8 tc-row4right">
       <?php print $content['row4right']; ?>
     </div>
   </div>
