@@ -54,8 +54,7 @@ h3.block-title, h3.pane-title {
 
 
 
-
-.tc-row3left, .tc-row2,.tc-row1left, .tc-row1right
+ .tc-row2
 {margin-bottom:25px}
 
 .btn-danger {
@@ -366,6 +365,8 @@ header {
 	padding: 15px;
 	height:516px;
   border-right: #fff solid 5px;
+   border-top: #fff solid 5px;
+    border-bottom: #fff solid 5px;
     }
 a.divLink {
     width: 100%;
@@ -448,6 +449,10 @@ ul.latest li {
     border-bottom: 1px solid #ddd;
 }
 
+ul.latest li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
   h1.headline {
 
