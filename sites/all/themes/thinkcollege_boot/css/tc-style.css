@@ -438,9 +438,15 @@ a.divLink {
 
 }
 
+ul.latest {padding-left:0;margin-left:0}
 
-
-
+ul.latest li {
+    position: relative;
+    display: block;
+    padding: 10px 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
 
 
   h1.headline {
