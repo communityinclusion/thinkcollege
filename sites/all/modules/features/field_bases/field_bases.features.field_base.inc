@@ -3253,7 +3253,7 @@ else {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 0,
+      'default_image' => 1074,
       'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),

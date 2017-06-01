@@ -152,7 +152,7 @@ function landing_pages_views_default_views() {
 
   $view = new view();
   $view->name = 'whats_new';
-  $view->description = 'A listing of new stuff on the site. ';
+  $view->description = 'Corresponds with "Featured" Block. A listing of new stuff on the site. ';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'What\'s new';
@@ -162,7 +162,7 @@ function landing_pages_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'What\'s new';
+  $handler->display->display_options['title'] = 'Featured';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
