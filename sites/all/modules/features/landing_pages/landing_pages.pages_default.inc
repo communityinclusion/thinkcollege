@@ -113,9 +113,9 @@ function landing_pages_default_page_manager_pages() {
     'title_heading' => 'h3',
     'body' => '<ul class="latest">
 	<li>New <a href="http://www.thinkcollege.net/training/research-summits">Research Summit</a> scheduled for June 7.</li>
-	<li><a href="http://thinkcollege.net/convos">Think College Conversations</a>: a NEW way to talk with Think College and the community of people interested in inclusive postsecondary education.</li>
+	<li><a href="http://thinkcollege.net/convos">Think College Conversations</a>: a NEW way to talk with TC and the community of people interested in inclusive postsecondary education.</li>
 	<li>The <a href="http://www.thinkcollege.net/images/stories/acc%20accrediation%20report_F.pdf">Report on Accreditation Standards for Postsecondary Education Programs for Students with Intellectual Disabilities</a> is now available.</li>
-	<li>Think College staff presented several sessions at the Council for Exceptional Children conference in Boston. Find resources from their sessions <a href="http://www.thinkcollege.net/conference-materials">HERE</a>.</li>
+	<li>Think College staff presented <a href="http://www.thinkcollege.net/conference-materials">several sessions</a> at the Council for Exceptional Children conference in Boston.</li>
 </ul>
 ',
     'format' => 'full_html',
