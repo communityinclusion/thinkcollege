@@ -9230,7 +9230,7 @@ button.close {
 .pane-3 .pane-title, .pane-whats-new-panel-pane-1 .pane-title, .pane-upcoming-events-panel-pane-1 .pane-title {
   border-bottom: 4px solid #20527C;
   color: #20527C;
-  font-family: "museo-sans", sans-serif;
+  font-family: "museo-sans-condensed", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
 }
@@ -9943,6 +9943,90 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
+}
+
+/* line 8, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+.icontile {
+  background-color: #20527C;
+  border: #fff solid 5px;
+  padding: 10px;
+  position: relative;
+  color: #fff;
+}
+
+/* line 15, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+.icontile:hover {
+  cursor: hand;
+  cursor: pointer;
+  opacity: .9;
+  background-color: #C96B29;
+}
+
+/* line 21, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+.icontile h3 {
+  color: #fff;
+  text-align: center;
+}
+
+/* line 27, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+a.divLink {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  /* Makes sure the link doesn't get underlined */
+  z-index: 10;
+  /* raises anchor tag above everything else in div */
+  background-color: white;
+  /*workaround to make clickable in IE */
+  opacity: 0;
+  /*workaround to make clickable in IE */
+  filter: alpha(opacity=0);
+  /*workaround to make clickable in IE */
+}
+
+/* line 44, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+.ie-feature {
+  color: #fff;
+}
+
+/* line 47, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+.ie-intro {
+  background-color: #C96B29;
+  padding: 15px;
+  height: 516px;
+  border-right: #fff solid 5px;
+  border-top: #fff solid 5px;
+  border-bottom: #fff solid 5px;
+}
+
+@media (max-width: 992px) {
+  /* line 57, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+  .ie-intro {
+    height: 770px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 63, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+  .ie-intro {
+    height: 100%;
+  }
+  /* line 66, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+  .ie-intro ul li {
+    display: inline-block;
+  }
+  /* line 69, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+  .ie-intro ul li:before {
+    content: '\ffed';
+    margin-right: .5em;
+    padding-left: 15px;
+  }
+  /* line 75, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks-innoexchange.scss */
+  .icontile img {
+    width: 75px;
+  }
 }
 
 /* line 3, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_resource.scss */
