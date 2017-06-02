@@ -3,12 +3,24 @@
 //
 
 .pane-upcoming-events-panel-pane-1 {
+	position: relative;
 	.pane-title {
 		@extend %title-underbar;
+		padding-right: 140px;
 	}
 }
 
 .view-upcoming-events {
+	.view-header {
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
+	}
+	.view-all {
+		position: absolute;
+		right: 0;
+		top: -36px;
+	}
 	.view-content {
 		@media #{$normal} {
 			@include flexbox;

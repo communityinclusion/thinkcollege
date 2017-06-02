@@ -33,6 +33,12 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/events" class="view-all">View all Events</a>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Field: Date: Month + day */
   $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['table'] = 'field_data_event_calendar_date';
@@ -175,6 +181,12 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/articles" class="view-all">View all Articles</a>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Field: Content: Teaser image */
   $handler->display->display_options['fields']['field_teaser_image']['id'] = 'field_teaser_image';
   $handler->display->display_options['fields']['field_teaser_image']['table'] = 'field_data_field_teaser_image';

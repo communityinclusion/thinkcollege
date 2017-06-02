@@ -2,9 +2,28 @@
 // What's New views styles
 //
 
+// Home page pane title
+.pane-whats-new-panel-pane-1 {
+	position: relative;
+	.pane-title {
+		@extend %title-underbar;
+		padding-right: 140px;
+	}
+}
+
 .view-whats-new {
 // Landing page content pane
   &.content-pane {
+		.view-header {
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+		}
+		.view-all {
+			position: absolute;
+			right: 0;
+			top: -36px;
+		}
   	.view-content {
   		@media #{$tablet} {
 	  		@include flexbox;
@@ -40,11 +59,4 @@
     	font-size: 14px;
     }
   }
-}
-
-// Home page pane title
-.pane-whats-new-panel-pane-1 {
-	.pane-title {
-		@extend %title-underbar;
-	}
 }
