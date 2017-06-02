@@ -46,3 +46,21 @@ function landing_pages_image_default_styles() {
 
   return $styles;
 }
+
+/**
+ * Implements hook_node_info().
+ */
+function landing_pages_node_info() {
+  $items = array(
+    'faq_page' => array(
+      'name' => t('FAQ page'),
+      'base' => 'node_content',
+      'description' => t('Use this to create a page of FAQs.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
+}

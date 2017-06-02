@@ -552,6 +552,278 @@ text.hawaii {font-size: 14px;}
   $page->default_handlers[$handler->name] = $handler;
   $pages['home'] = $page;
 
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'innovation_exchange_employment';
+  $page->task = 'page';
+  $page->admin_title = 'Innovation Exchange - Employment';
+  $page->admin_description = '';
+  $page->path = 'innovation-exchange/employment';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_innovation_exchange_employment__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'innovation_exchange_employment';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Innovation Exchange - Employment',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'tc_rubyrhod';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'row1left' => NULL,
+      'row1right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Employment';
+  $display->uuid = '6b11f481-cda2-4750-99cd-939d1bf3c16c';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_innovation_exchange_employment__panel';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
+  $pane->panel = 'row1left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'On this page',
+    'title' => 'On this page',
+    'title_heading' => 'h2',
+    'body' => '<ul>
+	<li><a href="#featuredresources">Featured Resources</a></li>
+	<li><a href="#quicklinks">Quick Links</a></li>
+	<li><a href="#join">Join the Conversation</a></li>
+	<li><a href="#faq">FAQ\'s</a></li>
+	<li><a href="#news">News &amp; Features</a></li>
+</ul>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
+  $display->content['new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba'] = $pane;
+  $display->panels['row1left'][0] = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
+  $pane = new stdClass();
+  $pane->pid = 'new-afd7182e-24b4-4f90-b190-6f4b8d01dc40';
+  $pane->panel = 'row1left';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'whats_new-panel_pane_3';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'arguments' => array(
+      'field_feature_in_section_tid' => 'Innovation Exchange: Employment',
+    ),
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => 'featuredresources',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'afd7182e-24b4-4f90-b190-6f4b8d01dc40';
+  $display->content['new-afd7182e-24b4-4f90-b190-6f4b8d01dc40'] = $pane;
+  $display->panels['row1left'][1] = 'new-afd7182e-24b4-4f90-b190-6f4b8d01dc40';
+  $pane = new stdClass();
+  $pane->pid = 'new-118378e4-e847-433e-a99e-290000a9ae69';
+  $pane->panel = 'row1left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Quick links',
+    'title' => 'Quick links',
+    'title_heading' => 'h2',
+    'body' => '<ul>
+	<li><a href="http://apse.org/">Association of People Supporting EmploymentFirst (APSE)</a></li>
+	<li><a href="https://www.dol.gov/odep/">Office of Disability Employment Policy (ODEP)</a></li>
+	<li><a href="http://www.leadcenter.org/">LEAD Center</a></li>
+	<li><a href="http://askjan.org/">Job Accommodation Network (JAN)</a></li>
+	<li><a href="https://www.ada.gov/employment.htm">Information &amp; Technical Assistance on the Americans with Disabilities Act</a></li>
+</ul>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'quicklinks',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '118378e4-e847-433e-a99e-290000a9ae69';
+  $display->content['new-118378e4-e847-433e-a99e-290000a9ae69'] = $pane;
+  $display->panels['row1left'][2] = 'new-118378e4-e847-433e-a99e-290000a9ae69';
+  $pane = new stdClass();
+  $pane->pid = 'new-db736baa-303b-4072-8aed-6a8a53fdfb7c';
+  $pane->panel = 'row1left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Join the conversation',
+    'title' => 'Join the conversation!',
+    'title_heading' => 'h2',
+    'body' => '<p>Connect with professionals, parents and students interested in postsecondary education for students with intellectual disabilities.</p>
+
+<p><button type="button">Sign up</button></p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'join',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = 'db736baa-303b-4072-8aed-6a8a53fdfb7c';
+  $display->content['new-db736baa-303b-4072-8aed-6a8a53fdfb7c'] = $pane;
+  $display->panels['row1left'][3] = 'new-db736baa-303b-4072-8aed-6a8a53fdfb7c';
+  $pane = new stdClass();
+  $pane->pid = 'new-f1e8f193-c360-4db6-b5be-51326ac4cf97';
+  $pane->panel = 'row1right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Employment',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<p>Competitive, integrated employment is a reachable outcome for people with intellectual disabilities (ID). Like anyone else, students with ID attend college to prepare them for the career of their choice.&nbsp;</p>
+
+<p>Through person-centered planning and skills evaluation, students can choose a field in which to pursue paid or unpaid internships, part-time or full-time work, and volunteer opportunities -- with the ultimate goal of leaving college with a paid job in the field of their choice.</p>
+
+<p>Employment for people with ID is supported by legislation and advocacy. For example, Employment First is an initiative which advises that employment be the first goal for people with ID. Most states now have some kind of Employment First policy or initiative.</p>
+
+<p>&nbsp;The Americans with Disabilities Act is a federal law that prohibits discrimination on the basis of disability, and Title I is specific to employment. The Individuals with Disabilities Education Act requires transition planning that addresses goals after high school, including training, education, and employment.</p>
+
+<p>Another important law about employment is the Workforce Innovation and Opportunity Act, or WIOA. WIOA increases the focus on improving service delivery to individuals with barriers to employment, including youth and adults with ID.</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'f1e8f193-c360-4db6-b5be-51326ac4cf97';
+  $display->content['new-f1e8f193-c360-4db6-b5be-51326ac4cf97'] = $pane;
+  $display->panels['row1right'][0] = 'new-f1e8f193-c360-4db6-b5be-51326ac4cf97';
+  $pane = new stdClass();
+  $pane->pid = 'new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28';
+  $pane->panel = 'row1right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'whats_new-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'arguments' => array(
+      'field_feature_in_section_tid' => 'Innovation Exchange: Employment',
+    ),
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => 'news',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '3f5f8090-15b8-4ada-b8cd-e9a4776cdb28';
+  $display->content['new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28'] = $pane;
+  $display->panels['row1right'][1] = 'new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28';
+  $pane = new stdClass();
+  $pane->pid = 'new-d43e95a8-56a3-4095-ab3c-1f363d14b6f5';
+  $pane->panel = 'row1right';
+  $pane->type = 'node';
+  $pane->subtype = 'node';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'nid' => '3498',
+    'links' => 0,
+    'leave_node_title' => 0,
+    'identifier' => '',
+    'build_mode' => 'full',
+    'link_node_title' => 0,
+    'override_title' => 1,
+    'override_title_text' => 'FAQ',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => 'faq',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'd43e95a8-56a3-4095-ab3c-1f363d14b6f5';
+  $display->content['new-d43e95a8-56a3-4095-ab3c-1f363d14b6f5'] = $pane;
+  $display->panels['row1right'][2] = 'new-d43e95a8-56a3-4095-ab3c-1f363d14b6f5';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['innovation_exchange_employment'] = $page;
+
   return $pages;
 
 }
