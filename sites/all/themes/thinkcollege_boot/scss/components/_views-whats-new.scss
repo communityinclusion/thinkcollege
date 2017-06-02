@@ -1,5 +1,5 @@
 //
-// What's New views styles
+// What's New views styles---NOTE: View renamed 'Featured'
 //
 
 // Home page pane title
@@ -60,3 +60,11 @@
     }
   }
 }
+
+
+
+#featuredresources .views-row { width:100%; border:none;box-shadow: none;}
+
+
+#featuredresources .views-field-field-resourc-media-types {display: inline-block}
+
