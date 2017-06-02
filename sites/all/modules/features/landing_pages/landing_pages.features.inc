@@ -36,8 +36,8 @@ function landing_pages_image_default_styles() {
       1 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 200,
-          'height' => 120,
+          'width' => 300,
+          'height' => 180,
         ),
         'weight' => 1,
       ),
