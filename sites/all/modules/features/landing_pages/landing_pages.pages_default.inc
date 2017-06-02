@@ -646,7 +646,7 @@ text.hawaii {font-size: 14px;}
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(
-      'field_feature_in_section_tid' => 'Innovation Exchange: Employment',
+      'field_feature_in_section_tid' => 'Innovation Exchange',
     ),
   );
   $pane->cache = array();
@@ -773,7 +773,7 @@ text.hawaii {font-size: 14px;}
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(
-      'field_feature_in_section_tid' => 'Innovation Exchange: Employment',
+      'field_feature_in_section_tid' => 'Innovation Exchange',
     ),
   );
   $pane->cache = array();
@@ -789,14 +789,14 @@ text.hawaii {font-size: 14px;}
   $display->content['new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28'] = $pane;
   $display->panels['row1right'][1] = 'new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28';
   $pane = new stdClass();
-  $pane->pid = 'new-d43e95a8-56a3-4095-ab3c-1f363d14b6f5';
+  $pane->pid = 'new-80038211-38ad-46d4-9442-5736f637dc4b';
   $pane->panel = 'row1right';
   $pane->type = 'node';
   $pane->subtype = 'node';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3498',
+    'nid' => '3499',
     'links' => 0,
     'leave_node_title' => 0,
     'identifier' => '',
@@ -808,16 +808,13 @@ text.hawaii {font-size: 14px;}
   );
   $pane->cache = array();
   $pane->style = array();
-  $pane->css = array(
-    'css_id' => 'faq',
-    'css_class' => '',
-  );
+  $pane->css = array();
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $pane->uuid = 'd43e95a8-56a3-4095-ab3c-1f363d14b6f5';
-  $display->content['new-d43e95a8-56a3-4095-ab3c-1f363d14b6f5'] = $pane;
-  $display->panels['row1right'][2] = 'new-d43e95a8-56a3-4095-ab3c-1f363d14b6f5';
+  $pane->uuid = '80038211-38ad-46d4-9442-5736f637dc4b';
+  $display->content['new-80038211-38ad-46d4-9442-5736f637dc4b'] = $pane;
+  $display->panels['row1right'][2] = 'new-80038211-38ad-46d4-9442-5736f637dc4b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $handler->conf['display'] = $display;

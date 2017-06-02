@@ -68,7 +68,7 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
 
       foreach ($items as $delta => $item) {
         $element[$delta] = array(
-          '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="' . $media_types[$item['tid']]['tooltip'] . '"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/' . $media_types[$item['tid']]['icon_path'] . '" alt="' . $media_types[$item['tid']]['tooltip'] . '"></a>',
+          '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="' . $media_types[$item['tid']]['tooltip'] . '"><img src="/' . drupal_get_path('module', 'tc_resource') . '/img/' . $media_types[$item['tid']]['icon_path'] . '" alt="' . $media_types[$item['tid']]['tooltip'] . '"></a>',
         );
       }
       break;
