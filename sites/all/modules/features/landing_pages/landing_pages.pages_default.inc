@@ -614,7 +614,7 @@ text.hawaii {font-size: 14px;}
   $pane->configuration = array(
     'admin_title' => 'On this page',
     'title' => 'On this page',
-    'title_heading' => 'h2',
+    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="#featuredresources">Featured Resources</a></li>
 	<li><a href="#quicklinks">Quick Links</a></li>
@@ -630,7 +630,10 @@ text.hawaii {font-size: 14px;}
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'box infolist',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -653,7 +656,7 @@ text.hawaii {font-size: 14px;}
   $pane->style = array();
   $pane->css = array(
     'css_id' => 'featuredresources',
-    'css_class' => '',
+    'css_class' => 'box',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -671,7 +674,7 @@ text.hawaii {font-size: 14px;}
   $pane->configuration = array(
     'admin_title' => 'Quick links',
     'title' => 'Quick links',
-    'title_heading' => 'h2',
+    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="http://apse.org/">Association of People Supporting EmploymentFirst (APSE)</a></li>
 	<li><a href="https://www.dol.gov/odep/">Office of Disability Employment Policy (ODEP)</a></li>
@@ -689,7 +692,7 @@ text.hawaii {font-size: 14px;}
   );
   $pane->css = array(
     'css_id' => 'quicklinks',
-    'css_class' => '',
+    'css_class' => 'box external-links-list',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -707,10 +710,10 @@ text.hawaii {font-size: 14px;}
   $pane->configuration = array(
     'admin_title' => 'Join the conversation',
     'title' => 'Join the conversation!',
-    'title_heading' => 'h2',
+    'title_heading' => 'h3',
     'body' => '<p>Connect with professionals, parents and students interested in postsecondary education for students with intellectual disabilities.</p>
 
-<p><button type="button">Sign up</button></p>
+<p class="rtecenter"><button class="btn btn-primary" type="button">Sign up</button></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -721,7 +724,7 @@ text.hawaii {font-size: 14px;}
   );
   $pane->css = array(
     'css_id' => 'join',
-    'css_class' => '',
+    'css_class' => 'box',
   );
   $pane->extras = array();
   $pane->position = 3;
