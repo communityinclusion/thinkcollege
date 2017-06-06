@@ -39,7 +39,7 @@ function theme_facetapi_nested_links_inactive($variables) {
   // link text and are providing additional markup for accessibility.
   $variables['text'] .= $accessible_markup;
   $variables['options']['html'] = TRUE;
-  $variables['options']['attributes']['class'][] = "btn btn-default";
+  $variables['checkbox'] = "<i class=\"fa fa-square-o\"></i>";
   return theme_bootstrap_link($variables);
 }
 
@@ -79,10 +79,14 @@ function theme_facetapi_nested_links_active($variables) {
   );
   $variables['text'] = t('!facetapi_bootstrap_deactivate_widget !facetapi_bootstrap_accessible_markup ' . $variables['text'], $replacements);
   $variables['options']['html'] = TRUE;
-  $variables['options']['attributes']['class'][] = "btn btn-primary";
+  $variables['checkbox'] = "<i class=\"fa fa-check-square-o\"></i>";
   return theme_bootstrap_link($variables);
 }
 
+function theme_facetapi_nested_links_parent($variables) {
+  $parent =  "<a class='facet-toggle' role='button' data-toggle='collapse' href='#child-of-". $variables['tc_counter'] ."'/>" . $variables['text'] . "</a>";
+  return $parent;
+}
 
 /**
  * Returns HTML for the active facet item's count as a Bootstrap Badge.
@@ -95,26 +99,8 @@ function theme_facetapi_nested_links_active($variables) {
  * @ingroup themeable
  */
 function theme_facetapi_bootstrap_count($variables) {
-  return '<span class="badge">' . (int) $variables['count'] . '</span>';
+  return '(' . (int) $variables['count'] . ')';
 }
-
-/**
- * Returns HTML for the deactivation widget as a bootstrap 'X' icon.
- *
- * @param $variables
- *   An associative array containing the keys 'text', 'path', and 'options'. See
- *   the l() function for information about these variables.
- * @return string
- *
- * @see l()
- * @see theme_facetapi_link_active()
- *
- * @ingroup themable
- */
-function theme_facetapi_bootstrap_deactivate_widget($variables) {
-  return '<i class="fa fa-times"></i>';
-}
-
 
 /**
  * Returns HTML that adds accessible markup to facet links.
@@ -141,7 +127,9 @@ function theme_facetapi_bootstrap_accessible_markup($variables) {
 
 
 function theme_bootstrap_link($variables) {
-  $x= '<a href="'
+  $x= $variables['checkbox']
+    . '&nbsp;'
+    . '<a href="'
     . check_plain(url($variables['path'], $variables['options']))
     . '"'
     . drupal_attributes($variables['options']['attributes'])

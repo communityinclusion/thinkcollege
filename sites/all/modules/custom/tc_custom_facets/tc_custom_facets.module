@@ -28,16 +28,16 @@ function tc_custom_facets_theme() {
 
     // Theme for the whole set of nested facet items.
     'tc_custom_facets_item_list__nested_facet' => array(
-//      'render element' => 'element',
       'variables' => array(
         'items' => array(),
         'title' => NULL,
         'type' => 'ul',
         'attributes' => array(),
-        'childof' => null),
+        'childof' => null
+      ),
     ),
 
-    // Called for each individual facet if inactive
+    // Called for each individual child facet if inactive
     'facetapi_nested_links_inactive' => array(
       'variables' => array(
         'text' => NULL,
@@ -48,27 +48,37 @@ function tc_custom_facets_theme() {
       'file' => 'tc_custom_facets_facetapi_nested_links.theme.inc',
     ),
 
-    // Called for each individual facet if active
+    // Called for each individual child facet if active
     'facetapi_nested_links_active' => array(
       'variables' => array(
         'text' => NULL,
         'path' => NULL,
         'options' => array(),
+        'count' => 0,
       ),
       'file' => 'tc_custom_facets_facetapi_nested_links.theme.inc',
     ),
 
+    // Called for each individual parent facet
+    'facetapi_nested_links_parent' => array(
+      'variables' => array(
+        'tc_counter' => 0,
+      ),
+      'file' => 'tc_custom_facets_facetapi_nested_links.theme.inc',
+    ),
+
+    'facetapi_bootstrap_count' => array(
+      'variables' => array(),
+      'file' => 'tc_custom_facets_facetapi_nested_links.theme.inc',
+    ),
+
+    'facetapi_bootstrap_accessible_markup' => array(
+    'variables' => array(),
+    'file' => 'tc_custom_facets_facetapi_nested_links.theme.inc',
+  ),
+
   );
 }
-
-/**
- * Implements hook_init().
- */
-function tc_custom_facets_init() {
-  //drupal_add_css(drupal_get_path('module', 'facetapi_bootstrap_button') . "/css/facetapi_bootstrap_button.css");
-}
-
-
 
 /**
  * Returns HTML for a list or nested list of items.
@@ -84,6 +94,8 @@ function tc_custom_facets_init() {
  *   - title: The title of the list.
  *   - type: The type of list to return (e.g. "ul", "ol").
  *   - attributes: The attributes applied to the list element.
+ *
+ * @return string
  */
 function theme_tc_custom_facets_item_list__nested_facet($variables) {
   $items = $variables['items'];
