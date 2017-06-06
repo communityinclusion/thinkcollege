@@ -84,7 +84,7 @@ function theme_facetapi_nested_links_active($variables) {
 }
 
 function theme_facetapi_nested_links_parent($variables) {
-  $parent =  "<a class='facet-toggle' role='button' data-toggle='collapse' href='#child-of-". $variables['tc_counter'] ."'/>" . $variables['text'] . "</a>";
+  $parent =  "<i class=\"fa fa-caret-right\"></i>&nbsp;<a class='facet-toggle' role='button' data-toggle='collapse' href='#child-of-". $variables['tc_counter'] ."'/>" . $variables['text'] . "</a>";
   return $parent;
 }
 

@@ -111,7 +111,18 @@ function theme_tc_custom_facets_item_list__nested_facet($variables) {
   if ($childof != null) {
     $parent_attribute = 'child-of-' . $childof;
   }
-  $output = '<div class="item-list collapse in" id="' . $parent_attribute .'">';
+  $collapse = "";
+  if ($childof != null) {
+    // check if any sub items are checked - then show them
+    foreach ($items as $count => $item) {
+      $collapse = "collapse";
+      if (in_array('active', $item['class'])) {
+        $collapse .= " in";
+        break;
+      }
+    }
+  }
+  $output = '<div class="item-list ' . $collapse .'" id="' . $parent_attribute .'">';
   if (isset($title) && $title !== '') {
     $output .= '<h3>' . $title . '</h3>';
   }
