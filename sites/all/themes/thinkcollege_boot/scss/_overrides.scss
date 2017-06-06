@@ -49,6 +49,9 @@ $museo-sans-stack: 'museo-sans',sans-serif;
 $museo-cond-stack: 'museo-sans-condensed',sans-serif;
 $font-size-base: 16px !default;
 
+// Other
+$box-shadow-default: 0 0 7px 0 $gray-light;
+
 
 //
 // Imports
@@ -63,6 +66,9 @@ $font-size-base: 16px !default;
 @import 'components/header';
 @import 'components/footer';
 @import 'components/blocks';
+@import 'components/blocks-lists';
+@import 'components/blocks-twitter';
+@import 'components/blocks-innoexchange';
 @import 'components/resource';
 @import 'components/views-whats-new';
 @import 'components/views-upcoming-events';

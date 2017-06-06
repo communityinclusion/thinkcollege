@@ -3,12 +3,24 @@
 //
 
 .pane-upcoming-events-panel-pane-1 {
+	position: relative;
 	.pane-title {
 		@extend %title-underbar;
+		padding-right: 140px;
 	}
 }
 
 .view-upcoming-events {
+	.view-header {
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
+	}
+	.view-all {
+		position: absolute;
+		right: 0;
+		top: -36px;
+	}
 	.view-content {
 		@media #{$normal} {
 			@include flexbox;
@@ -34,7 +46,14 @@
 		float: left;
 		padding: 5px;
 		text-align: center;
+		text-transform: uppercase;
 		width: 60px;
+	}
+	.date-month-day {
+		font-size: 14px;
+	}
+	.date-year {
+		font-size: 18px;
 	}
 	.event-text {
 		border-left: 4px solid $tcblue;

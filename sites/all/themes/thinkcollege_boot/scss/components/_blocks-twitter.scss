@@ -1,0 +1,20 @@
+//
+// Block: Twitter feed
+//
+
+#tc-home-twitter-block {
+	@include box-shadow($box-shadow-default);
+	@include border-radius(4px);
+	border-top: 0 none;
+	padding: 0;
+	.pane-title {
+		@include border-radius(4px 4px 0 0);
+		background-color: $tcblue;
+		color: $white;
+		font-size: 24px;
+		margin: 0;
+		padding: 10px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

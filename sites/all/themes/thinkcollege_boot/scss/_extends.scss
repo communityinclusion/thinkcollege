@@ -1,7 +1,7 @@
 // Blocks
 
 %box-defaults {
-	@include box-shadow(0 0 7px 0 $gray-light);
+	@include box-shadow($box-shadow-default);
 	@include border-radius(4px);
   background-color: $white;
   border-top: 10px solid $tcblue;
@@ -19,7 +19,7 @@
 %title-underbar {
 	border-bottom: 4px solid $tcblue;
 	color: $tcblue;
-	font-family: $museo-sans-stack;
+	font-family: $museo-cond-stack;
 	font-size: 24px;
 	text-transform: uppercase;
 }

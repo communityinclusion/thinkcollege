@@ -367,6 +367,32 @@ else {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_faqs'.
+  $field_bases['field_faqs'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_faqs',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'faqfield',
+    'settings' => array(
+      'advanced' => array(
+        'answer_rows' => 3,
+        'answer_title' => 'Answer',
+        'question_length' => 255,
+        'question_rows' => 2,
+        'question_title' => 'Question',
+      ),
+      'answer_widget' => 'textarea',
+      'format' => 'plain_text',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'faqfield',
+  );
+
   // Exported field_base: 'field_feature_in_section'.
   $field_bases['field_feature_in_section'] = array(
     'active' => 1,
@@ -3253,7 +3279,7 @@ else {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 0,
+      'default_image' => 1074,
       'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),

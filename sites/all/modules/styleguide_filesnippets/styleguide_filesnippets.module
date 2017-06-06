@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * File-based, site-specific custom styleguide additions.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function styleguide_filesnippets_menu() {
+  $items['admin/appearance/styleguide/filesnippets'] = array(
+    'title' => 'File Snippets Configuration',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('styleguide_filesnippets_settings'),
+    'access arguments' => array('administer site configuration'),
+    'weight' => 2,
+    'type' => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_styleguide().
+ */
+function styleguide_filesnippets_styleguide() {
+  $file_snippets_dir = variable_get('styleguide_filesnippets_dir', '../style_file_snippets');
+
+  if (!file_exists($file_snippets_dir)) {
+    return;
+  }
+
+  $items_inc = _styleguide_filesnippets_inc($file_snippets_dir);
+  $items_html = _styleguide_filesnippets_html($file_snippets_dir);
+  return $items_inc + $items_html;
+}
+
+/**
+ * Return specially formatted .inc files.
+ */
+function _styleguide_filesnippets_inc($file_snippets_dir) {
+  $items = array();
+  $file_snippets = file_scan_directory($file_snippets_dir, '/.*\.inc$/', array('key' => 'name'));
+
+  foreach ($file_snippets as $name => $snippet_info) {
+    $snippet = include($snippet_info->uri);
+
+    if (isset($snippet['description'])) {
+      $snippet['description'] .= '<br />' . $snippet_info->uri;
+    }
+    else {
+      $snippet['description'] = $snippet_info->uri;
+    }
+
+    $clean_name = drupal_html_class($name);
+    $items[$clean_name] = $snippet;
+  }
+
+  return $items;
+}
+
+/**
+ * Return styleguide items from .html file snippets.
+ */
+function _styleguide_filesnippets_html($file_snippets_dir) {
+  $items = array();
+  $file_snippets = file_scan_directory($file_snippets_dir, '/.*\.html/', array('key' => 'name', 'recurse' => TRUE));
+
+  foreach ($file_snippets as $name => $snippet_info) {
+    $snippet = array();
+    $snippet['title'] = $name;
+    $snippet['content'] = file_get_contents($snippet_info->uri);
+    $snippet['group'] = basename(dirname($snippet_info->uri));
+    $snippet['description'] = str_replace($file_snippets_dir . '/', '', $snippet_info->uri);
+    // Append the machine name of the item with a very-likely-to-be-unique
+    // prefix to avoid accidental overwriting of existing styleguide items.
+    $clean_name = substr(md5($file_snippets_dir), 0, 6) . '-' . drupal_html_class($name);
+    $items[$clean_name] = $snippet;
+  }
+
+  return $items;
+}
+
+/**
+ * Settings form.
+ */
+function styleguide_filesnippets_settings($form, &$form_state) {
+  $form['styleguide_filesnippets_dir'] = array(
+    '#type' => 'textfield',
+    '#title' => t('File Snippets Directory'),
+    '#description' => t('If your Drupal root is in a subdirectory (like docroot/), consider using a value like <em>../style_file_snippets</em> to place your style components outside the webroot. Otherwise, choose something like <em>private/style_file_snippets</em> and consider restricting access to the directory if necessary.'),
+    '#default_value' => variable_get('styleguide_filesnippets_dir', '../style_file_snippets'),
+  );
+
+  return system_settings_form($form);
+}

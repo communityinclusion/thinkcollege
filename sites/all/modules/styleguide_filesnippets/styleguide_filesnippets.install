@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Styleguide File Snippets install file.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function styleguide_filesnippets_uninstall() {
+  db_delete('variable')->condition('name', db_like('styleguide_filesnippets_') . '%', 'LIKE')->execute();
+}

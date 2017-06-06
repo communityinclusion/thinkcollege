@@ -97,4 +97,19 @@
 	@extend %box-defaults;
 	border-radius:4px!important;
 	border-top-color: $tcorange;
+  &-orange {
+    @extend %box-orange;
+  }
+  &-blue {
+    @extend %box-blue;
+  }
+}
+
+
+.pane-tc-resource-tc-resource-find {
+@extend %box-defaults;
+  &-blue {
+    @extend %box-blue;
+  }
+
 }
