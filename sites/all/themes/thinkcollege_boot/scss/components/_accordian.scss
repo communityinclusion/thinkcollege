@@ -1,0 +1,32 @@
+
+
+
+#faq .ui-state-default, #faq .ui-widget-content .ui-state-default, #faq .ui-widget-header .ui-state-default  {
+    border: #f2f2f2 solid 1px;
+background-color:#f2f2f2;
+background-image:none;
+    font-weight: 400;
+    color: $tcblue;
+}
+
+#faq .ui-state-active, #faq .ui-state-default {background-color:#f2f2f2}
+#faq .ui-state-hover {background-color:#ccc;}
+#faq .ui-state-hover a { color: $tclightblue;}
+#faq .ui-corner-all {border-radius:0;}
+
+#faq p {font-family:$lato-font-stack}
+#faq .ui-state-active a, #faq .ui-state-active a:link, #faq .ui-state-active a:visited {
+    color: $tclightblue;
+    text-decoration: none;
+}
+
+.ui-accordion .ui-accordion-content {
+  border: 0;
+}
+
+
+ #faq {
+	.pane-title {
+		@extend %title-underbar;
+	}
+}

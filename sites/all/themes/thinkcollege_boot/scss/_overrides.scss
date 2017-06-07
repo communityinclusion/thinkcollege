@@ -22,6 +22,10 @@ $brand-info:            #20527c !default;
 $brand-warning:         #d47600 !default;
 $brand-danger:          #e3ce9a !default;
 
+
+$label-warning:        #C96B29!default;
+
+
 // Additional colors
 $purple-dark: #331d35;
 
@@ -72,7 +76,7 @@ $box-shadow-default: 0 0 7px 0 $gray-light;
 @import 'components/resource';
 @import 'components/views-whats-new';
 @import 'components/views-upcoming-events';
-
+@import 'components/accordian';
 
 //
 // Base styles / overrides
