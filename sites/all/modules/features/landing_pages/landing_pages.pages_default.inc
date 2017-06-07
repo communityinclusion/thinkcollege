@@ -649,14 +649,14 @@ text.hawaii {font-size: 14px;}
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(
-      'field_feature_in_section_tid' => 'Innovation Exchange',
+      'field_feature_in_section_tid' => 'InnoExchange-Employment-Resource',
     ),
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
     'css_id' => 'featuredresources',
-    'css_class' => 'box',
+    'css_class' => 'ie-featuredresources box',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -760,7 +760,10 @@ text.hawaii {font-size: 14px;}
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'intro',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -776,14 +779,14 @@ text.hawaii {font-size: 14px;}
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(
-      'field_feature_in_section_tid' => 'Innovation Exchange',
+      'field_feature_in_section_tid' => 'InnoExchange-Employment-News',
     ),
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
     'css_id' => 'news',
-    'css_class' => '',
+    'css_class' => 'ie-news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -792,14 +795,14 @@ text.hawaii {font-size: 14px;}
   $display->content['new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28'] = $pane;
   $display->panels['row1right'][1] = 'new-3f5f8090-15b8-4ada-b8cd-e9a4776cdb28';
   $pane = new stdClass();
-  $pane->pid = 'new-80038211-38ad-46d4-9442-5736f637dc4b';
+  $pane->pid = 'new-4816585e-da1c-4f26-93c7-ceca5a255927';
   $pane->panel = 'row1right';
   $pane->type = 'node';
   $pane->subtype = 'node';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3499',
+    'nid' => '3599',
     'links' => 0,
     'leave_node_title' => 0,
     'identifier' => '',
@@ -815,9 +818,9 @@ text.hawaii {font-size: 14px;}
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $pane->uuid = '80038211-38ad-46d4-9442-5736f637dc4b';
-  $display->content['new-80038211-38ad-46d4-9442-5736f637dc4b'] = $pane;
-  $display->panels['row1right'][2] = 'new-80038211-38ad-46d4-9442-5736f637dc4b';
+  $pane->uuid = '4816585e-da1c-4f26-93c7-ceca5a255927';
+  $display->content['new-4816585e-da1c-4f26-93c7-ceca5a255927'] = $pane;
+  $display->panels['row1right'][2] = 'new-4816585e-da1c-4f26-93c7-ceca5a255927';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $handler->conf['display'] = $display;

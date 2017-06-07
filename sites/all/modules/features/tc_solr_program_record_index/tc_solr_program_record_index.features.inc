@@ -122,7 +122,8 @@ function tc_solr_program_record_index_default_search_api_index() {
         "tc_school_type" : { "type" : "string" },
         "tc_state_province" : { "type" : "string" },
         "tc_tpsid" : { "type" : "string" },
-        "title" : { "type" : "text", "boost" : "3.0" }
+        "title" : { "type" : "text", "boost" : "3.0" },
+        "type" : { "type" : "string" }
       },
       "data_alter_callbacks" : {
         "multiple_entity_views" : {

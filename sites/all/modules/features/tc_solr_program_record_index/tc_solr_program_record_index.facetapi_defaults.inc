@@ -343,6 +343,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Author',
   );
   $export['search_api@program_records_index:block:author'] = $facet;
 
@@ -380,6 +383,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'The main body text » Text',
   );
   $export['search_api@program_records_index:block:body:value'] = $facet;
 
@@ -417,6 +423,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Room and Board (numbers and decimals only, no commas or dollar signs)',
   );
   $export['search_api@program_records_index:block:field__prog_room_and_board'] = $facet;
 
@@ -454,6 +463,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'categories',
   );
   $export['search_api@program_records_index:block:field_categories'] = $facet;
 
@@ -491,6 +503,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How many students, total, attended this program in the most recently completed academic year?',
   );
   $export['search_api@program_records_index:block:field_how_many_students_total_at'] = $facet;
 
@@ -528,6 +543,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Name of credential (degree/certificate) awarded to students who complete this program',
   );
   $export['search_api@program_records_index:block:field_name_of_credential_degree_'] = $facet;
 
@@ -565,6 +583,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Please select any/all of the conditions below that describe the credential awarded by this program',
   );
   $export['search_api@program_records_index:block:field_please_select_any_all_of_t'] = $facet;
 
@@ -602,6 +623,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How many students were accepted for the most recently completed academic year? (number only, no text) ',
   );
   $export['search_api@program_records_index:block:field_prog_15_16_accepted'] = $facet;
 
@@ -676,6 +700,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'This program is operated by and/or is a program of an accredited institute of higher education.',
   );
   $export['search_api@program_records_index:block:field_prog_accredited'] = $facet;
 
@@ -750,6 +777,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Which of the following are basic requirements for admission to your program?',
   );
   $export['search_api@program_records_index:block:field_prog_admiss_requirements'] = $facet;
 
@@ -787,6 +817,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Admission application deadline',
   );
   $export['search_api@program_records_index:block:field_prog_admit_deadline'] = $facet;
 
@@ -824,6 +857,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Enter required age range',
   );
   $export['search_api@program_records_index:block:field_prog_age_range'] = $facet;
 
@@ -898,6 +934,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'College/university where the program is located',
   );
   $export['search_api@program_records_index:block:field_prog_col_univ_name'] = $facet;
 
@@ -935,6 +974,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Program contact person phone',
   );
   $export['search_api@program_records_index:block:field_prog_contact_phone'] = $facet;
 
@@ -1009,6 +1051,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Can you provide specific dollar amounts for tuition, fees, room and board?',
   );
   $export['search_api@program_records_index:block:field_prog_cost_y_n'] = $facet;
 
@@ -1046,6 +1091,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Students enrolled in this program take the following types of courses that are offered by the college/university',
   );
   $export['search_api@program_records_index:block:field_prog_course_types'] = $facet;
 
@@ -1083,6 +1131,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Do students earn a credential of any kind when they complete this program?',
   );
   $export['search_api@program_records_index:block:field_prog_credential'] = $facet;
 
@@ -1120,6 +1171,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?',
   );
   $export['search_api@program_records_index:block:field_prog_ctp_y_n'] = $facet;
 
@@ -1157,6 +1211,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Explain "other" requirements',
   );
   $export['search_api@program_records_index:block:field_prog_explain_other'] = $facet;
 
@@ -1194,6 +1251,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Does program offer housing for students?',
   );
   $export['search_api@program_records_index:block:field_prog_housing_y_n'] = $facet;
 
@@ -1231,6 +1291,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Students in this program (check all that apply)',
   );
   $export['search_api@program_records_index:block:field_prog_hs_coll'] = $facet;
 
@@ -1268,6 +1331,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Is/was this program a federally funded TPSID program? ',
   );
   $export['search_api@program_records_index:block:field_prog_is_was_tpsid'] = $facet;
 
@@ -1305,6 +1371,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Can you tell us how many students applied to, were accepted to, or entered your program in the most recent academic year?',
   );
   $export['search_api@program_records_index:block:field_prog_know_how_many'] = $facet;
 
@@ -1427,6 +1496,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How many new students entered the program in the fall of the year before last? (number only, no text)',
   );
   $export['search_api@program_records_index:block:field_prog_new_studt_f14'] = $facet;
 
@@ -1464,6 +1536,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'For the most recently completed academic year, how many students applied to your program (number only, no text)? ',
   );
   $export['search_api@program_records_index:block:field_prog_num_applied'] = $facet;
 
@@ -1501,6 +1576,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'What other types of career development activities do students participate in (check all that apply)?',
   );
   $export['search_api@program_records_index:block:field_prog_other_career_dev'] = $facet;
 
@@ -1538,6 +1616,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Other costs?',
   );
   $export['search_api@program_records_index:block:field_prog_other_costs'] = $facet;
 
@@ -1575,6 +1656,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Other costs amount (numbers and decimals only, no commas or dollar signs)',
   );
   $export['search_api@program_records_index:block:field_prog_other_costs_amount'] = $facet;
 
@@ -1612,6 +1696,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Other costs (display)',
   );
   $export['search_api@program_records_index:block:field_prog_other_costs_display'] = $facet;
 
@@ -1649,6 +1736,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How much overall time on campus is spent only with other students in this program?',
   );
   $export['search_api@program_records_index:block:field_prog_overall_time_dist'] = $facet;
 
@@ -1686,6 +1776,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How do students pay to attend this program (check all that apply)?',
   );
   $export['search_api@program_records_index:block:field_prog_pay_methods'] = $facet;
 
@@ -1723,6 +1816,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How much academic time is spent only with other students in this program?',
   );
   $export['search_api@program_records_index:block:field_prog_perc_acad_time'] = $facet;
 
@@ -1760,6 +1856,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Of students who completed your program last year, what percentage found paid competitive employment within 90 days of exiting?',
   );
   $export['search_api@program_records_index:block:field_prog_perc_employed_af_grad'] = $facet;
 
@@ -1797,6 +1896,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'What % of students in the most recently completed academic year had paid, competitive, integrated work while in the program? ',
   );
   $export['search_api@program_records_index:block:field_prog_perc_w_compet_employ'] = $facet;
 
@@ -1834,6 +1936,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Program Contact Email',
   );
   $export['search_api@program_records_index:block:field_prog_program_contact_email'] = $facet;
 
@@ -1871,6 +1976,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Program Email',
   );
   $export['search_api@program_records_index:block:field_prog_program_email'] = $facet;
 
@@ -2001,6 +2109,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Room and Board (display)',
   );
   $export['search_api@program_records_index:block:field_prog_room_and_board_displa'] = $facet;
 
@@ -2038,6 +2149,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'School District or Agency Contact Person E-mail',
   );
   $export['search_api@program_records_index:block:field_prog_schl_dist_email'] = $facet;
 
@@ -2075,6 +2189,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'School district or agency partner (if applicable)',
   );
   $export['search_api@program_records_index:block:field_prog_school_dist'] = $facet;
 
@@ -2112,6 +2229,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'School District or Agency Contact Person',
   );
   $export['search_api@program_records_index:block:field_prog_school_dist_contact'] = $facet;
 
@@ -2149,6 +2269,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'This program serves students who meet the definition of intellectual disability. ',
   );
   $export['search_api@program_records_index:block:field_prog_serves_id'] = $facet;
 
@@ -2186,6 +2309,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Do students take special courses that are only for students in this program? ',
   );
   $export['search_api@program_records_index:block:field_prog_special_courses'] = $facet;
 
@@ -2223,6 +2349,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Program specific fees (numbers and decimals only, no commas or dollar signs)',
   );
   $export['search_api@program_records_index:block:field_prog_specific_fees'] = $facet;
 
@@ -2350,6 +2479,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Do students in your program join registered student organizations at the Institute of Higher Education (IHE)?',
   );
   $export['search_api@program_records_index:block:field_prog_student_orgs_y_n'] = $facet;
 
@@ -2387,6 +2519,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Students pay (display)',
   );
   $export['search_api@program_records_index:block:field_prog_students_pay_display'] = $facet;
 
@@ -2424,6 +2559,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Housing options for students in this program (check all that apply)',
   );
   $export['search_api@program_records_index:block:field_prog_studt_housing_options'] = $facet;
 
@@ -2461,6 +2599,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'How many of those students returned in the fall of last year? (number only, no text)',
   );
   $export['search_api@program_records_index:block:field_prog_studt_retn_f15'] = $facet;
 
@@ -2498,6 +2639,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Does your program offer a summer transition program?',
   );
   $export['search_api@program_records_index:block:field_prog_summer_prog_y_n'] = $facet;
 
@@ -2535,6 +2679,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Tuition amount (numbers and decimals only, no commas or dollar signs)',
   );
   $export['search_api@program_records_index:block:field_prog_tuition'] = $facet;
 
@@ -2572,6 +2719,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'What type of school is this?',
   );
   $export['search_api@program_records_index:block:field_prog_type_of_school'] = $facet;
 
@@ -2609,6 +2759,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'If this program has not yet started serving students, please specify the school year when the first class will be accepted: ',
   );
   $export['search_api@program_records_index:block:field_prog_when_will_progr_start'] = $facet;
 
@@ -2646,6 +2799,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Specify "other" disabilities',
   );
   $export['search_api@program_records_index:block:field_prog_which_dis_specify'] = $facet;
 
@@ -2768,6 +2924,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Program Contact Person',
   );
   $export['search_api@program_records_index:block:field_progprogram_contact_person'] = $facet;
 
@@ -2805,6 +2964,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Requirements for Admission (display)',
   );
   $export['search_api@program_records_index:block:field_requirements_display'] = $facet;
 
@@ -2842,6 +3004,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Topics',
   );
   $export['search_api@program_records_index:block:field_resourc_topics'] = $facet;
 
@@ -2879,6 +3044,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Section',
   );
   $export['search_api@program_records_index:block:field_site_section'] = $facet;
 
@@ -2916,6 +3084,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Summer program (display)',
   );
   $export['search_api@program_records_index:block:field_summer_program_display'] = $facet;
 
@@ -2953,6 +3124,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Tags',
   );
   $export['search_api@program_records_index:block:field_tags'] = $facet;
 
@@ -2990,6 +3164,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Type of school (display)',
   );
   $export['search_api@program_records_index:block:field_type_of_school_display'] = $facet;
 
@@ -3064,6 +3241,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Node ID',
   );
   $export['search_api@program_records_index:block:nid'] = $facet;
 
@@ -3101,6 +3281,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Node access information',
   );
   $export['search_api@program_records_index:block:search_api_access_node'] = $facet;
 
@@ -3138,6 +3321,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Item language',
   );
   $export['search_api@program_records_index:block:search_api_language'] = $facet;
 
@@ -3175,6 +3361,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Status',
   );
   $export['search_api@program_records_index:block:status'] = $facet;
 
@@ -3539,6 +3728,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
       'value' => '',
       'format' => 'full_html',
     ),
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'TC:State/Province',
   );
   $export['search_api@program_records_index:block:tc_state_province'] = $facet;
 
@@ -3661,6 +3853,9 @@ function tc_solr_program_record_index_facetapi_default_facet_settings() {
     'soft_limit' => 20,
     'nofollow' => 1,
     'show_expanded' => 0,
+    'display_count' => TRUE,
+    'title_override' => 0,
+    'title' => 'Title',
   );
   $export['search_api@program_records_index:block:title'] = $facet;
 

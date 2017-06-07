@@ -12,7 +12,7 @@ function tc_resource_search_views_default_views() {
 
   $view = new view();
   $view->name = 'tc_resource_search';
-  $view->description = 'Solr Search page for Resource Search';
+  $view->description = '';
   $view->tag = 'think-college';
   $view->base_table = 'search_api_index_tc_resource_index';
   $view->human_name = 'Resource Search';
@@ -31,7 +31,6 @@ function tc_resource_search_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'SEARCH';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'CLEAR';
-  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -57,7 +56,7 @@ function tc_resource_search_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'search';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
@@ -68,6 +67,7 @@ function tc_resource_search_views_default_views() {
     12 => 0,
     3 => 0,
   );
+  $handler->display->display_options['filters']['search_api_views_fulltext']['min_length'] = '2';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'resource_search_text_input');

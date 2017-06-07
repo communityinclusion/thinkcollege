@@ -1,4 +1,4 @@
-name = Think college custom facets
+name = Think College custom facets
 description = Facet topic customizations for Think College
 core = 7.x
 php = 5.3
