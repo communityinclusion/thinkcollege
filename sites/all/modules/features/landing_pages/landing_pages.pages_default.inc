@@ -147,7 +147,10 @@ function landing_pages_default_page_manager_pages() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'home-featurednews',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -245,7 +248,7 @@ function landing_pages_default_page_manager_pages() {
     'admin_title' => 'College search image',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/images/collegesearch-v3.png" /></a></p>
+    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/images/collegesearch-v3.png" /></a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
