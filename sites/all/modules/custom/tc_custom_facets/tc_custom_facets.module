@@ -108,11 +108,11 @@ function theme_tc_custom_facets_item_list__nested_facet($variables) {
   // Check to see whether the block title exists before adding a header.
   // Empty headers are not semantic and present accessibility challenges.
   $parent_attribute = '';
-  if ($childof != null) {
+  if ($childof !== null) {
     $parent_attribute = 'child-of-' . $childof;
   }
   $collapse = "";
-  if ($childof != null) {
+  if ($childof !== null) {
     // check if any sub items are checked - then show them
     foreach ($items as $count => $item) {
       $collapse = "collapse";
