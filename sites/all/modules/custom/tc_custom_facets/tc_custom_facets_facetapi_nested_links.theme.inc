@@ -127,13 +127,14 @@ function theme_facetapi_bootstrap_accessible_markup($variables) {
 
 
 function theme_bootstrap_link($variables) {
-  $x= $variables['checkbox']
-    . '&nbsp;'
-    . '<a href="'
+  $x=
+    '<a href="'
     . check_plain(url($variables['path'], $variables['options']))
     . '"'
     . drupal_attributes($variables['options']['attributes'])
     . '>'
+    . $variables['checkbox']
+    . '&nbsp;'
     . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text']))
     . '</a>';
   return $x;
