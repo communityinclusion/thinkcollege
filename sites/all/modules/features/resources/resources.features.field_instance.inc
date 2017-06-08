@@ -41,9 +41,9 @@ function resources_field_default_field_instances() {
           'trim_length' => 200,
           'trim_link' => 0,
           'trim_options' => array(
-            'text' => 0,
+            'text' => 'text',
           ),
-          'trim_preserve_tags' => '',
+          'trim_preserve_tags' => '<p>',
           'trim_suffix' => '',
           'trim_type' => 'chars',
         ),
@@ -661,6 +661,57 @@ function resources_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-resource-field_resource_audiences'.
+  $field_instances['node-resource-field_resource_audiences'] = array(
+    'bundle' => 'resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_resource_audiences',
+    'label' => 'Audiences',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'node-resource-field_teaser_image'.
   $field_instances['node-resource-field_teaser_image'] = array(
     'bundle' => 'resource',
@@ -721,6 +772,7 @@ function resources_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('APA Citation');
+  t('Audiences');
   t('Authors');
   t('Begin typing to initiate author autocomplete, or to enter new author.');
   t('Date Received');

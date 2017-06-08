@@ -149,6 +149,10 @@ function resources_strongarm() {
             'weight' => '10',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
