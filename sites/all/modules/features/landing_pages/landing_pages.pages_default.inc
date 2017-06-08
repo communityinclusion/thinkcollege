@@ -817,7 +817,10 @@ text.hawaii {font-size: 14px;}
   );
   $pane->cache = array();
   $pane->style = array();
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'faq',
+    'css_class' => 'accordian',
+  );
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
