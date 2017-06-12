@@ -94,6 +94,10 @@ var Drupal = Drupal || {};
   Drupal.behaviors.tcLearnVidWidth = {
       attach: function (context) {
     if ($('.field-name-field-tc-learn-sidebar').length) {
+      $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) { $(elem).hide();
+         $(elem).closest('div.field-item').hide(); });
+         $('.field-name-field-tc-learn-sidebar audio').each(function(i, elem) { $(elem).hide();
+            $(elem).closest('div.field-item').hide(); });
       window.addEventListener('load', function() { resizeVids() });
       window.addEventListener('resize', function() { resizeVids() });
 
@@ -101,13 +105,28 @@ var Drupal = Drupal || {};
  }
   };
 function resizeVids() {
-  $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) {
-      var sidebarWidinit = $(this).closest('div.field-name-field-tc-learn-sidebar').width();
+  $('.field-name-field-tc-learn-sidebar iframe').each(function(i, elem) { $(elem).hide();
+     $(elem).closest('div.field-item').hide();
+      var sidebarWidinit = $(elem).closest('div.field-name-field-tc-learn-sidebar').width();
     var  sidebarWid = (sidebarWidinit - 10);
   var sidebarHeight = (sidebarWid * .56);
-  $(this).width(sidebarWid);
-  $(this).height(sidebarHeight);
-
+  $(elem).width(sidebarWid);
+  $(elem).height(sidebarHeight);
+  $(elem).closest('div.field-item').show();
+  $(elem).show();
   });
+
+  $('.field-name-field-tc-learn-sidebar audio').each(function(i, elem) { $(elem).hide();
+     $(elem).closest('div.field-item').hide();
+      var sidebarWidinit = $(elem).closest('div.field-name-field-tc-learn-sidebar').width();
+    var  sidebarWid = (sidebarWidinit - 10);
+  var sidebarHeight = (sidebarWid * .56);
+  $(elem).width(sidebarWid);
+  $(elem).height(sidebarHeight);
+  $(elem).closest('div.field-item').show();
+  $(elem).show();
+  });
+
 }
+
 })(jQuery, Drupal);
