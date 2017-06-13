@@ -120,9 +120,7 @@ function resizeVids() {
      $(elem).closest('div.field-item').hide();
       var sidebarWidinit = $(elem).closest('div.field-name-field-tc-learn-sidebar').width();
     var  sidebarWid = (sidebarWidinit - 10);
-  var sidebarHeight = (sidebarWid * .56);
   $(elem).width(sidebarWid);
-  $(elem).height(sidebarHeight);
   $(elem).closest('div.field-item').show();
   $(elem).show();
   });
