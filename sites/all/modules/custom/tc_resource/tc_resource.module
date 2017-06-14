@@ -80,7 +80,7 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
         $parents = taxonomy_get_parents($item['tid']);
         if (($item['tid'] == 1504) || (isset($parents[1504]))) {
           $element[$delta] = array(
-            '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="Think College Publication"><img src="' . drupal_get_path('module', 'tc_resource') . '/img/parthenon_new.svg" alt="Think College Publication"></a>',
+            '#markup' => '<a href="#" data-toggle="tooltip" title="" data-original-title="Think College Publication"><img src="/' . drupal_get_path('module', 'tc_resource') . '/img/parthenon_new.svg" alt="Think College Publication"></a>',
           );
         }
       }
