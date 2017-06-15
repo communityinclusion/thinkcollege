@@ -1,0 +1,161 @@
+<?php
+/**
+ * @file
+ * Provides some sample types and fields to test autocreation on
+ *
+ * Establish a small structure that allows for entering a Song and an Artist.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function entityreference_autocreate_test_install() {
+  $bundles = field_info_bundles('node');
+  // Create two node types.
+  $node_bundles = array(
+    'song' => 'Song',
+    'artist' => 'Artist',
+  );
+  foreach ($node_bundles as $bundle_name => $bundle_label) {
+    if (!empty($bundles[$bundle_name])) {
+      // Already exists.
+      continue;
+    }
+    $bundle_definition = array(
+      'type' => $bundle_name,
+      'name' => $bundle_label,
+      'base' => 'node_content',
+      'description' => "Test Entityreference Autocreate",
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    );
+    $bundle_definition = node_type_set_defaults($bundle_definition);
+    node_type_save($bundle_definition);
+    // node_add_body_field($bundle_definition);
+  }
+
+  drupal_set_message(t('Set up content types %types', array('%types' => implode(', ', $node_bundles))));
+
+  // Establish a link between these two types.
+  // Remember to check ahead if it already exists.
+  $entity_type = 'node';
+  $bundle_name = 'song';
+  $field_name = 'field_artist';
+  field_info_cache_clear();
+
+  $field = field_info_field($field_name);
+  if (empty($field)) {
+    $field = array(
+      'field_name' => $field_name,
+      'type' => 'entityreference',
+      'cardinality' => 1,
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array('artist' => 'artist'),
+        ),
+      ),
+    );
+    field_create_field($field);
+  }
+  $instance = field_info_instance($entity_type, $field_name, $bundle_name);
+  if (empty($instance)) {
+    $instance = array(
+      'field_name' => $field_name,
+      'entity_type' => $entity_type,
+      'label' => 'Artist',
+      'bundle' => $bundle_name,
+    );
+    // Enable linking, so we can better test the results.
+    $instance['display']['default']['settings']['link'] = TRUE;
+    field_create_instance($instance);
+  }
+
+  // Additional data GUID fields.
+  $fields = array(
+    'isni' => array(
+      'field_name' => 'isni',
+      'entity_type' => 'node',
+      'bundle_name' => 'artist',
+      'type' => 'text',
+      'label' => 'International Standard Name Identifier (ISNI)',
+    ),
+    'song-mbid' => array(
+      'field_name' => 'mbid',
+      'entity_type' => 'node',
+      'bundle_name' => 'song',
+      'type' => 'text',
+      'label' => 'MusicBrainz ID (MBID)',
+    ),
+    'artist-mbid' => array(
+      'field_name' => 'mbid',
+      'entity_type' => 'node',
+      'bundle_name' => 'artist',
+      'type' => 'text',
+      'label' => 'MusicBrainz ID (MBID)',
+    ),
+  );
+
+  foreach ($fields as $field_name => $field_def) {
+    field_info_cache_clear();
+    $field = field_info_field($field_def['field_name']);
+    if (empty($field)) {
+      $field = array(
+        'field_name' => $field_def['field_name'],
+        'type' => $field_def['type'],
+        'cardinality' => 1,
+        'settings' => array(
+        ),
+      );
+      field_create_field($field);
+    }
+    $instance = field_info_instance($field_def['entity_type'], $field_def['field_name'], $field_def['bundle_name']);
+    if (empty($instance)) {
+      $instance = array(
+        'field_name' => $field_def['field_name'],
+        'entity_type' => $field_def['entity_type'],
+        'label' => $field_def['label'],
+        'bundle' => $field_def['bundle_name'],
+      );
+      field_create_instance($instance);
+    }
+  }
+  drupal_set_message(t('Set up fields on content types %types', array('%types' => implode(', ', $node_bundles))));
+
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * It's only a test module, but this is a good place to demonstrate
+ * good behaviour.
+ */
+function entityreference_autocreate_test_uninstall() {
+  $bundles = field_info_bundles('node');
+  $node_bundles = array(
+    'song' => 'Song',
+    'artist' => 'Artist',
+  );
+  foreach ($node_bundles as $bundle_name => $bundle_label) {
+    if (empty($bundles[$bundle_name])) {
+      // Already gone.
+      continue;
+    }
+    // Delete all content to avoid leaving undefined nodes.
+    // Potential for timeout here, but whatever.
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->propertyCondition('type', array($bundle_name), 'IN');
+    $result = $query->execute();
+    if (!empty($result['node'])) {
+      foreach ($result['node'] as $node) {
+        node_delete($node->nid);
+      }
+    }
+    // Now delete type.
+    node_type_delete($bundle_name);
+  }
+  drupal_set_message(t('Removed content types %types', array('%types' => implode(', ', $node_bundles))));
+}

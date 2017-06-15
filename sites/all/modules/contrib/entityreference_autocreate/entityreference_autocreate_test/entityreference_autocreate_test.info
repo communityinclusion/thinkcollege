@@ -1,0 +1,17 @@
+name = "Entityreference Autocreate - tests"
+description = "Build some sample types and fields to test autocreation on"
+package = Testing
+core = 7.x
+hidden = TRUE
+
+dependencies[] = entityreference_autocreate
+dependencies[] = field_ui
+dependencies[] = views_ui
+
+
+; Information added by Drupal.org packaging script on 2017-04-28
+version = "7.x-1.1+15-dev"
+core = "7.x"
+project = "entityreference_autocreate"
+datestamp = "1493343545"
+

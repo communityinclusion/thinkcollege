@@ -1,0 +1,279 @@
+<?php
+/**
+ * @file
+ * Tests for autocreation of entity references
+ */
+
+/**
+ * Test for Entity Reference admin UI.
+ */
+class EntityReferenceAutocreateTestCase extends DrupalWebTestCase {
+
+  private $adminUser;
+  private $testBundle = 'song';
+  private $testTargetBundle = 'artist';
+  protected $profile = 'testing';
+
+  /**
+   * @inheritdoc
+   */
+  public static function getInfo() {
+    return array(
+      'name' => 'Entity Reference Autocreate',
+      'description' => 'Tests using the edit UI to trigger autocreation.',
+      'group' => 'Entity Reference',
+    );
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function setUp() {
+    // Although we don't need all modules (views) all the time,
+    // Enabling modules on the fly caused terrible pains, so all on from start.
+    // Maybe it was because I was calling $this->resetAll();
+    parent::setUp(array(
+      'field_ui',
+      'ctools',
+      'entity',
+      'entityreference',
+      'entityreference_autocreate',
+      'entityreference_autocreate_test',
+      'views',
+      'views_ui',
+    ));
+
+    // Create test user.
+    $this->adminUser = $this->drupalCreateUser(
+      array(
+        'access content',
+        'administer content types',
+        'administer fields',
+        'administer nodes',
+        'bypass node access',
+        'administer views',
+        'administer software updates', # for cache-clear horribleness.
+      ));
+    $this->drupalLogin($this->adminUser);
+  }
+
+
+  /**
+   * Confirm normal behavior will fail if referring to a non-existent target.
+   *
+   * Run through normal edit process, and confirm that referring to
+   * an entity that does not exist will normally fail.
+   */
+  public function testEditWithoutAutocomplete() {
+    // Add a simple node with no reference.
+    $this->drupalPost('node/add/' . $this->testBundle, array(
+      'title' => 'Hey Jude',
+    ), t('Save'));
+    $this->assertText('Song Hey Jude has been created.');
+
+    // Add a node with a non-existing reference.
+    $edit = array(
+      'title' => 'Helter Skelter',
+      'field_artist[und][0][target_id]' => 'The Beatles',
+    );
+    $this->drupalPost('node/add/' . $this->testBundle, $edit, t('Save'));
+    // That should fail.
+    $this->assertText('There are no entities matching "The Beatles"');
+
+    // Add the desired target node, then assert it works now.
+    $artist = array(
+      'type' => $this->testTargetBundle,
+      'title' => 'The Beatles',
+    );
+    $artist = $this->drupalCreateNode($artist);
+
+    // Trying to re-save the same post again should now pass.
+    // We are cheating the autocomplete here to give it a target nid.
+    // So this is not a good test of normal behaviour.
+    $autocomplete_value = $artist->title . ' (' . $artist->nid . ')';
+    // A bug in entityreference that does this?
+    $edit['field_artist[und][0][target_id]'] = $autocomplete_value;
+    $this->drupalPost(NULL, $edit, t('Save'));
+    // Anyway,
+    // We expect success this time.
+    $this->assertText('Song Helter Skelter has been created.');
+    // I expect to see a link to the artist now.
+    $this->assertText('Artist:');
+    $this->clickLink('The Beatles');
+    // If that was clickable, it means the link was established OK.
+  }
+
+  /**
+   * Enable and configure autocreate, then run the edit steps again.
+   */
+  public function testEditWithAutocomplete() {
+    $this->drupalGet('admin/structure/types');
+    $this->assertText('Content types');
+    $this->drupalGet('admin/structure/types/manage/song/fields');
+    $this->assertText('Manage fields');
+
+    // Go straight to the field edit properties.
+    $this->drupalGet('admin/structure/types/manage/song/fields/field_artist');
+    $this->assertText('Artist');
+    $this->assertText('EntityReference Autocreate settings');
+    // Configure the field to use autocomplete rules.
+    $edit = array(
+      'instance[widget][settings][entityreference_autocreate][active]' => TRUE,
+      'instance[widget][settings][entityreference_autocreate][status]' => -1,
+      'field[settings][handler]' => 'base',
+      'field[settings][handler_settings][target_bundles][artist]' => 'artist',
+    );
+    $this->drupalPost(NULL, $edit, t('Save settings'));
+    // Set the widget to display as a link while we are here.
+
+    // Add a node with a non-existing reference.
+    $edit = array(
+      'title' => 'I Miss You',
+      'field_artist[und][0][target_id]' => 'The Rolling Stones',
+    );
+    $this->drupalPost('node/add/' . $this->testBundle, $edit, t('Save'));
+    $this->assertText('Song I Miss You has been created.');
+    // We must assume that "The Rolling Stones" has also been auto-created now.
+    // Can't check the Artist display in a theme-agnostic way AFAIK.
+    // But if there is a LINK with the title as the text, that's a good sign.
+    $this->clickLink('The Rolling Stones');
+  }
+
+  /**
+   * Verify autocreation behaviour when the target has commas in the title.
+   *
+   * We used to discard those,
+   *
+   * Desired outcome:
+   * - if a target with those commas exists verbatim, use that.
+   * - if targets matching those split names exist, use them?
+   * - if not: should we create one or more targets? Let's do one,
+   * and not second-guess the data source that added commas.
+   */
+  public function testEditWithCommas(){
+    // First configure the field edit properties.
+    $this->drupalGet('admin/structure/types/manage/song/fields/field_artist');
+    $this->assertText('Artist');
+    $this->assertText('EntityReference Autocreate settings');
+    $edit = array(
+      'instance[widget][settings][entityreference_autocreate][active]' => TRUE,
+      'instance[widget][settings][entityreference_autocreate][status]' => -1,
+      'field[cardinality]' => -1,
+      'field[settings][handler]' => 'base',
+      'field[settings][handler_settings][target_bundles][artist]' => 'artist',
+    );
+    $this->drupalPost(NULL, $edit, t('Save settings'));
+
+    // Also check that the Widget type is 'Autocomplete'
+    // This is relevant to the UI.
+    $widget_url = 'admin/structure/types/manage/song/fields/field_artist/widget-type';
+    $edit = array(
+      'widget_type' => 'entityreference_autocomplete',
+    );
+    $this->drupalPost($widget_url, $edit, t('Continue'));
+
+
+    // Add a node with a non-existing reference to a target with a comma.
+    $edit = array(
+      'title' => 'Puff (The Magic Dragon)',
+      'field_artist[und][0][target_id]' => 'Peter, Paul and Mary',
+    );
+    $this->drupalPost('node/add/' . $this->testBundle, $edit, t('Save'));
+    // If there is a link with the title as the text, that's a good sign.
+    $this->clickLink('Peter, Paul and Mary');
+
+    // Change the widget to 'Tags style'
+    $edit = array(
+      'widget_type' => 'entityreference_autocomplete_tags',
+    );
+    $this->drupalPost($widget_url, $edit, t('Continue'));
+
+    // Add a node with a non-existing reference to a target with a comma.
+    // The field id is slightly different.
+    $edit = array(
+      'title' => 'Teach Your Children',
+      'field_artist[und]' => 'Crosby, Stills, Nash & Young',
+    );
+    $this->drupalPost('node/add/' . $this->testBundle, $edit, t('Save'));
+    // If there is a link with the title as the text, that's a good sign.
+    $this->clickLink('Crosby, Stills, Nash & Young');
+
+  }
+
+  /**
+   * Enable and configure autocreate with a views-based lookup.
+   *
+   * Use the GUID field as a lookup index.
+   * Add a target artist, verify that we can add a song
+   * and link to the artist by ID.
+   * Then add another song with an ID for an artist that has not yet been added.
+   */
+  public function testViewBasedAutocomplete() {
+    // For this test (only) we need views.module also.
+    module_enable(array('views', 'views_ui'), TRUE);
+
+    // Check that worked - that the view is available.
+    $this->drupalGet('admin/structure/views/view/artist_lookup/edit');
+    $this->assertText('Edit view');
+    $this->assertText('Entity Reference details');
+
+    // Update the field edit properties.
+    $admin_url = 'admin/structure/types/manage/song/fields/field_artist';
+    // Change the entityselection mode to 'view'.
+    $edit = array(
+      'instance[widget][settings][entityreference_autocreate][active]' => TRUE,
+      'instance[widget][settings][entityreference_autocreate][status]' => -1,
+      'field[settings][handler]' => 'views',
+    );
+    $this->drupalPost($admin_url, $edit, t('Save settings'));
+    $this->assertText('Saved Artist configuration.');
+    // Need to submit the same form twice as the thing uses AJAX. Bah.
+
+    // Also, due to  https://www.drupal.org/node/1502750 ?
+    // Need to clear the cache or the lookup handler is unavailable still.
+    #drupal_flush_all_caches();
+    #cache_clear_all(NULL);
+    // I can't figure out how to boot the fucking cache.
+    // Try this old trick. Super-hacky work-around.
+    $this->drupalGet('update.php');
+    $this->drupalPost('update.php', array(), t('Continue'));
+
+    // If cache was not cleared, we were seeing this error.
+    $this->drupalGet($admin_url);
+    $this->assertNoText('The selected selection handler is broken.');
+
+    // Proceed to the Field (instance) settings.
+    // Set the lookup view to the one we provide.
+
+    $edit = array(
+      'field[settings][handler]' => 'views',
+      'field[settings][handler_settings][view][view_and_display]' => 'artist_lookup:by_mbid',
+      'instance[widget][settings][entityreference_autocreate][bundle]' => 'artist',
+    );
+    $this->drupalPost($admin_url, $edit, t('Save settings'));
+    // Load this page again, just to review the results stick.
+    $this->drupalGet($admin_url);
+
+    // We are not doing autocreate yet,
+    // just testing that a view-based lookup works as expected first.
+    // Add an artist node we will refer to.
+    // Give this a MusicBrainz ID we will try to look up.
+    $edit = array(
+      'title' => 'Bonnie Tyler',
+      'mbid[und][0][value]' => '0aa8294b-6332-4b65-b677-e3a1f8591d3b',
+    );
+    $this->drupalPost('node/add/' . $this->testTargetBundle, $edit, t('Save'));
+    $this->assertText('Artist Bonnie Tyler has been created.');
+
+    // Now make a song that will try to refer to it.
+    $edit = array(
+      'title' => 'Total Eclipse of the Heart',
+      'field_artist[und][0][target_id]' => '0aa8294b-6332-4b65-b677-e3a1f8591d3b',
+    );
+    $this->drupalPost('node/add/' . $this->testBundle, $edit, t('Save'));
+    $this->assertText('Song Total Eclipse of the Heart has been created.');
+    // This should have created a link to the artist.
+    $this->clickLink('Bonnie Tyler');
+  }
+
+}

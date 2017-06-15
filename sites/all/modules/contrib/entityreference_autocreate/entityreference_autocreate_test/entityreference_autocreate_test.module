@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * All the good stuff is in *.install
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function entityreference_autocreate_test_views_api() {
+  watchdog(__FUNCTION__, __FUNCTION__ . ' was called', array(), WATCHDOG_DEBUG);
+  return array(
+    'api' => 3,
+    #'path' => drupal_get_path('module', 'entityreference_autocomplete_test'),
+  );
+}
