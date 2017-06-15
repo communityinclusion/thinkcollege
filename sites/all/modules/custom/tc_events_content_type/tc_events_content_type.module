@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TC Events content type feature.
+ */
+
+include_once 'tc_events_content_type.features.inc';
