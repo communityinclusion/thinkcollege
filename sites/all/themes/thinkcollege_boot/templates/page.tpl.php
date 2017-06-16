@@ -138,7 +138,7 @@
 
 
   <div class="row">
-
+     <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
     <?php if (!empty($page['sidebar_first']) || !empty($page['sidebar_first_top'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first_top']); ?>
@@ -150,7 +150,7 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>

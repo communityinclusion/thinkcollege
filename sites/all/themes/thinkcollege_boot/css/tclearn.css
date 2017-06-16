@@ -1,6 +1,18 @@
+
+/* TC Learn Nav*/
+
 .node-type-tc-learn #block-book-navigation .nav {
 	display:inline-block;
 	display:-webkit-inline-box;
+}
+
+
+
+@media (max-width: 1170px) {
+.node-type-tc-learn #block-book-navigation .nav {
+	display:block;
+
+}
 }
 
 .node-type-tc-learn #block-book-navigation .nav {
@@ -17,6 +29,13 @@
 .node-type-tc-learn .dropdown-menu > li > a {color:#20527c;}
 
 .node-type-tc-learn .dropdown-menu > li > a:hover, .node-type-tc-learn .dropdown-menu > li > a:focus {color:#fff;}
+
+
+
+
+
+
+/* Layout */
 
 .node-type-tc-learn .ds-2col-fluid > .group-left {
 	float:left;
@@ -51,7 +70,7 @@
 
 
 
-/*
+
 
 .field-name-field-tc-learn-sidebar article header { display: none; }
   .node-type-tc-learn .ds-2col-stacked-fluid  > .group-right border
@@ -70,13 +89,17 @@
 }
 
 
-
+/*
 
 .field-name-field-tc-learn-sidebar {border-radius: 9px 9px 9px 9px;
 -moz-border-radius: 9px 9px 9px 9px;
 -webkit-border-radius: 9px 9px 9px 9px;
 border: 3px solid #20527C;}
 
+
+.node-type-tc-learn .clearfix {
+	display:inline-block;
+}
 */
 .field-name-field-tc-learn-sidebar .field-items > .field-item {
 	margin:8px 5px 14px;
@@ -117,9 +140,7 @@ border: 3px solid #20527C;}
 	margin:5px 8px;
 }
 
-.node-type-tc-learn .clearfix {
-	display:inline-block;
-}
+
 
 .checkmark {
 	position:absolute;
@@ -128,6 +149,8 @@ border: 3px solid #20527C;}
 	margin-left:-65px;
 }
 
+
+/* Lanidng page Menu */
 .tc-menu .circle.one {
 	background-color:#20527C;
 }
@@ -152,9 +175,7 @@ border: 3px solid #20527C;}
 	background-color:#20527C;
 }
 
-.tc-menu .circle {color:#fff;}
 .tc-menu .circle:hover {
-  	color:#fff;
 	background-color:#20527C;
 }
 
@@ -169,12 +190,15 @@ border: 3px solid #20527C;}
 .tc-menu .circle:hover {
 	border-radius:0;
 	cursor:pointer;
+
 }
 
 .tc-menu .tc-text {
 	text-align:center;
 	height:100%;
 }
+
+a.start-link {color:#fff;}
 
 .tc-menu .tc-description p {
 	font-size:14px;
@@ -186,6 +210,11 @@ border: 3px solid #20527C;}
 	top:50%;
 	transform:translateY(-50%);
 }
+
+.node-type-tc-learn .book-block {
+    border-bottom: #ccc 1px solid;
+    padding-bottom: 10px;
+    }
 
 .tc-menu .circle:hover .title {
 	opacity:0;
@@ -200,3 +229,26 @@ border: 3px solid #20527C;}
 	padding:5px;
 	opacity:1;
 }
+
+
+/* Module Menu's */
+
+
+
+.grid-menu	a.panel-clickable:hover {
+  font-weight: 700;
+  text-decoration: none;
+  }
+
+/* Scale up the box */
+.grid-menu .panel:hover {
+  transform: scale(1.1, 1.1);
+}
+
+
+.grid-menu .panel-default > .panel-heading {
+    font-size:18px;
+    font-family:"museo-sans-condensed"
+    }
+
+
