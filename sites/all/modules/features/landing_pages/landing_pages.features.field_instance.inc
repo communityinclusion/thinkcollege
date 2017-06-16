@@ -10,8 +10,8 @@
 function landing_pages_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-faq_page-field_faqs'.
-  $field_instances['node-faq_page-field_faqs'] = array(
+  // Exported field_instance: 'node-faq_page-field_faqs_formatted'.
+  $field_instances['node-faq_page-field_faqs_formatted'] = array(
     'bundle' => 'faq_page',
     'default_value' => NULL,
     'default_values' => array(
@@ -22,16 +22,16 @@ function landing_pages_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'faqfield',
         'settings' => array(
-          'active' => 0,
-          'autoHeight' => TRUE,
-          'collapsible' => FALSE,
+          'active' => '',
+          'autoHeight' => 0,
+          'collapsible' => 1,
           'event' => 'click',
         ),
         'type' => 'faqfield_accordion',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -42,7 +42,7 @@ function landing_pages_field_default_field_instances() {
     ),
     'display_label' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_faqs',
+    'field_name' => 'field_faqs_formatted',
     'label' => 'FAQs',
     'required' => 1,
     'settings' => array(
@@ -56,7 +56,7 @@ function landing_pages_field_default_field_instances() {
         'question' => '',
       ),
       'type' => 'faqfield_textboxes',
-      'weight' => 41,
+      'weight' => 42,
     ),
   );
 

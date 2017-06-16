@@ -136,13 +136,13 @@ function landing_pages_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
       'ical' => array(
         'custom_settings' => FALSE,
       ),
       'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'print' => array(
         'custom_settings' => FALSE,
       ),
       'token' => array(

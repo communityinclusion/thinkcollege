@@ -248,7 +248,7 @@ function landing_pages_default_page_manager_pages() {
     'admin_title' => 'College search image',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/images/collegesearch-v3.png" /></a></p>
+    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/collegesearch-v3.png" /></a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -676,7 +676,7 @@ text.hawaii {font-size: 14px;}
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Quick links',
-    'title' => 'Quick links',
+    'title' => 'Related Websites',
     'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="http://apse.org/">Association of People Supporting EmploymentFirst (APSE)</a></li>
@@ -746,7 +746,7 @@ text.hawaii {font-size: 14px;}
     'admin_title' => 'Employment',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p>Competitive, integrated employment is a reachable outcome for people with intellectual disabilities (ID). Like anyone else, students with ID attend college to prepare them for the career of their choice.&nbsp;</p>
+    'body' => '<p class="lead"><img alt="Job Application" class="img-responsive" src="/sites/default/files/files/images/shutterstock_73475122_0.jpg" style="width: 992px; height: 524px;" />Competitive, integrated employment is a reachable outcome for people with intellectual disabilities (ID). Like anyone else, students with ID attend college to prepare them for the career of their choice.&nbsp;</p>
 
 <p>Through person-centered planning and skills evaluation, students can choose a field in which to pursue paid or unpaid internships, part-time or full-time work, and volunteer opportunities -- with the ultimate goal of leaving college with a paid job in the field of their choice.</p>
 

@@ -367,13 +367,13 @@ else {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_faqs'.
-  $field_bases['field_faqs'] = array(
+  // Exported field_base: 'field_faqs_formatted'.
+  $field_bases['field_faqs_formatted'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_faqs',
+    'field_name' => 'field_faqs_formatted',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'faqfield',
@@ -386,7 +386,7 @@ else {
         'question_title' => 'Question',
       ),
       'answer_widget' => 'textarea',
-      'format' => 'plain_text',
+      'format' => 'markdown',
       'profile2_private' => FALSE,
     ),
     'translatable' => 0,
@@ -3279,7 +3279,7 @@ else {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 1074,
+      'default_image' => 1213,
       'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),

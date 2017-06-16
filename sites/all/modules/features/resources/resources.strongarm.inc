@@ -121,7 +121,7 @@ function resources_strongarm() {
         'custom_settings' => FALSE,
       ),
       'card' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
@@ -152,6 +152,10 @@ function resources_strongarm() {
           'teaser' => array(
             'weight' => '10',
             'visible' => TRUE,
+          ),
+          'card' => array(
+            'weight' => '9',
+            'visible' => FALSE,
           ),
         ),
       ),
