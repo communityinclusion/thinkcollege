@@ -1,5 +1,6 @@
 <?php
 $classes .= ' node-resource-teaser node-tc-card';
+dsm($title);
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="resource-box">
@@ -13,7 +14,7 @@ $classes .= ' node-resource-teaser node-tc-card';
     <div class="resource-title-listing">
       <?php print render($content['field_resourc_date_received']); ?>
       <?php print render($content['field_resourc_media_types']); ?>
-      <?php print l($title, '/node/' . $node->nid); ?>
+      <?php print l($title, '/node/' . $node->nid, array('html' => TRUE)); ?>
     </div>
 
 
