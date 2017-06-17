@@ -1,6 +1,5 @@
 <?php
 $classes .= ' node-resource-teaser node-tc-card';
-dsm($title);
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="resource-box">
