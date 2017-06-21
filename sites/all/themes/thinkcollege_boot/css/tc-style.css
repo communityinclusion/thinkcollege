@@ -578,3 +578,13 @@ background-color:#f2f2f2;padding:4px;}
 	font-size:30px;
 	line-height:1.43em;
 }
+
+
+
+/* teaser image in articles/resources/pages */
+
+.node-article .field-name-field-teaser-image img {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
