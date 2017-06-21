@@ -30,3 +30,7 @@ background-image:none;
 		@extend %title-underbar;
 	}
 }
+
+.ui-widget-content a {
+    color: #069;
+}

@@ -10257,7 +10257,14 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   color: #797A7D;
 }
 
-/* line 164, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_resource.scss */
+/* line 163, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_resource.scss */
+.field-name-field-resourc-apa-citation .field-item p {
+  margin-left: 200px;
+  display: inline-block;
+  margin-top: 0 !important;
+}
+
+/* line 170, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_resource.scss */
 .node-type-resource h1.page-header {
   display: none;
 }
@@ -10631,6 +10638,11 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 /* line 23, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_accordian.scss */
 .ui-accordion .ui-accordion-content {
   border: 0;
+}
+
+/* line 34, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_accordian.scss */
+.ui-widget-content a {
+  color: #069;
 }
 
 /* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
