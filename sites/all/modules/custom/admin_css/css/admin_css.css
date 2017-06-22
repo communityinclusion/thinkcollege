@@ -10,3 +10,4 @@
 #resource-node-form  #edit-field-resourc-topics-und .ninthCol {margin-left: 0; }
 #resource-node-form  #edit-field-resourc-topics-und .tenthCol {margin-left: 0; } */
 #edit-field-resourc-topics-und { height: 500px; }
+p.warnSelect { width: 50%; color: red; font-weight: bold; }

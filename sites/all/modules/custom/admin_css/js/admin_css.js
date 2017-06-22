@@ -2,18 +2,20 @@
 
  Drupal.behaviors.groupTopics = {
      attach: function (context, settings) {
+      if(!$('.form-item-field-resourc-topics-und p.warnSelect').length) { $('.form-item-field-resourc-topics-und label').after('<p class="warnSelect">Be careful selecting topics in the list below.  Use Cmd-click to insert on a Mac, or Ctrl-click on a Windows computer, if you think there may be previously selected topics. Otherwise, you may de-select topics that are already selected.</p>'); }
        if(!$(' #edit-field-feature-in-section-und').hasClass('clearfix')) $('#edit-field-feature-in-section-und').addClass('clearfix');
+
     //  $(document).find( $( '#resource-node-form .form-item-field-resourc-topics-und')).prepend('<div class="floatCol topicCol">');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(0,10)).wrapAll( '<div class="floatCol firstCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(1,11)).wrapAll( '<div class="floatCol secondCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(2,12)).wrapAll( '<div class="floatCol thirdCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(3,13)).wrapAll( '<div class="floatCol fourthCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(4,14)).wrapAll( '<div class="floatCol fifthCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(5,15)).wrapAll( '<div class="floatCol sixthCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(6,16)).wrapAll( '<div class="floatCol seventhCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(7,17)).wrapAll( '<div class="floatCol eigthCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(8,18)).wrapAll( '<div class="floatCol ninthCol" />');
-$(document).find($( '#edit-field-feature-in-section-und > div').slice(9,19)).wrapAll( '<div class="floatCol tenthCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(0,8)).wrapAll( '<div class="floatCol firstCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(1,9)).wrapAll( '<div class="floatCol secondCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(2,10)).wrapAll( '<div class="floatCol thirdCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(3,11)).wrapAll( '<div class="floatCol fourthCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(4,12)).wrapAll( '<div class="floatCol fifthCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(5,13)).wrapAll( '<div class="floatCol sixthCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(6,14)).wrapAll( '<div class="floatCol seventhCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(7,15)).wrapAll( '<div class="floatCol eigthCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(8,16)).wrapAll( '<div class="floatCol ninthCol" />');
+$(document).find($( '#edit-field-feature-in-section-und > div').slice(9,17)).wrapAll( '<div class="floatCol tenthCol" />');
 $(document).find($('.floatCol')).each(function(i, elem) { if(!$(elem).attr('data-mh','topicGrp')) $(elem).attr('data-mh','topicGrp');
 });
 //$(document).find($( '#resource-node-form #edit-field-feature-in-section-und')).append( '</div>' );
