@@ -11,14 +11,19 @@
 @media (max-width: 1170px) {
 .node-type-tc-learn #block-book-navigation .nav {
 	display:block;
-
-}
+	}
 }
 
 .node-type-tc-learn #block-book-navigation .nav {
 
 	text-transform:none;
 	font-size:14px;
+}
+
+.node-type-tc-learn section#block-book-navigation {
+    background-color: #f2f2f2;
+    padding: 3px;
+    margin-bottom: 20px;
 }
 
 
@@ -112,6 +117,7 @@ border: 3px solid #20527C;}
 .book-navigation .menu .nav {
 	display:none;
 }
+
 
 .toggleMe.wrong {
 	background-color:#ffe2e0;
