@@ -405,7 +405,7 @@ function thinkcollege_boot_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   $breadcrumb = _thinkcollege_boot_fix_yes_facets($breadcrumb);
 
-  // Special ordering in TC search - for when search is at /college-search
+  // Special ordering in TC College search - for when search is at /college-search
   if (current_path() == "college-search") {
     if (!drupal_is_front_page()) {
       unset($breadcrumb[sizeof($breadcrumb) - 1]);
@@ -415,6 +415,12 @@ function thinkcollege_boot_breadcrumb($variables) {
     else {
       array_splice($breadcrumb, 0, 0, '<a href="' . base_path() . '" class="active">Think College Search</a>');
     }
+  }
+
+  // Special ordering in TC Resource search - for when search is at /resource-search
+  if (current_path() == "resource-search") {
+    unset($breadcrumb[sizeof($breadcrumb) - 1]);
+    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'resource-search" class="active">Resource Search</a>');
   }
 
   // Determine if we are to display the breadcrumb.
