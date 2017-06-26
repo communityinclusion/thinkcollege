@@ -124,7 +124,7 @@
   }
   /* Hide search button on resource search page */
   #edit-submit-tc-resource-search {
-    display: none;
+    visibility: hidden;
   }
 }
 
@@ -168,6 +168,21 @@
   }
 }
 
+.page-resource-search {
+  #block-facetapi-dsmaazq7xahnlkh132zyrk1gxgncv8la {
+    ul {
+      padding-left: 10px;
+    }
+  }
+  /* hide height of sumbit button as `visibility: hidden` leaves size in place */
+  #views-exposed-form-tc-resource-search-resource-search-text-input {
+    .views-submit-button {
+      padding: 0;
+      margin: 0;
+      height: 0;
+    }
+  }
+}
 
 #block-facetapi-gkkn44mzr0b0a0uvm7labhst3ymihpyc .block-title,
 #block-facetapi-qvtddqhn4mirms8bzmvb8kcxeq6bq3yg .block-title  {
