@@ -158,7 +158,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{597, 473}, {360, 138}}</string>
+			<string>{{597, 313.75}, {360, 138}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -193,7 +193,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{75, 473}, {504, 138}}</string>
+			<string>{{75, 313.75}, {504, 138}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -228,7 +228,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{75, 318}, {882, 138}}</string>
+			<string>{{75, 470.875}, {882, 138}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -402,7 +402,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-06-26 16:17:49 +0000</string>
+	<string>2017-06-26 16:22:25 +0000</string>
 	<key>Modifier</key>
 	<string>Michael Anello</string>
 	<key>NotesVisible</key>
@@ -497,7 +497,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {1109, 718}}</string>
+		<string>{{11, 0}, {1109, 718}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

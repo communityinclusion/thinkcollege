@@ -28,17 +28,17 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12 tc-row2">
-      <?php print $content['row2']; ?>
-    </div>
-  </div>
-
-  <div class="row">
     <div class="col-sm-7 tc-row3left">
       <?php print $content['row3left']; ?>
     </div>
     <div class="col-sm-5 tc-row3right">
       <?php print $content['row3right']; ?>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 tc-row2">
+      <?php print $content['row2']; ?>
     </div>
   </div>
 
