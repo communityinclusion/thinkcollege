@@ -305,7 +305,9 @@ form#search-block-form {
 
 .criterion .panel {padding:0 10px 10px 10px;}
 
-
+.criterion input.form-checkbox {
+    margin-left: 0;
+}
 
 // Action Links
 ul.action-links {
