@@ -474,6 +474,9 @@ ul li.leaf {
 }
 
 // Panels
+.panel-group .panel {
+ margin-bottom: 0!important;
+}
 
 .panel  {
     text-align: left;
@@ -488,8 +491,10 @@ ul li.leaf {
     /*  padding-bottom: 10px;
     padding: 0 10px 10px 10px; */
     font-size: 16px;
-
 }
+
+
+
 
 // Password strength/match.
 .form-type-password-confirm {
