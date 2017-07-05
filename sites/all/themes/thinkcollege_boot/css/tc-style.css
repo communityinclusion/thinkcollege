@@ -549,7 +549,7 @@ background-color:#f2f2f2;padding:4px;}
 
 /* responsive google map embed */
 
-.overlay {
+.tpsid-map-overlay {
 background:transparent;
 position:relative;
 width:100%; /* your iframe width */

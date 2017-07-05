@@ -151,6 +151,7 @@ border-color: transparent transparent #B71C1C #B71C1C;}
 { background-color: $tclightblue;color:#fff;}
 
 
+
 ul.navbar-nav {
  @media #{$tablet} {
   margin-left:140px;
@@ -162,10 +163,13 @@ ul.navbar-nav {
   .dropdown-menu  {
      li {
         color:#fff;
+        text-transform: none;
+        border-bottom: 1px solid #fff;
         }
     border-radius: 0;
     border:0;
     padding: 0;
+
   }
 }
 
