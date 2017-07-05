@@ -567,15 +567,20 @@ margin-top:-480px; /* your iframe height */
 
 /* contact page */
 
-.contact-page .icon {
+.contact-page .icon-title {
 
     text-align: top;
     border-bottom:1px solid #ccc;
     padding-bottom:5px;
-    text-align:center;
-    color:#4C8EC9;
+
+
 
 }
+
+.contact-page .icon-title .fa
+{  color:#4C8EC9;display:inline-block}
+
+.contact-page .icon-title h2 {display: inline-block;}
 
 .contact-page .text {
   	font-size:18px;
