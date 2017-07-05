@@ -568,16 +568,42 @@ margin-top:-480px; /* your iframe height */
 /* contact page */
 
 .contact-page .icon {
-    display: table-cell;
-    vertical-align: top;
+
+    text-align: top;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    text-align:center;
+    color:#4C8EC9;
 
 }
 
-.contact-page .text {    display: table-cell;
-    vertical-align: top;
-	font-size:30px;
+.contact-page .text {
+  	font-size:18px;
 	line-height:1.43em;
 }
+
+
+
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
 
 
 
