@@ -160,6 +160,57 @@ article {
 }
 
 
+.node-tc-events.view-mode-full {
+    .col-sm-12 {
+      .field {
+        margin-bottom: 20px;
+
+        .field-label {
+          height: 40px;
+          width: 200px;
+          background: #20527C;
+          position: relative;
+          font-size: 18px;
+          color: #fff;
+          line-height: 34px;
+        }
+
+        .field-label:after {
+          position: absolute;
+          right: -20px;
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 20px solid $tcblue;
+        }
+
+        &.field-label-inline {
+          .field-items {
+            margin-left: 60px;
+          }
+        }
+
+        .field-items {
+          font-size: 16px;
+          color: $dkgray;
+        }
+
+        &.field-name-body .field-items {
+          color: $mdgray;
+        }
+
+        .field-label:before {
+          content: "";
+          margin-left: 20px;
+        }
+      }
+    }
+
+  }
+
+
 .field-name-field-resourc-apa-citation .field-item p {
     margin-left: 200px;
     display: inline-block;
