@@ -257,7 +257,7 @@ a.start-link {color:#fff;}
     font-family:"museo-sans-condensed"
     }
 		/* styles for events page */
-.view-tc-events-page .view-header { background-color: #fff; border-bottom: 1px solid #333; padding-bottom: 0; }
+.view-tc-events-page .view-header { background-color: #fff; padding-bottom: 0; }
 .view-tc-events-page .view-header ul, .view-tc-events-page .view-header ul li { list-style: none; padding: 0; margin: 0;}
 .view-tc-events-page .view-header ul li.eventtab { border-radius: 12px 12px 0px 0px;
 -moz-border-radius: 12px 12px 0px 0px;
