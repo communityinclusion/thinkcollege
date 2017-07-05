@@ -203,6 +203,19 @@ body {
   }
 }
 
+//well overrides
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+
 // Adjust z-index of core components.
 #overlay-container,
 .overlay-modal-background,
