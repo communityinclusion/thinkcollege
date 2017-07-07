@@ -339,6 +339,13 @@ header {
   }
 
 
+.view-tc-resource-search .view-header {background-color: none;}
+.view-tc-resource-search .view-header .results-count {
+   padding: 5px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;}
+
+
 
 /*** Landing Page --hero image block ***/
 
