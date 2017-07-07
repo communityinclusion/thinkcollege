@@ -339,7 +339,7 @@ header {
   }
 
 
-.view-tc-resource-search .view-header {background-color: none;}
+.view-tc-resource-search .view-header {background-color: #fff;}
 .view-tc-resource-search .view-header .results-count {
    padding: 5px;
   margin-bottom: 10px;
