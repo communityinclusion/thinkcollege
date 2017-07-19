@@ -1,13 +1,15 @@
-name = Custom breadcrumbs
+name = Custom breadcrumbs for paths
 package = Custom breadcrumbs
-description = Allows administrators to define custom breadcrumb trails for node types.
+dependencies[] = custom_breadcrumbs
+description = Provides custom breadcrumbs for specific paths.
 core = 7.x
 configure = admin/config/user-interface/custom-breadcrumbs
 
-files[] = custom_breadcrumbs.admin.inc
-files[] = custom_breadcrumbs.install
-files[] = custom_breadcrumbs.module
-files[] = custom_breadcrumbs_common.inc
+
+
+
+files[] = custom_breadcrumbs_paths.install
+files[] = custom_breadcrumbs_paths.module
 
 ; Information added by Drupal.org packaging script on 2017-07-14
 version = "7.x-2.0-beta1+10-dev"
