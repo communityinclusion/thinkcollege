@@ -52,7 +52,6 @@ function tc_solr_program_record_index_default_search_api_index() {
         "field_address:sub_administrative_area" : { "type" : "text" },
         "field_address:sub_premise" : { "type" : "text" },
         "field_address:thoroughfare" : { "type" : "text" },
-        "field_categories" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_how_many_students_total_at" : { "type" : "integer" },
         "field_name_of_credential_degree_" : { "type" : "text" },
         "field_please_select_any_all_of_t" : { "type" : "list\\u003Cstring\\u003E" },

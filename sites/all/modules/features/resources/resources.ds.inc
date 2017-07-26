@@ -18,7 +18,7 @@ function resources_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '-99',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -52,15 +52,14 @@ function resources_ds_layout_settings_info() {
         0 => 'title',
         1 => 'body',
         2 => 'field_resourc_apa_citation',
-        4 => 'field_resourc_publication_date',
-        5 => 'field_resourc_authors',
-        6 => 'field_resourc_topics',
-        7 => 'field_resourc_media_types',
-        8 => 'field_resourc_publication_types',
-        10 => 'field_resourc_date_received',
+        3 => 'field_resourc_publication_date',
+        4 => 'field_resourc_authors',
+        5 => 'field_resourc_topics',
+        6 => 'field_resourc_media_types',
+        7 => 'field_resourc_publication_types',
       ),
       'right' => array(
-        3 => 'field_resourc_file',
+        8 => 'field_resourc_file',
         9 => 'field_external_link',
       ),
     ),
@@ -68,14 +67,13 @@ function resources_ds_layout_settings_info() {
       'title' => 'left',
       'body' => 'left',
       'field_resourc_apa_citation' => 'left',
-      'field_resourc_file' => 'right',
       'field_resourc_publication_date' => 'left',
       'field_resourc_authors' => 'left',
       'field_resourc_topics' => 'left',
       'field_resourc_media_types' => 'left',
       'field_resourc_publication_types' => 'left',
+      'field_resourc_file' => 'right',
       'field_external_link' => 'right',
-      'field_resourc_date_received' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -88,6 +86,8 @@ function resources_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
+    'hide_page_title' => '0',
+    'page_option_title' => '',
   );
   $export['node|resource|full'] = $ds_layout;
 

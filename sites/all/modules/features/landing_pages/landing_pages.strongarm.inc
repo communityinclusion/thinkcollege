@@ -154,6 +154,9 @@ function landing_pages_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'event_attachment' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -213,7 +216,7 @@ function landing_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_resource_pattern';
-  $strongarm->value = 'resource/[node:title]';
+  $strongarm->value = 'resource/[node:field_resourc_topics]/[node:title]';
   $export['pathauto_node_resource_pattern'] = $strongarm;
 
   return $export;

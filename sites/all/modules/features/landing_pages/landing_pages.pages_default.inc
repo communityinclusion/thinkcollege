@@ -69,75 +69,51 @@ function landing_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-0e1bce64-9860-4327-82c1-b341a11efb98';
-  $pane->panel = 'row1left';
+  $pane->pid = 'new-2d8cd95d-6e4d-4b6d-8684-4bced39eabe8';
+  $pane->panel = 'row0';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'College options for folks with intellectual disabilities',
+    'admin_title' => 'Think College Logo',
     'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<div class="one-element"><img alt="Image" class="img-responsive" src="http://themajorlift.com/dev/img/academic-books.png" />
-<div class="overlay">
-<h1 class="headline"><span>Think College:</span> College options for people with intellectual disability</h1>
-</div>
+    'title_heading' => 'h1',
+    'body' => '<style type="text/css">.row-full{
+      width: 100vw;
+      position: relative;
+      margin-left: -50vw;
+      height: 150px;
+      left: 50%;
+padding:30px 0;
+      text-align:center;
+      background-color: #20527C;
+      font-style:italic;
+      color:#fff;
+	font-family: \'museo-sans-condensed\',sans-serif;
+}
+</style>
+<p><img alt="Think College" class="img-responsive" src="/sites/default/files/files/images/TC_long_1600x350.png" /></p>
+
+<div class="row row-full">
+<h1>College options for people with  intellectual disabilities</h1>
 </div>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
   $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-    'style' => 'block',
-  );
+  $pane->style = array();
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '0e1bce64-9860-4327-82c1-b341a11efb98';
-  $display->content['new-0e1bce64-9860-4327-82c1-b341a11efb98'] = $pane;
-  $display->panels['row1left'][0] = 'new-0e1bce64-9860-4327-82c1-b341a11efb98';
-  $pane = new stdClass();
-  $pane->pid = 'new-80971494-f604-407b-83ab-b9d34489eaf5';
-  $pane->panel = 'row1right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'This is the second title',
-    'title' => 'Latest News',
-    'title_heading' => 'h3',
-    'body' => '<ul class="latest">
-	<li>New <a href="http://www.thinkcollege.net/training/research-summits">Research Summit</a> scheduled for June 7.</li>
-	<li><a href="http://thinkcollege.net/convos">Think College Conversations</a>: a NEW way to talk with TC and the community of people interested in inclusive postsecondary education.</li>
-	<li>The <a href="http://www.thinkcollege.net/images/stories/acc%20accrediation%20report_F.pdf">Report on Accreditation Standards for Postsecondary Education Programs for Students with Intellectual Disabilities</a> is now available.</li>
-	<li>Think College staff presented <a href="http://www.thinkcollege.net/conference-materials">several sessions</a> at the Council for Exceptional Children conference in Boston.</li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'panel panel-default',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '80971494-f604-407b-83ab-b9d34489eaf5';
-  $display->content['new-80971494-f604-407b-83ab-b9d34489eaf5'] = $pane;
-  $display->panels['row1right'][0] = 'new-80971494-f604-407b-83ab-b9d34489eaf5';
+  $pane->uuid = '2d8cd95d-6e4d-4b6d-8684-4bced39eabe8';
+  $display->content['new-2d8cd95d-6e4d-4b6d-8684-4bced39eabe8'] = $pane;
+  $display->panels['row0'][0] = 'new-2d8cd95d-6e4d-4b6d-8684-4bced39eabe8';
   $pane = new stdClass();
   $pane->pid = 'new-68685f4d-7ba3-48ce-a6c2-65e06b32a276';
-  $pane->panel = 'row2';
+  $pane->panel = 'row0';
   $pane->type = 'views_panes';
   $pane->subtype = 'whats_new-panel_pane_1';
   $pane->shown = TRUE;
@@ -152,11 +128,11 @@ function landing_pages_default_page_manager_pages() {
     'css_class' => 'home-featurednews',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '68685f4d-7ba3-48ce-a6c2-65e06b32a276';
   $display->content['new-68685f4d-7ba3-48ce-a6c2-65e06b32a276'] = $pane;
-  $display->panels['row2'][0] = 'new-68685f4d-7ba3-48ce-a6c2-65e06b32a276';
+  $display->panels['row0'][1] = 'new-68685f4d-7ba3-48ce-a6c2-65e06b32a276';
   $pane = new stdClass();
   $pane->pid = 'new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
   $pane->panel = 'row2';
@@ -167,8 +143,51 @@ function landing_pages_default_page_manager_pages() {
   $pane->configuration = array(
     'admin_title' => 'Innovation Exchange',
     'title' => 'Innovation Exchange',
-    'title_heading' => 'h3',
-    'body' => '<div class="ie-feature">
+    'title_heading' => 'h2',
+    'body' => '<div class="row">
+<div class="ie-feature">
+<div class="col-sm-4 ie-intro">
+<h3 class="block-title">Click on a Topic to Find:</h3>
+
+<ul>
+	<li class="lead">Topic Overviews</li>
+	<li class="lead">Key Resources</li>
+	<li class="lead">Related Websites</li>
+	<li class="lead">Affinity Groups</li>
+	<li class="lead">FAQ’s</li>
+</ul>
+</div>
+
+<div class="col-sm-8">
+<div class="row">
+<div class="col-sm-6 icontile">
+<h3>Employment</h3>
+<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-employment.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="/innovation-exchange/employment">Employment</a></p>
+</div>
+
+<div class="col-sm-6 icontile">
+<h3>Paying for College</h3>
+<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-financial-aid.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="/innovation-exchange/paying-for-college">Paying for College </a></p>
+</div>
+
+<div class="col-sm-6 icontile">
+<h3>Vocational Rehab</h3>
+<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-transition.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="/innovation-exchange/vocational-rehabilitation">Vocational Rehab</a></p>
+</div>
+
+<div class="col-sm-6 icontile">
+<h3>For Families</h3>
+<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-family.svg" style="margin:0 auto;max-width:150px" />
+<p><a class="divLink" href="/innovation-exchange/for-families">For Families</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--<div class="ie-feature">
 <div class="col-md-3 col-sm-4 ie-intro">
 <h3 class="block-title">Click on a Topic to Find:</h3>
 
@@ -221,8 +240,7 @@ function landing_pages_default_page_manager_pages() {
 </div>
 </div>
 </div>
-
-',
+-->',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
@@ -230,13 +248,16 @@ function landing_pages_default_page_manager_pages() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'ie-pane',
+  );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
   $display->content['new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d'] = $pane;
-  $display->panels['row2'][1] = 'new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
+  $display->panels['row2'][0] = 'new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
   $pane = new stdClass();
   $pane->pid = 'new-57641ce9-166f-488c-89f0-2a32066bb5d9';
   $pane->panel = 'row3left';
@@ -248,7 +269,7 @@ function landing_pages_default_page_manager_pages() {
     'admin_title' => 'College search image',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/collegesearch-v3.png" /></a></p>
+    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/images/collegesearch-v5.png" /></a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -299,7 +320,8 @@ function landing_pages_default_page_manager_pages() {
     'title' => 'Join the conversation',
     'title_heading' => 'h3',
     'body' => '<p>Connect with professionals, parents and students interested in postsecondary education for students with intellectual disabilities.</p>
-<p class="rtecenter"><a class="btn btn-primary" href="#" role="button">Sign up</a></p>
+
+<p class="rtecenter"><a class="btn btn-primary" href="technical-assistance/join-conversation" role="button">Sign up</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -327,7 +349,7 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Twitter',
-    'title' => 'Twitter feed by ThinkCollegeICI',
+    'title' => 'Think College Twitter',
     'title_heading' => 'h3',
     'body' => '<p><a class="twitter-timeline" data-height="500" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 ',
@@ -644,10 +666,10 @@ text.hawaii {font-size: 14px;}
   $display->content['new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba'] = $pane;
   $display->panels['row1left'][0] = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $pane = new stdClass();
-  $pane->pid = 'new-afd7182e-24b4-4f90-b190-6f4b8d01dc40';
+  $pane->pid = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
-  $pane->subtype = 'whats_new-panel_pane_3';
+  $pane->subtype = 'whats_new-panel_pane_6';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -664,9 +686,9 @@ text.hawaii {font-size: 14px;}
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = 'afd7182e-24b4-4f90-b190-6f4b8d01dc40';
-  $display->content['new-afd7182e-24b4-4f90-b190-6f4b8d01dc40'] = $pane;
-  $display->panels['row1left'][1] = 'new-afd7182e-24b4-4f90-b190-6f4b8d01dc40';
+  $pane->uuid = 'df9723c1-4cb3-42c9-86b4-1ab14aa00454';
+  $display->content['new-df9723c1-4cb3-42c9-86b4-1ab14aa00454'] = $pane;
+  $display->panels['row1left'][1] = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
   $pane = new stdClass();
   $pane->pid = 'new-118378e4-e847-433e-a99e-290000a9ae69';
   $pane->panel = 'row1left';
@@ -716,7 +738,7 @@ text.hawaii {font-size: 14px;}
     'title_heading' => 'h3',
     'body' => '<p>Connect with professionals, parents and students interested in postsecondary education for students with intellectual disabilities.</p>
 
-<p class="rtecenter"><button class="btn btn-primary" type="button">Sign up</button></p>
+<p class="rtecenter"> <a href="/technical-assistance/join-conversation" class="btn btn-primary" role="button">Sign up</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
