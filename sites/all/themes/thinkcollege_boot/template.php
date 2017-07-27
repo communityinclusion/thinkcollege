@@ -166,7 +166,7 @@ function thinkcollege_boot_preprocess_page(&$vars) {
 }
 
 /**
- * Implements template_preprocess_page().
+ * Implements template_process_page().
  *
  * Since we have a sidebar_first_top, we have to make sure that the content region
  * resizes properly when there is a sidebar_first_top but no sidebar_first content.

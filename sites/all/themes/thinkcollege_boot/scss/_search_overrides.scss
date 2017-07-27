@@ -217,3 +217,40 @@ body.tc-college-search-results {
       border-bottom: #bbb solid 1px;
       padding-bottom: 1em;
 }
+
+.thinkcollege-site-search {
+  .views-row {
+    margin-bottom:15px;
+    border-bottom: solid #ccc 1px;
+    padding-bottom: 15px;
+
+    .view-mode-search_result {
+      .thinkcollege-search-result-content-type {
+        font-family: $museo-cond-stack;
+        color: $tcorange;
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.03125em;
+        line-height: 1;
+        margin: 0 0 .5em;
+      }
+
+      .field-name-title h2 {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 500;
+        font-family: $museo-sans-stack;
+        margin-top: 0;
+      }
+
+      .field-name-post-date {
+        color: #999;
+        font-size: .9em;
+        line-height: 1.2;
+        margin: .5rem 0;
+      }
+    }
+  }
+}
+

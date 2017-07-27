@@ -106,7 +106,7 @@ function resources_strongarm() {
         'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ical' => array(
         'custom_settings' => FALSE,
@@ -166,6 +166,10 @@ function resources_strongarm() {
           ),
           'search_index' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),

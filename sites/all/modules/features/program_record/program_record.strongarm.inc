@@ -78,7 +78,7 @@ function program_record_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ical' => array(
         'custom_settings' => FALSE,
@@ -99,6 +99,9 @@ function program_record_strongarm() {
         'custom_settings' => FALSE,
       ),
       'print' => array(
+        'custom_settings' => FALSE,
+      ),
+      'event_attachment' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -138,6 +141,10 @@ function program_record_strongarm() {
           'teaser' => array(
             'weight' => '10',
             'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '65',
+            'visible' => FALSE,
           ),
         ),
       ),
