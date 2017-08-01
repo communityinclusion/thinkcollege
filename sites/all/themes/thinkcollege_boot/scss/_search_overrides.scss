@@ -214,8 +214,8 @@ body.tc-college-search-results {
 /*  Search Results List */
 
 .search-result {
-      border-bottom: #bbb solid 1px;
-      padding-bottom: 1em;
+  border-bottom: #bbb solid 1px;
+  padding-bottom: 1em;
 }
 
 .thinkcollege-site-search {
@@ -254,3 +254,31 @@ body.tc-college-search-results {
   }
 }
 
+#views-exposed-form-tc-general-site-search-tc-general-search-block {
+  padding-top: 12px;
+  .views-exposed-widget.views-submit-button button {
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .tc-general-search-block {
+
+    #edit-submit-tc-general-site-search {
+      margin: 0;
+    }
+    .views-exposed-widget {
+      padding: 0;
+    }
+    #edit-search-api-views-fulltext {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    #edit-submit-tc-general-site-search {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .views-exposed-widgets {
+      margin: 0;
+    }
+  }
+}

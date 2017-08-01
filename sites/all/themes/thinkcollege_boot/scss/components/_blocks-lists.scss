@@ -1,27 +1,27 @@
-.external-links-list .pane-content ul{
-    padding: 0;
-    margin: 0;
-    list-style:none;
-  li{
+.external-links-list .pane-content ul {
+  padding: 0;
+  margin: 0;
+  list-style:none;
+  li {
     margin:1em;
     margin-left:2em;
- &:before {
-content:'\f08e';
-/* fa-external-link  */
-font-family:FontAwesome;
-float:left;
-margin-left:-1.5em;
-color:#20527C;
+    &:before {
+      content:'\f08e';
+      /* fa-external-link  */
+      font-family:FontAwesome;
+      float:left;
+      margin-left:-1.5em;
+      color:#20527C;
+    }
   }
- }
 }
 
 
-.infolist .external-links-list .pane-content ul{
-     padding: 0;
-    margin: 0;
-    list-style:none;
-    li {
+.infolist .external-links-list .pane-content ul {
+  padding: 0;
+  margin: 0;
+  list-style:none;
+  li {
     position: relative;
     display: block;
     padding: 10px 5px;
