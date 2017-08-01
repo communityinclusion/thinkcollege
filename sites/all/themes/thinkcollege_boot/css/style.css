@@ -11870,12 +11870,14 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 
 /* line 1, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search,
 .page-resource-search,
 .page-college-search {
   /* Hide search button on resource search page */
 }
 
-/* line 3, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 4, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search #edit-search-api-views-fulltext-wrapper,
 .page-resource-search #edit-search-api-views-fulltext-wrapper,
 .page-college-search #edit-search-api-views-fulltext-wrapper {
   position: relative;
@@ -11887,8 +11889,12 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-size: 1.3rem;
 }
 
-/* line 12, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 13, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .block-title,
+.page-general-site-search .tc-facet-title,
+.page-resource-search .block-title,
 .page-resource-search .tc-facet-title,
+.page-college-search .block-title,
 .page-college-search .tc-facet-title {
   position: relative;
   margin-bottom: .2em;
@@ -11899,13 +11905,15 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-size: 1.6rem;
 }
 
-/* line 22, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 24, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search #edit-search-api-views-fulltext,
 .page-resource-search #edit-search-api-views-fulltext,
 .page-college-search #edit-search-api-views-fulltext {
   background-color: #e6e6e6;
 }
 
-/* line 27, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 29, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .views-exposed-form .views-exposed-widget.views-reset-button,
 .page-resource-search .views-exposed-form .views-exposed-widget.views-reset-button,
 .page-college-search .views-exposed-form .views-exposed-widget.views-reset-button {
   position: absolute;
@@ -11914,7 +11922,8 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   padding: 0;
 }
 
-/* line 33, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 35, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .views-exposed-form .views-exposed-widget.views-reset-button #edit-reset,
 .page-resource-search .views-exposed-form .views-exposed-widget.views-reset-button #edit-reset,
 .page-college-search .views-exposed-form .views-exposed-widget.views-reset-button #edit-reset {
   font-size: 0.7em;
@@ -11922,13 +11931,15 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   color: #337ab7;
 }
 
-/* line 40, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 42, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .views-exposed-form .views-exposed-widgets.clearfix,
 .page-resource-search .views-exposed-form .views-exposed-widgets.clearfix,
 .page-college-search .views-exposed-form .views-exposed-widgets.clearfix {
   position: relative;
 }
 
-/* line 45, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 47, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .region-sidebar-first,
 .page-resource-search .region-sidebar-first,
 .page-college-search .region-sidebar-first {
   border-radius: 4px;
@@ -11942,7 +11953,8 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-size: 1.5rem;
 }
 
-/* line 55, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 57, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .region-sidebar-first .block,
 .page-resource-search .region-sidebar-first .block,
 .page-college-search .region-sidebar-first .block {
   border: none;
@@ -11953,20 +11965,24 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin: 0;
 }
 
-/* line 63, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 65, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .region-sidebar-first h2,
 .page-resource-search .region-sidebar-first h2,
 .page-college-search .region-sidebar-first h2 {
   border-bottom: none;
   padding-bottom: 0;
 }
 
-/* line 67, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 69, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .region-sidebar-first .facetapi-limit-link,
 .page-resource-search .region-sidebar-first .facetapi-limit-link,
 .page-college-search .region-sidebar-first .facetapi-limit-link {
   padding-left: 10px;
 }
 
-/* line 74, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 76, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search section.tc_financial_aid h2,
+.page-general-site-search section.tc_housing h2,
 .page-resource-search section.tc_financial_aid h2,
 .page-resource-search section.tc_housing h2,
 .page-college-search section.tc_financial_aid h2,
@@ -11974,7 +11990,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   display: none;
 }
 
-/* line 77, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 79, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search section.tc_financial_aid ul,
+.page-general-site-search section.tc_housing ul,
 .page-resource-search section.tc_financial_aid ul,
 .page-resource-search section.tc_housing ul,
 .page-college-search section.tc_financial_aid ul,
@@ -11982,13 +12000,15 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin-bottom: 0;
 }
 
-/* line 83, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 85, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search section.tc_dual_enroll ul,
 .page-resource-search section.tc_dual_enroll ul,
 .page-college-search section.tc_dual_enroll ul {
   margin-bottom: 0;
 }
 
-/* line 88, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 90, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search div.aside,
 .page-resource-search div.aside,
 .page-college-search div.aside {
   padding: 10px 10px 0 10px;
@@ -11996,20 +12016,23 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   color: grey;
 }
 
-/* line 94, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 96, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search ul.facetapi-facetapi-checkbox-links,
 .page-resource-search ul.facetapi-facetapi-checkbox-links,
 .page-college-search ul.facetapi-facetapi-checkbox-links {
   padding-left: 10px;
   margin-bottom: 0px;
 }
 
-/* line 99, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 101, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search input[type="checkbox"].facetapi-checkbox,
 .page-resource-search input[type="checkbox"].facetapi-checkbox,
 .page-college-search input[type="checkbox"].facetapi-checkbox {
   margin-right: 5px;
 }
 
-/* line 104, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 106, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .region-sidebar-first .well,
 .page-resource-search .region-sidebar-first .well,
 .page-college-search .region-sidebar-first .well {
   min-height: 20px;
@@ -12022,14 +12045,16 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/* line 114, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 116, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search .region-sidebar-first .well-sm,
 .page-resource-search .region-sidebar-first .well-sm,
 .page-college-search .region-sidebar-first .well-sm {
   padding: 9px;
   border-radius: 3px;
 }
 
-/* line 119, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 121, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search #tc-adv-filters,
 .page-resource-search #tc-adv-filters,
 .page-college-search #tc-adv-filters {
   width: 100%;
@@ -12037,25 +12062,26 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin-top: 20px;
 }
 
-/* line 126, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 128, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+.page-general-site-search #edit-submit-tc-resource-search,
 .page-resource-search #edit-submit-tc-resource-search,
 .page-college-search #edit-submit-tc-resource-search {
   visibility: hidden;
 }
 
 /* Remove search results when no search terms */
-/* line 134, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 136, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-college-search.tc-college-search-start .main-container .view-tc-solr-college-search {
   display: none;
 }
 
-/* line 141, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 143, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .tc-college-search-start .views-exposed-widget.views-submit-button {
   float: right;
   padding: 0;
 }
 
-/* line 144, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 146, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .tc-college-search-start .views-exposed-widget.views-submit-button button {
   font-size: 0.7em;
   padding: 1px 5px;
@@ -12064,7 +12090,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 
 /* Hide show all button with any results */
-/* line 155, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 157, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .tc-college-search-results .views-exposed-widget.views-submit-button {
   visibility: hidden;
   height: 0;
@@ -12073,7 +12099,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin: 0;
 }
 
-/* line 161, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 163, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .tc-college-search-results .views-exposed-widget.views-submit-button button {
   visibility: hidden;
   height: 0;
@@ -12082,30 +12108,30 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin: 0;
 }
 
-/* line 171, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 173, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-resource-search {
   /* hide height of sumbit button as `visibility: hidden` leaves size in place */
 }
 
-/* line 173, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 175, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-resource-search #block-facetapi-dsmaazq7xahnlkh132zyrk1gxgncv8la ul {
   padding-left: 10px;
 }
 
-/* line 179, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 181, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .page-resource-search #views-exposed-form-tc-resource-search-resource-search-text-input .views-submit-button {
   padding: 0;
   margin: 0;
   height: 0;
 }
 
-/* line 187, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 189, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #block-facetapi-gkkn44mzr0b0a0uvm7labhst3ymihpyc .block-title,
 #block-facetapi-qvtddqhn4mirms8bzmvb8kcxeq6bq3yg .block-title {
   display: none;
 }
 
-/* line 196, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 198, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map,
 body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile {
   display: none;
@@ -12113,7 +12139,7 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
 
 /* Don't show map intro on phone size */
 @media (max-width: 768px) {
-  /* line 203, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+  /* line 205, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
   #block-tc-facets-tc-program-intro-and-map {
     display: none;
   }
@@ -12121,27 +12147,27 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
 
 /* Don't show mobile into on non-phone size */
 @media screen and (min-width: 768px) {
-  /* line 209, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+  /* line 211, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
   #block-tc-facets-tc-program-intro-and-map-mobile {
     display: none;
   }
 }
 
 /*  Search Results List */
-/* line 216, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 218, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .search-result {
   border-bottom: #bbb solid 1px;
   padding-bottom: 1em;
 }
 
-/* line 222, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 224, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .thinkcollege-site-search .views-row {
   margin-bottom: 15px;
   border-bottom: solid #ccc 1px;
   padding-bottom: 15px;
 }
 
-/* line 228, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 230, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .thinkcollege-site-search .views-row .view-mode-search_result .thinkcollege-search-result-content-type {
   font-family: "museo-sans-condensed", sans-serif;
   color: #C96B29;
@@ -12153,7 +12179,7 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   margin: 0 0 .5em;
 }
 
-/* line 239, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 241, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .thinkcollege-site-search .views-row .view-mode-search_result .field-name-title h2 {
   font-size: 24px;
   line-height: 1.5;
@@ -12162,7 +12188,7 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   margin-top: 0;
 }
 
-/* line 247, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 249, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 .thinkcollege-site-search .views-row .view-mode-search_result .field-name-post-date {
   color: #999;
   font-size: .9em;
@@ -12170,41 +12196,41 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   margin: .5rem 0;
 }
 
-/* line 257, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 259, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block {
   padding-top: 12px;
 }
 
-/* line 259, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 261, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block .views-exposed-widget.views-submit-button button {
   color: #fff;
   padding: 6px 12px;
   font-size: 14px;
 }
 
-/* line 266, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 268, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block #edit-submit-tc-general-site-search {
   margin: 0;
 }
 
-/* line 269, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 271, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block .views-exposed-widget {
   padding: 0;
 }
 
-/* line 272, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 274, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block #edit-search-api-views-fulltext {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-/* line 276, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 278, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block #edit-submit-tc-general-site-search {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* line 280, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
+/* line 282, /Users/lsw/codej/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_search_overrides.scss */
 #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block .views-exposed-widgets {
   margin: 0;
 }
