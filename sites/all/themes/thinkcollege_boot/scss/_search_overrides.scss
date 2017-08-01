@@ -1,3 +1,4 @@
+.page-general-site-search,
 .page-resource-search,
 .page-college-search {
   #edit-search-api-views-fulltext-wrapper {
@@ -9,6 +10,7 @@
     font-weight: 700;
     font-size: 1.3rem;
   }
+  .block-title,
   .tc-facet-title {
     position: relative;
     margin-bottom: .2em;
