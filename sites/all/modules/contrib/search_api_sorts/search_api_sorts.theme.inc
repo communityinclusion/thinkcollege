@@ -12,7 +12,6 @@ function theme_search_api_sorts_list(array $variables) {
   $items = array_map('render', $variables['items']);
   $options = $variables['options'];
 
-  dd("orig group");
   return $items ? theme('item_list', array('items' => $items) + $options) : '';
 }
 
@@ -29,7 +28,6 @@ function theme_search_api_sorts_list(array $variables) {
  * @return string
  */
 function theme_search_api_sorts_sort(array $variables) {
-  dd("orig single");
   $name = $variables['name'];
   $path = $variables['path'];
   $options = $variables['options'] + array('attributes' => array());
