@@ -24,6 +24,21 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
   if (isset($info['node']['bundles'])) {
     // For each content type.
     foreach ($info['node']['bundles'] as $bundle_type => $bundle) {
+      // Put an extra title for alphabetical sort (ie not fulltext)
+      $info['node']['bundles'][$bundle_type]['properties']['tc_alpha_sortable_title'] = array(
+        'type' => 'text',
+        'label' => 'TC:Alphabetically Sortable Title',
+        'sanitized' => TRUE,
+        'getter callback' => 'tc_program_record_properties_property_alpha_sort_title',
+      );
+      // Created Date sortable - as unix timestamp
+      $info['node']['bundles'][$bundle_type]['properties']['tc_sortable_created_date'] = array(
+        'type' => 'date',
+        'label' => 'TC:Sortable Created Date',
+        'sanitized' => TRUE,
+        'getter callback' => 'tc_program_record_properties_property_sort_created_date',
+      );
+
       switch ($bundle_type) {
         case 'program_record':
           /*
@@ -164,6 +179,14 @@ function tc_program_record_properties_property_financial_aid($item) {
   // will be N/A
   return "No";
 
+}
+
+function tc_program_record_properties_property_alpha_sort_title($item) {
+  return $item->title;
+}
+
+function tc_program_record_properties_property_sort_created_date($item) {
+  return $item->created;
 }
 
 /**

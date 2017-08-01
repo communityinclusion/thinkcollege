@@ -579,3 +579,67 @@ function thinkcollege_boot_status_messages($variables) {
 	}
 	return $output;
 }
+
+
+/**
+ * Theme a list of sort options.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - items: The sort options
+ *   - options: Various options to pass
+ *
+ * @return string
+ */
+function thinkcollege_boot_search_api_sorts_list(array $variables) {
+
+  foreach ($variables['items'] as $id => $item) {
+    //$variables['items'][$id]['#theme'] = 'tc_option_select_item';
+    $vars['search_sort_vars'] = $variables['items'][$id];
+    $params =  drupal_get_query_parameters();
+
+    // sort=search_api_relevance
+    // sort=created
+    // sort=tc_alpha_sortable_title
+    $vars['isselected'] = "";
+    if ($item['#name'] == 'Alphabetical') {
+      if ($params['sort'] == "tc_alpha_sortable_title") {
+        $vars['isselected'] = "selected";
+      }
+    }
+    else if ($item['#name'] == 'Publication Date') {
+      if ($params['sort'] == "created") {
+        $vars['isselected'] = "selected";
+      }
+    }
+    else {
+      // will be relevance
+      $vars['isselected'] = "selected";
+    }
+
+    if (sizeof ($item['#order_options']['query']) > 0) {
+      foreach($item['#order_options']['query'] as $thing => $value) {
+        $params[$thing] = $value;
+      }
+    }
+    else {
+      foreach($item['#options']['query'] as $thing => $value) {
+        $params[$thing] = $value;
+      }
+    }
+
+    $qr = http_build_query($params);
+    $vars['currenturl'] = current_path();
+    $vars['newurl'] = $qr;
+    $vars['link_name'] = $item['#name'];
+    $items[] = theme('tc_option_select_item', $vars);
+  }
+
+
+  $output = '<select class="form-control" onchange="location = this.value;">';
+  foreach ($items as $item) {
+    $output .= $item;
+  }
+  $output .= "</select>";
+  return $output;
+}
