@@ -162,7 +162,7 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
            */
           $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_publication_types'] = array(
             'type' => 'text',
-            'label' => 'tc:term searchable publication types',
+            'label' => 'TC:Term searchable publication types',
             'sanitized' => true,
             'getter callback' => 'tc_program_record_properties_string_of_publication_types',
           );
@@ -171,7 +171,7 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
            */
           $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_audiences'] = array(
             'type' => 'text',
-            'label' => 'tc:term searchable audiences',
+            'label' => 'TC:Term searchable audiences',
             'sanitized' => true,
             'getter callback' => 'tc_program_record_properties_string_of_audiences',
           );
@@ -187,6 +187,24 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
 
         case 'tc_events':
           /*
+           * categories is a taxonomy term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_categories'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term searchable categories',
+            'sanitized' => true,
+            'getter callback' => 'tc_program_record_properties_string_of_categories',
+          );
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
           field_event_cal_categories
           field_resourc_topics
           */
@@ -194,17 +212,44 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
 
         case 'page':
           /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
           field_resourc_topics
           */
           break;
 
         case 'article':
           /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
           field_resourc_topics
           */
           break;
 
         case 'tc_learn':
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
           /*
           field_resourc_topics
           */
@@ -514,8 +559,6 @@ function tc_program_record_get_list_of_terms_as_string(array $term_array) {
       $name_list .= ' ' . $term->name;
     }
   }
-
-  dd($name_list);
   return $name_list;
 }
 
@@ -614,3 +657,20 @@ function tc_program_record_properties_string_of_audiences($item) {
   }
   return "";
 }
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (categories)
+ * @param $item
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_categories($item) {
+  if (property_exists($item, "field_event_cal_categories")) {
+    if (sizeof($item->field_event_cal_categories) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_event_cal_categories[LANGUAGE_NONE]);
+    }
+  }
+  return "";
+}
+
