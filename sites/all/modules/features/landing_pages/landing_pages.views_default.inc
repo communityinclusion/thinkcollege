@@ -221,7 +221,7 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/general-site-search?f%5B0%5D=type%3Aarticle&sort=tc_alpha_sortable_title&order=asc" class="view-all">View all</a>';
+  $handler->display->display_options['header']['area']['content'] = '<a href="general-site-search?f%5B0%5D=type%3Aarticle&sort=created&order=desc" class="view-all">View all</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Field: Content: Teaser image */
   $handler->display->display_options['fields']['field_teaser_image']['id'] = 'field_teaser_image';
