@@ -191,6 +191,15 @@
   display:none
 }
 
+// Add disclosure triangles to all "Show more" and "Show fewer" Facet links
+.facetapi-limit-link::before {
+  font-family: 'Glyphicons Halflings';
+  content: '\e114';
+}
+.facetapi-limit-link.open::before {
+  font-family: 'Glyphicons Halflings';
+  content: '\e113';
+}
 
 // Hide the "Find a college thats right for you + map" block after a search.
 // Hide the "Find a college thats right for you" block after a search.
