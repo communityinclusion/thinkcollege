@@ -14,6 +14,12 @@
  *
  * Add extra properties to document CT to allow for Solr to index
  * in sortable values.
+ *
+ * This has expanded to add a String title - so it's sortable alphabetically.
+ * The previous title is indexed as 'fulltext', so not sortable.
+ *
+ * Also any Taxonomy terms need a property so they can be searched for by the name
+ * in a textual search - not just a facet.
  */
 function tc_program_record_properties_entity_property_info_alter(&$info) {
   /*
@@ -113,6 +119,97 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
             'getter callback' => 'tc_program_record_properties_property_school_title',
           );
           break;
+
+        case 'resource':
+          /*
+           * Authors is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_authors'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Authors',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_authors',
+          );
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
+           * State Related is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_state_related'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable State Related',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_state_related',
+          );
+          /*
+           * Media Types is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_media_types'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Media Types',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_media_types',
+          );
+          /*
+           * publication types is a taxonomy term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_publication_types'] = array(
+            'type' => 'text',
+            'label' => 'tc:term searchable publication types',
+            'sanitized' => true,
+            'getter callback' => 'tc_program_record_properties_string_of_publication_types',
+          );
+          /*
+           * audiences types is a taxonomy term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_audiences'] = array(
+            'type' => 'text',
+            'label' => 'tc:term searchable audiences',
+            'sanitized' => true,
+            'getter callback' => 'tc_program_record_properties_string_of_audiences',
+          );
+          /*
+          field_resourc_authors
+          field_resourc_topics
+          field_resourc_state_related
+          field_resourc_media_types
+          field_resourc_publication_types
+          field_resource_audiences
+          */
+          break;
+
+        case 'tc_events':
+          /*
+          field_event_cal_categories
+          field_resourc_topics
+          */
+          break;
+
+        case 'page':
+          /*
+          field_resourc_topics
+          */
+          break;
+
+        case 'article':
+          /*
+          field_resourc_topics
+          */
+          break;
+
+        case 'tc_learn':
+          /*
+          field_resourc_topics
+          */
+          break;
+
       }
     }
   }
@@ -401,4 +498,119 @@ function tc_program_record_properties_get_state_province_name($abbreviation) {
     'YT' => 'Yukon',
   );
   return $states_provinces[$abbreviation];
+}
+
+/**
+ * Build string of all taxonomy term names with space separation.
+ * @param array $term_array
+ *
+ * @return string of all terms names.
+ */
+function tc_program_record_get_list_of_terms_as_string(array $term_array) {
+  $name_list = '';
+  foreach ($term_array as $value) {
+    $term = taxonomy_term_load($value['tid']);
+    if ($term != FALSE) {
+      $name_list .= ' ' . $term->name;
+    }
+  }
+
+  dd($name_list);
+  return $name_list;
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (resourc_authors)
+ * @param $item
+ *
+ * @return string of all author names.
+ */
+function tc_program_record_properties_string_of_authors($item) {
+  if (property_exists($item, "field_resourc_authors")) {
+    if (sizeof($item->field_resourc_authors) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_authors[LANGUAGE_NONE]);
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (resourc_topics)
+ * @param $item
+ *
+ * @return string of all topics.
+ */
+function tc_program_record_properties_string_of_topics($item) {
+  if (property_exists($item, "field_resourc_topics")) {
+    if (sizeof($item->field_resourc_topics) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_topics[LANGUAGE_NONE]);
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (state_related)
+ * @param $item
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_state_related($item) {
+  if (property_exists($item, "field_resourc_state_related")) {
+    if (sizeof($item->field_resourc_state_related) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_state_related[LANGUAGE_NONE]);
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (media_types)
+ * @param $item
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_media_types($item) {
+  if (property_exists($item, "field_resourc_media_types")) {
+    if (sizeof($item->field_resourc_media_types) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_media_types[LANGUAGE_NONE]);
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (media_types)
+ * @param $item
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_publication_types($item) {
+  if (property_exists($item, "field_resourc_publication_date")) {
+    if (sizeof($item->field_resourc_publication_date) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_publication_date[LANGUAGE_NONE]);
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (audiences)
+ * @param $item
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_audiences($item) {
+  if (property_exists($item, "field_resource_audiences")) {
+    if (sizeof($item->field_resource_audiences) > 0) {
+      return tc_program_record_get_list_of_terms_as_string($item->field_resource_audiences[LANGUAGE_NONE]);
+    }
+  }
+  return "";
 }
