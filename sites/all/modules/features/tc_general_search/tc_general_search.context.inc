@@ -29,8 +29,8 @@ function tc_general_search_context_default_contexts() {
         'views-a3e478246e735a290dd38acb398c1332' => array(
           'module' => 'views',
           'delta' => 'a3e478246e735a290dd38acb398c1332',
-          'region' => 'content',
-          'weight' => '-45',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
         ),
       ),
     ),

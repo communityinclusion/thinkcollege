@@ -20,7 +20,7 @@ function tc_general_search_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->hash = 'rNPEoR9ApPGocjNWAAdnoJWIqh1uGuYS';
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'facets' => array(),
