@@ -20,21 +20,22 @@ function tc_general_search_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->hash = 'rNPEoR9ApPGocjNWAAdnoJWIqh1uGuYS';
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'facets' => array(),
       'reverse_dependency' => FALSE,
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
     ),
-    'facet_mincount' => '1',
+    'facet_mincount' => '0',
     'facet_missing' => '0',
     'flatten' => 0,
     'individual_parent' => 0,
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
   );

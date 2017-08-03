@@ -191,6 +191,15 @@
   display:none
 }
 
+// Add disclosure triangles to all "Show more" and "Show fewer" Facet links
+.facetapi-limit-link::before {
+  font-family: 'Glyphicons Halflings';
+  content: '\e114';
+}
+.facetapi-limit-link.open::before {
+  font-family: 'Glyphicons Halflings';
+  content: '\e113';
+}
 
 // Hide the "Find a college thats right for you + map" block after a search.
 // Hide the "Find a college thats right for you" block after a search.
@@ -271,9 +280,12 @@ body.tc-college-search-results {
     .views-exposed-widget {
       padding: 0;
     }
-    #edit-search-api-views-fulltext {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
+    #edit-search-api-views-fulltext-wrapper {
+      width: 70%;
+      #edit-search-api-views-fulltext {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
     }
     #edit-submit-tc-general-site-search {
       border-top-left-radius: 0;
@@ -281,6 +293,15 @@ body.tc-college-search-results {
     }
     .views-exposed-widgets {
       margin: 0;
+    }
+  }
+}
+
+header #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block {
+  float: right;
+  .views-exposed-widgets {
+    #edit-search-api-views-fulltext-wrapper {
+      width: auto;
     }
   }
 }

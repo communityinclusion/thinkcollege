@@ -26,7 +26,7 @@
     print $q;
   ?>
 <?php endif; ?>
-<div class="views-exposed-form tc-general-search-block" style="float: right">
+<div class="views-exposed-form tc-general-search-block">
   <div class="views-exposed-widgets clearfix">
     <?php foreach ($widgets as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
