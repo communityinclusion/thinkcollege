@@ -59,6 +59,13 @@ function tc_general_search_default_search_api_index() {
         "search_api_url" : { "type" : "uri" },
         "status" : { "type" : "boolean" },
         "tc_alpha_sortable_title" : { "type" : "string" },
+        "tc_searchable_term_audiences" : { "type" : "text" },
+        "tc_searchable_term_authors" : { "type" : "text" },
+        "tc_searchable_term_categories" : { "type" : "text" },
+        "tc_searchable_term_media_types" : { "type" : "text" },
+        "tc_searchable_term_publication_types" : { "type" : "text" },
+        "tc_searchable_term_state_related" : { "type" : "text" },
+        "tc_searchable_term_topics" : { "type" : "text" },
         "title" : { "type" : "text" },
         "type" : { "type" : "string" }
       },
