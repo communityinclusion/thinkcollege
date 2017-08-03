@@ -37,13 +37,6 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
         'sanitized' => TRUE,
         'getter callback' => 'tc_program_record_properties_property_alpha_sort_title',
       );
-      // Created Date sortable - as unix timestamp
-      $info['node']['bundles'][$bundle_type]['properties']['tc_sortable_created_date'] = array(
-        'type' => 'date',
-        'label' => 'TC:Sortable Created Date',
-        'sanitized' => TRUE,
-        'getter callback' => 'tc_program_record_properties_property_sort_created_date',
-      );
 
       switch ($bundle_type) {
         case 'program_record':
@@ -327,10 +320,6 @@ function tc_program_record_properties_property_alpha_sort_title($item) {
   return $item->title;
 }
 
-function tc_program_record_properties_property_sort_created_date($item) {
-  return $item->created;
-}
-
 /**
  * We need a list of Yes/No for TPSID.
  *
@@ -551,28 +540,56 @@ function tc_program_record_properties_get_state_province_name($abbreviation) {
  *
  * @return string of all terms names.
  */
-function tc_program_record_get_list_of_terms_as_string(array $term_array) {
+function tc_program_record_get_list_of_terms_as_string(array $term_array = null, array $tid_array =null) {
   $name_list = '';
-  foreach ($term_array as $value) {
-    $term = taxonomy_term_load($value['tid']);
-    if ($term != FALSE) {
-      $name_list .= ' ' . $term->name;
+  if ($term_array != null) {
+    foreach ($term_array as $value) {
+      if (array_key_exists('tid', $value)) {
+        $term = taxonomy_term_load($value['tid']);
+        if ($term != FALSE) {
+          $name_list .= ' ' . $term->name;
+        }
+      }
     }
+    return $name_list;
   }
-  return $name_list;
+  else {
+    foreach ($tid_array as $value) {
+      $term = taxonomy_term_load($value);
+      if ($term != FALSE) {
+        $name_list .= ' ' . $term->name;
+      }
+    }
+    return $name_list;
+  }
 }
 
 /**
  * produce a string for searching from taxonomy terms.
  * (resourc_authors)
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_authors' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
  * @param $item
  *
  * @return string of all author names.
  */
 function tc_program_record_properties_string_of_authors($item) {
   if (property_exists($item, "field_resourc_authors")) {
-    if (sizeof($item->field_resourc_authors) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_authors[LANGUAGE_NONE]);
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_authors)) {
+      if (sizeof($item->field_resourc_authors) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_authors[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_authors) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_authors);
+      }
     }
   }
   return "";
@@ -583,12 +600,27 @@ function tc_program_record_properties_string_of_authors($item) {
  * (resourc_topics)
  * @param $item
  *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_topics' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
  * @return string of all topics.
  */
+/* resources  - no und */
 function tc_program_record_properties_string_of_topics($item) {
   if (property_exists($item, "field_resourc_topics")) {
-    if (sizeof($item->field_resourc_topics) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_topics[LANGUAGE_NONE]);
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_topics)) {
+      if (sizeof($item->field_resourc_topics) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_topics[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_topics) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_topics);
+      }
     }
   }
   return "";
@@ -599,12 +631,26 @@ function tc_program_record_properties_string_of_topics($item) {
  * (state_related)
  * @param $item
  *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_state_related' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
  * @return string of all state related values.
  */
 function tc_program_record_properties_string_of_state_related($item) {
   if (property_exists($item, "field_resourc_state_related")) {
-    if (sizeof($item->field_resourc_state_related) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_state_related[LANGUAGE_NONE]);
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_state_related)) {
+      if (sizeof($item->field_resourc_state_related) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_state_related[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_state_related) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_state_related);
+      }
     }
   }
   return "";
@@ -614,13 +660,27 @@ function tc_program_record_properties_string_of_state_related($item) {
  * produce a string for searching from taxonomy terms.
  * (media_types)
  * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_media_types' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
  *
  * @return string of all state related values.
  */
 function tc_program_record_properties_string_of_media_types($item) {
   if (property_exists($item, "field_resourc_media_types")) {
-    if (sizeof($item->field_resourc_media_types) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_media_types[LANGUAGE_NONE]);
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_media_types)) {
+      if (sizeof($item->field_resourc_media_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_media_types[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_media_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(NULL, $item->field_resourc_media_types);
+      }
     }
   }
   return "";
@@ -631,12 +691,26 @@ function tc_program_record_properties_string_of_media_types($item) {
  * (media_types)
  * @param $item
  *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_publication_types' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
  * @return string of all state related values.
  */
 function tc_program_record_properties_string_of_publication_types($item) {
-  if (property_exists($item, "field_resourc_publication_date")) {
-    if (sizeof($item->field_resourc_publication_date) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_resourc_publication_date[LANGUAGE_NONE]);
+  if (property_exists($item, "field_resourc_publication_types")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_publication_types)) {
+      if (sizeof($item->field_resourc_publication_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_publication_types[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_publication_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_publication_types);
+      }
     }
   }
   return "";
@@ -647,12 +721,26 @@ function tc_program_record_properties_string_of_publication_types($item) {
  * (audiences)
  * @param $item
  *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resource_audiences' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
  * @return string of all state related values.
  */
 function tc_program_record_properties_string_of_audiences($item) {
   if (property_exists($item, "field_resource_audiences")) {
-    if (sizeof($item->field_resource_audiences) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_resource_audiences[LANGUAGE_NONE]);
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resource_audiences)) {
+      if (sizeof($item->field_resource_audiences) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resource_audiences[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resource_audiences) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resource_audiences);
+      }
     }
   }
   return "";
@@ -663,12 +751,26 @@ function tc_program_record_properties_string_of_audiences($item) {
  * (categories)
  * @param $item
  *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_event_cal_categories' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
  * @return string of all state related values.
  */
 function tc_program_record_properties_string_of_categories($item) {
   if (property_exists($item, "field_event_cal_categories")) {
-    if (sizeof($item->field_event_cal_categories) > 0) {
-      return tc_program_record_get_list_of_terms_as_string($item->field_event_cal_categories[LANGUAGE_NONE]);
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_event_cal_categories)) {
+      if (sizeof($item->field_event_cal_categories) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_event_cal_categories[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_event_cal_categories) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_event_cal_categories);
+      }
     }
   }
   return "";
