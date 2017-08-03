@@ -114,6 +114,7 @@ function tc_solr_program_record_index_default_search_api_index() {
         "search_api_access_node" : { "type" : "list\\u003Cstring\\u003E" },
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "boolean" },
+        "tc_alpha_sortable_title" : { "type" : "string" },
         "tc_dual_enroll" : { "type" : "string" },
         "tc_financial_aid" : { "type" : "string" },
         "tc_housing" : { "type" : "string" },
