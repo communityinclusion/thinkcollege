@@ -29,6 +29,18 @@ function tc_general_search_context_default_contexts() {
         'views-a3e478246e735a290dd38acb398c1332' => array(
           'module' => 'views',
           'delta' => 'a3e478246e735a290dd38acb398c1332',
+          'region' => 'sidebar_first_top',
+          'weight' => '-10',
+        ),
+        'search_api_sorts-search-sorts' => array(
+          'module' => 'search_api_sorts',
+          'delta' => 'search-sorts',
+          'region' => 'sidebar_first_top',
+          'weight' => '-9',
+        ),
+        'facetapi-QrOtkF1o8fuRK6ZVfaUp5suTcu6A0JDS' => array(
+          'module' => 'facetapi',
+          'delta' => 'QrOtkF1o8fuRK6ZVfaUp5suTcu6A0JDS',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),

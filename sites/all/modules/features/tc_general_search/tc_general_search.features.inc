@@ -52,6 +52,8 @@ function tc_general_search_default_search_api_index() {
         "changed" : { "type" : "date" },
         "created" : { "type" : "date" },
         "field_event_cal_categories" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_event_cal_presenters" : { "type" : "text" },
+        "field_event_calendar_location" : { "type" : "text" },
         "field_resourc_media_types" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resourc_publication_types" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resourc_state_related" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
