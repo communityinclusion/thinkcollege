@@ -643,3 +643,8 @@ function thinkcollege_boot_search_api_sorts_list(array $variables) {
   $output .= "</select>";
   return $output;
 }
+
+
+function thinkcollege_boot_date_all_day_label() {
+  return '';
+}
