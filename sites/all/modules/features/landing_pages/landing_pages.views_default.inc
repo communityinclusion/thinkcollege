@@ -204,7 +204,7 @@ function landing_pages_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Featured';
+  $handler->display->display_options['title'] = 'News & Features';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -371,7 +371,7 @@ function landing_pages_views_default_views() {
   /* Display: (Families) Inno Exchange Resources pane */
   $handler = $view->new_display('panel_pane', '(Families) Inno Exchange Resources pane', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'Relevant Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -472,7 +472,7 @@ function landing_pages_views_default_views() {
   /* Display: (Vocational Rehab) Inno Exchange Resources pane */
   $handler = $view->new_display('panel_pane', '(Vocational Rehab) Inno Exchange Resources pane', 'panel_pane_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'Relevant Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -573,7 +573,7 @@ function landing_pages_views_default_views() {
   /* Display: (Paying) Inno Exchange Resources pane */
   $handler = $view->new_display('panel_pane', '(Paying) Inno Exchange Resources pane', 'panel_pane_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'Relevant Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -674,7 +674,7 @@ function landing_pages_views_default_views() {
   /* Display: (Employment) Inno Exchange Resources pane */
   $handler = $view->new_display('panel_pane', '(Employment) Inno Exchange Resources pane', 'panel_pane_6');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'Relevant Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
