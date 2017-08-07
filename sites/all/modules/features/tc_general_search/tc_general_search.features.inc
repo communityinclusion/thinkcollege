@@ -167,7 +167,7 @@ function tc_general_search_default_search_api_sort() {
     "field" : "search_api_relevance",
     "name" : "Relevance",
     "enabled" : "1",
-    "weight" : "-100",
+    "weight" : "-97",
     "identifier" : "general_site_search__search_api_relevance",
     "default_sort" : "0",
     "default_sort_no_terms" : "0",

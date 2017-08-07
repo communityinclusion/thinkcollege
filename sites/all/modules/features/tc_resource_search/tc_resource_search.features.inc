@@ -176,7 +176,7 @@ function tc_resource_search_default_search_api_sort() {
     "field" : "search_api_relevance",
     "name" : "Relevance",
     "enabled" : "1",
-    "weight" : "-100",
+    "weight" : "-97",
     "identifier" : "tc_resource_index__search_api_relevance",
     "default_sort" : "1",
     "default_sort_no_terms" : "0",
@@ -187,7 +187,7 @@ function tc_resource_search_default_search_api_sort() {
   $items['tc_resource_index__tc_alpha_sortable_title'] = entity_import('search_api_sort', '{
     "index_id" : "tc_resource_index",
     "field" : "tc_alpha_sortable_title",
-    "name" : "TC:Alphabetically Sortable Title",
+    "name" : "Alphabetical",
     "enabled" : "1",
     "weight" : "-98",
     "identifier" : "tc_resource_index__tc_alpha_sortable_title",
