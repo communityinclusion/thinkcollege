@@ -268,7 +268,7 @@ $classes .= ' node-program-record-card node-tc-card';
           <?php if (isset($content['field_prog_hs_coll'])): ?>
             <dl class="detail">
               <dt>
-              <p class="answer"><strong>Number of students in this program:</strong></p>
+              <p class="answer"><strong>Students in this program:</strong></p>
               </dt>
               <dd>
                 <?php print render($content['field_prog_hs_coll']); ?>
