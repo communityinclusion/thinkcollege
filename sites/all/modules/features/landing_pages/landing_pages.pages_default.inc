@@ -45,6 +45,14 @@ function landing_pages_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'panel',
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'description' => array(
+          'value' => 'College options for people with intellectual disabilities',
+        ),
+      ),
+    ),
   );
   $display = new panels_display();
   $display->layout = 'tc_multipass';
@@ -59,6 +67,7 @@ function landing_pages_default_page_manager_pages() {
       'row3right' => NULL,
       'row4left' => NULL,
       'row4right' => NULL,
+      'row0' => NULL,
     ),
   );
   $display->cache = array();
@@ -69,35 +78,155 @@ function landing_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-2d8cd95d-6e4d-4b6d-8684-4bced39eabe8';
-  $pane->panel = 'row0';
+  $pane->pid = 'new-7655fe36-5d2e-40ee-a6e6-3b00cbef633c';
+  $pane->panel = 'row1left';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Think College Logo',
+    'admin_title' => '',
     'title' => '',
-    'title_heading' => 'h1',
-    'body' => '<style type="text/css">.row-full{
-      width: 100vw;
-      position: relative;
-      margin-left: -50vw;
-      height: 150px;
-      left: 50%;
-padding:30px 0;
-      text-align:center;
-      background-color: #20527C;
-      font-style:italic;
-      color:#fff;
-	font-family: \'museo-sans-condensed\',sans-serif;
-}
-</style>
-<p><img alt="Think College" class="img-responsive" src="/sites/default/files/files/images/TC_long_1600x350.png" /></p>
+    'title_heading' => 'h2',
+    'body' => '<div style="margin-bottom:25px;">
+<div class="overlay">
+<h1 class="headline">College options for people with intellectual disabilities.</h1>
+<img alt="" class="img-responsive" src="/sites/default/files/files/images/TClong_KO_F-300w.png" /></div>
 
-<div class="row row-full">
-<h1>College options for people with  intellectual disabilities</h1>
-</div>
+<p><img alt="" class="img-responsive" src="/sites/default/files/files/images/academic-books.png" /></p>
+</div>',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'one-element',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7655fe36-5d2e-40ee-a6e6-3b00cbef633c';
+  $display->content['new-7655fe36-5d2e-40ee-a6e6-3b00cbef633c'] = $pane;
+  $display->panels['row1left'][0] = 'new-7655fe36-5d2e-40ee-a6e6-3b00cbef633c';
+  $pane = new stdClass();
+  $pane->pid = 'new-a5a6a66d-c08a-4874-bdb8-e3452cf2d1c1';
+  $pane->panel = 'row1right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<p style="margin-bottom: 25px;"><button class="btn btn-primary btn-lg btn-block" style="padding:30px 5px;font-size:20px;border-radius:0" type="button"><i aria-hidden="true" class="fa fa-search">&nbsp;</i> College Search</button><button class="btn btn-primary btn-lg btn-block" style="padding:30px 5px;font-size:20px;border-radius:0" type="button"><i aria-hidden="true" class="fa fa-book">&nbsp;</i>Resource Library</button><button class="btn btn-primary btn-lg btn-block" style="padding:30px 5px;font-size:20px;border-radius:0" type="button"><i aria-hidden="true" class="fa fa-exchange">&nbsp;</i>Innovation Exchange</button><button class="btn btn-primary btn-lg btn-block" style="padding:30px 5px;font-size:20px;border-radius:0" type="button"><i aria-hidden="true" class="fa fa-map-o">&nbsp;</i>What\'s Happening<br />
+in your State</button></p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'a5a6a66d-c08a-4874-bdb8-e3452cf2d1c1';
+  $display->content['new-a5a6a66d-c08a-4874-bdb8-e3452cf2d1c1'] = $pane;
+  $display->panels['row1right'][0] = 'new-a5a6a66d-c08a-4874-bdb8-e3452cf2d1c1';
+  $pane = new stdClass();
+  $pane->pid = 'new-e9ae4970-f7a2-4650-b92f-9fceade89074';
+  $pane->panel = 'row2left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => 'Latest Updates',
+    'title_heading' => 'h3',
+    'body' => '<ul class="latest small">
+	<li><strong><a href="http://thinkcollege.net/convos">Think College Conversations</a></strong>: a NEW way to talk with Think College and the community of people interested in inclusive&nbsp;<a class="glossTip" href="http://www.thinkcollege.net/glossary#24" title="Any type of school or training beyond the high school level (i.e., community college, four-year university, vocational training program).">postsecondary education</a>. &nbsp;Click on the&nbsp;<a href="http://thinkcollege.net/convos">link</a>&nbsp;to learn more and to sign up!</li>
+	<li>The&nbsp;<a href="http://www.thinkcollege.net/images/stories/acc%20accrediation%20report_F.pdf"><strong>Report on Accreditation Standards for Postsecondary Education Programs for Students with Intellectual Disabilities</strong></a>&nbsp;is now available. &nbsp;</li>
+	<li>See listings for open positions in Florida, Kansas and Georgia:&nbsp;<strong><a href="http://www.thinkcollege.net/employment-inclusive-higher-ed">Employment Opportunities in Inclusive Higher Education</a>.</strong></li>
+</ul>
+
+<p><strong><a href="http://www.thinkcollege.net/subscribetonews.html">Subscribe to our mailing list</a></strong>&nbsp;to stay current on Think College news and events.</p>
+
+<p>&nbsp;</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'box-blue',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'e9ae4970-f7a2-4650-b92f-9fceade89074';
+  $display->content['new-e9ae4970-f7a2-4650-b92f-9fceade89074'] = $pane;
+  $display->panels['row2left'][0] = 'new-e9ae4970-f7a2-4650-b92f-9fceade89074';
+  $pane = new stdClass();
+  $pane->pid = 'new-49f655f7-2fb5-4ef6-982d-82d19c95c53d';
+  $pane->panel = 'row2right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'upcoming_events-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '49f655f7-2fb5-4ef6-982d-82d19c95c53d';
+  $display->content['new-49f655f7-2fb5-4ef6-982d-82d19c95c53d'] = $pane;
+  $display->panels['row2right'][0] = 'new-49f655f7-2fb5-4ef6-982d-82d19c95c53d';
+  $pane = new stdClass();
+  $pane->pid = 'new-b28daf19-ce66-41a4-af03-a2e56769cfa7';
+  $pane->panel = 'row3';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'whats_new-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'home-featurednews',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'b28daf19-ce66-41a4-af03-a2e56769cfa7';
+  $display->content['new-b28daf19-ce66-41a4-af03-a2e56769cfa7'] = $pane;
+  $display->panels['row3'][0] = 'new-b28daf19-ce66-41a4-af03-a2e56769cfa7';
+  $pane = new stdClass();
+  $pane->pid = 'new-a4b05725-cbac-4129-8c2d-1ac46b436bbc';
+  $pane->panel = 'row4left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<p style="margin-bottom: 25px;"><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/images/collegesearch-v6.png" /></a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -108,209 +237,12 @@ padding:30px 0;
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '2d8cd95d-6e4d-4b6d-8684-4bced39eabe8';
-  $display->content['new-2d8cd95d-6e4d-4b6d-8684-4bced39eabe8'] = $pane;
-  $display->panels['row0'][0] = 'new-2d8cd95d-6e4d-4b6d-8684-4bced39eabe8';
-  $pane = new stdClass();
-  $pane->pid = 'new-68685f4d-7ba3-48ce-a6c2-65e06b32a276';
-  $pane->panel = 'row0';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'whats_new-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'home-featurednews',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '68685f4d-7ba3-48ce-a6c2-65e06b32a276';
-  $display->content['new-68685f4d-7ba3-48ce-a6c2-65e06b32a276'] = $pane;
-  $display->panels['row0'][1] = 'new-68685f4d-7ba3-48ce-a6c2-65e06b32a276';
-  $pane = new stdClass();
-  $pane->pid = 'new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
-  $pane->panel = 'row2';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'Innovation Exchange',
-    'title' => 'Innovation Exchange',
-    'title_heading' => 'h2',
-    'body' => '<div class="row">
-<div class="ie-feature">
-<div class="col-sm-4 ie-intro">
-<h3 class="block-title">Click on a Topic to Find:</h3>
-
-<ul>
-	<li class="lead">Topic Overviews</li>
-	<li class="lead">Key Resources</li>
-	<li class="lead">Related Websites</li>
-	<li class="lead">Affinity Groups</li>
-	<li class="lead">FAQ’s</li>
-</ul>
-</div>
-
-<div class="col-sm-8">
-<div class="row">
-<div class="col-sm-6 icontile">
-<h3>Employment</h3>
-<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-employment.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="/innovation-exchange/employment">Employment</a></p>
-</div>
-
-<div class="col-sm-6 icontile">
-<h3>Paying for College</h3>
-<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-financial-aid.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="/innovation-exchange/paying-for-college">Paying for College </a></p>
-</div>
-
-<div class="col-sm-6 icontile">
-<h3>Vocational Rehab</h3>
-<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-transition.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="/innovation-exchange/vocational-rehabilitation">Vocational Rehab</a></p>
-</div>
-
-<div class="col-sm-6 icontile">
-<h3>For Families</h3>
-<img class="img-responsive" src="http://programs.thinkcollege.net/sites/default/files/files/images/ie-family.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="/innovation-exchange/for-families">For Families</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--<div class="ie-feature">
-<div class="col-md-3 col-sm-4 ie-intro">
-<h3 class="block-title">Click on a Topic to Find:</h3>
-
-<ul>
-	<li class="lead">Topic Overviews</li>
-	<li class="lead">Key Resources</li>
-	<li class="lead">Related Websites</li>
-	<li class="lead">Affinity Groups</li>
-	<li class="lead">FAQ’s</li>
-</ul>
-</div>
-
-<div class="col-md-9 col-sm-8">
-<div class="row">
-<div class="col-md-4 col-sm-6 icontile">
-<h3>Employment</h3>
-<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-employment.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="#">Webpage URL</a></p>
-</div>
-
-<div class="col-md-4 col-sm-6 icontile">
-<h3>Paying for College</h3>
-<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-financial-aid.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="#">Webpage URL</a></p>
-</div>
-
-<div class="col-md-4 col-sm-6 icontile">
-<h3>Vocational Rehab</h3>
-<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-transition.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="#">Webpage URL</a></p>
-</div>
-
-<div class="col-md-4 col-sm-6 icontile">
-<h3>For Families</h3>
-<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-family.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="#">Webpage URL</a></p>
-</div>
-
-<div class="col-md-4 col-sm-6 icontile">
-<h3>Choose a Program</h3>
-<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-home.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="#">Webpage URL</a></p>
-</div>
-
-<div class="col-md-4 col-sm-6 icontile">
-<h3>Starting a Program</h3>
-<img class="img-responsive" src="http://themajorlift.com/dev/img/ie-academic-building.svg" style="margin:0 auto;max-width:150px" />
-<p><a class="divLink" href="#">Webpage URL</a></p>
-</div>
-</div>
-</div>
-</div>
--->',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'ie-pane',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
-  $display->content['new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d'] = $pane;
-  $display->panels['row2'][0] = 'new-7ca53683-7ee3-4856-8bc4-e26b164bcf1d';
-  $pane = new stdClass();
-  $pane->pid = 'new-57641ce9-166f-488c-89f0-2a32066bb5d9';
-  $pane->panel = 'row3left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'College search image',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<p><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/files/images/collegesearch-v5.png" /></a></p>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '57641ce9-166f-488c-89f0-2a32066bb5d9';
-  $display->content['new-57641ce9-166f-488c-89f0-2a32066bb5d9'] = $pane;
-  $display->panels['row3left'][0] = 'new-57641ce9-166f-488c-89f0-2a32066bb5d9';
-  $pane = new stdClass();
-  $pane->pid = 'new-120fe444-ce23-4273-81b1-1b9fe6e7c0c6';
-  $pane->panel = 'row3right';
-  $pane->type = 'block';
-  $pane->subtype = 'tc_resource-tc_resource_find';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => 'Find a Resource',
-    'override_title_heading' => 'h3',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '120fe444-ce23-4273-81b1-1b9fe6e7c0c6';
-  $display->content['new-120fe444-ce23-4273-81b1-1b9fe6e7c0c6'] = $pane;
-  $display->panels['row3right'][0] = 'new-120fe444-ce23-4273-81b1-1b9fe6e7c0c6';
+  $pane->uuid = 'a4b05725-cbac-4129-8c2d-1ac46b436bbc';
+  $display->content['new-a4b05725-cbac-4129-8c2d-1ac46b436bbc'] = $pane;
+  $display->panels['row4left'][0] = 'new-a4b05725-cbac-4129-8c2d-1ac46b436bbc';
   $pane = new stdClass();
   $pane->pid = 'new-2f95e191-86a0-4b5c-9543-525438d214eb';
-  $pane->panel = 'row4left';
+  $pane->panel = 'row4right';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
@@ -339,10 +271,10 @@ padding:30px 0;
   $pane->locks = array();
   $pane->uuid = '2f95e191-86a0-4b5c-9543-525438d214eb';
   $display->content['new-2f95e191-86a0-4b5c-9543-525438d214eb'] = $pane;
-  $display->panels['row4left'][0] = 'new-2f95e191-86a0-4b5c-9543-525438d214eb';
+  $display->panels['row4right'][0] = 'new-2f95e191-86a0-4b5c-9543-525438d214eb';
   $pane = new stdClass();
   $pane->pid = 'new-a5ca0924-aa75-4b9b-81f0-51b7528ee206';
-  $pane->panel = 'row4left';
+  $pane->panel = 'row5left';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
@@ -365,14 +297,14 @@ padding:30px 0;
     'css_class' => 'box',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = 'a5ca0924-aa75-4b9b-81f0-51b7528ee206';
   $display->content['new-a5ca0924-aa75-4b9b-81f0-51b7528ee206'] = $pane;
-  $display->panels['row4left'][1] = 'new-a5ca0924-aa75-4b9b-81f0-51b7528ee206';
+  $display->panels['row5left'][0] = 'new-a5ca0924-aa75-4b9b-81f0-51b7528ee206';
   $pane = new stdClass();
   $pane->pid = 'new-09b11373-f669-4a20-8a57-51a3b1e5314f';
-  $pane->panel = 'row4right';
+  $pane->panel = 'row5right';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
@@ -551,26 +483,7 @@ text.hawaii {font-size: 14px;}
   $pane->locks = array();
   $pane->uuid = '09b11373-f669-4a20-8a57-51a3b1e5314f';
   $display->content['new-09b11373-f669-4a20-8a57-51a3b1e5314f'] = $pane;
-  $display->panels['row4right'][0] = 'new-09b11373-f669-4a20-8a57-51a3b1e5314f';
-  $pane = new stdClass();
-  $pane->pid = 'new-49f655f7-2fb5-4ef6-982d-82d19c95c53d';
-  $pane->panel = 'row4right';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'upcoming_events-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '49f655f7-2fb5-4ef6-982d-82d19c95c53d';
-  $display->content['new-49f655f7-2fb5-4ef6-982d-82d19c95c53d'] = $pane;
-  $display->panels['row4right'][1] = 'new-49f655f7-2fb5-4ef6-982d-82d19c95c53d';
+  $display->panels['row5right'][0] = 'new-09b11373-f669-4a20-8a57-51a3b1e5314f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -611,6 +524,14 @@ text.hawaii {font-size: 14px;}
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'panel',
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'description' => array(
+          'value' => 'Curated resources on employment outcomes for college students with intellectual disability',
+        ),
+      ),
+    ),
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
