@@ -43,10 +43,8 @@ function tc_resource_search_views_default_views() {
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<p class="lead">Welcome to the Think College resource library!</p>
 <p>Here you will find hundreds of carefully selected resources on a wide range of topics related to postsecondary education for people with intellectual disabilities including transition, applying to and paying for college, setting up and maintaining a college program, relevant legislation, competitive employment, living in the community, accessing benefits, and more.</p>
-
 <p>Do you know of a resource that would be appropriate for our library? Let us know! Email <a href="mailto:Rebecca.Lazo@umb.edu">Rebecca.Lazo@umb.edu</a>.
-<br>
-<br>';
+<br><br>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Header: Global: Result summary */
   $handler->display->display_options['header']['result']['id'] = 'result';
@@ -80,6 +78,104 @@ function tc_resource_search_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'resource_search_text_input');
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['metatags'] = array(
+    'und' => array(
+      'title' => array(
+        'value' => '[view:title] | [current-page:pager][site:name]',
+        'default' => '[view:title] | [current-page:pager][site:name]',
+      ),
+      'description' => array(
+        'value' => 'Searchable library of resources related to postsecondary education for people with intellectual disability',
+        'default' => '[view:description]',
+      ),
+      'abstract' => array(
+        'value' => '',
+      ),
+      'keywords' => array(
+        'value' => '',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+      ),
+      'rating' => array(
+        'value' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+      ),
+      'rights' => array(
+        'value' => '',
+      ),
+      'image_src' => array(
+        'value' => '',
+      ),
+      'canonical' => array(
+        'value' => '[view:url]',
+        'default' => '[view:url]',
+      ),
+      'shortlink' => array(
+        'value' => '[current-page:url:unaliased]',
+        'default' => '[current-page:url:unaliased]',
+      ),
+      'original-source' => array(
+        'value' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+      ),
+      'next' => array(
+        'value' => '',
+      ),
+      'content-language' => array(
+        'value' => '',
+      ),
+      'geo.position' => array(
+        'value' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['path'] = 'resource-search';
   $export['tc_resource_search'] = $view;
 
