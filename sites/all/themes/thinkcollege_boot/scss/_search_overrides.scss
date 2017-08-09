@@ -1,3 +1,4 @@
+.page-general-site-search,
 .page-resource-search,
 .page-college-search {
   #edit-search-api-views-fulltext-wrapper {
@@ -9,6 +10,7 @@
     font-weight: 700;
     font-size: 1.3rem;
   }
+  .block-title,
   .tc-facet-title {
     position: relative;
     margin-bottom: .2em;
@@ -189,6 +191,15 @@
   display:none
 }
 
+// Add disclosure triangles to all "Show more" and "Show fewer" Facet links
+.facetapi-limit-link::before {
+  font-family: 'Glyphicons Halflings';
+  content: '\e114';
+}
+.facetapi-limit-link.open::before {
+  font-family: 'Glyphicons Halflings';
+  content: '\e113';
+}
 
 // Hide the "Find a college thats right for you + map" block after a search.
 // Hide the "Find a college thats right for you" block after a search.
@@ -214,6 +225,83 @@ body.tc-college-search-results {
 /*  Search Results List */
 
 .search-result {
-      border-bottom: #bbb solid 1px;
-      padding-bottom: 1em;
+  border-bottom: #bbb solid 1px;
+  padding-bottom: 1em;
+}
+
+.thinkcollege-site-search {
+  .views-row {
+    margin-bottom:15px;
+    border-bottom: solid #ccc 1px;
+    padding-bottom: 15px;
+
+    .view-mode-search_result {
+      .thinkcollege-search-result-content-type {
+        font-family: $museo-cond-stack;
+        color: $tcorange;
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.03125em;
+        line-height: 1;
+        margin: 0 0 .5em;
+      }
+
+      .field-name-title h2 {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 500;
+        font-family: $museo-sans-stack;
+        margin-top: 0;
+      }
+
+      .field-name-post-date {
+        color: #999;
+        font-size: .9em;
+        line-height: 1.2;
+        margin: .5rem 0;
+      }
+    }
+  }
+}
+
+#views-exposed-form-tc-general-site-search-tc-general-search-block {
+  padding-top: 12px;
+  .views-exposed-widget.views-submit-button button {
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .tc-general-search-block {
+
+    #edit-submit-tc-general-site-search {
+      margin: 0;
+    }
+    .views-exposed-widget {
+      padding: 0;
+    }
+    #edit-search-api-views-fulltext-wrapper {
+      width: 70%;
+      #edit-search-api-views-fulltext {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+    #edit-submit-tc-general-site-search {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .views-exposed-widgets {
+      margin: 0;
+    }
+  }
+}
+
+header #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-general-search-block {
+  float: right;
+  .views-exposed-widgets {
+    #edit-search-api-views-fulltext-wrapper {
+      width: auto;
+    }
+  }
 }

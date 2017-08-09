@@ -103,10 +103,10 @@ function resources_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ical' => array(
         'custom_settings' => FALSE,
@@ -126,6 +126,9 @@ function resources_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'event_attachment' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -142,12 +145,12 @@ function resources_strongarm() {
       'display' => array(
         'webform' => array(
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '23',
+            'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '10',
@@ -155,6 +158,18 @@ function resources_strongarm() {
           ),
           'card' => array(
             'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'event_attachment' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'search_index' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),

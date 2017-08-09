@@ -22,7 +22,7 @@ function landing_pages_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'faqfield',
         'settings' => array(
           'active' => '',

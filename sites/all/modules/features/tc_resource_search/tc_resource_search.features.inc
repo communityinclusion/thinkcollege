@@ -49,7 +49,15 @@ function tc_resource_search_default_search_api_index() {
         "nid" : { "type" : "integer" },
         "search_api_access_node" : { "type" : "list\\u003Cstring\\u003E" },
         "search_api_language" : { "type" : "string" },
+        "search_api_url" : { "type" : "uri" },
         "status" : { "type" : "boolean" },
+        "tc_alpha_sortable_title" : { "type" : "string" },
+        "tc_searchable_term_audiences" : { "type" : "text" },
+        "tc_searchable_term_authors" : { "type" : "text" },
+        "tc_searchable_term_media_types" : { "type" : "text" },
+        "tc_searchable_term_publication_types" : { "type" : "text" },
+        "tc_searchable_term_state_related" : { "type" : "text" },
+        "tc_searchable_term_topics" : { "type" : "text" },
         "title" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
@@ -74,7 +82,7 @@ function tc_resource_search_default_search_api_index() {
           }
         },
         "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_url" : { "status" : 1, "weight" : "0", "settings" : [] },
         "search_api_metatag_alter_callback" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
       },
@@ -97,7 +105,7 @@ function tc_resource_search_default_search_api_index() {
         },
         "content_taxonomy_autocomplete_moderated_terms" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_html_filter" : {
-          "status" : 0,
+          "status" : 1,
           "weight" : "10",
           "settings" : {
             "fields" : { "title" : true },
@@ -116,7 +124,7 @@ function tc_resource_search_default_search_api_index() {
           }
         },
         "search_api_stopwords" : {
-          "status" : 0,
+          "status" : 1,
           "weight" : "30",
           "settings" : {
             "fields" : { "title" : true },
@@ -125,7 +133,7 @@ function tc_resource_search_default_search_api_index() {
           }
         },
         "search_api_highlighting" : {
-          "status" : 1,
+          "status" : 0,
           "weight" : "35",
           "settings" : {
             "prefix" : "\\u003Cstrong\\u003E",
@@ -140,6 +148,53 @@ function tc_resource_search_default_search_api_index() {
     },
     "enabled" : "1",
     "read_only" : "0",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_sort().
+ */
+function tc_resource_search_default_search_api_sort() {
+  $items = array();
+  $items['tc_resource_index__field_resourc_publication_date'] = entity_import('search_api_sort', '{
+    "index_id" : "tc_resource_index",
+    "field" : "field_resourc_publication_date",
+    "name" : "Publication Date",
+    "enabled" : "1",
+    "weight" : "-99",
+    "identifier" : "tc_resource_index__field_resourc_publication_date",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "options" : { "field_name" : "Publication Date" },
+    "rdf_mapping" : []
+  }');
+  $items['tc_resource_index__search_api_relevance'] = entity_import('search_api_sort', '{
+    "index_id" : "tc_resource_index",
+    "field" : "search_api_relevance",
+    "name" : "Relevance",
+    "enabled" : "1",
+    "weight" : "-97",
+    "identifier" : "tc_resource_index__search_api_relevance",
+    "default_sort" : "1",
+    "default_sort_no_terms" : "0",
+    "default_order" : "desc",
+    "options" : { "field_name" : "search_api_relevance" },
+    "rdf_mapping" : []
+  }');
+  $items['tc_resource_index__tc_alpha_sortable_title'] = entity_import('search_api_sort', '{
+    "index_id" : "tc_resource_index",
+    "field" : "tc_alpha_sortable_title",
+    "name" : "Alphabetical",
+    "enabled" : "1",
+    "weight" : "-98",
+    "identifier" : "tc_resource_index__tc_alpha_sortable_title",
+    "default_sort" : "0",
+    "default_sort_no_terms" : "0",
+    "default_order" : "asc",
+    "options" : { "field_name" : "TC:Alphabetically Sortable Title" },
     "rdf_mapping" : []
   }');
   return $items;

@@ -105,7 +105,7 @@ function field_bases_taxonomy_default_vocabularies() {
       'name' => 'Events',
       'machine_name' => 'events',
       'description' => 'event categories',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

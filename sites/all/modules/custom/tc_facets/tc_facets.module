@@ -33,8 +33,14 @@ function tc_facets_form_alter(&$form, &$form_state, $form_id) {
     if ($form['#id'] == 'views-exposed-form-tc-resource-search-resource-search-text-input') {
       $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Resource or Keyword";
     }
-    else {
+    else if ($form['#id'] == 'views-exposed-form-tc-general-site-search-tc-general-search-block') {
+      $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Search Entire Site";
+    }
+    else if ($form['#id'] == 'views-exposed-form-tc-solr-college-search-college-search-solr-search-block') {
       $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Program or Keyword";
+    }
+    else {
+      $form['search_api_views_fulltext']['#attributes']['placeholder'] = "Search";
     }
   }
 }
@@ -342,6 +348,11 @@ function tc_facets_theme($existing, $type, $theme, $path) {
     'tc_program_intro_and_map_mobile' => array(
       'variables' => array( ),
       'template' => 'templates/tc_program_intro_and_map_mobile'
+    ),
+
+    'tc_option_select_item' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_option_select_item'
     ),
 
   );

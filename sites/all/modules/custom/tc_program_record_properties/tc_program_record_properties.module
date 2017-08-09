@@ -14,6 +14,12 @@
  *
  * Add extra properties to document CT to allow for Solr to index
  * in sortable values.
+ *
+ * This has expanded to add a String title - so it's sortable alphabetically.
+ * The previous title is indexed as 'fulltext', so not sortable.
+ *
+ * Also any Taxonomy terms need a property so they can be searched for by the name
+ * in a textual search - not just a facet.
  */
 function tc_program_record_properties_entity_property_info_alter(&$info) {
   /*
@@ -24,6 +30,14 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
   if (isset($info['node']['bundles'])) {
     // For each content type.
     foreach ($info['node']['bundles'] as $bundle_type => $bundle) {
+      // Put an extra title for alphabetical sort (ie not fulltext)
+      $info['node']['bundles'][$bundle_type]['properties']['tc_alpha_sortable_title'] = array(
+        'type' => 'text',
+        'label' => 'TC:Alphabetically Sortable Title',
+        'sanitized' => TRUE,
+        'getter callback' => 'tc_program_record_properties_property_alpha_sort_title',
+      );
+
       switch ($bundle_type) {
         case 'program_record':
           /*
@@ -98,6 +112,142 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
             'getter callback' => 'tc_program_record_properties_property_school_title',
           );
           break;
+
+        case 'resource':
+          /*
+           * Authors is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_authors'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Authors',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_authors',
+          );
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
+           * State Related is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_state_related'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable State Related',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_state_related',
+          );
+          /*
+           * Media Types is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_media_types'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Media Types',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_media_types',
+          );
+          /*
+           * publication types is a taxonomy term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_publication_types'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term searchable publication types',
+            'sanitized' => true,
+            'getter callback' => 'tc_program_record_properties_string_of_publication_types',
+          );
+          /*
+           * audiences types is a taxonomy term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_audiences'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term searchable audiences',
+            'sanitized' => true,
+            'getter callback' => 'tc_program_record_properties_string_of_audiences',
+          );
+          /*
+          field_resourc_authors
+          field_resourc_topics
+          field_resourc_state_related
+          field_resourc_media_types
+          field_resourc_publication_types
+          field_resource_audiences
+          */
+          break;
+
+        case 'tc_events':
+          /*
+           * categories is a taxonomy term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_categories'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term searchable categories',
+            'sanitized' => true,
+            'getter callback' => 'tc_program_record_properties_string_of_categories',
+          );
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
+          field_event_cal_categories
+          field_resourc_topics
+          */
+          break;
+
+        case 'page':
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
+          field_resourc_topics
+          */
+          break;
+
+        case 'article':
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
+          field_resourc_topics
+          */
+          break;
+
+        case 'tc_learn':
+          /*
+           * Topics is a Taxonomy Term, we want it as a searchable string too.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+            'type' => 'text',
+            'label' => 'TC:Term Searchable Topics',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_string_of_topics',
+          );
+          /*
+          field_resourc_topics
+          */
+          break;
+
       }
     }
   }
@@ -164,6 +314,10 @@ function tc_program_record_properties_property_financial_aid($item) {
   // will be N/A
   return "No";
 
+}
+
+function tc_program_record_properties_property_alpha_sort_title($item) {
+  return $item->title;
 }
 
 /**
@@ -379,3 +533,246 @@ function tc_program_record_properties_get_state_province_name($abbreviation) {
   );
   return $states_provinces[$abbreviation];
 }
+
+/**
+ * Build string of all taxonomy term names with space separation.
+ * @param array $term_array
+ *
+ * @return string of all terms names.
+ */
+function tc_program_record_get_list_of_terms_as_string(array $term_array = null, array $tid_array =null) {
+  $name_list = '';
+  if ($term_array != null) {
+    foreach ($term_array as $value) {
+      if (array_key_exists('tid', $value)) {
+        $term = taxonomy_term_load($value['tid']);
+        if ($term != FALSE) {
+          $name_list .= ' ' . $term->name;
+        }
+      }
+    }
+    return $name_list;
+  }
+  else {
+    foreach ($tid_array as $value) {
+      $term = taxonomy_term_load($value);
+      if ($term != FALSE) {
+        $name_list .= ' ' . $term->name;
+      }
+    }
+    return $name_list;
+  }
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (resourc_authors)
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_authors' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @param $item
+ *
+ * @return string of all author names.
+ */
+function tc_program_record_properties_string_of_authors($item) {
+  if (property_exists($item, "field_resourc_authors")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_authors)) {
+      if (sizeof($item->field_resourc_authors) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_authors[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_authors) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_authors);
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (resourc_topics)
+ * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_topics' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @return string of all topics.
+ */
+/* resources  - no und */
+function tc_program_record_properties_string_of_topics($item) {
+  if (property_exists($item, "field_resourc_topics")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_topics)) {
+      if (sizeof($item->field_resourc_topics) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_topics[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_topics) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_topics);
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (state_related)
+ * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_state_related' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_state_related($item) {
+  if (property_exists($item, "field_resourc_state_related")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_state_related)) {
+      if (sizeof($item->field_resourc_state_related) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_state_related[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_state_related) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_state_related);
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (media_types)
+ * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_media_types' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_media_types($item) {
+  if (property_exists($item, "field_resourc_media_types")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_media_types)) {
+      if (sizeof($item->field_resourc_media_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_media_types[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_media_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(NULL, $item->field_resourc_media_types);
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (media_types)
+ * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resourc_publication_types' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_publication_types($item) {
+  if (property_exists($item, "field_resourc_publication_types")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resourc_publication_types)) {
+      if (sizeof($item->field_resourc_publication_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resourc_publication_types[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resourc_publication_types) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resourc_publication_types);
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (audiences)
+ * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_resource_audiences' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_audiences($item) {
+  if (property_exists($item, "field_resource_audiences")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_resource_audiences)) {
+      if (sizeof($item->field_resource_audiences) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_resource_audiences[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_resource_audiences) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_resource_audiences);
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * produce a string for searching from taxonomy terms.
+ * (categories)
+ * @param $item
+ *
+ * If the index in search_api has 'index hierarchy' checked then the data structure
+ * inside '$item->field_event_cal_categories' is totally different.
+ * 'index hierarchy' has arrays of tid => tid - where some are strings and
+ * some are integer - where the integer is the parent of "string".
+ * Without 'index hierarchy' we get teh normal ['und'][0]tid => <value> style.
+ *
+ * @return string of all state related values.
+ */
+function tc_program_record_properties_string_of_categories($item) {
+  if (property_exists($item, "field_event_cal_categories")) {
+    /* if we index a taxonomy hierarchy then the data structure is different */
+    if (array_key_exists(LANGUAGE_NONE, $item->field_event_cal_categories)) {
+      if (sizeof($item->field_event_cal_categories) > 0) {
+        return tc_program_record_get_list_of_terms_as_string($item->field_event_cal_categories[LANGUAGE_NONE]);
+      }
+    }
+    else {
+      if (sizeof($item->field_event_cal_categories) > 0) {
+        return tc_program_record_get_list_of_terms_as_string(null, $item->field_event_cal_categories);
+      }
+    }
+  }
+  return "";
+}
+

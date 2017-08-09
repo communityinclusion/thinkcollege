@@ -8,13 +8,14 @@ $plugin = array(
   //'css' => 'tc-multipass.css',
   //'admin css' => $bootstrap_css,
   'regions' => array(
-    'row0' => t('Row 0'),
     'row1left' => t('Row 1, left'),
     'row1right' => t('Row 1, right'),
-    'row2' => t('Row 2'),
-    'row3left' => t('Row 3, left'),
-    'row3right' => t('Row 3, right'),
+    'row2left' => t('Row 2, left'),
+    'row2right' => t('Row 2, right'),
+    'row3' => t('Row 3'),
     'row4left' => t('Row 4, left'),
     'row4right' => t('Row 4, right'),
+    'row5left' => t('Row 5, left'),
+    'row5right' => t('Row 5, right'),
   ),
 );

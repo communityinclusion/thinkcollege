@@ -56,6 +56,25 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => 1,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_link' => 0,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -118,6 +137,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 46,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 62,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -190,6 +215,12 @@ function program_record_field_default_field_instances() {
         'type' => 'addressfield_default',
         'weight' => 2,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -257,6 +288,12 @@ function program_record_field_default_field_instances() {
         'type' => 'computed_field_unsanitized',
         'weight' => 29,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 73,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -306,6 +343,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 25,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 91,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -374,6 +417,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 28,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -527,6 +576,12 @@ function program_record_field_default_field_instances() {
         'type' => 'geofield_leaflet',
         'weight' => 3,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -606,6 +661,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -669,6 +730,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -729,6 +796,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 41,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 81,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -792,6 +865,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 68,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 69,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -849,6 +928,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 55,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 58,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -908,6 +993,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 53,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -966,6 +1057,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 34,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 82,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1043,6 +1140,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 35,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 86,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1100,6 +1203,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 33,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 79,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1159,6 +1268,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 36,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 83,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1213,6 +1328,12 @@ function program_record_field_default_field_instances() {
         'weight' => 61,
       ),
       'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 70,
+      ),
+      'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1279,6 +1400,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 56,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1339,6 +1466,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1401,6 +1534,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1454,6 +1593,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 38,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1513,6 +1658,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 73,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 74,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1568,6 +1719,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 74,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 75,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1632,6 +1789,12 @@ function program_record_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 0,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1690,6 +1853,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1751,6 +1920,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 52,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 54,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1803,6 +1978,12 @@ function program_record_field_default_field_instances() {
         'weight' => 28,
       ),
       'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 72,
+      ),
+      'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1866,6 +2047,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 37,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 88,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1924,6 +2111,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 51,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 66,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1985,6 +2178,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 66,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 99,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2049,6 +2248,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 61,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 95,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2109,6 +2314,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 27,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2166,6 +2377,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 26,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2218,6 +2435,12 @@ function program_record_field_default_field_instances() {
         'weight' => 82,
       ),
       'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 71,
+      ),
+      'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2282,6 +2505,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 45,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 77,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2340,6 +2569,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2404,6 +2639,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 43,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 84,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2470,6 +2711,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 40,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 80,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2532,6 +2779,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 58,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2582,6 +2835,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 52,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2639,6 +2898,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 49,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 63,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2700,6 +2965,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 50,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 64,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2755,6 +3026,12 @@ function program_record_field_default_field_instances() {
         'type' => 'computed_field_unsanitized',
         'weight' => 37,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2809,6 +3086,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 69,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2868,6 +3151,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 63,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 94,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2932,6 +3221,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 65,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 98,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2989,6 +3284,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 53,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 67,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3043,6 +3344,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 54,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 92,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3105,6 +3412,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 15,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3173,6 +3486,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 59,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3246,6 +3565,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 57,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3312,6 +3637,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 78,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3339,6 +3670,7 @@ function program_record_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'imce_filefield_on' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -3381,6 +3713,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3441,6 +3779,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3499,6 +3843,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 23,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3576,6 +3926,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3627,6 +3983,12 @@ function program_record_field_default_field_instances() {
         'type' => 'computed_field_unsanitized',
         'weight' => 30,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 76,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3677,6 +4039,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 34,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3734,6 +4102,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3793,6 +4167,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 56,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 60,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3868,6 +4248,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3928,6 +4314,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3990,6 +4382,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 67,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 68,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4047,6 +4445,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4109,6 +4513,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4164,6 +4574,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 48,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 90,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4218,6 +4634,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 36,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4276,6 +4698,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 57,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4332,6 +4760,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4395,6 +4829,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 64,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 97,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4446,6 +4886,12 @@ function program_record_field_default_field_instances() {
         'type' => 'computed_field_unsanitized',
         'weight' => 40,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 55,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4496,6 +4942,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 55,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 96,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4554,6 +5006,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 62,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 93,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4616,6 +5074,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 44,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 89,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4674,6 +5138,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 51,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4734,6 +5204,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 32,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 52,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4809,6 +5285,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4858,6 +5340,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 16,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4920,6 +5408,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 47,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 61,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4981,6 +5475,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5038,6 +5538,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 60,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5102,6 +5608,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 29,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5160,6 +5672,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 39,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 85,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5213,6 +5731,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 100,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5273,6 +5797,12 @@ function program_record_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5327,6 +5857,12 @@ function program_record_field_default_field_instances() {
         'type' => 'computed_field_unsanitized',
         'weight' => 24,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 87,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5377,6 +5913,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 46,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5429,6 +5971,12 @@ function program_record_field_default_field_instances() {
         'type' => 'computed_field_unsanitized',
         'weight' => 20,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5477,6 +6025,12 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
+        'weight' => 35,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 35,
       ),
       'teaser' => array(
@@ -5529,6 +6083,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
         'weight' => 15,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5584,6 +6144,12 @@ function program_record_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 59,
       ),
       'teaser' => array(
         'label' => 'above',
