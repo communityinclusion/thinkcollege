@@ -51,14 +51,27 @@ h3.block-title, h3.pane-title {
 
 
 
- /*----------------------------*/
+ /*----Home page panel blocks---*/
 
 
 
 
 
- .tc-row2
-{margin-bottom:25px}
+
+
+  .tc-row2,.tc-row1right,.tc-row1left {margin-bottom: 25px}
+
+  /*----------------------------*/
+
+
+  .btn-huge{
+ 	padding:25px 0;
+    font-size:22px;
+    color:#fff;
+ font-family: 'museo-sans-condensed', sans-serif;
+    text-decoration: none;
+
+}
 
 .btn-danger {
 	background-color:#20527C;
@@ -347,7 +360,7 @@ header {
 
 
 
-/*** Landing Page --hero image block ***/
+/*** Landing Page -- hero image block ***/
 
 .one-element {
 
@@ -364,7 +377,7 @@ header {
     top: 0;
     left: 0;
     padding: 10px 15px;
-    background: rgba(255,255,255, 0.3);
+    background: rgba(255,255,255, 0.4);
     text-align: left;
     display: block;
     width: 42%;
@@ -372,31 +385,14 @@ header {
 
 }
 
-ul.latest {padding-left:0;margin-left:0}
-
-ul.latest li {
-    position: relative;
-    display: block;
-    padding: 10px 5px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-ul.latest li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
 
   h1.headline {
-
- font-size:2.5em;
+ font-family: 'lato', sans-serif;
+ text-align: left;
+ padding-left:10px;
+ font-size:3em;
     color:#fff;
-  }
-
-
- h1.headline span {
-
- background-color: #C96B29;
+    font-style: italic;
 
   }
 
@@ -436,6 +432,30 @@ ul.latest li:last-child {
     color:#fff;
   }
   }
+
+
+
+
+
+ul.latest {padding-left:0;margin-left:0}
+
+ul.latest li {
+    position: relative;
+    display: block;
+    padding: 10px 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+ul.latest li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+
+
+
+
 
 /*----------------------------*/
 
@@ -625,4 +645,28 @@ margin-top:-480px; /* your iframe height */
     float: left;
     padding-right: 20px;
     padding-bottom: 20px;
+}
+
+
+/* Back to top button */
+
+#backtotop {
+
+background: #F7F7F7;
+border: 1px solid #CCCCCC;
+border-radius: 5px 5px 5px 5px;
+bottom: 10px;
+color: #333333;
+cursor: pointer;
+display: none;
+height: 50px;
+/* line-height: 30px; */
+padding: 5px 10px;
+position: fixed;
+right: 10px;
+text-align: center;
+z-index: 1;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+
 }
