@@ -154,7 +154,7 @@ function tc_resource_field_formatter_view($entity_type, $entity, $field, $instan
         $markup .=   '<div class="tc-resource-icon"><img src="/' . drupal_get_path('module', 'tc_resource') . '/img/' . $icon . '" alt="Download resource"></div>';
         $markup .=   '<div class="tc-resource-info">';
         $markup .=     '<div class="tc-resource-description">' . l($item['description'], file_create_url($item['uri']), array('attributes' => array('target' => '_blank'))) . '</div>';
-        $markup .=     '<div class="tc-resource-date">' . format_date($item['timestamp'], 'custom', 'F j, Y') . '</div>';
+        //$markup .=     '<div class="tc-resource-date">' . format_date($item['timestamp'], 'custom', 'F j, Y') . '</div>';
         $markup .=   '</div>';
         $markup .= '</div>';
 
