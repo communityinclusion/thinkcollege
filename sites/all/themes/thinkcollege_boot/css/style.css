@@ -7136,7 +7136,7 @@ article.node-resource.view-mode-full .col-sm-4 .field {
     text-transform: none;
     padding: 0.75em 1em; }
     #block-superfish-3 .sf-style-none a.sf-with-ul {
-      padding-right: 1.5em; }
+      padding-right: 1.1em; }
     #block-superfish-3 .sf-style-none a:focus {
       background: #4C8EC9;
       outline: 0; }
@@ -7354,6 +7354,12 @@ body {
     z-index: 1600; }
     body #admin-menu .dropdown li {
       line-height: normal; }
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4; }
 
 @media screen and (min-width: 768px) {
   .navbar.container {
@@ -8037,8 +8043,8 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
     .page-general-site-search .views-exposed-form .views-exposed-widget.views-reset-button #edit-reset,
     .page-resource-search .views-exposed-form .views-exposed-widget.views-reset-button #edit-reset,
     .page-college-search .views-exposed-form .views-exposed-widget.views-reset-button #edit-reset {
-      font-size: 0.7em;
-      padding: 1px 5px;
+      font-size: 0.8em;
+      padding: 4px 5px;
       color: #337ab7; }
   .page-general-site-search .views-exposed-form .views-exposed-widgets.clearfix,
   .page-resource-search .views-exposed-form .views-exposed-widgets.clearfix,

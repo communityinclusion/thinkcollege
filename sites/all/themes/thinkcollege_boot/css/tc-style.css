@@ -18,6 +18,13 @@ h3.block-title,h3.pane-title {
 	font-family:'museo-sans-condensed',sans-serif;
 }
 
+
+
+/* Beta Alert Banner */
+
+.beta-banner .alert {width:100%;margin-bottom: 10px;border-radius:0}
+
+
 /* Section Banner */
 #section_banner {
 /* position: absolute; */
