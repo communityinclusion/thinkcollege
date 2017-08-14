@@ -243,6 +243,11 @@ function tc_facets_block_info() {
     'cache' =>  DRUPAL_NO_CACHE,
   );
 
+  $blocks['tc_resource_search_intro'] = array(
+    'info' => t('TC facets: Resource intro block for search.'),
+    'cache' =>  DRUPAL_NO_CACHE,
+  );
+
   return $blocks;
 }
 
@@ -304,6 +309,11 @@ function tc_facets_block_view($delta = '') {
       $block['subject'] = t('Intro text total Programs Available, and Map');
       $block['content'] = theme('tc_program_intro_and_map_mobile', $variables);
       break;
+
+    case 'tc_resource_search_intro':
+      $block['subject'] = t('Resource search intro text');
+      $block['content'] = theme('tc_resource_search_intro', $variables);
+      break;
   }
 
   return $block;
@@ -355,6 +365,10 @@ function tc_facets_theme($existing, $type, $theme, $path) {
       'template' => 'templates/tc_option_select_item'
     ),
 
+    'tc_resource_search_intro' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_resource_search_intro'
+    ),
   );
 
   return $return;
