@@ -398,3 +398,22 @@ function tc_facets_preprocess_html(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_search_api_solr_query_alter().
+ *
+ * We need to add a 2nd sort order if we are sorting by Publication Date.
+ * This is because Publication Date that we are sorting by is only a year,
+ * so secondary sort by Date Received as a secondary sort too.
+ *
+ * @param $call_args
+ * @param \SearchApiQueryInterface $query
+ */
+function tc_facets_search_api_solr_query_alter(&$call_args, SearchApiQueryInterface $query) {
+  $sort = $query->getSort();
+
+  // Add secondary sorting by daet received if the current sort is by publication date.
+  if (isset($sort['field_resourc_publication_date'])) {
+    $call_args['params']['sort'] .= ', ds_field_resourc_date_received desc';
+  }
+}
