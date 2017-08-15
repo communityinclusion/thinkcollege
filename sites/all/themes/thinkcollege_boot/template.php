@@ -155,12 +155,13 @@ function thinkcollege_boot_preprocess_page(&$vars) {
   }
 
   // (temporarily) Swap out the main menu ($primary_nav) for anonymous users.
+  /*
   if (user_is_anonymous()) {
     $menu = menu_tree('menu-temporary-main-menu');
-//  $menu = menu_tree('main-menu');
     $menu['#theme_wrappers'][0] = 'menu_tree__primary';
     $vars['primary_nav'] = $menu;
   }
+  */
 
   // Add logos template
   $vars['think_college_logo'] = file_create_url(drupal_get_path('theme', 'thinkcollege_boot') . '/images/thinkcollege_new_white-sm.png');
