@@ -13,7 +13,7 @@
 
     <p>
     Once you have located colleges you are interested in, download the
-    <a href="http://www.thinkcollege.net/images/stories/HowTo%20TC_F.pdf">
+    <a href="/sites/default/files/files/resources/HowTo%20TC_F.pdf">
       How To Think College guide to Conducting a College Search [PDF]</a>.
     It provides you with the right questions to ask in order to get the
     answers you need about each program on your list.</p>
@@ -38,4 +38,3 @@
   </p>
 
 </div>
-
