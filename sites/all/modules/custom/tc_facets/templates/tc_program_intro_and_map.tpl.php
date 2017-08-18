@@ -1,6 +1,6 @@
 <div class="info-box">
   <h2 style="border-bottom: #ccc 1px solid; padding-bottom: 10px;">
-    Find a college that's right for you!
+    Find the college that's right for you!
   </h2>
 
   <p class="lead">
@@ -14,7 +14,7 @@
     <p>
     Once you have located colleges you are interested in, download the
     <a href="/sites/default/files/files/resources/HowTo%20TC_F.pdf">
-      How To Think College guide to Conducting a College Search [PDF]</a>.
+      How To Think College Guide to Conducting a College Search</a> (PDF).
     It provides you with the right questions to ask in order to get the
     answers you need about each program on your list.</p>
 
