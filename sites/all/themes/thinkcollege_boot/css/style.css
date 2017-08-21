@@ -9502,7 +9502,7 @@ article.node-program-record-full .program-box {
 
 /* line 31, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   width: 100%;
   background-color: #20527c;
   border-top: 10px solid #fff;
@@ -9777,17 +9777,17 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
 /* Social icons in footer */
 /* line 44, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 #social-fb:hover {
-  color: #3B5998;
+  color: #4C8EC9;
 }
 
 /* line 48, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 #social-tw:hover {
-  color: #4099FF;
+  color: #4C8EC9;
 }
 
 /* line 53, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 #social-em:hover {
-  color: #f39c12;
+  color: #4C8EC9;
 }
 
 /* line 1, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_blocks.scss */
@@ -10414,9 +10414,10 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   background-color: transparent;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
-/* line 22, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 23, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .home-featurednews .view-whats-new.content-pane .view-all {
   position: absolute;
   right: 0;
@@ -10424,7 +10425,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 }
 
 @media screen and (min-width: 768px) {
-  /* line 27, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+  /* line 28, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
   .home-featurednews .view-whats-new.content-pane .view-content {
     display: -webkit-box;
     display: -moz-box;
@@ -10440,36 +10441,36 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   }
 }
 
-/* line 34, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 35, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .home-featurednews .view-whats-new.content-pane .views-row {
   padding: 0 10px 10px 10px;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 34, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+  /* line 35, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
   .home-featurednews .view-whats-new.content-pane .views-row {
     width: 22%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 34, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+  /* line 35, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
   .home-featurednews .view-whats-new.content-pane .views-row {
     width: 23%;
   }
 }
 
-/* line 45, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 46, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image {
   margin: 0 -10px 15px -10px;
 }
 
-/* line 47, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 48, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image img {
   width: 100%;
 }
 
-/* line 51, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 52, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .home-featurednews .view-whats-new.content-pane .title {
   font-family: "museo-sans", sans-serif;
   font-weight: 500;
@@ -10478,19 +10479,20 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   margin-top: 10px;
 }
 
-/* line 58, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 59, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .home-featurednews .view-whats-new.content-pane .views-field-body {
   font-size: 14px;
 }
 
-/* line 69, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 70, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .view-header {
   background-color: transparent;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
-/* line 74, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 76, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .view-all {
   position: absolute;
   right: 0;
@@ -10498,7 +10500,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 }
 
 @media screen and (min-width: 768px) {
-  /* line 79, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+  /* line 81, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
   .ie-news .view-whats-new.content-pane .view-content {
     display: -webkit-box;
     display: -moz-box;
@@ -10514,36 +10516,36 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   }
 }
 
-/* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 88, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .views-row {
   padding: 0 10px 10px 10px;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+  /* line 88, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
   .ie-news .view-whats-new.content-pane .views-row {
     width: 31%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 86, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+  /* line 88, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
   .ie-news .view-whats-new.content-pane .views-row {
     width: 31%;
   }
 }
 
-/* line 97, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 99, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .views-field-field-teaser-image {
   margin: 0 -10px 15px -10px;
 }
 
-/* line 99, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 101, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .views-field-field-teaser-image img {
   width: 100%;
 }
 
-/* line 103, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 105, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .title {
   font-family: "museo-sans", sans-serif;
   font-weight: 500;
@@ -10552,12 +10554,12 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   margin-top: 10px;
 }
 
-/* line 110, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 112, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-news .view-whats-new.content-pane .views-field-body {
   font-size: 14px;
 }
 
-/* line 117, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 119, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-featuredresources h2.pane-title {
   text-align: left;
   border-bottom: #ccc 1px solid;
@@ -10567,29 +10569,29 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   font-size: 24px;
 }
 
-/* line 128, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 130, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-featuredresources .view-whats-new .views-row {
   border-bottom: #ccc 1px solid;
   display: table;
 }
 
-/* line 129, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 131, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-featuredresources .view-whats-new .views-row .views-field-field-resourc-media-types, .ie-featuredresources .view-whats-new .views-row .views-field-field-resourc-date-received {
   display: table-cell;
 }
 
-/* line 133, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 135, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-featuredresources .view-whats-new .views-row .views-field-title {
   display: table-cell;
 }
 
-/* line 137, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 139, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .ie-featuredresources .view-whats-new .views-row h3.field-content.title {
   font-size: 16px;
   padding-left: 5px;
 }
 
-/* line 144, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
+/* line 146, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_views-whats-new.scss */
 .views-field-field-resourc-date-received .label-warning {
   background-color: #C96B1E;
 }
@@ -11314,7 +11316,7 @@ body #admin-menu .dropdown li {
 .footer {
   margin-top: 45px;
   /*padding-top: 35px;*/
-  padding-bottom: 36px;
+  /*padding-bottom: 36px;*/
 }
 
 /* line 258, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/_overrides.scss */
