@@ -9738,12 +9738,12 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
 
 /* line 8, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 .copyright {
-  background-color: #fff;
-  color: #20527C;
+  background-color: #0073AE;
+  color: #fff;
   padding: 20px 80px;
 }
 
-/* line 15, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+/* line 17, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 .footer h2 {
   border-bottom: 1px solid #fff;
   font-size: 18px;
@@ -9753,7 +9753,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
   text-transform: uppercase;
 }
 
-/* line 24, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+/* line 26, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 .footer ul {
   font-size: 16px;
   list-style-type: none;
@@ -9762,30 +9762,35 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
   margin-top: 15px;
 }
 
-/* line 32, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+/* line 34, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 .footer ul li a {
   padding: 0 0 5px;
   display: block;
 }
 
-/* line 37, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+/* line 39, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 .footer a {
   color: #C96B29;
   font-weight: 700;
 }
 
-/* Social icons in footer */
 /* line 44, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+.footer .copyright a {
+  color: #fff;
+}
+
+/* Social icons in footer */
+/* line 48, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 #social-fb:hover {
   color: #4C8EC9;
 }
 
-/* line 48, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+/* line 52, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 #social-tw:hover {
   color: #4C8EC9;
 }
 
-/* line 53, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
+/* line 57, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_footer.scss */
 #social-em:hover {
   color: #4C8EC9;
 }
