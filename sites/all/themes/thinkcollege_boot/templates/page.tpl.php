@@ -84,7 +84,7 @@
   </header> <!-- /#page-header -->
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
-       <div class="close-ribbon"><img alt="Think College" src="<?php echo $think_college_logo; ?>" width="95" /></div>
+       <div class="close-ribbon"><a href="/"><img alt="Think College" src="<?php echo $think_college_logo; ?>" width="95" /></a></div>
     <div class="navbar-header">
       <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">

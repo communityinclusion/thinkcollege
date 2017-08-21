@@ -243,6 +243,11 @@ function tc_facets_block_info() {
     'cache' =>  DRUPAL_NO_CACHE,
   );
 
+  $blocks['tc_resource_search_intro'] = array(
+    'info' => t('TC facets: Resource intro block for search.'),
+    'cache' =>  DRUPAL_NO_CACHE,
+  );
+
   return $blocks;
 }
 
@@ -304,6 +309,11 @@ function tc_facets_block_view($delta = '') {
       $block['subject'] = t('Intro text total Programs Available, and Map');
       $block['content'] = theme('tc_program_intro_and_map_mobile', $variables);
       break;
+
+    case 'tc_resource_search_intro':
+      $block['subject'] = t('Resource search intro text');
+      $block['content'] = theme('tc_resource_search_intro', $variables);
+      break;
   }
 
   return $block;
@@ -355,6 +365,10 @@ function tc_facets_theme($existing, $type, $theme, $path) {
       'template' => 'templates/tc_option_select_item'
     ),
 
+    'tc_resource_search_intro' => array(
+      'variables' => array( ),
+      'template' => 'templates/tc_resource_search_intro'
+    ),
   );
 
   return $return;
@@ -396,5 +410,24 @@ function tc_facets_preprocess_html(&$variables) {
       drupal_add_css(drupal_get_path('module', 'tc_facets') . "/tc-college-map/css/mapstyle.css");
       drupal_add_js(drupal_get_path('module', 'tc_facets') . "/tc-college-map/js/mapindex.js");
     }
+  }
+}
+
+/**
+ * Implements hook_search_api_solr_query_alter().
+ *
+ * We need to add a 2nd sort order if we are sorting by Publication Date.
+ * This is because Publication Date that we are sorting by is only a year,
+ * so secondary sort by Date Received as a secondary sort too.
+ *
+ * @param $call_args
+ * @param \SearchApiQueryInterface $query
+ */
+function tc_facets_search_api_solr_query_alter(&$call_args, SearchApiQueryInterface $query) {
+  $sort = $query->getSort();
+
+  // Add secondary sorting by daet received if the current sort is by publication date.
+  if (isset($sort['field_resourc_publication_date'])) {
+    $call_args['params']['sort'] .= ', ds_field_resourc_date_received desc';
   }
 }

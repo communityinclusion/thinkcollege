@@ -36,16 +36,6 @@ function tc_resource_search_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<p class="lead">Welcome to the Think College resource library!</p>
-<p>Here you will find hundreds of carefully selected resources on a wide range of topics related to postsecondary education for people with intellectual disabilities including transition, applying to and paying for college, setting up and maintaining a college program, relevant legislation, competitive employment, living in the community, accessing benefits, and more.</p>
-<p>Do you know of a resource that would be appropriate for our library? Let us know! Email <a href="mailto:Rebecca.Lazo@umb.edu">Rebecca.Lazo@umb.edu</a>.
-<br><br>';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Header: Global: Result summary */
   $handler->display->display_options['header']['result']['id'] = 'result';
   $handler->display->display_options['header']['result']['table'] = 'views';
