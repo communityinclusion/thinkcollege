@@ -274,7 +274,8 @@ $classes .= ' node-program-record-full';
   if (isset($content['field_prog_admit_deadline']) ||
     isset($content['field_prog_admiss_link']) ||
     isset($content['field_requirements_display']) ||
-    isset($content['field_disabilities_display_'])):
+    isset($content['field_disabilities_display_']) ||
+    isset($content['field_prog_length_years'])):
     ?>
     <div class="program-box" id="requirements">
       <table class="table table-striped">
@@ -288,7 +289,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_admiss_link']); ?>
         <?php print render($content['field_requirements_display']); ?>
         <?php print render($content['field_disabilities_display_']); ?>
-        <?php if(isset($content['field_prog_length_years'])) print render($content['field_prog_length_years']); ?>
+        <?php print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>
     </div>
