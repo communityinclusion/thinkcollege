@@ -288,7 +288,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_admiss_link']); ?>
         <?php print render($content['field_requirements_display']); ?>
         <?php print render($content['field_disabilities_display_']); ?>
-        <?php if(isset($content['field_prog_length_years']) print render($content['field_prog_length_years']); ?>
+        <?php if(isset($content['field_prog_length_years'])) print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>
     </div>
@@ -297,7 +297,7 @@ $classes .= ' node-program-record-full';
   <?php
   if (isset($content['field_prog_explain_nums']) ||
     isset($content['field_admission_rate_display']) ||
-    isset($content['field_prog_retention_rate_displa']):
+    isset($content['field_prog_retention_rate_displa'])):
     ?>
     <div class="program-box" id="acceptance-rates">
       <table class="table table-striped">
