@@ -9217,7 +9217,7 @@ button.close {
   border-radius: 4px;
   background-color: #fff;
   border-top: 10px solid #20527C;
-  padding: 15px 20px;
+  padding: 20px;
   margin-bottom: 25px;
 }
 
@@ -9502,7 +9502,7 @@ article.node-program-record-full .program-box {
 
 /* line 31, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_header.scss */
 .navbar-default {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   width: 100%;
   background-color: #20527c;
   border-top: 10px solid #fff;
@@ -10939,7 +10939,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 
 /* line 129, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_superfish-overrides.scss */
 #block-superfish-3 .sf-style-none .sf-sub-indicator {
-  background-image: url("../images/dropdown-arrows.png");
+  background-image: url("../images/arrows-ffffff.png");
 }
 
 /* line 134, /Applications/MAMP/pantheon-think-college/sites/all/themes/thinkcollege_boot/scss/components/_superfish-overrides.scss */
@@ -11234,7 +11234,7 @@ body #admin-menu .dropdown li {
 .lead {
   margin-bottom: 20px;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 200;
   line-height: 1.4;
 }
 
