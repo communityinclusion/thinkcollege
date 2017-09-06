@@ -7,6 +7,8 @@
 
         $('.form-item-field-resourc-authors-und label').after('<p class="warnSelect">The lastname, firstname terms have to have double quotes around them like so: "Lastname, Firstname" Additional terms should be separated by commas between the double quotes, like so: "Lastname1, Firstname1","Lastname2, Firstname2" and so on.</p>'); }
 
+          if(!$('.form-item-field-resource-attachment-und-0-target-id p.warnSelect').length) { $('.form-item-field-resource-attachment-und-0-target-id label').after('<p class="warnSelect">Fill in the field below to create one (1) Resource that will be attached to this event, to which you can add files and links that will then show up at the bottom of this event.  If you want to add multiple files or links, add them to the single resource for this event.</p>'); }
+
        if(!$(' #edit-field-feature-in-section-und').hasClass('clearfix')) $('#edit-field-feature-in-section-und').addClass('clearfix');
 
     //  $(document).find( $( '#resource-node-form .form-item-field-resourc-topics-und')).prepend('<div class="floatCol topicCol">');
