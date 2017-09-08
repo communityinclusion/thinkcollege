@@ -114,6 +114,49 @@
 }
 
 
+.secnav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left:15px;}
+      li > a:before{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        margin-left:5px;
+        z-index: 500;
+        content: "\f054";
+        font-size: .8em;
+        text-align: center;
+        font-family: 'fontawesome';
+       }
+          li a {
+            display: block;
+            position: relative;
+            padding: 8px 5px 8px 26px;
+            font-size: 1.15em;
+              line-height: 1;
+              }
+
+          li a:hover {
+              background: #4C8EC9;
+              color:#fff;
+     }
+}
+ .secnav-blue {
+   @extend %secnav-blue;
+ background: #20527C;
+    padding: 20px;
+    text-align: left;
+      h3 {
+          color:#fff
+          }
+ li a {
+    color:#fff;
+  }
+}
+
 .pane-tc-resource-tc-resource-find {
 @extend %box-defaults;
   &-blue {
