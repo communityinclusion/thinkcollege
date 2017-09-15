@@ -6961,7 +6961,8 @@ article.node-resource.view-mode-full .col-sm-4 .field {
   margin-top: 10px; }
 
 .home-featurednews .view-whats-new.content-pane .views-field-body {
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 21px; }
 
 .ie-news .view-whats-new.content-pane .view-header {
   background-color: transparent;
@@ -7340,6 +7341,21 @@ article.node-resource.view-mode-full .col-sm-4 .field {
 .sf-menu.sf-style-none li.sf-depth-2, .sf-menu.sf-style-none li.sf-depth-3, .sf-menu.sf-style-none li.sf-depth-4 {
   font-size: .9em; }
 
+/*
+
+  /*Events landing page -- unformatted list
+
+.view-tc-events-page {
+    .views-row {
+padding-bottom:5px;
+border-bottom:1px solid #333;
+
+      .field-content {
+      display:inline-block;
+    }
+}
+}
+*/
 html.overlay-open .navbar-fixed-top {
   z-index: 400; }
 
