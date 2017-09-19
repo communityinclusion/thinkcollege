@@ -116,10 +116,9 @@ $classes .= ' node-program-record-card node-tc-card';
 
         <div class="program-search-program-name">
           <?php
-          $options = array(
-  'html' => TRUE,
-);
-          print l($title, '/node/' . $node->nid, $options); ?>
+        $cleantitle = html_entity_decode($title);
+
+          print l($cleantitle, '/node/' . $node->nid); ?>
         </div>
 
         <div class="program-university">
