@@ -119,9 +119,7 @@ $classes .= ' node-program-record-card node-tc-card';
           $options = array(
   'html' => TRUE,
 );
-$output = l(htmlspecialchars($data->title, ENT_NOQUOTES, 'UTF-8'), 'node/' . $data->nid, $options ) ;
-
-          print l($title, '/node/' . $node->nid); ?>
+          print l($title, '/node/' . $node->nid, $options); ?>
         </div>
 
         <div class="program-university">
