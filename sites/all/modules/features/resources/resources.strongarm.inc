@@ -136,10 +136,13 @@ function resources_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '14',
+        ),
+        'redirect' => array(
+          'weight' => '18',
         ),
       ),
       'display' => array(
@@ -149,7 +152,7 @@ function resources_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '23',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -161,7 +164,7 @@ function resources_strongarm() {
             'visible' => FALSE,
           ),
           'event_attachment' => array(
-            'weight' => '7',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'search_index' => array(
