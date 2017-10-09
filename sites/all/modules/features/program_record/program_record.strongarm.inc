@@ -84,7 +84,7 @@ function program_record_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'card' => array(
         'custom_settings' => TRUE,
@@ -144,6 +144,10 @@ function program_record_strongarm() {
           ),
           'search_result' => array(
             'weight' => '65',
+            'visible' => FALSE,
+          ),
+          'token' => array(
+            'weight' => '30',
             'visible' => FALSE,
           ),
         ),
