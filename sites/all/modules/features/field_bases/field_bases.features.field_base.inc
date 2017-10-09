@@ -713,27 +713,6 @@ else {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_prog_address_line_2'.
-  $field_bases['field_prog_address_line_2'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_address_line_2',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 512,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_prog_admiss_link'.
   $field_bases['field_prog_admiss_link'] = array(
     'active' => 1,
@@ -855,28 +834,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'static_field',
-  );
-
-  // Exported field_base: 'field_prog_city'.
-  $field_bases['field_prog_city'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_city',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
   );
 
   // Exported field_base: 'field_prog_col_univ_name'.
@@ -2164,123 +2121,6 @@ else {
     'type' => 'computed',
   );
 
-  // Exported field_base: 'field_prog_state'.
-  $field_bases['field_prog_state'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_state',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'AL' => 'Alabama',
-        'AK' => 'Alaska',
-        'AZ' => 'Arizona',
-        'AR' => 'Arkansas',
-        'CA' => 'California',
-        'CO' => 'Colorado',
-        'CT' => 'Connecticut',
-        'DE' => 'Delaware',
-        'FL' => 'Florida',
-        'GA' => 'Georgia',
-        'HI' => 'Hawaii',
-        'ID' => 'Idaho',
-        'IL' => 'Illinois',
-        'IN' => 'Indiana',
-        'IA' => 'Iowa',
-        'KS' => 'Kansas',
-        'KY' => 'Kentucky',
-        'LA' => 'Louisiana',
-        'ME' => 'Maine',
-        'MD' => 'Maryland',
-        'MA' => 'Massachusetts',
-        'MI' => 'Michigan',
-        'MN' => 'Minnesota',
-        'MS' => 'Mississippi',
-        'MO' => 'Missouri',
-        'MT' => 'Montana',
-        'NE' => 'Nebraska',
-        'NV' => 'Nevada',
-        'NH' => 'New Hampshire',
-        'NJ' => 'New Jersey',
-        'NM' => 'New Mexico',
-        'NY' => 'New York',
-        'NC' => 'North Carolina',
-        'ND' => 'North Dakota',
-        'OH' => 'Ohio',
-        'OK' => 'Oklahoma',
-        'OR' => 'Oregon',
-        'PA' => 'Pennsylvania',
-        'RI' => 'Rhode Island',
-        'SC' => 'South Carolina',
-        'SD' => 'South Dakota',
-        'TN' => 'Tennessee',
-        'TX' => 'Texas',
-        'UT' => 'Utah',
-        'VT' => 'Vermont',
-        'VA' => 'Virginia',
-        'WA' => 'Washington',
-        'WV' => 'West Virginia',
-        'WI' => 'Wisconsin',
-        'WY' => 'Wyoming',
-        'DC' => 'District of Columbia',
-        'AS' => 'American Samoa',
-        'GU' => 'Guam',
-        'MP' => 'Northern Mariana Islands',
-        'PR' => 'Puerto Rico',
-        'UM' => 'United States Minor Outlying Islands',
-        'VI' => 'Virgin Islands, U.S.',
-        'AB' => 'Alberta',
-        'BC' => 'British Columbia',
-        'MB' => 'Manitoba',
-        'NB' => 'New Brunswick',
-        'NL' => 'Newfoundland and Labrador',
-        'NS' => 'Nova Scotia',
-        'ON' => 'Ontario',
-        'PE' => 'Prince Edward Island',
-        'QC' => 'Quebec',
-        'SK' => 'Saskatchewan',
-        'NT' => 'Northwest Territories',
-        'NU' => 'Nunavut',
-        'YT' => 'Yukon',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_prog_street_address'.
-  $field_bases['field_prog_street_address'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_street_address',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 512,
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_prog_student_orgs_y_n'.
   $field_bases['field_prog_student_orgs_y_n'] = array(
     'active' => 1,
@@ -2554,8 +2394,7 @@ foreach ($tpsid_values as $key => $tpsid_value) {
   if ($tpsid_value[\'value\'] == \'TPSID 2015-2020\') {
     $entity_field[0][\'value\'] = \'Yes\';
   }
-}
-',
+}',
       'database' => array(
         'data_default' => '',
         'data_index' => 0,
@@ -3317,28 +3156,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'computed',
-  );
-
-  // Exported field_base: 'field_zip_code'.
-  $field_bases['field_zip_code'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_zip_code',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
   );
 
   // Exported field_base: 'og_membership_request'.
