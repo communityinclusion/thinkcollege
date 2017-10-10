@@ -22,17 +22,17 @@
   </div>
 
   <div class="row">
-    <div class="col-md-4 tc-row2left">
-      <?php print $content['row2left']; ?>
-    </div>
-    <div class="col-md-8 tc-row2right">
-      <?php print $content['row2right']; ?>
+    <div class="col-sm-12 tc-row2">
+      <?php print $content['row2']; ?>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-12 tc-row3">
-      <?php print $content['row3']; ?>
+    <div class="col-md-4 tc-row3left">
+      <?php print $content['row3left']; ?>
+    </div>
+    <div class="col-md-8 tc-row3right">
+      <?php print $content['row3right']; ?>
     </div>
   </div>
 

@@ -144,8 +144,28 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-a5a6a66d-c08a-4874-bdb8-e3452cf2d1c1'] = $pane;
   $display->panels['row1right'][0] = 'new-a5a6a66d-c08a-4874-bdb8-e3452cf2d1c1';
   $pane = new stdClass();
-  $pane->pid = 'new-e9ae4970-f7a2-4650-b92f-9fceade89074';
-  $pane->panel = 'row2left';
+  $pane->pid = 'new-048928c5-848e-431f-ba40-c31bfece2af6';
+  $pane->panel = 'row2';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'whats_new-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'home-featurednews',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '048928c5-848e-431f-ba40-c31bfece2af6';
+  $display->content['new-048928c5-848e-431f-ba40-c31bfece2af6'] = $pane;
+  $display->panels['row2'][0] = 'new-048928c5-848e-431f-ba40-c31bfece2af6';
+  $pane = new stdClass();
+  $pane->pid = 'new-046e2da7-e811-4be1-a69a-7a45c2e9bcee';
+  $pane->panel = 'row3left';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
@@ -168,17 +188,13 @@ function landing_pages_default_page_manager_pages() {
 </ul>
 
 <hr />
-<p class="rtecenter"><strong><a href="/about/contact-us#newsletter">Subscribe to our mailing list</a></strong>&nbsp;to stay current on Think College news and events.</p>
-
-<p>&nbsp;</p>
+<p><strong><a href="/about/contact-us#newsletter">Subscribe to our mailing list</a></strong>&nbsp;to stay current on Think College news and events.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
   $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
+  $pane->style = array();
   $pane->css = array(
     'css_id' => '',
     'css_class' => 'box-blue',
@@ -186,50 +202,26 @@ function landing_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'e9ae4970-f7a2-4650-b92f-9fceade89074';
-  $display->content['new-e9ae4970-f7a2-4650-b92f-9fceade89074'] = $pane;
-  $display->panels['row2left'][0] = 'new-e9ae4970-f7a2-4650-b92f-9fceade89074';
+  $pane->uuid = '046e2da7-e811-4be1-a69a-7a45c2e9bcee';
+  $display->content['new-046e2da7-e811-4be1-a69a-7a45c2e9bcee'] = $pane;
+  $display->panels['row3left'][0] = 'new-046e2da7-e811-4be1-a69a-7a45c2e9bcee';
   $pane = new stdClass();
-  $pane->pid = 'new-49f655f7-2fb5-4ef6-982d-82d19c95c53d';
-  $pane->panel = 'row2right';
+  $pane->pid = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
+  $pane->panel = 'row3right';
   $pane->type = 'views_panes';
   $pane->subtype = 'upcoming_events-panel_pane_1';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array();
   $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
+  $pane->style = array();
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '49f655f7-2fb5-4ef6-982d-82d19c95c53d';
-  $display->content['new-49f655f7-2fb5-4ef6-982d-82d19c95c53d'] = $pane;
-  $display->panels['row2right'][0] = 'new-49f655f7-2fb5-4ef6-982d-82d19c95c53d';
-  $pane = new stdClass();
-  $pane->pid = 'new-b28daf19-ce66-41a4-af03-a2e56769cfa7';
-  $pane->panel = 'row3';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'whats_new-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'home-featurednews',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'b28daf19-ce66-41a4-af03-a2e56769cfa7';
-  $display->content['new-b28daf19-ce66-41a4-af03-a2e56769cfa7'] = $pane;
-  $display->panels['row3'][0] = 'new-b28daf19-ce66-41a4-af03-a2e56769cfa7';
+  $pane->uuid = '5f60030e-d864-4f92-b158-7fa0a5083588';
+  $display->content['new-5f60030e-d864-4f92-b158-7fa0a5083588'] = $pane;
+  $display->panels['row3right'][0] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $pane = new stdClass();
   $pane->pid = 'new-a4b05725-cbac-4129-8c2d-1ac46b436bbc';
   $pane->panel = 'row4left';

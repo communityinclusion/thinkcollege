@@ -193,7 +193,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{75.5, 316.9375}, {882, 138}}</string>
+			<string>{{75.5, 163}, {882, 138}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -298,7 +298,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{381, 163}, {576, 138}}</string>
+			<string>{{381.5, 316.9375}, {576, 138}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -333,7 +333,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{75, 163}, {288, 138}}</string>
+			<string>{{75.5, 316.9375}, {288, 138}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -437,7 +437,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-08-08 12:55:43 +0000</string>
+	<string>2017-10-10 18:46:05 +0000</string>
 	<key>Modifier</key>
 	<string>Michael Anello</string>
 	<key>NotesVisible</key>
