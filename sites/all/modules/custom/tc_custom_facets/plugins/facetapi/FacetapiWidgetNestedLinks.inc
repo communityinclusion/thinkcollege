@@ -142,6 +142,8 @@ class FacetapiWidgetNestedLinks extends FacetapiWidgetLinks {
       $class = ($item['#active']) ? 'facetapi-active' : 'facetapi-inactive';
       $variables['options']['attributes']['class'][] = $class;
 
+      $variables['options']['attributes']['data-tctopicid'][] = $item['#indexed_value'];
+
       // Themes the link, adds row to items.
       $row['data'] = theme($item['#theme'], $variables);
       $items[] = $row;
