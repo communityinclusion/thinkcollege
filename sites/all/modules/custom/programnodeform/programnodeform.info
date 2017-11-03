@@ -1,0 +1,4 @@
+name = TC Program Node Form
+description = "Provides custom node form for Program Record editors
+package = survey
+core = 7.x
