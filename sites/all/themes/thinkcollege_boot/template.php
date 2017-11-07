@@ -265,13 +265,15 @@ function thinkcollege_boot_preprocess_block(&$vars) {
    * field_name to the <section> class.
    */
   if ($vars['block']->module == "facetapi") {
-    $vars['classes_array'][] = $vars['title_suffix']['contextual_links']['#element']['#facet']['field'];
+    if (isset($vars['title_suffix']['contextual_links']['#element']['#facet']['field'])) {
+      $vars['classes_array'][] = $vars['title_suffix']['contextual_links']['#element']['#facet']['field'];
 
-    /*
-     * One facet (TPSID) is displayed as a bootstrap well as per requirements.
-     */
-    if ($vars['title_suffix']['contextual_links']['#element']['#facet']['field'] == "tc_tpsid") {
-      $vars['classes_array'][] = "well well-sm";
+      /*
+       * One facet (TPSID) is displayed as a bootstrap well as per requirements.
+       */
+      if ($vars['title_suffix']['contextual_links']['#element']['#facet']['field'] == "tc_tpsid") {
+        $vars['classes_array'][] = "well well-sm";
+      }
     }
   }
 }
@@ -453,8 +455,10 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
     $x = $_REQUEST['f'];
     foreach ($x as $id => $crumb) {
       // If we have a search term, we need to skip it for replacement.
-      if ($_REQUEST['search_api_views_fulltext']) {
-        $id++;
+      if (isset($_REQUEST['search_api_views_fulltext'])) {
+        if ($_REQUEST['search_api_views_fulltext']) {
+          $id++;
+        }
       }
       switch ($crumb) {
         case "tc_tpsid:Yes":
