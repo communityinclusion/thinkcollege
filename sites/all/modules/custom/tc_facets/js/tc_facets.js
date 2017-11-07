@@ -15,7 +15,7 @@ var Drupal = Drupal || {};
    */
   Drupal.behaviors.thinkcollegeResourceSearchSelectAllSubtopics = {
     attach: function (context) {
-      // Grab and parse the current field_resourc_topics querystring variables.
+      // Grab and parse the current field_resourc_topics query string variables.
       var i = 0;
       var param_string = '';
       var param_array = [];
@@ -30,8 +30,20 @@ var Drupal = Drupal || {};
         i++;
       }
 
+      // Grab and store the non-field_resourc_topics query string values.
+      var queryString = window.location.search;
+      var queryStringArrayRaw = parseQueryString(queryString.substring(1));
+      var queryStringSaved = [];
+      for (var key in queryStringArrayRaw) {
+        if (queryStringArrayRaw.hasOwnProperty(key)) {
+          if (unescape(queryStringArrayRaw[key]).indexOf("field_resourc_topic") < 0) {
+            queryStringSaved[unescape(key)] = unescape(queryStringArrayRaw[key]);
+          }
+        }
+      }
+
       // Loop around all the subtopic trees.
-      $('section.field_resourc_topics li.expanded ul.expanded').each(function( index ) {
+      $('section.tc-resource-select-all li.expanded ul.expanded').each(function( index ) {
         var selectAllHref = '';
         var topicHrefVars = '';
         var tid = '';
@@ -88,11 +100,6 @@ var Drupal = Drupal || {};
               }
             } while (j > -1);
           }
-
-          // Empty the subTopics array.
-          //subTopics = [];
-          //subTopicsLen = 0;
-
         }
         else {
           // Add subTopics to queryStringTopics for the "Select all" link.
@@ -101,11 +108,16 @@ var Drupal = Drupal || {};
           }
         }
 
-        // TODO: Need to add all the non-field_resoruc_topics query string parameters.
-
         // Build the new query string for the "Select all" href.
         for (var i = 0, len = selectAllTopics.length; i < len; i++) {
           selectAllHref += escape('f[' + i + ']') + '=' + escape('field_resourc_topics:' + selectAllTopics[i]) + '&';
+        }
+
+        // Add all the non-field_resourc_topics query string parameters to the SelectAll hrefs.
+        for (var key in queryStringSaved) {
+          if (queryStringSaved.hasOwnProperty(key)) {
+            selectAllHref += escape(key) + '=' + escape(queryStringSaved[key]);
+          }
         }
 
         $(this).prepend('<li class="leaf first"><a href="/resource-search?' + selectAllHref + '" class="facetapi-inactive"><i class="fa ' + selectAllCheckbox + '"></i>&nbsp;Select all</a></li>');
@@ -122,5 +134,18 @@ var Drupal = Drupal || {};
     }
     return(false);
   }
+
+  // Via https://www.joezimjs.com/javascript/3-ways-to-parse-a-query-string-in-a-url/
+  var parseQueryString = function( queryString ) {
+    var params = {}, queries, temp, i, l;
+    // Split into key/value pairs
+    queries = queryString.split("&");
+    // Convert the array of strings into an object
+    for ( i = 0, l = queries.length; i < l; i++ ) {
+        temp = queries[i].split('=');
+        params[temp[0]] = temp[1];
+    }
+    return params;
+  };
 
 })(jQuery, Drupal);
