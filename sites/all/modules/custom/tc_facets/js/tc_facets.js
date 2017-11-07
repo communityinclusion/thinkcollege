@@ -116,7 +116,7 @@ var Drupal = Drupal || {};
         // Add all the non-field_resourc_topics query string parameters to the SelectAll hrefs.
         for (var key in queryStringSaved) {
           if (queryStringSaved.hasOwnProperty(key)) {
-            selectAllHref += escape(key) + '=' + escape(queryStringSaved[key]);
+            selectAllHref += escape(key) + '=' + escape(queryStringSaved[key]) + '&';
           }
         }
 
