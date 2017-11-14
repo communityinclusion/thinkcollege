@@ -120,7 +120,7 @@ var Drupal = Drupal || {};
           }
         }
 
-        $(this).prepend('<li class="leaf first"><a href="/resource-search?' + selectAllHref + '" class="facetapi-inactive"><i class="fa ' + selectAllCheckbox + '"></i>&nbsp;Select all</a></li>');
+        $(this).prepend('<li class="leaf first"><a href="/resource-search?' + selectAllHref + '" class="tc-select-all facetapi-inactive"><i class="fa ' + selectAllCheckbox + '"></i>&nbsp;Select all</a></li>');
       });
     }
   };
