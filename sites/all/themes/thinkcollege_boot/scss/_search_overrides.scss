@@ -191,6 +191,10 @@
   display:none
 }
 
+.block-facetapi li a.tc-select-all {
+  font-weight: 800;
+}
+
 // Add disclosure triangles to all "Show more" and "Show fewer" Facet links
 .facetapi-limit-link::before {
   font-family: 'Glyphicons Halflings';

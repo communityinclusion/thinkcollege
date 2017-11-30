@@ -252,6 +252,14 @@ function tc_facets_block_info() {
 }
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function tc_facets_preprocess_tc_resource_advanced_filters(&$variables) {
+  // Add Javascript file for Resource Search page.
+  drupal_add_js(drupal_get_path('module', 'tc_facets') . '/js/tc_facets.js');
+}
+
+/**
  * Implements hook_block_view().
  */
 function tc_facets_block_view($delta = '') {
