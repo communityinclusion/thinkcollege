@@ -9,7 +9,7 @@
      attach: function (context, settings) {
 $('ul.vertical-tabs-list li a').addClass('inComplete');
    $( document ).one('ready',scanFieldsets);
-   $(document).one('ready',surveynodeformcheckAllActions);
+   $(document).one('ready',programnodeformcheckAllActions);
    $('th').text('Order').hide();
    if (!$('#edit-group_indv_comp p.nextSec').length)$('#edit-group_indv_comp').append('<p class="nextSec"><a class="openTab" href="#edit-group_indv_cont">>> Next: Individual contracted job >></a></p>');
    if (!$('#edit-group_indv_cont p.nextSec').length)$('#edit-group_indv_cont').append('<p class="nextSec"><a class="openTab" href="#edit-group_grp_integ">>> Next: Group integrated job >></a></p>');
@@ -47,7 +47,7 @@ var wages1 =  $(fieldID + ' .checkWages').prop('id');
 var hours = "#" + hours1;
 var wages = "#" + wages1;
 
-surveynodeformInitialMdMinWage(hours,wages);
+
 });
 
  }
@@ -140,12 +140,8 @@ if(unsaved) {
      }
    }
 
-  Drupal.behaviors.surveynodeformChMoreBut = {
-    attach: function (context, settings) {
-      changeMoreButton();
-    }
-  };
-  Drupal.behaviors.surveynodeformEnforceNumeric = {
+
+  Drupal.behaviors.programnodeformEnforceNumeric = {
     attach: function (context, settings) {
 
     $('.field-type-number-float input').keydown(isNumber);
@@ -155,13 +151,13 @@ if(unsaved) {
 
 } ;
 
-Drupal.behaviors.surveynodeformTextCheck = {
+Drupal.behaviors.programnodeformTextCheck = {
   attach: function (context, settings) {
 $('.form-type-textfield input').keydown(checkText);
 }
 };
 
-Drupal.behaviors.surveynodeformremoveIntWarn = {
+Drupal.behaviors.programnodeformremoveIntWarn = {
   attach: function (context, settings) {
 
   $('.field-type-number-float input').bind("blur",removeNumWarn);
@@ -170,7 +166,7 @@ Drupal.behaviors.surveynodeformremoveIntWarn = {
 
 } ;
 
-Drupal.behaviors.surveynodeformMakeActive = {
+Drupal.behaviors.programnodeformMakeActive = {
 
   attach: function (context, settings) {
 
@@ -183,14 +179,14 @@ Drupal.behaviors.surveynodeformMakeActive = {
 
 } ;
 
-Drupal.behaviors.surveynodeformNotReq = {
+Drupal.behaviors.programnodeformNotReq = {
 
   attach: function (context, settings) {
 $('#edit-field-contact-survey-coordinator-und-0-premise').addClass('notReq');
 
 }
 };
-Drupal.behaviors.surveynodeformIsReq = {
+Drupal.behaviors.programnodeformIsReq = {
 
   attach: function (context, settings) {
 
@@ -204,7 +200,7 @@ if(!$('#edit-field-oth-emp-day-y-n').hasClass('fieldReq')) { $('#edit-field-oth-
 }
 };
 
-Drupal.behaviors.surveynodeformCheckEmptyFields = {
+Drupal.behaviors.programnodeformCheckEmptyFields = {
 
   attach: function (context, settings) {
 
@@ -219,16 +215,16 @@ Drupal.behaviors.surveynodeformCheckEmptyFields = {
 
 
 
-Drupal.behaviors.surveynodeformStripCommas  = {
+Drupal.behaviors.programnodeformStripCommas  = {
   attach: function (context, settings) {
 $('#individual-data-node-form').submit(removeCommas);
   }
 }
-Drupal.behaviors.surveynodeformMdIndComJob = {
+Drupal.behaviors.programnodeformMdIndComJob = {
   attach: function (context, settings) {
-    surveynodeformMdMinWage('#edit-field-indv-comp-hrs-und-0-value', '#edit-field-indv-comp-gross-wages-und-0-value');
-  surveynodeformMdHrRange('#edit-field-indv-comp-hrs-und-0-value');
-    surveynodeformMdWageRange('#edit-field-indv-comp-gross-wages-und-0-value');
+    programnodeformMdMinWage('#edit-field-indv-comp-hrs-und-0-value', '#edit-field-indv-comp-gross-wages-und-0-value');
+  programnodeformMdHrRange('#edit-field-indv-comp-hrs-und-0-value');
+    programnodeformMdWageRange('#edit-field-indv-comp-gross-wages-und-0-value');
   }
 };
 
@@ -236,45 +232,45 @@ Drupal.behaviors.surveynodeformMdIndComJob = {
  * Individual contracted job - if gross wages / hours < $8.25, then show minimum wage
  * stuff.
  */
-Drupal.behaviors.surveynodeformMdIndConJob = {
+Drupal.behaviors.programnodeformMdIndConJob = {
   attach: function (context, settings) {
-    surveynodeformMdMinWage('#edit-field-indv-cont-hrs-und-0-value', '#edit-field-indv-cont-gross-wages-und-0-value');
-    surveynodeformMdHrRange('#edit-field-indv-cont-hrs-und-0-value');
-      surveynodeformMdWageRange('#edit-field-indv-cont-gross-wages-und-0-value');
+    programnodeformMdMinWage('#edit-field-indv-cont-hrs-und-0-value', '#edit-field-indv-cont-gross-wages-und-0-value');
+    programnodeformMdHrRange('#edit-field-indv-cont-hrs-und-0-value');
+      programnodeformMdWageRange('#edit-field-indv-cont-gross-wages-und-0-value');
   }
 };
-Drupal.behaviors.surveynodeformMdGrpIntegJob = {
+Drupal.behaviors.programnodeformMdGrpIntegJob = {
   attach: function (context, settings) {
-    surveynodeformMdHrRange('#edit-field-grp-integ-hrs-und-0-value');
-      surveynodeformMdWageRange('#edit-field-grp-integ-gross-wages-und-0-value');
+    programnodeformMdHrRange('#edit-field-grp-integ-hrs-und-0-value');
+      programnodeformMdWageRange('#edit-field-grp-integ-gross-wages-und-0-value');
   }
 };
-Drupal.behaviors.surveynodeformMdSelfEmp = {
-  attach: function (context, settings) {
-
-    surveynodeformMdHrRange('#edit-field-self-emp-hrs-und-0-value');
-      surveynodeformMdSelfEarningsRange('#edit-field-self-emp-gross-income-und-0-value');
-        surveynodeformMdSelfExpenseRange('#edit-field-self-emp-gross-expens-und-0-value');
-  }
-};
-Drupal.behaviors.surveynodeformMdFacBsedJob = {
+Drupal.behaviors.programnodeformMdSelfEmp = {
   attach: function (context, settings) {
 
-    surveynodeformMdHrRange('#edit-field-shl-hrs-und-0-value');
-      surveynodeformMdWageRange('#edit-field-shl-gross-wages-und-0-value');
+    programnodeformMdHrRange('#edit-field-self-emp-hrs-und-0-value');
+      programnodeformMdSelfEarningsRange('#edit-field-self-emp-gross-income-und-0-value');
+        programnodeformMdSelfExpenseRange('#edit-field-self-emp-gross-expens-und-0-value');
   }
 };
-Drupal.behaviors.surveynodeformMdComNonWk = {
+Drupal.behaviors.programnodeformMdFacBsedJob = {
+  attach: function (context, settings) {
+
+    programnodeformMdHrRange('#edit-field-shl-hrs-und-0-value');
+      programnodeformMdWageRange('#edit-field-shl-gross-wages-und-0-value');
+  }
+};
+Drupal.behaviors.programnodeformMdComNonWk = {
  attach: function (context, settings) {
 
-   surveynodeformMdHrRange('#edit-field-com-non-wrk-hours-und-0-value','hours');
+   programnodeformMdHrRange('#edit-field-com-non-wrk-hours-und-0-value','hours');
 
  }
 };
-Drupal.behaviors.surveynodeformNoParticAll = {
+Drupal.behaviors.programnodeformNoParticAll = {
   attach: function (context, settings) {
 
-$('.form-type-checkbox input').bind('click focus', surveynodeformcheckAllActions);
+$('.form-type-checkbox input').bind('click focus', programnodeformcheckAllActions);
   }
 };
 
@@ -282,7 +278,7 @@ $('.form-type-checkbox input').bind('click focus', surveynodeformcheckAllActions
  * Group integrated job - if gross wages / hours < $8.25, then show minimum wage
  * stuff.
  */
-function surveynodeformMdHrRange(rangeVal) {
+function programnodeformMdHrRange(rangeVal) {
   $(rangeVal).change(function() {
   var hasValues = false;
   var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
@@ -296,7 +292,7 @@ else if (checkVal < Drupal.settings.Surveyconfig.mdhrlow) { alert('The hours val
 
 });
 }
-function surveynodeformMdWageRange(rangeVal) {
+function programnodeformMdWageRange(rangeVal) {
   $(rangeVal).change(function() {
   var hasValues = false;
   var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
@@ -310,7 +306,7 @@ function surveynodeformMdWageRange(rangeVal) {
 });
 }
 
-function surveynodeformMdSelfEarningsRange(rangeVal) {
+function programnodeformMdSelfEarningsRange(rangeVal) {
   $(rangeVal).change(function() {
   var hasValues = false;
   var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
@@ -324,7 +320,7 @@ function surveynodeformMdSelfEarningsRange(rangeVal) {
 });
 }
 
-function surveynodeformMdSelfExpenseRange(rangeVal) {
+function programnodeformMdSelfExpenseRange(rangeVal) {
   $(rangeVal).change(function() {
   var hasValues = false;
   var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
@@ -339,7 +335,7 @@ function surveynodeformMdSelfExpenseRange(rangeVal) {
 }
 
 
-function surveynodeformMdMinWage(hours, wages) {
+function programnodeformMdMinWage(hours, wages) {
   $(hours + ', ' + wages).change(function() {
 
     var hourly_rate = $(wages).val() / $(hours).val();
@@ -361,7 +357,7 @@ function surveynodeformMdMinWage(hours, wages) {
 
 }
 
-function surveynodeformInitialMdMinWage(hours, wages) {
+function programnodeformInitialMdMinWage(hours, wages) {
 
 
     var hourly_rate = $(wages).val() / $(hours).val();
@@ -383,7 +379,7 @@ function surveynodeformInitialMdMinWage(hours, wages) {
 
 }
 
-function surveynodeformcheckAllActions () {
+function programnodeformcheckAllActions () {
 if ($('input[id="edit-field-indv-comp-partic-und"]').is(':checked') && $('input[id="edit-field-indv-cont-partic-und"]').is(':checked') && $('input[id="edit-field-grp-integ-partic-und"]').is(':checked') && $('input[id="edit-field-self-emp-partic-und"]').is(':checked') && $('input[id="edit-field-shl-partic-und"]').is(':checked') && $('input[id="edit-field-com-non-work-partic-und"]').is(':checked') && $('input[id="edit-field-fac-non-work-partic-und"]').is(':checked') ) { if(!$('#reasonnopartic').hasClass('activated')) { $('#reasonnopartic').addClass('activated');} } else { if($('#reasonnopartic').hasClass('activated')) { $('#reasonnopartic').removeClass('activated');}}
 }
 
@@ -407,11 +403,7 @@ function saveAndLeave(event) {
 
 }
 
-  function changeMoreButton() {
-// $('#field-contact-other-staff-add-more-wrapper input').val('Add a staff member');
-$('button.field-add-more-submit').val('Add a staff member');
-$('button.field-add-more-submit').text('Add a staff member');
-}
+
 function isNumber(evt) {
 
 if (evt.which != 9 && evt.which != 188 && evt.which != 37 && evt.which != 39 && evt.which != 190 && evt.which != 17 && evt.which != 86 && evt.which != 91 && evt.which != 67) {
@@ -505,7 +497,7 @@ function processNumVars(idstring, typeint) {
 
 function scanFieldsets () {
 
-//  alert(Drupal.settings.surveynodeform);
+//  alert(Drupal.settings.programnodeform);
 
   var origID = '';
   $('.vertical-tabs-panes > fieldset').each(function(i, el) {
@@ -561,7 +553,7 @@ $('div.checkGroup:visible').each(function(i, el) {
 
 }); */
 
-$('div.vertical-tabs-panes > fieldset.active div > input').each(function(i, elem) {
+$('div.vertical-tabs-panes > fieldset.active div > input.form-text').each(function(i, elem) {
 if( $(elem).is(":visible") && !$(elem).parent().hasClass('visDiv')) {
 $(elem).parent().addClass('visDiv');
  } else { if ( !$(elem).is(":visible") && $(elem).parent().hasClass('visDiv')) {
@@ -613,7 +605,7 @@ $('div.vertical-tabs-panes > fieldset.activeTwo .fieldReq').each(function(i, ele
 
 
 
-$('div.vertical-tabs-panes > fieldset.activeTwo .visDiv > input').each(function(i, elem) {
+$('div.vertical-tabs-panes > fieldset.activeTwo .visDiv > input.form-text').each(function(i, elem) {
 if(  !$(elem).val() && !$(elem).hasClass('notReq')) { countempty += 1;
 
 if (!$(elem).hasClass('redLine')){ $(elem).addClass('redLine');}
@@ -711,7 +703,7 @@ if (!$(this).hasClass('activeTwo')) {
 
   });
 
-$('div.vertical-tabs-panes > fieldset.activeTwo .visDiv > input').each(function(i, elem) {
+$('div.vertical-tabs-panes > fieldset.activeTwo .visDiv > input.form-text').each(function(i, elem) {
 if(  !$(elem).val() && !$(elem).hasClass('notReq')) {
 var label = "<li>" + $('label[for="'+ $(elem).attr('id')+'"]').text() + "</li>";
 // $(elem).addClass('redLine');

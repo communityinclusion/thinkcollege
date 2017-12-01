@@ -93,7 +93,7 @@ global $nid;
 global $theme;
 
 
-if($theme == 'statedata_boot') {
+if($theme == 'thinkcollege_boot') {
   $form['#prefix']= "<h3>Are you sure you are ready to submit your user data?</h3><p>You will no longer be able to edit individuals or data after you submit this form.  Please make sure the contact information below is correct, then select the submit button if you are ready. <a href=\"/provider/" . arg(1) . "/individuals\">Back to list of individuals</a></p>";
 drupal_add_css(drupal_get_path('module', 'programnodeform') . '/css/provideredit.css');
 $form['actions']['submit']['#submit'][] = 'programnodeform_node_form_redirect';
@@ -102,10 +102,7 @@ $form['actions']['submit']['#submit'][] = 'programnodeform_node_form_redirect';
 
   }
 
-  if($form_id == 'user_profile_form')
-  {
-    $form['#submit'][] = 'programnodeform_profile_form_submit';
-  }
+
 
 if ($form_id == 'individual_data_node_form') {
 $form['field_indv_comp_hrs']['und'][0]['value']['#attributes']['class'][]= 'checkHours';
@@ -126,7 +123,7 @@ if ($form_id == 'og_ui_delete_membership' ) {
   $form['#submit'][] = 'programnodeform_og_delete_form_redirect';
   }
 
-if ($form_id == 'individual_data_node_form' || $form_id == 'individual_node_form') {
+if ($form_id == 'program_record_node_form') {
 $url = drupal_get_query_parameters();
 if ($form_id == 'individual_node_form' && $url['p']) { $provid = $url['p'];} elseif ($form_id == 'individual_node_form' && !$url['p']) {
 $provid =  programnodeform_get_prov_id($nid,'individual');
@@ -171,37 +168,23 @@ if($form['nid']['#value']) {
 
 
 
-         $settings['mdmin'] = variable_get('programnodeform_mdminwage');
-                  $settings['mdhrlow'] = variable_get('programnodeform_mdhrlow');
-                           $settings['mdhrhigh'] = variable_get('programnodeform_mdhrhigh');
-                                    $settings['mdwagelow'] = variable_get('programnodeform_mdwagelow');
-                                             $settings['mdwagehigh'] = variable_get('programnodeform_mdwagehigh');
-                                                      $settings['mdselfearnhigh'] = variable_get('programnodeform_mdselfearnhigh');
-                                                               $settings['mdselfexpensehigh'] = variable_get('programnodeform_mdselfexpensehigh');
 
 
-if($form_id == 'individual_data_node_form'  && !$url['delete'] && !$url['provnum']) {  drupal_add_css(drupal_get_path('module', 'programnodeform') . '/css/surveyform.css'); }
-if($form_id == 'individual_data_node_form'  && $url['delete'] && $url['provnum']) { drupal_add_css(drupal_get_path('module', 'programnodeform') . '/css/deletereason.css');
-$form['#prefix']= "<h3>Explain your reason for deleting this individual in the form below and hit \"Next step,\" then finish deleting on the next page.</h3>";
- $form['actions']['submit']['#value'] = 'Next step';
- $form['actions']['submit']['#attributes'] = array('class' => array('btn','btn-primary'));
-}
+
+if($form_id == 'program_record_node_form'  && !$url['delete'] && !$url['provnum']) {  drupal_add_css(drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'); }
+
 
   if (!path_is_admin(current_path())) {
   //  drupal_add_js(array('programnodeform' => array('mdmin' => $mdminimum)), array('type' => 'setting'));
 
 //drupal_add_js(array('programnodeform' => array('mdmin' => $settings)), 'setting');
     drupal_add_js(drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'); }
-    if($form_id == 'individual_data_node_form' && !$url['delete'] && !$url['provnum']) { drupal_add_js(drupal_get_path('module', 'programnodeform') . '/js/surveyform.js'); }
-
-      if($form_id == 'individual_node_form') { drupal_add_js(drupal_get_path('module', 'programnodeform') . '/js/individualform.js'); }
-      drupal_add_js(array('Surveyconfig' => $settings), 'setting');
-    $field_name = 'field_YOURFIELD';
+    if($form_id == 'program_record_node_form' && !$url['delete'] && !$url['provnum']) { drupal_add_js(drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js'); }
 
 
- if (empty($form[$field_name])) {
-   return;
- }
+
+
+
 
  $field_language = $form[$field_name]['und'];
  $max_delta = $form[$field_name][$field_language]['#max_delta'];
@@ -210,126 +193,20 @@ $form['#prefix']= "<h3>Explain your reason for deleting this individual in the f
 }
 
 
-function programnodeform_admin() {
-  $form = array();
-
-  $form['programnodeform_mdminwage'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland minimum wage'),
-    '#default_value' => variable_get('programnodeform_mdminwage', 8.25),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Minimum wage in Maryland."),
-    '#required' => TRUE,
-  );
-  $form['programnodeform_mdhrlow'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland hour range, low point'),
-    '#default_value' => variable_get('programnodeform_mdhrlow', 1),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Maryland hour range, low point."),
-    '#required' => TRUE,
-  );
-
-  $form['programnodeform_mdhrhigh'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland hour range, high point'),
-    '#default_value' => variable_get('programnodeform_mdhrhigh', 80),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Maryland hour range, high point."),
-    '#required' => TRUE,
-  );
-
-  $form['programnodeform_mdwagelow'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland wage range, low point'),
-    '#default_value' => variable_get('programnodeform_mdwagelow', 1),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Maryland wage range, low point."),
-    '#required' => TRUE,
-  );
-
-  $form['programnodeform_mdwagehigh'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland wage range, high point'),
-    '#default_value' => variable_get('programnodeform_mdwagehigh', 1000),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Maryland wage range, high point."),
-    '#required' => TRUE,
-  );
-
-
-  $form['programnodeform_mdselfearnhigh'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland self-employment income, high point'),
-    '#default_value' => variable_get('programnodeform_mdselfearnhigh', 1000),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Maryland self-employment income, high point."),
-    '#required' => TRUE,
-  );
-
-
-  $form['programnodeform_mdselfexpensehigh'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maryland self-employment expenses, high point'),
-    '#default_value' => variable_get('programnodeform_mdselfexpensehigh', 1000),
-    '#size' => 5,
-    '#maxlength' => 6,
-    '#description' => t("Maryland self-employment expenses, high point."),
-    '#required' => TRUE,
-  );
-
-  return system_settings_form($form);
-}
 
 
 
 
-function programnodeform_node_form_redirect($form, &$form_state) {
-$destination = "";
-  $url = drupal_get_query_parameters();
 
-if ($url['p']) {
-  $destination = "provider/" . $url['p'] . "/individuals";
-
-} elseif($url['delete'] && $url['provnum']) {
-  $memberno = $url['delete'];
-  $provno = $url['provnum'];
-$destination = "group/node/$provno/admin/people/delete-membership/$memberno";
-
-}
-
-else {
-
-  $destination = "sdata_rp/submit_data/" . arg(1);
-}
-$form_state['redirect'] = $destination;
-}
-
+/*
 function programnodeform_theme_registry_alter(&$theme_registry) {
 	$theme_registry['print__node__surveyform']['template'] = 'print--node--idd-survey';
 	$theme_registry['print__node__surveyform']['path'] = drupal_get_path('module', 'programnodeform') .'/themes';
 }
 
 
- function programnodeform_theme($existing, $type, $theme, $path){
 
-	return array(
-		'programnodeform_form' => array(
-			'arguments' => array('form' => null),
-			'path' => drupal_get_path('module', 'programnodeform').'/themes/',
-			'template' => 'survey-node-form', //name of your template file, it can be anything
-			'render element' => 'form'
-		)
-	);
-}
-
-/* function programnodeform_preprocess_content_field(&$vars) {
+ function programnodeform_preprocess_content_field(&$vars) {
   if ($vars['field']['field_name'] == "field_inventory_price") {
     $vars['label'] = "Test Price";
   }
