@@ -102,9 +102,11 @@ function mailgun_libraries_info() {
     'download url' => 'https://9f67cbbd1116d8afb399-7760483f5d1e5f28c2d253278a2a5045.ssl.cf2.rackcdn.com/mailgun-php-1.7.2.zip',
     'path' => 'vendor',
     'version arguments' => array(
-      'file' => 'vendor/mailgun/mailgun-php/src/Mailgun/Constants/Constants.php',
+    #  'file' => 'vendor/mailgun/mailgun-php/src/Mailgun/Constants/Constants.php',
+    'file' => 'src/Mailgun/Constants/Api.php',
       // const SDK_VERSION = "1.7";
-      'pattern' => '/const SDK_VERSION = \"((\d+)\.(\d+))\";/',
+      # 'pattern' => '/const SDK_VERSION = \"((\d+)\.(\d+))\";/',
+      'pattern' => '/const SDK_VERSION = \'((\d+)\.(\d+))\';/',
     ),
     'files' => array(
       'php' => array('autoload.php'),
