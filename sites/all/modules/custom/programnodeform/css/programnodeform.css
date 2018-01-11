@@ -1,4 +1,4 @@
-div.form-item-field-surv-coord-contact-und-0-field-contact-survey-coordinator-und-0-country,div.form-item-field-contact-survey-coordinator-und-0-country, input[value="_none"], label[for*='none'] {display: none; }
+div.form-item-field-surv-coord-contact-und-0-field-contact-survey-coordinator-und-0-country,div.form-item-field-contact-survey-coordinator-und-0-country, input[value="_none"] {display: none; }
 #idd_popup { display: none; max-width: 30em; background-color: #fff; }
 #idd_popup #popupText { margin:8px; }
 .tabs-left,.tabs-left .vertical-tabs-panes.vertical-tabs-processed.tab-content { min-height: 700px; }
@@ -11,8 +11,9 @@ div.form-item-field-surv-coord-contact-und-0-field-contact-survey-coordinator-un
 .nav.vertical-tabs-list > li > a {font-weight: bold;}
 .nav.vertical-tabs-list > li > a.tabFilled { color: green; background-image: url('../img/green_check.png');  background-position: right 4px center; background-repeat: no-repeat; padding: 10px 22px 10px 10px;}
 .nav.vertical-tabs-list > li > a.inComplete { color: green; background-image: url('../img/incomplete.png');  background-position: right 4px center; background-repeat: no-repeat; padding: 10px 22px 10px 10px;}
-.nav.nav-tabs.vertical-tabs-list > li.vertical-tab-button > a {background-color: #c2d2de; }
-.nav.nav-tabs.vertical-tabs-list > li.vertical-tab-button.active > a {background-color: #fff; }
+.nav.nav-tabs.vertical-tabs-list > li.vertical-tab-button > a {background-color: #c2d2de; color: green; }
+.nav.nav-tabs.vertical-tabs-list > li.vertical-tab-button.active > a {background-color: #fff; color: green;}
+
 
 .field-group-div h3 {font-size: 1em; font-weight: bold;}
 .group-emp-day-svc-amount .form-type-checkboxes > label, .group-integ-fund-amt .form-type-checkboxes > label, .group-integ-other-agc-subgroup .form-type-checkboxes > label,.group-fac-amt .form-type-checkboxes > label, .group_fac_non_w_fund_amt .form-type-checkboxes > label,.group-oth-emp-day-fund-amt .form-type-checkboxes > label,.group-comm-fund-amt .form-type-checkboxes > label, .group-fac-other-entities .form-type-checkboxes > label { display: none; }
@@ -36,7 +37,7 @@ line-height: 1.2em; font-weight: bold}
   -moz-border-radius: 8px 8px 8px 8px;
   -webkit-border-radius: 8px 8px 8px 8px;
   border: 1px solid #333; margin-bottom: 9px;}
-#edit-actions {width: 220px; position: relative; margin-top: -180px; }
+#edit-actions {width: 220px; position: relative;}
 #edit-actions.form-actions.form-wrapper.form-group #edit-preview {display: none;}
 #currentYear { display: none;}
 .tabs--primary.nav.nav-tabs { display: none;}
@@ -83,6 +84,7 @@ div#reasonnopartic.activated {border: 1px solid red; padding: 18px 8px 8px; }
 .backLink { magin-bottom: 14px; }
 .node-type-individual-data .vertical-tabs-panes.vertical-tabs-processed.tab-content {overflow: visible; }
 .node-type-individual-data fieldset { display: block;}
-fieldset .form-type-textarea{ display: none;}
+/*fieldset .form-type-textarea{ display: none;} */
 fieldset.showQues .form-type-textarea { display: block; }
 input[type="checkbox"].form-checkbox { margin-right: 10px; }
+.text-summary-wrapper,a.link-edit-summary {display: none;}

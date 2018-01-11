@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 function programnodeform_permission() {
   return array(
     'programnodeform module' => array(
@@ -29,22 +28,6 @@ function programnodeform_query_alter($query) {
 }
 
 
-function programnodeform_get_prov_id($nid,$type) {
-  $query = new EntityFieldQuery();
-    $query->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', "$type")
-      ->entityCondition('entity_id', $nid, '=')
-      ->propertyCondition('status', NODE_PUBLISHED)
-      ->execute();
-      $result = $query->execute();
-      if (!isset($result['node'])) { return; }
-        else {
-        $datanode = array_keys($result['node']);
-    $mdind = node_load($datanode[0]);
-    $provid = $mdind->og_group_ref[LANGUAGE_NONE][0]['target_id'];
-    return $provid;
-  }
-}
 
 
 
@@ -58,27 +41,8 @@ function programnodeform_preprocess_node(&$vars){
 
 
 
-/*function programnodeform_og_delete_form_alter(&$form, &$form_state, $form_id) {
 
 
-
-  if ($form_id == 'og-ui-delete-membership' ) {
-
-      $form['actions']['submit']['#submit'][] = 'programnodeform_og_delete_form_redirect';
-    } else {
-      return;
-    }
-} */
-
-function programnodeform_og_delete_form_redirect($form, &$form_state) {
-  if (arg(1) == 'node' && is_numeric(arg(2)))   $provid = arg(2);
-
-
-
-  $destination = "provider/$provid/individuals";
-$form_state['redirect'] = $destination;
-
-}
 
 
 function programnodeform_profile_form_submit($form, &$form_state)
@@ -94,84 +58,22 @@ global $theme;
 
 
 if($theme == 'thinkcollege_boot') {
-  $form['#prefix']= "<h3>Are you sure you are ready to submit your user data?</h3><p>You will no longer be able to edit individuals or data after you submit this form.  Please make sure the contact information below is correct, then select the submit button if you are ready. <a href=\"/provider/" . arg(1) . "/individuals\">Back to list of individuals</a></p>";
-drupal_add_css(drupal_get_path('module', 'programnodeform') . '/css/provideredit.css');
-$form['actions']['submit']['#submit'][] = 'programnodeform_node_form_redirect';
+  $form['#prefix']= "";
+$form['actions']['submit']['#attributes']['class'][] = 'btn-success';
+// $form['actions']['submit']['#submit'][] = 'programnodeform_node_form_redirect';
 }
 
 
   }
 
 
-
-if ($form_id == 'individual_data_node_form') {
-$form['field_indv_comp_hrs']['und'][0]['value']['#attributes']['class'][]= 'checkHours';
-$form['field_indv_cont_hrs']['und'][0]['value']['#attributes']['class'][]= 'checkHours';
-$form['field_grp_integ_hrs']['und'][0]['value']['#attributes']['class'][]= 'checkHours';
-$form['field_shl_hrs']['und'][0]['value']['#attributes']['class'][]= 'checkHours';
-$form['field_indv_comp_gross_wages']['und'][0]['value']['#attributes']['class'][]= 'checkWages';
-$form['field_indv_cont_gross_wages']['und'][0]['value']['#attributes']['class'][]= 'checkWages';
-$form['field_grp_integ_gross_wages']['und'][0]['value']['#attributes']['class'][]= 'checkWages';
-$form['field_shl_gross_wages']['und'][0]['value']['#attributes']['class'][]= 'checkWages';
-}
-if ($form_id == 'og_ui_delete_membership' ) {
-  if (arg(1) == 'node' && is_numeric(arg(2)))   $provid = arg(2);
-  $form['actions']['cancel'] = array(
-    '#type'   => 'markup',
-    '#markup' => '<div class="form-cancel-button-wrapper">' . l(t("Cancel"), "/provider/$provid/individuals", array('attributes' => array('class' => array('form-cancel-button')))) . '</div>',
-  );
-  $form['#submit'][] = 'programnodeform_og_delete_form_redirect';
-  }
 
 if ($form_id == 'program_record_node_form') {
 $url = drupal_get_query_parameters();
-if ($form_id == 'individual_node_form' && $url['p']) { $provid = $url['p'];} elseif ($form_id == 'individual_node_form' && !$url['p']) {
-$provid =  programnodeform_get_prov_id($nid,'individual');
-}
-else
-{$provid =  programnodeform_get_prov_id($nid,'individual_data'); }
-parse_str(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_QUERY), $queries);
-$urlappend = '';
-$urlappend = $queries['items_per_page'] ? '?items_per_page=' . $queries['items_per_page'] : '';
-$urlappend .= $queries['page'] ? ( $queries['items_per_page'] ? '&page=' . $queries['page'] : '?page=' . $queries['page']) : '';
-$urlappend .= $queries['order'] ? '&order=' . $queries['order'] : '';
-$urlappend .= $queries['sort'] ? '&sort=' . $queries['sort'] : '';
-$form['#prefix']= "<h4>&lt;&lt; <a class=\"backLink\" href=\"/provider/$provid/individuals$urlappend\">Back to list of individuals</a> &lt;&lt;</h4>";
-$queries = array();
-parse_str(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_QUERY), $queries);
-// print_r($queries);
 
-  $url = drupal_get_query_parameters();
+$form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 
-if ($url['destination']) {
-  $destination = $url['destination'];
-  $form['#action'] = "?destination=$destination";
-
-}
-elseif($url['delete'] && $url['provnum']) {
-$form['actions']['submit']['#submit'][] = 'programnodeform_node_form_redirect';
-}
-else
-{
-
-if($form['nid']['#value']) {
-// Form stays in edit mode on submit
-           //$form['actions']['submit']['#submit'][] = '_redirect_to_edit';
-           $form['#action'] = '?destination=node/' . $form['nid']['#value'] . '/edit';
-         } elseif (!$form['nid']['#value'] && $form_id == 'individual_node_form') {
-            $form['actions']['submit']['#submit'][] = 'programnodeform_node_form_redirect';
-
-         }
-
-         }
-
-
-
-
-
-
-
-if($form_id == 'program_record_node_form'  && !$url['delete'] && !$url['provnum']) {  drupal_add_css(drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'); }
+if($form_id == 'program_record_node_form') { $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'; }
 
 
   if (!path_is_admin(current_path())) {
@@ -179,7 +81,7 @@ if($form_id == 'program_record_node_form'  && !$url['delete'] && !$url['provnum'
 
 //drupal_add_js(array('programnodeform' => array('mdmin' => $settings)), 'setting');
     drupal_add_js(drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'); }
-    if($form_id == 'program_record_node_form' && !$url['delete'] && !$url['provnum']) { drupal_add_js(drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js'); }
+    if($form_id == 'program_record_node_form') {$form['#attached']['js'][]= drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js'; }
 
 
 
@@ -189,25 +91,6 @@ if($form_id == 'program_record_node_form'  && !$url['delete'] && !$url['provnum'
  $field_language = $form[$field_name]['und'];
  $max_delta = $form[$field_name][$field_language]['#max_delta'];
  unset($form[$field_name][$field_language][$max_delta]);
+
 }
 }
-
-
-
-
-
-
-
-/*
-function programnodeform_theme_registry_alter(&$theme_registry) {
-	$theme_registry['print__node__surveyform']['template'] = 'print--node--idd-survey';
-	$theme_registry['print__node__surveyform']['path'] = drupal_get_path('module', 'programnodeform') .'/themes';
-}
-
-
-
- function programnodeform_preprocess_content_field(&$vars) {
-  if ($vars['field']['field_name'] == "field_inventory_price") {
-    $vars['label'] = "Test Price";
-  }
-} */

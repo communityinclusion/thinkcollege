@@ -7,24 +7,18 @@
 
  Drupal.behaviors.startScan = {
      attach: function (context, settings) {
+      if(!$('.saveLeave').length) $('#program-record-node-form').before('<p><strong>Be sure to <a href=\"#\" class=\"saveLeave btn btn-success form-submit\"><span class=\"icon glyphicon glyphicon-ok\" aria-hidden=\"true\"></span> SAVE</a> this form before leaving this page!</strong></p>');
 $('ul.vertical-tabs-list li a').addClass('inComplete');
    $( document ).one('ready',scanFieldsets);
-   $(document).one('ready',programnodeformcheckAllActions);
-   $('th').text('Order').hide();
-   if (!$('#edit-group_indv_comp p.nextSec').length)$('#edit-group_indv_comp').append('<p class="nextSec"><a class="openTab" href="#edit-group_indv_cont">>> Next: Individual contracted job >></a></p>');
-   if (!$('#edit-group_indv_cont p.nextSec').length)$('#edit-group_indv_cont').append('<p class="nextSec"><a class="openTab" href="#edit-group_grp_integ">>> Next: Group integrated job >></a></p>');
-   if (!$('#edit-group_grp_integ p.nextSec').length) $('#edit-group_grp_integ').append('<p class="nextSec"><a class="openTab" href="#edit-group_self_emp">>> Next: Self employment >></a></p>');
-    if (!$('#edit-group_self_emp p.nextSec').length) $('#edit-group_self_emp').append('<p class="nextSec"><a class="openTab" href="#edit-group_shl">>> Next: Facility based/sheltered work >></a></p>');
-  if (!$('#edit-group_shl p.nextSec').length) $('#edit-group_shl').append('<p class="nextSec"><a class="openTab" href="#edit-group_com_non_work">>> Next: Community based non work >></a></p>');
-  /* if (!$('#editInstruc').length)  $('ul.nav.nav-tabs.vertical-tabs-list').append('<p id="editInstruc">Please fill in all categories for the individual’s data to appear as complete.<br />For categories the individual participated in, please enter additional information, such as hours and wages, where asked.<br />For categories the individual did not participate in, please check in the appropriate box (Did not participate in this activity) to confirm this information. </p>'); */
 
-    if (!$('#edit-group_com_non_work p.nextSec').length) $('#edit-group_com_non_work').append('<p class="nextSec"><a class="openTab" href="#edit-group_fac_non_work">>> Next: Facility based non work >></a></p>');
+   $('th').text('Order').hide();
+
 
 $('fieldset div.form-type-textarea .form-textarea').each(function(i, elem) {
   if($(elem).val() && !$(elem).closest('fieldset').hasClass('showQues')) { $(elem).closest('fieldset').addClass('showQues'); }
 });
 
- if(!$('#saveWarn').length ) $('#edit-submit').after('<p id="saveWarn">Be sure to Save before exiting this page or you will lose your work.</p><a id="logOutbut" href="/user/logout">Log out</a>');
+ if(!$('#saveWarn').length ) $('#edit-submit').after('<p id="saveWarn">&nbsp</p>');
 /*$(".vertical-tabs-list").attr('id','save_target');
 $(window).scroll(function(){
     $("#edit-actions").css("top", Math.max(20, 510 - $(this).scrollTop()));
@@ -40,55 +34,12 @@ curyearText = $('#currentYear').text();
 
 $('a.saveLeave').bind("click tap", saveAndLeave);
 
-$('fieldset').each(function(i, elem) {
-  var fieldID = "#" + $(elem).prop('id');
-var hours1 = $(fieldID + ' .checkHours').prop('id');
-var wages1 =  $(fieldID + ' .checkWages').prop('id');
-var hours = "#" + hours1;
-var wages = "#" + wages1;
-
-
-});
 
  }
 
  }
 
- Drupal.behaviors.clearHidden = {
-     attach: function (context, settings) {
- $(".form-type-checkbox input").change(function() {
-   if($(this).is(':checked')) {var fieldID =$(this).closest('fieldset').prop('id');
-  if($('#' + fieldID).hasClass('showQues'))  $('#' + fieldID).removeClass('showQues');
-   $('#' + fieldID + ' input').each(function(i, el) {
 
-         $(el).val("");
-
-   });
-
-   $('#' + fieldID + ' select').each(function(i, el) {
-
-         $(el).val("");
-
-   });
-   $('#' + fieldID + ' .form-textarea').each(function(i, el) {
-
-         $(el).val("");
-
-   });
-
-  }
-
- });
-
-
-
-
-
-
-
-
-     }
-   }
 
    Drupal.behaviors.scanVertTab = {
        attach: function (context, settings) {
@@ -182,8 +133,20 @@ Drupal.behaviors.programnodeformMakeActive = {
 Drupal.behaviors.programnodeformNotReq = {
 
   attach: function (context, settings) {
-$('#edit-field-contact-survey-coordinator-und-0-premise').addClass('notReq');
-
+$('#edit-field-address-und-0-premise').addClass('notReq');
+$('#edit-field-prog-addl-scholarships-und-0-value').addClass('notReq');
+$('#edit-field-prog-scholarship-link-und-0-title').addClass('notReq');
+$('#edit-field-prog-scholarship-link-und-0-url').addClass('notReq');
+$('#edit-field-prog-scholarship-link-und-1-title').addClass('notReq');
+$('#edit-field-prog-scholarship-link-und-1-url').addClass('notReq');
+$('#edit-field-prog-scholarship-link-und-2-title').addClass('notReq');
+$('#edit-field-prog-scholarship-link-und-2-url').addClass('notReq');
+$('#edit-field-prog-program-website-und-0-url').addClass('notReq');
+$('#edit-field-prog-summer-info-link-und-0-title').addClass('notReq');
+$('#edit-field-prog-summer-info-link-und-0-url').addClass('notReq');
+$('#edit-field-prog-admiss-link-und-0-url').addClass('notReq');
+$('#edit-field-prog-more-course-detail-und-0-value').addClass('notReq');
+$('#edit-field-prog-vocational-credential-und-0-value').addClass('notReq');
 }
 };
 Drupal.behaviors.programnodeformIsReq = {
@@ -267,12 +230,7 @@ Drupal.behaviors.programnodeformMdComNonWk = {
 
  }
 };
-Drupal.behaviors.programnodeformNoParticAll = {
-  attach: function (context, settings) {
 
-$('.form-type-checkbox input').bind('click focus', programnodeformcheckAllActions);
-  }
-};
 
 /**
  * Group integrated job - if gross wages / hours < $8.25, then show minimum wage
@@ -379,9 +337,7 @@ function programnodeformInitialMdMinWage(hours, wages) {
 
 }
 
-function programnodeformcheckAllActions () {
-if ($('input[id="edit-field-indv-comp-partic-und"]').is(':checked') && $('input[id="edit-field-indv-cont-partic-und"]').is(':checked') && $('input[id="edit-field-grp-integ-partic-und"]').is(':checked') && $('input[id="edit-field-self-emp-partic-und"]').is(':checked') && $('input[id="edit-field-shl-partic-und"]').is(':checked') && $('input[id="edit-field-com-non-work-partic-und"]').is(':checked') && $('input[id="edit-field-fac-non-work-partic-und"]').is(':checked') ) { if(!$('#reasonnopartic').hasClass('activated')) { $('#reasonnopartic').addClass('activated');} } else { if($('#reasonnopartic').hasClass('activated')) { $('#reasonnopartic').removeClass('activated');}}
-}
+
 
 function removeCommas() {
 
