@@ -53,7 +53,7 @@ function programnodeform_profile_form_submit($form, &$form_state)
 function programnodeform_form_alter(&$form, &$form_state, $form_id) {
 global $nid;
   if (arg(0) == 'node' && is_numeric(arg(1)))   $nid = arg(1);
-  if($form_id == 'provider_node_form') {
+
 global $theme;
 
 
@@ -64,27 +64,34 @@ $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 }
 
 
-  }
+
 
 
 
 if ($form_id == 'program_record_node_form') {
-
-
-$form_state['no_cache'] = TRUE;
 $url = drupal_get_query_parameters();
 
 $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 
 if($form_id == 'program_record_node_form') { $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'; }
-
+if($form['nid']['#value'] && $theme == 'thinkcollege_boot') {
+// Form stays in edit mode on submit
+         //$form['actions']['submit']['#submit'][] = '_redirect_to_edit';
+         $form['#action'] = '?destination=node/' . $form['nid']['#value'] . '/edit';
+       }
 
   if (!path_is_admin(current_path())) {
+
   //  drupal_add_js(array('programnodeform' => array('mdmin' => $mdminimum)), array('type' => 'setting'));
 
 //drupal_add_js(array('programnodeform' => array('mdmin' => $settings)), 'setting');
     $form['#attached']['js'][]= drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'; }
     if($form_id == 'program_record_node_form') {$form['#attached']['js'][]= drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js'; }
+
+
+
+
+
 
  $field_language = $form[$field_name]['und'];
  $max_delta = $form[$field_name][$field_language]['#max_delta'];

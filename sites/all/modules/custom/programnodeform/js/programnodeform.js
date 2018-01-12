@@ -7,7 +7,7 @@
 
  Drupal.behaviors.startScan = {
      attach: function (context, settings) {
-      if(!$('.saveLeave').length) $('#program-record-node-form').before('<p><strong>Be sure to <a href=\"#\" class=\"saveLeave btn btn-success form-submit\"><span class=\"icon glyphicon glyphicon-ok\" aria-hidden=\"true\"></span> SAVE</a> this form before leaving this page!</strong></p>');
+      if(!$('.saveLeave').length) $('#program-record-node-form').before('<p><strong>Be sure to <a href=\"#\" class=\"saveLeave btn btn-success form-submit\"><span class=\"icon glyphicon glyphicon-ok\" aria-hidden=\"true\"></span> SAVE</a> this form after going through the tabs and entering your information!</strong></p>');
 $('ul.vertical-tabs-list li a').addClass('inComplete');
    $( document ).one('ready',scanFieldsets);
 
@@ -164,6 +164,8 @@ $('#edit-field-prog-admiss-link-und-0-url').addClass('notReq');
 $('#edit-field-prog-more-course-detail-und-0-value').addClass('notReq');
 $('#edit-field-prog-vocational-credential-und-0-value').addClass('notReq');
 $('#edit-field-prog-when-will-progr-start-und').addClass('notReq');
+$('#edit-field-prog-program-email-und-0-email').addClass('notReq');
+$('#edit-field-prog-other-credent-und-0-value').addClass('notReq');
 }
 };
 
