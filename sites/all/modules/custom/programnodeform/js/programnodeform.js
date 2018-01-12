@@ -27,9 +27,6 @@ $(".vertical-tabs-list").attr('id','save_target');
  $(window).scroll(function(){
     $(".admin-menu #edit-actions").css("top", Math.max(20, 1200 - $(this).scrollTop()));
 }); */
-$('.currentYear').each(function(i, elem) {
-curyearText = $('#currentYear').text();
-  if($('#currentYear').text().length > 0) {$(elem).text(curyearText); } else { $(elem).text(''); } });
   $('h1.page-header em').hide();
 
 $('a.saveLeave').bind("click tap", saveAndLeave);
@@ -149,19 +146,6 @@ $('#edit-field-prog-more-course-detail-und-0-value').addClass('notReq');
 $('#edit-field-prog-vocational-credential-und-0-value').addClass('notReq');
 }
 };
-Drupal.behaviors.programnodeformIsReq = {
-
-  attach: function (context, settings) {
-
-// if(!$('#edit-field-desc-response-ques-1-und').hasClass('fieldReq')) { $('#edit-field-desc-response-ques-1-und').addClass('fieldReq'); }
-if(!$('#edit-field-total-integ-y-n').hasClass('fieldReq')) { $('#edit-field-total-integ-y-n').addClass('fieldReq'); }
-// if(!$('#edit-field-integ-emp-svc-y-n-und').hasClass('fieldReq')) { $('#edit-field-integ-emp-svc-y-n-und').addClass('fieldReq'); }
-if(!$('#edit-field-fac-y-n').hasClass('fieldReq')) { $('#edit-field-fac-y-n').addClass('fieldReq'); }
-if(!$('#edit-field-comm-does-state-offer').hasClass('fieldReq')) { $('#edit-field-comm-does-state-offer').addClass('fieldReq'); }
-// if(!$('#edit-field-fac-bas-y-n-und').hasClass('fieldReq')) { $('#edit-field-fac-bas-y-n-und').addClass('fieldReq'); }
-if(!$('#edit-field-oth-emp-day-y-n').hasClass('fieldReq')) { $('#edit-field-oth-emp-day-y-n').addClass('fieldReq'); }
-}
-};
 
 Drupal.behaviors.programnodeformCheckEmptyFields = {
 
@@ -178,164 +162,6 @@ Drupal.behaviors.programnodeformCheckEmptyFields = {
 
 
 
-Drupal.behaviors.programnodeformStripCommas  = {
-  attach: function (context, settings) {
-$('#individual-data-node-form').submit(removeCommas);
-  }
-}
-Drupal.behaviors.programnodeformMdIndComJob = {
-  attach: function (context, settings) {
-    programnodeformMdMinWage('#edit-field-indv-comp-hrs-und-0-value', '#edit-field-indv-comp-gross-wages-und-0-value');
-  programnodeformMdHrRange('#edit-field-indv-comp-hrs-und-0-value');
-    programnodeformMdWageRange('#edit-field-indv-comp-gross-wages-und-0-value');
-  }
-};
-
-/**
- * Individual contracted job - if gross wages / hours < $8.25, then show minimum wage
- * stuff.
- */
-Drupal.behaviors.programnodeformMdIndConJob = {
-  attach: function (context, settings) {
-    programnodeformMdMinWage('#edit-field-indv-cont-hrs-und-0-value', '#edit-field-indv-cont-gross-wages-und-0-value');
-    programnodeformMdHrRange('#edit-field-indv-cont-hrs-und-0-value');
-      programnodeformMdWageRange('#edit-field-indv-cont-gross-wages-und-0-value');
-  }
-};
-Drupal.behaviors.programnodeformMdGrpIntegJob = {
-  attach: function (context, settings) {
-    programnodeformMdHrRange('#edit-field-grp-integ-hrs-und-0-value');
-      programnodeformMdWageRange('#edit-field-grp-integ-gross-wages-und-0-value');
-  }
-};
-Drupal.behaviors.programnodeformMdSelfEmp = {
-  attach: function (context, settings) {
-
-    programnodeformMdHrRange('#edit-field-self-emp-hrs-und-0-value');
-      programnodeformMdSelfEarningsRange('#edit-field-self-emp-gross-income-und-0-value');
-        programnodeformMdSelfExpenseRange('#edit-field-self-emp-gross-expens-und-0-value');
-  }
-};
-Drupal.behaviors.programnodeformMdFacBsedJob = {
-  attach: function (context, settings) {
-
-    programnodeformMdHrRange('#edit-field-shl-hrs-und-0-value');
-      programnodeformMdWageRange('#edit-field-shl-gross-wages-und-0-value');
-  }
-};
-Drupal.behaviors.programnodeformMdComNonWk = {
- attach: function (context, settings) {
-
-   programnodeformMdHrRange('#edit-field-com-non-wrk-hours-und-0-value','hours');
-
- }
-};
-
-
-/**
- * Group integrated job - if gross wages / hours < $8.25, then show minimum wage
- * stuff.
- */
-function programnodeformMdHrRange(rangeVal) {
-  $(rangeVal).change(function() {
-  var hasValues = false;
-  var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
-  if ($(rangeVal).val() && $(rangeVal).val() != '') {
-    hasValues = true; }
-
-
-if (checkVal > Drupal.settings.Surveyconfig.mdhrhigh) { alert('The hours value you entered looks too high. Is this the correct number?');}
-else if (checkVal < Drupal.settings.Surveyconfig.mdhrlow) { alert('The hours value you entered looks too low. Is this the correct number?');}
-
-
-});
-}
-function programnodeformMdWageRange(rangeVal) {
-  $(rangeVal).change(function() {
-  var hasValues = false;
-  var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
-  if ($(rangeVal).val() && $(rangeVal).val() != '') {
-    hasValues = true; }
-
-
-    if (checkVal > Drupal.settings.Surveyconfig.mdwagehigh) { alert('The wage value you entered looks too high. Is this the correct number?');}
-    else if (checkVal < Drupal.settings.Surveyconfig.mdwagelow) { alert('The wage value you entered looks too low. Is this the correct number?');}
-
-});
-}
-
-function programnodeformMdSelfEarningsRange(rangeVal) {
-  $(rangeVal).change(function() {
-  var hasValues = false;
-  var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
-  if ($(rangeVal).val() && $(rangeVal).val() != '') {
-    hasValues = true; }
-
-
-    if (checkVal > Drupal.settings.Surveyconfig.mdselfearnhigh) { alert('The self-employment earnings value you entered looks too high. Is this the correct number?');}
-    else if (checkVal < Drupal.settings.Surveyconfig.mdwagelow) { alert('The self-employment earnings value you entered looks too low. Is this the correct number?');}
-
-});
-}
-
-function programnodeformMdSelfExpenseRange(rangeVal) {
-  $(rangeVal).change(function() {
-  var hasValues = false;
-  var checkVal = parseFloat($(rangeVal).val().replace(/,/g, ''));
-  if ($(rangeVal).val() && $(rangeVal).val() != '') {
-    hasValues = true; }
-
-
-    if (checkVal > Drupal.settings.Surveyconfig.mdselfexpensehigh) { alert('The self-employment expenses value you entered looks too high. Is this the correct number?');}
-    else if (checkVal < Drupal.settings.Surveyconfig.mdwagelow) { alert('The self-employment expenses value you entered looks too low. Is this the correct number?');}
-
-});
-}
-
-
-function programnodeformMdMinWage(hours, wages) {
-  $(hours + ', ' + wages).change(function() {
-
-    var hourly_rate = $(wages).val() / $(hours).val();
-    var hasValues = false;
-    if (($(wages).val() != '') && ($(hours).val() != '')) {
-      hasValues = true;
-    }
-    if ((hourly_rate < Drupal.settings.Surveyconfig.mdmin) && (hasValues)) {
-       if(!$(wages).closest('fieldset').hasClass('showQues')) $(wages).closest('fieldset').addClass('showQues');
-    //  $(wages).val('');
-      alert('The hourly wage for this individual is less than the state minimum wage of $' + Drupal.settings.Surveyconfig.mdmin + '/hr.');
-    }
-    else {
-      if($(wages).closest('fieldset').hasClass('showQues')) $(wages).closest('fieldset').removeClass('showQues');
-
-    }
-  });
-
-
-}
-
-function programnodeformInitialMdMinWage(hours, wages) {
-
-
-    var hourly_rate = $(wages).val() / $(hours).val();
-    var hasValues = false;
-    if (($(wages).val() != '') && ($(hours).val() != '')) {
-      hasValues = true;
-    }
-    if ((hourly_rate < Drupal.settings.Surveyconfig.mdmin) && (hasValues)) {
-       if(!$(wages).closest('fieldset').hasClass('showQues')) $(wages).closest('fieldset').addClass('showQues');
-    //  $(wages).val('');
-
-    }
-    else {
-      if($(wages).closest('fieldset').hasClass('showQues')) $(wages).closest('fieldset').removeClass('showQues');
-
-    }
-
-
-
-}
 
 
 
