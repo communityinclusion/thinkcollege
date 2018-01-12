@@ -163,6 +163,7 @@ $('#edit-field-prog-summer-info-link-und-0-url').addClass('notReq');
 $('#edit-field-prog-admiss-link-und-0-url').addClass('notReq');
 $('#edit-field-prog-more-course-detail-und-0-value').addClass('notReq');
 $('#edit-field-prog-vocational-credential-und-0-value').addClass('notReq');
+$('#edit-field-prog-when-will-progr-start-und').addClass('notReq');
 }
 };
 
