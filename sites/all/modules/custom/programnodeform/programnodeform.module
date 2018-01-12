@@ -73,7 +73,9 @@ $url = drupal_get_query_parameters();
 
 $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 
-if($form_id == 'program_record_node_form') { $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'; }
+if($form_id == 'program_record_node_form') {
+$form_state['no_cache'] = TRUE;
+  $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'; }
 if($form['nid']['#value'] && $theme == 'thinkcollege_boot') {
 // Form stays in edit mode on submit
          //$form['actions']['submit']['#submit'][] = '_redirect_to_edit';
