@@ -14,9 +14,9 @@ function force_password_change_settings($form, &$form_state)
 	(
 		'#type' => 'checkbox',
 		'#title' => t('Force password change on first-time login'),
-		'#default_value' => variable_get('force_password_change_first_login_change', 0),
+		'#default_value' => variable_get('force_password_change_first_time_login_password_change', 0),
 	);
-	$form['force_password_change_login_or_init'] = array
+	$form['login_or_init'] = array
 	(
 		'#type' => 'radios',
 		'#title' => t('Check for pending password change'),
@@ -238,8 +238,8 @@ function force_password_change_settings_submit($form, &$form_state)
 	$selected_roles = array();
 	// First set some variable defaults
 	variable_set('force_password_change_change_password_url', $form_state['values']['change_password_url']);
-	variable_set('force_password_change_first_login_change', $form_state['values']['first_time_login_password_change']);
-	variable_set('force_password_change_login_or_init', $form_state['values']['force_password_change_login_or_init']);
+	variable_set('force_password_change_first_time_login_password_change', $form_state['values']['first_time_login_password_change']);
+	variable_set('force_password_change_login_or_init', $form_state['values']['login_or_init']);
 	$au = FALSE;
 	foreach($form_state['values']['roles'] as $rid)
 	{
@@ -301,7 +301,7 @@ function force_password_change_settings_submit($form, &$form_state)
 		}
 		$list .= '</ul>';
 		// Set a message informing the user of the roles that had a forced password change
-		if($form_state['values']['force_password_change_login_or_init'])
+		if($form_state['values']['login_or_init'])
 		{
 			drupal_set_message(t('Users in the following roles will be required to change their password on their next login: !list', array('!list' => $list)), 'status');
 		}
@@ -325,7 +325,9 @@ function force_password_change_settings_submit($form, &$form_state)
 		$multiplier = array(60 * 60, 60 * 60 * 24, 60 * 60 * 24 * 7, 60 * 60 * 24 * 365);
 		$time_period = $expiry['time_quantity'] * $multiplier[$expiry['time_period']];
 		// If the role already exists in the database, and the value has changed,
-		if(isset($form_state['values']['expiry_data'][$rid]) && $time_period != $form_state['values']['expiry_data'][$rid]['expiry'])
+		if(isset($form_state['values']['expiry_data'][$rid])
+		  && ($time_period != $form_state['values']['expiry_data'][$rid]['expiry']
+		  || $expiry['weight']!= $form_state['values']['expiry_data'][$rid]['weight']))
 		{
 			$update_query = db_update('force_password_change_expiry')
 				->fields(array('expiry' => $time_period, 'weight' => $expiry['weight']))
@@ -402,7 +404,7 @@ function force_password_change_list($rid)
 	$pending_query->orderByHeader($pending_header);
 
 	$pending_user_data = $pending_query->execute();
-	
+
 	// Next build the rows of the table, and the stats that will be included for each user shown
 	$rows = array();
 	$force_password_change_installation_date = variable_get('force_password_change_installation_date', 0);
@@ -470,7 +472,7 @@ function force_password_change_list($rid)
 		array('data' => t('Last Password Change'), 'field' => $alias . '.last_password_change'),
 	);
 	$nonpending_query->orderByHeader($nonpending_header);
-	
+
 	$nonpending_user_data = $nonpending_query->execute();
 
 	$rows = array();
@@ -513,8 +515,10 @@ function force_password_change_list($rid)
 	}
 	// Build the table containing the retrieved data
 	$variables['nonpending_users_table'] = theme('table', array('header' => $nonpending_header, 'rows' => $rows)) . theme('pager');
-	// Get the form allowing users to force all members of the role to change their password
-	$variables['force_password_change_form'] = drupal_render(drupal_get_form('force_password_change_single_role', $rid));
+
+    // Get the form allowing users to force all members of the role to change their password
+    $elements = drupal_get_form('force_password_change_single_role', $rid);
+    $variables['force_password_change_form'] = drupal_render($elements);
 
 	// Build the back button. Since this page can be accessed from two separate locations, the back button
 	// will depend on the page the user is coming from.
