@@ -69,6 +69,9 @@ $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 
 
 if ($form_id == 'program_record_node_form') {
+
+
+$form_state['no_cache'] = TRUE;
 $url = drupal_get_query_parameters();
 
 $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
@@ -80,13 +83,8 @@ if($form_id == 'program_record_node_form') { $form['#attached']['css'][]= drupal
   //  drupal_add_js(array('programnodeform' => array('mdmin' => $mdminimum)), array('type' => 'setting'));
 
 //drupal_add_js(array('programnodeform' => array('mdmin' => $settings)), 'setting');
-    drupal_add_js(drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'); }
+    $form['#attached']['js'][]= drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'; }
     if($form_id == 'program_record_node_form') {$form['#attached']['js'][]= drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js'; }
-
-
-
-
-
 
  $field_language = $form[$field_name]['und'];
  $max_delta = $form[$field_name][$field_language]['#max_delta'];

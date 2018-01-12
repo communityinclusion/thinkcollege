@@ -36,7 +36,11 @@ $('a.saveLeave').bind("click tap", saveAndLeave);
 
  }
 
-
+ Drupal.behaviors.surveynodeformStripCommas  = {
+   attach: function (context, settings) {
+ $('#program-record-node-form').submit(removeCommas);
+   }
+ }
 
    Drupal.behaviors.scanVertTab = {
        attach: function (context, settings) {
@@ -89,12 +93,18 @@ if(unsaved) {
    }
 
 
-  Drupal.behaviors.programnodeformEnforceNumeric = {
+  Drupal.behaviors.programnodeformDecEnforceNumeric = {
     attach: function (context, settings) {
 
-    $('.field-type-number-float input').keydown(isNumber);
+    $('.field-type-number-decimal input').keydown(isNumber);
+  }
 
+} ;
 
+    Drupal.behaviors.programnodeformIntEnforceNumeric = {
+      attach: function (context, settings) {
+
+      $('.field-type-number-integer input').keydown(isNumber);
     }
 
 } ;
@@ -108,7 +118,16 @@ $('.form-type-textfield input').keydown(checkText);
 Drupal.behaviors.programnodeformremoveIntWarn = {
   attach: function (context, settings) {
 
-  $('.field-type-number-float input').bind("blur",removeNumWarn);
+  $('.field-type-number-integer input').bind("blur",removeNumWarn);
+
+  }
+
+} ;
+
+Drupal.behaviors.programnodeformremoveDecWarn = {
+  attach: function (context, settings) {
+
+  $('.field-type-number-decimal input').bind("blur",removeNumWarn);
 
   }
 
@@ -167,11 +186,19 @@ Drupal.behaviors.programnodeformCheckEmptyFields = {
 
 function removeCommas() {
 
-  $('.field-type-number-float input').each(function(i, el) {
+  $('.field-type-number-decimal input').each(function(i, el) {
     if($(el).val() != "" ) {
         $(el).val($(el).val().replace(/,/g, ''));
     }
   });
+
+
+
+    $('.field-type-number-integer input').each(function(i, el) {
+      if($(el).val() != "" ) {
+          $(el).val($(el).val().replace(/,/g, ''));
+      }
+    });
 
 }
 
@@ -450,7 +477,17 @@ if (!$(elem).hasClass('redLine')){ $(elem).addClass('redLine');}
 });
 
 if (countempty < 1) { if (!$(currentTab).hasClass('tabFilled')) {$(currentTab).addClass('tabFilled');}  if ($(currentTab).hasClass('inComplete')) {$(currentTab).removeClass('inComplete');}} else { if ($(currentTab).hasClass('tabFilled')) {$(currentTab).removeClass('tabFilled');} if (!$(currentTab).hasClass('inComplete')) {$(currentTab).addClass('inComplete');} }
-$('.field-type-number-float input').each(function(i, el) {
+$('.field-type-number-decimal input').each(function(i, el) {
+  if($(el).val().length ) {
+   commafield = $(el).val().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
+$(el).val(commafield);
+
+  }
+});
+
+
+$('.field-type-number-integer input').each(function(i, el) {
   if($(el).val().length ) {
    commafield = $(el).val().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
