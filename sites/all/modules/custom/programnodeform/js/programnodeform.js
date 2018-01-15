@@ -188,7 +188,7 @@ Drupal.behaviors.programnodeformCheckEmptyFields = {
 
 
 function removeCommas() {
-
+if(!$('#edit-title').val() || $('#edit-title').val() == '') $('#edit-title').val("Program name here") ;
   $('.field-type-number-decimal input').each(function(i, el) {
     if($(el).val() != "" ) {
         $(el).val($(el).val().replace(/,/g, ''));
