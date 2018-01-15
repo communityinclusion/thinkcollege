@@ -1,1 +1,1 @@
-.field-type-text-long .panel-body {display: none; }
+.field-type-text-long .panel-body,.field-type-text-with-summary .panel-body {display: none; }
