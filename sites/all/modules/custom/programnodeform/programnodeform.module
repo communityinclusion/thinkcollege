@@ -75,20 +75,26 @@ $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 
 if($form_id == 'program_record_node_form') {
 $form_state['no_cache'] = TRUE;
-  $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css'; }
-if($form['nid']['#value'] && $theme == 'thinkcollege_boot') {
+  }
+  if($theme == 'thinkcollege_boot'){
+    $form['#attached']['js'][]= drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'; }
+    if($form_id == 'program_record_node_form' && $theme == 'thinkcollege_boot') {$form['#attached']['js'][]= drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js';
+    $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css';
+    $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/progrecordfront.css';
+if($form['nid']['#value']) {
+
 // Form stays in edit mode on submit
          //$form['actions']['submit']['#submit'][] = '_redirect_to_edit';
          $form['#action'] = '?destination=node/' . $form['nid']['#value'] . '/edit';
        }
+     }
 
   if (!path_is_admin(current_path())) {
 
   //  drupal_add_js(array('programnodeform' => array('mdmin' => $mdminimum)), array('type' => 'setting'));
 
 //drupal_add_js(array('programnodeform' => array('mdmin' => $settings)), 'setting');
-    $form['#attached']['js'][]= drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'; }
-    if($form_id == 'program_record_node_form') {$form['#attached']['js'][]= drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js'; }
+   }
 
 
 
