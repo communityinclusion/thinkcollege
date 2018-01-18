@@ -166,6 +166,9 @@ $('#edit-field-prog-vocational-credential-und-0-value').addClass('notReq');
 $('#edit-field-prog-when-will-progr-start-und').addClass('notReq');
 $('#edit-field-prog-program-email-und-0-email').addClass('notReq');
 $('#edit-field-prog-other-credent-und-0-value').addClass('notReq');
+$('#edit-field-prog-school-dist-und-0-value').addClass('notReq');
+$('#edit-field-prog-school-dist-contact-und-0-value').addClass('notReq');
+$('#edit-field-prog-school-dist-contact-und-0-value').addClass('notReq');
 }
 };
 
