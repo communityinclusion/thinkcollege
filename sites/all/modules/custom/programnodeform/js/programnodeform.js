@@ -168,7 +168,7 @@ $('#edit-field-prog-program-email-und-0-email').addClass('notReq');
 $('#edit-field-prog-other-credent-und-0-value').addClass('notReq');
 $('#edit-field-prog-school-dist-und-0-value').addClass('notReq');
 $('#edit-field-prog-school-dist-contact-und-0-value').addClass('notReq');
-$('#edit-field-prog-school-dist-contact-und-0-value').addClass('notReq');
+$('#edit-field-prog-schl-dist-email-und-0-email').addClass('notReq');
 }
 };
 
