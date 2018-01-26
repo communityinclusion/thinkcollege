@@ -74,7 +74,7 @@ $url = drupal_get_query_parameters();
 $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
 
 if($form_id == 'program_record_node_form') {
-$form_state['no_cache'] = TRUE;
+// $form_state['no_cache'] = TRUE;
   }
   if($theme == 'thinkcollege_boot'){
     $form['#attached']['js'][]= drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'; }
