@@ -85,10 +85,17 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
            * that's not a text_multiple tm_* in Solr terms.
            */
           $info['node']['bundles'][$bundle_type]['properties']['tc_state_province'] = array(
+              'type' => 'text',
+              'label' => 'TC:State/Province',
+              'sanitized' => TRUE,
+              'getter callback' => 'tc_program_record_properties_property_state_province',
+          );
+          /* State/province as full text so a search of "New York" also finds "NY" */
+          $info['node']['bundles'][$bundle_type]['properties']['tc_state_province_fulltext'] = array(
             'type' => 'text',
-            'label' => 'TC:State/Province',
+            'label' => 'TC:State/Province FullText',
             'sanitized' => TRUE,
-            'getter callback' => 'tc_program_record_properties_property_state_province',
+            'getter callback' => 'tc_program_record_properties_property_state_province_ft',
           );
           /*
            * State/Province for Solr facet produces one for full name and
@@ -416,6 +423,28 @@ function tc_program_record_properties_property_state_province($item) {
   }
   // will be N/A
   return "Unknown";
+}
+
+/**
+ * What is the state/province in full text search.
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ * WE want state coe, and state name as a fulltext search so "NY" find "New York"
+ * and vise versa.
+ *
+ * @param $item
+ * @return string
+ */
+function tc_program_record_properties_property_state_province_ft($item) {
+
+    if (array_key_exists('field_address', $item)) {
+        if (array_key_exists(LANGUAGE_NONE, $item->field_address)) {
+            $code = $item->field_address[LANGUAGE_NONE][0]['administrative_area'];
+            return  $code ." " . tc_program_record_properties_get_state_province_name($code);
+        }
+    }
+    // will be N/A
+    return "Unknown";
 }
 
 /**
