@@ -632,6 +632,22 @@ li.shaded {
 	padding-bottom:20px;
 }
 
+
+.node-article .field-type-image img {
+  float:left;
+	padding-right:20px;
+	padding-bottom:20px;}
+
+/* Tags styles */
+
+div.field-name-field-tags div.field-items div:after {
+  content: ", ";
+}
+
+div.field-name-field-tags div.field-items div:last-child:after {
+  content: "";
+}
+
 /* Back to top button */
 #backtotop {
 	background:#F7F7F7;
