@@ -640,13 +640,26 @@ li.shaded {
 
 /* Tags styles */
 
+
+.field-name-field-tags {margin-top:15px;}
+
+
+.field-name-field-tags .field-item {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+
 div.field-name-field-tags div.field-items div:after {
-  content: ", ";
+  content: ",";
 }
 
 div.field-name-field-tags div.field-items div:last-child:after {
   content: "";
 }
+
+
+
 
 /* Back to top button */
 #backtotop {
