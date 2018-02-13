@@ -127,7 +127,7 @@ function landing_pages_default_page_manager_pages() {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/college-search" title="Search for college programs from around the country for students with intellectual disabilities!" type="button"><i aria-hidden="true" class="fa fa-search">&nbsp;</i> College Search</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resource-search?sort=tc_alpha_sortable_title&amp;order=asc" title="Searchable database of resources on topics related to postsecondary education for people with intellectual disability" type="button"> <i aria-hidden="true" class="fa fa-book">&nbsp;</i>Resource Library</a> <a class="btn btn-block btn-huge  btn-danger" data-toggle="tooltip" data-placement="left" title="Find curated research and resources on specific topics related to postsecondary education for students with intellectual disability." href="/resources/innovation-exchange" type="button"> <i aria-hidden="true" class="fa fa-exchange">&nbsp;</i>Innovation Exchange</a> <a class="btn btn-danger btn-huge btn-block" data-placement="left" data-toggle="tooltip" href="/resources/whats-happening-in-your-state" title="Learn about activities in your state related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-map-o">&nbsp;</i>What\'s Happening in your State</a></p>
+    'body' => '<p><a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/college-search" title="Search for college programs from around the country for students with intellectual disabilities!" type="button"><i aria-hidden="true" class="fa fa-search">&nbsp;</i> College Search</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="https://thinkcollege.net/resource-search?sort=field_resourc_publication_date&amp;order=desc" title="Searchable database of resources on topics related to postsecondary education for people with intellectual disability" type="button"> <i aria-hidden="true" class="fa fa-book">&nbsp;</i>Resource Library</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resources/innovation-exchange" title="Find curated research and resources on specific topics related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-exchange">&nbsp;</i>Innovation Exchange</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resources/whats-happening-in-your-state" title="Learn about activities in your state related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-map-o">&nbsp;</i>What\'s Happening in your State</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -152,7 +152,9 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array();
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_id' => '',
     'css_class' => 'home-featurednews',
@@ -194,7 +196,9 @@ function landing_pages_default_page_manager_pages() {
     'substitute' => TRUE,
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_id' => '',
     'css_class' => 'box-blue',
@@ -214,7 +218,9 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array();
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -560,6 +566,34 @@ text.hawaii {font-size: 14px;}
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
+  $pane->pid = 'new-ca907e0e-ce18-439e-bca1-6eea1ba4052a';
+  $pane->panel = 'row1left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'AddThis',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">&nbsp;</div>
+
+<p>&nbsp;</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'ca907e0e-ce18-439e-bca1-6eea1ba4052a';
+  $display->content['new-ca907e0e-ce18-439e-bca1-6eea1ba4052a'] = $pane;
+  $display->panels['row1left'][0] = 'new-ca907e0e-ce18-439e-bca1-6eea1ba4052a';
+  $pane = new stdClass();
   $pane->pid = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $pane->panel = 'row1left';
   $pane->type = 'custom';
@@ -590,11 +624,11 @@ text.hawaii {font-size: 14px;}
     'css_class' => 'box infolist',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $display->content['new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba'] = $pane;
-  $display->panels['row1left'][0] = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
+  $display->panels['row1left'][1] = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $pane = new stdClass();
   $pane->pid = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
   $pane->panel = 'row1left';
@@ -614,11 +648,11 @@ text.hawaii {font-size: 14px;}
     'css_class' => 'ie-featuredresources box',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = 'df9723c1-4cb3-42c9-86b4-1ab14aa00454';
   $display->content['new-df9723c1-4cb3-42c9-86b4-1ab14aa00454'] = $pane;
-  $display->panels['row1left'][1] = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
+  $display->panels['row1left'][2] = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
   $pane = new stdClass();
   $pane->pid = 'new-118378e4-e847-433e-a99e-290000a9ae69';
   $pane->panel = 'row1left';
@@ -650,11 +684,11 @@ text.hawaii {font-size: 14px;}
     'css_class' => 'box external-links-list',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '118378e4-e847-433e-a99e-290000a9ae69';
   $display->content['new-118378e4-e847-433e-a99e-290000a9ae69'] = $pane;
-  $display->panels['row1left'][2] = 'new-118378e4-e847-433e-a99e-290000a9ae69';
+  $display->panels['row1left'][3] = 'new-118378e4-e847-433e-a99e-290000a9ae69';
   $pane = new stdClass();
   $pane->pid = 'new-db736baa-303b-4072-8aed-6a8a53fdfb7c';
   $pane->panel = 'row1left';
@@ -682,11 +716,11 @@ text.hawaii {font-size: 14px;}
     'css_class' => 'box',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = 'db736baa-303b-4072-8aed-6a8a53fdfb7c';
   $display->content['new-db736baa-303b-4072-8aed-6a8a53fdfb7c'] = $pane;
-  $display->panels['row1left'][3] = 'new-db736baa-303b-4072-8aed-6a8a53fdfb7c';
+  $display->panels['row1left'][4] = 'new-db736baa-303b-4072-8aed-6a8a53fdfb7c';
   $pane = new stdClass();
   $pane->pid = 'new-f1e8f193-c360-4db6-b5be-51326ac4cf97';
   $pane->panel = 'row1right';

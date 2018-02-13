@@ -204,7 +204,7 @@ function landing_pages_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Featured';
+  $handler->display->display_options['title'] = 'Think College News';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -893,7 +893,7 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'View more link';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/resource-search?f%5B0%5D=field_resourc_topics%3A130&f%5B1%5D=field_resourc_topics%3A1484&f%5B2%5D=field_resourc_topics%3A135&f%5B3%5D=field_resourc_topics%3A1643">View more</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="https://thinkcollege.net/resource-search?f%5B0%5D=field_resourc_topics%3A140">View more</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Date Received */
@@ -961,6 +961,266 @@ function landing_pages_views_default_views() {
     'resource' => 'resource',
   );
   $handler->display->display_options['pane_title'] = 'Inno Exchange - Featured Resources (Program Development)';
+  $handler->display->display_options['pane_category']['name'] = 'ThinkCollege';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_feature_in_section_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:search_api_autocomplete_search.enabled',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Feature in Section',
+    ),
+  );
+
+  /* Display: Vocational Rehab Affinity Group Resources pane */
+  $handler = $view->new_display('panel_pane', 'Vocational Rehab Affinity Group Resources pane', 'panel_pane_9');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'content-pane';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date Received */
+  $handler->display->display_options['fields']['field_resourc_date_received']['id'] = 'field_resourc_date_received';
+  $handler->display->display_options['fields']['field_resourc_date_received']['table'] = 'field_data_field_resourc_date_received';
+  $handler->display->display_options['fields']['field_resourc_date_received']['field'] = 'field_resourc_date_received';
+  $handler->display->display_options['fields']['field_resourc_date_received']['label'] = '';
+  $handler->display->display_options['fields']['field_resourc_date_received']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resourc_date_received']['type'] = 'field_date_new';
+  $handler->display->display_options['fields']['field_resourc_date_received']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Content: Media Types */
+  $handler->display->display_options['fields']['field_resourc_media_types']['id'] = 'field_resourc_media_types';
+  $handler->display->display_options['fields']['field_resourc_media_types']['table'] = 'field_data_field_resourc_media_types';
+  $handler->display->display_options['fields']['field_resourc_media_types']['field'] = 'field_resourc_media_types';
+  $handler->display->display_options['fields']['field_resourc_media_types']['label'] = '';
+  $handler->display->display_options['fields']['field_resourc_media_types']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resourc_media_types']['type'] = 'field_media_type_icon';
+  $handler->display->display_options['fields']['field_resourc_media_types']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_class'] = 'title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Feature in Section (field_feature_in_section) */
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['id'] = 'field_feature_in_section_tid';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['table'] = 'field_data_field_feature_in_section';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['field'] = 'field_feature_in_section_tid';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate_options']['vocabularies'] = array(
+    'feature_in_section' => 'feature_in_section',
+  );
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'resource' => 'resource',
+  );
+  $handler->display->display_options['pane_title'] = 'Inno Exchange - Featured Resources (Families)';
+  $handler->display->display_options['pane_category']['name'] = 'ThinkCollege';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_feature_in_section_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:search_api_autocomplete_search.enabled',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Feature in Section',
+    ),
+  );
+
+  /* Display: Family Resources Page pane */
+  $handler = $view->new_display('panel_pane', 'Family Resources Page pane', 'panel_pane_10');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'content-pane';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'View more link';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/audience/family">View more</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date Received */
+  $handler->display->display_options['fields']['field_resourc_date_received']['id'] = 'field_resourc_date_received';
+  $handler->display->display_options['fields']['field_resourc_date_received']['table'] = 'field_data_field_resourc_date_received';
+  $handler->display->display_options['fields']['field_resourc_date_received']['field'] = 'field_resourc_date_received';
+  $handler->display->display_options['fields']['field_resourc_date_received']['label'] = '';
+  $handler->display->display_options['fields']['field_resourc_date_received']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resourc_date_received']['type'] = 'field_date_new';
+  $handler->display->display_options['fields']['field_resourc_date_received']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Content: Media Types */
+  $handler->display->display_options['fields']['field_resourc_media_types']['id'] = 'field_resourc_media_types';
+  $handler->display->display_options['fields']['field_resourc_media_types']['table'] = 'field_data_field_resourc_media_types';
+  $handler->display->display_options['fields']['field_resourc_media_types']['field'] = 'field_resourc_media_types';
+  $handler->display->display_options['fields']['field_resourc_media_types']['label'] = '';
+  $handler->display->display_options['fields']['field_resourc_media_types']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resourc_media_types']['type'] = 'field_media_type_icon';
+  $handler->display->display_options['fields']['field_resourc_media_types']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_class'] = 'title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Feature in Section (field_feature_in_section) */
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['id'] = 'field_feature_in_section_tid';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['table'] = 'field_data_field_feature_in_section';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['field'] = 'field_feature_in_section_tid';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate_options']['vocabularies'] = array(
+    'feature_in_section' => 'feature_in_section',
+  );
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'resource' => 'resource',
+  );
+  $handler->display->display_options['pane_title'] = 'Family Resources Page - Featured Resources';
+  $handler->display->display_options['pane_category']['name'] = 'ThinkCollege';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'field_feature_in_section_tid' => array(
+      'type' => 'user',
+      'context' => 'entity:search_api_autocomplete_search.enabled',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Feature in Section',
+    ),
+  );
+
+  /* Display: Family Page content pane */
+  $handler = $view->new_display('panel_pane', 'Family Page content pane', 'panel_pane_11');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Key Resources for Families';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'content-pane';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<!-- <a href="/general-site-search?f%5B0%5D=type%3Aarticle&sort=created&order=desc" class="view-all">View all</a> -->';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Feature in Section (field_feature_in_section) */
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['id'] = 'field_feature_in_section_tid';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['table'] = 'field_data_field_feature_in_section';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['field'] = 'field_feature_in_section_tid';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate_options']['vocabularies'] = array(
+    'feature_in_section' => 'feature_in_section',
+  );
+  $handler->display->display_options['arguments']['field_feature_in_section_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+    'page' => 'page',
+    'resource' => 'resource',
+  );
+  $handler->display->display_options['pane_title'] = 'FamilyPage - News';
   $handler->display->display_options['pane_category']['name'] = 'ThinkCollege';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
