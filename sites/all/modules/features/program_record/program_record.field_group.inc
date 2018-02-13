@@ -53,7 +53,7 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Academics',
     'weight' => '7',
@@ -66,15 +66,15 @@ function program_record_field_group_info() {
       5 => 'field_name_of_credential_degree_',
       6 => 'field_please_select_any_all_of_t',
       7 => 'field_prog_perc_acad_time',
+      8 => 'field_prog_other_credent',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-prog-acad field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -88,7 +88,7 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Acceptance, Retention and Completion Rates',
     'weight' => '5',
@@ -101,14 +101,13 @@ function program_record_field_group_info() {
       5 => 'field_prog_know_how_many',
       6 => 'field_prog_explain_nums',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-prog-accep-reten-complet field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -183,25 +182,33 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
-    'label' => 'Affiliates',
+    'label' => 'Program Info. part 2',
     'weight' => '3',
     'children' => array(
-      0 => 'field_prog_school_dist',
-      1 => 'field_prog_school_dist_contact',
-      2 => 'field_prog_schl_dist_email',
+      0 => 'field_prog_type_of_school',
+      1 => 'field_prog_school_dist',
+      2 => 'field_prog_school_dist_contact',
+      3 => 'field_prog_schl_dist_email',
+      4 => 'field_prog_hs_coll',
+      5 => 'field_prog_public_or_privat',
+      6 => 'field_prog_is_was_tpsid',
+      7 => 'field_prog_when_will_progr_start',
+      8 => 'field_prog_summer_prog_y_n',
+      9 => 'field_prog_summer_descrip',
+      10 => 'field_prog_summer_info_link',
+      11 => 'field_how_many_students_total_at',
+      12 => 'field_prog_other_explain',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Affiliates',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => 'group-prog-affiliate field-group-fieldset',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_prog_affiliate|node|program_record|form'] = $field_group;
@@ -250,7 +257,7 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Costs for Current Academic Year',
     'weight' => '6',
@@ -269,16 +276,14 @@ function program_record_field_group_info() {
       11 => 'field_prog_cost_y_n',
       12 => 'field_prog_costs_describe',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Costs for Current Academic Year',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
-        'classes' => 'group-prog-cost field-group-fieldset',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_prog_cost|node|program_record|form'] = $field_group;
@@ -322,7 +327,7 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Employment',
     'weight' => '8',
@@ -331,15 +336,15 @@ function program_record_field_group_info() {
       1 => 'field_prog_perc_w_compet_employ',
       2 => 'field_prog_perc_employed_af_grad',
       3 => 'field_prog_vocational_credential',
+      4 => 'field_prog_vr_partner',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-prog-employment field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -383,23 +388,18 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Extracurricular',
     'weight' => '10',
-    'children' => array(
-      0 => 'field_prog_student_orgs_y_n',
-      1 => 'field_prog_overall_time_dist',
-      2 => 'field_prog_extracurric_explain',
-    ),
-    'format_type' => 'fieldset',
+    'children' => array(),
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-prog-extracur field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -442,24 +442,28 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
-    'label' => 'Housing',
+    'label' => 'Housing and Extracurricular',
     'weight' => '9',
     'children' => array(
       0 => 'field_prog_housing_y_n',
       1 => 'field_prog_studt_housing_options',
       2 => 'field_prog_other_hous_explain',
+      3 => 'field_prog_student_orgs_y_n',
+      4 => 'field_prog_overall_time_dist',
+      5 => 'field_prog_extracurric_explain',
+      6 => 'field_prog__ihe_support_svces',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Housing and Extracurricular',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-prog-housing field-group-fieldset',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_prog_housing|node|program_record|form'] = $field_group;
@@ -472,24 +476,19 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Instructions and Preliminary questions',
     'weight' => '1',
-    'children' => array(
-      0 => 'field_prog_serves_id',
-      1 => 'field_prog_accredited',
-    ),
-    'format_type' => 'fieldset',
+    'children' => array(),
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Instructions and Preliminary questions',
+      'formatter' => 'closed',
       'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
-        'classes' => 'group-prog-preliminary field-group-fieldset',
-        'description' => '<h3><strong>Instructions: </strong>Please fill in <strong>ALL</strong> required fields in the form below (with an asterisk(*)).  The form <strong>will not save any information</strong> if there are unfilled required fields or errors in fields.  Save the link  to this page and your login information.  You may return to correct information if you don\'t have it on hand now.</h3>',
       ),
-      'formatter' => 'open',
     ),
   );
   $field_groups['group_prog_preliminary|node|program_record|form'] = $field_group;
@@ -523,7 +522,7 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Program Information',
     'weight' => '2',
@@ -534,36 +533,21 @@ function program_record_field_group_info() {
       3 => 'field_prog_program_contact_email',
       4 => 'field_prog_program_website',
       5 => 'field_prog_col_univ_name',
-      6 => 'field_prog_type_of_school',
-      7 => 'field_prog_hs_coll',
-      8 => 'field_prog_public_or_privat',
-      9 => 'field_prog_is_was_tpsid',
-      10 => 'field_prog_when_will_progr_start',
-      11 => 'field_prog_summer_prog_y_n',
-      12 => 'field_prog_summer_descrip',
-      13 => 'field_prog_summer_info_link',
-      14 => 'field_how_many_students_total_at',
-      15 => 'field_prog_contact_phone',
-      16 => 'field_prog_photo',
-      17 => 'field_prog_other_explain',
-      18 => 'field_address',
-      19 => 'field_prog_address_line_2',
-      20 => 'field_prog_city',
-      21 => 'field_prog_state',
-      22 => 'field_prog_street_address',
-      23 => 'field_zip_code',
-      24 => 'title',
+      6 => 'field_prog_contact_phone',
+      7 => 'field_prog_photo',
+      8 => 'field_prog_serves_id',
+      9 => 'field_prog_accredited',
+      10 => 'field_address',
+      11 => 'title',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Program Information',
+      'formatter' => 'closed',
       'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
-        'classes' => 'group-prog-prog-info field-group-fieldset',
-        'description' => '<p> Questions with a red * are <strong>required</strong>.</p><p>If you do not answer a required question, your record will not be saved.  You can enter “filler” responses and go back and replace them later by logging in again and returning to those questions.</p>',
       ),
-      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_prog_prog_info|node|program_record|form'] = $field_group;
@@ -576,7 +560,7 @@ function program_record_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'program_record';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'label' => 'Requirements for Attendance',
     'weight' => '4',
@@ -589,14 +573,13 @@ function program_record_field_group_info() {
       5 => 'field_prog_which_dis_specify',
       6 => 'field_prog_which_disabilities',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-prog-requirements field-group-fieldset',
+        'classes' => '',
         'required_fields' => 1,
-        'id' => '',
       ),
     ),
   );
@@ -708,6 +691,41 @@ function program_record_field_group_info() {
   );
   $field_groups['group_program_info|node|program_record|default'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sections|node|program_record|form';
+  $field_group->group_name = 'group_sections';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'program_record';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Program Survey',
+    'weight' => '1',
+    'children' => array(
+      0 => 'group_prog_acad',
+      1 => 'group_prog_accep_reten_complet',
+      2 => 'group_prog_affiliate',
+      3 => 'group_prog_cost',
+      4 => 'group_prog_employment',
+      5 => 'group_prog_extracur',
+      6 => 'group_prog_housing',
+      7 => 'group_prog_preliminary',
+      8 => 'group_prog_prog_info',
+      9 => 'group_prog_requirements',
+    ),
+    'format_type' => 'tabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-sections field-group-tabs',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_sections|node|program_record|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Academic');
@@ -721,8 +739,11 @@ function program_record_field_group_info() {
   t('Extracurricular');
   t('General');
   t('Housing');
+  t('Housing and Extracurricular');
   t('Instructions and Preliminary questions');
+  t('Program Info. part 2');
   t('Program Information');
+  t('Program Survey');
   t('Requirements');
   t('Requirements for Attendance');
   t('Tabs');

@@ -106,11 +106,11 @@ function program_record_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 8,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 15,
     ),
   );
 
@@ -273,16 +273,16 @@ function program_record_field_default_field_instances() {
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 8,
+      'weight' => 16,
     ),
   );
 
@@ -346,7 +346,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 134,
+      'weight' => 16,
     ),
   );
 
@@ -409,7 +409,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 136,
+      'weight' => 18,
     ),
   );
 
@@ -499,7 +499,7 @@ function program_record_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 20,
+      'weight' => 28,
     ),
   );
 
@@ -730,7 +730,7 @@ function program_record_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 13,
+      'weight' => 5,
     ),
   );
 
@@ -958,6 +958,63 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-program_record-field_prog__ihe_support_svces'.
+  $field_instances['node-program_record-field_prog__ihe_support_svces'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 81,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog__ihe_support_svces',
+    'label' => 'Are students in this program able to access support services through your IHE disability services office?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 94,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_accredited'.
   $field_instances['node-program_record-field_prog_accredited'] = array(
     'bundle' => 'program_record',
@@ -1024,7 +1081,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 2,
+      'weight' => 11,
     ),
   );
 
@@ -1185,7 +1242,7 @@ function program_record_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 156,
     ),
   );
 
@@ -1256,7 +1313,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 157,
     ),
   );
 
@@ -1330,7 +1387,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 155,
     ),
   );
 
@@ -1400,7 +1457,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 158,
     ),
   );
 
@@ -1464,8 +1521,7 @@ function program_record_field_default_field_instances() {
       'form_display' => 'item',
       'text' => array(
         'format' => 'full_html',
-        'value' => '<p>If you have filled out the fields above properly--especially required <span style="color:red">(*) </span>fields, then you may hit the "Save" button below.&nbsp;<strong> Important: </strong>check for any error messages at the top of the form about missing or incorrectly formatted field information.&nbsp; If those errors are not fixed then none of your information will be saved.</p>
-',
+        'value' => '<p>If you have filled out the fields in every tab--especially required <span style="color:red">(*) </span>fields, then you may hit the "Save" button below. Check carefully to verify your information is correct.&nbsp;<strong> Important: </strong>check for any error messages at the top of the form about missing or incorrectly formatted field information.&nbsp; If those errors are not fixed then none of your information will be saved.</p>',
       ),
       'user_register_form' => FALSE,
     ),
@@ -1474,7 +1530,7 @@ function program_record_field_default_field_instances() {
       'module' => 'static_field',
       'settings' => array(),
       'type' => 'static_field',
-      'weight' => 11,
+      'weight' => 3,
     ),
   );
 
@@ -1548,7 +1604,7 @@ function program_record_field_default_field_instances() {
         'size' => 80,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 14,
     ),
   );
 
@@ -1622,7 +1678,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 20,
     ),
   );
 
@@ -1686,7 +1742,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 128,
+      'weight' => 11,
     ),
   );
 
@@ -2178,7 +2234,7 @@ function program_record_field_default_field_instances() {
     'label' => 'Explain "other" requirements',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2188,7 +2244,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 159,
     ),
   );
 
@@ -2333,7 +2389,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 58,
+      'weight' => 93,
     ),
   );
 
@@ -2479,7 +2535,68 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 19,
+      'weight' => 27,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_instructions'.
+  $field_instances['node-program_record-field_prog_instructions'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'static_field',
+        'settings' => array(),
+        'type' => 'static_field',
+        'weight' => 88,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_instructions',
+    'label' => 'Instructions',
+    'required' => 0,
+    'settings' => array(
+      'form_display' => 'markup',
+      'text' => array(
+        'format' => 'full_html',
+        'value' => '<p>In the form below is the information that is currently listed on our website for your program. Please click on each green tab, look over all fields and change any information that needs to be updated. There is no need to save after completing each tab, but you MUST click Save at either the top or bottom of this form after going through and making any necessary changes. You can save at any time and you may save and leave and return later to make additional changes or add new information. Green check marks will appear in the tabs on the left when you have filled out all questions in a section. Please make every attempt to answer all questions--but if you can\'t, the form will still save and we will use the information you can provide to create your updated record.</p>',
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'static_field',
+      'settings' => array(),
+      'type' => 'static_field',
+      'weight' => 0,
     ),
   );
 
@@ -2548,7 +2665,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 18,
+      'weight' => 26,
     ),
   );
 
@@ -3052,7 +3169,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 140,
+      'weight' => 22,
     ),
   );
 
@@ -3261,7 +3378,66 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 128,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_other_credent'.
+  $field_instances['node-program_record-field_prog_other_credent'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 79,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_other_credent',
+    'label' => 'Other than the credential listed above, can students earn any other credentials that are available to all students?',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 150,
     ),
   );
 
@@ -3331,7 +3507,7 @@ function program_record_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 25,
     ),
   );
 
@@ -3475,7 +3651,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 57,
+      'weight' => 92,
     ),
   );
 
@@ -3952,7 +4128,7 @@ function program_record_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 14,
+      'weight' => 22,
     ),
   );
 
@@ -4026,7 +4202,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 11,
+      'weight' => 19,
     ),
   );
 
@@ -4097,7 +4273,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 9,
+      'weight' => 17,
     ),
   );
 
@@ -4185,7 +4361,7 @@ function program_record_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 21,
     ),
   );
 
@@ -4257,7 +4433,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 23,
     ),
   );
 
@@ -4321,7 +4497,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 135,
+      'weight' => 17,
     ),
   );
 
@@ -4385,7 +4561,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 129,
+      'weight' => 12,
     ),
   );
 
@@ -4457,7 +4633,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 31,
+      'weight' => 35,
     ),
   );
 
@@ -4617,7 +4793,7 @@ function program_record_field_default_field_instances() {
         'size' => 80,
       ),
       'type' => 'text_textfield',
-      'weight' => 29,
+      'weight' => 33,
     ),
   );
 
@@ -4691,7 +4867,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 30,
+      'weight' => 34,
     ),
   );
 
@@ -4761,7 +4937,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 3,
+      'weight' => 12,
     ),
   );
 
@@ -5040,7 +5216,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 138,
+      'weight' => 20,
     ),
   );
 
@@ -5112,7 +5288,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 56,
+      'weight' => 91,
     ),
   );
 
@@ -5176,7 +5352,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 130,
+      'weight' => 13,
     ),
   );
 
@@ -5240,7 +5416,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 133,
+      'weight' => 15,
     ),
   );
 
@@ -5457,7 +5633,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 23,
+      'weight' => 31,
     ),
   );
 
@@ -5544,7 +5720,7 @@ function program_record_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 24,
+      'weight' => 32,
     ),
   );
 
@@ -5613,7 +5789,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => 30,
     ),
   );
 
@@ -5676,7 +5852,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 139,
+      'weight' => 21,
     ),
   );
 
@@ -5822,7 +5998,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 16,
+      'weight' => 24,
     ),
   );
 
@@ -5900,6 +6076,62 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_vr_partner'.
+  $field_instances['node-program_record-field_prog_vr_partner'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 80,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_vr_partner',
+    'label' => 'Does this program have a working partnership with VR to provide funding, supports and/or services to students in the program?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 88,
+    ),
+  );
+
   // Exported field_instance:
   // 'node-program_record-field_prog_when_will_progr_start'.
   $field_instances['node-program_record-field_prog_when_will_progr_start'] = array(
@@ -5971,7 +6203,7 @@ function program_record_field_default_field_instances() {
         'content_taxonomy_opt_groups' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 29,
     ),
   );
 
@@ -6042,7 +6274,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 161,
     ),
   );
 
@@ -6106,7 +6338,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 160,
     ),
   );
 
@@ -6181,7 +6413,7 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 18,
     ),
   );
 
@@ -6245,7 +6477,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 16,
+      'weight' => 8,
     ),
   );
 
@@ -6309,7 +6541,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 131,
+      'weight' => 14,
     ),
   );
 
@@ -6373,7 +6605,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 15,
+      'weight' => 7,
     ),
   );
 
@@ -6436,7 +6668,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 137,
+      'weight' => 19,
     ),
   );
 
@@ -6500,7 +6732,7 @@ function program_record_field_default_field_instances() {
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 14,
+      'weight' => 6,
     ),
   );
 
@@ -6509,6 +6741,7 @@ function program_record_field_default_field_instances() {
   t('Address');
   t('Admission application deadline');
   t('Admission rate (display)');
+  t('Are students in this program able to access support services through your IHE disability services office?');
   t('Can you provide specific dollar amounts for tuition, fees, room and board?');
   t('Can you tell us how many students applied to, were accepted to, or entered your program in the most recent academic year?');
   t('Career development (display)');
@@ -6523,6 +6756,7 @@ function program_record_field_default_field_instances() {
   t('Do students take special courses that are only for students in this program? ');
   t('Do you offer a certificate or credential that has a specific career focus (e.g., business, culinary arts, etc.)? If so, describe');
   t('Does program offer housing for students?');
+  t('Does this program have a working partnership with VR to provide funding, supports and/or services to students in the program?');
   t('Does your program offer a summer transition program?');
   t('Enter required age range');
   t('Explain "other" requirements');
@@ -6542,6 +6776,7 @@ function program_record_field_default_field_instances() {
   t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');
   t('If you selected "Other" for type of school, above, explain here.');
+  t('Instructions');
   t('Is the college or univ. where the program is located public or private institution? ');
   t('Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?');
   t('Is/was this program a federally funded TPSID program? ');
@@ -6553,6 +6788,7 @@ function program_record_field_default_field_instances() {
   t('Other costs (display)');
   t('Other costs amount (numbers and decimals only, no commas or dollar signs)');
   t('Other costs?');
+  t('Other than the credential listed above, can students earn any other credentials that are available to all students?');
   t('Please describe social/extracurricular activities and organizations students have participated in');
   t('Please explain "other" housing options');
   t('Please indicate which disabilities students in this program have');

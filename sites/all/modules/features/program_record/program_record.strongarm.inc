@@ -108,16 +108,19 @@ function program_record_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '13',
         ),
         'path' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'feeds' => array(
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '12',
+          'weight' => '4',
+        ),
+        'redirect' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(
