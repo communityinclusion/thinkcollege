@@ -66,7 +66,6 @@ function tc_solr_program_record_index_default_search_api_index() {
         "field_prog_course_types" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_credential" : { "type" : "string" },
         "field_prog_ctp_y_n" : { "type" : "string" },
-        "field_prog_explain_other" : { "type" : "text" },
         "field_prog_housing_y_n" : { "type" : "string" },
         "field_prog_hs_coll" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_is_was_tpsid" : { "type" : "list\\u003Cstring\\u003E" },
@@ -113,6 +112,7 @@ function tc_solr_program_record_index_default_search_api_index() {
         "nid" : { "type" : "integer" },
         "search_api_access_node" : { "type" : "list\\u003Cstring\\u003E" },
         "search_api_language" : { "type" : "string" },
+        "search_api_viewed" : { "type" : "text" },
         "status" : { "type" : "boolean" },
         "tc_alpha_sortable_title" : { "type" : "string" },
         "tc_dual_enroll" : { "type" : "string" },
@@ -127,27 +127,24 @@ function tc_solr_program_record_index_default_search_api_index() {
         "tc_searchable_term_publication_types" : { "type" : "text" },
         "tc_searchable_term_state_related" : { "type" : "text" },
         "tc_state_province" : { "type" : "string" },
+        "tc_state_province_fulltext" : { "type" : "text", "boost" : "2.0" },
         "tc_tpsid" : { "type" : "string" },
         "title" : { "type" : "text", "boost" : "3.0" },
         "type" : { "type" : "string" }
       },
       "data_alter_callbacks" : {
-        "multiple_entity_views" : {
-          "status" : 0,
-          "weight" : "-50",
-          "settings" : { "modes" : { "full" : "full", "card" : "card" } }
-        },
         "search_api_alter_bundle_filter" : {
           "status" : 0,
           "weight" : "-10",
           "settings" : { "default" : "0", "bundles" : { "program_record" : "program_record" } }
         },
-        "search_api_alter_node_status" : { "status" : 1, "weight" : "0", "settings" : [] },
         "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
-        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_node_status" : { "status" : 1, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } }
+        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_metatag_alter_callback" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_viewed_entity" : { "status" : 1, "weight" : "0", "settings" : { "mode" : "full" } }
       },
       "processors" : {
         "search_api_case_ignore" : {
@@ -155,8 +152,6 @@ function tc_solr_program_record_index_default_search_api_index() {
           "weight" : "0",
           "settings" : { "fields" : {
               "title" : true,
-              "field_prog_city" : true,
-              "field_zip_code" : true,
               "field_prog_col_univ_name" : true,
               "field_prog_type_of_school" : true,
               "field_prog_school_dist" : true,
@@ -165,15 +160,13 @@ function tc_solr_program_record_index_default_search_api_index() {
             }
           }
         },
+        "content_taxonomy_autocomplete_moderated_terms" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_html_filter" : {
           "status" : 0,
           "weight" : "10",
           "settings" : {
             "fields" : {
               "title" : true,
-              "field_prog_city" : true,
-              "field_prog_state" : true,
-              "field_zip_code" : true,
               "field_prog_col_univ_name" : true,
               "field_prog_type_of_school" : true,
               "field_prog_school_dist" : true,
@@ -191,9 +184,6 @@ function tc_solr_program_record_index_default_search_api_index() {
           "settings" : {
             "fields" : {
               "title" : true,
-              "field_prog_city" : true,
-              "field_prog_state" : true,
-              "field_zip_code" : true,
               "field_prog_col_univ_name" : true,
               "field_prog_type_of_school" : true,
               "field_prog_school_dist" : true,
@@ -209,9 +199,6 @@ function tc_solr_program_record_index_default_search_api_index() {
           "settings" : {
             "fields" : {
               "title" : true,
-              "field_prog_city" : true,
-              "field_prog_state" : true,
-              "field_zip_code" : true,
               "field_prog_col_univ_name" : true,
               "field_prog_type_of_school" : true,
               "field_prog_school_dist" : true,
