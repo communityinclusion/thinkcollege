@@ -198,7 +198,7 @@ function article_field_default_field_instances() {
     'description' => 'Enter a comma-separated list of words to describe your content.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -283,7 +283,7 @@ function article_field_default_field_instances() {
       'file_directory' => 'teasers',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '',
+      'max_resolution' => '500x500',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
