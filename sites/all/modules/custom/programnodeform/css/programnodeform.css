@@ -88,4 +88,4 @@ div#reasonnopartic.activated {border: 1px solid red; padding: 18px 8px 8px; }
 fieldset.showQues .form-type-textarea { display: block; }
 input[type="checkbox"].form-checkbox { margin-right: 10px; }
 .text-summary-wrapper,a.link-edit-summary {display: none;}
- .form-type-radio > input, .form-type-checkbox > input, #edit-field-address-und-0 .fieldset-description { display: none; }
+ /* .form-type-radio > input, .form-type-checkbox > input, #edit-field-address-und-0 .fieldset-description { display: none; } */
