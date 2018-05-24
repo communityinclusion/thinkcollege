@@ -32,7 +32,7 @@
 
   <div class="row">
     <div class="col-sm-12 tc-row3">
-      <?php print $content['row2']; ?>
+      <?php print $content['row3']; ?>
     </div>
   </div>
 
