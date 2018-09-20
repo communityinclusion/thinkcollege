@@ -92,7 +92,9 @@
 }
 
 
-.book-toc .btn-group .pull-right {display:hidden}
+div#book-navigation-3526 .book-toc {
+    display: none;
+}
 
 .field-name-field-tc-learn-sidebar .field-item .tc-resource-icon, .field-name-field-tc-learn-sidebar .field-item .tc-resource-info {display:inline-block;}
 
