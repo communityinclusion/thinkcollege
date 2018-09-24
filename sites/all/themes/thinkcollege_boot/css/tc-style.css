@@ -58,6 +58,26 @@ h3.block-title,h3.pane-title {
 }
 
 /*----------------------------*/
+
+@media screen and (min-width: 768px)
+.carousel-caption {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    background: rgba(50,50,50,0.4);
+    text-align: left;
+    display: block;
+    width: 100%;
+    height: 40%;
+}
+
+.carousel-caption h3 a {
+    color: #fff;
+}
+
+
 .btn-huge {
 	padding:25px 0;
 	font-size:1.2em;
