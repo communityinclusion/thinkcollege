@@ -35,6 +35,11 @@ h3.block-title,h3.pane-title {
     justify-content: flex-end;
 }
 
+.donate-btn {
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
 /* Section Banner */
 #section_banner {
 /* position: absolute; */
