@@ -27,6 +27,14 @@ h3.block-title,h3.pane-title {
 .beta-banner .alert {width:100%;margin-bottom: 10px;border-radius:0}
 
 
+/* region-header*/
+
+.region-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 /* Section Banner */
 #section_banner {
 /* position: absolute; */
