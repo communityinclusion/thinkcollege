@@ -123,13 +123,13 @@ h3.block-title,h3.pane-title {
 }
 
 .carousel-control .icon-next:before {
-  font-family: "Font Awesome 5 Free";
-    content: '\203a';
+  font-family: "FontAwesome";
+    content: '\f138';
 }
 
 
 .carousel-control .icon-prev:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "FontAwesome";
       content: '\f137';
 }
 
