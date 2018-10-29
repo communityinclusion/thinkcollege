@@ -77,7 +77,6 @@ h3.block-title,h3.pane-title {
     position: absolute;
     top: 0!important;
     left: 0!important;
-    padding: 10px 15px;
     background: rgba(50,50,50,0.4);
     text-align: left;
     display: block;
@@ -85,8 +84,53 @@ h3.block-title,h3.pane-title {
     height: 40%!important;
 }
 
+@media screen and (min-width: 768px)
+.carousel-caption h3 {
+
+    padding: 10px 15px;
+
+}
+
+@media screen and (min-width: 768px)
+.carousel-indicators {
+    bottom: 5px;
+}
+
+
 .carousel-caption h3 a {
     color: #fff;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(50,50,50,0.4);
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+.carousel-caption h3 {padding:0 10px;}
+
+
+.carousel-indicators {
+    bottom: 5px;
+}
+
+.carousel-control .icon-next:before {
+  font-family: "Font Awesome 5 Free";
+    content: '\203a';
+}
+
+
+.carousel-control .icon-prev:before {
+  font-family: "Font Awesome 5 Free";
+      content: '\f137';
 }
 
 
