@@ -109,7 +109,7 @@ h3.block-title,h3.pane-title {
     background: rgba(50,50,50,0.4);
     z-index: 10;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     color: #fff;
     text-align: center;
     width: 100%;
@@ -125,12 +125,23 @@ h3.block-title,h3.pane-title {
 .carousel-control .icon-next:before {
   font-family: "FontAwesome";
     content: '\f138';
+     font-size: 40px;
 }
 
 
 .carousel-control .icon-prev:before {
   font-family: "FontAwesome";
       content: '\f137';
+       font-size: 40px;
+}
+
+
+
+.carousel {
+    position: relative;
+    background-color: #20527C;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
