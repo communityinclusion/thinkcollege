@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Tests for One-Time Login module.
+ */
+
+/**
+ * Tests basic One-Time Login functionality.
+ */
+class OneTimeLoginTestCase extends DrupalWebTestCase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function getInfo() {
+    return array(
+      'name' => 'One-Time Login tests',
+      'description' => 'Tests One-Time Login module.',
+      'group' => 'One-Time Login',
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setUp() {
+    parent::setUp('one_time_login');
+  }
+
+  /**
+   * Tests basic One-Time Login functionality.
+   */
+  protected function testOneTimeLogin() {
+  }
+
+}
