@@ -28,7 +28,7 @@ function print_pdf_tcpdf_settings() {
     '#size' => 60,
     '#maxlength' => 250,
     '#description' => t('Set the font family to be used. Examples: %examples.', array('%examples' => 'helvetica, times, courier, dejavusans, dejavuserif, freesans, freeserif, freemono')) . '<br />' .
-                      t("CAUTION: TCPDF embeds the complete font in the generated PDF. If you're not using Unicode, then helvetica or times are safe choices that will keep the PDF small. Unicode fonts can increase the size of the PDF to the 1MB region."),
+      t("CAUTION: TCPDF embeds the complete font in the generated PDF. If you're not using Unicode, then helvetica or times are safe choices that will keep the PDF small. Unicode fonts can increase the size of the PDF to the 1MB region."),
   );
   $form['settings']['print_pdf_font_size'] = array(
     '#type' => 'textfield',
@@ -42,7 +42,7 @@ function print_pdf_tcpdf_settings() {
     '#type' => 'checkbox',
     '#title' => t('Enable font subsetting'),
     '#default_value' => variable_get('print_pdf_font_subsetting', PRINT_PDF_TCPDF_FONT_SUBSETTING_DEFAULT),
-    '#description' => t('Only embed those font characters that are actually used.  This can generates smaller PDF files but may significantly slow down processing.'),
+    '#description' => t('Only embed those font characters that are actually used.  This can generate smaller PDF files but may significantly slow down processing.'),
   );
 
   $form['#validate'][] = '_print_pdf_tcpdf_settings_validate';
@@ -52,6 +52,11 @@ function print_pdf_tcpdf_settings() {
 
 /**
  * Form validation handler for print_pdf_tcpdf_settings().
+ *
+ * @param array $form
+ *   Form.
+ * @param array $form_state
+ *   Form state.
  *
  * @see print_pdf_tcpdf_settings()
  * @ingroup forms
