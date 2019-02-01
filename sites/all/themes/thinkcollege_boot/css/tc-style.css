@@ -774,5 +774,5 @@ div.field-name-field-tags div.field-items div:last-child:after {
 
 .page-node-add.page-node-add-program-record div.form-type-radio label > input[type="radio"], .page-node-add.page-node-add-program-record div.form-type-checkbox label > input[type="checkbox"],
 .page-node-edit.node-type-program-record div.form-type-radio label > input[type="radio"], .page-node-edit.node-type-program-record div.form-type-checkbox label > input[type="checkbox"] { visibility: visible; }
-/* to be activated after this field has been unchecked in all programs
-div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must-be-a-resident-of-the-state-where-the-program-is-located {display: none; } */
+/* to be activated after this field has been unchecked in all programs  */
+div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must-be-a-resident-of-the-state-where-the-program-is-located {display: none; }
