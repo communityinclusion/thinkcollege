@@ -113,7 +113,7 @@ function thinkcollege_boot_form_element(&$variables) {
 
     case 'after':
       if ($is_radio || $is_checkbox) {
-        $output .= ' ' . $prefix . $element['#children'] . $suffix;
+        $output .= ' ' . $prefix .  $suffix;
       }
       else {
         $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;

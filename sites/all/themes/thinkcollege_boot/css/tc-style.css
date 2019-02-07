@@ -769,8 +769,8 @@ div.field-name-field-tags div.field-items div:last-child:after {
 }
 .not-logged-in footer li.logoutLink a { color: #20527C; }
 
-/* to correct double input bug on program record edit pages */
-.page-node-add.page-node-add-program-record div.form-type-radio > input[type="radio"], .page-node-add.page-node-add-program-record div.form-type-checkbox > input[type="checkbox"], .page-node-edit.node-type-program-record div.form-type-radio > input[type="radio"], .page-node-edit.node-type-program-record div.form-type-checkbox > input[type="checkbox"], #edit-field-prog-vocational-credential { visibility: hidden; }
+/* to correct double input bug on program record edit pages
+.page-node-add.page-node-add-program-record div.form-type-radio > input[type="radio"], .page-node-add.page-node-add-program-record div.form-type-checkbox > input[type="checkbox"], .page-node-edit.node-type-program-record div.form-type-radio > input[type="radio"], .page-node-edit.node-type-program-record div.form-type-checkbox > input[type="checkbox"], #edit-field-prog-vocational-credential { visibility: hidden; } */
 
 .page-node-add.page-node-add-program-record div.form-type-radio label > input[type="radio"], .page-node-add.page-node-add-program-record div.form-type-checkbox label > input[type="checkbox"],
 .page-node-edit.node-type-program-record div.form-type-radio label > input[type="radio"], .page-node-edit.node-type-program-record div.form-type-checkbox label > input[type="checkbox"] { visibility: visible; }
