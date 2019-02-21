@@ -776,3 +776,21 @@ div.field-name-field-tags div.field-items div:last-child:after {
 .page-node-edit.node-type-program-record div.form-type-radio label > input[type="radio"], .page-node-edit.node-type-program-record div.form-type-checkbox label > input[type="checkbox"] { visibility: visible; }
 /* to be activated after this field has been unchecked in all programs  */
 div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must-be-a-resident-of-the-state-where-the-program-is-located {display: none; }
+
+
+/* Responsive YT Embed */
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  }
+
+  .embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+     }
