@@ -101,9 +101,9 @@ if($form['nid']['#value']) {
 
 
 
- $field_language = $form[$field_name]['und'];
- $max_delta = $form[$field_name][$field_language]['#max_delta'];
- unset($form[$field_name][$field_language][$max_delta]);
+// $field_language = $form[$field_name]['und'];
+// $max_delta = $form[$field_name][$field_language]['#max_delta'];
+ //unset($form[$field_name][$field_language][$max_delta]);
 
 }
 }

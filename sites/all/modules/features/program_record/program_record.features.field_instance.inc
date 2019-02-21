@@ -1317,6 +1317,82 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+
+  $field_instances['node-program_record-field_prog_out_of_stat'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+    ),
+    'display_label' => 'Accepts out-of-state students?:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_out_of_stat',
+    'label' => 'Do you accept out-of-state students? (question added January 2019)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 23,
+    ),
+  );
+
+
+
+
+
   // Exported field_instance: 'node-program_record-field_prog_admit_deadline'.
   $field_instances['node-program_record-field_prog_admit_deadline'] = array(
     'bundle' => 'program_record',
@@ -1329,7 +1405,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
@@ -6831,6 +6907,7 @@ function program_record_field_default_field_instances() {
   t('What other types of career development activities do students participate in (check all that apply)?');
   t('What type of school is this?');
   t('Which of the following are basic requirements for admission to your program?');
+  t('Do you accept out-of-state students? (question added January 2019)');
 
   return $field_instances;
 }

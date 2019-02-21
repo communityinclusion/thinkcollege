@@ -355,7 +355,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * between your various domains. Make sure to always start the $cookie_domain
  * with a leading dot, as per RFC 2109.
  */
-# $cookie_domain = '.example.com';
+//$cookie_domain = '.thinkcollege.net';
 
 /**
  * Variable overrides:
@@ -643,6 +643,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 $local_settings = dirname(__FILE__) . '/settings.local.php';
 if (file_exists($local_settings)) {
   include_once($local_settings);
+}
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $conf['file_temporary_path'] = $_SERVER['HOME'] .'/tmp';
 }
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain/ in the Live environment

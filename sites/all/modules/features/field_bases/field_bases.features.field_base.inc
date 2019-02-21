@@ -1814,6 +1814,33 @@ else {
     'type' => 'list_text',
   );
 
+   // Exported field_base: 'field_prog_out_of_stat'.
+  $field_bases['field_prog_out_of_stat'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_out_of_stat',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Yes' => 'Yes',
+        'No' => 'No',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_php' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_prog_retention_rate_displa'.
   $field_bases['field_prog_retention_rate_displa'] = array(
     'active' => 1,

@@ -288,6 +288,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_admit_deadline']); ?>
         <?php print render($content['field_prog_admiss_link']); ?>
         <?php print render($content['field_requirements_display']); ?>
+        <?php print render($content['field_prog_out_of_stat']); ?>
         <?php print render($content['field_disabilities_display_']); ?>
         <?php print render($content['field_prog_length_years']); ?>
         </tbody>
