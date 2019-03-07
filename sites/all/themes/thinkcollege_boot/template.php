@@ -368,9 +368,9 @@ function thinkcollege_boot_facetapi_title($variables) {
     case "Is/was this program a federally funded TPSID program? ":
       $variables['title'] = "Program is a federally funded TPSID program";
       break;
-    case "TC:Dual Enrollment":
-      $variables['title'] = "Program features";
-      break;
+    //case "TC:Dual Enrollment":
+     // $variables['title'] = "Program features";
+   //   break;
     case "TC:State/Province":
       $variables['title'] = "Location";
       break;
@@ -378,9 +378,9 @@ function thinkcollege_boot_facetapi_title($variables) {
       $variables['title'] = "Type of School";
       break;
   }
-  $title = "<div class='tc-facet-title'><span class='facet-title'>";
+   $title = "<div class='tc-facet-title'><span class='facet-title'>";
   $tit = t('@title', array('@title' => $variables['title']));
-  return $title . $tit . "</span></div>";
+  if ($variables['title'] == "TC:Dual Enrollment" || $variables['title'] == "TC:Financial Aid"  || $variables['title'] == "TC:Housing"  ) return ""; else return $title . $tit . "</span></div>"; 
 }
 
 /**
