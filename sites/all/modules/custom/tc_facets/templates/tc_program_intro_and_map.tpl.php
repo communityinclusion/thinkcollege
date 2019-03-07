@@ -18,7 +18,14 @@
     It provides you with the right questions to ask in order to get the
     answers you need about each program on your list.</p>
 
-  <p class="small clearfix">
+
+   <hr/>
+
+  <?php
+  include(drupal_get_path('module', 'tc_facets') . '/templates/tc_state_program_count_map.tpl.php');
+  ?>
+
+   <p class="small clearfix">
     The information included here was submitted to Think College by the
     college programs. Being listed here does not indicate or imply a
     Think College endorsement. There also may be programs available that
@@ -28,13 +35,6 @@
     make changes to a current program listing,
     please email <a href="mailto:thinkcollege@umb.edu">thinkcollege@umb.edu.</a>
   </p>
-   <hr/>
-
-  <?php
-  include(drupal_get_path('module', 'tc_facets') . '/templates/tc_state_program_count_map.tpl.php');
-  ?>
-
- 
 
 
 
