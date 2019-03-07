@@ -25,6 +25,7 @@
   include(drupal_get_path('module', 'tc_facets') . '/templates/tc_state_program_count_map.tpl.php');
   ?>
 
+   <hr/>
    <p class="small clearfix">
     The information included here was submitted to Think College by the
     college programs. Being listed here does not indicate or imply a
