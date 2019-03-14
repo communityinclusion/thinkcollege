@@ -353,15 +353,8 @@ class views_plugin_cache extends views_plugin {
         // If the default query back-end is used generate SQL query strings from
         // the query objects.
         if ($build_info[$index] instanceof SelectQueryInterface) {
-          $query = $build_info[$index];
-
-          // If the query was not yet prepared, work on a clone and run
-          // preExecute().
-          if (!$query->isPrepared()) {
-            $query = clone $build_info[$index];
-            $query->preExecute();
-          }
-
+          $query = clone $build_info[$index];
+          $query->preExecute();
           $key_data['build_info'][$index] = array(
             'sql' => (string) $query,
             'arguments' => $query->getArguments(),
