@@ -870,7 +870,7 @@ class SearchApiSolrService extends SearchApiAbstractService {
 
     // Set searched fields.
     $options = $query->getOptions();
-    $search_fields = $query->getFields();
+    $search_fields = $this->getQueryFields($query);
     // Get the index fields to be able to retrieve boosts.
     $index_fields = $index->getFields() + array(
       'search_api_relevance' => array('type' => 'decimal', 'indexed' => TRUE),
@@ -1313,13 +1313,16 @@ class SearchApiSolrService extends SearchApiAbstractService {
       foreach ($fields as $search_api_property => $solr_property) {
         if (isset($doc->{$solr_property})) {
           $value = $doc->{$solr_property};
+
           // Date fields need some special treatment to become valid date values
           // (i.e., timestamps) again.
+          $first_value = is_array($value) ? reset($value) : $value;
           if (isset($field_options[$search_api_property]['type'])
               && search_api_extract_inner_type($field_options[$search_api_property]['type']) === 'date'
-              && preg_match('/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/', $value)) {
+              && preg_match('/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/', $first_value)) {
             $value = is_array($value) ? array_map('strtotime', $value) : strtotime($value);
           }
+
           $result['fields'][$search_api_property] = $value;
         }
       }
@@ -1348,7 +1351,7 @@ class SearchApiSolrService extends SearchApiAbstractService {
 
       $index_id = $this->getIndexId($index->machine_name);
       $solr_id = $this->createId($index_id, $result['id']);
-      $excerpt = $this->getExcerpt($response, $solr_id, $result['fields'], $fields, $query->getFields());
+      $excerpt = $this->getExcerpt($response, $solr_id, $result['fields'], $fields, $this->getQueryFields($query));
       if ($excerpt) {
         $result['excerpt'] = $excerpt;
       }
@@ -2047,8 +2050,7 @@ class SearchApiSolrService extends SearchApiAbstractService {
     }
 
     // Set searched fields
-    $options = $query->getOptions();
-    $search_fields = $query->getFields();
+    $search_fields = $this->getQueryFields($query);
     $qf = array();
     foreach ($search_fields as $f) {
       $qf[] = $fields[$f];
@@ -2355,23 +2357,28 @@ class SearchApiSolrService extends SearchApiAbstractService {
     $results = array();
     $results['result count'] = $response->response->numFound;
     $results['results'] = array();
-    $tmp = array();
+    $fulltext_fields_by_index = array();
+    foreach ($search_fields as $field) {
+      list ($index_id, $field) = explode(':', $field, 2);
+      $fulltext_fields_by_index[$index_id][] = $field;
+    }
     foreach ($response->response->docs as $id => $doc) {
-      if (isset($indexes[$doc->index_id])) {
-        $index = $indexes[$doc->index_id];
+      $index_id = $doc->index_id;
+      if (isset($indexes[$index_id])) {
+        $index = $indexes[$index_id];
       }
       else {
-        $index = new SearchApiIndex(array('machine_name' => $doc->index_id));
+        $index = new SearchApiIndex(array('machine_name' => $index_id));
       }
       $fields = $this->getFieldNames($index);
       $field_options = $index->options['fields'];
       $result = array(
         'id' => NULL,
-        'index_id' => $doc->index_id,
+        'index_id' => $index_id,
         'score' => NULL,
         'fields' => array(),
       );
-      $solr_id = $this->createId($doc->index_id, $doc->item_id);
+      $solr_id = $this->createId($index_id, $doc->item_id);
       foreach ($fields as $search_api_property => $solr_property) {
         if (isset($doc->{$solr_property})) {
           $value = $doc->{$solr_property};
@@ -2386,7 +2393,8 @@ class SearchApiSolrService extends SearchApiAbstractService {
         }
       }
 
-      $excerpt = $this->getExcerpt($response, $solr_id, $result['fields'], $fields, $search_fields);
+      $fulltext_fields = isset($fulltext_fields_by_index[$index_id]) ? $fulltext_fields_by_index[$index_id] : array();
+      $excerpt = $this->getExcerpt($response, $solr_id, $result['fields'], $fields, $fulltext_fields);
       if ($excerpt) {
         $result['excerpt'] = $excerpt;
       }
@@ -2620,6 +2628,29 @@ class SearchApiSolrService extends SearchApiAbstractService {
     // Prepend environment prefix.
     $id = variable_get('search_api_solr_index_prefix', '') . $id;
     return $id;
+  }
+
+  /**
+   * Retrieves the effective fulltext fields from the query.
+   *
+   * Automatically translates a NULL value in the query object to all fulltext
+   * fields in the search index.
+   *
+   * If a specific backend supports any "virtual" fulltext fields not listed in
+   * the index, it should override this method to add them, if appropriate.
+   *
+   * @param SearchApiQueryInterface $query
+   *   The search query.
+   *
+   * @return string[]
+   *   The fulltext fields in which to search for the search keys.
+   *
+   * @see SearchApiQueryInterface::getFields()
+   */
+  protected function getQueryFields(SearchApiQueryInterface $query) {
+    $fulltext_fields = $query->getFields();
+    $index_fields = $query->getIndex()->getFulltextFields();
+    return $fulltext_fields === NULL ? $index_fields : array_intersect($fulltext_fields, $index_fields);
   }
 
 }
