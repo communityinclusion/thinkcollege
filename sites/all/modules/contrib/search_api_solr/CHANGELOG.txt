@@ -1,5 +1,14 @@
 Search API Solr Search 1.x, dev (xxxx-xx-xx):
 ---------------------------------------------
+- #3012216 by drunken monkey: Fixed excerpts for multi-index search views.
+- #3013932 by drunken monkey, RajeevChoudhary: Fixed error with unset query
+  fields.
+- #3006424 by drunken monkey: Fixed problem when retrieving multi-valued date
+  fields.
+
+Search API Solr Search 1.14 (2018-10-10):
+-----------------------------------------
+- Security issue: Fixed possible information disclosure in generated excerpts.
 - #3003819 by mandclu, drunken monkey: Added support for indexing nested
   documents.
 
