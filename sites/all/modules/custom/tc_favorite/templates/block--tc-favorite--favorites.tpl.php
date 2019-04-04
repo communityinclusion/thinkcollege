@@ -4,17 +4,21 @@ $favorites = $variables['favorites'];
 $emailform = $variables['emailform'];
 
 if (count($favorites)) {
+  $downloadurl = '';
+  $lastElement = end($favorites);
   foreach($favorites as $nid => $title) {
     $titlelink = l($title, 'node/'. $nid);
     ?>
     <div class="saved"><p><a href="/collegesearch/favorite/remove/<?php print $nid ?>?destination=<?php print current_path() ?>">X</a> <?php print $titlelink ?></p></div>
     <?php
-  }
+    $downloadarray .= $title == $lastElement ? $nid : $nid . "%2B";
+    
+        }
   ?>
 
   <div class="btn-group">
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>
-    <a class="btn btn-default" href="collegesearch/favorites/my" role="button">See Favorites</a>
+    <a class="btn btn-default" href="collegesearch/favorites/my" role="button">See Favorites</a><a class="btn btn-default" href="/college-comparison/favorites/<?php print $downloadarray; ?>" role="button">Spreadsheet download</a>
   </div>
 
   <div class="modal fade" id="tc_favorite_email_modal" role="dialog">
