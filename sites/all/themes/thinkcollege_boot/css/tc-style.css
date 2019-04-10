@@ -796,3 +796,4 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
     height: 100%;
      }
 .page-college-comparison-chart .main-container,.page-college-comparison-chart .main-container div,.page-college-comparison-chart .view-content,.page-college-comparison-chart .view {overflow: visible; }
+.page-college-comparison-chart ol.breadcrumb { display: none; }
