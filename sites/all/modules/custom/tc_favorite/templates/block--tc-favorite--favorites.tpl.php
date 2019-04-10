@@ -18,7 +18,7 @@ if (count($favorites)) {
 
   <div class="btn-group">
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>
-    <a class="btn btn-default" href="collegesearch/favorites/my" role="button">See Favorites</a><a class="btn btn-default" href="/college-comparison/favorites/<?php print $downloadarray; ?>" role="button">Spreadsheet download</a>
+    <a class="btn btn-default" href="collegesearch/favorites/my" role="button">See Favorites</a><a class="btn btn-default" href="/college-comparison-chart/<?php print $downloadarray; ?>" role="button">Compare and download</a>
   </div>
 
   <div class="modal fade" id="tc_favorite_email_modal" role="dialog">
