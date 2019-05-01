@@ -3,7 +3,7 @@
     Find the College that is right for you!
   </h2>
 
-  <p class="lead">
+  <p>
     <img alt="Students on computers"
         src="<?php echo $info_img; ?>"
         style="float:right;padding:20px;" width="300px" />
