@@ -37,7 +37,7 @@ if (count($favorites)) {
   <?php
 } else {
   ?>
-  <div>Click the "Save" Button to add a program to this list.</div>
+  <div>Click "<i class="fa fa-heart" aria-hidden="true"></i> save" for each program you want to save. You will be able to save, compare and download basic information for all your favorites. <br> See FAQ: <a href="/faq#savelist">How do I save and compare programs?</a></div>
   <?php
 }
 
