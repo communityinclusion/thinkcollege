@@ -5,7 +5,7 @@
 
   <p>
     This directory includes information on <span style="color:#20527C"><?php echo $count; ?></span>
-    college programs for students with intellectual disability*. You can search by program name,
+    college programs for students with intellectual disability. You can search by program name,
      location, and other keywords. "Advanced Filters" offer more options to narrow your search.
   </p>
 
@@ -25,7 +25,7 @@
 
    <hr/>
    <p class="small clearfix">
-    *The information included here was submitted to Think College by the
+    The information included here was submitted to Think College by the
     college programs. Being listed here does not indicate or imply a
     Think College endorsement. There also may be programs available that
     have not reported to us. All programs listed here must be affiliated
