@@ -201,7 +201,6 @@ $classes .= ' node-program-record-full';
     <div class="col-md-5">
       <div class="print-block">
         <?php print theme('tc_favorite_button', array('nid' => $node->nid, 'size' => 'xs')); ?>
-        <a href="/print/<?php print $node->nid; ?>" type="button" class="btn btn-default btn-xs"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
         <a href="/printpdf/<?php print $node->nid; ?>" type="button" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Save to PDF</a>
       </div>
       <?php print render($content['field_lat_lon'][0]); ?>

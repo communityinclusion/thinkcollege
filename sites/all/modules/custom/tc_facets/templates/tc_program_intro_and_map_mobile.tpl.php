@@ -1,26 +1,26 @@
 <div class="info-box mobile">
   <h2 style="border-bottom: #ccc 1px solid; padding-bottom: 10px;">
-    Find the college that's right for you!
+    Find the College that is right for you!
   </h2>
 
-  <p class="lead">
+  <p>
     <img alt="Students on computers"
         src="<?php echo $info_img; ?>"
         style="float:right;padding:20px;" width="300px" />
 
-    Find and compare information on <span style="color:#20527C"><?php echo $count; ?></span>
-    college programs for students with intellectual disabilities! Search by
-    program name, location, and other keywords. See "Advanced Filters"
-    for more options to help you narrow your search
-    and build a list of schools that are a good match for you.
+    This directory includes information on <span style="color:#20527C"><?php echo $count; ?></span>
+    college programs for students with intellectual disability. You can search by program name,
+     location, and other keywords. "Advanced Filters" offer more options to narrow your search.
   </p>
 
-  <p>
-    Once you have located colleges you are interested in, download the
-    <a href="/sites/default/files/files/resources/HowTo%20TC_F.pdf">
-      How To Think College Guide to Conducting a College Search</a> (PDF).
-    It provides you with the right questions to ask in order to get the
-    answers you need about each program on your list.</p>
+   <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a> 
+     for answers to some general questions on college programs, how we gather the information 
+     in the directory, and how to use the features of College Search.</p>
+     
+     <p>Once you have located colleges you are interested in, download 
+       the <a href="/sites/default/files/files/resources/HowTo%20TC_F.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>. 
+       It provides you with the right questions to ask in order to get the answers
+       you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p>
 
   <hr/>
 

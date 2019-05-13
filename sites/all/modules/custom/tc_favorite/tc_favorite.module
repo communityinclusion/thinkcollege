@@ -145,7 +145,7 @@ function tc_favorite_block_view($delta = '') {
   $block = array();
   switch ($delta) {
     case 'tc_favorite_favorites':
-      $block['subject'] = t('Saved');
+      $block['subject'] = t('Favorites');
       $favorites_block_vars = _tc_favorite_favorites_block();
       $block['content'] = theme('block__tc_favorite__favorites', $favorites_block_vars);
       break;
