@@ -15,7 +15,7 @@ if (count($favorites)) {
     
         }
   ?>
-
+<div class="saved"<p><a href="/collegesearch/favorite/remove/clearall?destination=<?php print current_path() ?>"><span style="color: red;font-weight: bold">X</span> Clear all favorites</a></p></div>
   <div class="btn-group">
     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#tc_favorite_email_modal">Email</button>
     <a class="btn btn-default" href="collegesearch/favorites/my" role="button">See Favorites</a><a class="btn btn-default" href="/college-comparison-chart/<?php print $downloadarray; ?>" role="button">Compare and download</a>

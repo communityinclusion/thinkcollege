@@ -78,21 +78,26 @@ function _tc_favorite_favorite($nid) {
 function _tc_favorite_favorite_remove($nid) {
   // Keep things safe.
   $nid = check_plain($nid);
-  if (!intval($nid)) {
+  if (!intval($nid) && $nid !='clearall') {
     drupal_goto('<front>');
   };
+  if ($nid !='clearall') {
 
-  // Get existing favorites.
-  $favorites = array();
-  if (isset($_SESSION['tc_favorite'])) {
-    $favorites = unserialize($_SESSION['tc_favorite']);
+    // Get existing favorites.
+    $favorites = array();
+    if (isset($_SESSION['tc_favorite'])) {
+      $favorites = unserialize($_SESSION['tc_favorite']);
+    }
+
+    // Remove the favorite.
+    unset($favorites[$nid]);
+
+    // Save back to the session.
+    $_SESSION['tc_favorite'] = serialize($favorites);
+  } else {
+    unset($_SESSION['tc_favorite']);
+
   }
-
-  // Remove the favorite.
-  unset($favorites[$nid]);
-
-  // Save back to the session.
-  $_SESSION['tc_favorite'] = serialize($favorites);
 
   return drupal_goto(drupal_get_destination());
 }
