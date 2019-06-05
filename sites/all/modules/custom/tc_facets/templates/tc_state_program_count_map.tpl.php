@@ -305,7 +305,7 @@
                 font-family="Arial, sans-serif" font-weight="bold"
                 font-size="14px">
             <tspan dy="4.765625"
-                   class="statetext"><?php echo $states->{'West Virginia'}; ?></tspan>
+                   class="statetext"><?php if (isset($states->{'West Virginia'})) echo $states->{'West Virginia'}; ?></tspan>
           </text>
         </a>
       </g>
