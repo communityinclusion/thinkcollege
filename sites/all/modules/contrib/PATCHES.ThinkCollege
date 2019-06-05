@@ -10,3 +10,7 @@ https://www.drupal.org/files/issues/facetapi-2327997-15-show-fewer-links.patch.d
 How to apply patch:
 patch -p1 < facetapi-2327997-15-show-fewer-links.patch.diff
 
+6/5/19 - Mike Anello - michael@anelloconsulting.com
+PHP 7.2: Warning: count(): Parameter must be an array or an object that implements Countable a FacetapiDependencyFacet->getDefaultSettings()
+https://www.drupal.org/project/facetapi_bonus/issues/2938545
+Patch in comment 5 applied manually: https://www.drupal.org/files/issues/2018-09-04/non-countable-2938545-5.patch
