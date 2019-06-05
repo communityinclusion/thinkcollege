@@ -30,7 +30,8 @@ class FacetapiDependencyFacet extends FacetapiDependency {
     else {
       // Show this facet if no facet dependencies are configured.
       $facets = array_filter($this->settings['facets']);
-      if (!count($facets)) {
+      //if (!count($facets)) {
+      if (empty($facets)) {
         return;
       }
       else {
@@ -45,7 +46,8 @@ class FacetapiDependencyFacet extends FacetapiDependency {
               $items_string = trim($this->settings['facet_items_' . $facet_name]);
               $facet_items = drupal_explode_tags($items_string);
               // Show/hide if dependency is met without specific dependency items.
-              if (empty($items_string) || !count($facet_items)) {
+              //if (empty($items_string) || !count($facet_items)) {
+              if (empty($items_string) || empty($facet_items)) {
                 return !$this->settings['reverse_dependency'];
               }
               // Show/hide if dependency is met with specific dependency items.
@@ -136,7 +138,8 @@ class FacetapiDependencyFacet extends FacetapiDependency {
    * but the enabled facets are not known yet (afaik, hence the add. property)
    */
   public function getDefaultSettings() {
-    if (!count($this->defaultSettings)) {
+    //if (!count($this->defaultSettings)) {
+    if (empty($this->defaultSettings)) {
       $this->defaultSettings = array(
                                      'facets' => array(),
                                      'reverse_dependency' => FALSE,
