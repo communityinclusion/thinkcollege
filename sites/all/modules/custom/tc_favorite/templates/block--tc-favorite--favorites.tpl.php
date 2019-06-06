@@ -49,13 +49,14 @@ if (is_array($favorites)) {
           </div>
       </div>
     <?php
-  } else {
+  }
+} else {
     ?>
       <div>Click "<i class="fa fa-heart" aria-hidden="true"></i> save" to add
           programs to your favorites. You can then save, compare and download
           basic information for each one. <br> See FAQ: <a href="/faq#savelist">How
               do I save and compare programs?</a></div>
     <?php
-  }
 }
+
 
