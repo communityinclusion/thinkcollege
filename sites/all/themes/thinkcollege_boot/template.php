@@ -454,6 +454,7 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   if (array_key_exists('f', $_REQUEST)) {
     $x = $_REQUEST['f'];
     foreach ($x as $id => $crumb) {
+      $id++; // Bump the $id up by one to account for the "Home" breadcrumb.
       // If we have a search term, we need to skip it for replacement.
       if (isset($_REQUEST['search_api_views_fulltext'])) {
         if ($_REQUEST['search_api_views_fulltext']) {
@@ -491,6 +492,14 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
           }
           else {
             $breadcrumb[$id] = "Housing";
+          }
+          break;
+        case "tc_school_type:Other":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Other", "Other (type of school)", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Other (type of school)";
           }
           break;
       }
