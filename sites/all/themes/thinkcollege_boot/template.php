@@ -414,7 +414,7 @@ function thinkcollege_boot_breadcrumb($variables) {
     if (!drupal_is_front_page()) {
 
       // June, 2019 - save the most recent search URI for use in a breadcrumb on Program Record pages.
-      $_SESSION['tc_college_search_last'] = $_ENV['REQUEST_URI'];
+      $_SESSION['tc_college_search_last'] = $_SERVER['REQUEST_URI'];
 
       unset($breadcrumb[sizeof($breadcrumb) - 1]);
       array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
