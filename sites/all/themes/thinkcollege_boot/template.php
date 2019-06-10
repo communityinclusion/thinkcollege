@@ -412,6 +412,10 @@ function thinkcollege_boot_breadcrumb($variables) {
   // Special ordering in TC College search - for when search is at /college-search
   if (current_path() == "college-search") {
     if (!drupal_is_front_page()) {
+
+      // June, 2019 - save the most recent search URI for use in a breadcrumb on Program Record pages.
+      $_SESSION['tc_college_search_last'] = $_ENV['REQUEST_URI'];
+
       unset($breadcrumb[sizeof($breadcrumb) - 1]);
       array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
     }
@@ -419,6 +423,13 @@ function thinkcollege_boot_breadcrumb($variables) {
     else {
       array_splice($breadcrumb, 0, 0, '<a href="' . base_path() . '" class="active">Think College Search</a>');
     }
+  }
+
+  // June, 2019 - if the user is looking at a program record and there exists
+  // previous search criteria, then inject it into the breadcrumb.
+  if ((substr(request_path(), 0, 9) == 'programs/') &&
+      (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
   }
 
   // Special ordering in TC Resource search - for when search is at /resource-search
