@@ -26,7 +26,7 @@ if (is_array($favorites)) {
           <button type="button" class="btn btn-default" data-toggle="modal"
                   data-target="#tc_favorite_email_modal">Email
           </button>
-          <a class="btn btn-default" href="collegesearch/favorites/my"
+          <a class="btn btn-default" href="/collegesearch/favorites/my"
              role="button">See Favorites</a><a class="btn btn-default"
                                                href="/college-comparison-chart/<?php print $downloadarray; ?>"
                                                role="button">Compare and

@@ -425,10 +425,33 @@ function thinkcollege_boot_breadcrumb($variables) {
     }
   }
 
-  // June, 2019 - if the user is looking at a program record and there exists
-  // previous search criteria, then inject it into the breadcrumb.
+  // June, 2019 - add a breadcrumb to the College Search from the comparison chart
+  // and the FAQ.
+  if ((substr(request_path(), 0, 25) == 'college-comparison-chart/') || (substr(request_path(), 0, 17) == 'search/favorites/')) {
+    unset($breadcrumb[sizeof($breadcrumb) - 1]);
+    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
+  }
+
+  // June, 2019 - if the user is looking at one of the following pages and there exists
+  // previous search criteria, then inject it into the breadcrumb:
+  //  1. Program record page (programs/*)
+  //  2. Favorites page (search/favorites/*)
+  //  3. FAQ page (faq)
+  //  4. College Comparison page (college-comparison-chart/*)
   if ((substr(request_path(), 0, 9) == 'programs/') &&
-      (isset($_SESSION['tc_college_search_last']))) {
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
+  }
+  if ((substr(request_path(), 0, 17) == 'search/favorites/') &&
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
+  }
+  if ((substr(request_path(), 0, 3) == 'faq') &&
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 1, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
+  }
+  if ((substr(request_path(), 0,25) == 'college-comparison-chart/') &&
+    (isset($_SESSION['tc_college_search_last']))) {
     array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
   }
 
