@@ -525,6 +525,14 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
             $breadcrumb[$id] = "Housing";
           }
           break;
+        case "field_prog_district_only:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Not limited by district", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Not limited by district";
+          }
+          break;
         case "tc_school_type:Other":
           if (substr($breadcrumb[$id], 0, 2) == "<a") {
             $breadcrumb[$id] = _str_lreplace("Other", "Other (type of school)", $breadcrumb[$id]);
