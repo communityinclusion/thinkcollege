@@ -146,6 +146,16 @@ $classes .= ' node-program-record-card node-tc-card';
               </div>
             </div>
           </div>
+
+          <div class="col-sm-12">
+            <?php
+            if (isset($content['field_prog_district_only'])) {
+              if ($content['field_prog_district_only']['#items'][0]['value'] == 'Yes') {
+                print '<div class="alert alert-warning" role="alert">This program serves only students from selected school districts.</div>';
+              }
+            }
+            ?>
+          </div>
         </div>
       </div>
 
