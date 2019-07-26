@@ -49,6 +49,14 @@ article {
       font-family: "lato", sans-serif;
       color: #331d35;
 
+      .alert.tc-selected-districts {
+        font-size: 1.4rem;
+        background-image: url('/sites/all/themes/thinkcollege_boot/images/map-marker-blue.svg');
+        background-repeat: no-repeat;
+        background-position: 0.5em 50%;
+        padding-left: 3em;
+      }
+
       .program-heading {
         border-bottom: #ccc 1px solid;
         padding-bottom: 10px;
@@ -196,6 +204,22 @@ article {
   &.node-program-record-full {
     .program-box {
       margin-top: 20px;
+    }
+    .program_icon_box {
+      display: inline-block;
+    }
+    .bs-callout.tc-selected-districts {
+      font-size: 0.9em;
+      position: relative;
+      .program_icon_box {
+        position: absolute;
+        top: calc(50% - 23px);  // 23px is the height of the program_icon box.
+        left: 10px;
+      }
+      div.tc-selected-districts-message {
+        display: inline-block;
+        padding-left: 3em;
+      }
     }
   }
 }

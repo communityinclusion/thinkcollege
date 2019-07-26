@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /**
-testing jenkins 2
  * Default Variables.
  *
  * Modify this file to provide default Bootstrap Framework variables. The
@@ -7788,6 +7787,79 @@ button.close {
   border-radius: 4px;
 }
 
+.bs-callout {
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.bs-callout code {
+  border-radius: 3px;
+}
+
+.bs-callout + .bs-callout {
+  margin-top: -5px;
+}
+
+.bs-callout-default {
+  border-left-color: #777;
+}
+
+.bs-callout-default h4 {
+  color: #777;
+}
+
+.bs-callout-primary {
+  border-left-color: #428bca;
+}
+
+.bs-callout-primary h4 {
+  color: #428bca;
+}
+
+.bs-callout-success {
+  border-left-color: #5cb85c;
+}
+
+.bs-callout-success h4 {
+  color: #5cb85c;
+}
+
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+
+.bs-callout-info {
+  border-left-color: #337ab7;
+}
+
+.bs-callout-info h4 {
+  color: #337ab7;
+}
+
 article.node-program-record-card .program-search-program-name {
   border-bottom: none;
   display: block;
@@ -7835,6 +7907,14 @@ article.node-program-record-card .program-box, article.node-program-record-full 
   font-size: 1.6rem;
   font-family: "lato", sans-serif;
   color: #331d35;
+}
+
+article.node-program-record-card .program-box .alert.tc-selected-districts, article.node-program-record-full .program-box .alert.tc-selected-districts {
+  font-size: 1.4rem;
+  background-image: url("/sites/all/themes/thinkcollege_boot/images/map-marker-blue.svg");
+  background-repeat: no-repeat;
+  background-position: 0.5em 50%;
+  padding-left: 3em;
 }
 
 article.node-program-record-card .program-box .program-heading, article.node-program-record-full .program-box .program-heading {
@@ -7983,6 +8063,26 @@ article.node-program-record-card table.program-contact-info td, article.node-pro
 
 article.node-program-record-full .program-box {
   margin-top: 20px;
+}
+
+article.node-program-record-full .program_icon_box {
+  display: inline-block;
+}
+
+article.node-program-record-full .bs-callout.tc-selected-districts {
+  font-size: 0.9em;
+  position: relative;
+}
+
+article.node-program-record-full .bs-callout.tc-selected-districts .program_icon_box {
+  position: absolute;
+  top: calc(50% - 23px);
+  left: 10px;
+}
+
+article.node-program-record-full .bs-callout.tc-selected-districts div.tc-selected-districts-message {
+  display: inline-block;
+  padding-left: 3em;
 }
 
 /*---------------------------- HEADER ----------------------------*/

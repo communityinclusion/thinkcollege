@@ -135,6 +135,25 @@ $classes .= ' node-program-record-full';
         <?php endif ?>
       </div>
 
+      <?php
+      if (isset($content['field_prog_district_only'])) {
+        if ($content['field_prog_district_only']['#items'][0]['value'] == 'Yes') {
+          ?>
+            <div class="bs-callout bs-callout-info tc-selected-districts" role="alert">
+                <div class="program_icon_box">
+                    <div class="program_icon">
+                        <div class="map_icon">
+                            <img src="/sites/all/themes/thinkcollege_boot/images/map-marker-white.svg" alt="icon name">
+                        </div>
+                    </div>
+                </div>
+                <div class="tc-selected-districts-message"><strong>Note:</strong> Serves only students from <a href="#affiliates">selected school districts</a>.</div>
+            </div>
+          <?php
+        }
+      }
+      ?>
+
       <div class="well">
         <table class="program-contact-info">
           <tbody>
@@ -210,15 +229,6 @@ $classes .= ' node-program-record-full';
   <div class="row">
     <div class="col-md-12">
       <?php print render($content['body']); ?>
-    </div>
-    <div class="col-sm-12">
-      <?php
-      if (isset($content['field_prog_district_only'])) {
-        if ($content['field_prog_district_only']['#items'][0]['value'] == 'Yes') {
-          print '<br/><div class="alert alert-warning" role="alert">This program serves only students from selected school districts.</div>';
-        }
-      }
-      ?>
     </div>
   </div>
 

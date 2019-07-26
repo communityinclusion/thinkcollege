@@ -1,0 +1,31 @@
+<svg id="Blue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.001" height="30.001" viewBox="0 0 95 95">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fbfeff;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="16.594" y="1.281" width="62.344" height="93.5" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#3a77c0"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="41.656" y="14.5" width="11.406" height="33.781" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#3a77c0"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Shape_1_copy" data-name="Shape 1 copy" class="cls-1" d="M47.538,52.992A20.641,20.641,0,0,1,32.39,46.715a20.641,20.641,0,0,1-6.277-15.148A20.643,20.643,0,0,1,32.39,16.419a20.641,20.641,0,0,1,15.148-6.277,20.643,20.643,0,0,1,15.148,6.277,20.643,20.643,0,0,1,6.277,15.148,20.641,20.641,0,0,1-6.277,15.148A20.643,20.643,0,0,1,47.538,52.992ZM69.8,10.414a30.027,30.027,0,0,0-22.035-9.13,30.025,30.025,0,0,0-22.035,9.13A30.027,30.027,0,0,0,16.6,32.448a25.612,25.612,0,0,0,2.009,10.9s29.5,51.551,29.156,51.435C47.5,94.69,76.923,43.344,76.923,43.344a25.612,25.612,0,0,0,2.009-10.9A30.027,30.027,0,0,0,69.8,10.414Z"/>
+  <path id="_copy" data-name="! copy" class="cls-2" d="M41.642,14.506l4.011,24.341h2.671L53.056,14.7Zm2.085,28.552v5.149l6.394,0.07V43.058H43.727Z"/>
+</svg>

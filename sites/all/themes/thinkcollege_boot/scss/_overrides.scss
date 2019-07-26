@@ -66,6 +66,7 @@ $box-shadow-default: 0 0 7px 0 $gray-light;
 @import "mixins-flex";
 
 // Components
+@import "components/callouts";
 @import "components/program_record";
 @import 'components/header';
 @import 'components/footer';

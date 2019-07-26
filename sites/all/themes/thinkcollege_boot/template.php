@@ -237,6 +237,13 @@ function thinkcollege_boot_preprocess_node(&$vars) {
         $vars['tc_tpsid_icon'] = TRUE;
       }
     }
+
+    $vars['tc_selected_districts_icon'] = FALSE;
+    if (isset($node->field_prog_district_only['und'][0]['value'])) {
+      if ($node->field_prog_district_only['und'][0]['value'] == 'Yes') {
+        $vars['tc_selected_districts_icon'] = TRUE;
+      }
+    }
   }
 }
 
