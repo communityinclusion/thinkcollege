@@ -237,6 +237,13 @@ function thinkcollege_boot_preprocess_node(&$vars) {
         $vars['tc_tpsid_icon'] = TRUE;
       }
     }
+
+    $vars['tc_selected_districts_icon'] = FALSE;
+    if (isset($node->field_prog_district_only['und'][0]['value'])) {
+      if ($node->field_prog_district_only['und'][0]['value'] == 'Yes') {
+        $vars['tc_selected_districts_icon'] = TRUE;
+      }
+    }
   }
 }
 
@@ -368,9 +375,6 @@ function thinkcollege_boot_facetapi_title($variables) {
     case "Is/was this program a federally funded TPSID program? ":
       $variables['title'] = "Program is a federally funded TPSID program";
       break;
-    //case "TC:Dual Enrollment":
-     // $variables['title'] = "Program features";
-   //   break;
     case "TC:State/Province":
       $variables['title'] = "Location";
       break;
@@ -378,9 +382,9 @@ function thinkcollege_boot_facetapi_title($variables) {
       $variables['title'] = "Type of School";
       break;
   }
-   $title = "<div class='tc-facet-title'><span class='facet-title'>";
+  $title = "<div class='tc-facet-title'><span class='facet-title'>";
   $tit = t('@title', array('@title' => $variables['title']));
-  if ($variables['title'] == "TC:Dual Enrollment" || $variables['title'] == "TC:Financial Aid"  || $variables['title'] == "TC:Housing"  ) return ""; else return $title . $tit . "</span></div>"; 
+  if ($variables['title'] == "TC:Dual Enrollment" || $variables['title'] == "TC:Financial Aid"  || $variables['title'] == "TC:Housing"  || $variables['title'] == "TC:Particular school district") return ""; else return $title . $tit . "</span></div>";
 }
 
 /**
@@ -412,6 +416,10 @@ function thinkcollege_boot_breadcrumb($variables) {
   // Special ordering in TC College search - for when search is at /college-search
   if (current_path() == "college-search") {
     if (!drupal_is_front_page()) {
+
+      // June, 2019 - save the most recent search URI for use in a breadcrumb on Program Record pages.
+      $_SESSION['tc_college_search_last'] = $_SERVER['REQUEST_URI'];
+
       unset($breadcrumb[sizeof($breadcrumb) - 1]);
       array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
     }
@@ -419,6 +427,36 @@ function thinkcollege_boot_breadcrumb($variables) {
     else {
       array_splice($breadcrumb, 0, 0, '<a href="' . base_path() . '" class="active">Think College Search</a>');
     }
+  }
+
+  // June, 2019 - add a breadcrumb to the College Search from the comparison chart
+  // and the FAQ.
+  if ((substr(request_path(), 0, 25) == 'college-comparison-chart/') || (substr(request_path(), 0, 17) == 'search/favorites/')) {
+    unset($breadcrumb[sizeof($breadcrumb) - 1]);
+    array_splice($breadcrumb, 1, 0, '<a href="' . base_path() . 'college-search" class="active">Think College Search</a>');
+  }
+
+  // June, 2019 - if the user is looking at one of the following pages and there exists
+  // previous search criteria, then inject it into the breadcrumb:
+  //  1. Program record page (programs/*)
+  //  2. Favorites page (search/favorites/*)
+  //  3. FAQ page (faq)
+  //  4. College Comparison page (college-comparison-chart/*)
+  if ((substr(request_path(), 0, 9) == 'programs/') &&
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
+  }
+  if ((substr(request_path(), 0, 17) == 'search/favorites/') &&
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
+  }
+  if ((substr(request_path(), 0, 3) == 'faq') &&
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 1, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
+  }
+  if ((substr(request_path(), 0,25) == 'college-comparison-chart/') &&
+    (isset($_SESSION['tc_college_search_last']))) {
+    array_splice($breadcrumb, 2, 0, '<a href="' . check_plain($_SESSION['tc_college_search_last']) . '" class="active">Back to your search</a>');
   }
 
   // Special ordering in TC Resource search - for when search is at /resource-search
@@ -454,6 +492,7 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
   if (array_key_exists('f', $_REQUEST)) {
     $x = $_REQUEST['f'];
     foreach ($x as $id => $crumb) {
+      $id++; // Bump the $id up by one to account for the "Home" breadcrumb.
       // If we have a search term, we need to skip it for replacement.
       if (isset($_REQUEST['search_api_views_fulltext'])) {
         if ($_REQUEST['search_api_views_fulltext']) {
@@ -491,6 +530,22 @@ function _thinkcollege_boot_fix_yes_facets($breadcrumb) {
           }
           else {
             $breadcrumb[$id] = "Housing";
+          }
+          break;
+        case "field_prog_district_only:Yes":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Yes", "Not limited by district", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Not limited by district";
+          }
+          break;
+        case "tc_school_type:Other":
+          if (substr($breadcrumb[$id], 0, 2) == "<a") {
+            $breadcrumb[$id] = _str_lreplace("Other", "Other (type of school)", $breadcrumb[$id]);
+          }
+          else {
+            $breadcrumb[$id] = "Other (type of school)";
           }
           break;
       }

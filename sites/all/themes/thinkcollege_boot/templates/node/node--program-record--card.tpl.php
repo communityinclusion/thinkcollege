@@ -112,6 +112,14 @@ $classes .= ' node-program-record-card node-tc-card';
               </div>
             </div>
           <?php endif ?>
+
+          <?php if($tc_selected_districts_icon): ?>
+              <div class="program_icon">
+                  <div class="map_icon">
+                      <a href="#" data-toggle="tooltip" title="" data-original-title="Serves only students from selected school districts."><img src="<?php print $base_url . '/' . drupal_get_path('theme', 'thinkcollege_boot'); ?>/images/map-marker-white.svg" alt="icon name"></a>
+                  </div>
+              </div>
+          <?php endif ?>
         </div>
 
         <div class="program-search-program-name">
@@ -145,6 +153,16 @@ $classes .= ' node-program-record-card node-tc-card';
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="col-sm-12">
+            <?php
+            if (isset($content['field_prog_district_only'])) {
+              if ($content['field_prog_district_only']['#items'][0]['value'] == 'Yes') {
+                print '<div class="alert alert-info tc-selected-districts" role="alert">This program serves only students from selected school districts.</div>';
+              }
+            }
+            ?>
           </div>
         </div>
       </div>

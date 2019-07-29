@@ -41,6 +41,16 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
       switch ($bundle_type) {
         case 'program_record':
           /*
+           * "Serves students from all school districts" has a yes-no-N/A, and we just want yes/no.
+           * No & N/A are No.
+           */
+          $info['node']['bundles'][$bundle_type]['properties']['field_prog_district_only'] = array(
+            'type' => 'text',
+            'label' => 'TC:Particular school district',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_prog_district_only',
+          );
+          /*
            * Housing has a yes-no-N/A, and we just want yes/no.
            * No & N/A are No.
            */
@@ -261,8 +271,37 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
 }
 
 /**
+ * We need a list of Yes/No for "Does this program serve only students from a
+ * particular school district?".
+ * There is a N/A option along with yes/no that we are not interested in
+ * filtering on in search, so Yes = Yes, everything else  = No.
+ *
+ * This is a callback from hook_property_entity_info_alter().
+ *
+ * @param object $item
+ *    Node  - A Program Record CT.
+ *
+ * @return string
+ *    'Yes' or 'No'.
+ */
+function tc_program_record_properties_property_prog_district_only($item) {
+  if (array_key_exists('field_prog_district_only', $item)) {
+    if (array_key_exists(LANGUAGE_NONE, $item->field_prog_district_only)) {
+      if ($item->field_prog_district_only[LANGUAGE_NONE][0]['value']== "Yes") {
+        return("No");
+      }
+      else {
+        return("Yes");
+      }
+    }
+  }
+  // will be N/A
+  return "Yes";
+}
+
+/**
  * We need a list of Yes/No for Housing.
- * There is a N/A option alogn with yes/no that we are not interested in
+ * There is a N/A option along with yes/no that we are not interested in
  * filtering on in search, so Yes = Yes, everything else  = No.
  *
  * This is a callback from hook_property_entity_info_alter().

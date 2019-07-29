@@ -106,6 +106,7 @@ function _tc_favorite_favorite_remove($nid) {
  * Custom callback function for redirect the user to the view showing their favorites.
  */
 function _tc_favorite_favorites_my() {
+  global $base_url;
   $favorites_array = array();
   if (isset($_SESSION['tc_favorite'])) {
     $favorites_array = unserialize($_SESSION['tc_favorite']);
