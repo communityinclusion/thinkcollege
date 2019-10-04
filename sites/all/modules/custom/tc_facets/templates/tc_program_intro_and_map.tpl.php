@@ -14,7 +14,7 @@
      in the directory, and how to use the features of College Search.</p>
 
 <p>Once you have located colleges you are interested in, download 
-  the <a href="/sites/default/files/files/resources/HowTo%20TC_F.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>. 
+  the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>. 
   It provides you with the right questions to ask in order to get the answers
   you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p>
    <hr/>
