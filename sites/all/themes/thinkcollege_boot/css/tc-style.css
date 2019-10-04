@@ -797,3 +797,140 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
     height: 100%;
      }
 .page-college-comparison-chart .main-container,.page-college-comparison-chart .main-container div,.page-college-comparison-chart .view-content,.page-college-comparison-chart .view {overflow: visible; }
+
+
+/*-----flex cards ------*/
+
+.cards {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 1.5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  background: #fefff9;
+  color: #363636;
+  text-decoration: none;
+  -moz-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+@media (max-width: 680px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (min-width: 680px) {
+  .card {
+    max-width: 320px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1080px) {
+  .card:nth-child(even) {
+    margin-right: 20px;
+  }
+ /* .card:nth-child(3n) {
+    margin-right: 0;
+  }*/
+}
+.card div {
+  display: block;
+}
+.card .card-summary {
+  padding: 5% 5% 3% 5%;
+    display: block;
+}
+.card .card-header {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  background-blend-mode: overlay;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+}
+.card .card-header:hover, .card .card-header:focus {
+  background-color: rgba(255, 255, 255, 0);
+}
+.card .card-title {
+  background: rgba(32, 82, 123, 0.85);
+  padding: 3.5% 0 2.5% 0;
+  color: white;
+  font-family: 'museo sans condensed', sans-serif;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.card .card-title h3 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 0 3.5%;
+  margin: 0;
+}
+
+
+.card:hover, .card:focus {
+  background: white;
+  -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+     cursor: hand;
+}
+.card:hover .card-title, .card:focus .card-title {
+  background: rgba(201, 107, 41, 0.95);
+}
+/*
+
+.card div {
+  display:block;}
+
+div.card {
+    position: relative;
+
+
+}
+
+
+
+a.divLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE */
+}
+*/
