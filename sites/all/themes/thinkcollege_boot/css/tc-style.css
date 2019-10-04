@@ -844,19 +844,20 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
     margin-right: 0;
   }
 }
-@media (min-width: 980px) {
+@media (min-width: 1080px) {
   .card:nth-child(even) {
     margin-right: 20px;
   }
-  .card:nth-child(3n) {
+ /* .card:nth-child(3n) {
     margin-right: 0;
-  }
+  }*/
 }
 .card div {
   display: block;
 }
 .card .card-summary {
   padding: 5% 5% 3% 5%;
+    display: block;
 }
 .card .card-header {
   position: relative;
