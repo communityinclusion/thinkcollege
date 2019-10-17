@@ -806,15 +806,15 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 }
 
 .card + .card {
-    margin-top: 1.5rem;
+    margin-top: 24px;
 }
 
 @supports (display: grid) {
     .cards > ul {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-        grid-column-gap: 1.5rem;
-        grid-row-gap:1.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-column-gap: 24px;
+        grid-row-gap:24px;
     }
 
     .card + .card {
@@ -850,7 +850,7 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 
 
 .card .text {
-    padding: 1rem;
+    padding: 16px;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -861,7 +861,7 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 }
 
 .card .img {
-    height: 12rem;
+    height: 192px;
 
 }
 

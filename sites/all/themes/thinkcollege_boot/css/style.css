@@ -8694,7 +8694,6 @@ a.divLink {
   border-bottom: #fff solid 5px;
 }
 
-/*
 @media (max-width: 768px) {
   .ie-intro {
    	height:100%;
@@ -8711,7 +8710,6 @@ a.divLink {
 	  width:75px;
 	}
 }
-
 .row.is-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8733,8 +8731,6 @@ a.divLink {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-
-*/
 
 article.node-resource-teaser .resource-box {
   background-color: #fff;
