@@ -8711,7 +8711,7 @@ a.divLink {
 	  width:75px;
 	}
 }
-*/
+
 .row.is-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8733,6 +8733,8 @@ a.divLink {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
+*/
 
 article.node-resource-teaser .resource-box {
   background-color: #fff;
