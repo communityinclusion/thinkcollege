@@ -61,6 +61,7 @@ var unsaved = false;
 
 $(":input").change(function(){
     unsaved = true;
+    console.log(unsaved);
 });
 $("select").change(function(){
     unsaved = true;
@@ -68,8 +69,9 @@ $("select").change(function(){
 $('#edit-submit').on("click focus",function(){
     unsaved = false;
 });
-$(window).on('beforeunload', function(){
+$(window).on('beforeunload', function(e){
 if(unsaved) {
+    e.preventDefault();
     return "You have unsaved changes on this page. Do you want to leave this page and discard your changes or stay on this page?";
   }
 });
