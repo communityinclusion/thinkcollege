@@ -1098,11 +1098,21 @@ function _ckeditor_add_css_from_theme($current_theme, &$css_files) {
     $color_paths = variable_get('color_' . $current_theme . '_stylesheets', array());
     if (defined('LANGUAGE_RTL') && $language->direction == LANGUAGE_RTL) {
       if (!empty($color_paths[1])) {
-        $css_files[] = $host . $color_paths[1] . $query_string;
+        if (substr($color_paths[0], 0, 9) == 'public://') {
+          $css_files[] = file_create_url($color_paths[1]) . $query_string;
+        }
+        else {
+          $css_files[] = $host . $color_paths[1] . $query_string;
+        }
       }
     }
     elseif (!empty($color_paths[0])) {
-      $css_files[] = $host . $color_paths[0] . $query_string;
+      if (substr($color_paths[0], 0, 9) == 'public://') {
+        $css_files[] = file_create_url($color_paths[0]) . $query_string;
+      }
+      else {
+        $css_files[] = $host . $color_paths[0] . $query_string;
+      }
     }
   }
   else {
@@ -1316,6 +1326,9 @@ function ckeditor_load_by_field($field, $format, $show_toggle = TRUE, $add_field
     elseif (!empty($field["#language"]) && $field["#language"] != LANGUAGE_NONE) {
       drupal_add_js(array('ckeditor' => array('scayt_language' => ckeditor_scayt_langcode($field["#language"]))), 'setting');
     }
+
+    // Pass Drupal's JS cache-busting string via settings along to CKEditor.
+    drupal_add_js(array('ckeditor' => array('timestamp' => variable_get('css_js_query_string', '0'))), 'setting');
 
     // Remember extra information and reuse it during "Preview"
     $processed_ids[$field['#id']]['suffix'] = $suffix;
