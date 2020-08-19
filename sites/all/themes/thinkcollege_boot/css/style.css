@@ -10896,7 +10896,4 @@ header #views-exposed-form-tc-general-site-search-tc-general-search-block .tc-ge
 label[for="edit-field-i-confirm-this-program-s-i-und"] {font-weight: bold;}
 /* for tc webinars wistia embed  Note: page ids for dev site, my local and live site. PF */
 
-.page-node-4515 div.w-gallery-view__hero-content-wrapper.w-css-reset {height:185px !important;padding-top: 8px !important; min-height:185px !important;}
-
-.page-node-4207 div.w-gallery-view__hero-content-wrapper.w-css-reset {height:185px !important;padding-top: 8px !important; min-height:185px !important;}
-
+.page-node-4515 div.w-gallery-view__hero-content-wrapper.w-css-reset,.page-node-4519 div.w-gallery-view__hero-content-wrapper.w-css-reset,.page-node-4207 div.w-gallery-view__hero-content-wrapper.w-css-reset {height:185px !important;padding-top: 8px !important; min-height:185px !important;}
