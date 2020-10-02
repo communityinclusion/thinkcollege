@@ -77,6 +77,7 @@ if($form_id == 'program_record_node_form') {
 // $form_state['no_cache'] = TRUE;
   }
   if($theme == 'thinkcollege_boot'){
+    $form['revision_information']['#access'] = false;
     $form['#attached']['js'][]= drupal_get_path('theme', 'bootstrap') . '/js/misc/_vertical-tabs.js'; }
     if($form_id == 'program_record_node_form' && $theme == 'thinkcollege_boot') {$form['#attached']['js'][]= drupal_get_path('module', 'programnodeform') . '/js/programnodeform.js';
     $form['#attached']['css'][]= drupal_get_path('module', 'programnodeform') . '/css/programnodeform.css';
