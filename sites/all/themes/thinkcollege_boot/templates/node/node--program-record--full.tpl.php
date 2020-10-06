@@ -211,6 +211,8 @@ $classes .= ' node-program-record-full';
                 </td>
                 <td><?php print render($content['field_prog_program_website'][0]); ?></td>
               </tr>
+            <?php endif ?>
+            <?php if (isset($content['field_prog_facebook_page'][0])) : ?>
               <tr>
                 <td>
                   <?php
