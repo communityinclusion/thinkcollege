@@ -211,6 +211,19 @@ $classes .= ' node-program-record-full';
                 </td>
                 <td><?php print render($content['field_prog_program_website'][0]); ?></td>
               </tr>
+              <tr>
+                <td>
+                  <?php
+                  if (isset($content['field_prog_facebook_page']['#display_label'])) {
+                    print $content['field_prog_facebook_page']['#display_label'];
+                  }
+                  else {
+                    print $content['field_prog_facebook_page']['#title'];
+                  }
+                  ?>
+                </td>
+                <td><?php print render($content['field_prog_facebook_page'][0]); ?></td>
+              </tr>
             <?php endif ?>
           </tbody>
         </table>
