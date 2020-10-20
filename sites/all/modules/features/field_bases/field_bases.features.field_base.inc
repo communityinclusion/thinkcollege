@@ -1215,6 +1215,7 @@ else {
       'allowed_values' => array(
         'TPSID 2010-2015' => 'TPSID 2010-2015',
         'TPSID 2015-2020' => 'TPSID 2015-2020',
+        'TPSID 2020-2025' => 'TPSID 2020-2025',
         'No' => 'No',
       ),
       'allowed_values_function' => '',
@@ -2418,7 +2419,7 @@ else {
 
 $entity_field[0][\'value\'] = \'No\';
 foreach ($tpsid_values as $key => $tpsid_value) {
-  if ($tpsid_value[\'value\'] == \'TPSID 2015-2020\') {
+  if ($tpsid_value[\'value\'] == \'TPSID 2020-2025\') {
     $entity_field[0][\'value\'] = \'Yes\';
   }
 }',

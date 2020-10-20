@@ -386,7 +386,7 @@ function tc_program_record_properties_property_tpsid($item) {
 
   if (array_key_exists('field_prog_is_was_tpsid', $item)) {
     if (array_key_exists(LANGUAGE_NONE, $item->field_prog_is_was_tpsid)) {
-      if ($item->field_prog_is_was_tpsid[LANGUAGE_NONE][0]['value']== "TPSID 2015-2020" || $item->field_prog_is_was_tpsid[LANGUAGE_NONE][1]['value']== "TPSID 2015-2020") {
+      if ($item->field_prog_is_was_tpsid[LANGUAGE_NONE][0]['value']== "TPSID 2020-2025" || $item->field_prog_is_was_tpsid[LANGUAGE_NONE][1]['value']== "TPSID 2020-2025" || $item->field_prog_is_was_tpsid[LANGUAGE_NONE][2]['value']== "TPSID 2020-2025") {
         return("Yes");
       }
       else {
