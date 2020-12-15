@@ -615,6 +615,16 @@ ul.latest li:last-child {
 }
 
 /*----------------------------*/
+
+/*---- Blog -------*/
+
+
+.view-Blog .views-row .field .field-item .img-responsive {
+     float: left;
+    padding-right: 10px;
+}
+
+
 /* TPSID Projects Information page */
 .three-column-list {
 	-webkit-column-count:3;
