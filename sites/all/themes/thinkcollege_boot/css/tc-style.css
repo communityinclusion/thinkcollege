@@ -619,10 +619,24 @@ ul.latest li:last-child {
 /*---- Blog -------*/
 
 
-.view-Blog .views-row .field .field-item .img-responsive {
+.view-Blog .views-row .field .field-items .field-item .img-responsive {
      float: left;
     padding-right: 10px;
+    padding-bottom:10px;
 }
+
+
+.view-Blog .views-row {
+    border-bottom: 1px #ddd solid;
+    padding-bottom: 10px;
+}
+
+
+.region-sidebar-second .view-Blog .views-row {
+  border-bottom: none;
+}
+
+
 
 
 /* TPSID Projects Information page */
