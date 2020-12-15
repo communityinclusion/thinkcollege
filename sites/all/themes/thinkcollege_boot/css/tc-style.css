@@ -618,13 +618,11 @@ ul.latest li:last-child {
 
 /*---- Blog -------*/
 
-
-.view-Blog .views-row .field .field-items .field-item .img-responsive {
+.view-Blog .views-row .field .field-items .field-item img{
      float: left;
     padding-right: 10px;
     padding-bottom:10px;
 }
-
 
 .view-Blog .views-row {
     border-bottom: 1px #ddd solid;
