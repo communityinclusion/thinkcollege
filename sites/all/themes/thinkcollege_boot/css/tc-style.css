@@ -616,24 +616,6 @@ ul.latest li:last-child {
 
 /*----------------------------*/
 
-/*---- Blog -------*/
-
-.view-Blog .views-row .field .field-items .field-item img{
-     float: left;
-    padding-right: 10px;
-    padding-bottom:10px;
-}
-
-.view-Blog .views-row {
-    border-bottom: 1px #ddd solid;
-    padding-bottom: 10px;
-}
-
-
-.region-sidebar-second .view-Blog .views-row {
-  border-bottom: none;
-}
-
 
 
 
@@ -769,8 +751,49 @@ div.field-name-field-tags div.field-items div:last-child:after {
   content: "";
 }
 
+/*---- Blog -------*/
+
+.view-Blog .views-row .field .field-items .field-item img{
+     float: left;
+    padding-right: 10px;
+    padding-bottom:10px;
+        margin-bottom: 0;
+}
+
+.view-Blog .views-row {
+    border-bottom: 1px #ddd solid;
+    padding-bottom: 10px;
+}
 
 
+.region-sidebar-second .view-Blog .views-row {
+  border-bottom: none;
+}
+
+
+/* Blog Tag Styles */
+.field-name-field-blog-tags {margin-top:15px;}
+
+
+.field-name-field-blog-tags .field-item {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+
+div.field-name-field-blog-tags div.field-items div:after {
+  content: ",";
+}
+
+div.field-name-field-blog-tags div.field-items div:last-child:after {
+  content: "";
+}
+
+
+
+/* Blog Image */
+
+.node-blog-article .field-item img {margin:0 auto 30px auto}
 
 /* Back to top button */
 #backtotop {
