@@ -17,3 +17,13 @@ function admin_css_form_alter(&$form, &$form_state, $form_id) {
       drupal_get_path('module', 'admin_css') . '/js/jquery.matchHeight.js';
   }
 }
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function admin_css_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'ckeditor') {
+    
+    $settings['"extraAllowedContent'] = array('div[*];span[*];p[*];img[*];aside[*];button[*];li[*];ol[*];ul[*];nav[*];header[*];footer[*];section[*];form[*];object[*];embed[*];h1[*];h2[*];h3[*];h4[*];');
+    
+  }
+}
