@@ -770,6 +770,13 @@ div.field-name-field-tags div.field-items div:last-child:after {
   border-bottom: none;
 }
 
+.node-blog-article.node-teaser .field-name-field-image img{
+	     float: left;
+    padding-right: 10px;
+    padding-bottom:10px;
+        margin-bottom: 0;
+}
+
 
 /* Blog Tag Styles */
 .field-name-field-blog-tags {margin-top:15px;}
