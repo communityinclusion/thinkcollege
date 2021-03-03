@@ -8995,7 +8995,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 
 @media screen and (min-width: 768px) {
   .home-blogblock .view-Blog.pane-content .views-row {
-    width: 33%;
+    width: 31%;
   }
 }
 
@@ -9007,7 +9007,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 
 @media screen and (min-width: 1200px) {
   .home-blogblock .view-Blog .views-row {
-    width: 33%;
+    width: 31%;
   }
 }
 
