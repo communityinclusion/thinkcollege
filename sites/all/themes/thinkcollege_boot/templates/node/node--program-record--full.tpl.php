@@ -257,7 +257,7 @@ $classes .= ' node-program-record-full';
       isset($content['field_prog_when_will_progr_start']) ||
       isset($content['field_prog_summer_prog_y_n']) ||
       isset($content['field_prog_summer_descrip']) ||
-      isset($content['field_prog_summer_info_link'])):
+      isset($content['field_prog_summer_info_link']) || isset($content['field_prog_summer_prog_name'])):
   ?>
     <div class="program-box" id="general">
       <table class="table table-striped">
@@ -275,6 +275,7 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_hs_coll']); ?>
           <?php print render($content['field_how_many_students_total_at']); ?>
           <?php print render($content['field_prog_when_will_progr_start']); ?>
+          <?php print render($content['field_prog_summ_prog_nm_display']); ?>
           <?php print render($content['field_summer_program_display']); ?>
           <?php print render($content['field_prog_summer_info_link']); ?>
         </tbody>
@@ -306,9 +307,9 @@ $classes .= ' node-program-record-full';
   <?php
   if (isset($content['field_prog_admit_deadline']) ||
     isset($content['field_prog_admiss_link']) ||
-    isset($content['field_requirements_display']) ||
+    isset($content['field_prog_admiss_crit_display']) ||
     isset($content['field_disabilities_display_']) ||
-    isset($content['field_prog_length_years'])):
+    isset($content['field_prog_length_years']) || isset($content['field_prog_have_left_hs']) || isset($content['field_requirements_display'])):
     ?>
     <div class="program-box" id="requirements">
       <table class="table table-striped">
@@ -318,8 +319,11 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
+        <?php print render ($content['field_prog_have_left_hs']); ?>
+        <?php print render ($content['field_prog_hs_dipl_req']); ?>
         <?php print render($content['field_prog_admit_deadline']); ?>
         <?php print render($content['field_prog_admiss_link']); ?>
+        <?php print render($content['field_prog_admiss_crit_display']); ?>
         <?php print render($content['field_requirements_display']); ?>
         <?php print render($content['field_prog_out_of_stat']); ?>
         <?php print render($content['field_disabilities_display_']); ?>
@@ -332,7 +336,7 @@ $classes .= ' node-program-record-full';
   <?php
   if (isset($content['field_prog_explain_nums']) ||
     isset($content['field_admission_rate_display']) ||
-    isset($content['field_prog_retention_rate_displa'])):
+    isset($content['field_prog_retention_rate_displa']) || isset($content['field_prog_accept_rate']) || isset($content['field_prog_retention_rate'])):
     ?>
     <div class="program-box" id="acceptance-rates">
       <table class="table table-striped">
@@ -342,6 +346,9 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
+        
+        <?php print render($content['field_prog_accept_rate']); ?>
+        <?php print render($content['field_prog_retention_rate']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
         <?php print render($content['field_admission_rate_display']); ?>
         <?php print render($content['field_prog_retention_rate_displa']); ?>
@@ -351,7 +358,7 @@ $classes .= ' node-program-record-full';
   <?php endif ?>
 
   <?php
-  if (isset($content['field_tuition_display']) ||
+  if (isset($content['field_prog_tuition']) ||
       isset($content['field_prog_room_and_board_displa']) ||
       isset($content['field_prog_specific_fees_display']) ||
       isset($content['field_prog_cost_of_the_program']) ||
@@ -359,7 +366,7 @@ $classes .= ' node-program-record-full';
       isset($content['field_prog_ctp_y_n']) ||
       isset($content['field_prog_students_pay_display']) ||
       isset($content['field_prog_addl_scholarships']) ||
-      isset($content['field_prog_scholarship_link'])):
+      isset($content['field_prog_scholarship_link']) || isset($content['field_prog_out_of_stat_tuition'])):
   ?>
     <div class="program-box" id="cost">
       <table class="table table-striped">
@@ -369,7 +376,8 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
-        <?php print render($content['field_tuition_display']); ?>
+        <?php print render($content['field_prog_tuition']); ?>
+        <?php print render($content['field_prog_out_of_stat_tuition']); ?>
         <?php print render($content['field_prog_room_and_board_displa']); ?>
         <?php print render($content['field_prog_specific_fees_display']); ?>
         <?php print render($content['field_prog_cost_of_the_program']); ?>
@@ -390,7 +398,7 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_spec_courses_mor_info']) ||
     isset($content['field_prog_perc_acad_time']) ||
     isset($content['field_name_of_credential_degree_']) ||
-    isset($content['field_please_select_any_all_of_t'])):
+     isset($content['field_prog_cred_ihe_approv']) || isset($content['field_prog_other_credent']) || isset($content['field_prog_stem_cert']) || isset($content['field_prog_stem_courses'])):
     ?>
     <div class="program-box" id="academic">
       <table class="table table-striped">
@@ -403,10 +411,13 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_course_types']); ?>
         <?php print render($content['field_prog_more_course_detail']); ?>
         <?php print render($content['field_students_take_courses_disp']); ?>
+        <?php print render($content['field_prog_stem_courses']); ?>
         <?php print render($content['field_prog_spec_courses_mor_info']); ?>
         <?php print render($content['field_prog_perc_acad_time']); ?>
         <?php print render($content['field_name_of_credential_degree_']); ?>
-        <?php print render($content['field_please_select_any_all_of_t']); ?>
+        <?php print render($content['field_prog_cred_ihe_approv']); ?>
+        <?php print render($content['field_prog_other_credent']); ?>
+        <?php print render($content['field_prog_stem_cert']); ?>
         </tbody>
       </table>
     </div>
@@ -416,7 +427,7 @@ $classes .= ' node-program-record-full';
   if (isset($content['field_prog_perc_w_compet_employ']) ||
     isset($content['field_prog_other_career_display']) ||
     isset($content['field_prog_perc_employed_af_grad']) ||
-    isset($content['field_prog_vocational_credential'])):
+    isset($content['field_prog_vocational_credential']) || isset($content['field_prog_vr_partner'])):
     ?>
     <div class="program-box" id="employment">
       <table class="table table-striped">
@@ -430,6 +441,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_other_career_display']); ?>
         <?php print render($content['field_prog_perc_employed_af_grad']); ?>
         <?php print render($content['field_prog_vocational_credential']); ?>
+        <?php print render($content['field_prog_vr_partner']); ?>
         </tbody>
       </table>
     </div>
