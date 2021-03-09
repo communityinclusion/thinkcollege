@@ -760,7 +760,7 @@ div.field-name-field-tags div.field-items div:last-child:after {
         margin-bottom: 0;
 }
 
-.view-Blog .views-row {
+.view-Blog .views-row .node-blog-article {
     border-bottom: 1px #ddd solid;
     padding-bottom: 10px;
 }
