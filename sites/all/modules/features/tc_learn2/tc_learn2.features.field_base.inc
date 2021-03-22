@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_learn2.features.field_base.inc
@@ -57,6 +58,9 @@ function tc_learn2_field_default_field_bases() {
       'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
+          'er_viewmode_behavior' => array(
+            'status' => 0,
+          ),
           'views-select-list' => array(
             'status' => 0,
           ),

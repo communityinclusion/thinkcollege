@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_resource_search.facetapi_defaults.inc

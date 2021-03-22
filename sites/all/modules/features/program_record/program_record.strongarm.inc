@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * program_record.strongarm.inc
@@ -62,6 +63,27 @@ function program_record_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_program_record';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_program_record'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_program_record';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_program_record'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_program_record';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_program_record'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__program_record';
   $strongarm->value = array(
     'view_modes' => array(
@@ -111,26 +133,26 @@ function program_record_strongarm() {
           'weight' => '13',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '6',
         ),
         'feeds' => array(
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '4',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '15',
         ),
       ),
       'display' => array(
         'webform' => array(
           'default' => array(
-            'weight' => '30',
+            'weight' => '45',
             'visible' => FALSE,
           ),
           'card' => array(
-            'weight' => '77',
+            'weight' => '93',
             'visible' => FALSE,
           ),
           'modal' => array(
@@ -138,7 +160,7 @@ function program_record_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '92',
+            'weight' => '108',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -228,6 +250,7 @@ function program_record_strongarm() {
   $strongarm->name = 'node_options_program_record';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_program_record'] = $strongarm;
 
@@ -368,7 +391,7 @@ function program_record_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_pdf_pdf_tool';
-  $strongarm->value = 'print_pdf_wkhtmltopdf|sites/all/libraries/wkhtmltopdf/wkhtmltopdf';
+  $strongarm->value = 'print_pdf_wkhtmltopdf|/usr/local/bin/wkhtmltopdf';
   $export['print_pdf_pdf_tool'] = $strongarm;
 
   $strongarm = new stdClass();

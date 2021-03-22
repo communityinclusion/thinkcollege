@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * resources.strongarm.inc
@@ -203,6 +204,7 @@ function resources_strongarm() {
   $strongarm->name = 'node_options_resource';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_resource'] = $strongarm;
 

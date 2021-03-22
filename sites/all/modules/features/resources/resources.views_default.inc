@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * resources.views_default.inc

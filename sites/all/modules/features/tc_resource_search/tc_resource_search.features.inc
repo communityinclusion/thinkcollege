@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_resource_search.features.inc
@@ -29,7 +30,7 @@ function tc_resource_search_default_search_api_index() {
     "name" : "Resource Index",
     "machine_name" : "tc_resource_index",
     "description" : "Search Resources only for Think College using Solr",
-    "server" : "dev_solr_server",
+    "server" : "tc_solr",
     "item_type" : "node",
     "options" : {
       "datasource" : { "bundles" : [ "resource" ] },

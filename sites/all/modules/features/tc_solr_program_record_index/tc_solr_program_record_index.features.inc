@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_solr_program_record_index.features.inc
@@ -29,7 +30,7 @@ function tc_solr_program_record_index_default_search_api_index() {
     "name" : "Program Records Index",
     "machine_name" : "program_records_index",
     "description" : "Search Index for Program Records using Solr",
-    "server" : "dev_solr_server",
+    "server" : "tc_solr",
     "item_type" : "node",
     "options" : {
       "datasource" : { "bundles" : [ "program_record" ] },
@@ -57,7 +58,6 @@ function tc_solr_program_record_index_default_search_api_index() {
         "field_please_select_any_all_of_t" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_15_16_accepted" : { "type" : "integer" },
         "field_prog_accredited" : { "type" : "string" },
-        "field_prog_admiss_requirements" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_admit_deadline" : { "type" : "text" },
         "field_prog_age_range" : { "type" : "text" },
         "field_prog_col_univ_name" : { "type" : "text" },
@@ -66,6 +66,7 @@ function tc_solr_program_record_index_default_search_api_index() {
         "field_prog_course_types" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_credential" : { "type" : "string" },
         "field_prog_ctp_y_n" : { "type" : "string" },
+        "field_prog_district_only" : { "type" : "string" },
         "field_prog_housing_y_n" : { "type" : "string" },
         "field_prog_hs_coll" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_is_was_tpsid" : { "type" : "list\\u003Cstring\\u003E" },

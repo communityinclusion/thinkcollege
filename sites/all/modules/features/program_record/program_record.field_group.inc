@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * program_record.field_group.inc
@@ -28,9 +29,8 @@ function program_record_field_group_info() {
       2 => 'field_prog_spec_courses_mor_info',
       3 => 'field_prog_credential',
       4 => 'field_name_of_credential_degree_',
-      5 => 'field_please_select_any_all_of_t',
-      6 => 'field_prog_perc_acad_time',
-      7 => 'field_students_take_courses_disp',
+      5 => 'field_prog_perc_acad_time',
+      6 => 'field_students_take_courses_disp',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -43,7 +43,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_academic|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -67,6 +67,10 @@ function program_record_field_group_info() {
       6 => 'field_please_select_any_all_of_t',
       7 => 'field_prog_perc_acad_time',
       8 => 'field_prog_other_credent',
+      9 => 'field_prog__ihe_support_svces',
+      10 => 'field_prog_cred_ihe_approv',
+      11 => 'field_prog_stem_cert',
+      12 => 'field_prog_stem_courses',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -78,7 +82,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_acad|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -100,6 +104,8 @@ function program_record_field_group_info() {
       4 => 'field_prog_length_years',
       5 => 'field_prog_know_how_many',
       6 => 'field_prog_explain_nums',
+      7 => 'field_prog_accept_rate',
+      8 => 'field_prog_retention_rate',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -111,7 +117,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_accep_reten_complet|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -142,7 +148,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_accept_ret_comp|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -172,7 +178,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_affiliate|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -200,6 +206,8 @@ function program_record_field_group_info() {
       10 => 'field_prog_summer_info_link',
       11 => 'field_how_many_students_total_at',
       12 => 'field_prog_other_explain',
+      13 => 'field_prog_district_only',
+      14 => 'field_prog_summer_prog_name',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -211,7 +219,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_affiliate|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -247,7 +255,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_cost|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -275,6 +283,7 @@ function program_record_field_group_info() {
       10 => 'field_prog_scholarship_link',
       11 => 'field_prog_cost_y_n',
       12 => 'field_prog_costs_describe',
+      13 => 'field_prog_out_of_stat_tuition',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -286,7 +295,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_cost|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -317,7 +326,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_employment|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -348,7 +357,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_employment|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -378,7 +387,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_extracurr|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -403,7 +412,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_extracur|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -432,7 +441,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_housing|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -453,7 +462,6 @@ function program_record_field_group_info() {
       3 => 'field_prog_student_orgs_y_n',
       4 => 'field_prog_overall_time_dist',
       5 => 'field_prog_extracurric_explain',
-      6 => 'field_prog__ihe_support_svces',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -466,7 +474,7 @@ function program_record_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_prog_housing|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -491,7 +499,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_preliminary|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
@@ -512,7 +520,7 @@ function program_record_field_group_info() {
       'instance_settings' => array(),
     ),
   );
-  $field_groups['group_prog_priorities|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -538,7 +546,8 @@ function program_record_field_group_info() {
       8 => 'field_prog_serves_id',
       9 => 'field_prog_accredited',
       10 => 'field_address',
-      11 => 'title',
+      11 => 'field_prog_facebook_page',
+      12 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -550,7 +559,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_prog_info|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -568,11 +577,14 @@ function program_record_field_group_info() {
       0 => 'field_prog_admit_deadline',
       1 => 'field_prog_admiss_link',
       2 => 'field_prog_admiss_requirements',
-      3 => 'field_prog_out_of_stat',
-      4 => 'field_prog_age_range',
-      5 => 'field_prog_explain_other',
-      6 => 'field_prog_which_dis_specify',
-      7 => 'field_prog_which_disabilities',
+      3 => 'field_prog_age_range',
+      4 => 'field_prog_explain_other',
+      5 => 'field_prog_which_dis_specify',
+      6 => 'field_prog_which_disabilities',
+      7 => 'field_prog_out_of_stat',
+      8 => 'field_prog_have_left_hs',
+      9 => 'field_prog_admiss_criteria',
+      10 => 'field_prog_hs_dipl_req',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -584,7 +596,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_prog_requirements|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -603,6 +615,7 @@ function program_record_field_group_info() {
       1 => 'field_prog_admiss_link',
       2 => 'field_disabilities_display_',
       3 => 'field_requirements_display',
+      4 => 'field_prog_out_of_stat',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -615,7 +628,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_requir|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -628,7 +641,7 @@ function program_record_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'group_prog_academic',
       1 => 'group_prog_accept_ret_comp',
@@ -655,7 +668,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_prog_tabs|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -690,7 +703,7 @@ function program_record_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_program_info|node|program_record|default'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -725,7 +738,7 @@ function program_record_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_sections|node|program_record|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.

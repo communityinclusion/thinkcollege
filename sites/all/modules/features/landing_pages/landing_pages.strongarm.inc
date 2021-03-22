@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * landing_pages.strongarm.inc

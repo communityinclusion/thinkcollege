@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * field_bases.features.field_base.inc
@@ -741,38 +742,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'link_field',
-  );
-
-  // Exported field_base: 'field_prog_admiss_requirements'.
-  $field_bases['field_prog_admiss_requirements'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_admiss_requirements',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Regular high school diploma' => 'Regular high school diploma',
-        'Other diploma (e.g., IEP diploma, certificate of attendance)' => 'Other diploma (e.g., IEP diploma, certificate of attendance)',
-        'Age range ' => 'Age range (enter ages below)',
-        'Student must be their own legal guardian' => 'Student must be their own legal guardian',
-        'Student must be a resident of the state where the program is located' => 'Student must be a resident of the state where the program is located',
-        'Student must be enrolled in a particular school system/local educational agency' => 'Student must be enrolled in a particular school system/local educational agency',
-        'Other' => 'Other (explain below)',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_prog_admit_deadline'.
@@ -1815,33 +1784,6 @@ else {
     'type' => 'list_text',
   );
 
-   // Exported field_base: 'field_prog_out_of_stat'.
-  $field_bases['field_prog_out_of_stat'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_out_of_stat',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Yes' => 'Yes',
-        'No' => 'No',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_prog_retention_rate_displa'.
   $field_bases['field_prog_retention_rate_displa'] = array(
     'active' => 1,
@@ -2532,6 +2474,9 @@ foreach ($tpsid_values as $key => $tpsid_value) {
         '2018-2019' => '2018-2019',
         '2019-2020' => '2019-2020',
         '2020-2021' => '2020-2021',
+        '2021-2022' => '2021-2022',
+        '2022-2023' => '2022-2023',
+        '2023-2024' => '2023-2024',
       ),
       'allowed_values_function' => '',
       'allowed_values_php' => '',
@@ -3076,6 +3021,7 @@ else {
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',

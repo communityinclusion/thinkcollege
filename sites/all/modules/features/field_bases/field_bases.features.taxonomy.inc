@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * field_bases.features.taxonomy.inc
@@ -151,7 +152,7 @@ function field_bases_taxonomy_default_vocabularies() {
       'name' => 'Media Types',
       'machine_name' => 'media_types',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

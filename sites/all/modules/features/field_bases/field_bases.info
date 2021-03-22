@@ -44,7 +44,6 @@ features[field_base][] = field_prog_15_16_accepted
 features[field_base][] = field_prog_accredited
 features[field_base][] = field_prog_addl_scholarships
 features[field_base][] = field_prog_admiss_link
-features[field_base][] = field_prog_admiss_requirements
 features[field_base][] = field_prog_admit_deadline
 features[field_base][] = field_prog_age_range
 features[field_base][] = field_prog_check_save

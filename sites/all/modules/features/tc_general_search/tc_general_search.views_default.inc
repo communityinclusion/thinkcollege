@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_general_search.views_default.inc

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_learn2.strongarm.inc
@@ -96,10 +97,10 @@ function tc_learn2_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ical' => array(
         'custom_settings' => FALSE,
@@ -117,6 +118,9 @@ function tc_learn2_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'event_attachment' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -140,6 +144,14 @@ function tc_learn2_strongarm() {
           ),
           'full' => array(
             'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'search_index' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '4',
             'visible' => TRUE,
           ),
         ),

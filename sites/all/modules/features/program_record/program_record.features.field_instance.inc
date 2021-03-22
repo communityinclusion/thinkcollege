@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * program_record.features.field_instance.inc
@@ -350,6 +351,68 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-program_record-field_check_the_box_below_to_con'.
+  $field_instances['node-program_record-field_check_the_box_below_to_con'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 106,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_check_the_box_below_to_con',
+    'label' => 'Check the box below to confirm the status of your program information',
+    'required' => 0,
+    'settings' => array(
+      'form_display' => 'markup',
+      'text' => array(
+        'format' => 'full_html',
+        'value' => '<p><strong>Check the box below to confirm the status of your program information, then "Save."</strong></p>
+',
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'static_field',
+      'settings' => array(),
+      'type' => 'static_field',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_disabilities_display_'.
   $field_instances['node-program_record-field_disabilities_display_'] = array(
     'bundle' => 'program_record',
@@ -500,6 +563,68 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 28,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-program_record-field_i_confirm_this_program_s_i'.
+  $field_instances['node-program_record-field_i_confirm_this_program_s_i'] = array(
+    'bundle' => 'program_record',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 103,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_i_confirm_this_program_s_i',
+    'label' => 'I confirm this program\'s information is complete and up to date as of Spring 2020',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 3,
     ),
   );
 
@@ -1015,6 +1140,77 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_accept_rate'.
+  $field_instances['node-program_record-field_prog_accept_rate'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 71,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Acceptance rate for the most recent fall term',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_accept_rate',
+    'label' => 'What was your acceptance rate for the most recent fall term?',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '%',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 94,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_accredited'.
   $field_instances['node-program_record-field_prog_accredited'] = array(
     'bundle' => 'program_record',
@@ -1159,6 +1355,120 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-program_record-field_prog_admiss_crit_display'.
+  $field_instances['node-program_record-field_prog_admiss_crit_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 17,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 69,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Criteria for admission',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_admiss_crit_display',
+    'label' => 'Admission criteria',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_admiss_criteria'.
+  $field_instances['node-program_record-field_prog_admiss_criteria'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 70,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_admiss_criteria',
+    'label' => 'Admission criteria (select all that apply)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_admiss_link'.
   $field_instances['node-program_record-field_prog_admiss_link'] = array(
     'bundle' => 'program_record',
@@ -1218,6 +1528,7 @@ function program_record_field_default_field_instances() {
     'label' => 'Please provide a link to program\'s admissions process, if available',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1231,6 +1542,7 @@ function program_record_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Admissions link',
       'url' => 0,
@@ -1245,153 +1557,6 @@ function program_record_field_default_field_instances() {
       'weight' => 156,
     ),
   );
-
-  // Exported field_instance:
-  // 'node-program_record-field_prog_admiss_requirements'.
-  $field_instances['node-program_record-field_prog_admiss_requirements'] = array(
-    'bundle' => 'program_record',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 15,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 77,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 35,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 86,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-    ),
-    'display_label' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_prog_admiss_requirements',
-    'label' => 'Which of the following are basic requirements for admission to your program?',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 157,
-    ),
-  );
-
-
-  $field_instances['node-program_record-field_prog_out_of_stat'] = array(
-    'bundle' => 'program_record',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 14,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 14,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 24,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 14,
-      ),
-    ),
-    'display_label' => 'Accepts out-of-state students?:',
-    'entity_type' => 'node',
-    'field_name' => 'field_prog_out_of_stat',
-    'label' => 'Do you accept out-of-state students? (question added January 2019)',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 23,
-    ),
-  );
-
-
-
-
 
   // Exported field_instance: 'node-program_record-field_prog_admit_deadline'.
   $field_instances['node-program_record-field_prog_admit_deadline'] = array(
@@ -2036,6 +2201,63 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_cred_ihe_approv'.
+  $field_instances['node-program_record-field_prog_cred_ihe_approv'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 19,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 74,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_cred_ihe_approv',
+    'label' => 'Is the credential IHE-approved?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 103,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_credential'.
   $field_instances['node-program_record-field_prog_credential'] = array(
     'bundle' => 'program_record',
@@ -2178,6 +2400,64 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 123,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_district_only'.
+  $field_instances['node-program_record-field_prog_district_only'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 67,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'This program supports only transition students from certain districts.',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_district_only',
+    'label' => 'Does this program serve only students from a particular school district or districts?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 37,
     ),
   );
 
@@ -2469,6 +2749,141 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_facebook_page'.
+  $field_instances['node-program_record-field_prog_facebook_page'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Facebook',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_facebook_page',
+    'label' => 'Program Facebook page',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_allowed_values' => '',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => 'link to program Facebook page',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_have_left_hs'.
+  $field_instances['node-program_record-field_prog_have_left_hs'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 68,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Program serves students who have left high school?',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_have_left_hs',
+    'label' => 'Does this program serve students who have left high school?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 29,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_housing_y_n'.
   $field_instances['node-program_record-field_prog_housing_y_n'] = array(
     'bundle' => 'program_record',
@@ -2612,6 +3027,63 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 27,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_hs_dipl_req'.
+  $field_instances['node-program_record-field_prog_hs_dipl_req'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 26,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 77,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Regular H.S. diploma required?',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_hs_dipl_req',
+    'label' => 'Are students required to have a regular high school diploma to be admitted to this program?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 30,
     ),
   );
 
@@ -3658,6 +4130,150 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_out_of_stat'.
+  $field_instances['node-program_record-field_prog_out_of_stat'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+    ),
+    'display_label' => 'Accepts out-of-state students?:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_out_of_stat',
+    'label' => 'Do you accept out-of-state students? (question added January 2019)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-program_record-field_prog_out_of_stat_tuition'.
+  $field_instances['node-program_record-field_prog_out_of_stat_tuition'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 28,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 79,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Average out-of-state tuition, current year',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_out_of_stat_tuition',
+    'label' => 'Average out-of-state tuition, current year, if applicable',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '$',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 116,
+    ),
+  );
+
   // Exported field_instance:
   // 'node-program_record-field_prog_overall_time_dist'.
   $field_instances['node-program_record-field_prog_overall_time_dist'] = array(
@@ -4413,6 +5029,7 @@ function program_record_field_default_field_instances() {
     'label' => 'Program website',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -4426,6 +5043,7 @@ function program_record_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Program website',
       'url' => 0,
@@ -4510,6 +5128,77 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_retention_rate'.
+  $field_instances['node-program_record-field_prog_retention_rate'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 15,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 72,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Retention rate for first year students from the previous academic year to the current one',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_retention_rate',
+    'label' => 'What percentage of first year students in the last academic year returned for the current year? ',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '%',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 95,
     ),
   );
 
@@ -4772,6 +5461,7 @@ function program_record_field_default_field_instances() {
     'label' => 'Provide web links to scholarships available to students in your program',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -4785,6 +5475,7 @@ function program_record_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -5296,6 +5987,120 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_stem_cert'.
+  $field_instances['node-program_record-field_prog_stem_cert'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 21,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 73,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Do students earn STEM-related certificates?',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_stem_cert',
+    'label' => 'Do any of your students earn certificates related to STEM careers? (Science, Technology, Engineering or Math)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 105,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_stem_courses'.
+  $field_instances['node-program_record-field_prog_stem_courses'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 78,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 81,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Students take STEM-related courses?',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_stem_courses',
+    'label' => 'Do any of your students attend classes related to STEM-Science, Technology, Engineering or Math? ',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 97,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_student_orgs_y_n'.
   $field_instances['node-program_record-field_prog_student_orgs_y_n'] = array(
     'bundle' => 'program_record',
@@ -5643,6 +6448,63 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-program_record-field_prog_summ_prog_nm_display'.
+  $field_instances['node-program_record-field_prog_summ_prog_nm_display'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 25,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 75,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_summ_prog_nm_display',
+    'label' => 'Summer program name',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 26,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_summer_descrip'.
   $field_instances['node-program_record-field_prog_summer_descrip'] = array(
     'bundle' => 'program_record',
@@ -5772,6 +6634,7 @@ function program_record_field_default_field_instances() {
     'label' => 'Provide a link to information about your summer program, if available',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -5785,6 +6648,7 @@ function program_record_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Summer program information link',
       'url' => 0,
@@ -5797,6 +6661,76 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_summer_prog_name'.
+  $field_instances['node-program_record-field_prog_summer_prog_name'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 23,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => FALSE,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_link' => FALSE,
+          'trim_options' => array(),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 76,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_summer_prog_name',
+    'label' => 'Summer program name',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
     ),
   );
 
@@ -6816,23 +7750,33 @@ function program_record_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Address');
   t('Admission application deadline');
+  t('Admission criteria');
+  t('Admission criteria (select all that apply)');
   t('Admission rate (display)');
   t('Are students in this program able to access support services through your IHE disability services office?');
+  t('Are students required to have a regular high school diploma to be admitted to this program?');
+  t('Average out-of-state tuition, current year, if applicable');
   t('Can you provide specific dollar amounts for tuition, fees, room and board?');
   t('Can you tell us how many students applied to, were accepted to, or entered your program in the most recent academic year?');
   t('Career development (display)');
+  t('Check the box below to confirm the status of your program information');
   t('Check your information before and after saving');
   t('College/university where the program is located');
   t('Cost of the program (display)');
   t('Describe any scholarships to students in your program');
   t('Describe, as specifically as possible costs for tution, fees, room and board');
   t('Disabilities (display)');
+  t('Do any of your students attend classes related to STEM-Science, Technology, Engineering or Math? ');
+  t('Do any of your students earn certificates related to STEM careers? (Science, Technology, Engineering or Math)');
   t('Do students earn a credential of any kind when they complete this program?');
   t('Do students in your program join registered student organizations at the Institute of Higher Education (IHE)?');
   t('Do students take special courses that are only for students in this program? ');
+  t('Do you accept out-of-state students? (question added January 2019)');
   t('Do you offer a certificate or credential that has a specific career focus (e.g., business, culinary arts, etc.)? If so, describe');
   t('Does program offer housing for students?');
   t('Does this program have a working partnership with VR to provide funding, supports and/or services to students in the program?');
+  t('Does this program serve only students from a particular school district or districts?');
+  t('Does this program serve students who have left high school?');
   t('Does your program offer a summer transition program?');
   t('Enter required age range');
   t('Explain "other" requirements');
@@ -6849,11 +7793,13 @@ function program_record_field_default_field_instances() {
   t('How many students, total, attended this program in the most recently completed academic year?');
   t('How much academic time is spent only with other students in this program?');
   t('How much overall time on campus is spent only with other students in this program?');
+  t('I confirm this program\'s information is complete and up to date as of Spring 2020');
   t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');
   t('If you selected "Other" for type of school, above, explain here.');
   t('Instructions');
   t('Is the college or univ. where the program is located public or private institution? ');
+  t('Is the credential IHE-approved?');
   t('Is this program able to provide federal financial aid as a Comprehensive Transition Program (CTP)?');
   t('Is/was this program a federally funded TPSID program? ');
   t('Lat/Lon');
@@ -6877,6 +7823,7 @@ function program_record_field_default_field_instances() {
   t('Program Contact Person');
   t('Program Description');
   t('Program Email');
+  t('Program Facebook page');
   t('Program contact person phone');
   t('Program specific fees (display)');
   t('Program specific fees (numbers and decimals only, no commas or dollar signs)');
@@ -6896,6 +7843,7 @@ function program_record_field_default_field_instances() {
   t('Students pay (display)');
   t('Students take courses (display)');
   t('Summer program (display)');
+  t('Summer program name');
   t('TPSID (display)');
   t('This program is operated by and/or is a program of an accredited institute of higher education.');
   t('This program serves students who meet the definition of intellectual disability. ');
@@ -6905,9 +7853,9 @@ function program_record_field_default_field_instances() {
   t('What % of students in the most recently completed academic year had paid, competitive, integrated work while in the program? ');
   t('What is the planned length of this program?');
   t('What other types of career development activities do students participate in (check all that apply)?');
+  t('What percentage of first year students in the last academic year returned for the current year? ');
   t('What type of school is this?');
-  t('Which of the following are basic requirements for admission to your program?');
-  t('Do you accept out-of-state students? (question added January 2019)');
+  t('What was your acceptance rate for the most recent fall term?');
 
   return $field_instances;
 }

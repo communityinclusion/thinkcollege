@@ -2,17 +2,17 @@
 
 /**
  * @file
- * tc_learn2.features.taxonomy.inc
+ * ymstuff.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function tc_learn2_taxonomy_default_vocabularies() {
+function ymstuff_taxonomy_default_vocabularies() {
   return array(
-    'think_college_learn' => array(
-      'name' => 'Think College Learn',
-      'machine_name' => 'think_college_learn',
+    'site_section' => array(
+      'name' => 'Section',
+      'machine_name' => 'site_section',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

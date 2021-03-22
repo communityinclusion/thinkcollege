@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_learn2.features.field_instance.inc
@@ -97,7 +98,7 @@ function tc_learn2_field_default_field_instances() {
   // Exported field_instance: 'node-tc_learn-field_feature_in_section'.
   $field_instances['node-tc_learn-field_feature_in_section'] = array(
     'bundle' => 'tc_learn',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -243,6 +244,7 @@ function tc_learn2_field_default_field_instances() {
         'module' => 'er_viewmode',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'card',
         ),
         'type' => 'entityreference_entity_view',
@@ -253,6 +255,7 @@ function tc_learn2_field_default_field_instances() {
         'module' => 'er_viewmode',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'card',
         ),
         'type' => 'entityreference_entity_view',
@@ -277,6 +280,7 @@ function tc_learn2_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'entityreference_autocreate' => 0,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,

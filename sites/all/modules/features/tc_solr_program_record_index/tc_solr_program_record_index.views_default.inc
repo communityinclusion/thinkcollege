@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_solr_program_record_index.views_default.inc

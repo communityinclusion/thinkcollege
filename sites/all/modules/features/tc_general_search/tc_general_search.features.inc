@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_general_search.features.inc
@@ -32,7 +33,7 @@ function tc_general_search_default_search_api_index() {
     "name" : "General Site Search",
     "machine_name" : "general_site_search",
     "description" : "TC Solr general site search.",
-    "server" : "dev_solr_server",
+    "server" : "tc_solr",
     "item_type" : "node",
     "options" : {
       "datasource" : { "bundles" : [

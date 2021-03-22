@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tc_learn2.ds.inc
@@ -42,6 +43,20 @@ function tc_learn2_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'body',
+        1 => 'field_feature_in_section',
+      ),
+      'right' => array(
+        2 => 'field_tc_learn_sidebar',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'field_feature_in_section' => 'left',
+      'field_tc_learn_sidebar' => 'right',
+    ),
     'classes' => array(),
     'wrappers' => array(
       'left' => 'div',
@@ -53,26 +68,6 @@ function tc_learn2_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => 0,
-    'regions' => array(
-      'left' => array(
-        0 => 'body',
-        1 => 'field_tc_learn_modules',
-        2 => 'field_feature_in_section',
-        3 => 'field_resourc_topics',
-        4 => 'webform',
-      ),
-      'right' => array(
-        0 => 'field_tc_learn_sidebar',
-      ),
-    ),
-    'fields' => array(
-      'body' => 'left',
-      'field_tc_learn_modules' => 'left',
-      'field_feature_in_section' => 'left',
-      'field_resourc_topics' => 'left',
-      'webform' => 'left',
-      'field_tc_learn_sidebar' => 'right',
-    ),
   );
   $export['node|tc_learn|default'] = $ds_layout;
 
@@ -86,20 +81,14 @@ function tc_learn2_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'comments',
-        1 => 'body',
-        2 => 'field_resourc_topics',
-        3 => 'webform',
+        0 => 'body',
       ),
       'right' => array(
-        4 => 'field_tc_learn_sidebar',
+        1 => 'field_tc_learn_sidebar',
       ),
     ),
     'fields' => array(
-      'comments' => 'left',
       'body' => 'left',
-      'field_resourc_topics' => 'left',
-      'webform' => 'left',
       'field_tc_learn_sidebar' => 'right',
     ),
     'classes' => array(),
@@ -113,6 +102,8 @@ function tc_learn2_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => 0,
+    'hide_page_title' => '0',
+    'page_option_title' => '',
   );
   $export['node|tc_learn|full'] = $ds_layout;
 
