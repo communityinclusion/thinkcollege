@@ -244,7 +244,7 @@ $classes .= ' node-program-record-full';
   <div class="row">
     <div class="col-md-12">
       <?php print render($content['body']); ?>
-      
+
       <?php $submitdate = isset($content['field_prog_submit_date']) ? date("F j, Y", strtotime($node->field_prog_submit_date['und'][0]['value'])) : null;
        print $submitdate ? "<p><strong>Program information submitted: $submitdate</strong></p>" : "<p><strong>Program information submitted a year or more ago</strong></p>"; ?>
     </div>
@@ -488,6 +488,6 @@ $classes .= ' node-program-record-full';
     </div>
   <?php endif ?>
 
-  <div class="tc-node-last-updated">Last updated: <?php print format_date($node->changed, 'long'); ?></div>
+ 
 
 </article>
