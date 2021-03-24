@@ -350,8 +350,6 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_accept_rate']); ?>
         <?php print render($content['field_prog_retention_rate']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
-        <?php print render($content['field_admission_rate_display']); ?>
-        <?php print render($content['field_prog_retention_rate_displa']); ?>
         </tbody>
       </table>
     </div>
