@@ -362,7 +362,7 @@ $classes .= ' node-program-record-full';
       isset($content['field__prog_room_and_board']) ||
       isset($content['field_prog_specific_fees']) ||
       isset($content['field_prog_cost_of_the_program']) ||
-      isset($content['field_prog_other_costs_display']) ||
+      isset($content['field_prog_other_costs']) ||
       isset($content['field_prog_ctp_y_n']) ||
       isset($content['field_prog_students_pay_display']) ||
       isset($content['field_prog_addl_scholarships']) ||
@@ -381,7 +381,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['ffield__prog_room_and_board']); ?>
         <?php print render($content['field_prog_specific_fees']); ?>
         <?php print render($content['field_prog_cost_of_the_program']); ?>
-        <?php print render($content['field_prog_other_costs_display']); ?>
+        <?php print render($content['field_prog_other_costs']); ?>
         <?php print render($content['field_prog_ctp_y_n']); ?>
         <?php print render($content['field_prog_students_pay_display']); ?>
         <?php print render($content['field_prog_addl_scholarships']); ?>
