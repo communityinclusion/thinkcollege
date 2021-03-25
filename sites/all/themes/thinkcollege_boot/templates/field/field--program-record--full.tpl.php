@@ -72,6 +72,7 @@ $nontablefields = array(
 
 ?>
 
+
 <?php if (in_array($element['#field_name'], $nontablefields)): ?>
   <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <?php if (!$label_hidden): ?>
