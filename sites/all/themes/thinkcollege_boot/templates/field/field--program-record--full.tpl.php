@@ -67,6 +67,7 @@ $nontablefields = array(
   'field_prog_program_contact_email',
   'field_prog_contact_phone',
   'field_prog_program_website',
+  'field_prog_summer_info_link',
   'body',
 );
 
