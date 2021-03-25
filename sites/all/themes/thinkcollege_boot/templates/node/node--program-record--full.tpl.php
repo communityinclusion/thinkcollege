@@ -278,7 +278,7 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_hs_coll']); ?>
           <?php print render($content['field_how_many_students_total_at']); ?>
           <?php print render($content['field_prog_when_will_progr_start']); ?>
-          <?php print render($content['field_prog_summ_prog_name']); ?>
+          <?php print render($content['field_prog_summer_prog_name']); ?>
           <?php print render($content['field_summer_program_display']); ?>
           <?php print render($content['field_prog_summer_info_link']); ?>
         </tbody>
