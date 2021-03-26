@@ -280,14 +280,10 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_when_will_progr_start']); ?>
           <?php print render($content['field_prog_summer_prog_name']); ?>
           <?php print render($content['field_summer_program_display']); ?>
-          <?php
-          $field = field_get_items('node', $node, 'field_prog_summer_info_link'); 
-         // print render($field[0]['url']);
-          //echo $output;
-          
-          print"<tr><td><strong>Summer program link: </strong></td><td>";print render($content['field_prog_summer_info_link'][0]); print "</td></tr>"; ?>
+          <?php print"<tr><td><strong>Summer program link: </strong></td><td>"; 
+            print render($content['field_prog_summer_info_link'][0]); 
+            print "</td></tr>"; ?>
   
-          <?php //print render(field_view_field('node', $node, 'field_prog_summer_info_link')); ?>
           
           
         </tbody>
@@ -390,7 +386,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['ffield__prog_room_and_board']); ?>
         <?php print render($content['field_prog_specific_fees']); ?>
         <?php print render($content['field_prog_cost_of_the_program']); ?>
-        <?php print render($content['field_prog_other_costs']); ?>
+        <?php print render($content['field_prog_other_costs_display']); ?>
         <?php print render($content['field_prog_ctp_y_n']); ?>
         <?php print render($content['field_prog_students_pay_display']); ?>
         <?php print render($content['field_prog_addl_scholarships']); ?>
