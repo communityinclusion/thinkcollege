@@ -133,16 +133,16 @@ function program_record_strongarm() {
           'weight' => '13',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '15',
         ),
         'feeds' => array(
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '18',
         ),
         'redirect' => array(
-          'weight' => '15',
+          'weight' => '24',
         ),
       ),
       'display' => array(
@@ -160,7 +160,7 @@ function program_record_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '108',
+            'weight' => '97',
             'visible' => FALSE,
           ),
           'teaser' => array(

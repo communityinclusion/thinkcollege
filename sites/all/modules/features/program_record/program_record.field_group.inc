@@ -29,8 +29,9 @@ function program_record_field_group_info() {
       2 => 'field_prog_spec_courses_mor_info',
       3 => 'field_prog_credential',
       4 => 'field_name_of_credential_degree_',
-      5 => 'field_prog_perc_acad_time',
-      6 => 'field_students_take_courses_disp',
+      5 => 'field_please_select_any_all_of_t',
+      6 => 'field_prog_perc_acad_time',
+      7 => 'field_students_take_courses_disp',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -64,13 +65,12 @@ function program_record_field_group_info() {
       3 => 'field_prog_spec_courses_mor_info',
       4 => 'field_prog_credential',
       5 => 'field_name_of_credential_degree_',
-      6 => 'field_please_select_any_all_of_t',
-      7 => 'field_prog_perc_acad_time',
-      8 => 'field_prog_other_credent',
-      9 => 'field_prog__ihe_support_svces',
-      10 => 'field_prog_cred_ihe_approv',
-      11 => 'field_prog_stem_cert',
-      12 => 'field_prog_stem_courses',
+      6 => 'field_prog_perc_acad_time',
+      7 => 'field_prog_other_credent',
+      8 => 'field_prog__ihe_support_svces',
+      9 => 'field_prog_cred_ihe_approv',
+      10 => 'field_prog_stem_cert',
+      11 => 'field_prog_stem_courses',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -97,15 +97,10 @@ function program_record_field_group_info() {
     'label' => 'Acceptance, Retention and Completion Rates',
     'weight' => '5',
     'children' => array(
-      0 => 'field_prog_num_applied',
-      1 => 'field_prog_15_16_accepted',
-      2 => 'field_prog_new_studt_f14',
-      3 => 'field_prog_studt_retn_f15',
-      4 => 'field_prog_length_years',
-      5 => 'field_prog_know_how_many',
-      6 => 'field_prog_explain_nums',
-      7 => 'field_prog_accept_rate',
-      8 => 'field_prog_retention_rate',
+      0 => 'field_prog_length_years',
+      1 => 'field_prog_explain_nums',
+      2 => 'field_prog_accept_rate',
+      3 => 'field_prog_retention_rate',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -281,9 +276,7 @@ function program_record_field_group_info() {
       8 => 'field_prog_other_costs_amount',
       9 => 'field_prog_addl_scholarships',
       10 => 'field_prog_scholarship_link',
-      11 => 'field_prog_cost_y_n',
-      12 => 'field_prog_costs_describe',
-      13 => 'field_prog_out_of_stat_tuition',
+      11 => 'field_prog_out_of_stat_tuition',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -392,31 +385,6 @@ function program_record_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_prog_extracur|node|program_record|form';
-  $field_group->group_name = 'group_prog_extracur';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'program_record';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_sections';
-  $field_group->data = array(
-    'label' => 'Extracurricular',
-    'weight' => '10',
-    'children' => array(),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_prog_housing|node|program_record|default';
   $field_group->group_name = 'group_prog_housing';
   $field_group->entity_type = 'node';
@@ -502,27 +470,6 @@ function program_record_field_group_info() {
   $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_prog_priorities|node|program_record|default';
-  $field_group->group_name = 'group_prog_priorities';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'program_record';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Top three program priorities',
-    'weight' => '13',
-    'children' => array(),
-    'format_type' => 'hidden',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(),
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_prog_prog_info|node|program_record|form';
@@ -547,7 +494,8 @@ function program_record_field_group_info() {
       9 => 'field_prog_accredited',
       10 => 'field_address',
       11 => 'field_prog_facebook_page',
-      12 => 'title',
+      12 => 'field_prog_submit_date',
+      13 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -576,15 +524,14 @@ function program_record_field_group_info() {
     'children' => array(
       0 => 'field_prog_admit_deadline',
       1 => 'field_prog_admiss_link',
-      2 => 'field_prog_admiss_requirements',
-      3 => 'field_prog_age_range',
-      4 => 'field_prog_explain_other',
-      5 => 'field_prog_which_dis_specify',
-      6 => 'field_prog_which_disabilities',
-      7 => 'field_prog_out_of_stat',
+      2 => 'field_prog_age_range',
+      3 => 'field_prog_explain_other',
+      4 => 'field_prog_which_dis_specify',
+      5 => 'field_prog_which_disabilities',
+      6 => 'field_prog_out_of_stat',
+      7 => 'field_prog_admiss_criteria',
       8 => 'field_prog_have_left_hs',
-      9 => 'field_prog_admiss_criteria',
-      10 => 'field_prog_hs_dipl_req',
+      9 => 'field_prog_hs_dipl_req',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -723,11 +670,10 @@ function program_record_field_group_info() {
       2 => 'group_prog_affiliate',
       3 => 'group_prog_cost',
       4 => 'group_prog_employment',
-      5 => 'group_prog_extracur',
-      6 => 'group_prog_housing',
-      7 => 'group_prog_preliminary',
-      8 => 'group_prog_prog_info',
-      9 => 'group_prog_requirements',
+      5 => 'group_prog_housing',
+      6 => 'group_prog_preliminary',
+      7 => 'group_prog_prog_info',
+      8 => 'group_prog_requirements',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -761,7 +707,6 @@ function program_record_field_group_info() {
   t('Requirements');
   t('Requirements for Attendance');
   t('Tabs');
-  t('Top three program priorities');
 
   return $field_groups;
 }

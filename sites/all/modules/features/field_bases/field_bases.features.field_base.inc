@@ -485,36 +485,6 @@ else {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_please_select_any_all_of_t'.
-  $field_bases['field_please_select_any_all_of_t'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_please_select_any_all_of_t',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'IHE approved' => 'Approved by Institute of Higher Education',
-        'Continuing education credential' => 'Continuing education credential',
-        'Awarded by program not officially recognized by IHE' => 'Awarded by program, not officially recognized by Institute of Higher Education',
-        'Open to all students at the IHE' => 'Open to all students at Institute of Higher Education',
-        'Just for students in this program' => 'Just for students in this program',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_prof_name'.
   $field_bases['field_prof_name'] = array(
     'active' => 1,
@@ -649,23 +619,6 @@ else {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prog_15_16_accepted'.
-  $field_bases['field_prog_15_16_accepted'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_15_16_accepted',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'number_integer',
-  );
-
   // Exported field_base: 'field_prog_accredited'.
   $field_bases['field_prog_accredited'] = array(
     'active' => 1,
@@ -788,23 +741,6 @@ else {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_prog_check_save'.
-  $field_bases['field_prog_check_save'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_check_save',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'static_field',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'static_field',
-  );
-
   // Exported field_base: 'field_prog_col_univ_name'.
   $field_bases['field_prog_col_univ_name'] = array(
     'active' => 1,
@@ -893,54 +829,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'computed',
-  );
-
-  // Exported field_base: 'field_prog_cost_y_n'.
-  $field_bases['field_prog_cost_y_n'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_cost_y_n',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Yes' => 'Yes',
-        'No' => 'No, but I can provide an estimate or range of costs.',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_prog_costs_describe'.
-  $field_bases['field_prog_costs_describe'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_costs_describe',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_prog_course_types'.
@@ -1195,34 +1083,6 @@ else {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prog_know_how_many'.
-  $field_bases['field_prog_know_how_many'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_know_how_many',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'Yes' => 'Yes, can enter numbers below',
-        'No' => 'No, Don\'t have those figures available',
-        'Other' => 'Need to explain below',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_prog_length_years'.
   $field_bases['field_prog_length_years'] = array(
     'active' => 1,
@@ -1272,40 +1132,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'text_long',
-  );
-
-  // Exported field_base: 'field_prog_new_studt_f14'.
-  $field_bases['field_prog_new_studt_f14'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_new_studt_f14',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'number_integer',
-  );
-
-  // Exported field_base: 'field_prog_num_applied'.
-  $field_bases['field_prog_num_applied'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_num_applied',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'number_integer',
   );
 
   // Exported field_base: 'field_prog_other_career_dev'.
@@ -2249,23 +2075,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_prog_studt_retn_f15'.
-  $field_bases['field_prog_studt_retn_f15'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_studt_retn_f15',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'number',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'number_integer',
   );
 
   // Exported field_base: 'field_prog_summer_descrip'.

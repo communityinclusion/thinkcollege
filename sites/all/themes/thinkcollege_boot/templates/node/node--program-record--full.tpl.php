@@ -246,7 +246,7 @@ $classes .= ' node-program-record-full';
       <?php print render($content['body']); ?>
 
       <?php $submitdate = isset($content['field_prog_submit_date']) ? date("F j, Y", strtotime($node->field_prog_submit_date['und'][0]['value'])) : null;
-       print $submitdate ? "<p><strong>Program information submitted: $submitdate</strong></p>" : "<p><strong>Program information submitted a year or more ago</strong></p>"; ?>
+       print $submitdate ? "<p style=\"text-align:right;padding-top: 15px;\"><em>Program information submitted: $submitdate</em></p>" : "<p style=\"text-align:right;padding-top: 15px;\"><em>Program information submitted a year or more ago</em></p>"; ?>
     </div>
   </div>
 

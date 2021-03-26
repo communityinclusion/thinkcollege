@@ -180,7 +180,7 @@ function landing_pages_default_page_manager_pages() {
     'title' => 'NEW PUBLICATIONS!',
     'title_heading' => 'h3',
     'body' => '<div class="media">
-<h4><a href="/sites/default/files/files/resources/ModelProgramAccreditationStandards_10-2020_fnl.pdf">Model Program Accreditation Standards</a></h4>
+<h4><a href="https://thinkcollege.net/sites/default/files/files/resources/ModelProgramAccreditationStandards2020_fnl_2.pdf">Model Program Accreditation Standards</a></h4>
 
 <div class="media-left"><img alt="Report cover" src="/sites/default/files/images/thumbs/ModelProgramAccreditationStandards-thumb.png" style="float:left; height:100px; margin:5px 5px 30px; width:88px" /></div>
 
@@ -223,6 +223,42 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-046e2da7-e811-4be1-a69a-7a45c2e9bcee'] = $pane;
   $display->panels['row3left'][0] = 'new-046e2da7-e811-4be1-a69a-7a45c2e9bcee';
   $pane = new stdClass();
+  $pane->pid = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
+  $pane->panel = 'row3right';
+  $pane->type = 'views';
+  $pane->subtype = 'blog';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '3',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'block_1',
+    'override_title' => 1,
+    'override_title_text' => 'INSIDE THINK COLLEGE BLOG | LATEST POSTS',
+    'override_title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'box-blue home-blogblock',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7cce9073-4200-4949-abc1-e0a8602e2ff7';
+  $display->content['new-7cce9073-4200-4949-abc1-e0a8602e2ff7'] = $pane;
+  $display->panels['row3right'][0] = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
+  $pane = new stdClass();
   $pane->pid = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $pane->panel = 'row3right';
   $pane->type = 'views_panes';
@@ -236,11 +272,11 @@ function landing_pages_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '5f60030e-d864-4f92-b158-7fa0a5083588';
   $display->content['new-5f60030e-d864-4f92-b158-7fa0a5083588'] = $pane;
-  $display->panels['row3right'][0] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
+  $display->panels['row3right'][1] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $pane = new stdClass();
   $pane->pid = 'new-a4b05725-cbac-4129-8c2d-1ac46b436bbc';
   $pane->panel = 'row4left';

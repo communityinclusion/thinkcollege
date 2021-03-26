@@ -11,49 +11,6 @@
 function program_record_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_check_the_box_below_to_con'.
-  $field_bases['field_check_the_box_below_to_con'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_check_the_box_below_to_con',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'static_field',
-    'settings' => array(
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'static_field',
-  );
-
-  // Exported field_base: 'field_i_confirm_this_program_s_i'.
-  $field_bases['field_i_confirm_this_program_s_i'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_i_confirm_this_program_s_i',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => 'not complete 2020',
-        1 => 'complete 2020',
-      ),
-      'allowed_values_function' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
-  );
-
   // Exported field_base: 'field_prog__ihe_support_svces'.
   $field_bases['field_prog__ihe_support_svces'] = array(
     'active' => 1,
@@ -355,6 +312,33 @@ else {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_prog_out_of_stat'.
+  $field_bases['field_prog_out_of_stat'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_out_of_stat',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Yes' => 'Yes',
+        'No' => 'No',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_php' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_prog_out_of_stat_tuition'.
   $field_bases['field_prog_out_of_stat_tuition'] = array(
     'active' => 1,
@@ -441,6 +425,28 @@ else {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_submit_date'.
+  $field_bases['field_prog_submit_date'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_submit_date',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_prog_summ_prog_nm_display'.
