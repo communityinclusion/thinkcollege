@@ -383,7 +383,7 @@ $classes .= ' node-program-record-full';
         <tbody>
         <?php print render($content['field_prog_tuition']); ?>
         <?php print render($content['field_prog_out_of_stat_tuition']); ?>
-        <?php print render($content['ffield__prog_room_and_board']); ?>
+        <?php print render($content['field__prog_room_and_board']); ?>
         <?php print render($content['field_prog_specific_fees']); ?>
         <?php print render($content['field_prog_cost_of_the_program']); ?>
         <?php print render($content['field_prog_other_costs_display']); ?>
