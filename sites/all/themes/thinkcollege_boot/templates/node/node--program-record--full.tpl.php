@@ -416,6 +416,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_course_types']); ?>
         <?php print render($content['field_prog_more_course_detail']); ?>
         <?php print render($content['field_students_take_courses_disp']); ?>
+        <?php print render($content['field_prog__ihe_support_svces']); ?>
         <?php print render($content['field_prog_stem_courses']); ?>
         <?php print render($content['field_prog_spec_courses_mor_info']); ?>
         <?php print render($content['field_prog_perc_acad_time']); ?>
