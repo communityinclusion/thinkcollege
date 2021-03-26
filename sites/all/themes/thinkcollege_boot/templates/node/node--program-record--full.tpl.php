@@ -280,7 +280,16 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_when_will_progr_start']); ?>
           <?php print render($content['field_prog_summer_prog_name']); ?>
           <?php print render($content['field_summer_program_display']); ?>
-          <?php print render($content['field_prog_summer_info_link']); ?>
+          <?php
+          $field = field_get_items('node', $node, 'field_prog_summer_info_link'); 
+         // print render($field[0]['url']);
+          //echo $output;
+          
+          print"<tr><td><strong>Summer program link: </strong></td><td>";print render($content['field_prog_summer_info_link'][0]); print "</td></tr>"; ?>
+  
+          <?php //print render(field_view_field('node', $node, 'field_prog_summer_info_link')); ?>
+          
+          
         </tbody>
       </table>
     </div>
