@@ -79,6 +79,10 @@ foreach ($type_values as $key => $type_value) {
   if ($type_value[\'value\'] == \'Age range\') {
     $output[] = \'Age range: \' . $age_range;
   }
+
+ else if ($type_value[\'value\'] == \'legal guardian\') {
+    $output[] = \' The student is not under guardianship\';
+  }
   else if ($type_value[\'value\'] == \'Other\') {
     $output[] = $other_value;
   }
