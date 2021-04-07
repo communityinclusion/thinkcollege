@@ -1,7 +1,7 @@
 <div class="info-box mobile">
-  <h2 style="border-bottom: #ccc 1px solid; padding-bottom: 10px;">
-    Find the College that is right for you!
-  </h2>
+  <h1 style="border-bottom: #ccc 1px solid; padding-bottom: 10px;">
+      College Search
+  </h1>
 
   <p>
     <img alt="Students on computers"
@@ -13,12 +13,12 @@
      location, and other keywords. "Advanced Filters" offer more options to narrow your search.
   </p>
 
-   <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a> 
-     for answers to some general questions on college programs, how we gather the information 
+   <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a>
+     for answers to some general questions on college programs, how we gather the information
      in the directory, and how to use the features of College Search.</p>
-     
-     <p>Once you have located colleges you are interested in, download 
-       the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>. 
+
+     <p>Once you have located colleges you are interested in, download
+       the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>.
        It provides you with the right questions to ask in order to get the answers
        you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p>
 
