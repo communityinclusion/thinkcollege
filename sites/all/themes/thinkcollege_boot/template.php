@@ -163,6 +163,7 @@ function thinkcollege_boot_preprocess_page(&$vars) {
   }
   */
 
+
   // Add logos template
   $vars['think_college_logo'] = file_create_url(drupal_get_path('theme', 'thinkcollege_boot') . '/images/thinkcollege_new_white-sm.png');
 }

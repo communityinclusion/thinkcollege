@@ -8091,6 +8091,8 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
 }
 
 /*---------------------------- NAVIGATION ----------------------------*/
+
+/*
 .close-ribbon {
   position: absolute;
   top: -50px;
@@ -8119,6 +8121,7 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
   border-style: solid;
   border-color: transparent transparent #B71C1C #B71C1C;
 }
+*/
 
 .navbar-default {
   margin: 0 0 40px;
@@ -8238,12 +8241,14 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
   color: #fff;
 }
 
+/*
 @media screen and (min-width: 768px) {
   ul.navbar-nav {
     margin-left: 140px;
   }
 }
 
+*/
 .navbar-nav .dropdown-menu {
   border-radius: 0;
   border: 0;
@@ -9307,6 +9312,8 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 
 
   You can add these variables to your _base.scss */
+
+  /*
 #block-superfish-3 .sf-style-none {
   float: left;
   margin-left: 140px;
@@ -9560,7 +9567,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 .sf-menu.sf-style-none li.sf-depth-2, .sf-menu.sf-style-none li.sf-depth-3, .sf-menu.sf-style-none li.sf-depth-4 {
   font-size: .9em;
 }
-
+*/
 /*
 
   /*Events landing page -- unformatted list
