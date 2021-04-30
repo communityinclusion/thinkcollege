@@ -7751,31 +7751,6 @@ button.close {
   }
 }
 
-.box-blue, .pane-tc-resource-tc-resource-find-blue, .box-orange, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row, .info-box, .box, .pane-tc-resource-tc-resource-find {
-  -webkit-box-shadow: 0 0 7px 0 #AAA;
-  -moz-box-shadow: 0 0 7px 0 #AAA;
-  box-shadow: 0 0 7px 0 #AAA;
-  -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #fff;
-  border-top: 10px solid #20527C;
-  padding: 20px;
-  margin-bottom: 25px;
-}
-
-.box-orange, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row {
-  border-top-color: #C96B29;
-}
-
-.ie-pane .pane-title, .pane-whats-new-panel-pane-1 .pane-title, .ie-news .pane-title, .pane-upcoming-events-panel-pane-1 .pane-title, #faq .pane-title {
-  border-bottom: 4px solid #20527C;
-  color: #20527C;
-  font-family: "museo-sans-condensed", sans-serif;
-  font-size: 24px;
-  text-transform: uppercase;
-}
 
 .secnav-blue {
   -webkit-box-shadow: 0 0 7px 0 #AAA;
@@ -8947,6 +8922,38 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   margin-top: 0 !important;
 }
 
+
+
+
+
+/* Landing Page blocks/panel pane's */
+
+.box-blue, .pane-tc-resource-tc-resource-find-blue, .box-orange, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row, .info-box, .box, .pane-tc-resource-tc-resource-find, .home-featuredblock .pane-content .row .bscol {
+  -webkit-box-shadow: 0 0 7px 0 #AAA;
+  -moz-box-shadow: 0 0 7px 0 #AAA;
+  box-shadow: 0 0 7px 0 #AAA;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  border-top: 10px solid #20527C;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.box-orange, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row, .home-featuredblock .pane-content .row .bscol  {
+  border-top-color: #C96B29;
+}
+
+.ie-pane .pane-title, .pane-whats-new-panel-pane-1 .pane-title, .ie-news .pane-title, .pane-upcoming-events-panel-pane-1 .pane-title, #faq .pane-title, .home-featuredblock .pane-title {
+  border-bottom: 4px solid #20527C;
+  color: #20527C;
+  font-family: "museo-sans-condensed", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 .node-type-resource h1.page-header {
   display: none;
 }
@@ -8973,7 +8980,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 }
 
 @media screen and (min-width: 768px) {
-  .home-featurednews .view-whats-new.content-pane .view-content, .home-blogblock .pane-content .view-blog .view-content {
+  .home-featurednews .view-whats-new.content-pane .view-content, .home-blogblock .pane-content .view-blog .view-content, .home-featuredblock .pane-content .row {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -8988,12 +8995,12 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   }
 }
 
-.home-featurednews .view-whats-new.content-pane .views-row, .home-blogblock .view-blog .view-content .views-row{
+.home-featurednews .view-whats-new.content-pane .views-row, .home-blogblock .view-blog .view-content .views-row, .home-featuredblock .pane-content .row .bscol{
   padding: 0 10px 10px 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .home-featurednews .view-whats-new.content-pane .views-row {
+  .home-featurednews .view-whats-new.content-pane .views-row, .home-featuredblock .pane-content .row .bscol {
     width: 22%;
   }
 }
@@ -9005,7 +9012,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 }
 
 @media screen and (min-width: 1200px) {
-  .home-featurednews .view-whats-new.content-pane .views-row {
+  .home-featurednews .view-whats-new.content-pane .views-row, .home-featuredblock .pane-content .row .bscol {
     width: 23%;
   }
 }
@@ -9023,11 +9030,8 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 }
 }
 
-.home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image, .home-blogblock .view-blog .view-content .views-field-field-image {
-  margin: 0 -10px 15px -10px;
-}
 
-.home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image img,  .home-blogblock .view-blog .view-content .views-field-field-image img {
+.home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image img,  .home-blogblock .view-blog .view-content .views-field-field-image img, .home-featuredblock .pane-content .row .bscol img  {
   width: 100%;
 }
 
@@ -9090,9 +9094,11 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   }
 }
 
-.ie-news .view-whats-new.content-pane .views-field-field-teaser-image {
+
+.home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image, .home-blogblock .view-blog .view-content .views-field-field-image, .ie-news .view-whats-new.content-pane .views-field-field-teaser-image{
   margin: 0 -10px 15px -10px;
 }
+
 
 .ie-news .view-whats-new.content-pane .views-field-field-teaser-image img {
   width: 100%;
@@ -9198,6 +9204,22 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   padding: 10px;
 }
 
+
+
+@media screen and (min-width: 992px) {
+#vertical .view-content .view-upcoming-events .views-row {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+#vertical .view-upcoming-events .views-row {
+    width: 100%;
+  }
+}
+
+
+
 @media screen and (min-width: 992px) {
   .view-upcoming-events .views-row {
     width: 47.5%;
@@ -9209,6 +9231,8 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
     width: 48%;
   }
 }
+
+
 
 .view-upcoming-events .event-date {
   background-color: #20527C;
@@ -9255,6 +9279,11 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   font-weight: 600;
   text-align: right;
 }
+
+
+
+
+/* FAQ's */
 
 #faq .ui-state-default, #faq .ui-widget-content .ui-state-default, #faq .ui-widget-header .ui-state-default {
   border: #f2f2f2 solid 1px;
