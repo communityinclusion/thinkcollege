@@ -3,6 +3,7 @@
  Drupal.behaviors.groupTopics = {
    
      attach: function (context, settings) {
+       
       if(!$('.form-item-field-resourc-topics-und p.warnSelect').length) { $('.form-item-field-resourc-topics-und label').after('<p class="warnSelect">Be careful selecting topics in the list below.  Use Cmd-click to insert on a Mac, or Ctrl-click on a Windows computer, if you think there may be previously selected topics. Otherwise, you may de-select topics that are already selected.</p>'); }
       if (!$('.form-item-field-resourc-authors-und p.warnSelect').length) {
 
