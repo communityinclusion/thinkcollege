@@ -8995,30 +8995,30 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   }
 }
 
-.home-featurednews .view-whats-new.content-pane .views-row, .home-blogblock .view-blog .view-content .views-row, .home-featuredblock .pane-content .row .bscol{
+.home-featurednews .view-whats-new.content-pane .views-row, .home-blogblock .view-blog .view-content .views-row {
   padding: 0 10px 10px 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .home-featurednews .view-whats-new.content-pane .views-row, .home-featuredblock .pane-content .row .bscol {
+  .home-featurednews .view-whats-new.content-pane .views-row {
     width: 22%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .home-blogblock .view-Blog.pane-content .views-row, .view-family-resources-block .view-content .famcol {
+  .home-blogblock .view-Blog.pane-content .views-row, .home-featuredblock .view-family-resources-block .view-content .views-row {
     width: 31%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .home-featurednews .view-whats-new.content-pane .views-row, .home-featuredblock .pane-content .row .bscol, .view-family-resources-block .view-content .famcol  {
+  .home-featurednews .view-whats-new.content-pane .views-row {
     width: 23%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .home-blogblock .view-blog .views-row {
+  .home-blogblock .view-blog .views-row, .home-featuredblock .view-family-resources-block .view-content .views-row {
     width: 31%;
   }
 }
@@ -9031,7 +9031,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 }
 
 
-.home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image img,  .home-blogblock .view-blog .view-content .views-field-field-image img, .home-featuredblock .pane-content .row .bscol img  {
+.home-featurednews .view-whats-new.content-pane .views-field-field-teaser-image img,  .home-blogblock .view-blog .view-content .views-field-field-image img, .home-featuredblock .view-family-resources-block .view-content .views-row  img  {
   width: 100%;
 }
 
@@ -9043,7 +9043,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   margin-top: 10px;
 }
 
-.home-featurednews .view-whats-new.content-pane .views-field-body, .home-blogblock .view-blog .view-content .views-field-body {
+.home-featurednews .view-whats-new.content-pane .views-field-body, .home-blogblock .view-blog .view-content .views-field-body, .home-featuredblock .view-family-resources-block .view-content .views-field-body {
   font-size: 14px;
   line-height: 21px;
 }
