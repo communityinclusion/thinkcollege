@@ -8942,11 +8942,26 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   margin-bottom: 25px;
 }
 
+
+.home-famblock .view-family-resources-block .view-content .views-row {
+  -webkit-box-shadow: 0 0 7px 0 #AAA;
+  -moz-box-shadow: 0 0 7px 0 #AAA;
+  box-shadow: 0 0 7px 0 #AAA;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 25px;
+}
+
+
+
 .box-orange, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row, .home-featuredblock .pane-content .row .bscol  {
   border-top-color: #C96B29;
 }
 
-.ie-pane .pane-title, .pane-whats-new-panel-pane-1 .pane-title, .ie-news .pane-title, .pane-upcoming-events-panel-pane-1 .pane-title, #faq .pane-title, .home-featuredblock .pane-title {
+.ie-pane .pane-title, .pane-whats-new-panel-pane-1 .pane-title, .ie-news .pane-title, .pane-upcoming-events-panel-pane-1 .pane-title, #faq .pane-title, .home-featuredblock .pane-title, .home-famblock .pane-title {
   border-bottom: 4px solid #20527C;
   color: #20527C;
   font-family: "museo-sans-condensed", sans-serif;
@@ -8995,7 +9010,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   }
 }
 
-.home-featurednews .view-whats-new.content-pane .views-row, .home-blogblock .view-blog .view-content .views-row, .home-featuredblock .pane-content .row .bscol, .home-famblock .view-family-resources-block .view-content .views-row{
+.home-featurednews .view-whats-new.content-pane .views-row, .home-blogblock .view-blog .view-content .views-row, .home-featuredblock .pane-content .row .bscol, .home-famblock .view-family-resources-block .view-content .views-field.views-field-image,.home-famblock .view-family-resources-block .view-content .views-field.views-field-body {
   padding: 0 10px 10px 10px;
 }
 
@@ -9042,6 +9057,15 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   margin-bottom: 5px;
   margin-top: 10px;
 }
+
+
+
+.home-famblock .view-family-resources-block .views-field.views-field-title {
+    color: #fff;
+    background-color: #20527C;
+    padding: 5px;
+    text-align: center;
+    }
 
 .home-featurednews .view-whats-new.content-pane .views-field-body, .home-blogblock .view-blog .view-content .views-field-body, .home-famblock.pane-content .view-content .views-field-body {
   font-size: 14px;
