@@ -59,7 +59,7 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "tc_financial_aid") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Offers Financial Aid";
+      $build['Yes']["#markup"] = "Offers Financial Aid (CTP)";
     }
   }
   else if ($settings->facet == "tc_housing") {
