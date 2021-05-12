@@ -8961,6 +8961,14 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   border-top-color: #C96B29;
 }
 
+.box-border-purple {
+  border-top-color: #5E2B7A;
+}
+
+.box-border-light-blue {border-top-color:#4C8EC9}
+
+.box-border-gray {border-top-color:#7a7d7f}
+
 .ie-pane .pane-title, .pane-whats-new-panel-pane-1 .pane-title, .ie-news .pane-title, .pane-upcoming-events-panel-pane-1 .pane-title, #faq .pane-title, .home-featuredblock .pane-title, .home-famblock h2.pane-title {
   border-bottom: 4px solid #20527C;
   color: #20527C;

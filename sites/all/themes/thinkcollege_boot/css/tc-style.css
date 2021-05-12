@@ -1058,7 +1058,7 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 }
 
 
-/** Styles for Family resources page/Data Collection page **/
+/** Styles for Family resources page/Data Collection page and MTF Project landing **/
 
 .box-light-blue {
     background: #4C8EC9!important;
@@ -1122,3 +1122,44 @@ a.orange {
     display: inline-block;
     clear: both;
 }
+
+
+
+
+
+
+/* Project Landing pages */
+
+
+.box-bg-purple {
+    background: #5E2B7A!important;
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 30px;
+    z-index: 1; }
+
+
+.box-bg-gray {
+    background: #7a7d7f!important;
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 30px;
+    z-index: 1; }
+
+
+.box-bg-orange {
+    background: #C96B29!important;
+    padding: 30px 20px 30px 20px;
+    margin-bottom: 30px;
+    z-index: 1; }
+
+
+.box-bg-gray p, .box-bg-purple p, .box-bg-orange p{
+    font-size: 19px !important;
+    line-height: 30px !important;
+    color:#fff;}
+
+
+
+
+
+
+
