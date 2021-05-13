@@ -177,6 +177,32 @@ h3.block-title,h3.pane-title {
 	background-color:#C96B29;
 }
 
+.btn-purple{
+	background-color:#5E2B7A;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.btn-purple:hover {
+	background-color:#20527C;
+}
+
+.btn-orange{
+	background-color:#C96B29;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.btn-orange:hover {
+	background-color:#20527C;
+}
+
+
+
+
+
 .page-college-search .main-container {
 	margin-bottom:60px;
 }
