@@ -1206,10 +1206,21 @@ a.orange {
     text-align: center;
     width: 40%;
     text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    height: 100%;
+    font-size: 24px;
+    line-height: 32px;
+     font-family: 'museo-slab', serif;
 }
 
 
+/* home page - top row - right */
 
+.home-panel p {
+    text-align: center;
+    background-color: #ddd;
+    padding: 5px 0;
+    font-family: 'museo-sans', sans-serif;
+}
 
 
 
