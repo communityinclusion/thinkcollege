@@ -1161,12 +1161,12 @@ a.orange {
 /* Project Landing pages */
 
 .box-border-purple {
-  border-top-color: #5E2B7A;
+  border-top-color: #5E2B7A!important;
 }
 
-.box-border-light-blue {border-top-color:#4C8EC9}
+.box-border-light-blue {border-top-color:#4C8EC9!important}
 
-.box-border-gray {border-top-color:#7a7d7f}
+.box-border-gray {border-top-color:#7a7d7f!important}
 
 
 .box-bg-purple {
