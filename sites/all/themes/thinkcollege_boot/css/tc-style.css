@@ -155,6 +155,10 @@ h3.block-title,h3.pane-title {
 	text-decoration:none;
 }
 
+.btn-huge:hover {
+	color:#fff;
+}
+
 .btn-danger {
 	background-color:#20527C;
 	border:transparent;
