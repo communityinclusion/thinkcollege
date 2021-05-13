@@ -155,10 +155,6 @@ h3.block-title,h3.pane-title {
 	text-decoration:none;
 }
 
-.btn-huge:hover {
-	color:#fff;
-}
-
 .btn-danger {
 	background-color:#20527C;
 	border:transparent;
@@ -168,6 +164,7 @@ h3.block-title,h3.pane-title {
 
 .btn-danger:hover {
 	background-color:#C96B29;
+  color:#fff;
 }
 
 .btn-info {
@@ -179,6 +176,7 @@ h3.block-title,h3.pane-title {
 
 .btn-info:hover {
 	background-color:#C96B29;
+  color:#fff;
 }
 
 .btn-purple{
@@ -190,6 +188,7 @@ h3.block-title,h3.pane-title {
 
 .btn-purple:hover {
 	background-color:#20527C;
+  color:#fff;
 }
 
 .btn-orange{
@@ -201,6 +200,7 @@ h3.block-title,h3.pane-title {
 
 .btn-orange:hover {
 	background-color:#20527C;
+  color:#fff;
 }
 
 
