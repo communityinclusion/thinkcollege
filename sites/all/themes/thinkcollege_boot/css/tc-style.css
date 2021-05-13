@@ -1160,6 +1160,14 @@ a.orange {
 
 /* Project Landing pages */
 
+.box-border-purple {
+  border-top-color: #5E2B7A;
+}
+
+.box-border-light-blue {border-top-color:#4C8EC9}
+
+.box-border-gray {border-top-color:#7a7d7f}
+
 
 .box-bg-purple {
     background: #5E2B7A!important;
