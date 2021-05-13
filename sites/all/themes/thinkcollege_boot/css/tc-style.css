@@ -1189,6 +1189,27 @@ a.orange {
 
 
 
+/*home page hero banner - image with text overlay */
+
+.hero-banner { position:relative;
+    display:inline-block;}
+.hero-banner-text  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background-color: #9AB28D;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    width: 40%;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+}
+
+
+
 
 
 
