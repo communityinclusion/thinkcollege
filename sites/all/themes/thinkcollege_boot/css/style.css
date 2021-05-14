@@ -9070,7 +9070,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
     color: #fff;
     background-color: #20527C;
     padding: 15px 0px;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     text-align: center;
     font-family: museo-sans, sans-serif;
     font-size: 20px;
