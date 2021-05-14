@@ -9069,8 +9069,12 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 .home-famblock .view-family-resources-block .views-field.views-field-title {
     color: #fff;
     background-color: #20527C;
-    padding: 5px;
+    padding: 15px 0px;
+    border-radius: 4px;
     text-align: center;
+    font-family: museo-sans, sans-serif;
+    font-size: 20px;
+    line-height: 22px;
     }
 
 .home-featurednews .view-whats-new.content-pane .views-field-body, .home-blogblock .view-blog .view-content .views-field-body, .home-famblock.pane-content .view-content .views-field-body {
