@@ -8,11 +8,13 @@
         src="<?php echo $info_img; ?>"
         style="float:right;padding:20px;" width="300px" />
 
-    This directory includes information on <span style="color:#20527C"><?php echo $count; ?></span>
-    college programs for students with intellectual disability. You can search by program name,
-     location, and other keywords. "Advanced Filters" offer more options to narrow your search.
+    The only directory of its kind, Think College Search features <span style="color:#20527C"><?php echo $count; ?></span>
+    colleges and universities that offer postsecondary education programs for students with intellectual disability. Users of this searchable online database can filter by state, length of program, type of school, options for living on campus, and more.  To learn more, view these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a> about college programs, how we gather the information in the directory, and how to use the features of College Search.
   </p>
 
+
+
+<!--
    <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a>
      for answers to some general questions on college programs, how we gather the information
      in the directory, and how to use the features of College Search.</p>
@@ -20,7 +22,7 @@
      <p>Once you have located colleges you are interested in, download
        the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>.
        It provides you with the right questions to ask in order to get the answers
-       you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p>
+       you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p> -->
 
   <hr/>
 
