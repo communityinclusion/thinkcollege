@@ -44,7 +44,7 @@
 
   <div class="row">
     <div class="col-md-4 tc-row4left">
-      <?php print $content['row1left']; ?>
+      <?php print $content['row4left']; ?>
     </div>
     <div class="col-md-4 tc-row4center">
       <?php print $content['row4center']; ?>
