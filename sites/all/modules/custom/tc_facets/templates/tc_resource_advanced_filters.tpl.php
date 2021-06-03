@@ -10,7 +10,9 @@ if (sizeof($params) != 0) {
   if (array_key_exists('f', $params)) {
     $media = preg_grep('/(field_resourc_media_types)/', $params['f']);
     $publication = preg_grep('/(field_resourc_publication_types)/', $params['f']);
-    if ((sizeof($media) > 0) || (sizeof($publication) > 0)) {
+    $audiences =  preg_grep('/(field_resource_audiences)/', $params['f']);
+    $project = preg_grep('/(field_project)/', $params['f']);
+    if ((sizeof($media) > 0) || (sizeof($publication) > 0) || (sizeof($audiences) > 0) || (sizeof($project) > 0)) {
       $adv_classes = "collapse in";
     }
   }
