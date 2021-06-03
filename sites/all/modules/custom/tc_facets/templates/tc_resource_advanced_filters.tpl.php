@@ -19,6 +19,7 @@ if (sizeof($params) != 0) {
 <div class="<?php echo $adv_classes; ?>" id="collapseAdvancedFilters">
     <?php
     // Projects
+    
     $whole_block = block_load('facetapi','h0dfzztq72fjzrnh9ibnm0qwkl7f00bs');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
