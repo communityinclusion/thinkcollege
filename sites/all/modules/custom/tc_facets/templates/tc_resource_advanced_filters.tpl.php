@@ -24,7 +24,7 @@ if (sizeof($params) != 0) {
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
     // Audiences
-    $whole_block = block_load('facetapi','sxlcei54k3npc8psnbiw154rw6h5Oxku');
+    $whole_block = block_load('facetapi','98bu4ooir2vmd31rdtnytl1xgnm7zpsm');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
 
