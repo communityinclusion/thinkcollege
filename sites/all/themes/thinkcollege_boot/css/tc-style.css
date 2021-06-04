@@ -179,6 +179,7 @@ h3.block-title,h3.pane-title {
   color:#fff;
 }
 
+
 .btn-purple{
 	background-color:#5E2B7A;
 	border:none;
@@ -190,7 +191,6 @@ h3.block-title,h3.pane-title {
 	background-color:#20527C;
   color:#fff;
 }
-
 .btn-orange{
 	background-color:#C96B29;
 	border:none;
@@ -203,7 +203,17 @@ h3.block-title,h3.pane-title {
   color:#fff;
 }
 
+.btn-gray{
+	background-color:#7a7d7f;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
 
+.btn-gray:hover {
+	background-color:#20527C;
+  color:#fff;
+}
 
 
 
