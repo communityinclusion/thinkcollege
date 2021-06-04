@@ -215,7 +215,9 @@ h3.block-title,h3.pane-title {
   color:#fff;
 }
 
-
+.box-bg-gray p a:link {
+    background-color: #fff;
+    }
 
 .page-college-search .main-container {
 	margin-bottom:60px;
