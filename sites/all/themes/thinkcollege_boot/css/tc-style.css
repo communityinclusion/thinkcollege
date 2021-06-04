@@ -204,7 +204,7 @@ h3.block-title,h3.pane-title {
 }
 
 .btn-gray{
-	background-color:#7a7d7f;
+	background-color:#96a6bd;
 	border:none;
 	text-transform:uppercase;
 	font-weight:600;
@@ -1179,7 +1179,7 @@ a.orange {
 
 .box-border-light-blue {border-top-color:#4C8EC9!important}
 
-.box-border-gray {border-top-color:#7a7d7f!important}
+.box-border-gray {border-top-color:#96a6bd!important}
 
 
 .box-bg-purple {
@@ -1191,7 +1191,7 @@ a.orange {
 
 
 .box-bg-gray {
-    background: #7a7d7f!important;
+    background: #96a6bd!important;
     padding: 30px 20px 30px 20px;
       border-radius: 4px;
     margin-bottom: 30px;
