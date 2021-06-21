@@ -203,15 +203,15 @@ h3.block-title,h3.pane-title {
   color:#fff;
 }
 
-.btn-gray{
-	background-color:#96a6bd;
+.btn-dk-blue{
+	background-color:#20527C;
 	border:none;
 	text-transform:uppercase;
 	font-weight:600;
 }
 
 .btn-gray:hover {
-	background-color:#20527C;
+	background-color:#C96B1E;
   color:#fff;
 }
 
@@ -1195,7 +1195,7 @@ a.orange {
 
 .box-border-light-blue {border-top-color:#4C8EC9!important}
 
-.box-border-gray {border-top-color:#96a6bd!important}
+
 
 
 .box-bg-purple {
@@ -1206,8 +1206,8 @@ a.orange {
     z-index: 1; }
 
 
-.box-bg-gray {
-    background: #96a6bd!important;
+.box-bg-dk-blue {
+    background: #20527C!important;
     padding: 30px 20px 30px 20px;
       border-radius: 4px;
     margin-bottom: 30px;
@@ -1222,7 +1222,7 @@ a.orange {
     z-index: 1; }
 
 
-.box-bg-gray p, .box-bg-purple p, .box-bg-orange p{
+.box-bg-dk-blue p, .box-bg-purple p, .box-bg-orange p{
     font-size: 19px !important;
     line-height: 30px !important;
     color:#fff;}
