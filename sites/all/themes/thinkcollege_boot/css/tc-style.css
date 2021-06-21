@@ -219,6 +219,22 @@ h3.block-title,h3.pane-title {
     background-color: #fff;
     }
 
+.btn-dk-blue{
+	background-color:#20527C;;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.btn-dk-blue:hover {
+	background-color:#C96B1E;
+  color:#fff;
+}
+
+.btn-dk-blue p a:link {
+    background-color: #fff;
+    }
+
 .page-college-search .main-container {
 	margin-bottom:60px;
 }
