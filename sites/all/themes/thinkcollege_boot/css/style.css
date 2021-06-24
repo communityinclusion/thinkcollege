@@ -8277,6 +8277,17 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
   color: #fff;
 }
 
+
+#states .dropdown-menu > li > a {
+  color: #333;
+}
+
+#states ul.dropdown-menu {
+    max-height: 200px;
+    overflow: auto;
+}
+
+
 /* Superfish overides*/
 .sf-sub-indicator {
   display: inline-block;

@@ -187,10 +187,13 @@ h3.block-title,h3.pane-title {
 	font-weight:600;
 }
 
-.btn-purple:hover {
+
+
+.btn-purple:hover , .btn-purple:focus{
 	background-color:#20527C;
   color:#fff;
 }
+
 .btn-orange{
 	background-color:#C96B29;
 	border:none;
@@ -198,19 +201,12 @@ h3.block-title,h3.pane-title {
 	font-weight:600;
 }
 
-.btn-orange:hover {
+.btn-orange:hover, .btn-orange:focus {
 	background-color:#20527C;
   color:#fff;
 }
 
-.btn-dk-blue{
-	background-color:#20527C;
-	border:none;
-	text-transform:uppercase;
-	font-weight:600;
-}
-
-.btn-gray:hover {
+.btn-gray:hover, .btn-gray:focus {
 	background-color:#C96B1E;
   color:#fff;
 }
@@ -226,7 +222,7 @@ h3.block-title,h3.pane-title {
 	font-weight:600;
 }
 
-.btn-dk-blue:hover {
+.btn-dk-blue:hover, .btn-dk-blue:focus{
 	background-color:#C96B1E;
   color:#fff;
 }
