@@ -1277,3 +1277,9 @@ a.orange {
     border-radius: 10px;
 }
 
+
+/* Makes titles on Project Pages smaller */
+
+.page-projects-transition-leadership-project h1.page-header, .page-projects-fqie h1.page-header , .page-projects-mtf  h1.page-header , .page-projects-ncc h1.page-header {
+    font-size: 28px;
+}
