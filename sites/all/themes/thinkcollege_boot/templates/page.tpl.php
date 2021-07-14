@@ -91,7 +91,7 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+<nav id="navbar" role="navigation" class="<?php print $navbar_classes; ?>">
   <div class="container">
   <!-- <div class="close-ribbon"><a href="/"><img alt="Think College" src="<?php echo $think_college_logo; ?>" width="95" /></a></div>  -->
     <div class="navbar-header">
@@ -121,7 +121,7 @@
       </div>
     <?php endif; ?>
   </div>
-</header>
+</nav>
 
   <?php if ($page['section_banner']): ?>
   <div class="section-banner-block">
