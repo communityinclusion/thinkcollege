@@ -100,21 +100,21 @@
     // Hide comments, tags, projects, and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
-     hide($content['field_projects']);
+    hide($content['field_project']);
     hide($content['field_tags']);
     print render($content);
   ?>
   <?php
     // Only display the wrapper div if there are tags, projects or links.
-       $field_projects = render($content['field_projects']);
+    $field_project = render($content['field_project']);
     $field_tags = render($content['field_tags']);
     $links = render($content['links']);
-    if ($field_tags || $links || $field_projects):
+    if ($field_tags || $links || $field_project):
   ?>
    <footer>
-        <?php print $field_projects; ?>
      <?php print $field_tags; ?>
      <?php print $links; ?>
+     <?php print $field_project; ?>
   </footer>
     <?php endif; ?>
   <?php print render($content['comments']); ?>
