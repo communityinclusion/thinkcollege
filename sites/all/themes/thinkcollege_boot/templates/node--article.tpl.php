@@ -112,6 +112,7 @@
     if ($field_tags || $links || $field_project):
   ?>
    <footer>
+     <hr />
      <?php print $field_tags; ?>
      <?php print $links; ?>
      <?php print $field_project; ?>
