@@ -22,7 +22,9 @@ h3.block-title,h3.pane-title {
 	margin: 5px 0 10px;
 }
 
+/* utility */
 
+.pb20 {padding-bottom:20px;}
 
 /* Beta Alert Banner */
 
