@@ -624,7 +624,7 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  *
  * Remove the leading hash sign to enable.
  */
-# $conf['theme_debug'] = TRUE;
+$conf['theme_debug'] = TRUE;
 
 /**
  * CSS identifier double underscores allowance:
@@ -657,7 +657,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     // Redirect to HTTPS on every Pantheon environment.
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
-  
+
   //$base_url = 'https://'. $primary_domain;
   if ($_SERVER['HTTP_HOST'] != $primary_domain
       || !isset($_SERVER['HTTP_X_SSL'])
