@@ -8126,7 +8126,7 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #fff;
-  background-color: #4c8ec9;
+  background-color: #0073AE; /*replaced #4c8ec9 due to color contrast */
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -8146,17 +8146,17 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
 }
 
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-  /* background-color: #4c8ec9;*/
+  /* background-color: #0073AE;*/
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
   color: #fff;
-  background-color: #4c8ec9;
+  background-color: #0073AE;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #4c8ec9;
+  background-color: #0073AE;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
@@ -8165,11 +8165,11 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #4c8ec9;
+  border-color: #0073AE;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #4c8ec9;
+  background-color: #0073AE;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -8338,7 +8338,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
 }
 
 .footer a {
-  color: #C96B29;
+  color: #FDCC9A;
   font-weight: 700;
 }
 
