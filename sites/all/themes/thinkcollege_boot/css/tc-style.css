@@ -1120,7 +1120,7 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 /*------ Profile cards ------*/
 
 
-	  .card-profile {
+.card-profile {
       padding: 10px 0px 25px;
      background: #fefff9;
     min-height: 300px;

@@ -73,6 +73,16 @@
  * @ingroup themeable
  */
 ?>
+
+  <?php if ($page['top_header']) : ?>
+    <div id="top-header" class="top-header-region <?php print $top_header_classes; ?>">
+      <div class="container text-center">
+        <?php if ($page['top_header']) { print render($page['top_header']); } ?>
+      </div> <!-- /container -->
+    </div> <!-- /top-header-single-region -->
+  <?php endif; ?>
+
+
   <header role="banner" id="page-header">
       <div class="container">
     <?php if (!empty($site_slogan)): ?>
@@ -81,7 +91,7 @@
     <?php endif; ?>
           <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
 
