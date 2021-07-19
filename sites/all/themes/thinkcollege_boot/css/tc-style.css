@@ -1116,6 +1116,138 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 }
 
 
+
+/*------ Profile cards ------*/
+
+
+	  .card-profile {
+      padding: 10px 0px 25px;
+     background: #fefff9;
+    min-height: 300px;
+    max-height: 700px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px #0000007a;
+}
+
+.card-section .card-body {
+    padding: 0px 15px;
+    color: white;
+}
+
+
+.card-section .card-body {
+	color:#333;
+}
+
+
+
+.card-section .profile-default {
+    border: none;
+}
+
+.card-section .profile-group {
+    position: absolute;
+    bottom: -1px;
+    margin-bottom: 0px;
+    width: 100%;
+   padding-right: 30px;  }
+
+.card-section .profile-group .profile-heading+.profile-collapse>.profile-body, .card-section .profile-group .profile-heading+.profile-collapse>.list-group {
+    border: none;
+}
+
+.card-section .profile-group .profile {
+    border-radius: 0px 0px 8px 8px;
+    background-color: #e6e6e6;
+}
+
+.card-section .profile-body {
+    min-height: 250px;
+    overflow: auto;
+    border-radius: 0px 0px 8px 8px;
+    padding: 0px 15px 10px;
+}
+
+
+.card-section .card-body .thumbnail {margin-bottom:0 ;}
+.card-section .profile-default>.profile-heading {
+    background-color: transparent;
+}
+
+.card-section .profile-heading {
+    text-align: center;
+    padding: 0px;
+    height: 30px;
+    border: none;
+}
+
+.card-section .profile-button {
+   /*
+    background: #999999;
+    top: -13px;
+   */
+   padding: 0 40px;
+    position: relative;
+	border-radius: 100%;
+    z-index: 9999;
+}
+
+.card-section .profile-button .plus-minus:before{
+    content: "\f067";
+    font-family: "FontAwesome";
+}
+
+.card-section .profile-button[aria-expanded="true"] .plus-minus:before{
+    content: "\f068";
+    font-family: "FontAwesome";
+}
+
+
+
+a.profile-button:hover, a.profile-button:focus {
+    text-decoration: none;
+}
+
+a.profile-button {
+    font-size: 18px;
+    color: #333333;
+   /* box-shadow: 0px 3px 7px #0000004a;*/
+}
+
+.card-section {
+    height: 100vh;
+    display: table;
+    width: 100%;
+ /* overflow: hidden;*/
+}
+.card-section .card-row {margin-bottom: 20px}
+
+.card-section > .inner {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+@media (max-width: 991px) {
+    .card-section .card-profile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+ .card-section .card-profile{
+    min-height: 300px;
+  }
+.card-section  .profile .profile-body {
+    max-height: 200px;
+    font-size: 15px;
+    padding: 0px 5px;
+  }
+}
+
+
+
 /** Styles for Family resources page/Data Collection page and MTF Project landing **/
 
 .box-light-blue {
