@@ -1224,7 +1224,7 @@ a.profile-button {
 }
 
 .card-section {
-    height: 100vh;
+  /*  height: 100vh; */
     display: table;
     width: 100%;
  /* overflow: hidden;*/
