@@ -9256,14 +9256,14 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 
 
 @media screen and (min-width: 992px) {
-#vertical .view-content .view-upcoming-events .views-row {
-    width: 100%;
+ .view-content .view-upcoming-events .views-row {
+    width: 47.5%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-#vertical .view-upcoming-events .views-row {
-    width: 100%;
+.view-upcoming-events .views-row {
+    width:48%;
   }
 }
 
