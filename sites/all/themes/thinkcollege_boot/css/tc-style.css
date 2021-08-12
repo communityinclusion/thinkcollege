@@ -1348,7 +1348,7 @@ a.orange {
 
 
 .box-bg-dk-blue {
-    background: #20527C!important;
+    background: #20527C 5px solid;
     padding: 30px 20px 30px 20px;
       border-radius: 4px;
     margin-bottom: 30px;
