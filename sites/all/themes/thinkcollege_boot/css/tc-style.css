@@ -1257,6 +1257,17 @@ a.profile-button {
 
 
 
+
+/** Staff Box team page thumbnail profiles **/
+
+
+.col-sm-4.staff-box.text-center {
+    padding-bottom: 10px;
+}
+
+
+
+
 /** Styles for Family resources page/Data Collection page and MTF Project landing **/
 
 .box-light-blue {
