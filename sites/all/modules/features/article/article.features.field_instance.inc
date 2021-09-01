@@ -191,6 +191,86 @@ function article_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_project'.
+  $field_instances['node-article-field_project'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_project',
+    'label' => 'Project',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_review'.
+  $field_instances['node-article-field_review'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_review',
+    'label' => 'Review',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 46,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_tags'.
   $field_instances['node-article-field_tags'] = array(
     'bundle' => 'article',
@@ -308,6 +388,8 @@ function article_field_default_field_instances() {
   t('Enter a comma-separated list of words to describe your content.');
   t('Feature in Section');
   t('Image');
+  t('Project');
+  t('Review');
   t('Tags');
   t('Teaser image');
   t('Upload an image to go with this article.');

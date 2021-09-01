@@ -43,8 +43,13 @@ function article_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'article';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'node_link' => array(
-      'weight' => '3',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -103,16 +108,20 @@ function article_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_image',
-        1 => 'body',
-        2 => 'field_tags',
-        3 => 'node_link',
+        0 => 'title',
+        1 => 'field_image',
+        2 => 'body',
+        3 => 'field_tags',
+        4 => 'field_project',
+        5 => 'node_link',
       ),
     ),
     'fields' => array(
+      'title' => 'ds_content',
       'field_image' => 'ds_content',
       'body' => 'ds_content',
       'field_tags' => 'ds_content',
+      'field_project' => 'ds_content',
       'node_link' => 'ds_content',
     ),
     'classes' => array(),

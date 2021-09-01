@@ -431,7 +431,7 @@ function landing_pages_views_default_views() {
   /* Display: Inno Exchange - Featured Resources */
   $handler = $view->new_display('panel_pane', 'Inno Exchange - Featured Resources', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = ' Resources';
+  $handler->display->display_options['title'] = 'Additional Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -442,6 +442,14 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'View More Link';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area']['content'] = '<a href="https://thinkcollege.net/resource-search?sort=field_resourc_publication_date&order=desc">View more</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Date Received */
   $handler->display->display_options['fields']['field_resourc_date_received']['id'] = 'field_resourc_date_received';

@@ -143,7 +143,7 @@ function resources_strongarm() {
           'weight' => '14',
         ),
         'redirect' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
       ),
       'display' => array(
@@ -153,7 +153,7 @@ function resources_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'teaser' => array(

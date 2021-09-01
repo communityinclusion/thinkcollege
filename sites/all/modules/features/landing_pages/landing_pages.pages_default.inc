@@ -130,7 +130,7 @@ function landing_pages_default_page_manager_pages() {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/college-search" title="Search for college programs from around the country for students with intellectual disabilities!" type="button"><i aria-hidden="true" class="fa fa-search">&nbsp;</i> College Search</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="https://thinkcollege.net/resource-search?sort=field_resourc_publication_date&amp;order=desc" title="Searchable database of resources on topics related to postsecondary education for people with intellectual disability" type="button"> <i aria-hidden="true" class="fa fa-book">&nbsp;</i>Resource Library</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resources/innovation-exchange" title="Find curated research and resources on specific topics related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-exchange">&nbsp;</i>Innovation Exchange</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resources/whats-happening-in-your-state" title="Learn about activities in your state related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-map-o">&nbsp;</i>What\'s Happening in your State</a></p>
+    'body' => '<p><a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/college-search" title="Search for college programs from around the country for students with intellectual disabilities!" type="button"><i aria-hidden="true" class="fa fa-search">&nbsp;</i> College Search</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="https://thinkcollege.net/resource-search?sort=field_resourc_publication_date&amp;order=desc" title="Searchable database of resources on topics related to postsecondary education for people with intellectual disability" type="button"> <i aria-hidden="true" class="fa fa-book">&nbsp;</i>Resource Library</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resources/resources-by-topic" title="Find curated research and resources on specific topics related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-exchange">&nbsp;</i>Resources by Topic</a> <a class="btn btn-block btn-huge btn-danger" data-placement="left" data-toggle="tooltip" href="/resources/whats-happening-in-your-state" title="Learn about activities in your state related to postsecondary education for students with intellectual disability." type="button"> <i aria-hidden="true" class="fa fa-map-o">&nbsp;</i>What\'s Happening in your State</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -180,11 +180,11 @@ function landing_pages_default_page_manager_pages() {
     'title' => 'NEW PUBLICATIONS!',
     'title_heading' => 'h3',
     'body' => '<div class="media">
-<h4><a href="https://thinkcollege.net/sites/default/files/files/resources/ModelProgramAccreditationStandards2020_fnl_2.pdf">Model Program Accreditation Standards</a></h4>
+<h4><a href="https://thinkcollege.net/resource/program-accreditation/report-on-model-accreditation-standards-for-higher-education-programs">Report on Model Accreditation Standards for Programs for Students with Intellectual Disability</a></h4>
 
 <div class="media-left"><img alt="Report cover" src="/sites/default/files/images/thumbs/ModelProgramAccreditationStandards-thumb.png" style="float:left; height:100px; margin:5px 5px 30px; width:88px" /></div>
 
-<div class="media-body">The Model Program Accreditation Standards have been finalized! This resource&nbsp;includes the standards, guidance, review requirements, and next steps.</div>
+<div class="media-body">This&nbsp;statutorily mandated report to the US Department of Education Secretary and relevant Congressional committees on Model Program Accreditation Standards was released in May 2021.</div>
 </div>
 
 <hr />
@@ -634,10 +634,10 @@ text  {
   $display->content['new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba'] = $pane;
   $display->panels['row1left'][0] = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
   $pane = new stdClass();
-  $pane->pid = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
+  $pane->pid = 'new-f5ff764b-d3fb-4e67-a430-1b62a5c24855';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
-  $pane->subtype = 'whats_new-panel_pane_6';
+  $pane->subtype = 'whats_new-panel_pane_3';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -654,9 +654,9 @@ text  {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = 'df9723c1-4cb3-42c9-86b4-1ab14aa00454';
-  $display->content['new-df9723c1-4cb3-42c9-86b4-1ab14aa00454'] = $pane;
-  $display->panels['row1left'][1] = 'new-df9723c1-4cb3-42c9-86b4-1ab14aa00454';
+  $pane->uuid = 'f5ff764b-d3fb-4e67-a430-1b62a5c24855';
+  $display->content['new-f5ff764b-d3fb-4e67-a430-1b62a5c24855'] = $pane;
+  $display->panels['row1left'][1] = 'new-f5ff764b-d3fb-4e67-a430-1b62a5c24855';
   $pane = new stdClass();
   $pane->pid = 'new-118378e4-e847-433e-a99e-290000a9ae69';
   $pane->panel = 'row1left';
@@ -674,6 +674,7 @@ text  {
 	<li><a href="http://www.leadcenter.org/">LEAD Center</a></li>
 	<li><a href="http://askjan.org/">Job Accommodation Network (JAN)</a></li>
 	<li><a href="https://www.ada.gov/employment.htm">Information &amp; Technical Assistance on the Americans with Disabilities Act</a></li>
+	<li><a href="https://www.researchondisability.org/ntide">#nTIDE: National Trends in Disability Employment</a></li>
 </ul>
 ',
     'format' => 'full_html',

@@ -181,10 +181,11 @@ function resources_ds_layout_settings_info() {
         6 => 'field_resourc_topics',
         7 => 'field_resourc_media_types',
         8 => 'field_resourc_publication_types',
+        9 => 'field_project',
       ),
       'right' => array(
-        9 => 'field_resourc_file',
-        10 => 'field_external_link',
+        10 => 'field_resourc_file',
+        11 => 'field_external_link',
       ),
     ),
     'fields' => array(
@@ -197,6 +198,7 @@ function resources_ds_layout_settings_info() {
       'field_resourc_topics' => 'left',
       'field_resourc_media_types' => 'left',
       'field_resourc_publication_types' => 'left',
+      'field_project' => 'left',
       'field_resourc_file' => 'right',
       'field_external_link' => 'right',
     ),
