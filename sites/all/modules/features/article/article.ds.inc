@@ -44,7 +44,7 @@ function article_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'node_link' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -106,13 +106,15 @@ function article_ds_layout_settings_info() {
         0 => 'field_image',
         1 => 'body',
         2 => 'field_tags',
-        3 => 'node_link',
+        3 => 'field_project',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
       'field_image' => 'ds_content',
       'body' => 'ds_content',
       'field_tags' => 'ds_content',
+      'field_project' => 'ds_content',
       'node_link' => 'ds_content',
     ),
     'classes' => array(),

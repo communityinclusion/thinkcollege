@@ -153,15 +153,15 @@ function resources_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'card' => array(
-            'weight' => '9',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'event_attachment' => array(
