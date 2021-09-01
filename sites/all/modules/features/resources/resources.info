@@ -50,7 +50,6 @@ features[field_instance][] = node-resource-field_resource_audiences
 features[field_instance][] = node-resource-field_teaser_image
 features[field_instance][] = node-resource-field_video_embed
 features[node][] = resource
-features[taxonomy][] = projects
 features[variable][] = comment_anonymous_resource
 features[variable][] = comment_default_mode_resource
 features[variable][] = comment_default_per_page_resource
