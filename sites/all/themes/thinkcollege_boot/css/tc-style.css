@@ -1341,21 +1341,26 @@ a.orange {
 
 /* Project Landing pages */
 
+
+
+
+.project-intro-box {
+    border: #5E2B7A 5px solid;
+    padding: 30px 20px 30px 20px;
+      border-radius: 4px;
+    margin-bottom: 30px;
+    z-index: 1;
+    font-size: 19px !important;
+    line-height: 30px !important;
+    color:#333;}
+
+/*
 .box-border-purple {
   border-top-color: #5E2B7A!important;
 }
 
 .box-border-light-blue {border-top-color:#4C8EC9!important}
 
-
-
-
-.box-bg-purple {
-    border: #5E2B7A 5px solid;
-    padding: 30px 20px 30px 20px;
-      border-radius: 4px;
-    margin-bottom: 30px;
-    z-index: 1; }
 
 
 .box-bg-dk-blue {
@@ -1388,7 +1393,7 @@ a.orange {
     font-size: 19px !important;
     line-height: 30px !important;
     color:#333;}
-
+*/
 
 
 /*home page hero banner - image with text overlay */
