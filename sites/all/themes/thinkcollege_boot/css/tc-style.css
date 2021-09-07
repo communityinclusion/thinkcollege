@@ -1495,5 +1495,70 @@ a.orange {
 }
 
 
+@media (max-width: 480px) {
+  .donate-btn {
+display: none;
+  }
+}
+
+/* Quick Tabs Styling on Events page */
+
+
+.quicktabs_main.quicktabs-style-nostyle {
+  background-color:#fff;
+  border:1px solid #aaa;
+  border-top:none;
+  padding:10px;
+  clear:both;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle{
+  border-bottom:1px solid #aaa;
+  padding:0 5px 0 0;
+  font:18/30     !important;
+  font-weight:bold;
+  height: 30px;
+  margin:0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle a{
+ font-size:18px !important;
+  font-weight:bold;
+  text-decoration:none;
+  color:#b1b1b1;
+
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle a:hover{
+  color:#555;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li{
+  border: 1px solid #e5e5e5;
+ border-bottom:1px solid #aaa;
+  padding:5px 15px;
+  margin: 0 3px 0 0;
+  position:relative;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li:hover{
+  border:1px solid #CCC;
+  border-bottom:1px solid #fff;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li.active{
+  border:1px solid #aaa;
+  border-bottom:#20527C solid 1px;
+  background-color:#20527C;
+
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li.active a{
+  color:#fff;
+}
+
+
+
+
 
 
