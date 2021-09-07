@@ -41,18 +41,7 @@ h3.block-title,h3.pane-title, h2.block-title, h2.pane-title {
 
 
 
-/* region-header*/
 
-.region-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.donate-btn {
-    margin-top: 10px;
-    padding-right: 20px;
-}
 
 /* Section Banner */
 #section_banner {
@@ -1419,6 +1408,7 @@ a.orange {
 }
 
 
+
 /* home page - top row - right */
 
 .home-panel p {
@@ -1453,3 +1443,57 @@ a.orange {
 .page-projects-transition-leadership-project h1.page-header, .page-projects-fqie h1.page-header , .page-projects-mtf  h1.page-header , .page-projects-ncc h1.page-header {
     font-size: 28px;
 }
+
+
+/* Header w/logo and search bar */
+
+/* region-header*/
+
+.container.headerWrapper {
+    display: flex;
+
+}
+
+.container.headerWrapper  .region-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+
+.container.headerWrapper .sitelogo {
+    display: flex;
+    width:50%;
+}
+
+
+.donate-btn {
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+
+@media (max-width: 992px){
+
+  .container.headerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container.headerWrapper  .region-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+.container.headerWrapper .sitelogo {
+    display: flex;
+    width:100%;
+}
+}
+
+
+
+

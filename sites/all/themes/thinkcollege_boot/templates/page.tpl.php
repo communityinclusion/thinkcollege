@@ -84,7 +84,8 @@
 
 
   <header role="banner" id="page-header">
-      <div class="container">
+      <div class="container headerWrapper">
+        <div class="sitelogo">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
       </div>
@@ -94,6 +95,7 @@
         <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
+      </div>
 
       <?php if (!empty($site_name)): ?>
       <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
