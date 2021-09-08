@@ -1568,10 +1568,10 @@ ul.quicktabs-tabs.quicktabs-style-nostyle li.active a{
 }
 
 
-
+/*
 a[href="/%3Cnolink%3E"] { pointer-events: none;
    cursor: default;
    color: #666;
 }
 
-
+*/
