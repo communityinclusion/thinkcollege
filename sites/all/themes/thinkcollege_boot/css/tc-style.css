@@ -1348,7 +1348,7 @@ a.orange {
 }
 
 .box-border-light-blue {border-top-color:#4C8EC9!important}
-
+.box-border-dk-blue {border-top-color:#20527C!important}
 
 
 .box-bg-dk-blue {
@@ -1411,14 +1411,13 @@ a.orange {
 
 /* home page - top row - right */
 
-.home-panel p {
+.home-panel div{
     text-align: center;
     background-color: #ddd;
-    padding: 5px 0;
     font-family: 'museo-sans', sans-serif;
 }
 
-
+.home-panel div p {padding:5px;}
 
 /* Resources results page project banner */
 
