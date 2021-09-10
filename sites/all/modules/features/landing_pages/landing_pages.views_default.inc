@@ -365,7 +365,7 @@ function landing_pages_views_default_views() {
   /* Display: Innovation Exchange content pane */
   $handler = $view->new_display('panel_pane', 'Innovation Exchange content pane', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'Updates & Information';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -431,7 +431,7 @@ function landing_pages_views_default_views() {
   /* Display: Inno Exchange - Featured Resources */
   $handler = $view->new_display('panel_pane', 'Inno Exchange - Featured Resources', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Additional Resources';
+  $handler->display->display_options['title'] = 'Resources from Our Library';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -835,7 +835,7 @@ function landing_pages_views_default_views() {
   /* Display: (Family) Inno Exchange Resources pane */
   $handler = $view->new_display('panel_pane', '(Family) Inno Exchange Resources pane', 'panel_pane_7');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'RESOURCES FROM OUR LIBRARY';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -1403,7 +1403,7 @@ function landing_pages_views_default_views() {
   /* Display: (Accreditation) Inno Exchange Resources pane */
   $handler = $view->new_display('panel_pane', '(Accreditation) Inno Exchange Resources pane', 'panel_pane_15');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Resources';
+  $handler->display->display_options['title'] = 'RESOURCES FROM OUR LIBRARY';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-pane';
   $handler->display->display_options['defaults']['pager'] = FALSE;

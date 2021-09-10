@@ -599,41 +599,6 @@ text  {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
-  $display->content['new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba'] = $pane;
-  $display->panels['row1left'][0] = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
-  $pane = new stdClass();
   $pane->pid = 'new-f5ff764b-d3fb-4e67-a430-1b62a5c24855';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -652,11 +617,11 @@ text  {
     'css_class' => 'ie-featuredresources box',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = 'f5ff764b-d3fb-4e67-a430-1b62a5c24855';
   $display->content['new-f5ff764b-d3fb-4e67-a430-1b62a5c24855'] = $pane;
-  $display->panels['row1left'][1] = 'new-f5ff764b-d3fb-4e67-a430-1b62a5c24855';
+  $display->panels['row1left'][0] = 'new-f5ff764b-d3fb-4e67-a430-1b62a5c24855';
   $pane = new stdClass();
   $pane->pid = 'new-118378e4-e847-433e-a99e-290000a9ae69';
   $pane->panel = 'row1left';
@@ -669,12 +634,11 @@ text  {
     'title' => 'Quick Links',
     'title_heading' => 'h3',
     'body' => '<ul>
-	<li><a href="http://apse.org/">Association of People Supporting EmploymentFirst (APSE)</a></li>
-	<li><a href="https://www.dol.gov/odep/">Office of Disability Employment Policy (ODEP)</a></li>
-	<li><a href="http://www.leadcenter.org/">LEAD Center</a></li>
-	<li><a href="http://askjan.org/">Job Accommodation Network (JAN)</a></li>
-	<li><a href="https://www.ada.gov/employment.htm">Information &amp; Technical Assistance on the Americans with Disabilities Act</a></li>
-	<li><a href="https://www.researchondisability.org/ntide">#nTIDE: National Trends in Disability Employment</a></li>
+	<li><a href="http://apse.org/">Association of People Supporting EmploymentFirst (APSE)</a>&nbsp;<span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#555555">Through advocacy and engagement, APSE facilitate the full inclusion of people with disabilities in the workplace and community.</span></span></span></li>
+	<li><a href="https://www.dol.gov/odep/">Office of Disability Employment Policy (ODEP)</a>&nbsp;<span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#555555">ODEP anon-regulatory federal agency promoting policies and coordinates with employers and all levels of government to increase workplace success for people with disabilities.</span></span></span></li>
+	<li><a href="http://askjan.org/">Job Accommodation Network (JAN)</a>&nbsp;<span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#555555">JAN is a source of free, expert, and confidential guidance on job accommodations and disability employment issues. </span></span></span></li>
+	<li><a href="https://www.ada.gov/employment.htm">Information &amp; Technical Assistance on the Americans with Disabilities Act</a>&nbsp;This is a factsheet about fighting discrimination in employment under the ADA</li>
+	<li><a href="https://www.researchondisability.org/ntide">#nTIDE: National Trends in Disability Employment</a>&nbsp;nTIDE holds monthly webinars to share numbers and the latest news about disability employment.</li>
 </ul>
 ',
     'format' => 'full_html',
@@ -689,11 +653,11 @@ text  {
     'css_class' => 'box external-links-list',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '118378e4-e847-433e-a99e-290000a9ae69';
   $display->content['new-118378e4-e847-433e-a99e-290000a9ae69'] = $pane;
-  $display->panels['row1left'][2] = 'new-118378e4-e847-433e-a99e-290000a9ae69';
+  $display->panels['row1left'][1] = 'new-118378e4-e847-433e-a99e-290000a9ae69';
   $pane = new stdClass();
   $pane->pid = 'new-f1e8f193-c360-4db6-b5be-51326ac4cf97';
   $pane->panel = 'row1right';
@@ -787,7 +751,7 @@ text  {
   $display->content['new-4816585e-da1c-4f26-93c7-ceca5a255927'] = $pane;
   $display->panels['row1right'][2] = 'new-4816585e-da1c-4f26-93c7-ceca5a255927';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-778c3f26-91cf-48a2-a58a-c59a1ad3a3ba';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['innovation_exchange_employment'] = $page;
