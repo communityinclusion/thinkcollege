@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-h3.block-title,h3.pane-title {
+h3.block-title,h3.pane-title, h2.block-title, h2.pane-title {
 	text-align:left;
 	border-bottom:#ccc 1px solid;
 	padding-bottom: 15px;
@@ -24,23 +24,24 @@ h3.block-title,h3.pane-title {
 
 
 
+/* utility */
+
+.pb20 {padding-bottom:20px;}
+
 /* Beta Alert Banner */
 
 .beta-banner .alert {width:100%;margin-bottom: 10px;border-radius:0}
 
+/* removing padding for alert banner */
 
-/* region-header*/
-
-.region-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.top-header-region .container-fluid {
+    padding-left: 0;
+    padding-right:0;
 }
 
-.donate-btn {
-    margin-top: 10px;
-    padding-right: 20px;
-}
+
+
+
 
 /* Section Banner */
 #section_banner {
@@ -164,6 +165,7 @@ h3.block-title,h3.pane-title {
 
 .btn-danger:hover {
 	background-color:#C96B29;
+  color:#fff;
 }
 
 .btn-info {
@@ -175,7 +177,60 @@ h3.block-title,h3.pane-title {
 
 .btn-info:hover {
 	background-color:#C96B29;
+  color:#fff;
 }
+
+
+.btn-purple{
+	background-color:#5E2B7A;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+
+
+.btn-purple:hover , .btn-purple:focus{
+	background-color:#20527C;
+  color:#fff;
+}
+
+.btn-orange{
+	background-color:#C96B29;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.btn-orange:hover, .btn-orange:focus {
+	background-color:#20527C;
+  color:#fff;
+}
+
+.btn-gray:hover, .btn-gray:focus {
+	background-color:#C96B1E;
+  color:#fff;
+}
+
+.box-bg-gray p a:link {
+    background-color: #fff;
+    }
+
+.btn-dk-blue{
+	background-color:#20527C;;
+	border:none;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+.btn-dk-blue:hover, .btn-dk-blue:focus{
+	background-color:#C96B1E;
+  color:#fff;
+}
+
+.btn-dk-blue p a:link {
+    background-color: #fff;
+    }
 
 .page-college-search .main-container {
 	margin-bottom:60px;
@@ -681,12 +736,59 @@ li.shaded {
 	}
 }
 
+
+
+@media (min-width: 768px) {
+
+  .table-row {
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+
+  .table-row  [class^="col-"] {
+    display: table-cell;
+    float: none;
+    background-color:#fff;
+    -webkit-box-shadow: 0 0 7px 0 #AAA;
+    -moz-box-shadow: 0 0 7px 0 #AAA;
+    box-shadow: 0 0 7px 0 #AAA;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    border-top: 10px solid #C96B29;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+}
+
+.equal-box {
+    -webkit-box-shadow: 0 0 7px 0 #AAA;
+    -moz-box-shadow: 0 0 7px 0 #AAA;
+    box-shadow: 0 0 7px 0 #AAA;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    border-top: 10px solid #C96B29;;
+    padding: 20px;
+    margin-bottom: 25px;
+    margin:10px;
+    }
+
+
+
+
 /* contact page */
 .contact-page .icon-title {
-	text-align:top;
-	border-bottom:1px solid #ccc;
-	padding-bottom:5px;
-}
+    text-align: top;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;}
 
 .contact-page .icon-title .fa {
 	color:#4C8EC9;
@@ -701,6 +803,60 @@ li.shaded {
 	font-size:18px;
 	line-height:1.43em;
 }
+
+
+.contact-page .icon-title h3 {
+    display: inline;
+}
+
+
+
+/* home page-family resources block */
+
+
+.hp-icon-block .icon-title {
+    text-align: top;
+    padding-bottom: 5px;
+    margin-bottom: 10px;}
+
+.hp-icon-block .icon-title .fa {
+	color:#4C8EC9;
+	display:inline-block;
+}
+
+.hp-icon-block.icon-title h2 {
+	display:inline-block;
+}
+
+.hp-icon-block .text {
+	font-size:18px;
+	line-height:1.43em;
+}
+
+
+.hp-icon-block .icon-title h3 {
+    display: inline;
+}
+
+
+
+.hp-icon-block.equal-box {
+  border-top: none!important;
+  box-shadow:none;
+    }
+
+
+
+@media (min-width: 768px) {
+
+
+  .hp-icon-block.table-row  [class^="col-"] {
+  border-top: none!important;
+    box-shadow:none;
+  }
+}
+
+
 
 .dont-break-out {
 /* These are technically the same, but use both */
@@ -957,11 +1113,156 @@ div.form-type-checkbox.form-item-field-prog-admiss-requirements-und-Student-must
 }
 
 
-/** Styles for Family resources page/Data Collection page **/
+
+/*------ Profile cards ------*/
+
+
+.card-profile {
+      padding: 10px 0px 25px;
+     background: #fefff9;
+    min-height: 300px;
+    max-height: 700px;
+    border-radius: 8px;
+        margin-top: 15px;
+    box-shadow: 0px 8px 20px #0000007a;
+}
+
+.card-section .card-body {
+    padding: 0px 15px;
+    color: white;
+}
+
+
+.card-section .card-body {
+	color:#333;
+}
+
+
+
+.card-section .profile-default {
+    border: none;
+}
+
+.card-section .profile-group {
+    position: absolute;
+    bottom: -1px;
+    margin-bottom: 0px;
+    width: 100%;
+   padding-right: 30px;  }
+
+.card-section .profile-group .profile-heading+.profile-collapse>.profile-body, .card-section .profile-group .profile-heading+.profile-collapse>.list-group {
+    border: none;
+}
+
+.card-section .profile-group .profile {
+    border-radius: 0px 0px 8px 8px;
+    background-color: #e6e6e6;
+}
+
+.card-section .profile-body {
+    min-height: 250px;
+    overflow: auto;
+    border-radius: 0px 0px 8px 8px;
+    padding: 0px 15px 10px;
+}
+
+
+.card-section .card-body .thumbnail {margin-bottom:0 ;}
+.card-section .profile-default>.profile-heading {
+    background-color: transparent;
+}
+
+.card-section .profile-heading {
+    text-align: center;
+    padding: 0px;
+    height: 30px;
+    border: none;
+}
+
+.card-section .profile-button {
+   /*
+    background: #999999;
+    top: -13px;
+   */
+   padding: 0 40px;
+    position: relative;
+	border-radius: 100%;
+    z-index: 9999;
+}
+
+.card-section .profile-button .plus-minus:before{
+    content: "\f067";
+    font-family: "FontAwesome";
+}
+
+.card-section .profile-button[aria-expanded="true"] .plus-minus:before{
+    content: "\f068";
+    font-family: "FontAwesome";
+}
+
+
+
+a.profile-button:hover, a.profile-button:focus {
+    text-decoration: none;
+}
+
+a.profile-button {
+    font-size: 18px;
+    color: #333333;
+   /* box-shadow: 0px 3px 7px #0000004a;*/
+}
+
+.card-section {
+  /*  height: 100vh; */
+    display: table;
+    width: 100%;
+ /* overflow: hidden;*/
+}
+.card-section .card-row {margin-bottom: 20px}
+
+.card-section > .inner {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+@media (max-width: 991px) {
+    .card-section .card-profile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+ .card-section .card-profile{
+    min-height: 300px;
+  }
+.card-section  .profile .profile-body {
+    max-height: 200px;
+    font-size: 15px;
+    padding: 0px 5px;
+  }
+}
+
+
+
+
+/** Staff Box team page thumbnail profiles **/
+
+
+.col-sm-4.staff-box.text-center {
+    padding-bottom: 10px;
+}
+
+
+
+
+/** Styles for Family resources page/Data Collection page and MTF Project landing **/
 
 .box-light-blue {
     background: #4C8EC9!important;
     padding: 30px 20px 30px 20px;
+    border-radius: 4px;
     margin-bottom: 30px;
     z-index: 1; }
 
@@ -994,20 +1295,6 @@ color: white;
 
 
 
-.equal-box {
-    -webkit-box-shadow: 0 0 7px 0 #AAA;
-    -moz-box-shadow: 0 0 7px 0 #AAA;
-    box-shadow: 0 0 7px 0 #AAA;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #fff;
-    border-top: 10px solid #C96B29;;
-    padding: 20px;
-    margin-bottom: 25px;
-    margin:10px;
-    }
 
 
 .leadbox {background-color: #4c8ec9;
@@ -1018,20 +1305,13 @@ color: white;
 .leadbox .lead {color:#fff;font-weight: 700;}
 .leadbox a { color: #069;
     background-color: #f2f2f2;}
-.contact-page .icon-title h3 {
-    display: inline;
-}
+
 .box-light-blue .border {
     background: #fff;
     width: 80%;
     display: block;
     height: 8px;
 }
-.contact-page .icon-title {
-    text-align: top;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 10px;}
 
 a.orange {
     color: #fff;
@@ -1043,30 +1323,254 @@ a.orange {
     clear: both;
 }
 
-@media (min-width: 768px) {
 
 
-  .table-row {
-    display: table;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 10px;
-  }
 
-  .table-row  [class^="col-"] {
-    display: table-cell;
-    float: none;
-    background-color:#fff;
-    -webkit-box-shadow: 0 0 7px 0 #AAA;
-    -moz-box-shadow: 0 0 7px 0 #AAA;
-    box-shadow: 0 0 7px 0 #AAA;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    -moz-border-radius: 4px;
+
+
+/* Project Landing pages */
+
+
+
+
+.project-intro-box {
+    padding: 30px 20px 30px 20px;
+      border-radius: 4px;
+    margin-bottom: 30px;
+    z-index: 1;
+    font-size: 19px !important;
+    line-height: 30px !important;
+    color:#333;}
+
+
+.box-border-purple {
+  border-top-color: #5E2B7A!important;
+}
+
+.box-border-light-blue {border-top-color:#4C8EC9!important}
+.box-border-dk-blue {border-top-color:#20527C!important}
+
+
+.box-bg-dk-blue {
+    background: #20527C 5px solid;
+    padding: 30px 20px 30px 20px;
+      border-radius: 4px;
+    margin-bottom: 30px;
+    z-index: 1; }
+
+
+.box-bg-orange {
+    border: #C96B29 5px solid;
+    padding: 30px 20px 30px 20px;
+      border-radius: 4px;
+    margin-bottom: 30px;
+    z-index: 1; }
+
+
+.box-bg-light-blue {
+    border: #4C8EC9 5px solid;
+    padding: 30px 20px 30px 20px;
     border-radius: 4px;
-    background-color: #fff;
-    border-top: 10px solid #C96B29;
-    padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    z-index: 1; }
+
+
+
+
+.box-bg-dk-blue p, .box-bg-purple p, .box-bg-orange p{
+    font-size: 19px !important;
+    line-height: 30px !important;
+    color:#333;}
+
+
+
+/*home page hero banner - image with text overlay */
+
+.hero-banner { position:relative;
+    display:inline-block;}
+.hero-banner-text  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background-color: #9AB28D;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    width: 40%;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    height: 100%;
+    font-size: 24px;
+    line-height: 32px;
+     font-family: 'museo-slab', serif;
+}
+
+
+
+/* home page - top row - right */
+
+.home-panel div{
+    text-align: center;
+    background-color: #ddd;
+    font-family: 'museo-sans', sans-serif;
+}
+
+.home-panel div p {padding:5px;}
+
+/* Resources results page project banner */
+
+.resource-box .field-name-field-project {
+    display: inline-block;
+    min-width: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+
+/* Makes titles on Project Pages smaller */
+
+.page-projects-transition-leadership-project h1.page-header, .page-projects-fqie h1.page-header , .page-projects-mtf  h1.page-header , .page-projects-ncc h1.page-header {
+    font-size: 28px;
+}
+
+
+/* Header w/logo and search bar */
+
+/* region-header*/
+
+.container.headerWrapper {
+    display: flex;
+
+}
+
+.container.headerWrapper  .region-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+
+.container.headerWrapper .sitelogo {
+    display: flex;
+    width:50%;
+}
+
+
+.donate-btn {
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+
+@media (max-width: 992px){
+
+  .container.headerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container.headerWrapper  .region-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+.container.headerWrapper .sitelogo {
+    display: flex;
+    width:100%;
+}
+}
+
+
+@media (max-width: 480px) {
+  .donate-btn {
+display: none;
   }
 }
+
+/* Quick Tabs Styling on Events page */
+
+
+.quicktabs_main.quicktabs-style-nostyle {
+  background-color:#fff;
+  border:1px solid #aaa;
+  border-top:none;
+  padding:10px;
+  clear:both;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle{
+  border-bottom:1px solid #aaa;
+  padding:0 5px 0 0;
+  font:18/30     !important;
+  font-weight:bold;
+  height: 30px;
+  margin:0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle a{
+ font-size:18px !important;
+  font-weight:bold;
+  text-decoration:none;
+  color:#b1b1b1;
+
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle a:hover{
+  color:#555;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li{
+  border: 1px solid #e5e5e5;
+ border-bottom:1px solid #aaa;
+  padding:5px 15px;
+  margin: 0 3px 0 0;
+  position:relative;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li:hover{
+  border:1px solid #CCC;
+  border-bottom:1px solid #fff;
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li.active{
+  border:1px solid #aaa;
+  border-bottom:#20527C solid 1px;
+  background-color:#20527C;
+
+}
+
+ul.quicktabs-tabs.quicktabs-style-nostyle li.active a{
+  color:#fff;
+}
+
+/* End Quicktabs */
+
+
+
+
+.ImgCenter {
+  width:80%;
+  margin: auto;
+}
+
+
+/*
+a[href="/%3Cnolink%3E"] { pointer-events: none;
+   cursor: default;
+   color: #666;
+}
+
+*/

@@ -1,32 +1,26 @@
-<div class="info-box mobile">
-  <h1 style="border-bottom: #ccc 1px solid; padding-bottom: 10px;">
-      College Search
-  </h1>
+
 
   <p>
-    <img alt="Students on computers"
-        src="<?php echo $info_img; ?>"
-        style="float:right;padding:20px;" width="300px" />
-
     The only directory of its kind, Think College Search features <span style="color:#20527C"><?php echo $count; ?></span>
     colleges and universities that offer postsecondary education programs for students with intellectual disability. Users of this searchable online database can filter by state, length of program, type of school, options for living on campus, and more.  To learn more, view these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a> about college programs, how we gather the information in the directory, and how to use the features of College Search.
   </p>
 
-
-
-<!--
-   <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a>
+  <!-- <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a>
      for answers to some general questions on college programs, how we gather the information
      in the directory, and how to use the features of College Search.</p>
 
-     <p>Once you have located colleges you are interested in, download
-       the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>.
-       It provides you with the right questions to ask in order to get the answers
-       you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p> -->
+<p>Once you have located colleges you are interested in, download
+  the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>.
+  It provides you with the right questions to ask in order to get the answers
+  you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p> -->
+     <hr/>
 
-  <hr/>
+  <?php
+  include(drupal_get_path('module', 'tc_facets') . '/templates/tc_state_program_count_map.tpl.php');
+  ?>
 
-  <p class="small clearfix">
+   <hr/>
+   <p class="small clearfix">
     The information included here was submitted to Think College by the
     college programs. Being listed here does not indicate or imply a
     Think College endorsement. There also may be programs available that
@@ -37,4 +31,5 @@
     please email <a href="mailto:thinkcollege@umb.edu">thinkcollege@umb.edu.</a>
   </p>
 
-</div>
+
+

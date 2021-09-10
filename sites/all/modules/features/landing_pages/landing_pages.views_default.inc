@@ -2761,6 +2761,7 @@ function landing_pages_views_default_views() {
       'label' => 'Feature in Section',
     ),
   );
+<<<<<<< HEAD
 
   /* Display: Transition Leadership Featured Resources */
   $handler = $view->new_display('panel_pane', 'Transition Leadership Featured Resources', 'panel_pane_30');
@@ -2861,6 +2862,8 @@ function landing_pages_views_default_views() {
       'label' => 'Feature in Section',
     ),
   );
+=======
+>>>>>>> Restructure
   $export['whats_new'] = $view;
 
   return $export;
