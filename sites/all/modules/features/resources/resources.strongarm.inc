@@ -143,7 +143,7 @@ function resources_strongarm() {
           'weight' => '14',
         ),
         'redirect' => array(
-          'weight' => '19',
+          'weight' => '18',
         ),
       ),
       'display' => array(
@@ -157,11 +157,11 @@ function resources_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'card' => array(
-            'weight' => '9',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'event_attachment' => array(
