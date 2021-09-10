@@ -84,7 +84,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_projects:<nolink>',
+    'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
   );
   // Exported menu link: main-menu_moving-transition-forward:projects/mtf.
   $menu_links['main-menu_moving-transition-forward:projects/mtf'] = array(
@@ -109,7 +109,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_projects:<nolink>',
+    'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
   );
   // Exported menu link: main-menu_overview-of-mtf-studies:uuid/node/767b74da-6ad0-4191-9e78-34363f721334.
   $menu_links['main-menu_overview-of-mtf-studies:uuid/node/767b74da-6ad0-4191-9e78-34363f721334'] = array(
@@ -119,11 +119,11 @@ function tc_redesign_menu_default_menu_links() {
     'link_title' => 'Overview of MTF Studies',
     'options' => array(
       'attributes' => array(),
+      'identifier' => 'main-menu_overview-of-mtf-studies:uuid/node/767b74da-6ad0-4191-9e78-34363f721334',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_overview-of-mtf-studies:uuid/node/767b74da-6ad0-4191-9e78-34363f721334',
     ),
     'module' => 'menu',
     'hidden' => 1,
@@ -133,7 +133,7 @@ function tc_redesign_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
     'uuid' => '767b74da-6ad0-4191-9e78-34363f721334',
-    'vuuid' => '82f43e87-297b-4b50-b6b5-4d86ee905a96',
+    'vuuid' => '2e628d47-521d-4921-9715-23bd30e4c76b',
     'parent_identifier' => 'main-menu_moving-transition-forward:projects/mtf',
   );
   // Exported menu link: main-menu_student-corner:resources/innovation-exchange/for-students.
@@ -159,31 +159,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -48,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_students--families:<nolink>',
-  );
-  // Exported menu link: main-menu_students--families:<nolink>.
-  $menu_links['main-menu_students--families:<nolink>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<nolink>',
-    'router_path' => '<nolink>',
-    'link_title' => 'Students & Families',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_students--families:<nolink>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -49,
-    'customized' => 1,
+    'parent_identifier' => 'main-menu_students--families:uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666',
   );
   // Exported menu link: main-menu_transition-leadership-program:uuid/node/74ff22b2-964f-4f00-bc6e-f2e3bca6d6b2.
   $menu_links['main-menu_transition-leadership-program:uuid/node/74ff22b2-964f-4f00-bc6e-f2e3bca6d6b2'] = array(
@@ -232,7 +208,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -47,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_projects:<nolink>',
+    'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
   );
 
   // Translatables
@@ -243,7 +219,6 @@ function tc_redesign_menu_default_menu_links() {
   t('Moving Transition Forward');
   t('Overview of MTF Studies');
   t('Student Corner');
-  t('Students & Families');
   t('Transition Leadership');
   t('Transition Leadership Program');
 

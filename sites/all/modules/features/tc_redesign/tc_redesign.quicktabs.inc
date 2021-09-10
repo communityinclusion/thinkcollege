@@ -38,7 +38,7 @@ function tc_redesign_quicktabs_default_quicktabs() {
     ),
   );
   $quicktabs->renderer = 'quicktabs';
-  $quicktabs->style = 'Basic';
+  $quicktabs->style = 'nostyle';
   $quicktabs->options = array();
 
   // Translatables

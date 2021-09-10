@@ -5189,7 +5189,7 @@ a.orange {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'box-bg-purple',
+    'css_class' => 'project-intro-box',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6707,8 +6707,7 @@ a.orange {
 
 <h4><a href="https://thinkcollege.net/resource/inclusive-academics-campus-culture/intellectual-disability-and-college-it-is-possible">Intellectual Disability and College? It Is Possible!</a></h4>
 
-<p>In this<a href="https://thinkcollege.net/resource/inclusive-academics-campus-culture/intellectual-disability-and-college-it-is-possible"> short video</a>, students from Colorado talk about being enrolled in a college program and how different college life is from high school.</p>
-
+<p>In this short video, students from Colorado talk about being enrolled in a college program and how different college life is from high school.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -6740,7 +6739,7 @@ a.orange {
     'title_heading' => 'h3',
     'body' => '<p><img alt="Mentor sitting at a table with his mentee" class="img-responsive" src="/sites/default/files/images/mentorship.jpg" /></p>
 
-<h4><a href="/resource/mentoring/coaches-and-mentors-helping-college-students-thrive or https://icimedia.wistia.com/medias/m0pcupi239.">Working with a coach or mentor</a></h4>
+<h4><a href="/resource/mentoring/coaches-and-mentors-helping-college-students-thrive">Working with a coach or mentor</a></h4>
 
 <div>College can be a lot to manage. But don’t worry, there are people who will help you along the way. Watch this video to learn about mentors and coaches.</div>
 
@@ -6778,7 +6777,7 @@ a.orange {
 
 <h4><a href="https://thinkcollege.net/think-college-news/student-spotlight-get-to-know-what-students-think-about-their-life-in-college">10 questions with a college student</a></h4>
 
-<p>Every month, we interview a student about college. Click on this link to see the <a href="https://thinkcollege.net/think-college-news/student-spotlight-get-to-know-what-students-think-about-their-life-in-college">list of the Student Spotlight interviews</a>.&nbsp;</p>
+<p>Every month, we interview a student about college. Click on this link to see the list of the Student Spotlight interviews.&nbsp;</p>
 
 <p>&nbsp;</p>
 ',
@@ -6842,14 +6841,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Who is Intelligent?',
+    'title' => 'What is Intelligence?',
     'title_heading' => 'h3',
     'body' => '<p><img alt="Micah (student) walking to class" class="img-responsive" src="/sites/default/files/images/micah_walking_to_class_in_dan_habibs_intelligent_lives_.jpg" /></p>
 
-<h4><a href="https://intelligentlives.org/">Micah, Naieer, and Naomie are!</a></h4>
+<h4><a href="https://intelligentlives.org/">Award-winning film explores intelligence in depth</a></h4>
 
-<p>The movie <a href="http://intelligentlives.org/">Intelligent Lives</a> features three people with intellectual disability in their schools, communities, families, and at work. Some people think that they might not be intelligent because of their disability, but they prove that’s not true.</p>
-',
+<p>The movie <a href="https://intelligentlives.org/">Intelligent Lives</a>&nbsp;explores how people&nbsp;think&nbsp;about intelligence and features&nbsp;three young adults (<a href="https://intelligentlives.org/">Micah, Naieer, and Naomie</a>), showing them in their schools, communities, families, and at work.</p>
+<p>&nbsp;</p>',
     'format' => 'full_html',
     'substitute' => TRUE,
   );
@@ -6880,9 +6879,9 @@ a.orange {
     'title_heading' => 'h3',
     'body' => '<p><img alt="Matilda, a student" class="img-responsive" src="/sites/default/files/images/matilda.jpg" /></p>
 
-<h4><a href="https://www.youtube.com/watch?v=6wsjmEZ4laM&amp;t=1s">Interviews with 5 Students</a></h4>
+<h4><a href="/resources/think-college-public-awareness">Interviews with 5 Students</a></h4>
 
-<p>In <a href="https://www.youtube.com/watch?v=6wsjmEZ4laM&amp;t=1s">this video</a>, 5 students with ID talk about what college means for them. Think College uses it to spread the message that all students with disabilities can go to college. Share it with your teachers, family, and friends!</p>
+<p>In this video, 5 students with ID talk about what college means for them. Think College uses it to spread the message that all students with disabilities can go to college. Share it with your teachers, family, and friends!</p>
 
 <p>&nbsp;</p>
 ',
@@ -6922,11 +6921,7 @@ a.orange {
 
 <p>&nbsp;</p>
 
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
+<p>&nbsp;</p><br>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -6962,7 +6957,6 @@ a.orange {
 
 <p>The <a href="http://going-to-college.org/">Going to College website</a> contains information about living college life with a disability. It’s designed for high school students and provides video clips, activities, and additional resources that can help you get a head start in planning for college. The video clips offer a way for you to hear firsthand from students with disabilities who have been successful.</p>
 
-<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -6994,12 +6988,10 @@ a.orange {
     'title_heading' => 'h3',
     'body' => '<p><img alt="Magnifying Glass" class="img-responsive" src="/sites/default/files/images/magnifying-glass.jpg" /></p>
 
-<h4><a href="/college-search">Find one that’s for you!</a></h4>
+<h4><a href="/college-search">Find one that’s right for you!</a></h4>
 
-<p><a href="https://thinkcollege.net/college-search">This webpage</a> has information on more than 300 college programs for students with ID. You can search for a college that is right for you!<br />
+<p>This webpage has information on more than 300 college programs for students with ID. You can search for a college that is right for you!<br />
 &nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
@@ -8886,7 +8878,7 @@ a.orange {
   $pane->style = array();
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'box-bg-light-blue',
+    'css_class' => 'project-intro-box',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -8916,7 +8908,7 @@ a.orange {
 
 <p>&nbsp;</p>
 
-<p><img alt="" class="img-responsive" src="/sites/default/files/images/image001.png" /></p>
+<p><img alt="A model explaining connection between youth, their in-school transition experiences and post-school outcomes. In-school approaches to transition can be either conventional or college-based. In-school transition experiences can include research-based transition services as well as preparation for employment and preparation for college (the model shows the latter as predictors of paid employment in school). In-school experiences predict post-school outcomes in education and employment. Throughout the model, moderating variables are disability status, other youth factors, family factors, and school factors. " class="img-responsive" src="/sites/default/files/images/image001.png" /></p>
 
 <p>&nbsp;</p>
 
@@ -9093,21 +9085,9 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Key Resources',
+    'title' => 'Resources by Topic',
     'title_heading' => 'h3',
-    'body' => '<h4><a href="http://devel.thinkcollege.net/think-college-news/affinity-groups"><i aria-hidden="true" class="fa fa-comments fa-2x">&nbsp;</i> Affinity Groups </a></h4>
-
-<p>Focusing on key areas related to inclusive higher education, these groups provide the opportunity for in-depth focus and collaboration with others.</p>
-
-<hr />
-<h4><a href="http://devel.thinkcollege.net/think-college-news/resources-by-topic"><i aria-hidden="true" class="fa fa-folder-open fa-2x">&nbsp;</i> Resources by Topic</a></h4>
-
-<p>Find critical resources and FAQ on each topic page to assist with many facets of inclusive higher education.</p>
-
-<hr />
-<h4><a href="/projects/national-coordinating-center/get-news-updates-from-national-coordinating-center"><i aria-hidden="true" class="fa fa-newspaper-o fa-2x">&nbsp;</i> Monthly Newsletter</a></h4>
-
-<p>Don’t miss the latest news and information from the National Coordinating Center and the field of inclusive higher education in this monthly update.</p>
+    'body' => '<p>The best way to get in-depth info on over a <a href="http://devel.thinkcollege.net/resources/innovation-exchange"><strong>dozen critical topics</strong></a>, including key resources, relevant news and expertly prepared FAQs.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -9126,6 +9106,42 @@ a.orange {
   $pane->uuid = 'a439b716-71b3-4306-9fba-836d9919a2b2';
   $display->content['new-a439b716-71b3-4306-9fba-836d9919a2b2'] = $pane;
   $display->panels['row1left'][2] = 'new-a439b716-71b3-4306-9fba-836d9919a2b2';
+  $pane = new stdClass();
+  $pane->pid = 'new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
+  $pane->panel = 'row1left';
+  $pane->type = 'views';
+  $pane->subtype = 'upcoming_events';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '8',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'block_1',
+    'override_title' => 1,
+    'override_title_text' => 'Upcoming NCC Events',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_id' => 'vertical',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
+  $display->content['new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f'] = $pane;
+  $display->panels['row1left'][3] = 'new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
   $pane = new stdClass();
   $pane->pid = 'new-49082a18-eef1-45f6-a564-0691f82cda15';
   $pane->panel = 'row1left';
@@ -9147,11 +9163,11 @@ a.orange {
     'css_class' => 'ie-featuredresources box-orange',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = '49082a18-eef1-45f6-a564-0691f82cda15';
   $display->content['new-49082a18-eef1-45f6-a564-0691f82cda15'] = $pane;
-  $display->panels['row1left'][3] = 'new-49082a18-eef1-45f6-a564-0691f82cda15';
+  $display->panels['row1left'][4] = 'new-49082a18-eef1-45f6-a564-0691f82cda15';
   $pane = new stdClass();
   $pane->pid = 'new-ecc3aaf4-43af-48f6-8271-e399f17fe0f9';
   $pane->panel = 'row1left';
@@ -9235,47 +9251,11 @@ a.orange {
     'css_class' => 'box-orange ',
   );
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 5;
   $pane->locks = array();
   $pane->uuid = 'ecc3aaf4-43af-48f6-8271-e399f17fe0f9';
   $display->content['new-ecc3aaf4-43af-48f6-8271-e399f17fe0f9'] = $pane;
-  $display->panels['row1left'][4] = 'new-ecc3aaf4-43af-48f6-8271-e399f17fe0f9';
-  $pane = new stdClass();
-  $pane->pid = 'new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
-  $pane->panel = 'row1left';
-  $pane->type = 'views';
-  $pane->subtype = 'upcoming_events';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 0,
-    'nodes_per_page' => '8',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 0,
-    'args' => '',
-    'url' => '',
-    'display' => 'block_1',
-    'override_title' => 1,
-    'override_title_text' => 'Upcoming NCC Events',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => 'vertical',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 5;
-  $pane->locks = array();
-  $pane->uuid = '4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
-  $display->content['new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f'] = $pane;
-  $display->panels['row1left'][5] = 'new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
+  $display->panels['row1left'][5] = 'new-ecc3aaf4-43af-48f6-8271-e399f17fe0f9';
   $pane = new stdClass();
   $pane->pid = 'new-524259a0-7676-4a45-8aa2-8b186dc1a33a';
   $pane->panel = 'row1right';
@@ -9298,7 +9278,7 @@ a.orange {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'ncc-intro box-bg-orange',
+    'css_class' => 'project-intro-box',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -9343,11 +9323,9 @@ a.orange {
     'admin_title' => 'TPSID Grantees',
     'title' => 'TPSID Grantees',
     'title_heading' => 'h3',
-    'body' => '<p>Transition and Postsecondary Programs for Students with Intellectual Disability, or TPSID, are model demonstration projects funded by the US Department of Education.</p>
+    'body' => '<p>Transition and Postsecondary Programs for Students with Intellectual Disability, or TPSID, are model demonstration projects funded by the US Department of Education. &nbsp;The NCC supports the work of TPSID grantees by collecting and analyzing data on&nbsp;program design and student experiences in order to increase knowledge about the impact and outcomes of postsecondary education for students with intellectual disability. &nbsp;<a href="http://devel.thinkcollege.net/about/what-is-a-tpsid"><strong>Learn more about the TPSID grantees.</strong></a></p>
 
-<p>The NCC coordinates and supports the work of TPSID grantees by collecting and analyzing data on their program design and student experiences in order to increase knowledge about the impact and outcomes of postsecondary education for students with intellectual disability. It also provides technical assistance to the TPSIDs, and supports collaboration and information sharing among the grantees through regular meetings. To learn more about the TPSID grantees, <a href="/about/what-is-a-tpsid">click here</a>&nbsp;</p>
-
-<p>The map below illustrates the location of every TPSID grantee or consortium site since funding for the TPSID programs began in 2010.</p>
+<p><span style="font-size:12px;">This&nbsp;map illustrates the location of&nbsp;TPSID sites since funding for the TPSID programs began in 2010.</span></p>
 
 <p><img alt="TPSID US Grantees map" class="img-responsive" src="/sites/default/files/images/TPSID%20Cohorts%20Map.png" /></p>
 ',
@@ -9380,8 +9358,8 @@ a.orange {
     'title' => 'NCC Partners',
     'title_heading' => 'h3',
     'body' => '<ul>
-	<li class="pb20"><a href="https://www.ahead.org/home" target="_blank"><img alt="AHEAD logo" src="/sites/default/files/images/ahead-logo400x600.png" style="float: right; margin: 5px; height: 200px; width: 300px;" />Association On Higher Education And Disability (AHEAD)</a>:&nbsp; Since 1977, AHEAD has offered an unparalleled member experience to disability resource professionals, student affairs personnel, ADA coordinators, diversity officers, AT/IT staff, faculty and other instructional personnel, and colleagues who are invested in creating welcoming higher education experiences for disabled individuals.&nbsp;Through its partnership with the National Coordinating Center, AHEAD supports dialogue and resource sharing around higher education for students with intellectual disabilty with their membership.&nbsp; Current&nbsp;activities include support for the annual TPSID Project Director Meeting, regular resource sharing through our respective newsletters and surveying disability support professionals regarding their experiences with and attitudes toward college programs for students with ID.</li>
-	<li><a href="https://www.aucd.org/template/index.cfm" target="_blank"><img alt="AUCD logo" src="/sites/default/files/images/aucd_words_logo.png" style="float: right; margin: 5px; height: 200px; width: 300px;" />Association of University Centers on Disabilities (AUCD)</a>:&nbsp;The Association of University Centers on Disabilities (AUCD) is a membership organization that supports and promotes a national network of university-based interdisciplinary programs.&nbsp; AUCD supports the National Coordinating Center through its partnership by tracking state and federal legislation and other effort related to postsecondary education for students with ID, disseminates resources to its network, and offers activities related to supporting&nbsp;the development of leadership and advocacy skills in students with disabilities.&nbsp;</li>
+	<li class="pb20"><a href="https://www.ahead.org/home" target="_blank"><img alt="AHEAD logo" src="/sites/default/files/images/ahead-logo400x600.png" style="float: right; margin: 5px; height: 200px; width: 300px;" />Association On Higher Education And Disability (AHEAD)</a>: &nbsp;AHEAD is a member organization for&nbsp;disability resource professionals, student affairs personnel, ADA coordinators, diversity officers&nbsp;and others who are invested in creating welcoming higher education experiences for disabled individuals. AHEAD assists the NCC with arrangments for its annual TPSID Project Director Meeting&nbsp;and is conducting a&nbsp;survey of&nbsp;disability support professionals regarding their experiences with and attitudes toward college programs for students with ID.</li>
+	<li><a href="https://www.aucd.org/template/index.cfm" target="_blank"><img alt="AUCD logo" src="/sites/default/files/images/aucd_words_logo.png" style="float: right; margin: 5px; height: 200px; width: 300px;" />Association of University Centers on Disabilities (AUCD)</a>:&nbsp;The Association of University Centers on Disabilities (AUCD) is a membership organization that supports a national network of university-based interdisciplinary programs.&nbsp; AUCD supports the National Coordinating Center&nbsp;by tracking state and federal legislation&nbsp;related to postsecondary education for students with ID&nbsp;and coordinates&nbsp;activities related to&nbsp;the development of leadership and advocacy skills in students with disabilities.&nbsp;</li>
 </ul>
 ',
     'format' => 'full_html',
@@ -10829,10 +10807,10 @@ Program&nbsp;Director</strong></p>
   $display->content['new-e1171b3f-1758-46c2-85bd-7ecf6c472dc9'] = $pane;
   $display->panels['row1left'][2] = 'new-e1171b3f-1758-46c2-85bd-7ecf6c472dc9';
   $pane = new stdClass();
-  $pane->pid = 'new-c3727c97-91c2-43a4-a59a-260684edcaa3';
+  $pane->pid = 'new-9bd24227-9f64-4adc-a4aa-e4ddfd26fe68';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
-  $pane->subtype = 'whats_new-panel_pane_3';
+  $pane->subtype = 'whats_new-panel_pane_30';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -10841,19 +10819,17 @@ Program&nbsp;Director</strong></p>
     ),
   );
   $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
+  $pane->style = array();
   $pane->css = array(
     'css_id' => 'featuredresources',
-    'css_class' => 'ie-featuredresources box box-border-dk-blue',
+    'css_class' => 'ie-featuredresources box',
   );
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
-  $pane->uuid = 'c3727c97-91c2-43a4-a59a-260684edcaa3';
-  $display->content['new-c3727c97-91c2-43a4-a59a-260684edcaa3'] = $pane;
-  $display->panels['row1left'][3] = 'new-c3727c97-91c2-43a4-a59a-260684edcaa3';
+  $pane->uuid = '9bd24227-9f64-4adc-a4aa-e4ddfd26fe68';
+  $display->content['new-9bd24227-9f64-4adc-a4aa-e4ddfd26fe68'] = $pane;
+  $display->panels['row1left'][3] = 'new-9bd24227-9f64-4adc-a4aa-e4ddfd26fe68';
   $pane = new stdClass();
   $pane->pid = 'new-2d000323-af49-42ed-beb6-ec3abcc02274';
   $pane->panel = 'row1left';
@@ -10917,7 +10893,7 @@ Program&nbsp;Director</strong></p>
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'box-bg-dk-blue',
+    'css_class' => 'project-intro-box',
   );
   $pane->extras = array();
   $pane->position = 0;
