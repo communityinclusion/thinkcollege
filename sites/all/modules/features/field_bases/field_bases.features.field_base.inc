@@ -405,7 +405,8 @@ else {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => FALSE,
+      'default_image' => 0,
+      'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -2851,7 +2852,7 @@ else {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 1213,
+      'default_image' => 0,
       'profile2_private' => FALSE,
       'uri_scheme' => 'public',
     ),

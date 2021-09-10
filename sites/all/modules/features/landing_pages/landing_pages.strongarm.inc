@@ -170,9 +170,6 @@ function landing_pages_strongarm() {
         'path' => array(
           'weight' => '30',
         ),
-        'redirect' => array(
-          'weight' => '30',
-        ),
       ),
       'display' => array(),
     ),
