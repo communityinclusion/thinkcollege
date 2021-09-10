@@ -6707,12 +6707,7 @@ a.orange {
 
 <h4><a href="https://thinkcollege.net/resource/inclusive-academics-campus-culture/intellectual-disability-and-college-it-is-possible">Intellectual Disability and College? It Is Possible!</a></h4>
 
-<<<<<<< HEAD
 <p>In this short video, students from Colorado talk about being enrolled in a college program and how different college life is from high school.</p>
-=======
-<p>In this<a href="https://thinkcollege.net/resource/inclusive-academics-campus-culture/intellectual-disability-and-college-it-is-possible"> short video</a>, students from Colorado talk about being enrolled in a college program and how different college life is from high school.</p>
-
->>>>>>> Restructure
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -8883,11 +8878,7 @@ a.orange {
   $pane->style = array();
   $pane->css = array(
     'css_id' => '',
-<<<<<<< HEAD
     'css_class' => 'project-intro-box',
-=======
-    'css_class' => 'box-bg-light-blue',
->>>>>>> Restructure
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -10816,17 +10807,10 @@ Program&nbsp;Director</strong></p>
   $display->content['new-e1171b3f-1758-46c2-85bd-7ecf6c472dc9'] = $pane;
   $display->panels['row1left'][2] = 'new-e1171b3f-1758-46c2-85bd-7ecf6c472dc9';
   $pane = new stdClass();
-<<<<<<< HEAD
   $pane->pid = 'new-9bd24227-9f64-4adc-a4aa-e4ddfd26fe68';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
   $pane->subtype = 'whats_new-panel_pane_30';
-=======
-  $pane->pid = 'new-c3727c97-91c2-43a4-a59a-260684edcaa3';
-  $pane->panel = 'row1left';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'whats_new-panel_pane_3';
->>>>>>> Restructure
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -10835,32 +10819,17 @@ Program&nbsp;Director</strong></p>
     ),
   );
   $pane->cache = array();
-<<<<<<< HEAD
   $pane->style = array();
   $pane->css = array(
     'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
-=======
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => 'featuredresources',
-    'css_class' => 'ie-featuredresources box box-border-dk-blue',
->>>>>>> Restructure
   );
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
-<<<<<<< HEAD
   $pane->uuid = '9bd24227-9f64-4adc-a4aa-e4ddfd26fe68';
   $display->content['new-9bd24227-9f64-4adc-a4aa-e4ddfd26fe68'] = $pane;
   $display->panels['row1left'][3] = 'new-9bd24227-9f64-4adc-a4aa-e4ddfd26fe68';
-=======
-  $pane->uuid = 'c3727c97-91c2-43a4-a59a-260684edcaa3';
-  $display->content['new-c3727c97-91c2-43a4-a59a-260684edcaa3'] = $pane;
-  $display->panels['row1left'][3] = 'new-c3727c97-91c2-43a4-a59a-260684edcaa3';
->>>>>>> Restructure
   $pane = new stdClass();
   $pane->pid = 'new-2d000323-af49-42ed-beb6-ec3abcc02274';
   $pane->panel = 'row1left';
