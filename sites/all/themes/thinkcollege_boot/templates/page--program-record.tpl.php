@@ -133,7 +133,7 @@
       </div>
     <?php endif; ?>
   </div>
-</header>
+
 
    <?php if ($page['section_banner']): ?>
   <div class="section-banner-block">
