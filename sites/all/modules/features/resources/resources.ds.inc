@@ -78,12 +78,14 @@ function resources_ds_layout_settings_info() {
         0 => 'field_resourc_file',
         1 => 'field_external_link',
         2 => 'body',
+        3 => 'field_project',
       ),
     ),
     'fields' => array(
       'field_resourc_file' => 'central',
       'field_external_link' => 'central',
       'body' => 'central',
+      'field_project' => 'central',
     ),
     'classes' => array(),
     'wrappers' => array(

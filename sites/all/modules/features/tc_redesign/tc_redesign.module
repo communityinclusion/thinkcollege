@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the TC Redesign feature.
+ */
+
+include_once 'tc_redesign.features.inc';

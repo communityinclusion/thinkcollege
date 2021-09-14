@@ -38,7 +38,6 @@ function tc_general_search_default_search_api_index() {
     "options" : {
       "datasource" : { "bundles" : [
           "article",
-          "blog_article",
           "page",
           "program_record",
           "resource",
