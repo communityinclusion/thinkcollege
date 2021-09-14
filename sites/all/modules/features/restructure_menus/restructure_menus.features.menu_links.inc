@@ -25,7 +25,7 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -39,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903.
@@ -45,10 +45,10 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => -41,
+    'weight' => -46,
     'customized' => 1,
     'uuid' => '4fbe0e03-d4ee-4afc-a381-a38c476d3903',
-    'vuuid' => 'c5dd7f32-2a4f-43e9-a29d-961c3beb417b',
+    'vuuid' => '22a1d0e9-40b5-48fb-bb20-fe3ca90fe32c',
   );
   // Exported menu link: main-menu_academic-access:resources/innovation-exchange/academic-access.
   $menu_links['main-menu_academic-access:resources/innovation-exchange/academic-access'] = array(
@@ -75,30 +75,6 @@ function restructure_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_resources-by-topic:uuid/node/d525cef7-74c3-4be9-b5e3-cbba486fb75a',
   );
-  // Exported menu link: main-menu_accreditation-workgroup:uuid/node/54a73e51-df83-4523-9a97-be7a5cc04fff.
-  $menu_links['main-menu_accreditation-workgroup:uuid/node/54a73e51-df83-4523-9a97-be7a5cc04fff'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/54a73e51-df83-4523-9a97-be7a5cc04fff',
-    'router_path' => 'uuid',
-    'link_title' => 'Accreditation Workgroup',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_accreditation-workgroup:uuid/node/54a73e51-df83-4523-9a97-be7a5cc04fff',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => '54a73e51-df83-4523-9a97-be7a5cc04fff',
-    'vuuid' => 'e3b96fee-6aa3-4fc6-a11d-4a0302fdbf7e',
-    'parent_identifier' => 'main-menu_national-coordinating-center:projects/ncc',
-  );
   // Exported menu link: main-menu_affinity-groups:uuid/node/c5bd3754-81a9-44ad-9e99-0dd5e5500618.
   $menu_links['main-menu_affinity-groups:uuid/node/c5bd3754-81a9-44ad-9e99-0dd5e5500618'] = array(
     'menu_name' => 'main-menu',
@@ -109,22 +85,22 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Affinity groups and how to join',
       ),
+      'identifier' => 'main-menu_affinity-groups:uuid/node/c5bd3754-81a9-44ad-9e99-0dd5e5500618',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_affinity-groups:uuid/node/c5bd3754-81a9-44ad-9e99-0dd5e5500618',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -51,
+    'weight' => -56,
     'customized' => 1,
     'uuid' => 'c5bd3754-81a9-44ad-9e99-0dd5e5500618',
-    'vuuid' => 'ab9d7e9e-bc5a-42ca-a363-f3488548be4e',
-    'parent_identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
+    'vuuid' => '908f521a-e737-4355-be83-407bfb6dd527',
+    'parent_identifier' => 'main-menu_ta--training:uuid/node/6fe8a511-bfa9-48e0-8a87-9e3b90a5a779',
   );
   // Exported menu link: main-menu_blog:blog.
   $menu_links['main-menu_blog:blog'] = array(
@@ -257,11 +233,11 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Get in touch with our team.',
       ),
+      'identifier' => 'main-menu_contact:uuid/node/1c45f36c-6040-4b5d-8cc7-a47ff7896bba',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_contact:uuid/node/1c45f36c-6040-4b5d-8cc7-a47ff7896bba',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -271,7 +247,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -45,
     'customized' => 1,
     'uuid' => '1c45f36c-6040-4b5d-8cc7-a47ff7896bba',
-    'vuuid' => 'ba336b65-03f1-4c42-8e90-991123acba97',
+    'vuuid' => '1c8de6a1-baa5-4bed-b4d7-2d1d27dc30bd',
     'parent_identifier' => 'main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
   );
   // Exported menu link: main-menu_data-collection:tpsid/data-collection.
@@ -363,11 +339,11 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Jobs related to inclusive higher education',
       ),
+      'identifier' => 'main-menu_employment-opportunities:uuid/node/4990f832-cc20-4d8a-b569-06feaa33f266',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_employment-opportunities:uuid/node/4990f832-cc20-4d8a-b569-06feaa33f266',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -377,7 +353,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -43,
     'customized' => 1,
     'uuid' => '4990f832-cc20-4d8a-b569-06feaa33f266',
-    'vuuid' => '78753afd-534d-47f0-817f-7a5f9bc9aef9',
+    'vuuid' => 'dbe30237-868f-4181-a114-b35c5b7ce797',
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
   );
   // Exported menu link: main-menu_employment-services-affinity-group:technical-assistance/affinity-groups/employment-services.
@@ -437,23 +413,23 @@ function restructure_menus_menu_default_menu_links() {
     'router_path' => 'events',
     'link_title' => 'Events',
     'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
       'attributes' => array(
         'title' => '',
       ),
       'identifier' => 'main-menu_events:events',
+      'roles_for_menu' => array(
+        'show' => array(),
+        'hide' => array(),
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
+    'expanded' => 1,
+    'weight' => -55,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
+    'parent_identifier' => 'main-menu_ta--training:uuid/node/6fe8a511-bfa9-48e0-8a87-9e3b90a5a779',
   );
   // Exported menu link: main-menu_family-resources:family-resources.
   $menu_links['main-menu_family-resources:family-resources'] = array(
@@ -472,12 +448,13 @@ function restructure_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_family-resources:family-resources',
     ),
     'module' => 'menu',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -54,
     'customized' => 1,
+    'parent_identifier' => 'main-menu_students--families:uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666',
   );
   // Exported menu link: main-menu_follow-up-data:uuid/node/ed0f1a52-e49e-4165-900b-1747087a3cea.
   $menu_links['main-menu_follow-up-data:uuid/node/ed0f1a52-e49e-4165-900b-1747087a3cea'] = array(
@@ -511,54 +488,6 @@ function restructure_menus_menu_default_menu_links() {
     'vuuid' => '17e68296-8f3e-4b1b-8699-218ea1736a35',
     'parent_identifier' => 'main-menu_tpsid-login:uuid/node/53f99e19-ae6f-4889-b4d3-209aa510a34d',
   );
-  // Exported menu link: main-menu_fqie-project-team:uuid/node/6029abc2-6839-4672-ac6e-a5b180dd6e15.
-  $menu_links['main-menu_fqie-project-team:uuid/node/6029abc2-6839-4672-ac6e-a5b180dd6e15'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/6029abc2-6839-4672-ac6e-a5b180dd6e15',
-    'router_path' => 'uuid',
-    'link_title' => 'FQIE Project Team',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_fqie-project-team:uuid/node/6029abc2-6839-4672-ac6e-a5b180dd6e15',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => '6029abc2-6839-4672-ac6e-a5b180dd6e15',
-    'vuuid' => 'f6c13893-4193-444a-bb3d-633f2b71fa83',
-    'parent_identifier' => 'main-menu_future-quest-island-explorations:projects/fqie',
-  );
-  // Exported menu link: main-menu_future-quest-island-explorations:uuid/node/e68dd939-cf5b-4b1a-8b2f-249ecdf304b9.
-  $menu_links['main-menu_future-quest-island-explorations:uuid/node/e68dd939-cf5b-4b1a-8b2f-249ecdf304b9'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/e68dd939-cf5b-4b1a-8b2f-249ecdf304b9',
-    'router_path' => 'uuid',
-    'link_title' => 'Future Quest Island-Explorations',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_future-quest-island-explorations:uuid/node/e68dd939-cf5b-4b1a-8b2f-249ecdf304b9',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-    'uuid' => 'e68dd939-cf5b-4b1a-8b2f-249ecdf304b9',
-    'vuuid' => '1215d979-c245-437b-be01-b60fa23a334d',
-    'parent_identifier' => 'main-menu_future-quest-island-explorations:projects/fqie',
-  );
   // Exported menu link: main-menu_future-quest-island:uuid/node/dceb1e33-1e8c-4c21-ae78-1a0d6350791f.
   $menu_links['main-menu_future-quest-island:uuid/node/dceb1e33-1e8c-4c21-ae78-1a0d6350791f'] = array(
     'menu_name' => 'main-menu',
@@ -583,30 +512,6 @@ function restructure_menus_menu_default_menu_links() {
     'uuid' => 'dceb1e33-1e8c-4c21-ae78-1a0d6350791f',
     'vuuid' => '1f17711b-86ff-49d4-9600-4f88a3f0ab97',
     'parent_identifier' => 'main-menu_what-is-think-college:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
-  );
-  // Exported menu link: main-menu_get-news--updates-from-national-coordinating-center:uuid/node/60f05df5-4bf2-4a73-80b1-0be435dea570.
-  $menu_links['main-menu_get-news--updates-from-national-coordinating-center:uuid/node/60f05df5-4bf2-4a73-80b1-0be435dea570'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/60f05df5-4bf2-4a73-80b1-0be435dea570',
-    'router_path' => 'uuid',
-    'link_title' => 'Get News & Updates from National Coordinating Center',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_get-news--updates-from-national-coordinating-center:uuid/node/60f05df5-4bf2-4a73-80b1-0be435dea570',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => '60f05df5-4bf2-4a73-80b1-0be435dea570',
-    'vuuid' => 'a7f94a87-29cf-43d0-a7e4-e64199274d14',
-    'parent_identifier' => 'main-menu_national-coordinating-center:projects/ncc',
   );
   // Exported menu link: main-menu_glossary:about/glossary.
   $menu_links['main-menu_glossary:about/glossary'] = array(
@@ -650,7 +555,7 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -57,
     'customized' => 1,
   );
   // Exported menu link: main-menu_information-for-tpsid-grantees:uuid/node/4c78115c-18d0-47b3-9bc1-65188b14d11f.
@@ -731,15 +636,14 @@ function restructure_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_join-the-conversation:uuid/node/f8d31097-d8a6-4538-9719-8f6c766d3997',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -50,
     'customized' => 1,
     'uuid' => 'f8d31097-d8a6-4538-9719-8f6c766d3997',
     'vuuid' => 'fb9c7244-554a-4923-b6da-62de2f206426',
-    'parent_identifier' => 'main-menu_technical-assistance:uuid/node/97ea2efd-251c-4ebf-84ff-8e92d5677ac8',
   );
   // Exported menu link: main-menu_key-resources-for-tpsids:tpsid/key-resources-for-tpsids.
   $menu_links['main-menu_key-resources-for-tpsids:tpsid/key-resources-for-tpsids'] = array(
@@ -771,78 +675,6 @@ function restructure_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_tpsid:uuid/node/4c78115c-18d0-47b3-9bc1-65188b14d11f',
   );
-  // Exported menu link: main-menu_moving-transition-forward-datasets:uuid/node/266ae39d-7ab5-4d38-bbfb-7838f1c2b45b.
-  $menu_links['main-menu_moving-transition-forward-datasets:uuid/node/266ae39d-7ab5-4d38-bbfb-7838f1c2b45b'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/266ae39d-7ab5-4d38-bbfb-7838f1c2b45b',
-    'router_path' => 'uuid',
-    'link_title' => 'Moving Transition Forward Datasets',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_moving-transition-forward-datasets:uuid/node/266ae39d-7ab5-4d38-bbfb-7838f1c2b45b',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => '266ae39d-7ab5-4d38-bbfb-7838f1c2b45b',
-    'vuuid' => 'd3992812-94c7-4a33-9fc8-ecb0b37c7b79',
-    'parent_identifier' => 'main-menu_moving-transition-forward:projects/mtf',
-  );
-  // Exported menu link: main-menu_moving-transition-forward-team-members:uuid/node/42c7dd3e-8a57-4a01-b645-2935eb2b36a9.
-  $menu_links['main-menu_moving-transition-forward-team-members:uuid/node/42c7dd3e-8a57-4a01-b645-2935eb2b36a9'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/42c7dd3e-8a57-4a01-b645-2935eb2b36a9',
-    'router_path' => 'uuid',
-    'link_title' => 'Moving Transition Forward Team Members',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_moving-transition-forward-team-members:uuid/node/42c7dd3e-8a57-4a01-b645-2935eb2b36a9',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => '42c7dd3e-8a57-4a01-b645-2935eb2b36a9',
-    'vuuid' => '88c8e4cd-ece4-4511-92b8-89c7111507e4',
-    'parent_identifier' => 'main-menu_moving-transition-forward:projects/mtf',
-  );
-  // Exported menu link: main-menu_moving-transition-forward:uuid/node/8a1e0967-1d0a-4dcc-9e38-8cbe89b52a79.
-  $menu_links['main-menu_moving-transition-forward:uuid/node/8a1e0967-1d0a-4dcc-9e38-8cbe89b52a79'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/8a1e0967-1d0a-4dcc-9e38-8cbe89b52a79',
-    'router_path' => 'uuid',
-    'link_title' => 'Moving Transition Forward',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_moving-transition-forward:uuid/node/8a1e0967-1d0a-4dcc-9e38-8cbe89b52a79',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-    'customized' => 1,
-    'uuid' => '8a1e0967-1d0a-4dcc-9e38-8cbe89b52a79',
-    'vuuid' => '1486faee-da7c-4ef8-a3da-257e93906ac7',
-    'parent_identifier' => 'main-menu_moving-transition-forward:projects/mtf',
-  );
   // Exported menu link: main-menu_national-coordinating-center:projects/ncc.
   $menu_links['main-menu_national-coordinating-center:projects/ncc'] = array(
     'menu_name' => 'main-menu',
@@ -864,7 +696,7 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -50,
+    'weight' => -56,
     'customized' => 1,
     'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
   );
@@ -1033,21 +865,21 @@ function restructure_menus_menu_default_menu_links() {
     'link_title' => 'Projects',
     'options' => array(
       'attributes' => array(),
+      'identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => -47,
+    'weight' => -54,
     'customized' => 1,
     'uuid' => 'ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
-    'vuuid' => '935b2015-5822-4b24-8f60-b9c44884b929',
+    'vuuid' => '6e06c14e-fb06-46a1-bdac-64c23a27df2d',
   );
   // Exported menu link: main-menu_public-policy-affinity-group:technical-assistance/affinity-groups/public-policy.
   $menu_links['main-menu_public-policy-affinity-group:technical-assistance/affinity-groups/public-policy'] = array(
@@ -1108,15 +940,14 @@ function restructure_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_request-for-technical-assistance-and-training:uuid/node/c4d6f291-c6ec-4599-8c3c-2743de53861c',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -49,
     'customized' => 1,
     'uuid' => 'c4d6f291-c6ec-4599-8c3c-2743de53861c',
     'vuuid' => 'adf09411-39d0-45b6-9097-4280c0698f52',
-    'parent_identifier' => 'main-menu_technical-assistance:uuid/node/97ea2efd-251c-4ebf-84ff-8e92d5677ac8',
   );
   // Exported menu link: main-menu_research-affinity-group:technical-assistance/affinity-groups/research.
   $menu_links['main-menu_research-affinity-group:technical-assistance/affinity-groups/research'] = array(
@@ -1153,11 +984,11 @@ function restructure_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_research-in-inclusive-pse:uuid/node/6e53e74e-8485-4815-a42f-982a252609a7',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -56,
     'customized' => 1,
     'uuid' => '6e53e74e-8485-4815-a42f-982a252609a7',
     'vuuid' => 'f31525d7-813d-469f-9ed4-3d4e7371e91d',
@@ -1199,11 +1030,11 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Curated resources on postsecondary education options',
       ),
+      'identifier' => 'main-menu_resources-by-topic:uuid/node/d525cef7-74c3-4be9-b5e3-cbba486fb75a',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_resources-by-topic:uuid/node/d525cef7-74c3-4be9-b5e3-cbba486fb75a',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1213,7 +1044,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
     'uuid' => 'd525cef7-74c3-4be9-b5e3-cbba486fb75a',
-    'vuuid' => 'd73ee9bd-6449-4d41-8245-50d5633ceaeb',
+    'vuuid' => '0f5e1c03-b94b-4bbb-89fb-0e6cfe2f7bc7',
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
   );
   // Exported menu link: main-menu_resources:uuid/node/4ffe08c6-e59d-4be9-9cfa-665c14d919c9.
@@ -1269,7 +1100,7 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => -42,
+    'weight' => -47,
     'customized' => 1,
     'uuid' => '66bee5c5-ae58-4ead-87f2-7213745ddd45',
     'vuuid' => 'd68d1890-84ba-446e-a1ad-5020df671909',
@@ -1284,11 +1115,11 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Our documentary about college students with intellectual disability',
       ),
+      'identifier' => 'main-menu_rethinking-college-the-film:uuid/node/5eb7d8bc-f2c2-48ae-8297-c1ad9e0c5ebe',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_rethinking-college-the-film:uuid/node/5eb7d8bc-f2c2-48ae-8297-c1ad9e0c5ebe',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1298,7 +1129,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -45,
     'customized' => 1,
     'uuid' => '5eb7d8bc-f2c2-48ae-8297-c1ad9e0c5ebe',
-    'vuuid' => '9f4443cc-7d45-4226-aeea-1a891798dc07',
+    'vuuid' => 'da1af13c-4f52-48d3-aeb8-0f8bf43c76eb',
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
   );
   // Exported menu link: main-menu_search-resource-library:resource-search.
@@ -1329,30 +1160,6 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
-  );
-  // Exported menu link: main-menu_staff-publications:uuid/node/0a97d42e-0e57-496f-b3f3-aa94657cced5.
-  $menu_links['main-menu_staff-publications:uuid/node/0a97d42e-0e57-496f-b3f3-aa94657cced5'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/0a97d42e-0e57-496f-b3f3-aa94657cced5',
-    'router_path' => 'uuid',
-    'link_title' => 'Staff Publications',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_staff-publications:uuid/node/0a97d42e-0e57-496f-b3f3-aa94657cced5',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-    'customized' => 1,
-    'uuid' => '0a97d42e-0e57-496f-b3f3-aa94657cced5',
-    'vuuid' => 'a3e8f5c6-9ec0-4a52-8eaf-ca7bed7a15bb',
-    'parent_identifier' => 'main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
   );
   // Exported menu link: main-menu_statewide-alliances-affinity-group:technical-assistance/affinity-groups/statewide-alliances.
   $menu_links['main-menu_statewide-alliances-affinity-group:technical-assistance/affinity-groups/statewide-alliances'] = array(
@@ -1461,54 +1268,6 @@ function restructure_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_resources-by-topic:uuid/node/d525cef7-74c3-4be9-b5e3-cbba486fb75a',
   );
-  // Exported menu link: main-menu_students--families:uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666.
-  $menu_links['main-menu_students--families:uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666',
-    'router_path' => 'uuid',
-    'link_title' => 'Students & Families',
-    'options' => array(
-      'attributes' => array(),
-      'identifier' => 'main-menu_students--families:<nolink>',
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -49,
-    'customized' => 1,
-    'uuid' => 'da98abd4-c1ae-46d9-a71e-ad1b35768666',
-    'vuuid' => '6b612ef4-c9bc-4bdf-b4d4-e0220ac84916',
-  );
-  // Exported menu link: main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81.
-  $menu_links['main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
-    'router_path' => 'uuid',
-    'link_title' => 'TA & Training',
-    'options' => array(
-      'attributes' => array(),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -46,
-    'customized' => 1,
-    'uuid' => '3ef02c83-866e-4717-8397-57e5d74e0f81',
-    'vuuid' => '77fd50eb-3b11-414f-95ee-731d954d9bea',
-  );
   // Exported menu link: main-menu_tc-learning-channel:uuid/node/a2ba0aa5-4568-4513-b135-c0169d527177.
   $menu_links['main-menu_tc-learning-channel:uuid/node/a2ba0aa5-4568-4513-b135-c0169d527177'] = array(
     'menu_name' => 'main-menu',
@@ -1516,50 +1275,25 @@ function restructure_menus_menu_default_menu_links() {
     'router_path' => 'uuid',
     'link_title' => 'TC Learning Channel',
     'options' => array(
-      'attributes' => array(),
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_tc-learning-channel:uuid/node/a2ba0aa5-4568-4513-b135-c0169d527177',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_tc-learning-channel:uuid/node/a2ba0aa5-4568-4513-b135-c0169d527177',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
+    'expanded' => 1,
+    'weight' => -54,
     'customized' => 1,
     'uuid' => 'a2ba0aa5-4568-4513-b135-c0169d527177',
-    'vuuid' => 'c3622c2f-839d-4dec-896d-6fd7c76e5f11',
-    'parent_identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
-  );
-  // Exported menu link: main-menu_team-members:uuid/node/bb694a71-a152-48e1-80f6-074811422fa3.
-  $menu_links['main-menu_team-members:uuid/node/bb694a71-a152-48e1-80f6-074811422fa3'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/bb694a71-a152-48e1-80f6-074811422fa3',
-    'router_path' => 'uuid',
-    'link_title' => 'Team Members',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Meet the National Coordinating Center Team Members',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_team-members:uuid/node/bb694a71-a152-48e1-80f6-074811422fa3',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-    'uuid' => 'bb694a71-a152-48e1-80f6-074811422fa3',
-    'vuuid' => '8c17b474-c5fe-4af1-8685-cde171816437',
-    'parent_identifier' => 'main-menu_national-coordinating-center:projects/ncc',
+    'vuuid' => '7d289d5c-da40-4883-97b6-596f9a665b72',
+    'parent_identifier' => 'main-menu_ta--training:uuid/node/6fe8a511-bfa9-48e0-8a87-9e3b90a5a779',
   );
   // Exported menu link: main-menu_technical-assistance-providers:uuid/node/a69fce22-8a0f-4ba9-8548-aef9a223348b.
   $menu_links['main-menu_technical-assistance-providers:uuid/node/a69fce22-8a0f-4ba9-8548-aef9a223348b'] = array(
@@ -1571,72 +1305,22 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Meet our TA Providers',
       ),
+      'identifier' => 'main-menu_technical-assistance-providers:uuid/node/a69fce22-8a0f-4ba9-8548-aef9a223348b',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_technical-assistance-providers:uuid/node/a69fce22-8a0f-4ba9-8548-aef9a223348b',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -52,
+    'weight' => -57,
     'customized' => 1,
     'uuid' => 'a69fce22-8a0f-4ba9-8548-aef9a223348b',
-    'vuuid' => 'b0f6b3a4-f1c7-4acf-9f6d-6c6d99de8bff',
-    'parent_identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
-  );
-  // Exported menu link: main-menu_technical-assistance:uuid/node/97ea2efd-251c-4ebf-84ff-8e92d5677ac8.
-  $menu_links['main-menu_technical-assistance:uuid/node/97ea2efd-251c-4ebf-84ff-8e92d5677ac8'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/97ea2efd-251c-4ebf-84ff-8e92d5677ac8',
-    'router_path' => 'uuid',
-    'link_title' => 'Technical Assistance',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Technical assistance available from Think College',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_technical-assistance:uuid/node/97ea2efd-251c-4ebf-84ff-8e92d5677ac8',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -44,
-    'customized' => 1,
-    'uuid' => '97ea2efd-251c-4ebf-84ff-8e92d5677ac8',
-    'vuuid' => 'd0636701-8cdd-4f11-88c5-0cb908b49ae0',
-  );
-  // Exported menu link: main-menu_testimonials:uuid/node/cf3855b7-fe29-459e-8938-9f2c98538cc6.
-  $menu_links['main-menu_testimonials:uuid/node/cf3855b7-fe29-459e-8938-9f2c98538cc6'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/cf3855b7-fe29-459e-8938-9f2c98538cc6',
-    'router_path' => 'uuid',
-    'link_title' => 'Testimonials',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_testimonials:uuid/node/cf3855b7-fe29-459e-8938-9f2c98538cc6',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => 'cf3855b7-fe29-459e-8938-9f2c98538cc6',
-    'vuuid' => 'e026872e-46cb-449f-aa02-ce5e6982c5a3',
-    'parent_identifier' => 'main-menu_transition-leadership:projects/transition-leadership-project',
+    'vuuid' => 'aae41b0b-02fa-40f2-9c66-042e98935bc5',
+    'parent_identifier' => 'main-menu_ta--training:uuid/node/6fe8a511-bfa9-48e0-8a87-9e3b90a5a779',
   );
   // Exported menu link: main-menu_think-college-in-the-media:uuid/node/c69f23c9-1655-437e-9564-fa236291c0f6.
   $menu_links['main-menu_think-college-in-the-media:uuid/node/c69f23c9-1655-437e-9564-fa236291c0f6'] = array(
@@ -1646,11 +1330,11 @@ function restructure_menus_menu_default_menu_links() {
     'link_title' => 'Think College in the Media',
     'options' => array(
       'alter' => TRUE,
+      'identifier' => 'main-menu_think-college-in-the-media:uuid/node/c69f23c9-1655-437e-9564-fa236291c0f6',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_think-college-in-the-media:uuid/node/c69f23c9-1655-437e-9564-fa236291c0f6',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1660,7 +1344,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
     'uuid' => 'c69f23c9-1655-437e-9564-fa236291c0f6',
-    'vuuid' => '86455188-9ce2-438e-9d7b-2ec27e063415',
+    'vuuid' => 'bb18e138-4e3e-4202-bbd0-13812199a724',
     'parent_identifier' => 'main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
   );
   // Exported menu link: main-menu_think-college-learn:uuid/node/f0d48ecd-cd2b-4cfe-8c35-ad7e470d3a9e.
@@ -1684,11 +1368,11 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -47,
+    'weight' => -53,
     'customized' => 1,
     'uuid' => 'f0d48ecd-cd2b-4cfe-8c35-ad7e470d3a9e',
     'vuuid' => 'be94be0b-0bc6-4879-9c07-28585af6dfb4',
-    'parent_identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
+    'parent_identifier' => 'main-menu_ta--training:uuid/node/6fe8a511-bfa9-48e0-8a87-9e3b90a5a779',
   );
   // Exported menu link: main-menu_think-college-national-coordinating-center:uuid/node/5d8d9a37-c072-415d-b622-fd9aaaa52709.
   $menu_links['main-menu_think-college-national-coordinating-center:uuid/node/5d8d9a37-c072-415d-b622-fd9aaaa52709'] = array(
@@ -1698,53 +1382,22 @@ function restructure_menus_menu_default_menu_links() {
     'link_title' => 'Think College National Coordinating Center',
     'options' => array(
       'attributes' => array(),
+      'identifier' => 'main-menu_think-college-national-coordinating-center:uuid/node/5d8d9a37-c072-415d-b622-fd9aaaa52709',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_think-college-national-coordinating-center:uuid/node/5d8d9a37-c072-415d-b622-fd9aaaa52709',
     ),
     'module' => 'menu',
     'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -50,
+    'weight' => -54,
     'customized' => 1,
     'uuid' => '5d8d9a37-c072-415d-b622-fd9aaaa52709',
-    'vuuid' => 'ec957f35-ec9b-44b2-8968-78bc41ebb749',
+    'vuuid' => '77126533-faa2-4ea7-aaa0-c42cadf167c0',
     'parent_identifier' => 'main-menu_national-coordinating-center:projects/ncc',
-  );
-  // Exported menu link: main-menu_think-college-news:general-site-search.
-  $menu_links['main-menu_think-college-news:general-site-search'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'general-site-search',
-    'router_path' => 'general-site-search',
-    'link_title' => 'Think College News',
-    'options' => array(
-      'query' => array(
-        'f%255B0%255D' => 'type:article',
-        'sort' => 'created',
-        'order' => 'desc',
-        'f%5B0%5D' => 'type:articlele',
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_think-college-news:general-site-search',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
   );
   // Exported menu link: main-menu_think-college-public-awareness:uuid/node/899045f8-a174-44db-9039-10051283980f.
   $menu_links['main-menu_think-college-public-awareness:uuid/node/899045f8-a174-44db-9039-10051283980f'] = array(
@@ -1753,14 +1406,12 @@ function restructure_menus_menu_default_menu_links() {
     'router_path' => 'uuid',
     'link_title' => 'Think College! Public Awareness',
     'options' => array(
+      'attributes' => array(),
+      'identifier' => 'main-menu_think-college-public-awareness:uuid/node/899045f8-a174-44db-9039-10051283980f',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_think-college-public-awareness:uuid/node/899045f8-a174-44db-9039-10051283980f',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1770,7 +1421,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -44,
     'customized' => 1,
     'uuid' => '899045f8-a174-44db-9039-10051283980f',
-    'vuuid' => '2a861a41-b0ad-4a0f-a7f6-666aa66a094e',
+    'vuuid' => 'f0a30683-7717-47e9-a5a9-da97ed790069',
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
   );
   // Exported menu link: main-menu_think-college-publications:uuid/node/bef73ab7-4f44-4ff8-9dc5-26966b053c22.
@@ -1783,11 +1434,11 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Publications from the Think College team',
       ),
+      'identifier' => 'main-menu_think-college-publications:uuid/node/bef73ab7-4f44-4ff8-9dc5-26966b053c22',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_think-college-publications:uuid/node/bef73ab7-4f44-4ff8-9dc5-26966b053c22',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -1797,33 +1448,8 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
     'uuid' => 'bef73ab7-4f44-4ff8-9dc5-26966b053c22',
-    'vuuid' => 'e71c1d5a-7dcf-4123-819d-597949ea7ae1',
+    'vuuid' => '29e6996e-e30e-4ee4-9903-e5bf54acf251',
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
-  );
-  // Exported menu link: main-menu_think-college-staff:uuid/node/34be83b5-0d02-4112-aeb3-b3641b192b46.
-  $menu_links['main-menu_think-college-staff:uuid/node/34be83b5-0d02-4112-aeb3-b3641b192b46'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/34be83b5-0d02-4112-aeb3-b3641b192b46',
-    'router_path' => 'uuid',
-    'link_title' => 'Think College Staff',
-    'options' => array(
-      'attributes' => array(),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_think-college-staff:uuid/node/34be83b5-0d02-4112-aeb3-b3641b192b46',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-    'uuid' => '34be83b5-0d02-4112-aeb3-b3641b192b46',
-    'vuuid' => '03e9d354-c154-42a8-8c32-77b52cba6e91',
-    'parent_identifier' => 'main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
   );
   // Exported menu link: main-menu_think-college-transition-model-project:uuid/node/a8c73b20-e2e5-4896-b590-d9df5db3fffb.
   $menu_links['main-menu_think-college-transition-model-project:uuid/node/a8c73b20-e2e5-4896-b590-d9df5db3fffb'] = array(
@@ -2047,11 +1673,11 @@ function restructure_menus_menu_default_menu_links() {
       'identifier' => 'main-menu_training-and-ta-past-events:uuid/node/6db074f5-4a98-4740-8907-cb3f3ee4cf0a',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -51,
     'customized' => 1,
     'uuid' => '6db074f5-4a98-4740-8907-cb3f3ee4cf0a',
     'vuuid' => '7758e750-401a-4038-9acc-4f536c57bb12',
@@ -2074,34 +1700,10 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -43,
+    'weight' => -48,
     'customized' => 1,
     'uuid' => '9de11286-ee3d-4eef-90a9-4649f5b835a3',
     'vuuid' => '520a5b35-31d3-4207-8967-a1c9467cc38e',
-  );
-  // Exported menu link: main-menu_transition-leadership-team-members:uuid/node/f1bc4206-b9e1-4048-bdbc-f9bca8e696e6.
-  $menu_links['main-menu_transition-leadership-team-members:uuid/node/f1bc4206-b9e1-4048-bdbc-f9bca8e696e6'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'uuid/node/f1bc4206-b9e1-4048-bdbc-f9bca8e696e6',
-    'router_path' => 'uuid',
-    'link_title' => 'Transition Leadership Team Members',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_transition-leadership-team-members:uuid/node/f1bc4206-b9e1-4048-bdbc-f9bca8e696e6',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'uuid' => 'f1bc4206-b9e1-4048-bdbc-f9bca8e696e6',
-    'vuuid' => '366ff496-5ac3-47d8-a566-ed3cdd5b3431',
-    'parent_identifier' => 'main-menu_transition-leadership:projects/transition-leadership-project',
   );
   // Exported menu link: main-menu_udl-and-technology-affinity-group:technical-assistance/affinity-groups/technology-and-udl.
   $menu_links['main-menu_udl-and-technology-affinity-group:technical-assistance/affinity-groups/technology-and-udl'] = array(
@@ -2151,7 +1753,6 @@ function restructure_menus_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_ta--training:uuid/node/3ef02c83-866e-4717-8397-57e5d74e0f81',
   );
   // Exported menu link: main-menu_vocational-rehabilitation-affinity-group:technical-assistance/affinity-groups/vocational-rehabilitation.
   $menu_links['main-menu_vocational-rehabilitation-affinity-group:technical-assistance/affinity-groups/vocational-rehabilitation'] = array(
@@ -2221,10 +1822,10 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -51,
     'customized' => 1,
     'uuid' => '1de84295-c4e2-4499-8203-843bbfe0af93',
-    'vuuid' => '52220b39-cdb8-4b67-bf35-46ecbb54b7a6',
+    'vuuid' => '22235168-d3ec-40d7-83bc-b20cd7231b9a',
     'parent_identifier' => 'main-menu_national-coordinating-center:projects/ncc',
   );
   // Exported menu link: main-menu_what-is-think-college:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903.
@@ -2237,21 +1838,21 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Information about Think College and our projects',
       ),
+      'identifier' => 'main-menu_what-is-think-college:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_what-is-think-college:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -51,
     'customized' => 1,
     'uuid' => '4fbe0e03-d4ee-4afc-a381-a38c476d3903',
-    'vuuid' => 'c5dd7f32-2a4f-43e9-a29d-961c3beb417b',
+    'vuuid' => '22a1d0e9-40b5-48fb-bb20-fe3ca90fe32c',
     'parent_identifier' => 'main-menu_about:uuid/node/4fbe0e03-d4ee-4afc-a381-a38c476d3903',
   );
   // Exported menu link: main-menu_whats-happening-in-your-state:uuid/node/15e92ca5-f5d2-48bc-afe9-c6ff1505247a.
@@ -2264,11 +1865,11 @@ function restructure_menus_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'State-by-state activities related to postsecondary education for students with intellectual disability',
       ),
+      'identifier' => 'main-menu_whats-happening-in-your-state:uuid/node/15e92ca5-f5d2-48bc-afe9-c6ff1505247a',
       'roles_for_menu' => array(
         'show' => array(),
         'hide' => array(),
       ),
-      'identifier' => 'main-menu_whats-happening-in-your-state:uuid/node/15e92ca5-f5d2-48bc-afe9-c6ff1505247a',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -2278,7 +1879,7 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
     'uuid' => '15e92ca5-f5d2-48bc-afe9-c6ff1505247a',
-    'vuuid' => '2f5ff34d-3858-41fe-b8b2-d8b0498fc9f5',
+    'vuuid' => '806c335c-5dcb-4e57-b159-e2d4ea0ccb23',
     'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
   );
   // Exported menu link: menu-temporary-main-menu_about:http://www.thinkcollege.net/about-us.
@@ -2427,7 +2028,6 @@ function restructure_menus_menu_default_menu_links() {
   t('A-Z list of terms');
   t('About');
   t('Academic Access');
-  t('Accreditation Workgroup');
   t('Affinity Groups');
   t('Blog');
   t('Campus Housing');
@@ -2443,21 +2043,15 @@ function restructure_menus_menu_default_menu_links() {
   t('Employment Opportunities');
   t('Employment Services Affinity Group');
   t('Events');
-  t('FQIE Project Team');
   t('Family Resources');
   t('Follow-Up Data');
   t('Future Quest Island');
-  t('Future Quest Island-Explorations');
-  t('Get News & Updates from National Coordinating Center');
   t('Glossary');
   t('Home');
   t('Information for TPSID Grantees');
   t('Join TC Conversations: TPSID Channel');
   t('Join the Conversation');
   t('Key Resources for TPSIDs');
-  t('Moving Transition Forward');
-  t('Moving Transition Forward Datasets');
-  t('Moving Transition Forward Team Members');
   t('National Coordinating Center');
   t('Paying for College');
   t('Peer Mentors');
@@ -2477,13 +2071,10 @@ function restructure_menus_menu_default_menu_links() {
   t('Resources by Topic');
   t('Rethinking College: The Film');
   t('Search Resource Library');
-  t('Staff Publications');
   t('Statewide Alliances Affinity Group');
   t('Stay in the Think College Network');
   t('Student Credentials');
   t('Student Credentials Affinity Group');
-  t('Students & Families');
-  t('TA & Training');
   t('TC Learning Channel');
   t('TPSID');
   t('TPSID Data Collection');
@@ -2491,22 +2082,16 @@ function restructure_menus_menu_default_menu_links() {
   t('TPSID Learning Channel');
   t('TPSID Login');
   t('TPSID Quarterly Meetings');
-  t('Team Members');
-  t('Technical Assistance');
   t('Technical Assistance Providers');
-  t('Testimonials');
   t('Think College Learn');
   t('Think College National Coordinating Center');
-  t('Think College News');
   t('Think College Publications');
-  t('Think College Staff');
   t('Think College Transition Model Project');
   t('Think College in the Media');
   t('Think College! Public Awareness');
   t('Topics');
   t('Training');
   t('Training and TA: Past Events');
-  t('Transition Leadership Team Members');
   t('UDL and Technology Affinity Group');
   t('Upcoming Events');
   t('Vocational Rehabilitation');

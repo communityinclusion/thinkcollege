@@ -5251,21 +5251,21 @@ a.orange {
   $display->content['new-3cf6fa16-8c65-4895-a234-99fdb8f665f5'] = $pane;
   $display->panels['row1right'][2] = 'new-3cf6fa16-8c65-4895-a234-99fdb8f665f5';
   $pane = new stdClass();
-  $pane->pid = 'new-e2076fdb-2e9e-43b4-a5dd-e664e3d9ee88';
+  $pane->pid = 'new-01d27d83-df51-48aa-8449-de2ad568c1bc';
   $pane->panel = 'row1right';
   $pane->type = 'node';
   $pane->subtype = 'node';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4696',
+    'nid' => '4866',
     'links' => 0,
     'leave_node_title' => 0,
     'identifier' => '',
     'build_mode' => 'full',
     'link_node_title' => 0,
     'override_title' => 1,
-    'override_title_text' => 'Participate in a research study!',
+    'override_title_text' => 'PARTICIPATE IN A RESEARCH STUDY!',
     'override_title_heading' => 'h3',
   );
   $pane->cache = array();
@@ -5277,9 +5277,9 @@ a.orange {
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
-  $pane->uuid = 'e2076fdb-2e9e-43b4-a5dd-e664e3d9ee88';
-  $display->content['new-e2076fdb-2e9e-43b4-a5dd-e664e3d9ee88'] = $pane;
-  $display->panels['row1right'][3] = 'new-e2076fdb-2e9e-43b4-a5dd-e664e3d9ee88';
+  $pane->uuid = '01d27d83-df51-48aa-8449-de2ad568c1bc';
+  $display->content['new-01d27d83-df51-48aa-8449-de2ad568c1bc'] = $pane;
+  $display->panels['row1right'][3] = 'new-01d27d83-df51-48aa-8449-de2ad568c1bc';
   $pane = new stdClass();
   $pane->pid = 'new-a9123804-0019-4638-af9f-c6be2b045c05';
   $pane->panel = 'row1right';
@@ -8786,7 +8786,7 @@ a.orange {
     'admin_title' => 'nav buttons - mtf',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p> <a class="btn btn-block btn-huge btn-info" href="/projects/moving-transition-forward/moving-transition-forward" type="button">ABOUT</a> <a class="btn btn-block btn-huge btn-info" href="/projects/moving-transition-forward/moving-transition-forward-team-members" type="button">TEAM MEMBERS</a><a class="btn btn-block btn-huge btn-info" href="mailto:clare.papay@umb.edu" type="button"> CONTACT</a></p>
+    'body' => '<p><a class="btn btn-block btn-huge btn-info" href="/projects/mtf/about-moving-transition-forward" type="button">ABOUT</a> <a class="btn btn-block btn-huge btn-info" href="/projects/mtf/moving-transition-forward-team-members" type="button">TEAM MEMBERS</a><a class="btn btn-block btn-huge btn-info" href="mailto:clare.papay@umb.edu" type="button"> CONTACT</a></p>
 
 <p>&nbsp;</p>
 ',
@@ -8912,9 +8912,9 @@ a.orange {
 
 <p>&nbsp;</p>
 
-<p><b><a href="/projects/mtf/overview-of-mtf-studies">Learn more about the MTF studies</a>&nbsp;&nbsp;</b></p>
+<p><b><a href="/projects/mtf/overview-of-moving-transition-forward-studies">Learn more about the MTF studies</a>&nbsp;&nbsp;</b></p>
 
-<p><b><a href="/projects/mtf/datasets">Learn more about the datasets used in this project</a>&nbsp;&nbsp;</b></p>
+<p><b><a href="/projects/mtf/moving-transition-forward-datasets">Learn more about the datasets used in this project</a>&nbsp;&nbsp;</b></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -9058,7 +9058,7 @@ a.orange {
     'admin_title' => 'button nav - NCC Page',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/think-college-national-coordinating-center">About</a> <a class="btn btn-block btn-huge btn-orange" href="/about/national-coordinating-center-team-members">Team Members</a>  <a class="btn btn-block btn-huge btn-orange" href="/technical-assistance/technical-assistance-providers" type="button">Technical Assistance</a> <a class="btn btn-block btn-huge btn-orange" href="/resources/innovation-exchange/accreditation" type="button"> Accreditation Standards</a> <a class="btn btn-block btn-huge btn-orange" href="https://thinkcollege.net/about/ncc-project-advisory-committee" type="button"> Project&nbsp;Advisory Committee</a> <a class="btn btn-block btn-huge btn-orange" href="mailto:Cathryn.Weir@umb.edu" type="button"> Contact Us</a></p>
+    'body' => '<p><a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/think-college-national-coordinating-center">About</a> <a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/national-coordinating-center-team-members">Team Members</a> <a class="btn btn-block btn-huge btn-orange" href="/technical-assistance/technical-assistance-providers" type="button">Technical Assistance</a> <a class="btn btn-block btn-huge btn-orange" href="/resources/innovation-exchange/accreditation" type="button"> Accreditation Standards</a> <a class="btn btn-block btn-huge btn-orange" href="https://thinkcollege.net/about/ncc-project-advisory-committee" type="button"> Project&nbsp;Advisory Committee</a> <a class="btn btn-block btn-huge btn-orange" href="mailto:Cathryn.Weir@umb.edu" type="button"> Contact Us</a></p>
 
 <p>&nbsp;</p>
 ',
@@ -9107,7 +9107,7 @@ a.orange {
   $display->content['new-a439b716-71b3-4306-9fba-836d9919a2b2'] = $pane;
   $display->panels['row1left'][2] = 'new-a439b716-71b3-4306-9fba-836d9919a2b2';
   $pane = new stdClass();
-  $pane->pid = 'new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
+  $pane->pid = 'new-4d611e19-8fac-4434-918c-f12e10573d64';
   $pane->panel = 'row1left';
   $pane->type = 'views';
   $pane->subtype = 'upcoming_events';
@@ -9127,7 +9127,7 @@ a.orange {
     'url' => '',
     'display' => 'block_1',
     'override_title' => 1,
-    'override_title_text' => 'Upcoming NCC Events',
+    'override_title_text' => 'UPCOMING NCC EVENTS',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
@@ -9139,9 +9139,9 @@ a.orange {
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
-  $pane->uuid = '4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
-  $display->content['new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f'] = $pane;
-  $display->panels['row1left'][3] = 'new-4d4eebb6-b7df-4a91-a61a-46dc668cbd1f';
+  $pane->uuid = '4d611e19-8fac-4434-918c-f12e10573d64';
+  $display->content['new-4d611e19-8fac-4434-918c-f12e10573d64'] = $pane;
+  $display->panels['row1left'][3] = 'new-4d611e19-8fac-4434-918c-f12e10573d64';
   $pane = new stdClass();
   $pane->pid = 'new-49082a18-eef1-45f6-a564-0691f82cda15';
   $pane->panel = 'row1left';
@@ -10778,14 +10778,13 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Contact Us',
+    'title' => 'Program Director',
     'title_heading' => 'h3',
     'body' => '<p>&nbsp;</p>
 
 <p><img alt="Maria Paiewonsky." class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/maria-paiewonsky.png" style="height: 200px; width: 200px;" /></p>
 
-<p><strong>Maria Paiewonsky,&nbsp;Ed.D.<br />
-Program&nbsp;Director</strong></p>
+<p><strong>Maria Paiewonsky,&nbsp;Ed.D.</strong></p>
 
 <p><a href="mailto:Maria.Paiewonsky@umb.edu">Maria.Paiewonsky@umb.edu</a></p>
 ',
@@ -10926,15 +10925,15 @@ Program&nbsp;Director</strong></p>
   $display->content['new-a41523c2-1eac-4b60-a6a9-27795a65fbef'] = $pane;
   $display->panels['row1right'][1] = 'new-a41523c2-1eac-4b60-a6a9-27795a65fbef';
   $pane = new stdClass();
-  $pane->pid = 'new-c1b2122f-33f5-4c2c-8622-33a998bc6790';
+  $pane->pid = 'new-d6b07dc0-8df5-4a3d-8085-cace460458b0';
   $pane->panel = 'row1right';
   $pane->type = 'node';
   $pane->subtype = 'node';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4690',
-    'links' => 1,
+    'nid' => '4894',
+    'links' => 0,
     'leave_node_title' => 0,
     'identifier' => '',
     'build_mode' => 'full',
@@ -10944,9 +10943,7 @@ Program&nbsp;Director</strong></p>
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
+  $pane->style = array();
   $pane->css = array(
     'css_id' => 'faq',
     'css_class' => 'accordian',
@@ -10954,9 +10951,9 @@ Program&nbsp;Director</strong></p>
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $pane->uuid = 'c1b2122f-33f5-4c2c-8622-33a998bc6790';
-  $display->content['new-c1b2122f-33f5-4c2c-8622-33a998bc6790'] = $pane;
-  $display->panels['row1right'][2] = 'new-c1b2122f-33f5-4c2c-8622-33a998bc6790';
+  $pane->uuid = 'd6b07dc0-8df5-4a3d-8085-cace460458b0';
+  $display->content['new-d6b07dc0-8df5-4a3d-8085-cace460458b0'] = $pane;
+  $display->panels['row1right'][2] = 'new-d6b07dc0-8df5-4a3d-8085-cace460458b0';
   $pane = new stdClass();
   $pane->pid = 'new-218ab725-de61-408b-a557-1f4ebf1ce042';
   $pane->panel = 'row1right';
