@@ -73,6 +73,14 @@
  * @ingroup themeable
  */
 ?>
+
+  <?php if ($page['top_header']) : ?>
+    <div id="top-header" class="top-header-region <?php print $top_header_classes; ?>">
+      <div class="container-fluid text-center">
+        <?php if ($page['top_header']) { print render($page['top_header']); } ?>
+      </div> <!-- /container -->
+    </div> <!-- /top-header-single-region -->
+  <?php endif; ?>
   <header role="banner" id="page-header">
       <div class="container headerWrapper">
         <div class="sitelogo">
@@ -84,8 +92,8 @@
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container">
-       <div class="close-ribbon"><img src="/sites/all/themes/thinkcollege_boot/images/thinkcollege_white-sm.png" width="95" /></div>
+   <div class="container">
+       <!--  <div class="close-ribbon"><img src="/sites/all/themes/thinkcollege_boot/images/thinkcollege_white-sm.png" width="95" /></div> -->
     <div class="navbar-header">
       <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
