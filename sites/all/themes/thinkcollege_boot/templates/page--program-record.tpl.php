@@ -74,6 +74,8 @@
  */
 ?>
 
+?>
+
   <?php if ($page['top_header']) : ?>
     <div id="top-header" class="top-header-region <?php print $top_header_classes; ?>">
       <div class="container-fluid text-center">
@@ -81,6 +83,8 @@
       </div> <!-- /container -->
     </div> <!-- /top-header-single-region -->
   <?php endif; ?>
+
+
   <header role="banner" id="page-header">
       <div class="container headerWrapper">
         <div class="sitelogo">
@@ -88,22 +92,23 @@
       <p class="lead"><?php print $site_slogan; ?></p>
       </div>
     <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-   <div class="container">
-       <!--  <div class="close-ribbon"><img src="/sites/all/themes/thinkcollege_boot/images/thinkcollege_white-sm.png" width="95" /></div> -->
-    <div class="navbar-header">
-      <?php if ($logo): ?>
+          <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
+      </div>
 
       <?php if (!empty($site_name)): ?>
       <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
+
+    <?php print render($page['header']); ?>
+  </header> <!-- /#page-header -->
+<div id="navbar" class="<?php print $navbar_classes; ?>">
+  <div class="container">
+  <!-- <div class="close-ribbon"><a href="/"><img alt="Think College" src="<?php echo $think_college_logo; ?>" width="95" /></a></div>  -->
+    <div class="navbar-header">
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
