@@ -74,8 +74,6 @@
  */
 ?>
 
-?>
-
   <?php if ($page['top_header']) : ?>
     <div id="top-header" class="top-header-region <?php print $top_header_classes; ?>">
       <div class="container-fluid text-center">
