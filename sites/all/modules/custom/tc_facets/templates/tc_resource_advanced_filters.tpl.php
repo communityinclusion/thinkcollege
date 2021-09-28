@@ -39,6 +39,7 @@ if (sizeof($params) != 0) {
     $whole_block = block_load('facetapi','u46epusfsta0bt3hdaipnelbpowcfnlk');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
+    
 
     ?>
 </div>
