@@ -29,7 +29,7 @@ module_load_include('inc', 'uuid', 'uuid.core');
  */
 function uuid_menu() {
   $items = array();
-
+  // Hack PF  Why does the menu item below keep showing up in breadcrumbs?  What will happen if I just remove it?
   /* $items['uuid'] = array(
     'title' => 'UUID redirector',
     'description' => 'Redirects requests for UUID URIs to the referenced entity.',
