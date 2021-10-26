@@ -30,14 +30,14 @@ module_load_include('inc', 'uuid', 'uuid.core');
 function uuid_menu() {
   $items = array();
 
-  $items['uuid'] = array(
+  /* $items['uuid'] = array(
     'title' => 'UUID redirector',
     'description' => 'Redirects requests for UUID URIs to the referenced entity.',
     'page callback' => 'uuid_redirector',
     // The access check is handled in the page callback.
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
-  );
+  ); */
 
   $items['admin/config/system/uuid'] = array(
     'title' => 'Universally unique identifiers',
