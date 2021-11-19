@@ -1,53 +1,11 @@
 
 (function($) {
 
-// From http://stackoverflow.com/questions/13933000/how-to-check-if-twitter-bootstrap-is-loaded
-// Will be true if bootstrap is loaded, false otherwise
-var bootstrap_enabled = (typeof $().modal == 'function');
-
 /**
  * Behaviors.
  */
 Drupal.behaviors.BootstrapFieldgroup = {
   attach: function (context, settings) {
-
-    if (!bootstrap_enabled) {
-
-      // Try to hack in a little error message for the user to know there's a
-      // problem.
-      var message = Drupal.t('You are using <strong>bootstrap_fieldgroup</strong> on a non-bootstrap theme. The JavaScript has been disabled, however <strong>you should remove the bootstrap field groups appearing on this page (or change the theme)</strong>.');
-
-      // Any error messages?
-      var $messages = $('.messages.error');
-      if ($messages.length) {
-
-        // Only one? Create a list.
-        var $list = $messages.find('ul');
-        if (!$list.length) {
-          var $heading = $messages.find('h2');
-          $heading.remove();
-          var previousMessage = $messages.text();
-          $messages.html($heading);
-          $list = $('<ul>');
-          $list.append('<li>' + previousMessage + '</li>');
-          $messages.append($list);
-        }
-
-        // Append to the list.
-        $list.append('<li>' + message + '</li>');
-      }
-
-      // If not, create a new messages area.
-      else {
-        $('#content').prepend(
-          $('<div class="messages error"></div>')
-            .append('<h2 class="element-invisible">Error message</h2>')
-            .append(message)
-        );
-      }
-
-      return;
-    }
 
     var mutateForm = function($nav_type) {
 
@@ -79,6 +37,8 @@ Drupal.behaviors.BootstrapFieldgroup = {
         $(selector).each(function() {
           if (window.location.hash === $(this).attr('href')) {
             fn($(this));
+            // console.log(method);
+            // $(this)[method]('show');
           }
         });
       }
@@ -102,7 +62,6 @@ Drupal.FieldGroup = Drupal.FieldGroup || {};
 Drupal.FieldGroup.Effects = Drupal.FieldGroup.Effects || {};
 Drupal.FieldGroup.Effects.processBootstrap_Fieldgroup_Nav = {
   execute: function (context, settings, type) {
-    if (!bootstrap_enabled) return;
 
     if (type == 'form') {
 

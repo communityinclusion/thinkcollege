@@ -43,7 +43,7 @@ function profile2_type_form($form, &$form_state, $profile_type, $op = 'edit') {
     '#type' => 'machine_name',
     '#default_value' => isset($profile_type->type) ? $profile_type->type : '',
     '#maxlength' => 32,
-    '#disabled' => $profile_type->isLocked() && $op != 'clone',
+    '#disabled' => $op != 'add' && $op != 'clone',
     '#machine_name' => array(
       'exists' => 'profile2_get_types',
       'source' => array('label'),
@@ -56,6 +56,17 @@ function profile2_type_form($form, &$form_state, $profile_type, $op = 'edit') {
     '#type' => 'checkbox',
     '#title' => t('Show during user account registration.'),
     '#default_value' => !empty($profile_type->data['registration']),
+  );
+
+  $user_roles = user_roles();
+  // Exclude anonymous user role.
+  unset($user_roles[DRUPAL_ANONYMOUS_RID]);
+  $form['data']['roles'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Roles'),
+    '#description' => t('Check user roles that should have this profile.'),
+    '#options' => $user_roles,
+    '#default_value' => !empty($profile_type->data['roles']) ? $profile_type->data['roles'] : array_keys($user_roles)
   );
 
   $form['actions'] = array('#type' => 'actions');
@@ -88,6 +99,7 @@ function profile2_type_form($form, &$form_state, $profile_type, $op = 'edit') {
  * Form API submit callback for the type form.
  */
 function profile2_type_form_submit(&$form, &$form_state) {
+  $form_state['values']['data']['roles'] = array_filter($form_state['values']['data']['roles']);
   $profile_type = entity_ui_form_submit_build_entity($form, $form_state);
   // Save and go back.
   $profile_type->save();

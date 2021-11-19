@@ -195,7 +195,6 @@ function custom_breadcrumbs_taxonomy_views_pre_render(&$view) {
         if (_custom_breadcrumbs_match_path($curpath, $viewpath)) {
           // Select matching display with the greatest number of explicit arguments.
           $num = substr_count($display->display_options['path'], '%');
-          // @codingStandardsIgnoreLine
           if (!isset($max) || (isset($max) && ($num > $max))) {
             $max = $num;
             $max_id = $id;
@@ -544,6 +543,7 @@ function _custom_breadcrumbs_taxonomy_allowed_node_type($nodetype) {
   // If the node type IS IN     the node types list and the list IS     inclusive OR
   // If the node type IS NOT IN the node types list and the list IS NOT inclusive (e.g. exclusive)
   // THEN modify the breadcrumb trail.
+
   $array_of_types = array_filter((array) variable_get('custom_breadcrumbs_taxonomy_node_types', CUSTOM_BREADCRUMBS_TAXONOMY_NODE_TYPES_DEFAULT));
   $in_list = in_array($nodetype, $array_of_types);
   $allowed = ($in_list == variable_get('custom_breadcrumbs_taxonomy_include_nodes', 0));

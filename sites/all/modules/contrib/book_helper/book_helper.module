@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Improves Drupal's core book module's functionality.
@@ -31,12 +32,12 @@ function book_helper_permission() {
  * Implements hook_init().
  */
 function book_helper_init() {
-  // Set main book page in menu tree path
+  // Set main book page in menu tree path.
   if (variable_get('book_helper_menu_tree_set_path', 0) && function_exists('menu_tree_set_path')) {
     $node = menu_get_object();
     // Skip setting the menu tree path if we are on the main page of the book.
     if (isset($node->book) && ($node->book['nid'] != $node->book['bid'])) {
-      // Get active menu names for this node
+      // Get active menu names for this node.
       $active_menu_names = db_select('menu_links')
         ->distinct()
         ->fields('menu_links', array('menu_name'))
@@ -60,9 +61,6 @@ function book_helper_init() {
           menu_tree_set_path($menu_name, $path);
         }
       }
-
-      // DEBUG:
-      // dpm($node->book); dpm($menu_names);
     }
   }
 }
@@ -86,7 +84,9 @@ function book_helper_menu() {
 }
 
 /**
- * Implements hook_menu_alter(). Overrides the books outline page.
+ * Implements hook_menu_alter().
+ *
+ * Overrides the books outline page.
  *
  * @see book.module
  */
@@ -110,10 +110,10 @@ function book_helper_menu_link_alter(&$item, $menu) {
   // Book module does not support hidden pages so we need to manually
   // preserve it when a book page is updated outside of the book helper
   // module's node/%/order page.
-  if (isset($item['module']) && $item['module'] == 'book' && isset($item['mlid']) && !isset($item['hidden'])) {
+  if (isset($item['module'], $item['mlid']) && $item['module'] == 'book' && !isset($item['hidden'])) {
     $query = 'SELECT hidden FROM {menu_links} WHERE mlid=:mlid';
     $args = array(':mlid' => $item['mlid']);
-    $item['hidden'] = db_query($query, $args)->fetchField() ? 1: 0;
+    $item['hidden'] = db_query($query, $args)->fetchField() ? 1 : 0;
   }
 }
 
@@ -123,23 +123,18 @@ function book_helper_menu_link_alter(&$item, $menu) {
 function _book_helper_access($node) {
   global $user;
 
-  $is_node_book = (isset($node->book['bid']) && $node->book['bid'] == $node->nid) ;
+  $is_node_book = (isset($node->book['bid']) && $node->book['bid'] == $node->nid);
   if (!$is_node_book) {
     return FALSE;
   }
 
-  // Allow users to administer their own books using 'administer own book outlines'
+  // Allow users to administer their own books using 'administer own book outlines'.
   if (user_access('administer own book outlines') && $node->uid === $user->uid) {
     return TRUE;
   }
 
   return _book_outline_access($node);
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Node API functions
-////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Implements hook_node_insert().
@@ -152,16 +147,8 @@ function book_helper_node_insert($node) {
  * Implements hook_node_update().
  */
 function book_helper_node_update($node) {
-  // Get link title sync and custom from the book.module's array().
-  if (isset($node->book['book_helper_link_title_sync'])) {
-    $node->book_helper['link_title_sync'] = $node->book['book_helper_link_title_sync'];
-  }
-  if (isset($node->book['book_helper_link_title_custom'])) {
-    $node->book_helper['link_title_custom'] = $node->book['book_helper_link_title_custom'];
-  }
-
   // Update the book page's menu link title if it has been customized.
-  if (!empty($node->book['bid']) && empty($node->book_helper['link_title_sync']) && $node->book_helper['link_title_custom'] != $node->book['link_title']) {
+  if (isset($node->book_helper, $node->book_helper['link_title_sync']) && !empty($node->book['bid']) && !empty($node->book_helper['link_title_custom']) && !$node->book_helper['link_title_sync'] && $node->book_helper['link_title_custom'] != $node->book['link_title']) {
     db_update('menu_links')
       ->fields(array('link_title' => $node->book_helper['link_title_custom']))
       ->condition('mlid', $node->book['mlid'])
@@ -179,10 +166,10 @@ function book_helper_node_load($nodes, $types) {
   $result = db_query($query, $args);
   foreach ($result as $record) {
     if ($record->link_title) {
-      $node_title = (function_exists('node_parent_title_remove')) ? node_parent_title_remove($nodes[$record->nid]->title) : $nodes[$record->nid]->title;
+      $node_title = function_exists('node_parent_title_remove') ? node_parent_title_remove($nodes[$record->nid]->title) : $nodes[$record->nid]->title;
       $nodes[$record->nid]->book_helper = array(
         'link_title_custom' => $record->link_title,
-        'link_title_sync' => ($record->link_title == $node_title) ? TRUE : FALSE,
+        'link_title_sync' => $record->link_title == $node_title,
       );
     }
   }
@@ -216,11 +203,6 @@ function book_helper_node_view_alter(&$build) {
   }
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Block API functions
-////////////////////////////////////////////////////////////////////////////////
-
 /**
  * Implements hook_block_info().
  */
@@ -237,20 +219,12 @@ function book_helper_block_info() {
  */
 function book_helper_block_view($delta = '') {
   $node = menu_get_object();
-  if (!$node || !isset($node->book['bid'])) {
-    return NULL;
-  }
-  else {
+  if (!empty($node->book['bid'])) {
     return array(
-      'content' => theme('book_navigation', array('book_link' => $node->book))
+      'content' => theme('book_navigation', array('book_link' => $node->book)),
     );
   }
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Form alter functions
-////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -267,18 +241,14 @@ function book_helper_form_node_form_alter(&$form, &$form_state) {
   $node =& $form['#node'];
   $type = $form['type']['#value'];
 
-  if ( isset($form['book']) && !book_type_is_allowed($type) && empty($node->book['bid'])) {
-
+  if (isset($form['book']) && !book_type_is_allowed($type) && empty($node->book['bid'])) {
     // Hide book fieldset.
     $form['book']['#access'] = FALSE;
-
   }
-    elseif ( !isset($node->nid) && !isset($_GET['parent']) && in_array($type, variable_get('book_helper_create_new', array())) ) {
-
-      // Create new book for selected nodes that are not being added as child pages.
+  elseif (!isset($node->nid) && !isset($_GET['parent']) && in_array($type, variable_get('book_helper_create_new', array()))) {
+    // Create new book for selected nodes that are not being added as child pages.
     $node->book['bid'] == 'new';
     $form['book']['bid']['#default_value'] = 'new';
-
   }
 
   if (isset($form['book'])) {
@@ -292,25 +262,95 @@ function book_helper_form_node_form_alter(&$form, &$form_state) {
 
     // Add inputs to allow user to customize the book link title separately from the node's title.
     drupal_add_js(drupal_get_path('module', 'book_helper') . '/book_helper.js');
-    $form['book']['book_helper_link_title_custom'] = array(
+    $form['book']['link_title'] = array(
       '#type' => 'textfield',
       '#title' => t('Book link title'),
       '#default_value' => $node->book_helper['link_title_custom'],
       '#maxlength' => 255,
     );
 
-    $form['book']['book_helper_link_title_sync'] = array(
+    $form['book']['link_title_sync'] = array(
       '#type' => 'checkbox',
       '#title' => t("Synchronize this node's title with its book link title."),
       '#default_value' => $node->book_helper['link_title_sync'],
     );
+
+    // If not a new node, add button to update book outline only.
+    if (isset($node->nid)) {
+      $form['book']['book_helper_submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Update book outline'),
+        '#weight' => 30,
+        '#submit' => array('book_helper_outline_submit'),
+      );
+      // Add button to remove from book.
+      // The #access function ensures the button is only displayed where relevant.
+      $form['book']['book_helper_remove'] = array(
+        '#type' => 'submit',
+        '#value' => t('Remove from book'),
+        '#access' => _book_node_is_removable($node),
+        '#weight' => 35,
+        '#submit' => array('book_helper_remove_submit'),
+      );
+    }
   }
 }
 
+function book_helper_outline_submit($form, &$form_state) {
+  $node = $form['#node'];
+  if (_book_helper_fill_link($node, $form_state['values'])) {
+    _book_helper_outline_submit($node);
+  }
+}
 
-////////////////////////////////////////////////////////////////////////////////
-// Utility functions
-////////////////////////////////////////////////////////////////////////////////
+function book_helper_remove_submit($form, &$form_state) {
+  $form_state['redirect'] = 'node/' . $form['#node']->nid . '/outline/remove';
+}
+
+/**
+ * Fill the menu link and custom title values into the node.
+ *
+ * @return
+ *   TRUE if anything was changed, else FALSE
+ */
+function _book_helper_fill_link($node, &$values) {
+  // Populate node from form values.
+  if (isset($values['book']['hidden'])) {
+    // Value of 'hidden' on the form means "enabled", so is inverse of hidden flag in menu.
+    $hidden = $values['book']['hidden']? 0 : 1;
+  }
+  // Set the $changed flag if any value has changed.
+  $changed = isset($hidden) && $node->book['hidden'] != $hidden ||
+    isset($values['book']['bid']) && $node->book['bid'] != $values['book']['bid'] ||
+    $node->book['plid'] != $values['book']['plid'] ||
+    $node->book['weight'] != $values['book']['weight'] ||
+    $node->book_helper['link_title_sync'] != $values['book']['link_title_sync'] ||
+    $node->book_helper['link_title_custom'] != $values['book']['link_title']
+  ;
+  // If anything changed, set all values.
+  if ($changed) {
+    if (isset($hidden)) {
+      $node->book['hidden'] = $hidden;
+    }
+    if (isset($values['book']['bid'])) {
+      $node->book['bid'] = $values['book']['bid'];
+    }
+    $node->book['plid'] = $values['book']['plid'];
+    $node->book['weight'] = $values['book']['weight'];
+    $node->book_helper['link_title_sync'] = $values['book']['link_title_sync'];
+    $node->book_helper['link_title_custom'] = $values['book']['link_title'];
+  }
+  return $changed;
+}
+
+function _book_helper_outline_submit($node) {
+  // Update the standard book outline.
+  _book_update_outline($node);
+  // Update the menu link title override.
+  book_helper_node_update($node);
+  // Clear the menu cache (as advised after invoking menu_link_save(), which is done indirectly above).
+  menu_cache_clear_all();
+}
 
 /**
  * Display a warning warning when deleting a book page that has child pages.
@@ -325,10 +365,10 @@ function book_helper_display_delete_book_page_warning($nid) {
     $result = db_query($query, $args);
     $links = array();
     foreach ($result as $record) {
-      $links[ $record->mlid ] = (array) $record;
+      $links[$record->mlid] = (array) $record;
     }
 
-    if (empty($links))  {
+    if (empty($links)) {
       return;
     }
 
@@ -340,14 +380,10 @@ function book_helper_display_delete_book_page_warning($nid) {
   }
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Theme functions
-////////////////////////////////////////////////////////////////////////////////
-
 /**
- * Implements hook_theme_registry_alter(). Remove template_preprocess_book_navigation();
+ * Implements hook_theme_registry_alter().
  *
+ * Remove template_preprocess_book_navigation();
  * Prevent book_navigation variables from being preprocessed multiple times.
  */
 function book_helper_theme_registry_alter(&$theme_registry) {
@@ -367,11 +403,20 @@ function book_helper_preprocess_book_navigation(&$variables) {
 
   // Provide extra variables for themers. Not needed by default.
   $variables['book_id'] = $book_link['bid'];
-  $variables['book_title'] = check_plain($book_link['link_title']);
-  $variables['book_url'] = 'node/' . $book_link['bid'];
   $variables['current_depth'] = $book_link['depth'];
 
   $variables['tree'] = '';
+  if ($book_link['mlid'] !== $book_link['p1'] && $book = book_link_load($book_link['p1'])) {
+    $book_href = url($book['href']);
+    drupal_add_html_head_link(array('rel' => 'top', 'href' => $book_href));
+    $variables['book_title'] = check_plain($book['title']);
+    $variables['book_url'] = $book_href;
+  }
+  else {
+    $variables['book_title'] = check_plain($book_link['link_title']);
+    $variables['book_url'] = url('node/' . $book_link['bid']);
+  }
+
   if ($book_link['mlid']) {
     if (in_array('tree', $navigation_options)) {
       $variables['tree'] = book_children($book_link);
@@ -420,8 +465,115 @@ function book_helper_preprocess_book_navigation(&$variables) {
 function book_helper_theme() {
   return array(
     'book_helper_admin_table' => array(
-       'render element' => 'form',
+      'render element' => 'form',
       'file' => 'book_helper.admin.inc',
     ),
   );
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function book_helper_admin_paths() {
+  if (variable_get('book_helper_admin_theme')) {
+    $paths = array(
+      'node/*/order' => TRUE,
+    );
+
+    return $paths;
+  }
+}
+
+/**
+ * Action to provide an "Add to book" function for VBO.
+ *
+ * This is similar to VBO's built-in "Move to book", but avoids
+ * marking the node as updated.
+ *
+ * Implements hook_action_info().
+ *
+ */
+function book_helper_action_info() {
+  $actions = array();
+  $actions['book_helper_action'] = array(
+    'type' => 'node',
+    'label' => t('Add to book'),
+    'vbo_configurable' => TRUE,
+    'configurable' => TRUE,
+    'behavior' => array('views_property'),
+    'triggers' => array('any'),
+  );
+  return $actions;
+}
+
+function book_helper_action_views_bulk_operations_form($options) {
+//   $books = array_column(book_get_books(), 'title');
+  $all_books = book_get_books();
+  foreach ($all_books as $value) {
+    $books[$value['nid']] = $value['title'];
+  }
+  $form['books'] = array(
+    '#type' => 'select',
+    '#multiple' => TRUE,
+    '#title' => t('Select books to offer'),
+    '#options' => $books,
+    '#default_value' => !empty($options['books']) ? $options['books'] : array(),
+  );
+  $form['depth'] = array(
+    '#type' => 'select',
+    '#title' => t('Page depth'),
+    '#options' => array(1 => 1, 2, 3, 4),
+    '#default_value' => !empty($options['depth']) ? $options['depth'] : 1,
+  );
+  return $form;
+}
+
+function book_helper_action_form($context) {
+  $settings = &$context['settings'];
+  $books = $settings['books'];
+  $depth = $settings['depth'];
+  $all_books = book_get_books();
+  $options = array();
+  foreach ($all_books as $book) {
+    if (empty($books) || in_array($book['nid'], $books)) {
+      $options += book_toc($book['nid'], $depth);
+    }
+  }
+
+  if (empty($options)) {
+    drupal_set_message(t('You have no books.'), 'error');
+    return array();
+  }
+
+  $form['book'] = array(
+    '#type' => 'select',
+    '#title' => t('Choose a parent book page'),
+    '#options' => $options,
+    '#description' => t('Select the parent book page you wish to move the book page into'),
+  );
+  return $form;
+}
+
+function book_helper_action_submit($form, $form_state) {
+  return array('book' => $form_state['values']['book']);
+}
+
+function book_helper_action($node, $context = array()) {
+  if (isset($context['book'])) {
+    // The selected value from the form is the mlid of the page we want
+    // as the parent of this page - i.e. its plid.
+    $plid = $context['book'];
+    // Use this to lookup the bid in the book table.
+    $bid = db_select('book', 'bk')
+      ->condition('bk.mlid', $plid)
+      ->fields('bk', array('bid'))
+      ->execute()
+      ->fetchField();
+    $node->book['bid'] = $bid;
+    $node->book['plid'] = $plid;
+    $node->book['module'] = 'book';
+
+    _book_update_outline($node);
+    menu_cache_clear_all();
+  }
 }

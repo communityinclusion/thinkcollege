@@ -12,7 +12,7 @@
     colleges and universities that offer postsecondary education programs for students with intellectual disability. Users of this searchable online database can filter by state, length of program, type of school, options for living on campus, and more.  To learn more, view these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a> about college programs, how we gather the information in the directory, and how to use the features of College Search.
   </p>
 
-
+  <p>Ready to start a college search? You may find this guide helpful - <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf"> Conducting a College Search: Questions to ask College Programs</a>, developed by Think College with input from families and students. It includes dozens of questions to consider asking to learn more about the programs you are interested in.  </p>
 
 <!--
    <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a>

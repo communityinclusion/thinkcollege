@@ -1,19 +1,15 @@
 <?php
+
 /**
  * @file
  * Administration page for the 'Book helper' module.
  */
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Book admin settings
-////////////////////////////////////////////////////////////////////////////////
-
 /**
  * Implements hook_form_alter().
  */
 function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
-  // Create new
+  // Create new.
   $form['book_helper_create_new'] = array(
     '#type' => 'checkboxes',
     '#title' => t('Always create new books'),
@@ -22,7 +18,7 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     '#description' => t('Select content types which will automatically create new books when the main book page is initially created'),
   );
 
-  // Navigation options
+  // Navigation options.
   $form['book_helper_navigation_options'] = array(
     '#type' => 'checkboxes',
     '#title' => t('Select book navigation options'),
@@ -35,7 +31,7 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     ),
   );
 
-  // Links options
+  // Links options.
   $form['book_helper_links'] = array(
     '#type' => 'checkboxes',
     '#title' => t('Select book links options'),
@@ -46,7 +42,7 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     ),
   );
 
-  // Remove outline tab
+  // Remove outline tab.
   $form['book_helper_remove_outline'] = array(
     '#type' => 'radios',
     '#title' => t('Remove outline tab from all book pages'),
@@ -54,8 +50,17 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     '#default_value' => variable_get('book_helper_remove_outline', 0),
     '#options' => array('0' => t('No'), '1' => t('Yes')),
   );
+  
+  // Use admin theme on order tab.
+  $form['book_helper_admin_theme'] = array(
+    '#type' => 'radios',
+    '#title' => t('Use the administration theme when reordering book pages'),
+    '#description' => t("This enables the administration theme in the book 'Order' tab."),
+    '#default_value' => variable_get('book_helper_admin_theme', 0),
+    '#options' => array('0' => t('No'), '1' => t('Yes')),
+  );
 
-  // Remove book navigation
+  // Remove book navigation.
   $form['book_helper_remove_book_navigation'] = array(
     '#type' => 'radios',
     '#title' => t('Remove book navigation from all book pages'),
@@ -64,7 +69,7 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     '#options' => array('0' => t('No'), '1' => t('Yes')),
   );
 
-  // Disable revisions
+  // Disable revisions.
   $form['book_helper_order_disable_revisions'] = array(
     '#type' => 'radios',
     '#title' => t("Disable new revision when a book's page title is updated"),
@@ -73,7 +78,7 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     '#options' => array('0' => t('No'), '1' => t('Yes')),
   );
 
-  // Menus tree set path
+  // Menus tree set path.
   if (function_exists('menu_tree_set_path')) {
     $form['book_helper_menu_tree_set_path'] = array(
       '#type' => 'radios',
@@ -84,10 +89,10 @@ function _book_helper_form_book_admin_settings_alter(&$form, &$form_state) {
     );
   }
 
-  // Move buttons
+  // Move buttons.
   $form['buttons']['#weight'] = 100;
 
-  // Rebuild menu
+  // Rebuild menu.
   $form['#submit'][] = 'book_helper_admin_settings_submit';
   return $form;
 }
@@ -99,11 +104,6 @@ function book_helper_admin_settings_submit($form, &$form_state) {
   menu_rebuild();
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Book order/edit page.
-////////////////////////////////////////////////////////////////////////////////
-
 /**
  * Build the form to administrate the hierarchy of a single book.
  *
@@ -113,22 +113,24 @@ function book_helper_admin_settings_submit($form, &$form_state) {
  * Note:
  * - This module attempts to re-use code from the book.module's book.admin.inc while
  *   merging it with the 'enabled' checked code from the menu.admin.inc menu_overview_form().
+ *
  * @see book_admin_edit_submit()
  *
  * @ingroup forms.
  */
-function book_helper_admin_edit($form, $form_state, $node)  {
+function book_helper_admin_edit($form, $form_state, $node) {
   drupal_set_title($node->title);
   $form['#node'] = $node;
   _book_helper_admin_table($node, $form);
 
-  // Add css
-  drupal_add_css( drupal_get_path('module', 'book_helper') . '/book_helper.css');
+  // Add css.
+  drupal_add_css(drupal_get_path('module', 'book_helper') . '/book_helper.css');
 
 
   // Custom code: Allow top-level pages to be removed from books. http://drupal.org/node/283045
   if (isset($form['table']['#empty'])) {
-    unset($form['table']); // Don't render the empty table with headers
+    // Don't render the empty table with headers.
+    unset($form['table']);
     // Display the standard confirmation form.
     $t_args = array('%title' => $node->title);
     $child_type = variable_get('book_child_type', 'book');
@@ -138,7 +140,7 @@ function book_helper_admin_edit($form, $form_state, $node)  {
     else {
       $t_args['!add_child_page'] = t('add a child page');
     }
-    drupal_set_message(t('%title contains no child book pages. To create a sort-able book heirarchy, please !add_child_page to this book.', $t_args), 'warning');
+    drupal_set_message(t('%title contains no child book pages. To create a sort-able book hierarchy, please !add_child_page to this book.', $t_args), 'warning');
     $description = t('%title may be added as a new book again using the Outline tab.', $t_args);
     return confirm_form($form, t('Do you want to revert %title from a book hierarchy?', $t_args), 'node/' . $node->nid, $description, t('Revert'));
   }
@@ -172,9 +174,9 @@ function book_helper_admin_edit_validate($form, &$form_state) {
  * @see menu_overview_form_submit()
  */
 function book_helper_admin_edit_submit($form, &$form_state) {
+  $node = $form['#node'];
   // Custom code: Allow top-level pages to be removed from books. http://drupal.org/node/283045
   if ($form_state['values']['op'] == t('Revert')) {
-    $node = $form['#node'];
     menu_link_delete($node->book['mlid']);
     db_delete('book')
       ->condition('bid', $node->nid)
@@ -196,61 +198,43 @@ function book_helper_admin_edit_submit($form, &$form_state) {
   foreach (element_children($form['table']) as $key) {
     if ($form['table'][$key]['#item']) {
       $row = $form['table'][$key];
-      $values = $form_state['values']['table'][$key];
+      $values['book'] = $form_state['values']['table'][$key];
+      $node = node_load($values['book']['nid']);
 
-      /* Over-ridden code: Do not delete.
-      // Update menu item if moved.
-      if ($row['plid']['#default_value'] != $values['plid'] || $row['weight']['#default_value'] != $values['weight']) {
-        $row['#item']['plid'] = $values['plid'];
-        $row['#item']['weight'] = $values['weight'];
-        menu_link_save($row['#item']);
-      }
-      */
+      // Fill the menu link values into the node.
+      $link_changed = _book_helper_fill_link($node, $values);
 
-      // Updated code: Add hidden and collapsed to update menu item if moved.
-      if ( $row['plid']['#default_value'] != $values['plid'] ||
-          $row['weight']['#default_value'] != $values['weight'] ||
-          $row['hidden']['#default_value'] != $values['hidden']
-        ) {
-        $row['#item']['plid'] = $values['plid'];
-        $row['#item']['weight'] = $values['weight'];
-        $row['#item']['hidden'] = ($values['hidden']) ? 0 : 1; // Hidden is a special case, the value needs to be reversed.
-        menu_link_save($row['#item']);
-      }
-
-      // Update the title if changed.
-      if ($row['title']['#default_value'] != $values['title'] || $row['node_title']['#default_value'] != $values['node_title']) {
-        $node = node_load($values['nid']);
-        /* Over-ridden code: Do not delete.
-        $node->title = $values['title'];
-        $node->book['link_title'] = $values['title'];
+      // Check if node title has changed.
+      $old_title = $row['title']['#default_value'];
+      $new_title = $values['book']['title'];
+      // Do a full node save only if a change of title and revisions are enabled.
+      if ($new_title != $old_title && !variable_get('book_helper_order_disable_revisions', 1)) {
+        $node->title = $new_title;
         $node->revision = 1;
-        */
 
-        // New code: This is where the custom book link title is set.
-        $node->title = $values['node_title'];
-        $node->book['link_title'] = $values['node_title'];
-        $node->book['book_helper_link_title_custom'] = $values['title'];
-        $node->book['book_helper_link_title_sync'] = $values['sync'];
+        $node->log = t('Title changed from %original to %current.', array('%original' => $old_title, '%current' => $new_title));
 
-        // Modified code: Allow admin to decide if new revisions should be disabled.
-        $node->revision = (variable_get('book_helper_order_disable_revisions', 1) == 1) ? 0 : 1;
-
-        $node->log = t('Title changed from %original to %current.', array('%original' => $node->title, '%current' => $values['title']));
-
+        // This updates everything via hooks.
         node_save($node);
-        watchdog('content', 'book: updated %title.', array('%title' => $node->title), WATCHDOG_NOTICE, l(t('view'), 'node/' . $node->nid));
+        watchdog('content', 'book: updated %title.', array('%title' => $new_title), WATCHDOG_NOTICE, l(t('view'), 'node/' . $node->nid));
+      }
+      else {
+        global $user;
+        // Just save the elements according to what's changed.
+        if ($new_title != $old_title) {
+          $node->title = $new_title;
+          // Save the title field directly.
+          drupal_write_record('node', $node, 'nid');
+          _node_save_revision($node, $user->uid, 'vid');
+        }
+        if ($link_changed) {
+          _book_helper_outline_submit($node);
+        }
       }
     }
   }
-
   drupal_set_message(t('Updated book %title.', array('%title' => $form['#node']->title)));
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Book order table code used by book_helper_admin_edit().
-////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Build the table portion of the form for the book administration page.
@@ -264,7 +248,8 @@ function _book_helper_admin_table($node, &$form) {
   );
 
   $tree = book_menu_subtree_data($node->book);
-  $tree = array_shift($tree); // Do not include the book item itself.
+  // Do not include the book item itself.
+  $tree = array_shift($tree);
   if ($tree['below']) {
     $hash = drupal_hash_base64(serialize($tree['below']));
     // Store the hash value as a hidden form element so that we can detect
@@ -301,7 +286,7 @@ function _book_helper_admin_table_tree($tree, &$form, $bid) {
       if (function_exists('node_parent_title_remove')) {
         $record['title'] = node_parent_title_remove($record->title);
       }
-      $node_titles[ $record->nid ] = $record->title;
+      $node_titles[$record->nid] = $record->title;
     }
   }
 
@@ -310,13 +295,13 @@ function _book_helper_admin_table_tree($tree, &$form, $bid) {
   $delta = ($count < 30) ? 15 : intval($count / 2) + 1;
 
   foreach ($tree as $data) {
-    $node_title = $node_titles[ $data['link']['nid'] ];
+    $node_title = $node_titles[$data['link']['nid']];
     $form['book-admin-' . $data['link']['nid']] = array(
       '#item' => $data['link'],
       'nid' => array('#type' => 'value', '#value' => $data['link']['nid']),
       'depth' => array('#type' => 'value', '#value' => $data['link']['depth']),
       'href' => array('#type' => 'value', '#value' => $data['link']['href']),
-      'title' => array(
+      'link_title' => array(
         '#type' => 'textfield',
         '#default_value' => $data['link']['link_title'],
         '#maxlength' => 255,
@@ -324,13 +309,13 @@ function _book_helper_admin_table_tree($tree, &$form, $bid) {
       ),
 
       // New code: Allows node title to be customized.
-      'node_title' => array(
+      'title' => array(
         '#type' => 'textfield',
         '#default_value' => $node_title,
         '#maxlength' => 255,
         '#size' => 15,
       ),
-      'sync' => array(
+      'link_title_sync' => array(
         '#type' => 'checkbox',
         '#default_value' => ($node_title == $data['link']['link_title']) ? TRUE : FALSE,
       ),
@@ -354,7 +339,8 @@ function _book_helper_admin_table_tree($tree, &$form, $bid) {
       // New code: Add checkbox element for hidden.
       'hidden' => array(
         '#type' => 'checkbox',
-        '#default_value' => !$data['link']['hidden'], // Hidden is a special case, the value needs to be reversed.
+        // Hidden is a special case, the value needs to be reversed.
+        '#default_value' => !$data['link']['hidden'],
       ),
 
     );
@@ -365,11 +351,6 @@ function _book_helper_admin_table_tree($tree, &$form, $bid) {
 
   return $form;
 }
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Theme function.
-////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Returns HTML for a book administration form.
@@ -395,13 +376,14 @@ function theme_book_helper_admin_table($variables) {
 
   // Updated code: Adds hidden to header.
   $header = array(
-    t('Menu title'),
+    '',
     t('Page title'),
+    t('Menu title'),
     array('data' => t('Sync'), 'class' => 'checkbox'),
     t('Weight'),
     t('Parent'),
     array('data' => t('Enabled'), 'class' => 'checkbox'),
-    array('data' => t('Operations'), 'colspan' => '4')
+    array('data' => t('Operations'), 'colspan' => '4'),
   );
 
   $rows = array();
@@ -417,22 +399,24 @@ function theme_book_helper_admin_table($variables) {
     $form[$key]['weight']['#attributes']['class'] = array('book-weight');
 
     $data = array(
-      theme('indentation', array('size' => $form[$key]['depth']['#value'] - 2)) . drupal_render($form[$key]['title']),
+      // first column is the page title
+      theme('indentation', array('size' => $form[$key]['depth']['#value'] - 2))/* . drupal_render($form[$key]['node_title'])*/,
 
-      // New code: Add node title and sync checkbox
-      drupal_render($form[$key]['node_title']),
-      array('data' => drupal_render($form[$key]['sync']), 'class' => 'checkbox'),
+      // New code: Add menu title and sync checkbox.
+      drupal_render($form[$key]['title']),
+      drupal_render($form[$key]['link_title']),
+      array('data' => drupal_render($form[$key]['link_title_sync']), 'class' => 'checkbox'),
 
       drupal_render($form[$key]['weight']),
       drupal_render($form[$key]['plid']) . drupal_render($form[$key]['mlid']),
 
-      // New code: Add hidden checkbox to table
+      // New code: Add hidden checkbox to table.
       array('data' => drupal_render($form[$key]['hidden']), 'class' => 'checkbox'),
 
       l(t('view'), $href),
       $access ? l(t('edit'), 'node/' . $nid . '/edit', array('query' => $destination)) : '&nbsp',
-      $access ? l(t('remove from book'), 'node/' . $nid . '/outline/remove', array('query' => $destination) ) : '&nbsp',
-      $access ? l(t('delete node'), 'node/' . $nid . '/delete', array('query' => $destination) ) : '&nbsp',
+      $access ? l(t('remove from book'), 'node/' . $nid . '/outline/remove', array('query' => $destination)) : '&nbsp',
+      $access ? l(t('delete node'), 'node/' . $nid . '/delete', array('query' => $destination)) : '&nbsp',
     );
     $row = array('data' => $data);
     if (isset($form[$key]['#attributes'])) {
@@ -445,5 +429,9 @@ function theme_book_helper_admin_table($variables) {
     $rows[] = $row;
   }
 
-  return theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('id' => 'book-outline')));
+  return theme('table', array(
+    'header' => $header,
+    'rows' => $rows,
+    'attributes' => array('id' => 'book-outline'),
+  ));
 }

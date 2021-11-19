@@ -30,7 +30,7 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '8';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -406,7 +406,7 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['filters']['field_project_tid']['field'] = 'field_project_tid';
   $handler->display->display_options['filters']['field_project_tid']['operator'] = 'and';
   $handler->display->display_options['filters']['field_project_tid']['value'] = array(
-    2523 => '2523',
+    2533 => '2533',
   );
   $handler->display->display_options['filters']['field_project_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_project_tid']['vocabulary'] = 'projects';

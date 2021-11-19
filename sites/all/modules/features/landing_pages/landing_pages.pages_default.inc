@@ -161,29 +161,29 @@ function landing_pages_default_page_manager_pages() {
     'title' => 'Current Think College Projects',
     'title_heading' => 'h2',
     'body' => '<div class="row">
-<div class="bscol col-md-4 col-sm-12"><a href="http://devel.thinkcollege.net/projects/ncc"><img alt="National Coordinating Center Logo" class="img-responsive" src="/sites/default/files/images/NCC-logo-300-180(1).png" /></a>
-<h3><a href="http://devel.thinkcollege.net/projects/ncc">National Coordinating Center (NCC)</a></h3>
+<div class="bscol col-md-4 col-sm-12"><a href="/projects/ncc"><img alt="National Coordinating Center Logo" class="img-responsive" src="/sites/default/files/images/NCC-logo-300-180(1).png" /></a>
+<h3><a href="/projects/ncc">National Coordinating Center (NCC)</a></h3>
 
 <p>The only national center on college options for students with ID in the US, NCC collects data, creates resources, offers training and provides technical assistance for colleges and universities, transition professionals, K-12 educators, families, students and more.</p>
 </div>
 
-<div class="bscol col-md-4 col-sm-12 box-border-purple"><a href="http://devel.thinkcollege.net/projects/fqie"><img alt="Future Quest Island Explorations Logo" class="img-responsive" src="/sites/default/files/images/fqi-logo-300-180.png" /></a>
+<div class="bscol col-md-4 col-sm-12 box-border-purple"><a href="/projects/fqie"><img alt="Future Quest Island Explorations Logo" class="img-responsive" src="/sites/default/files/images/fqi-logo-300-180.png" /></a>
 
-<h3><a href="http://devel.thinkcollege.net/projects/fqie">Future Quest Island Explorations (FQIE)</a></h3>
+<h3><a href="/projects/fqie">Future Quest Island Explorations (FQIE)</a></h3>
 
 <p>An online, accessible curriculum supporting college and career awareness for children with and without disabilities in grades 3-5. FQI:E uses gaming strategies to motivate and support students to develop self-concept, social-emotional competence, and early college and career awareness.</p>
 </div>
 
-<div class="bscol col-md-4 col-sm-12 box-border-light-blue"><a href="http://devel.thinkcollege.net/projects/mtf"><img alt="Moving Transition Forward Logo" class="img-responsive" src="/sites/default/files/images/mtf-logo-300-180.png" /></a>
+<div class="bscol col-md-4 col-sm-12 box-border-light-blue"><a href="/projects/mtf"><img alt="Moving Transition Forward Logo" class="img-responsive" src="/sites/default/files/images/mtf-logo-300-180.png" /></a>
 
-<h3><a href="http://devel.thinkcollege.net/projects/mtf">Moving Transition Forward (MTF)</a></h3>
+<h3><a href="/projects/mtf">Moving Transition Forward (MTF)</a></h3>
 
 <p>A research project comprised of three phases of analysis on data collected about students attending high schools and college-based transition programs across the U.S. to define, explore, and compare critical aspects of two models of transition services via secondary analysis of national datasets.</p>
 </div>
 
-<div class="bscol col-md-4 col-sm-12 box-border-gray"><a href="http://devel.thinkcollege.net/projects/transition-leadership-project"><img alt="Transition Leadership Logo" class="img-responsive" src="/sites/default/files/images/trans-leadership-logo-300-180.png" /></a>
+<div class="bscol col-md-4 col-sm-12 box-border-gray"><a href="/projects/transition-leadership-project"><img alt="Transition Leadership Logo" class="img-responsive" src="/sites/default/files/images/trans-leadership-logo-300-180.png" /></a>
 
-<h3><a href="http://devel.thinkcollege.net/projects/transition-leadership-project">Transition Leadership (TL)</a></h3>
+<h3><a href="/projects/transition-leadership-project">Transition Leadership (TL)</a></h3>
 
 <p>An online, 18 credit certificate program offered by UMass Boston focuses on the transition from high school to adult life for young people with a wide range of disabilities. The program is based on the national standards produced by CEC’s Division on Career Development and Transition, and all graduates leave with a MA state endorsement or national transition certificate.</p>
 </div>

@@ -51,13 +51,6 @@ function custom_breadcrumbs_variable_info($options) {
     'default' => 'Home',
     'required' => TRUE,
   );
-  $variables['custom_breadcrumb_home_link'] = array(
-    'type' => 'string',
-    'title' => t('Homepage breadcrumb link', array(), $options),
-    'description' => t('Specify the homepage breadcrumb link.', array(), $options),
-    'default' => '<front>',
-    'required' => TRUE,
-  );
 
   return $variables;
 }
@@ -364,12 +357,10 @@ function _custom_breadcrumbs_get_breadcrumb($breadcrumb, $objs, &$locations) {
 
   $trail = custom_breadcrumbs_home_crumb();
   if (!empty($trail)) {
-    // @codingStandardsIgnoreLine
     $title = variable_get('custom_breadcrumb_home', t('Home'));
-    $link = variable_get('custom_breadcrumb_home_link', '<front>');
     $locations[] = array(
       'title' => variable_get('custom_breadcrumb_home', t('Home')),
-      'href' => $link,
+      'href' => '<front>',
       'localized_options' => array(),
     );
   }
@@ -418,7 +409,7 @@ function _custom_breadcrumbs_get_breadcrumb($breadcrumb, $objs, &$locations) {
 
   // Use the returned items to set the trail.
   foreach ($items as $item) {
-    if (isset($item['crumb'])) {
+    if ($item['crumb']) {
       $trail[] = $item['crumb'];
     }
     if (variable_get('custom_breadcrumbs_force_active_trail', FALSE)) {
@@ -573,7 +564,6 @@ function _custom_breadcrumbs_delete_breadcrumb($module, $key, $bid) {
  */
 function custom_breadcrumbs_home_crumb() {
   $hometext = variable_get('custom_breadcrumb_home', t('Home'));
-  $homelink = variable_get('custom_breadcrumb_home_link', '<front>');
   if ($hometext != '') {
     // Add any html identifiers.
     $options = _custom_breadcrumbs_identifiers_option();
@@ -584,7 +574,7 @@ function custom_breadcrumbs_home_crumb() {
     if (isset($title_parts[1])) {
       $options['attributes']['title'] = $title_parts[1];
     }
-    $trail = array(l($title_parts[0], $homelink, $options));
+    $trail = array(l($title_parts[0], '<front>', $options));
   }
   else {
     $trail = array();
@@ -728,9 +718,10 @@ function custom_breadcrumbs_load_breadcrumbs($module, $table = NULL, $param = ar
   $bc_info = module_invoke($module, 'cb_breadcrumb_info');
   foreach ($bc_info as $info) {
     if (!isset($table) || ($info['table'] == $table)) {
+      $args = array();
+      $cond = array();
       $cond_string = array();
       $query = db_select($info['table'], 'c')->fields('c');
-      // @codingStandardsIgnoreLine
       if ($p = !empty($param)) {
         foreach ($param as $key => $value) {
           $query->condition($key, $value);
@@ -780,8 +771,7 @@ function custom_breadcrumbs_is_visible($breadcrumb, $objs = array()) {
     $trimmed = trim($breadcrumb->visibility_php);
     if ($trimmed != '') {
       // Provide access to objects by standard variable names.
-      foreach ($objs as $obj) {
-        // @codingStandardsIgnoreLine
+      foreach ($objs as $key => $obj) {
         $$key = is_object($obj) ? clone $obj : $obj;
       }
       ob_start();
@@ -836,7 +826,7 @@ function custom_breadcrumbs_set_menu_breadcrumb() {
   }
   $menu_links = $menu_id_cache[$ckey];
   $use_menus = variable_get('custom_breadcrumbs_menu_list', array());
-  foreach ($menu_links as $menu_name) {
+  foreach ($menu_links as $mlid => $menu_name) {
     if (in_array($menu_name, $use_menus)) {
       menu_set_active_menu_names($menu_name);
       $breadcrumb = menu_get_active_breadcrumb();
@@ -864,8 +854,8 @@ function custom_breadcrumbs_theme_registry_alter(&$theme_registry) {
     // Store the existing theme functions.
     $themes = variable_get('custom_breadcrumbs_menu_theme', array());
     $themes[$theme] = array(
-      'menu_item' => isset($theme_registry['menu_item']) ? $theme_registry['menu_item']['function'] : "",
-      'menu_item_link' => isset($theme_registry['menu_item_link']) ? $theme_registry['menu_item_link']['function'] : "",
+      'menu_item' => $theme_registry['menu_item']['function'],
+      'menu_item_link' => $theme_registry['menu_item_link']['function'],
     );
     variable_set('custom_breadcrumbs_menu_theme', $themes);
     // Replace these with our own functions. We will call the original functions after call these override functions.
@@ -1191,8 +1181,7 @@ function extract_php($text, $objs = array()) {
   if (drupal_substr(trim($text), 0, 5) == '<?php') {
     // Strip php tags.
     $text = str_replace(array('<?php', '?>'), '', $text);
-    foreach ($objs as $obj) {
-      // @codingStandardsIgnoreLine
+    foreach ($objs as $key => $obj) {
       $$key = is_object($obj) ? clone $obj : $obj;
     }
     ob_start();

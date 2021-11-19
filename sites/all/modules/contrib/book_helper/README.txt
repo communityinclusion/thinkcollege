@@ -1,4 +1,3 @@
-
 CONTENTS OF THIS FILE
 ---------------------
 
@@ -7,17 +6,18 @@ CONTENTS OF THIS FILE
  * Requirements
  * Installation
  * Similar Modules
+ * Other notes
 
 
 INTRODUCTION
 ------------
 
-The Book helper module improves Drupal's core book module's functionality.
+The Book helper module improves Drupal core book module's functionality.
 
-Drupal's Book module, included in core, does a great job at building custom site
-sections. The Book helper module enables additional features from Drupal's menu
-system to improve the ordering of a book's pages. This module also allows
-administrators to further customize a book's navigation block.
+Core Book module does a great job at building custom site sections. The Book
+helper module enables additional features from Drupal's menu system to improve
+the ordering of a book's pages. This module also allows administrators to
+further customize a book's navigation block.
 
 
 FEATURES
@@ -70,13 +70,19 @@ REQUIREMENTS
 INSTALLATION
 ------------
 
-1. Copy/upload the book_helper.module to the sites/all/modules directory
-   of your Drupal installation.
+1. Copy the book_helper directory to the sites/all/modules directory of your
+   Drupal installation.
 
-2. Enable the 'Book helper' module in 'Administer > Site building > Module'.
-   (admin/build/modules)
+2. Enable the "Book helper" module in "Administration > Modules".
+   (admin/modules)
 
 3. Configure additional Book settings (admin/content/book/settings)
+
+4. Create a book with pages.
+
+   4.1. Enable default (core) 'Book navigation' block.
+   
+   4.2. Enable 'Book helper: Book (inline) navigation' block.
 
 
 SIMILAR MODULES
@@ -89,10 +95,41 @@ SIMILAR MODULES
 - Menu Editor enhances the menu editing form with inline text fields for title,
   path and description, and provides placeholders for new items.
   http://drupal.org/project/menu_editor
+ 
+
+OTHER NOTES
+---------------
+
+[Order]
+
+- Check that 'Order' tab is visible on the main book page. (node/%/order)
+
+- Goto 'Books' admin page (admin/content/book) and confirm that
+  'edit order and titles' is displaying new UI.
+
+- Test 'sync' checkbox.
+
+- Test 'enable' checkbox. Make 'Book navigation' is hiding disable pages.
+
+- Test 'revert' empty book.
+
+[Outline]
+
+- Goto 'Administer > Content management > Books > Settings.
+  (admin/content/book/settings)
+
+- Set 'Remove outline tab from all book pages' to 'Yes'.
+
+- Verify 'Outline' tab is removed from book pages.
 
 
-AUTHOR/MAINTAINER
------------------
+[Book Navigation]
 
-- Jacob Rockowitz
-  http://drupal.org/user/371407
+- Goto 'Administer > Content management > Books > Settings.
+  (admin/content/book/settings)
+
+- Check and uncheck options under 'Select book navigation options:'.
+  Verify elements are being removed from book navigation.
+
+- Check 'Remove book navigation from all book pages.'
+  Confirm only the book helper block is visible.

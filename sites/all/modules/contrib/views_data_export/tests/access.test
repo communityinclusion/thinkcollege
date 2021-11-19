@@ -38,19 +38,45 @@ class ViewsDataExportAccessTest extends ViewsDataExportBaseTest {
     variable_set('menu_rebuild_needed', TRUE);
 
     $this->drupalLogin($this->admin_user1);
+    // Catpure the session_id as the redirects in the request ditch it.
+    $session_id = $this->session_id;
     $this->assertBatchedExportEqual($path, $expected, 'Batched access export matched expected output.');
 
-    // Assert that we can re-download directly.
+    // Remove all the test data, so future exports will be different.
+    db_truncate('views_test')->execute();
+    $this->resetAll();
+
+    // Assert that we can re-download directly when supplying the token.
+    // We rely on this being the first export in this test class.
+    // Restore the session_id from above so we can use drupalGetToken.
+    $this->session_id = $session_id;
+    $token = $this->drupalGetToken('views_data_export/1');
+    $this->drupalGet($path, array('query' => array('eid' => 1, 'download' => 1, 'token' => $token)));
+    $output = $this->drupalGetContent();
+    $this->assertEqual($this->normaliseString($output), $expected, 'Re-download of export file by original user is possible with session token.');
+
+    // Assert that we cannot re-download directly without supplying the token.
     // We rely on this being the first export in this test class.
     $this->drupalGet($path, array('query' => array('eid' => 1, 'download' => 1)));
     $output = $this->drupalGetContent();
-    $this->assertEqual($this->normaliseString($output), $this->normaliseString($expected), 'Re-download of export file is possible.');
+    $this->assertEqual($this->normaliseString($output), '', 'Re-download of export file by original user is not possible.');
 
     // Assert that someone else can't download our file.
     // We rely on this being the first export in this test class.
     $this->drupalLogin($this->admin_user2);
-    $this->drupalGet($path, array('query' => array('eid' => 1, 'download' => 1)));
-    $this->assertResponse(403, 'Re-download of export file by another user is not possible.');
+    $this->drupalGet($path, array('query' => array('eid' => 1, 'download' => 1, 'token' => $token)));
+    $output = $this->drupalGetContent();
+    $this->assertEqual($this->normaliseString($output), '', 'Re-download of export file by different user is not possible.');
+  }
+
+  /**
+   * Overrides DrupalWebTestCase::drupalGetToken() to support the hash salt.
+   *
+   * @todo Remove when http://drupal.org/node/1555862 is fixed in core.
+   */
+  protected function drupalGetToken($value = '') {
+    $private_key = drupal_get_private_key();
+    return drupal_hmac_base64($value, $this->session_id . $private_key . drupal_get_hash_salt());
   }
 
   /**

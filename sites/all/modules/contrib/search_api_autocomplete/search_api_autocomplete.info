@@ -5,13 +5,13 @@ core = 7.x
 package = Search
 
 files[] = search_api_autocomplete.entity.php
+files[] = src/SearchApiAutocompleteLiveResultsSuggester.php
 files[] = src/SearchApiAutocompleteSuggesterInterface.php
 files[] = src/SearchApiAutocompleteSuggesterPluginBase.php
 files[] = src/SearchApiAutocompleteServerSuggester.php
 
-; Information added by Drupal.org packaging script on 2015-08-29
-version = "7.x-1.4"
+; Information added by Drupal.org packaging script on 2021-07-19
+version = "7.x-1.7"
 core = "7.x"
 project = "search_api_autocomplete"
-datestamp = "1440839643"
-
+datestamp = "1626685352"

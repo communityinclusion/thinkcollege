@@ -143,6 +143,9 @@ Hidden variables
   Since the prefix of fields is used to determine the field type (by default),
   this lets you enable highlighting for other field types. By default,
   highlighting will be possible for all fulltext fields.
+- search_api_solr_connection_class (default: "SearchApiSolrConnection")
+  The connection class to use for connecting to Solr. Needs to implement
+  SearchApiSolrConnectionInterface.
 
 [8] http://wiki.apache.org/solr/UpdateXmlMessages#A.22commit.22_and_.22optimize.22
 
@@ -168,3 +171,10 @@ Developers
 The SearchApiSolrService class has a few custom extensions, documented with its
 code. Methods of note are deleteItems(), which treats the first argument
 differently in certain cases, and the methods at the end of service.inc.
+
+Also, when requesting facets with a search, you can use the custom
+"solr_facet_query" key in the facet options to pass an array of facet queries to
+Solr, which should be used instead of the default "facet.field" parameter. The
+facet queries will automatically have "FIELD:" prepended to them. The returned
+facets will have an additional "solr_facet_query" key in addition to "filter"
+and "count", to spot them more easily.

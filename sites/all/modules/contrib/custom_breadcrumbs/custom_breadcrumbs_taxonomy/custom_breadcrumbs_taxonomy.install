@@ -9,17 +9,14 @@
  * Implements hook_install().
  */
 function custom_breadcrumbs_taxonomy_install() {
-
-  $t = get_t();
-
   // If taxonomy_breadcrumbs is installed, copy term and vocab breadcrumb to custom_breadcrumbs_taxonomy tables.
   if (module_exists('taxonomy_breadcrumb')) {
     // Search for taxonomy_breadcrumb term and vocabulary breadcrumbs and copy to new custom_breadcrumb_taxonomy tables.
-    drupal_set_message($t('Taxonomy breadcrumb module is enabled. Copying breadcrumbs from {taxonomy_breadcrumb_term} and {taxonomy_breadcrumb_vocabulary} to custom_breadcrumbs_taxonomy ...'));
+    drupal_set_message('Taxonomy breadcrumb module is enabled. Copying breadcrumbs from {taxonomy_breadcrumb_term} and {taxonomy_breadcrumb_vocabulary} to custom_breadcrumbs_taxonomy ...');
     $result = db_query("SELECT * FROM {taxonomy_breadcrumb_term}");
     $found = 0;
     foreach ($result as $breadcrumb) {
-      db_insert('custom_breadcrumbs_taxonomy_term')
+      $id = db_insert('custom_breadcrumbs_taxonomy_term')
         ->fields(array(
           'paths' => $breadcrumb->path,
           'tid' => $breadcrumb->tid,
@@ -31,7 +28,7 @@ function custom_breadcrumbs_taxonomy_install() {
     $result = db_query("SELECT * FROM {taxonomy_breadcrumb_vocabulary}");
 
     foreach ($result as $breadcrumb) {
-      db_insert('custom_breadcrumbs_taxonomy_vocabulary')
+      $id = db_insert('custom_breadcrumbs_taxonomy_vocabulary')
         ->fields(array(
           'paths' => $breadcrumb->path,
           'vid' => $breadcrumb->vid,
@@ -42,7 +39,7 @@ function custom_breadcrumbs_taxonomy_install() {
     }
 
     // use variable definitions already set for taxonomy_breadcrumb
-    variable_set('custom_breadcrumbs_taxonomy_home', variable_get('taxonomy_breadcrumb_home', $t('Home')));
+    variable_set('custom_breadcrumbs_taxonomy_home', variable_get('taxonomy_breadcrumb_home', t('Home')));
     variable_set('custom_breadcrumbs_taxonomy_show_current_term', variable_get('taxonomy_breadcrumb_show_current_term', TRUE));
     variable_set('custom_breadcrumbs_taxonomy_include_node_title', variable_get('taxonomy_breadcrumb_include_node_title', FALSE));
     variable_set('custom_breadcrumbs_taxonomy_include_nodes', variable_get('taxonomy_breadcrumb_include_nodes', FALSE));
@@ -54,13 +51,13 @@ function custom_breadcrumbs_taxonomy_install() {
 
     if ($found > 0) {
       drupal_set_message(format_plural($found, 'Copied 1 breadcrumb.', 'Copied @count breadcrumbs.'));
-      drupal_set_message($t('You can now disable taxonomy_breadcrumb, and test custom_breadcrumb_taxonomy.'));
+      drupal_set_message(t('You can now disable taxonomy_breadcrumb, and test custom_breadcrumb_taxonomy.'));
     }
     else {
-      drupal_set_message($t('No taxonomy_breadcrumbs were found'));
+      drupal_set_message(t('No taxonomy_breadcrumbs were found'));
     }
   }
-  drupal_set_message($t('Custom Breadcrumbs for Taxonomy Terms and Vocabularies: Taxonomy based breadcrumbs should now appear on node pages and taxonomy/term pages.  For the most common applications this module will work "out of the box" and no further configuration is necessary.  If customization is desired settings can be changed on the ') . l('administration page', 'admin/config/user-interface/custom-breadcrumbs') . '.');
+  drupal_set_message('Custom Breadcrumbs for Taxonomy Terms and Vocabularies: Taxonomy based breadcrumbs should now appear on node pages and taxonomy/term pages.  For the most common applications this module will work "out of the box" and no further configuration is necessary.  If customization is desired settings can be changed on the ' . l('administration page', 'admin/config/user-interface/custom-breadcrumbs') . '.');
 }
 
 /**
