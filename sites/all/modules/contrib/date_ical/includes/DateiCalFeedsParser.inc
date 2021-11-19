@@ -210,6 +210,7 @@ class DateiCalFeedsParser extends FeedsParser {
       'description' => t('The CATEGORIES property. Catagories that describe the event, which can be imported into taxonomy terms.'),
       'date_ical_parse_handler' => 'parseMultivalueProperty',
     );
+
     // Allow other modules to add custom source fields.
     drupal_alter('date_ical_mapping_sources', $sources);
 

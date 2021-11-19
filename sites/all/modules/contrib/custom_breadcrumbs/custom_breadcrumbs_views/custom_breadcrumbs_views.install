@@ -9,10 +9,8 @@
  */
 function custom_breadcrumbs_views_install() {
 
-  $t = get_t();
-
   // Search for Views breadcrumbs in existing {custom_breadcrumb} and move to new table.
-  drupal_set_message($t('Looking for views breadcrumbs to copy from {custom_breadcrumb}...'));
+  drupal_set_message('Looking for views breadcrumbs to copy from {custom_breadcrumb}...');
   $result = db_query("SELECT * FROM {custom_breadcrumb} WHERE node_type = :node_type", array(':node_type' => 'Views Page'));
   $found = 0;
   foreach ($result as $breadcrumb) {
@@ -21,7 +19,7 @@ function custom_breadcrumbs_views_install() {
     $title = drupal_substr($breadcrumb->titles, strpos($breadcrumb->titles, "\n") + 1);
     $newpath = drupal_substr($breadcrumb->paths, strpos($breadcrumb->paths, "\n") + 1);
 
-    db_insert('custom_breadcrumbs_views')
+    $id = db_insert('custom_breadcrumbs_views')
       ->fields(array(
         'titles' => $title,
         'paths' => $newpath,
@@ -31,16 +29,15 @@ function custom_breadcrumbs_views_install() {
         'language' => $breadcrumb->language,
         ))
       ->execute();
-    drupal_set_message($t('copied path ') . $views_path);
+    drupal_set_message('copied path ' . $views_path);
     ++$found;
   }
-
   if ($found > 0) {
     drupal_set_message(format_plural($found, 'Copied 1 breadcrumb.', 'Copied @count breadcrumbs.'));
-    drupal_set_message($t('You can now delete the old views breadcrumb from <a href="@link">admin/build/custom_breadcrumbs</a>. They will be listed with title Views Page and page type node.', array('@link' => url('admin/structure/custom_breadcrumbs'))));
+    drupal_set_message(t('You can now delete the old views breadcrumb from <a href="@link">admin/build/custom_breadcrumbs</a>. They will be listed with title Views Page and page type node.', array('@link' => url('admin/structure/custom_breadcrumbs'))));
   }
   else {
-    drupal_set_message($t('No views breadcrumbs were found in {custom_breadcrumbs}'));
+    drupal_set_message(t('No views breadcrumbs were found in {custom_breadcrumbs}'));
   }
 }
 

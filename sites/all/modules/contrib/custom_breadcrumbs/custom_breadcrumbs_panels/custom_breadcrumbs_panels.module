@@ -113,31 +113,24 @@ function custom_breadcrumbs_panels_ctools_render_alter($info, $page, $data) {
     );
     // Check to see if the panel ID matches any custom_breadcrumb panel_id.
     // First, try to find a match on panels variant id.
-    // @codingStandardsIgnoreLine
     $id = $handler->name;
     $breadcrumbs = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_panels', NULL, array('panel_id' => $id), $languages);
     // If nothing matched, try matching on panels page id.
     if (empty($breadcrumbs)) {
-      // @codingStandardsIgnoreLine
       $id = $handler->task;
       $breadcrumbs = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_panels', NULL, array('panel_id' => $id), $languages);
     }
     if (!empty($breadcrumbs)) {
       if ($breadcrumb = custom_breadcrumbs_select_breadcrumb($breadcrumbs, array('panel' => $info))) {
         $objs = array('panel' => $info);
-        // @codingStandardsIgnoreLine
         foreach ($contexts as $context) {
           if (is_array($context->type) && (in_array('node', $context->type) || in_array('entity:node', $context->type)) && isset($context->data)) {
             $objs['node'] = $context->data;
           }
         }
-        // @codingStandardsIgnoreStart
-        if (!empty($handler->conf['display'])) {
-          foreach ($handler->conf['display']->content as $pane) {
-            // @codingStandardsIgnoreEnd
-            if ($pane->type == 'node') {
-              $objs['node'] = node_load($pane->configuration['nid']);
-            }
+        foreach ($handler->conf['display']->content as $pane) {
+          if ($pane->type == 'node') {
+            $objs['node'] =  node_load($pane->configuration['nid']);
           }
         }
         custom_breadcrumbs_set_breadcrumb($breadcrumb, $objs);
@@ -148,10 +141,8 @@ function custom_breadcrumbs_panels_ctools_render_alter($info, $page, $data) {
   }
 
   // Is this a taxonomy term template?
-  // @codingStandardsIgnoreLine
   if (isset($task['admin path']) && ($task['admin path'] == "taxonomy/term/%taxonomy_term") && module_exists('custom_breadcrumbs_taxonomy') && variable_get('custom_breadcrumbs_taxonomy_panels', FALSE)) {
     module_load_include('inc', 'custom_breadcrumbs_taxonomy');
-    // @codingStandardsIgnoreLine
     foreach ($contexts as $context) {
       if (isset($context->data->tid)) {
         $terms = array($context->data->tid => $context->data);
@@ -162,7 +153,6 @@ function custom_breadcrumbs_panels_ctools_render_alter($info, $page, $data) {
   }
 
   // Is this a node template?
-  // @codingStandardsIgnoreLine
   if (isset($task['admin path']) && ($task['admin path'] == "node/%node")) {
 
     $context = array_pop($contexts);
@@ -206,7 +196,6 @@ function custom_breadcrumbs_panels_form_alter(&$form, $form_state, $form_id) {
       $form['settings']['custom_breadcrumbs_panels']['custom_breadcrumbs_taxonomy_panels'] = array(
         '#type' => 'checkbox',
         '#title' => t('Use taxonomy breadcrumbs for panels'),
-        // @codingStandardsIgnoreLine
         '#default_value' => variable_get('custom_breadcrumbs_taxonomy_panels', FALSE),
         '#description' => t('If enabled, the view argument and/or the taxonomy structure of nodes returned by panels will be used to form the taxonomy breadcrumb trail.'),
         '#weight' => 45,

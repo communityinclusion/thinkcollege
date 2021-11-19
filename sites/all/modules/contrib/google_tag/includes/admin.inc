@@ -22,9 +22,7 @@ function google_tag_settings_form($form, &$form_state) {
   // @todo Set this on validation errors.
   $default_tab = !empty($form_state['default_tab']) ? $form_state['default_tab'] : '';
 
-  $description = t('On this and the next two tabs, specify the conditions on which the GTM JavaScript snippet will either be included in or excluded from the page response, thereby enabling or disabling tracking and other analytics.');
-  $description .= t(' All conditions must be satisfied for the snippet to be included. The snippet will be excluded if any condition is not met.<br /><br />');
-  $description .= t(' On this tab, specify the path condition.');
+  $description = t('On this and the next two tabs, specify the conditions on which the GTM JavaScript snippet will either be included in or excluded from the page response, thereby enabling or disabling tracking and other analytics. All conditions must be satisfied for the snippet to be included. The snippet will be excluded if any condition is not met.<br /><br />On this tab, specify the path condition.');
 
   $groups = array(
     'general' => array('title' => t('General'), 'collapse' => FALSE),
@@ -84,7 +82,7 @@ function google_tag_fieldset($group, $items) {
  * @return array
  *   Associative array of form elements.
  */
-function google_tag_form_elements($variables) {
+function google_tag_form_elements(array $variables) {
   static $keys = array(
     'type' => '#type',
     'title' => '#title',
@@ -225,7 +223,10 @@ function google_tag_settings_form_submit($form, &$form_state) {
     $global->addStore('default', $variables);
   }
 
-  _google_tag_assets_create($count);
+  // Set global to avoid message display to non-admin users on cache flush.
+  global $_google_tag_display_message;
+  $_google_tag_display_message = TRUE;
+  _google_tag_assets_create();
 }
 
 /**
@@ -241,29 +242,31 @@ function google_tag_settings_form_submit($form, &$form_state) {
  * - sub case: some google_tag variables are realm-specific
  *   update all snippet files based on global and realm-specific variables
  */
-function _google_tag_assets_create(&$count) {
-  $count = 0;
-
+function _google_tag_assets_create() {
+  @file_unmanaged_delete_recursive('public://google_tag');
   if (module_exists('variable_realm') && module_exists('variable_store')) {
+    // Backup global config as switching realm overwrites this array.
+    $backup = $GLOBALS['conf'];
     // i18n_variable module depends on variable_realm, variable_store
     $realms = variable_realm_list();
     foreach ($realms as $realm_name => $realm_title) {
       $keys = variable_realm_keys($realm_name);
       foreach ($keys as $key_name => $key_title) {
-        drupal_set_message(t('realm:key = @realm:@key', array('@realm' => $realm_name, '@key' => $key_name)));
+        _google_tag_message_display('realm:key = @realm:@key', array('@realm' => $realm_name, '@key' => $key_name));
         variable_realm_switch($realm_name, $key_name);
-        _google_tag_directory_prepare($realm_name);
-        _google_tag_snippets_save($realm_name, $key_name);
-        _google_tag_classes_save($realm_name, $key_name);
-        $count++;
+        if (_google_tag_directory_prepare($realm_name)) {
+          _google_tag_snippets_save($realm_name, $key_name);
+          _google_tag_classes_save($realm_name, $key_name);
+        }
       }
     }
+    $GLOBALS['conf'] = $backup;
   }
   else {
-    _google_tag_directory_prepare();
-    _google_tag_snippets_save();
-    _google_tag_classes_save();
-    $count++;
+    if (_google_tag_directory_prepare()) {
+      _google_tag_snippets_save();
+      _google_tag_classes_save();
+    }
   }
 
   _drupal_flush_css_js();
@@ -272,19 +275,40 @@ function _google_tag_assets_create(&$count) {
 
 /**
  * Prepares directory for base or realm specific snippet files.
+ *
+ * @return bool
+ *   Whether the directory was prepared.
  */
 function _google_tag_directory_prepare($realm_name = '') {
   // From google_tag_requirements(); this should be a helper function (in core).
   $directory = 'public://google_tag';
   $directory .= $realm_name ? "/$realm_name" : '';
-  if (!is_dir($directory) || !is_writable($directory)) {
-    file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
+  if (is_dir($directory) && _google_tag_is_writable($directory) && _google_tag_is_executable($directory)) {
+    return TRUE;
   }
-  $is_writable = is_writable($directory);
-  $is_directory = is_dir($directory);
-  if (!$is_writable || !$is_directory) {
-    // @todo Do something.
+  if (_file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
+    return TRUE;
   }
+
+  // The snippet directory does not exist or is not writable or searchable.
+
+  // If applicable, get the directory path of stream wrapper.
+  $wrapper = file_stream_wrapper_get_instance_by_uri($directory);
+  if (method_exists($wrapper, 'getDirectoryPath') && ($path = $wrapper->getDirectoryPath())) {
+    // getDirectoryPath() is not defined in StreamWrapperInterface; it
+    // exists in LocalStream and the local storage replacement classes in
+    // google_appengine; s3fs returns an empty string.
+    $path .= str_replace('public://', '/', $directory);
+  }
+  elseif (!($path = $wrapper->getExternalUrl())) {
+    $path = $directory;
+  }
+
+  $args = array('%directory' => $path);
+  $message = 'The directory %directory could not be prepared for use, possibly due to file system permissions. The directory either does not exist, or is not writable or searchable.';
+  _google_tag_message_display($message, $args, 'error');
+  watchdog('google_tag', $message, $args, WATCHDOG_ERROR);
+  return FALSE;
 }
 
 /**
@@ -294,6 +318,7 @@ function _google_tag_directory_prepare($realm_name = '') {
  *   Whether the files were saved.
  */
 function _google_tag_snippets_save($realm_name = '', $realm_key = '') {
+  $realm_string = $realm_name ? "$realm_name:$realm_key" : 'default';
   $realm_name .= $realm_name ? '/' : '';
   $realm_key .= $realm_key ? '.' : '';
   // Save the altered snippets after hook_google_tag_snippets_alter().
@@ -304,11 +329,22 @@ function _google_tag_snippets_save($realm_name = '', $realm_key = '') {
     $path = file_unmanaged_save_data($snippet, "public://google_tag/{$realm_name}google_tag.$realm_key$type.js", FILE_EXISTS_REPLACE);
     $result = !$path ? FALSE : $result;
   }
-  if (!$result) {
-    drupal_set_message(t('An error occurred saving one or more snippet files. Please try again or contact the site administrator if it persists.'));
+
+  $args = array('@count' => count($snippets));
+  if ($realm_name) {
+    $args += array('@realm' => $realm_string);
+    $message = $result
+      ? 'Created @count snippet files for @realm realm based on configuration.'
+      : 'An error occurred saving @count snippet files for @realm realm. Contact the site administrator if this persists.';
   }
   else {
-    drupal_set_message(t('Created three snippet files based on configuration.'));
+    $message = $result
+      ? 'Created @count snippet files based on configuration.'
+      : 'An error occurred saving @count snippet files. Contact the site administrator if this persists.';
+  }
+  _google_tag_message_display($message, $args, $result ? 'status' : 'error');
+  if (!$result) {
+    watchdog('google_tag', $message, $args, WATCHDOG_ERROR);
   }
 }
 
@@ -360,5 +396,135 @@ function _google_tag_data_layer_verify($value) {
     // @todo Setting form error does not allow user to save a different name,
     // i.e. to do what message text says.
     return t('The 1.1 release of the dataLayer module does not support a data layer name other than "dataLayer." If you need a different layer name, then either disable the dataLayer module or alter the JavaScript added to the page response.');
+  }
+}
+
+/**
+ * Checks that the directory exists and is writable.
+ *
+ * @todo Remove this function if core is updated to check the executable bit.
+ *
+ * @see file_prepare_directory()
+ */
+function _file_prepare_directory(&$directory, $options = FILE_MODIFY_PERMISSIONS) {
+  if (!file_stream_wrapper_valid_scheme(file_uri_scheme($directory))) {
+    // Only trim if we're not dealing with a stream.
+    $directory = rtrim($directory, '/\\');
+  }
+
+  // Check if directory exists.
+  if (!is_dir($directory)) {
+    // Let mkdir() recursively create directories and use the default directory
+    // permissions.
+    if (($options & FILE_CREATE_DIRECTORY) && @drupal_mkdir($directory, NULL, TRUE)) {
+      return drupal_chmod($directory);
+    }
+    return FALSE;
+  }
+  // The directory exists, so check to see if it is writable.
+  $writable = _google_tag_is_writable($directory) && _google_tag_is_executable($directory);
+  if (!$writable && ($options & FILE_MODIFY_PERMISSIONS)) {
+    return drupal_chmod($directory);
+  }
+
+  return $writable;
+}
+
+/**
+ * Determines whether a directory is writable.
+ *
+ * Remove this if PHP is_writable() is changed to respect ACLS on a 'local'
+ * stream wrapper other than the local file wrapper provided by PHP.
+ *
+ * @param string $uri
+ *   A directory path or stream wrapper URI.
+ *
+ * @return bool
+ *   Whether the directory is writable.
+ */
+function _google_tag_is_writable($uri) {
+  // Use the local path, if applicable, since PHP only checks ACLs on its local
+  // file wrapper.
+  $realpath = FALSE;
+  if ($wrapper = file_stream_wrapper_get_instance_by_uri($uri)) {
+    $realpath = $wrapper->realpath($uri);
+  }
+  return is_writable($realpath ? $realpath : $uri);
+}
+
+/**
+ * Determines whether a directory is searchable.
+ *
+ * Remove this if PHP is_executable() is changed to not return FALSE simply
+ * because the URI points to a directory (not a file) in a stream wrapper other
+ * than the local file wrapper provided by PHP.
+ *
+ * @param string $uri
+ *   A directory path or stream wrapper URI.
+ *
+ * @return bool
+ *   Whether the directory is searchable.
+ */
+function _google_tag_is_executable($uri) {
+  if ($wrapper = file_stream_wrapper_get_instance_by_uri($uri)) {
+    if ($realpath = $wrapper->realpath($uri)) {
+      // The URI is a local stream wrapper.
+      // Use local path since PHP only checks ACLs on its local file wrapper.
+      // Remove OS check if PHP is_executable() is changed to not return FALSE
+      // simply because the URI points to a directory (not a file) on Windows.
+      return _google_tag_is_windows() || is_executable($realpath);
+    }
+
+    // The URI is a remote stream wrapper.
+    if (!($stat = $wrapper->url_stat($uri, 0))) {
+      return FALSE;
+    }
+
+    if (!function_exists('posix_getuid') || !function_exists('posix_getgid')) {
+      // These functions are never defined on Windows and the extension that
+      // provides them may not be included on a Linux distribution.
+      // If directory is not searchable, then fault the site deployment process.
+      // @todo Is it worse to return true or false at this point?
+      return TRUE;
+    }
+
+    // Determine the appropriate permissions bit mask as an octal.
+    // The stat array is likely to have uid=gid=0 so that the mask is octal 01.
+    // This is true for Amazon S3 and Google Cloud Storage.
+    $mask = 1;
+    if ($stat['uid'] == posix_getuid()) {
+      $mask = $mask << 6;
+    }
+    elseif ($stat['gid'] == posix_getgid()) {
+      $mask = $mask << 3;
+    }
+    return ($stat['mode'] & $mask) != 0;
+  }
+  else {
+    // The URI is a local path.
+    return is_executable($uri);
+  }
+}
+
+/**
+ * Determines whether the operating system is Windows.
+ *
+ * @return bool
+ *   Whether the operating system is Windows.
+ */
+function _google_tag_is_windows() {
+  return (defined('PHP_OS_FAMILY') && PHP_OS_FAMILY == 'Windows') ||
+    (defined('PHP_OS') && strcasecmp(substr(PHP_OS, 0, 3), 'win') == 0);
+}
+
+/**
+ * Displays a message to admin users.
+ *
+ * See arguments to t() and drupal_set_message().
+ */
+function _google_tag_message_display($message, $args = array(), $type = 'status') {
+  global $_google_tag_display_message;
+  if ($_google_tag_display_message) {
+    drupal_set_message(t($message, $args), $type);
   }
 }

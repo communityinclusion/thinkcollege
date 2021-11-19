@@ -401,18 +401,9 @@ function custom_breadcrumbs_admin_settings($form, &$form_state) {
   $form['settings']['custom_breadcrumb_home'] = array(
     '#type' => 'textfield',
     '#title' => t('Home breadcrumb text'),
-    // @codingStandardsIgnoreLine
     '#default_value' => variable_get('custom_breadcrumb_home', t('Home')),
     '#description' => t('This text will be displayed as the first item of the breadcrumb trail. Typically Home or your site name. Leave blank to have no home breadcrumb. You can also specify a title attribute (tooltip text) to add to the link. Just separate the crumb text and the title attribute text with a pipe (|) symbol (i.e. Home crumb text|attribute title text).'),
   );
-
-  $form['settings']['custom_breadcrumb_home_link'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Home breadcrumb link'),
-    '#default_value' => variable_get('custom_breadcrumb_home_link', '<front>'),
-    '#description' => t('This link will be the link of the first item of the breadcrumb trail. Typically &lt;front&gt;.'),
-  );
-
 
   $form['settings']['custom_breadcrumbs_append_page_title_fieldset'] = array(
     '#type' => 'fieldset',
@@ -746,7 +737,6 @@ function custom_breadcrumbs_filter_form($form) {
   );
   foreach ($session as $filter) {
     list($type, $value) = $filter;
-    // @codingStandardsIgnoreLine
     $options = $filters[$type]['options'];
     $t_args = array(
       '%property' => $filters[$type]['title'],
@@ -773,7 +763,6 @@ function custom_breadcrumbs_filter_form($form) {
   );
 
   foreach ($filters as $key => $filter) {
-    // @codingStandardsIgnoreLine
     $names[$key] = $filter['title'];
     $form['filters']['status']['filters'][$key] = array(
       '#type' => 'select',

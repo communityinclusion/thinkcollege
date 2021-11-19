@@ -94,7 +94,6 @@ function custom_breadcrumbs_views_views_pre_render(&$view) {
         if ($breadcrumb = custom_breadcrumbs_select_breadcrumb($breadcrumbs, array('view' => $view))) {
           // Select breadcrumb for the matching display with the greatest number of explicit arguments.
           $num = substr_count($breadcrumb->views_path, '%');
-          // @codingStandardsIgnoreLine
           if (!isset($max) || (isset($max) && ($num > $max))) {
             $max = $num;
             $candidate = $breadcrumb;

@@ -6,11 +6,10 @@ tags[] = developer
 dependencies[] = metatag:metatag
 
 ; Tests.
-files[] = tests/metatag_devel.test
+files[] = tests/MetatagDevelTest.test
 
-; Information added by Drupal.org packaging script on 2017-02-15
-version = "7.x-1.21"
+; Information added by Drupal.org packaging script on 2021-07-12
+version = "7.x-1.28"
 core = "7.x"
 project = "metatag"
-datestamp = "1487171290"
-
+datestamp = "1626115939"

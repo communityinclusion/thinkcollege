@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the TC Learn feature.
- */
-
-include_once 'tc_learn.features.inc';

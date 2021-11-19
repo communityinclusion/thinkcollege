@@ -398,15 +398,7 @@ function template_preprocess_bootstrap_fieldgroup_nav(&$variables) {
 
     // Check if item is not empty and we have access to it.
     if ($item && (!isset($item['#access']) || $item['#access'])) {
-
-      if (!empty($item['#group'])) {
-        $label = $item['#group']->label;
-      }
-      else if (!empty($item['#title'])) {
-        $label = $item['#title'];
-      }
-
-      $id = 'bootstrap-fieldgroup-nav-item--' . drupal_html_id($label);
+      $id = 'bootstrap-fieldgroup-nav-item--' . drupal_html_id($item['#title']);
 
       // Is an explicit nav item?
       if (!empty($item['#type']) && 'bootstrap_fieldgroup_nav_item' == $item['#type']) {
@@ -420,7 +412,7 @@ function template_preprocess_bootstrap_fieldgroup_nav(&$variables) {
 
       $variables['navs'][] = array(
         'content' => l(
-          check_plain(t($label)),
+          check_plain(t($item['#title'])),
           NULL,
           array(
             'attributes' => array(

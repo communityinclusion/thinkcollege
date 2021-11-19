@@ -134,7 +134,6 @@ function _custom_breadcrumbs_paths_set_breadcrumb($objs = array(), $priority = 1
             if ($matchpath) {
               // Assume a longer path match is a better fit than a prior shorter match.
               if (($pos = strrpos($breadcrumb->specific_path, '*')) !== FALSE) {
-                // @codingStandardsIgnoreLine
                 if (!isset($max) || (isset($max) && ($pos > $max))) {
                   $max = $pos;
                   $max_id = $id;
@@ -270,8 +269,7 @@ function custom_breadcrumbs_paths_form($form, &$form_state, $type) {
   $breadcrumb = NULL;
   if (isset($bid)) {
     drupal_set_title(t('Edit Custom Breadcrumb for Path'));
-    $path_breadcrumbs = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_paths', NULL, array('bid' => $bid));
-    $breadcrumb = array_pop($path_breadcrumbs);
+    $breadcrumb = array_pop(custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_paths', NULL, array('bid' => $bid)));
   }
   else {
     drupal_set_title(t('Add Custom Breadcrumb for Path'));

@@ -96,7 +96,8 @@ function custom_breadcrumbs_identifiers_cb_identifier_values($identifier, $obj) 
       $crumb_items[] = $crumb_item;
       break;
 
-    // New identifiers can be added here.
+      // New identifiers can be added here.
+
     case '<book-hierarchy>':
       // Get the node object for the current page and make sure its a book page.
       if (arg(0) == 'node' && is_numeric(arg(1)) && !arg(2)) {
@@ -135,7 +136,7 @@ function custom_breadcrumbs_identifiers_cb_identifier_values($identifier, $obj) 
       // Search for both alias and normal path.
       $normal_path = drupal_get_normal_path($path);
 
-      $menu_item = db_select('menu_links', 'ml')->fields('ml')->condition('link_path', array($path, $normal_path), 'IN')->execute()->fetch();
+      $menu_item = db_select('menu_links')->condition('link_path', array($path, $normal_path), 'IN')->execute()->fetch();
 
       if ($menu_item) {
         // Parent ids of menu item.
@@ -165,7 +166,7 @@ function custom_breadcrumbs_identifiers_cb_identifier_values($identifier, $obj) 
         }
 
         // Query parent items.
-        $result = db_select('menu_links', 'ml')->fields('ml')->condition('mlid', $pids, 'IN')->execute();
+        $result = db_select('menu_links')->condition('mlid', $pids, 'IN')->execute();
         $trail = array();
 
         foreach ($result as $item) {
@@ -196,7 +197,6 @@ function custom_breadcrumbs_identifiers_form_alter(&$form, $form_state, $form_id
       '#type' => 'checkbox',
       '#title' => t("Wrap plain text breadcrumbs in &lt;span&gt; tags."),
       '#description' => t("If enabled, breadcrumbs that use &lt;none&gt; for the link will be wrapped in &lt;span&gt; tags with the custom-breadcrumbs-none class identifier and any other applicable classes."),
-      // @codingStandardsIgnoreLine
       '#default_value' => variable_get('custom_breadcrumbs_none_span', FALSE),
     );
   }

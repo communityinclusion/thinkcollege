@@ -8,7 +8,8 @@ Drupal.bookHelperSyncTitles  = function (syncSelector, mainTitleSelector, second
 
   // Add event handler to sync checkbox.
   $(syncSelector).click( function () {
-    if (this.checked) { // Node and book title are sync'ed
+    // Node and book title are sync'ed.
+    if (this.checked) {
       $(secondaryTitleSelector).val( $(mainTitleSelector).val() )
     }
   }).addClass('book-helper-sync-processed');
@@ -28,13 +29,13 @@ Drupal.bookHelperSyncTitles  = function (syncSelector, mainTitleSelector, second
   });
 
   // Init the sync checkbox.
-  $(syncSelector)[0].checked = ($(secondaryTitleSelector).val() == $(mainTitleSelector).val()) ? true : false;
+  $(syncSelector)[0].checked = !$(secondaryTitleSelector).val().length;
 }
 
 // Hide/show book outline fields.
 Drupal.bookHelperToggleSync = function() {
   var effect = ($('#edit-book-bid').val() == '0') ? 'hide' : 'show';
-  $('.form-item-book-book-helper-link-title-custom, .form-item-book-book-helper-link-title-sync, .form-item-book-weight')[effect]();
+  $('.form-item-book-link-title, .form-item-book-link-title-sync, .form-item-book-weight')[effect]();
 }
 
 // Book helper behaviors
@@ -48,21 +49,21 @@ Drupal.behaviors.bookHelper = {
 
       // Sync book titles on node edit form.
       Drupal.bookHelperSyncTitles(
-        '#edit-book-book-helper-link-title-sync',
+        '#edit-book-link-title-sync',
         '#edit-title',
-        '#edit-book-book-helper-link-title-custom'
+        '#edit-book-link-title'
       );
     }
 
     // Sync book titles on book page order form.
     if ($('#book-outline', context).length) {
-      $('#book-outline tbody td:nth-child(3) input').each(function(){
+      $('tbody td:nth-child(4) input', '#book-outline').each(function(){
         // edit-table-book-admin-{nid}-sync
         var syncSelector = '#' + this.id;
-        // edit-table-book-admin-{nid}-title
-        var mainTitleSelector = syncSelector.replace('-sync', '-title');
         // edit-table-book-admin-{nid}-node-title
-        var secondaryTitleSelector = syncSelector.replace('-sync', '-node-title');
+        var mainTitleSelector = syncSelector.replace('-link-title-sync', '-title');
+        // edit-table-book-admin-{nid}-title
+        var secondaryTitleSelector = syncSelector.replace('-sync', '');
 
         Drupal.bookHelperSyncTitles(syncSelector, mainTitleSelector, secondaryTitleSelector);
       });

@@ -59,10 +59,10 @@ EOS;
   }
 /*
   $script = <<<EOS
-<!-- Google Tag Manager -->
-$script
-<!-- End Google Tag Manager -->
-EOS;
+  <!-- Google Tag Manager -->
+  $script
+  <!-- End Google Tag Manager -->
+  EOS;
 */
   return $script;
 }
@@ -81,7 +81,7 @@ function _google_tag_noscript_snippet() {
 
   // Build noscript snippet.
   $noscript = <<<EOS
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=$container_id$query"
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=$container_id$query"
  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 EOS;
   if ($compact) {
@@ -89,10 +89,10 @@ EOS;
   }
 /*
   $noscript = <<<EOS
-<!-- Google Tag Manager -->
-$noscript
-<!-- End Google Tag Manager -->
-EOS;
+  <!-- Google Tag Manager -->
+  $noscript
+  <!-- End Google Tag Manager -->
+  EOS;
 */
   return $noscript;
 }
@@ -148,7 +148,7 @@ function _google_tag_environment_query() {
  *
  * @param string $variable
  *   The variable name.
- * @param string $variable
+ * @param string $default
  *   The default value for the variable.
  *
  * @return string
