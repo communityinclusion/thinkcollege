@@ -182,7 +182,7 @@ function thinkcollege_boot_process_page(&$variables) {
   if ((!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_first_top'])) && !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-sm-6"';
   }
-  elseif (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_first_top'] || !empty($variables['page']['sidebar_second']))) {
+  elseif (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_first_top']) || !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-sm-9"';
   }
   else {
