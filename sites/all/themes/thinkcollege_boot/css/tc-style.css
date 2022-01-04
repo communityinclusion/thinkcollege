@@ -1349,6 +1349,9 @@ a.orange {
 
 .box-border-light-blue {border-top-color:#4C8EC9!important}
 .box-border-dk-blue {border-top-color:#20527C!important}
+.box-border-teal{
+  border-top-color: #559197!important;
+}
 
 
 .box-bg-dk-blue {
