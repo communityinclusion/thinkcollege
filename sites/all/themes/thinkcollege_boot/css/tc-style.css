@@ -223,7 +223,7 @@ h3.block-title,h3.pane-title, h2.block-title, h2.pane-title {
 	font-weight:600;
 }
 
-.btn-dk-blue:hover, .btn-dk-blue:focus{
+.btn-dk-blue:hover, .btn-dk-blue:focus {
 	background-color:#C96B1E;
   color:#fff;
 }
@@ -231,6 +231,17 @@ h3.block-title,h3.pane-title, h2.block-title, h2.pane-title {
 .btn-dk-blue p a:link {
     background-color: #fff;
     }
+
+
+.btn-network {background-color: #559197;
+   color:#fff;
+}
+
+  .btn-network:hover, .btn-network:focus {
+	background-color:#559197;
+  color:#fff;
+}
+
 
 .page-college-search .main-container {
 	margin-bottom:60px;
@@ -1384,6 +1395,31 @@ a.orange {
     font-size: 19px !important;
     line-height: 30px !important;
     color:#333;}
+
+
+
+/* TCN Project page */
+.cardsgrid .box{
+    border:5px solid  #559197;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+}
+
+.cardsgrid .box .box-text{
+    margin:20px 0px;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.cardsgrid .box .box-btn a{
+    text-decoration: none;
+    color: #4183D7;
+
+}
 
 
 
