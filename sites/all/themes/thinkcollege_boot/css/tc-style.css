@@ -1399,7 +1399,8 @@ a.orange {
 
 
 /* TCN Project page */
-.networkgrid .box{
+
+.networkgrid .box {
     border:5px solid  #559197;
     -webkit-box-shadow: none;
     box-shadow: none;
