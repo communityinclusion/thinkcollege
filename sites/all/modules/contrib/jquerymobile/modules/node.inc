@@ -2,7 +2,7 @@
 /**
  * @file
  */
-
+ 
 /**
  * Construct a drupal_render() style array from an array of loaded nodes.
  *
@@ -33,15 +33,15 @@ function _jquerymobile_view_multiple($nodes, $view_mode = 'teaser', $weight = 0,
   $build['nodes']['#sorted'] = TRUE;
 
   $use_global = theme_get_setting('use_global', $theme_key);
-
-  $attributes['data-role'] = 'listview';
-  $attributes['data-inset'] = $use_global ? theme_get_setting('global_inset', $theme_key) : theme_get_setting('menu_item_inset', $theme_key);
+  
+  $attributes['data-role'] = 'listview'; 
+  $attributes['data-inset'] = $use_global ? theme_get_setting('global_inset', $theme_key) : theme_get_setting('menu_item_inset', $theme_key); 
   $attributes['data-theme'] = $use_global ? theme_get_setting('global_theme') : theme_get_setting('menu_item_theme', $theme_key);
   $attributes['data-divider-theme'] = $use_global ? theme_get_setting('global_theme') : theme_get_setting('menu_item_dividertheme', $theme_key);
   $attributes['data-count-theme'] = $use_global ? theme_get_setting('global_theme') : theme_get_setting('menu_item_counttheme', $theme_key);
   $attributes['data-split-theme'] = $use_global ? theme_get_setting('global_theme') : theme_get_setting('menu_item_splittheme', $theme_key);
   $attributes['data-split-icon'] = $use_global ? theme_get_setting('global_icon') : theme_get_setting('menu_item_spliticon', $theme_key);
-  if (_jquerymobile_get_setting($theme_key, 'front')) {
+  if (_jquerymobile_get_setting($theme_key, 'front')) {  
     $build['nodes']['#prefix'] = '<ul ' . drupal_attributes($attributes) . '>';
     $build['nodes']['#suffix'] = '</ul>';
   }
@@ -52,8 +52,8 @@ function _jquerymobile_node_view($node, $view_mode = 'full', $langcode = NULL) {
   global $theme_key;
 
   $prefix = '';
-  $suffix = '';
-
+  $suffix = ''; 
+    
   if (!isset($langcode)) {
     $langcode = $GLOBALS['language_content']->language;
   }
@@ -66,13 +66,13 @@ function _jquerymobile_node_view($node, $view_mode = 'full', $langcode = NULL) {
 
   // Populate $node->content with a render() array.
   node_build_content($node, $view_mode, $langcode);
-
+  
   $build = $node->content;
   // We don't need duplicate rendering info in node->content.
   unset($node->content);
 
   $build += array(
-    '#theme' => 'node',
+    '#theme' => 'node', 
     '#node' => $node,
     '#view_mode' => $view_mode,
     '#language' => $langcode,

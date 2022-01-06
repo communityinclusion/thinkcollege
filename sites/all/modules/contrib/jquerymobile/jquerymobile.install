@@ -7,7 +7,7 @@
  * Implements hook_install().
  */
 function jquerymobile_install() {
-
+  
   $result = db_update('system')
     ->fields(array(
       'weight' => 99,
@@ -25,7 +25,7 @@ function jquerymobile_install() {
   variable_set('jquerymobile_jqm_files_path', NULL);
   variable_set('jquerymobile_jquery_files_path', NULL);
   variable_set('jquerymobile_server_type', 'local');
-  variable_set('jquerymobile_custom_path', NULL);
+          
 }
 
 
@@ -42,8 +42,7 @@ function jquerymobile_uninstall() {
   variable_del('jquerymobile_jqm_files_path');
   variable_del('jquerymobile_jquery_files_path');
   variable_del('jquerymobile_server_type');
-  variable_del('jquerymobile_custom_path');
-
+  
   $result = db_update('system')
     ->fields(array(
       'weight' => 0,
@@ -58,128 +57,128 @@ function jquerymobile_uninstall() {
  */
 function jquerymobile_schema() {
   $schema['jquerymobile'] = array(
-    'description' => 'The base table for jquerymobile.',
+    'description' => 'The base table for jquerymobile.', 
     'fields' => array(
       'jqmid' => array(
-        'description' => 'The primary identifier for theme\'s settings.',
-        'type' => 'serial',
-        'unsigned' => TRUE,
+        'description' => 'The primary identifier for theme\'s settings.', 
+        'type' => 'serial', 
+        'unsigned' => TRUE, 
         'not null' => TRUE,
       ),
       'theme' => array(
-        'description' => 'The theme belonging to these settings.',
-        'type' => 'varchar',
-        'length' => 255,
-        'default' => '',
+        'description' => 'The theme belonging to these settings.', 
+        'type' => 'varchar', 
+        'length' => 255, 
+        'default' => '', 
       ),
       'status' => array(
-        'description' => '',
-        'type' => 'int',
+        'description' => '', 
+        'type' => 'int', 
         'default' => 0,
       ),
       'front' => array(
-        'description' => '',
-        'type' => 'int',
+        'description' => '', 
+        'type' => 'int', 
         'default' => 0,
       ),
       'custom_themes' => array(
-        'description' => '',
-        'type' => 'blob',
+        'description' => '', 
+        'type' => 'blob', 
       ),
       'ns' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 255,
-        'default' => '',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 255, 
+        'default' => '', 
       ),
       'autoInitializePage' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 1,
       ),
       'subPageUrlKey' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 128,
-        'default' => 'ui-page',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 128, 
+        'default' => 'ui-page', 
       ),
       'activePageClass' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 128,
-        'default' => 'ui-page-active',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 128, 
+        'default' => 'ui-page-active', 
       ),
       'activeBtnClass' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 128,
-        'default' => 'ui-btn-active',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 128, 
+        'default' => 'ui-btn-active', 
       ),
       'ajaxEnabled' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 1,
       ),
       'hashListeningEnabled' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 1,
       ),
       'linkBindingEnabled' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 1,
       ),
       'pushStateEnabled' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 1,
       ),
       'defaultPageTransition' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 128,
-        'default' => 'slide',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 128, 
+        'default' => 'slide', 
       ),
       'touchOverflowEnabled' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 0,
       ),
       'defaultDialogTransition' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 255,
-        'default' => 'pop',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 255, 
+        'default' => 'pop', 
       ),
       'minScrollBack' => array(
-        'description' => '',
-        'type' => 'int',
-        'size' => 'small',
+        'description' => '', 
+        'type' => 'int', 
+        'size' => 'small', 
         'default' => 150,
       ),
       'loadingMessage' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 255,
-        'default' => 'Loading',
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 255, 
+        'default' => 'Loading', 
       ),
       'pageLoadErrorMessage' => array(
-        'description' => '',
-        'type' => 'varchar',
-        'length' => 255,
-        'default' => 'Error Loading Page',
-      ),
+        'description' => '', 
+        'type' => 'varchar', 
+        'length' => 255, 
+        'default' => 'Error Loading Page', 
+      ),  
     ),
     'primary key' => array('jqmid'),
   );
-
+  
   return $schema;
 }
 
@@ -193,7 +192,7 @@ function jquerymobile_update_7200() {
       variable_del('autoInitializePage');
       variable_del('subPageUrlKey');
       variable_del('activePageClass');
-      variable_del('activeBtnClass');
+      variable_del('activeBtnClass'); 
       variable_del('ajaxEnabled');
       variable_del('linkBindingEnabled');
       variable_del('hashListeningEnabled');
