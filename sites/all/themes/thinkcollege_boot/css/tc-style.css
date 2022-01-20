@@ -1400,12 +1400,23 @@ a.orange {
 
 /* TCN Project page */
 
+
 .networkgrid .box {
-    border:5px solid  #559197;
+    border: 3px solid #559197;
     -webkit-box-shadow: none;
     box-shadow: none;
+    margin-bottom:10px;
+    padding-top:10px
 }
 
+
+.networkgrid  h3.box-title {
+border-bottom: 1px #333 solid;
+line-height:34px;
+color:#20527c;
+font-weight: 700;
+
+}
 
 
 
