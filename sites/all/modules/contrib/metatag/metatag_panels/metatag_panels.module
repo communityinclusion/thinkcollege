@@ -156,7 +156,8 @@ function metatag_panels_ctools_render_alter($info, $page, $context) {
 
   // If meta tags were found but they're not nested for the language, fix it.
   // This leaves some possibility for future versions to support translation.
-  if (!empty($metatags) && !isset($metatags[LANGUAGE_NONE])) {
+  //if (!empty($metatags) && !isset($metatags[LANGUAGE_NONE])) {  Hack PF, patch is here: https://www.drupal.org/files/issues/2021-07-21/metatag-n3224758-2.patch
+  if (empty($metatags) || !isset($metatags[LANGUAGE_NONE])) {
     $metatags = array(LANGUAGE_NONE => $metatags);
   }
 
