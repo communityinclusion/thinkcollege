@@ -33,16 +33,16 @@ function tc_redesign_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -70,8 +70,6 @@ function tc_redesign_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Accreditation Group Chair',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Stephanie Smith Lee" class="center-block img-thumbnail img-responsive" src="/sites/default/files/files/images/staff-photos/small_stephanie_smith_lee.jpg" style="height: 100px; width: 100px;" /><br />
 <strong>Stephanie Smith Lee</strong>, Chair, National Coordinating Center (NCC) Accreditation Workgroup.<br />
 <a href="mailto:stephaniesmithlee@gmail.com">stephaniesmithlee@gmail.com</a></p>
@@ -79,12 +77,14 @@ function tc_redesign_default_page_manager_pages() {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Accreditation Group Chair',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -107,8 +107,8 @@ function tc_redesign_default_page_manager_pages() {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -125,20 +125,20 @@ function tc_redesign_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Relevant Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="http://www.chea.org/">Council for Higher Education Accreditation</a></li>
 </ul>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Relevant Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box external-links-list',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -155,11 +155,11 @@ function tc_redesign_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Intro',
-    'title' => '',
-    'title_heading' => 'h3',
     'body' => 'Brief Intro to what the Accreditation Workgroup is all about (written by Stephanie)',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -179,8 +179,6 @@ function tc_redesign_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Meeting Notes',
-    'title_heading' => 'h3',
     'body' => '<p>• Notes from most recent meeting with link to PowerPoint used<br />
 • a brief summary of what was discussed<br />
 • link to previous meeting’s PowerPoint<br />
@@ -188,12 +186,14 @@ function tc_redesign_default_page_manager_pages() {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Notes',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -210,17 +210,17 @@ function tc_redesign_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'About (?)',
-    'title_heading' => 'h3',
     'body' => 'About the Workgroup committees',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'About (?)',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -237,8 +237,6 @@ function tc_redesign_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Workgroup Committee Members ',
-    'title_heading' => 'h3',
     'body' => '<div class="row">
 <div class="col-md-12">
 <div class="row">
@@ -328,12 +326,14 @@ Co-Founder, Collaboration to Promote Self-Determination</div>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Workgroup Committee Members ',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -354,7 +354,7 @@ Co-Founder, Collaboration to Promote Self-Determination</div>
   $page->task = 'page';
   $page->admin_title = 'Affinity Group-Employment Services';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/employment-services';
+  $page->path = 'ta-training/affinity-groups/employment-services';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -371,16 +371,16 @@ Co-Founder, Collaboration to Promote Self-Determination</div>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -393,7 +393,7 @@ Co-Founder, Collaboration to Promote Self-Determination</div>
     ),
   );
   $display->cache = array();
-  $display->title = 'Employment Services Affinity Group';
+  $display->title = 'Employment Supports Affinity Group';
   $display->uuid = '8ea6207f-4588-4771-9e5e-b1d51c5186ed';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'page_affinity_group_employment_services__panel';
@@ -408,15 +408,17 @@ Co-Founder, Collaboration to Promote Self-Determination</div>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Logo for Employment Supports Affinity group" class="img-responsive" src="/sites/default/files/images/empsupport_employment%20support.png" /></p>
 <p>&nbsp;</p>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -433,25 +435,23 @@ Co-Founder, Collaboration to Promote Self-Determination</div>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'AFFINITY GROUP FACILITATOR',
-    'title_heading' => 'h3',
-    'body' => '<p><img alt="Brianna Shults" class="center-block img-responsive img-thumbnail" src="/sites/default/files/images/brianna-shults.JPG" style="height:100px; width:100px" /></p>
+    'body' => '<p>Facilitator: TBD</p>
 
-<p><strong>Brianna Marie Shults </strong><br />
-Inclusive U, Syracuse University<br />
-<a href="mailto:bmshults@syr.edu ">bmshults@syr.edu </a></p>
-
-<p>Think College Staff Liaison: Cate Weir&nbsp;<br />
-<a href="mailto:Cathryn.weir@umb.edu">Cathryn.weir@umb.edu</a></p>
+<p>Think College Staff Liaison: Sheila Johnson<br />
+<a href="mailto:sheila.johnson@umb.edu?subject=affinity%20group">sheila.johnson@umb.edu</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'AFFINITY GROUP FACILITATOR',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -468,20 +468,22 @@ Inclusive U, Syracuse University<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Become a Member',
-    'title_heading' => 'h3',
-    'body' => '<p>To get notices about upcoming meetings and related events and resources for this group, use the form below to sign up.</p>
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc8MBApQjKSkpgFyuuSscgJI9SuK1NOblbd2ENFF49T3_YKJQ/viewform" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'STAY INFORMED BY EMAIL',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -502,10 +504,12 @@ Inclusive U, Syracuse University<br />
     ),
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -513,38 +517,6 @@ Inclusive U, Syracuse University<br />
   $pane->uuid = '0262d20a-6e8c-421d-bb7d-f361d7d87cb6';
   $display->content['new-0262d20a-6e8c-421d-bb7d-f361d7d87cb6'] = $pane;
   $display->panels['row1left'][3] = 'new-0262d20a-6e8c-421d-bb7d-f361d7d87cb6';
-  $pane = new stdClass();
-  $pane->pid = 'new-0887f17d-e181-469d-95f1-9473481627c1';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'title' => 'Member Links ',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="https://docs.google.com/spreadsheets/d/1qRdJ-u9KQO0dQX7fLhEtOLzzWmawUxN7T86b9fr55LM/edit?ts=5f206d02#gid=336506192" target="_blank">Member Directory</a></li>
-</ul>
-
-<p>&nbsp;</p>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box external-links-list',
-  );
-  $pane->extras = array();
-  $pane->position = 4;
-  $pane->locks = array();
-  $pane->uuid = '0887f17d-e181-469d-95f1-9473481627c1';
-  $display->content['new-0887f17d-e181-469d-95f1-9473481627c1'] = $pane;
-  $display->panels['row1left'][4] = 'new-0887f17d-e181-469d-95f1-9473481627c1';
   $pane = new stdClass();
   $pane->pid = 'new-37d24a44-3034-4f39-b439-fe9fd3951f50';
   $pane->panel = 'row1right';
@@ -554,8 +526,6 @@ Inclusive U, Syracuse University<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Welcome to the Think College Employment Supports Affinity Group!</p>
 
 <p>The Employment Supports&nbsp;Affinity Group is designed for employment support professionals in college programs for students with intellectual disability. This is an open-access special interest group for individuals who want to contribute to the discussion of ways to facilitate meaningful employment opportunities for students with ID in postsecondary education environments.<br />
@@ -571,9 +541,13 @@ The purpose of the Affinity Group is to support members through:</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -590,22 +564,24 @@ The purpose of the Affinity Group is to support members through:</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Next Meeting Date is Set',
-    'title' => 'NEXT MEETING',
-    'title_heading' => 'h3',
-    'body' => '<p>The next meeting of the Employment Supports Affinity Group will be held <strong>March 30, 2021 at 1 pm eastern time.</strong></p>
+    'body' => '<p><a href="https://communityinclusion.zoom.us/j/92000886718"><strong>Permanent Zoom meeting room&nbsp;link</strong></a></p>
 
-<p><strong>Click <a href="https://communityinclusion.zoom.us/j/4170630596?from=addon">HERE</a> to join the meeting in Zoom</strong></p>
+<p><a href="https://docs.google.com/document/d/1ieehn3jGMBIzrYP1A-O8phhJp93anxykbTaiSgFgMgQ/edit?usp=sharing"><strong>Rolling agenda link</strong></a>&nbsp;all agendas and notes can be found here</p>
 
-<p><a href="https://docs.google.com/document/d/1ieehn3jGMBIzrYP1A-O8phhJp93anxykbTaiSgFgMgQ/edit?usp=sharing"><strong>Link to the meeting agenda</strong></a></p>
+<p><strong>2022 Meeting Dates TBA</strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -622,20 +598,22 @@ The purpose of the Affinity Group is to support members through:</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'NOTES FROM PAST MEETINGS',
-    'title_heading' => 'h3',
     'body' => '<p><strong>November 3, 2020</strong>: <a href="https://icimedia.wistia.com/medias/568jd8lkbm">recording of meeting</a> and <a href="https://docs.google.com/document/d/1ieehn3jGMBIzrYP1A-O8phhJp93anxykbTaiSgFgMgQ/edit?fbclid=IwAR3Dx4SD198hvJ-Ql7B1oRM_KuxBlYevNKK1-CiXGzyl9KS1Kox5g5uMDWw">meeting notes</a></p>
 
 <p><strong>August 19, 2020: </strong><a href="https://icimedia.wistia.com/medias/n7cazve2bt">meeting recording</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -643,34 +621,6 @@ The purpose of the Affinity Group is to support members through:</p>
   $pane->uuid = '8022ca3a-09d6-4da3-9173-6e4e7ee2042a';
   $display->content['new-8022ca3a-09d6-4da3-9173-6e4e7ee2042a'] = $pane;
   $display->panels['row1right'][2] = 'new-8022ca3a-09d6-4da3-9173-6e4e7ee2042a';
-  $pane = new stdClass();
-  $pane->pid = 'new-01434d70-e0b0-4c2a-81b9-a8cdacf837cf';
-  $pane->panel = 'row1right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'title' => 'Join the Conversation!',
-    'title_heading' => 'h3',
-    'body' => '<p>The Employment Supports Affinity Group maintains a Slack channel to support on-going communication among its members.&nbsp; <a href="http://tcemploymenta-yqo9583.slack.com"><strong>Click HERE to join the channel!</strong></a></p>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box',
-  );
-  $pane->extras = array();
-  $pane->position = 3;
-  $pane->locks = array();
-  $pane->uuid = '01434d70-e0b0-4c2a-81b9-a8cdacf837cf';
-  $display->content['new-01434d70-e0b0-4c2a-81b9-a8cdacf837cf'] = $pane;
-  $display->panels['row1right'][3] = 'new-01434d70-e0b0-4c2a-81b9-a8cdacf837cf';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -684,7 +634,7 @@ The purpose of the Affinity Group is to support members through:</p>
   $page->task = 'page';
   $page->admin_title = 'Affinity Group-NCC Credentials';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/ncc-credentials';
+  $page->path = 'ta-training/affinity-groups/ncc-credentials';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -701,16 +651,16 @@ The purpose of the Affinity Group is to support members through:</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -738,14 +688,14 @@ The purpose of the Affinity Group is to support members through:</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Student Credentials Affinity Group" class="img-responsive" src="/sites/default/files/images/Student%20Credentials.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -765,8 +715,6 @@ The purpose of the Affinity Group is to support members through:</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'AFFINITY GROUP FACILITATOR',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Kathleen Becht" class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/Becht-headshot.jpg" style="width: 100px; height: 100px;" /></p>
 
 <p><strong>Kathleen Becht, Ph.D.</strong><br />
@@ -775,14 +723,16 @@ Technical Assistance Coordinator<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'AFFINITY GROUP FACILITATOR',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -799,22 +749,22 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'How to join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the Student Credentials Affinity Group?</p>
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FSbjukZb7ogzvyAXv5&amp;data=04%7C01%7CRebecca.Lazo%40umb.edu%7Cd596741f9985497742f308d8e5072771%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637511166187302959%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=rV0zN3ZZ4D7ojyLaybB35hBkqBp7BsFE2GxVOQ9IeJM%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Stay Informed by Email',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -839,8 +789,8 @@ Technical Assistance Coordinator<br />
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -848,42 +798,6 @@ Technical Assistance Coordinator<br />
   $pane->uuid = '5a837408-4474-4fff-bd01-006185a45e65';
   $display->content['new-5a837408-4474-4fff-bd01-006185a45e65'] = $pane;
   $display->panels['row1left'][3] = 'new-5a837408-4474-4fff-bd01-006185a45e65';
-  $pane = new stdClass();
-  $pane->pid = 'new-4eeee36e-995c-4c89-a9c7-6b27f24e810b';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'title' => 'Member Links',
-    'title_heading' => 'h3',
-    'body' => '<p> Links coming soon!</p>
-<!--
-<ul>
-	<li>Member directory</li>
-	<li>Agendas</li>
-	<li>Member interest inventory and topic list</li>
-</ul>
--->',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box',
-  );
-  $pane->extras = array();
-  $pane->position = 4;
-  $pane->locks = array();
-  $pane->uuid = '4eeee36e-995c-4c89-a9c7-6b27f24e810b';
-  $display->content['new-4eeee36e-995c-4c89-a9c7-6b27f24e810b'] = $pane;
-  $display->panels['row1left'][4] = 'new-4eeee36e-995c-4c89-a9c7-6b27f24e810b';
   $pane = new stdClass();
   $pane->pid = 'new-0eb3f574-c0b6-45ba-afce-48ae03e544dd';
   $pane->panel = 'row1right';
@@ -893,8 +807,6 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><strong>Welcome to the Think College Student Credentials&nbsp;Affinity Group!</strong></p>
 
 <p>The Student Credentials Affinity group brings together professionals, researchers, advocates, policymakers and educators interested in discussing the credential landscape in postsecondary education. This is an open-access special interest group targeted at individuals who want to contribute to the discussion of “meaningful credentials” for students with intellectual disabilities.</p>
@@ -919,6 +831,8 @@ Technical Assistance Coordinator<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -940,20 +854,37 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Next Meeting',
-    'title_heading' => 'h3',
-    'body' => '<p>The next meeting of the Student Credentials Affinity Group is scheduled for <strong>April 15, 2021 from 12:00 noon to 1:00 pm eastern time</strong>.&nbsp; A meeting agenda and link to the meeting room wil be posted here soon.</p>
+    'body' => '<p><strong><a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunityinclusion.zoom.us%2Fj%2F8786266140&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945626841%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=WOoS4bumKEKFc%2FqON%2FsDeLfmTzduaBARndV9egwZAEY%3D&amp;reserved=0">Permanent Zoom Meeting link</a></strong></p>
+
+<p><a href="https://docs.google.com/document/d/1o8B27pU_OKWerPviCpeZ0bIKlXJVLJEhPPntuqc6Bfo/edit"><strong>Rolling Agenda Link</strong></a>&nbsp;- all agendas and notes can be found here.</p>
+
+<p><strong>Meeting Dates</strong></p>
+
+<ul>
+	<li>February 8, 2022<br />
+	Topic &amp; presenter:&nbsp;Colorado’s portable IPSE credential,&nbsp; Dr. Christi Kasa, University of Colorado<br />
+	&nbsp;</li>
+	<li>April 12, 2022<br />
+	Topic: TBA<br />
+	&nbsp;</li>
+	<li>June 7, 2022<br />
+	Topic: TBA</li>
+</ul>
+
+<p><strong>All meetings occur from 2-3pm ET</strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -970,36 +901,70 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Notes from Past Meetings',
-    'title_heading' => 'h3',
-    'body' => '<p>The last&nbsp;joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups was&nbsp;<strong>August 12, 2020</strong>. At this session we welcomed three&nbsp;guest speakers,&nbsp;<strong>Mary Hauff,</strong>&nbsp;advocate and parent from Minnesota, and&nbsp;<strong>Lauren Bruno and Jennifer Cremers</strong>, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID. The recording can be found&nbsp;<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">here</a></strong>.&nbsp;</p>
+    'body' => '<p class="MsoNoSpacing"><strong>December 14, 2021<br />
+Topic:&nbsp;</strong><b id="docs-internal-guid-1689082a-7fff-43dd-5511-82190983fc35">CAST e portfolio tool</b><br />
+<strong>Presenters: Sam Johnston and Cara Wojcik</strong><br />
+<strong>Summary: </strong>Dr. Sam Johnston and Cara Wojcik from CAST shared an e-portfolio tool that CAST has developed, with, of course, a UDL framework. The tool allows educators to create "challenges" for students to complete, showing student learning in various competency areas. The tool is clean visually while still providing accessibility tools for students to ‘show their work" through speech to text, video, pictures, and text. Cara developed an example of how an IPSE program might use the efolio tool by uploading the&nbsp;<strong><a href="https://https/thinkcollege.net/resource/campus-life-employment-supports/foundational-skills-for-college-and-career-learning-plan" target="_blank" title="null">Foundations Skills for College and Career Learning Plan</a>&nbsp;</strong>and then creating individual folios for students to share with employers during or prior to a job interview.</p>
+
+<p class="MsoNoSpacing"><strong><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-december-2021">Meeting recording and&nbsp;transcript</a></strong></p>
 
 <hr />
-<p>A crossover meeting with Public Policy &amp; Vocational Rehab Affinity Groups was on&nbsp;Wednesday,&nbsp;April 1, 2020. The recording and transcript can be found <a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0"><strong>here</strong></a>.&nbsp;</p>
+<p class="MsoNoSpacing"><strong>September 8, 2021<br />
+Topic: A Credential Approval Journey</strong><br />
+<strong>Presenter: Dr. Kate Strater 2020 TPSID PI, Calvin University</strong><br />
+<strong>Summary: </strong>Dr. Strater shares her journey through the University credential approval process. Kate’s work included not only starting a new inclusive postsecondary education (IPSE) program for 20 students at Calvin, but the realignment of established processes to CTP guidelines. While every IPSE program is unique, Dr. Strater outlined the governance process in establishing a new credential. There are many take-aways and great discussion!</p>
+
+<p class="MsoNoSpacing"><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-september-2021"><strong>Meeting recording and&nbsp;transcript</strong></a></p>
 
 <hr />
-<p>Our last meeting was a(nother) crossover meeting with the Public Policy &amp; Vocational Rehabiliation Affinity Groups. It was on November 6 at 2pm. You can find the recording and transcript <a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity"><strong>here</strong></a>.&nbsp;</p>
+<p class="MsoNoSpacing"><strong>August 12, 2020:&nbsp; Crossover meeting with Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Group<br />
+Topic: REACH program</strong><br />
+<b><strong>Presenters: Mary Hauff, Lauren Bruno, Jennifer Cremers</strong></b><br />
+<b>Summary:</b> The joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Group. At this session, we welcomed three guest speakers, <strong>Mary Hauff,</strong> advocate and parent from Minnesota, and <strong>Lauren Bruno and Jennifer Cremers</strong>, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID.</p>
 
-<hr />
-<p>The last meeting was a special crossover meeting with the Public Policy and Vocational Rehabiltation Affinity Groups. The meeting was held on August 7; the recording and transcript can be found <a href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019"><strong>here</strong></a>.&nbsp;</p>
+<p class="MsoNoSpacing"><strong><a href="http://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">Meeting recording</a></strong></p>
 
-<hr />
-<p>The Student Credentials Affinity Group hold meetings quarterly and typically includes&nbsp;a discussion of the current state of credentials, in addition to other relevant happenings in higher education for students with ID. Informal sharing is also a part of&nbsp;each meeting. You can find more detailed notes by opening the agenda or watching the recording.&nbsp;Click on this link for the&nbsp;<a href="https://docs.google.com/document/d/1bjZMTpBYQRe6pQUMriC6pzmwO34JXJKZHZitEKtUz78/edit" target="_blank">agenda for all our meetings</a>&nbsp;(most recent meeting is first in the document. Scroll down to see the agenda for previous meetings). Click on the links below to access recordings and other resources&nbsp;from past meetings.</p>
+<div align="center" class="MsoNoSpacing" style="text-align:center">
+<hr align="center" size="0" width="100%" /></div>
 
-<p><a href="https://thinkcollege.net/resource/accreditation-and-credentials/student-credentials-affinity-group-meeting-may-2019"><strong>May 9, 2019</strong></a></p>
+<p class="MsoNoSpacing"><strong>April 1, 2020 | Crossover meeting w/ Public Policy &amp; Vocational Rehab Affinity Groups</strong><br />
+<b><strong>Title: FL VR Partnership Journey</strong></b></p>
 
-<p><a href="https://thinkcollege.net/resource/accreditation-and-credentials/student-credentials-in-higher-education-affinity-group"><strong>February 28, 2019</strong></a></p>
+<p class="MsoNoSpacing"><strong>Presenter: Kathy Becht</strong><br />
+<b>Summary:</b> Kathy Becht shared an overview of the Florida Consortium on Inclusive Higher Education (a Transition and Postsecondary Program for Students with Intellectual Disabilities/TPSID) experience building a working partnership between FCIHE and the state Vocational Rehabilitation agency in Florida.</p>
+
+<p class="MsoNoSpacing"><b><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">Meeting recording and transcript</a></b></p>
+
+<div align="center" class="MsoNoSpacing" style="text-align:center">
+<hr align="center" size="0" width="100%" /></div>
+
+<p class="MsoNoSpacing"><b>November 6, 2020: Crossover meeting with the Public Policy &amp; Vocational Rehabilitation Affinity Groups </b></p>
+
+<p class="MsoNoSpacing"><b><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity">Meeting recording and transcript</a></b></p>
+
+<div align="center" class="MsoNoSpacing" style="text-align:center">
+<hr align="center" size="0" width="100%" /></div>
+
+<p class="MsoNoSpacing"><b>August 7, 2020: Crossover meeting with the Public Policy &amp; Vocational Rehabilitation Affinity Groups </b></p>
+
+<p class="MsoNoSpacing"><b><a href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019">Meeting recording and transcript</a></b></p>
+
+<div align="center" class="MsoNoSpacing" style="text-align:center">&nbsp;</div>
+
+<p class="MsoNoSpacing">&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -1016,20 +981,20 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Have other ideas for the Student Credentials Affinity Group?',
-    'title_heading' => 'h3',
     'body' => '<p>Send an email to <a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Have other ideas for the Student Credentials Affinity Group?',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -1050,7 +1015,7 @@ Technical Assistance Coordinator<br />
   $page->task = 'page';
   $page->admin_title = 'Affinity Group-Technology and UDL';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/technology-and-udl';
+  $page->path = 'ta-training/affinity-groups/technology-and-udl';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -1067,16 +1032,16 @@ Technical Assistance Coordinator<br />
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -1089,7 +1054,7 @@ Technical Assistance Coordinator<br />
     ),
   );
   $display->cache = array();
-  $display->title = 'UDL and Technology Affinity Group';
+  $display->title = 'Technology and UDL Affinity Group';
   $display->uuid = '25bbab4d-ee93-4181-a739-f86f79249277';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'page_affinity_group_technology_and_udl__panel';
@@ -1104,17 +1069,17 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<p><img alt="Technology and UDL affinity group logo" class="img-responsive" src="/sites/default/files/images/image001.png" /></p>
-
-<p>&nbsp;</p>
+    'body' => '<p><img alt="Technology &amp; UDL Affinity Group" class="img-responsive" src="/sites/default/files/images/Tech%20%26%20UDL%20Logo.png" style="margin-top: 5px; margin-bottom: 5px;" /></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -1131,8 +1096,6 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Affinity Group Facilitator',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Lori Cooney" class="center-block img-responsive img-thumbnail" src="/sites/default/files/files/images/staff-photos/LoriCooney.jpeg" style="height:100px; width:100px" /></p>
 
 <p><strong>Lori Cooney, MEd</strong></p>
@@ -1140,17 +1103,35 @@ Technical Assistance Coordinator<br />
 <p>Program Director,&nbsp;Inclusive Education &amp; Curriculum Design, and Universal Design Specialist</p>
 
 <p><a href="mailto:lori.cooney@umb.edu">lori.cooney@umb.edu</a></p>
+<hr />
+<p><strong><img alt="" class="center-block img-responsive img-thumbnail" src="/sites/default/files/images/IMG_1065.jpg" style="height: 128px; width: 100px;" /></strong></p>
+
+<p><strong>Olivia Hester</strong>&nbsp;</p>
+
+<p>Research Assistant Professor, University of Alabama</p>
+
+<p><a href="mailto:orhester@ua.edu">orhester@ua.edu</a></p>
+<hr />
+<p><strong><img alt="" class="center-block img-responsive img-thumbnail" src="/sites/default/files/images/Cropped.jpg" style="height: 92px; width: 100px;" /></strong></p>
+
+<p><strong>Don McMahon</strong></p>
+
+<p>Associate Professor of Special Education, Washington State University&nbsp;</p>
+
+<p>don.mcmahon@wsu.edu</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Affinity Group Co-Facilitators',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -1167,22 +1148,22 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'How to join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the UDL &amp; Technology Affinity Group?</p>
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://goo.gl/forms/oOHgIKL3yRUqg7983" role="button" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Stay Informed by Email',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -1207,8 +1188,8 @@ Technical Assistance Coordinator<br />
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -1225,8 +1206,6 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Member Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.facebook.com/groups/2279671298957380/">Inclusive Technology Affinity Group on Facebook</a></li>
 	<!--
@@ -1239,14 +1218,16 @@ Technical Assistance Coordinator<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Member Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -1263,8 +1244,6 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Welcome to the Think College Technology &amp; UDL Affinity Group.</p>
 
 <p>The purpose of the Affinity Group is to support members to:</p>
@@ -1280,6 +1259,8 @@ Technical Assistance Coordinator<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1301,31 +1282,30 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Next Meeting Date and Discussion Topics',
-    'title_heading' => 'h3',
-    'body' => '<div class="row">
-<div class="col-md-6">
-<p>The next meeting will be in May; exact date and time TBD.</p>
-</div>
-</div>
+    'body' => '<p><strong><a data-mce-href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit" href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit">Rolling meeting agenda</a></strong>&nbsp;all agendas and notes can be found here</p>
 
-<div class="row">
-<div class="col-md-6">
+<p>This group meets from&nbsp;3-4pm Eastern</p>
+
+<p><em>Note each meeting has a unique meeting room link</em></p>
+
 <ul>
+	<li>March 3, 2022 <a href="https://communityinclusion.zoom.us/j/94096022091">Meeting room link</a></li>
+	<li>May 12, 2022 <a href="https://communityinclusion.zoom.us/j/96082165406">Meeting room link</a></li>
+	<li>September 15, 2022 <a href="http://https://communityinclusion.zoom.us/j/91446429336">Meeting room link</a></li>
 </ul>
-</div>
-</div>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -1342,9 +1322,19 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Past Meetings',
-    'title_heading' => 'h3',
-    'body' => '<p>February 24, 2021</p>
+    'body' => '<p>January 13, 2022</p>
+
+<ul>
+	<li><a href="http://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit?usp=sharing">Link to Agenda</a></li>
+</ul>
+
+<p>September 30, 2021</p>
+
+<ul>
+	<li><a href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit#" target="_blank">Link to Agenda</a>&nbsp;</li>
+</ul>
+
+<p>February 24, 2021</p>
 
 <ul>
 	<li><a href="https://icimedia.wistia.com/medias/c901axi7ks">Link to recording</a>&nbsp;</li>
@@ -1417,14 +1407,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -1462,16 +1454,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -1491,39 +1483,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-d5130e41-4d8f-4407-906e-f1019f7cdb21';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'd5130e41-4d8f-4407-906e-f1019f7cdb21';
-  $display->content['new-d5130e41-4d8f-4407-906e-f1019f7cdb21'] = $pane;
-  $display->panels['row1left'][0] = 'new-d5130e41-4d8f-4407-906e-f1019f7cdb21';
-  $pane = new stdClass();
   $pane->pid = 'new-67882ee0-8250-4bd6-8972-6909a5b5e140';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -1538,15 +1497,15 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '67882ee0-8250-4bd6-8972-6909a5b5e140';
   $display->content['new-67882ee0-8250-4bd6-8972-6909a5b5e140'] = $pane;
-  $display->panels['row1left'][1] = 'new-67882ee0-8250-4bd6-8972-6909a5b5e140';
+  $display->panels['row1left'][0] = 'new-67882ee0-8250-4bd6-8972-6909a5b5e140';
   $pane = new stdClass();
   $pane->pid = 'new-927bc74b-7aa4-4147-afcb-5c2525088d75';
   $pane->panel = 'row1left';
@@ -1556,8 +1515,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Quick Links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.routledge.com/Teaching-Including-and-Supporting-College-Students-with-Intellectual/Kelley-Westling/p/book/9781138618077">Teaching, Including and Supporting Students with Intellectual Disabilities (Chapters 6, 9, and 13 in particular)</a></li>
 	<li><a href="http://www.nxtbook.com/nxtbooks/acuho/journal_vol39no2/index.php?startid=186#/232">College Students with Intellectual Disabilities: How Are They Faring?</a></li>
@@ -1567,19 +1524,21 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '927bc74b-7aa4-4147-afcb-5c2525088d75';
   $display->content['new-927bc74b-7aa4-4147-afcb-5c2525088d75'] = $pane;
-  $display->panels['row1left'][2] = 'new-927bc74b-7aa4-4147-afcb-5c2525088d75';
+  $display->panels['row1left'][1] = 'new-927bc74b-7aa4-4147-afcb-5c2525088d75';
   $pane = new stdClass();
   $pane->pid = 'new-7e764956-a076-4f64-8ad0-40fdf4bbf20a';
   $pane->panel = 'row1right';
@@ -1589,16 +1548,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>It takes a village to coordinate campus housing - various administrators, residential staff, and community agencies may all be involved. One person cannot coordinate or be an expert in all aspects of residential services for students with intellectual disability (ID). It is truly a team effort. When providing residential opportunities, it is important to establish and invest in collaborative partnerships with a variety of key stakeholders to further enhance and balance the benefits and risks associated with campus housing.</p>
 
 <p>Natural supports or peer mentors can provide varying levels of support within the residence halls to foster more inclusive opportunities as well as to ensure safety. The support needs for each student may differ and additional training may be needed within residence halls to support college students living and learning alongside students with ID.</p>
 
-<p>This Exchange offers a review of the existing resources related to campus housing, how students and families can best search for residential options across programs, proactive ways to address safety or liability concerns, and general campus housing logistics and outcomes.</p>
+<p>This page&nbsp;offers a review of the existing resources related to campus housing, how students and families can best search for residential options across programs, proactive ways to address safety or liability concerns, and general campus housing logistics and outcomes.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -1624,8 +1583,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -1641,21 +1600,21 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4348',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '4348',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -1676,7 +1635,7 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $page->task = 'page';
   $page->admin_title = 'College-based Transition Services Affinity Group';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/college-based-transition-services';
+  $page->path = 'ta-training/affinity-groups/college-based-transition-services';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -1693,16 +1652,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -1730,12 +1689,12 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="College-based Transition Services Affinity Group Logo" class="img-responsive" src="/sites/default/files/images/CBTS-long.png" /></p>
 <br />',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -1755,8 +1714,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'AFFINITY GROUP FACILITATOR',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Maria Paiewonsky." class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/maria-paiewonsky.png" style="width: 100px; height: 100px;" /></p>
 
 <p><strong>Maria Paiewonsky,&nbsp;Ed.D.</strong></p>
@@ -1767,12 +1724,14 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'AFFINITY GROUP FACILITATOR',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -1789,20 +1748,20 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'How to Join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the Affinity Group on College-Based Transition Services?</p>
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSceyUTuY63G3uqch2XJE7d8a6FXNIBIlRpyUTfArTjXKE6fVQ/viewform?vc=0&amp;c=0&amp;w=1" role="button" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'STAY INFORMED BY EMAIL',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -1825,8 +1784,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -1843,8 +1802,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p class="lead">Welcome to the Think College ‘College-based Transition Services’ Affinity Group.</p>
 
 <p>The purpose of this affinity group is to support members whose work involves supporting transition-aged students with intellectual or developmental disabilities who are or who would like to include college in their transition services. The group will be guided by members’ priority topics which will be determined through a survey and group check-ins at the online meetings.</p>
@@ -1860,6 +1817,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -1879,18 +1838,35 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'NEXT MEETING',
-    'title_heading' => 'h3',
-    'body' => '<p>Our next meeting will be <strong>Thursday, April 8, 2021</strong>. Amy D’Agati will be&nbsp;presenting on her progress developing an inclusive PSE program in Maryland. You may <strong><a href="https://communityinclusion.zoom.us/j/622180688">click here</a></strong> to join the meeting, and the agenda for the meeting is <strong><a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk%2Fedit&amp;data=04%7C01%7CRebecca.Lazo%40umb.edu%7C9c568f458baf41e3b11808d8a0833cd9%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637435832817947475%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=z2r9IsSfzk3kEc69KrZAmPZIOeujB%2Bw5k190qRA9sgo%3D&amp;reserved=0">here</a></strong>.&nbsp;</p>
+    'body' => '<p><strong><a href="http://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunityinclusion.zoom.us%2Fj%2F622180688&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945606850%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=FfockRhdZfJRkDJ8k7otCLA95cgA4%2FXA9zZ%2FNDzuFdw%3D&amp;reserved=0">Permanent Zoom meeting room</a></strong></p>
+
+<p><strong><a href="http://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk%2Fedit%3Fusp%3Dsharing&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945606850%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=GI2zmAxTkaGyYNuIbg3QjeTZv%2BSKAIlmcYVWdSu4oMk%3D&amp;reserved=0">Rolling meeting agenda</a></strong>&nbsp;- all agendas and meeting notes can be found here.</p>
+
+<p><strong>The group meets from 2-3pm ET, unless otherwise noted</strong></p>
+
+<ul>
+	<li>February 10, 2022
+	<ul>
+		<li>Topic: Three high school transition specialists will discuss their involvement as school partners in college-based transition services<br />
+		&nbsp;</li>
+	</ul>
+	</li>
+	<li>April 14, 2022</li>
+	<li>June 9, 2022</li>
+</ul>
+
+<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -1907,37 +1883,33 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'NOTES FROM PAST MEETINGS',
-    'title_heading' => 'h3',
-    'body' => '<p><strong>February 11, 2021</strong> was the date of the last CBTS Affinity Group meeting. The <strong><a href="https://icimedia.wistia.com/medias/t6qx7hply1">recording</a></strong> can be found here, and <strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">meeting notes</a></strong> are here.&nbsp;</p>
+    'body' => '<p>Past meeting dates&nbsp;</p>
 
-<hr />
-<p>The last CBTS Affinity Group meeting was on <strong>November 12</strong>; meeting notes can be found <strong><a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk%2Fedit&amp;data=04%7C01%7CRebecca.Lazo%40umb.edu%7C9c568f458baf41e3b11808d8a0833cd9%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637435832817947475%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=z2r9IsSfzk3kEc69KrZAmPZIOeujB%2Bw5k190qRA9sgo%3D&amp;reserved=0">here</a></strong>.&nbsp;</p>
+<ul>
+	<li>December 9, 2021</li>
+	<li>October 14, 2021</li>
+	<li>April 11, 2021</li>
+	<li>February 11, 2021</li>
+	<li>November 12, 2020</li>
+	<li>Wednesday, June 24, 2020</li>
+	<li>April 29, 2020</li>
+	<li>February 26, 2020</li>
+	<li>December 18, 2019</li>
+	<li>September 26, 2019</li>
+</ul>
 
-<hr />
-<p>The last meeting was held on <strong>Wednesday, June 24</strong>. Meeting notes can be found <strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">here</a></strong>.&nbsp;</p>
-
-<hr />
-<p><strong>Wednesday, April 29, 2020 </strong>was the last CBTS Affinity Group meeting. The notes from the meeting and recording can be found <strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">here</a></strong>.&nbsp;</p>
-
-<hr />
-<p>The last&nbsp;meeting of the CBTS Affinity group was held on&nbsp;<strong>February 26, 2020. </strong>The agenda, list of attendees, and recording can all be found <strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">here</a></strong>.<strong>&nbsp;</strong></p>
-
-<hr />
-<p>The CBTS Affinity Group met most recently on <strong>December 18, 2019</strong>. A summary of that meeting\'s activity can be found <strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">here</a></strong>.&nbsp;</p>
-
-<hr />
-<p>The first meeting was&nbsp;held on <strong>Thursday, September 26, 2019</strong>. A recording of the meeting can be accessed <strong><a href="https://communityinclusion.zoom.us/recording/play/SxF3DilJkljHH1GmI2FIlVwMz3JNAk_5b05z3iutJeYpU13gK7FHMPRd0fPcDx2v?continueMode=true">here</a></strong>.&nbsp;At this first meeting participants were asked to share suggestions for potential topics that should be prioritized for our first meetings.<br />
-&nbsp;</p>
+<p><strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">Recordings and notes for all meetings are available here</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'PAST MEETINGS',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -1958,19 +1930,22 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $page->task = 'page';
   $page->admin_title = 'Data Collection';
   $page->admin_description = '';
-  $page->path = 'tpsid/data-collection';
+  $page->path = 'about/tpsid/data-collection';
   $page->access = array(
+    'logic' => 'and',
     'plugins' => array(
       0 => array(
+        'context' => 'logged-in-user',
         'name' => 'perm',
+        'not' => FALSE,
         'settings' => array(
           'perm' => 'access content',
         ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
       ),
       1 => array(
+        'context' => 'logged-in-user',
         'name' => 'role',
+        'not' => FALSE,
         'settings' => array(
           'rids' => array(
             0 => 7,
@@ -1978,23 +1953,20 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
             2 => 14,
           ),
         ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
       ),
     ),
-    'logic' => 'and',
   );
   $page->menu = array(
-    'type' => 'normal',
-    'title' => 'Data Collection',
     'name' => 'main-menu',
-    'weight' => '0',
     'parent' => array(
-      'type' => 'none',
-      'title' => '',
       'name' => 'navigation',
+      'title' => '',
+      'type' => 'none',
       'weight' => '0',
     ),
+    'title' => 'Data Collection',
+    'type' => 'normal',
+    'weight' => '0',
   );
   $page->arguments = array();
   $page->conf = array(
@@ -2010,16 +1982,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -2046,8 +2018,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'banner',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="leadbox row">
 <div class="col-sm-5">
 <script src="https://fast.wistia.com/embed/medias/5sbxy3m70f.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_5sbxy3m70f seo=false videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/5sbxy3m70f/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
@@ -2065,6 +2035,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -2084,8 +2056,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'square info boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="contact-page table-row">
 <div class="col-md-4 equal-box">
 <div class="icon-title"><em>&nbsp;</em>
@@ -2093,7 +2063,7 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 </div>
 
 <div class="text">
-<p>The TPSID Evaluation Protocol includes data collection on program characteristics, academic access, student supports, student demographics, course enrollments, employment and career development activities, and residential access. Data are also collected on outcomes of students who complete TPSID programs. For more information, see the <a href="/sites/default/files/files/Full_Eval_Tool_2020version.pdf">full evaluation tool</a>.</p>
+<p>The TPSID Evaluation Protocol includes data collection on program characteristics, academic access, student supports, student demographics, course enrollments, employment and career development activities, and residential access. Data are also collected on outcomes of students who complete TPSID programs. For more information, see the <a href="/sites/default/files/files/Full_Eval_Tool_2021version102521.pdf">full evaluation tool</a>.</p>
 </div>
 </div>
 
@@ -2135,7 +2105,7 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 </div>
 
 <div class="text">
-<p>To make data reporting more manageable, we follow a <a href="/sites/default/files/files/Data_collection_schedule_2020_2021.pdf">data entry schedule</a> throughout each academic year. The schedule breaks up data entry to make it easier to stay on top of the reporting requirements. You will receive regular reminders when each data entry deadline is approaching. We recommend you download and print the schedule for easy reference!</p>
+<p>To make data reporting more manageable, we follow a <a href="/sites/default/files/files/Data_collection_schedule_2021_2022.pdf">data entry schedule</a> throughout each academic year. The schedule breaks up data entry to make it easier to stay on top of the reporting requirements. You will receive regular reminders when each data entry deadline is approaching. We recommend you download and print the schedule for easy reference!</p>
 </div>
 </div>
 
@@ -2172,6 +2142,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -2190,21 +2162,21 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4607',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '4607',
     'override_title' => 1,
-    'override_title_text' => 'FREQUENTLY ASKED QUESTIONS',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'FREQUENTLY ASKED QUESTIONS',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -2221,8 +2193,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'team block',
-    'title' => '',
-    'title_heading' => 'h3',
     'body' => '<p>&nbsp;</p>
 
 <h3 class="pane-title">Meet your evaluation team</h3>
@@ -2233,7 +2203,7 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 
 <p>Evaluation Coordinator<br />
 <a class="whitelink" href="mailto:Clare.papay@umb.edu">Clare.papay@umb.edu</a></p>
-<img alt="Clare Papay" class="img-responsive" src="/sites/default/files/images/Clare-Papay.png" /></div>
+<img alt="Clare Papay" class="img-responsive" src="/sites/default/files/images/Clare-Papay-700.jpg" /></div>
 </div>
 
 <div class="col-md-4 is-table-cell">
@@ -2241,29 +2211,31 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 <h3 class="box-title">Pamela McFarland</h3>
 
 <p>Data Manager<br />
-<a class="whitelink" href="mailto:Pam.mcfarland@umb.edu">Pam.mcfarland@umb.edu</a></p>
+<a class="whitelink" href="mailto:Pamela.mcfarland@umb.edu">Pamela.mcfarland@umb.edu</a></p>
 <img alt="Pam McFarland" class="img-responsive" src="/sites/default/files/images/Pam-McFarland.jpg" /></div>
 </div>
 
 <div class="col-md-4 is-table-cell">
 <div class="box-light-blue">
-<h3 class="box-title">Daria Domin</h3>
+<h3 class="box-title">Belkis Choiseul-Praslin</h3>
 
-<p>Research Associate<br />
-<a class="whitelink" href="mailto:Daria.domin@umb.edu">Daria.domin@umb.edu</a></p>
-<img alt="Daria Domin" class="img-responsive" src="/sites/default/files/images/DariaDomin_1.png" /></div>
+<p>Research Associate II<br />
+<a class="whitelink" href="mailto:B.Choiseul-Praslin@umb.edu">B.Choiseul-Praslin@umb.edu</a></p>
+<img alt="Daria Domin" class="img-responsive" src="/sites/default/files/images/Choiseul-Praslin.jpg" /></div>
 </div>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'ie-pane ',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -2301,16 +2273,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -2338,18 +2310,18 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'block1',
-    'title' => 'Block 1',
-    'title_heading' => 'h2',
     'body' => '<p>Dummy Text</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Block 1',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -2366,18 +2338,18 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'block2',
-    'title' => 'Block 2',
-    'title_heading' => 'h2',
     'body' => '<p>Dummy Text</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Block 2',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -2400,8 +2372,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -2418,14 +2390,14 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel pretium ipsum. Aenean lobortis efficitur placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut venenatis nunc. Aenean ipsum sem, dictum vitae suscipit eget, cursus id orci. Nam in elementum eros. Donec rhoncus dui sed ullamcorper cursus. Morbi faucibus sollicitudin faucibus. Phasellus vel varius enim.</p>
 
 <p>Maecenas at justo in tellus laoreet consequat quis sit amet nunc. Fusce facilisis nunc semper, fringilla metus in, dignissim est. Donec diam urna, blandit quis turpis ac, ullamcorper congue libero. Morbi quis consequat neque. Quisque vel massa eleifend mi mattis accumsan. Aliquam velit mi, bibendum vitae euismod quis, fermentum elementum erat. Maecenas pretium lectus placerat, venenatis odio vel, pellentesque nisl. Nam finibus efficitur sem et pulvinar. Sed molestie viverra erat, nec fringilla justo placerat et. Quisque vehicula sem dolor, ac mollis metus posuere in. Proin commodo imperdiet sapien at tincidunt.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -2451,8 +2423,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -2468,21 +2440,21 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4588',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4588',
     'override_title' => 1,
-    'override_title_text' => 'FREQUENTLY ASKED QUESTIONS',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'FREQUENTLY ASKED QUESTIONS',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -2503,7 +2475,7 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $page->task = 'page';
   $page->admin_title = 'Emerging Advocates Group';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/advocates';
+  $page->path = 'ta-training/affinity-groups/advocates';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -2520,16 +2492,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -2557,14 +2529,14 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Emerging Advocates affinity group logo" class="img-responsive" src="/sites/default/files/images/Emerging%20Advocates.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -2584,9 +2556,9 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'GROUP FACILITATOR',
-    'title_heading' => 'h3',
-    'body' => '<p><img alt="Liz Weintraub" class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/thumbs/weintraub_liz2017_web300w.jpg" style="width: 100px; height: 100px;" /></p>
+    'body' => '<p>&nbsp;</p>
+
+<p><img alt="" src="/sites/default/files/images/weintraub_liz_web2019w.jpeg" style="width: 111px; height: 111px;" /></p>
 
 <p><strong>Liz Weintraub</strong></p>
 
@@ -2596,12 +2568,14 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'GROUP FACILITATOR',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -2618,22 +2592,22 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'How to Join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the Emerging Advocates Group?</p>
+    'body' => '<p>Want emails about the Emerging Advocate Group meetings and happenings?</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeySehuFFTp9mx7xGjUFfBG-iWohpxsxudbmnFdliE7esa6fw/viewform" role="button" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeySehuFFTp9mx7xGjUFfBG-iWohpxsxudbmnFdliE7esa6fw/viewform" role="button" target="_blank">Click to Sign Up!</a></p>
 
-
+<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'STAY INFORMED',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -2656,8 +2630,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -2674,24 +2648,28 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h3',
-    'body' => '<p>Welcome to the Think College Emerging Advocates Group.&nbsp;</p>
+    'body' => '<h3><strong>Welcome to the Think College Emerging Advocates Group for Students!</strong></h3>
 
-<p>In April, 2019,&nbsp; a group of college students with disabilities who attend Transition Postsecondary Education Programs for Students with ID&nbsp;came to Washington, DC to advocate for the Higher Education Act for themselves. They advocated alongside staff from those programs&nbsp;and others. This was quite exciting to see, so this group was developed for students with disabilities to talk with others so they could continue&nbsp;to share ideas and learn tips together about advocacy.&nbsp; That initial group has grown to include dozens of emerging leaders who get together on these quarterly calls, and we welcome new members.&nbsp; Click <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSeySehuFFTp9mx7xGjUFfBG-iWohpxsxudbmnFdliE7esa6fw/viewform">this&nbsp;link</a></strong> to go to a sign-up sheet&nbsp;that you can fill out to join this group.</p>
+<p>In April&nbsp;2019,&nbsp;a group of college students with disabilities came to Washington, DC to advocate for the Higher Education Act. They advocated with staff from inclusive college&nbsp;programs&nbsp;and others. This was very&nbsp;exciting to see, so this Emerging Advocates group was created&nbsp;for students with disabilities to talk with others so they could continue&nbsp;to share ideas and learn tips together about advocacy.&nbsp;</p>
 
-<p>This group is led by and for people with disabilities. Of course, supporters are welcome.</p>
+<p>That initial group has grown to include dozens of emerging leaders who get together on quarterly calls, and we welcome new members.&nbsp;This group is led by and for people with disabilities. Of course, supporters are welcome.</p>
+
+<p><b>Click the sign up button if you would like to receive email about this group\'s meeting dates and other information.</b></p>
+
+<p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeySehuFFTp9mx7xGjUFfBG-iWohpxsxudbmnFdliE7esa6fw/viewform" role="button" target="_blank">Click to Sign Up!</a></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -2708,18 +2686,30 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'NEXT MEETING',
-    'title_heading' => 'h3',
-    'body' => '<p>The next Emerging Advocates meeting is scheduled for <strong>Thursday, March 11, 2021 at 2 pm Eastern</strong>. <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSeySehuFFTp9mx7xGjUFfBG-iWohpxsxudbmnFdliE7esa6fw/viewform">Sign up</a></strong> to get an update via email.&nbsp;</p>
+    'body' => '<p>The next meeting is Thursday, March 10 from 2:00-3pm ET.&nbsp;<strong><a href="https://communityinclusion.zoom.us/meeting/register/tJAtde6urD0jE9AMHJ9g4mhwD_tDd_eabSV_">Sign up for the March meeting by clicking here</a></strong>.</p>
+
+<p><strong>2022 Meeting Schedule</strong></p>
+
+<p>Thursday, March 10 from 2-3pm</p>
+
+<p>Tuesday, May 10&nbsp;from 2-3pm ET</p>
+
+<p>Monday, September 26 from 2-3pm ET</p>
+
+<p>&nbsp;</p>
+
+<p>We will share an updated registration link with you before each meeting.&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -2736,55 +2726,123 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'NOTES FROM PAST MEETINGS',
-    'title_heading' => 'h3',
-    'body' => '<p>The last&nbsp;Emerging Advocates meeting was&nbsp;on&nbsp;<strong>Thursday, December 10.&nbsp;</strong>There were attendees from at least 6 different colleges.&nbsp;Rebecca Lazo asked the group if they would be interested in contributing to an ICI workgroup discussion on&nbsp;how people with disabilities prefer to be to be addressed. Liz asked questions of the group about what good came from the pandemic, and what there is to look forward to. Possible future topics were also discussed.</p>
+    'body' => '<h2>Date: December 8, 2021</h2>
+
+<h3><strong>Title</strong>: Picking Topics<br />
+<strong>Host</strong>:&nbsp;Liz Weintraub</h3>
+
+<p><strong>What happened:&nbsp;</strong>The students shared ideas about who they want to invite for special guest speakers for future meetings. They mentioned a few names and Liz is going to follow up to see who will be a guest.</p>
+
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe allow="autoplay; fullscreen" allowtransparency="true" class="wistia_embed" frameborder="0" height="100%" msallowfullscreen="" name="wistia_embed" scrolling="no" src="https://fast.wistia.net/embed/iframe/gwsidj6qr7?videoFoam=true" title="Emerging Advocates Group 12-08-2021 Video" width="100%"></iframe></div>
+</div>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+<p>&nbsp;</p>
 
 <hr />
-<p>The <strong>September 10, 2020 Emerging Advocates meeting</strong> was on the topic of voting. Liz and her colleague, Lauren (also from AUCD) presented on registering to vote, voting safely, learning about the candidates, and more. <strong>The recording and PowerPoint presentation can be found <a href="https://thinkcollege.net/resource/advocacy-outreach/emerging-advocates-group-meeting-september-2020">here</a>.</strong></p>
+<h2>Date: September 23, 2021</h2>
+
+<h3><strong>Title: </strong>A discussion with disability rights activist Judy Heumann</h3>
+
+<p><strong>Presenter: </strong>Judy Heumann</p>
+
+<p><strong>Host: </strong>Liz Weintraub and Majolyn (a junior at Hostos Community College)</p>
+
+<p><strong>What happened:</strong> Students spent over an hour asking Judy questions about the advocacy that she has done during her life. Judy answered every question. This was a really fun meeting. All of the students were very excited to meet Judy. There was a lot of laughter too! Watch the video below to see what happened. <strong><a href="https://thinkcollege.net/sites/default/files/files/resources/Transcript-Emerging%20Advocates%20with%20guest%20Judy%20Heumann_September23.docx">You can also read what happened by clicking this link. It will download a Word doc.</a></strong></p>
+
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe allow="autoplay; fullscreen" allowfullscreen="" allowtransparency="true" class="wistia_embed" frameborder="0" height="100%" msallowfullscreen="" name="wistia_embed" scrolling="no" src="https://fast.wistia.net/embed/iframe/w978xw1jug?videoFoam=true" title="Judy session Video" width="100%"></iframe></div>
+</div>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+<h2>&nbsp;</h2>
 
 <hr />
-<p><strong>March 2020 meeting:</strong> Due to COVID-19, the March Emerging Advocates group meeting was canceled. Throughout the months of April and May, Liz hosted weekly meetings on Fridays for youth with disabilities to gather and discuss issues such as voting, advocacy, the effects of COVID-19 on life and learning and work, the Census, and more. If you want any information about these meetings, please contact Liz Weintraub (lweintraub@AUCD.org) or Denise Rozell (drozell@AUCD.org).</p>
+<h2><strong>Date: December 20, 2020</strong></h2>
+
+<h3><strong>Title: </strong>A discussion with students about COVID-19&nbsp;</h3>
+
+<p><strong>Host:</strong> Liz Weintraub</p>
+
+<p><strong>What happened: </strong>Students from 6 different colleges joined the group. The group talked about what good came from the pandemic and what they were looking forward to when things get back to normal.</p>
+
+<p>We did not have a guest presenter. We do not have a recording or transcript from this meeting.</p>
+
+<p>&nbsp;</p>
 
 <hr />
-<p><strong>Tuesday, December 3, 2019 meeting:</strong>&nbsp;You can watch the recording or access the Power Points&nbsp;<a href="https://thinkcollege.net/resource/advocacy-outreach/emerging-advocates-group-meeting-december-2019"><strong>here</strong></a>. At this meeting, the following topics were discussed:</p>
+<h2><strong>Date: September 10, 2020</strong></h2>
 
-<ul>
-	<li>Review of recent elections</li>
-	<li>Discussion of important disability-related topics in upcoming elections</li>
-	<li>How to contact your representatives</li>
-	<li>And, information about <a href="https://thinkcollege.net/think-college-news/what-are-think-college-policy-advocates-and-how-can-you-become-one">Think College Policy Advocates</a></li>
-</ul>
+<h3><strong>Topic: </strong>A discussion about voting</h3>
+
+<p><strong>Hosted:</strong>&nbsp;Liz Weintraub and Lauren, Liz’s co-worker</p>
+
+<p>What happened: Liz and Lauren made a presentation on how to how to register to vote and how to vote safely. They also told students good ways to learn about the people running for office and more. Watch the video to learn more.</p>
+
+<p><a href="http://thinkcollege.net/sites/default/files/files/resources/toshare_emergingadvocates_voting.pdf">Check out Liz and Lauren\'s PowerPoint slides by clicking here.</a></p>
+
+<p>&nbsp;</p>
+
+<div class="wistia_responsive_padding" style="padding:50.0% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe allow="autoplay; fullscreen" allowfullscreen="" allowtransparency="true" class="wistia_embed" frameborder="0" height="100%" msallowfullscreen="" name="wistia_embed" scrolling="no" src="https://fast.wistia.net/embed/iframe/y2nhyzz7nz?videoFoam=true" title="Emerging Advocates Affinity Group 09-10-2020 Video" width="100%"></iframe></div>
+</div>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+<p>&nbsp;</p>
 
 <hr />
-<p>&nbsp;<strong>Thursday, September 19, 2019 meeting:&nbsp;</strong>You can watch the recording or access the Power Points <a href="https://thinkcollege.net/resource/advocacy-outreach/emerging-advocates-group-meeting-september-2019"><strong>here</strong></a>. At this meeting, the following topics were discussed:</p>
+<h2><strong>Date: December 3, 2019</strong></h2>
 
-<ul>
-	<li>What is advocacy and how to advocate for yourself</li>
-	<li>What to advocate for</li>
-	<li>Registering to vote</li>
-	<li>And, homework: invite a friend to the next meeting, register to vote, practice advocating for yourself.</li>
-</ul>
+<h3><strong>Title: </strong>A discussion about the 2019&nbsp;elections</h3>
+
+<p><strong>Host: </strong>Liz Weintraub</p>
+
+<p><strong>What happened: </strong>Students talked about the things that they care about for the election. Liz did a presentation on PowerPoint slides. They talked about how the election addressed disabilities and about disability laws. &nbsp;The group also learned about a program called the <a href="https://thinkcollege.net/think-college-news/what-are-think-college-policy-advocates-and-how-can-you-become-one">Think College Policy Advocates</a>. This a group of students who do political advocacy. Click here to learn more about the Policy Advocates.&nbsp;<span style="background:white"><span style="font-family:&quot;Lato&quot;,serif"><span style="color:#333333">You can watch the video below to see what happened in the meeting. </span></span></span></p>
+
+<p style="text-align:start; -webkit-text-stroke-width:0px"><a href="https://thinkcollege.net/sites/default/files/files/resources/Emerging%20Advocates%20Call%20FINAL-120319.pdf" target="_blank">Check out Liz\'s PowerPoint presentation slides by clicking here</a>.</p>
+
+<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe allow="autoplay; fullscreen" allowfullscreen="" allowtransparency="true" class="wistia_embed" frameborder="0" height="100%" msallowfullscreen="" name="wistia_embed" scrolling="no" src="https://fast.wistia.net/embed/iframe/57uuiv6pm1?videoFoam=true" title="Emerging Advocates Affinity Group 12-03-2019 Video" width="100%"></iframe></div>
+</div>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+<p>&nbsp;</p>
 
 <hr />
-<p>The first meeting of this group was on <strong>Tuesday, April 16, 2019</strong>. At this meeting, we did the following:</p>
+<h2><strong>Date: September 19, 2019</strong></h2>
 
-<ul>
-	<li>Introduced ourselves</li>
-	<li>Talked about our experience at the Disabilty Policy Seminar in Washington, DC</li>
-	<li>Talked about the difference between state and federal, when talking about laws and advocacy</li>
-</ul>
+<h3><strong>Title:</strong> A discussion about advocacy</h3>
 
-<p>The recording of the meeting can be accessed<strong> <a href="https://thinkcollege.net/resource/advocacy-outreach/emerging-advocates-group-meeting-april-2019">here</a></strong>.&nbsp;</p>
+<p><strong>Host: </strong>Liz Weintraub</p>
+
+<p><strong>What happened: </strong>Liz did a PowerPoint presentation. The students talked about what advocacy means. They talked about how to advocate for yourself. They shared that registering to vote is one way to create change. You can watch the video below to learn more.</p>
+
+<p><strong><a href="https://thinkcollege.net/sites/default/files/files/resources/Emerging%20Advocates%20call_Sept%202019%20-%20%20Read-Only.pdf">Check out Liz\'s PowerPoint presentation slides by clicking here.</a></strong></p>
+
+<div class="wistia_responsive_padding" style="padding:53.13% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+<div class="wistia_responsive_padding" style="padding:53.13% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe allow="autoplay; fullscreen" allowfullscreen="" allowtransparency="true" class="wistia_embed" frameborder="0" height="100%" msallowfullscreen="" name="wistia_embed" scrolling="no" src="https://fast.wistia.net/embed/iframe/7edh0bkjio?videoFoam=true" title="Emerging Advocates Affinity Group 09-19-2019 Video" width="100%"></iframe></div>
+</div>
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+<p>&nbsp;</p>
+
+<p>Date: April 16, 2019 TBA</p>
+</div>
+</div>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'LEARN ABOUT OUR PAST MEETINGS',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -2805,7 +2863,7 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $page->task = 'page';
   $page->admin_title = 'Events';
   $page->admin_description = '';
-  $page->path = 'events';
+  $page->path = 'ta-training/events';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -2822,16 +2880,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -2858,8 +2916,8 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 0,
-    'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'override_title_text' => '',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -2902,24 +2960,24 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 0,
     'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
-      'default' => NULL,
       'center' => NULL,
+      'default' => NULL,
     ),
   );
   $display->cache = array();
@@ -2942,16 +3000,16 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => '',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => '',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_multipass';
@@ -2979,8 +3037,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'banner',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<style type="text/css">.box-light-blue {
     background: #4C8EC9!important;
     padding: 30px 20px 30px 20px;
@@ -3061,6 +3117,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3080,8 +3138,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'square info boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="row contact-page is-table-row">
 <div class="col-sm-4">
 <div class="is-table-cell well">
@@ -3197,6 +3253,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3216,8 +3274,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Blue boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="box-container row is-table-row blue">
       <div class="col-md-4 is-table-cell">
    <div class="box-light-blue ">
@@ -3300,6 +3356,8 @@ a.orange {
 </div>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3319,8 +3377,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Video',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<h4>1-minute intro to Think College</h4>
 <script src="https://fast.wistia.com/embed/medias/c54ry1n0c7.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
@@ -3337,6 +3393,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3355,21 +3413,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3624',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '3624',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -3407,24 +3465,24 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => '',
     'no_blocks' => 0,
     'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => '',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
-      'default' => NULL,
       'center' => NULL,
+      'default' => NULL,
     ),
   );
   $display->cache = array();
@@ -3447,16 +3505,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => '',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => '',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_multipass';
@@ -3484,8 +3542,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'banner',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<style type="text/css">.box-light-blue {
     background: #4C8EC9!important;
     padding: 30px 20px 30px 20px;
@@ -3566,6 +3622,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3585,8 +3643,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'square info boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="row contact-page is-table-row">
 <div class="col-sm-4">
 <div class="is-table-cell well">
@@ -3702,6 +3758,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3721,8 +3779,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Blue boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="box-container row is-table-row blue">
       <div class="col-md-4 is-table-cell">
    <div class="box-light-blue ">
@@ -3805,6 +3861,8 @@ a.orange {
 </div>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3824,8 +3882,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Video',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<h4>1-minute intro to Think College</h4>
 <script src="https://fast.wistia.com/embed/medias/c54ry1n0c7.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
@@ -3842,6 +3898,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -3860,21 +3918,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3624',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '3624',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -3912,16 +3970,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_leeloo';
@@ -3929,9 +3987,9 @@ a.orange {
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
+      'row1' => NULL,
       'row1left' => NULL,
       'row1right' => NULL,
-      'row1' => NULL,
       'row2left' => NULL,
       'row2right' => NULL,
       'row3' => NULL,
@@ -3957,8 +4015,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'banner',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<style type="text/css">.box-light-blue {
     background: #4C8EC9!important;
     padding: 30px 20px 30px 20px;
@@ -4092,6 +4148,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -4113,8 +4171,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'square info boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="table-row contact-page">
 <div class="col-md-4 equal-box">
 <div class="icon-title"><i aria-hidden="true" class="fa fa-mortar-board fa-3x" data-original-title="Email us" data-placement="top" data-toggle="tooltip" title="">&nbsp;</i>
@@ -4215,6 +4271,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -4235,23 +4293,23 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3624',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '3624',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -4268,8 +4326,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Blue boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>&nbsp;</p>
 
 <div class="box-container row is-table-row blue">
@@ -4322,6 +4378,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -4364,16 +4422,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => '',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => '',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_leeloo';
@@ -4401,8 +4459,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'banner',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<style type="text/css">.box-light-blue {
     background: #4C8EC9!important;
     padding: 30px 20px 30px 20px;
@@ -4483,6 +4539,8 @@ a.orange {
 <br />',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -4502,8 +4560,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'square info boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="row contact-page is-table-row">
 <div class="col-sm-4">
 <div class="is-table-cell well">
@@ -4619,6 +4675,8 @@ a.orange {
 <br />',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -4638,8 +4696,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Video',
-    'title' => '1-minute intro to Think College',
-    'title_heading' => 'h3',
     'body' => '<script src="https://fast.wistia.com/embed/medias/c54ry1n0c7.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;" style="border:#f2f2f2 solid 2px;">
 <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_c54ry1n0c7 popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div>
@@ -4655,12 +4711,14 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '1-minute intro to Think College',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box-blue',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -4676,21 +4734,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3624',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '3624',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -4707,8 +4765,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Blue boxes',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<div class="box-container row is-table-row blue">
       <div class="col-md-4 is-table-cell">
    <div class="box-light-blue ">
@@ -4791,6 +4847,8 @@ a.orange {
 </div>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -4831,16 +4889,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 0,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -4866,21 +4924,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4220',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4220',
     'override_title' => 0,
-    'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'override_title_text' => '',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -4896,21 +4954,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4221',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4221',
     'override_title' => 0,
-    'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'override_title_text' => '',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -4926,21 +4984,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4222',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4222',
     'override_title' => 0,
-    'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'override_title_text' => '',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -4978,16 +5036,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -5017,14 +5075,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="FQI" class="img-responsive" src="/sites/default/files/images/fqie-sq.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -5046,14 +5104,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><a class="btn btn-block btn-huge btn-purple" href="/projects/future-quest-island-explorations/about-future-quest-island-explorations" type="button">About</a> <a class="btn btn-block btn-huge btn-purple" href="/projects/future-quest-island-explorations/fqie-project-team" type="button"> Project Team</a> <a class="btn btn-block btn-huge btn-purple" href="mailto:lori.cooney@umb.edu" type="button"> Contact Us</a></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -5075,8 +5133,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Project Coordinator',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Lori Cooney" class="center-block img-responsive img-thumbnail" src="/sites/default/files/files/images/staff-photos/LoriCooney.jpeg" style="height: 200px; width: 200px;" /></p>
 
 <p><strong>Lori Cooney, MEd</strong></p>
@@ -5087,14 +5143,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Project Coordinator',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-purple',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -5111,8 +5169,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://sites.google.com/umb.edu/fqie-research-study-info/home">Research Study Information </a></li>
 	<li><a href="https://sites.google.com/umb.edu/fqie-research-study-info/fqi-e-screenshots">FQI-E Screenshots</a></li>
@@ -5122,14 +5178,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-purple',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -5146,20 +5204,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'FQI Social Icons',
-    'title' => 'Social Media',
-    'title_heading' => 'h3',
     'body' => ' <p>Follow Future Quest Island: Explorations!</p>
 <a href="https://www.facebook.com/futurequestisland/"><i class="fa fa-facebook-square fa-3x social" data-original-title="Facebook" data-placement="top" data-toggle="tooltip" id="social-fb">&nbsp;</i></a> <a href="https://twitter.com/fqisland?lang=en"><i class="fa fa-twitter-square fa-3x social" data-original-title="Twitter" data-placement="top" data-toggle="tooltip" id="social-tw">&nbsp;</i></a>  <a href="https://www.pinterest.com/fqisland"><i class="fa fa-pinterest-square fa-3x social" data-original-title="Pinterest" data-placement="top" data-toggle="tooltip" id="social-em">&nbsp;</i></a> ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Social Media',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-purple',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -5176,20 +5234,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Future Quest Island-Explorations (FQI-E) is an online accessible college &amp; career readiness curriculum that uses gaming strategies to motivate and support improved self-concept, social and emotional competence, and early college and career awareness for upper elementary students with and without disability in grades 3-5 using the evidenced-based “Possible Selves” framework.&nbsp;</p><br>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'project-intro-box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -5206,19 +5264,19 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Featured Video',
-    'title_heading' => 'h3',
     'body' => '<script src="https://fast.wistia.com/embed/medias/nitdyfp31o.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_nitdyfp31o seo=false videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/nitdyfp31o/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Featured Video',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-purple',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -5241,8 +5299,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'fqi-article-panel ie-news box-border-purple',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -5258,21 +5316,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4866',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4866',
     'override_title' => 1,
-    'override_title_text' => 'PARTICIPATE IN A RESEARCH STUDY!',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'PARTICIPATE IN A RESEARCH STUDY!',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -5289,20 +5347,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Funding Information',
-    'title_heading' => 'h3',
     'body' => '<p>This study is funded by the US Department of Education #H327S180002. However, these contents do not necessarily represent the policy of the US Department of Education, and you should not assume endorsement by the Federal Government. Project Officer, Terry L. Jackson, Ed.D.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Funding Information',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-purple',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -5340,16 +5398,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -5369,39 +5427,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-7cd025ed-57e0-4e57-a6f7-d730ae9686f1';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'title' => 'On this Page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '7cd025ed-57e0-4e57-a6f7-d730ae9686f1';
-  $display->content['new-7cd025ed-57e0-4e57-a6f7-d730ae9686f1'] = $pane;
-  $display->panels['row1left'][0] = 'new-7cd025ed-57e0-4e57-a6f7-d730ae9686f1';
-  $pane = new stdClass();
   $pane->pid = 'new-a7c2bc12-36a0-40f9-b0df-b5b85333e352';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -5416,15 +5441,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = 'a7c2bc12-36a0-40f9-b0df-b5b85333e352';
   $display->content['new-a7c2bc12-36a0-40f9-b0df-b5b85333e352'] = $pane;
-  $display->panels['row1left'][1] = 'new-a7c2bc12-36a0-40f9-b0df-b5b85333e352';
+  $display->panels['row1left'][0] = 'new-a7c2bc12-36a0-40f9-b0df-b5b85333e352';
   $pane = new stdClass();
   $pane->pid = 'new-86b59ba4-3fc9-430a-818b-71fe63c633f0';
   $pane->panel = 'row1left';
@@ -5434,8 +5459,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.routledge.com/Teaching-Including-and-Supporting-College-Students-with-Intellectual/Kelley-Westling/p/book/9781138618077">Teaching, Including and Supporting Students with Intellectual Disabilities (Chapter 7 in particular)</a></li>
 	<li><a href="https://www.ahead.org/professional-resources/white-papers-guiding-documents/intellectual-disabilities-white-paper">AHEAD White Paper </a></li>
@@ -5445,19 +5468,21 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '86b59ba4-3fc9-430a-818b-71fe63c633f0';
   $display->content['new-86b59ba4-3fc9-430a-818b-71fe63c633f0'] = $pane;
-  $display->panels['row1left'][2] = 'new-86b59ba4-3fc9-430a-818b-71fe63c633f0';
+  $display->panels['row1left'][1] = 'new-86b59ba4-3fc9-430a-818b-71fe63c633f0';
   $pane = new stdClass();
   $pane->pid = 'new-01273cff-35b1-4671-b7e5-c2fb2e6aebb7';
   $pane->panel = 'row1right';
@@ -5467,12 +5492,12 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Participation in inclusive college courses provides many benefits to students with intellectual disability, such as improved employment outcomes, increased community engagement, meaningful learning alongside college peers, and added diversity and acceptance (Kelley &amp; Westling, 2019; Kleinert, et al., 2012). It is important that faculty members with students with intellectual disability in their classes to be supported with information about how best to include all students so that all learners can benefit&nbsp;from a more diverse classroom.&nbsp; With college program staff and faculty working together, learning opportunities are enriched for all.&nbsp; This Innovation Exchange page &nbsp;answers some frequently asked questions from faculty, highlights some helpful resources&nbsp;and shares the perspectives of faculty who have taught students with ID.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -5498,8 +5523,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -5515,21 +5540,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4317',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4317',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -5567,16 +5592,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -5596,41 +5621,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-fc57fed6-524f-4c52-9d59-41b9b9245dfe';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'on this page',
-    'title' => 'On this Page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'fc57fed6-524f-4c52-9d59-41b9b9245dfe';
-  $display->content['new-fc57fed6-524f-4c52-9d59-41b9b9245dfe'] = $pane;
-  $display->panels['row1left'][0] = 'new-fc57fed6-524f-4c52-9d59-41b9b9245dfe';
-  $pane = new stdClass();
   $pane->pid = 'new-96258e3f-9f90-449b-a743-590638ecb054';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -5647,15 +5637,15 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '96258e3f-9f90-449b-a743-590638ecb054';
   $display->content['new-96258e3f-9f90-449b-a743-590638ecb054'] = $pane;
-  $display->panels['row1left'][1] = 'new-96258e3f-9f90-449b-a743-590638ecb054';
+  $display->panels['row1left'][0] = 'new-96258e3f-9f90-449b-a743-590638ecb054';
   $pane = new stdClass();
   $pane->pid = 'new-e48edb65-e335-4dbf-ba41-6c9db8f28e89';
   $pane->panel = 'row1left';
@@ -5665,8 +5655,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.chea.org/">Council for Higher Education Accreditation</a></li>
 	<li><a href="https://sites.ed.gov/naciqi/">National Advisory Committee on Institutional Quality and Integrity (NACIQI)</a></li>
@@ -5675,21 +5663,23 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'e48edb65-e335-4dbf-ba41-6c9db8f28e89';
   $display->content['new-e48edb65-e335-4dbf-ba41-6c9db8f28e89'] = $pane;
-  $display->panels['row1left'][2] = 'new-e48edb65-e335-4dbf-ba41-6c9db8f28e89';
+  $display->panels['row1left'][1] = 'new-e48edb65-e335-4dbf-ba41-6c9db8f28e89';
   $pane = new stdClass();
   $pane->pid = 'new-751025c3-bee3-4676-80b4-eb5eba17881d';
   $pane->panel = 'row1right';
@@ -5699,22 +5689,24 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>In the US, institutions of higher education and programs within the institutions are accredited using standards that help ensure&nbsp;that the educational experience&nbsp; offered to students meets an acceptable level of quality. Program accreditation standards provide guidelines for colleges and universities on how to develop and improve programs, validate these programs within institutions of higher education, and give students and their families an assurance of quality.</p>
 
 <p>In the 2008 Reauthorization of the Higher Education Act, Congress directed the National Coordinating Center to convene a workgroup to develop model program accreditation standards for college programs for students with ID. When implemented, the standards will move the field forward by offering accreditation of college programs that support students with ID.</p>
+
+<p>This page shares resources to help you familiarize yourself with the Standards and learn about the work of the NCC Accreditation Workgroups, both current and past.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -5739,8 +5731,8 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -5756,23 +5748,23 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4302',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4302',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -5810,16 +5802,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -5839,39 +5831,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-17f0b363-a267-4cb0-9f13-e9ac26e940a6';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '17f0b363-a267-4cb0-9f13-e9ac26e940a6';
-  $display->content['new-17f0b363-a267-4cb0-9f13-e9ac26e940a6'] = $pane;
-  $display->panels['row1left'][0] = 'new-17f0b363-a267-4cb0-9f13-e9ac26e940a6';
-  $pane = new stdClass();
   $pane->pid = 'new-8841b315-1276-48c0-9f85-42f774d4513b';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -5886,15 +5845,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '8841b315-1276-48c0-9f85-42f774d4513b';
   $display->content['new-8841b315-1276-48c0-9f85-42f774d4513b'] = $pane;
-  $display->panels['row1left'][1] = 'new-8841b315-1276-48c0-9f85-42f774d4513b';
+  $display->panels['row1left'][0] = 'new-8841b315-1276-48c0-9f85-42f774d4513b';
   $pane = new stdClass();
   $pane->pid = 'new-2c40f9ff-9dd6-4b67-b193-910c48353e85';
   $pane->panel = 'row1left';
@@ -5904,8 +5863,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://studentaid.gov/understand-aid/eligibility/requirements/intellectual-disabilities ">Federal Student Aid for students with intellectual disability: </a></li>
 	<li><a href="/college-search?f%5B0%5D=tc_financial_aid%3AYes">Programs in College Search that are Approved CTP Programs)</a></li>
@@ -5915,19 +5872,21 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '2c40f9ff-9dd6-4b67-b193-910c48353e85';
   $display->content['new-2c40f9ff-9dd6-4b67-b193-910c48353e85'] = $pane;
-  $display->panels['row1left'][2] = 'new-2c40f9ff-9dd6-4b67-b193-910c48353e85';
+  $display->panels['row1left'][1] = 'new-2c40f9ff-9dd6-4b67-b193-910c48353e85';
   $pane = new stdClass();
   $pane->pid = 'new-914f6826-5e32-451b-a3df-b4a3104a2058';
   $pane->panel = 'row1right';
@@ -5937,12 +5896,12 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>The Higher Education Opportunity Act of 2008 (HEOA) created a new kind of college program specifically for students with intellectual disability – the Comprehensive Transition and Postsecondary (CTP) Program. The Act defined the key requirements that all CTP programs must provide to students, gave a definition of a student with an intellectual disability, and opened up access to federal student aid for students with intellectual disability attending an approved CTP program, even if those students do not have a standard high school diploma or are not matriculating towards a degree.&nbsp; This Innovation Exchange page shares key resources that will assist colleges interested in establishing a CTP program to learn more about these unique programs, to design a CTP program that meets the requirements as outlined in the HEOA, and to submit that program for approval so that eligible students with intellectual disability have access to federal student aid.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -5968,8 +5927,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -5985,21 +5944,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4454',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '4454',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -6037,16 +5996,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -6066,41 +6025,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-813d18b0-ef7c-497a-88de-06fed99e0a37';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '813d18b0-ef7c-497a-88de-06fed99e0a37';
-  $display->content['new-813d18b0-ef7c-497a-88de-06fed99e0a37'] = $pane;
-  $display->panels['row1left'][0] = 'new-813d18b0-ef7c-497a-88de-06fed99e0a37';
-  $pane = new stdClass();
   $pane->pid = 'new-7c9d73cc-6ed4-4bda-8c44-7cfbb5c52b59';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -6117,15 +6041,15 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '7c9d73cc-6ed4-4bda-8c44-7cfbb5c52b59';
   $display->content['new-7c9d73cc-6ed4-4bda-8c44-7cfbb5c52b59'] = $pane;
-  $display->panels['row1left'][1] = 'new-7c9d73cc-6ed4-4bda-8c44-7cfbb5c52b59';
+  $display->panels['row1left'][0] = 'new-7c9d73cc-6ed4-4bda-8c44-7cfbb5c52b59';
   $pane = new stdClass();
   $pane->pid = 'new-c57f4951-f812-4f3b-81c9-d960e0731900';
   $pane->panel = 'row1left';
@@ -6135,8 +6059,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Quick Links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 <li><a href="http://www.ncset.org/">National Center on Secondary Education and Transition (NCSET)</a></li>
 <li><a href="http://www.ncwd-youth.info/">National Collaborative on Workforce and Disability (NCWD)</a></li>
@@ -6146,21 +6068,23 @@ a.orange {
 </ul>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'c57f4951-f812-4f3b-81c9-d960e0731900';
   $display->content['new-c57f4951-f812-4f3b-81c9-d960e0731900'] = $pane;
-  $display->panels['row1left'][2] = 'new-c57f4951-f812-4f3b-81c9-d960e0731900';
+  $display->panels['row1left'][1] = 'new-c57f4951-f812-4f3b-81c9-d960e0731900';
   $pane = new stdClass();
   $pane->pid = 'new-3ffb0112-2296-45ef-a706-198d9c1ebe04';
   $pane->panel = 'row1left';
@@ -6170,29 +6094,29 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Sign up today!',
-    'title_heading' => 'h3',
     'body' => '<p>Check out the <strong>College-based Transition Service (CBTS) Affinity Group</strong>, where those who are interested in CBTS can connect with each other to network and connect!&nbsp;</p>
 
 <p class="rtecenter"><a class="btn btn-primary" href="https://thinkcollege.net/technical-assistance/affinity-groups/college-based-transition-services" role="button">Sign up</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Sign up today!',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'join',
     'css_class' => 'box',
+    'css_id' => 'join',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '3ffb0112-2296-45ef-a706-198d9c1ebe04';
   $display->content['new-3ffb0112-2296-45ef-a706-198d9c1ebe04'] = $pane;
-  $display->panels['row1left'][3] = 'new-3ffb0112-2296-45ef-a706-198d9c1ebe04';
+  $display->panels['row1left'][2] = 'new-3ffb0112-2296-45ef-a706-198d9c1ebe04';
   $pane = new stdClass();
   $pane->pid = 'new-d650d262-e626-4fec-9bcf-73412eeb4041';
   $pane->panel = 'row1right';
@@ -6202,8 +6126,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'College-Based Transition Services Intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>College-based transition services (CBTS), also know as dual enrollment or concurrent enrollment, provides students with intellectual disability during their final two to three years of secondary education access to college courses, internships, and employment, as well as access to other campus activities.</p>
 
 <p>When designed well, these experiences enable students to participate in career planning with a person-centered planning approach, enroll in college classes for educational and personal enrichment, engage in social activities alongside their college peers, and participate in community-based, paid work experiences that align with their employment goals.</p>
@@ -6215,6 +6137,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -6244,8 +6168,8 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -6261,23 +6185,23 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3970',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '3970',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -6315,16 +6239,11 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
-    'no_blocks' => 1,
-    'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
+    'body_classes_to_remove' => '',
     'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'panel',
+    'css' => '',
+    'css_id' => '',
     'metatag_panels' => array(
       'enabled' => 1,
       'metatags' => array(
@@ -6333,6 +6252,11 @@ a.orange {
         ),
       ),
     ),
+    'name' => 'panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'relationships' => array(),
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -6352,41 +6276,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-e6a5562c-aa49-434b-9542-0befd7355739';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'e6a5562c-aa49-434b-9542-0befd7355739';
-  $display->content['new-e6a5562c-aa49-434b-9542-0befd7355739'] = $pane;
-  $display->panels['row1left'][0] = 'new-e6a5562c-aa49-434b-9542-0befd7355739';
-  $pane = new stdClass();
   $pane->pid = 'new-1503cdff-0038-474d-834c-51640be517d6';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -6403,15 +6292,15 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '1503cdff-0038-474d-834c-51640be517d6';
   $display->content['new-1503cdff-0038-474d-834c-51640be517d6'] = $pane;
-  $display->panels['row1left'][1] = 'new-1503cdff-0038-474d-834c-51640be517d6';
+  $display->panels['row1left'][0] = 'new-1503cdff-0038-474d-834c-51640be517d6';
   $pane = new stdClass();
   $pane->pid = 'new-c81b063d-8201-495f-8ffe-e0b440747c15';
   $pane->panel = 'row1left';
@@ -6429,15 +6318,15 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'c81b063d-8201-495f-8ffe-e0b440747c15';
   $display->content['new-c81b063d-8201-495f-8ffe-e0b440747c15'] = $pane;
-  $display->panels['row1left'][2] = 'new-c81b063d-8201-495f-8ffe-e0b440747c15';
+  $display->panels['row1left'][1] = 'new-c81b063d-8201-495f-8ffe-e0b440747c15';
   $pane = new stdClass();
   $pane->pid = 'new-73fa800c-0689-4327-9927-1a7052a720a6';
   $pane->panel = 'row1left';
@@ -6447,31 +6336,30 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
-	<li><a href="http://www.collegeautismspectrum.com/">collegeautismspectrum.com</a></li>
 	<li><a href="http://www.pacer.org/transition/">PACER Center\'s National Parent Center on Transition and Employment</a></li>
-	<li><a href="http://www.eparent.com/special-needs-resource-directory-guide/">Exceptional Parent Special Needs Resource Library</a></li>
+	<li><a href="https://beachcenter.lsi.ku.edu/beach-home">Beach Center on Disability</a></li>
 </ul>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '73fa800c-0689-4327-9927-1a7052a720a6';
   $display->content['new-73fa800c-0689-4327-9927-1a7052a720a6'] = $pane;
-  $display->panels['row1left'][3] = 'new-73fa800c-0689-4327-9927-1a7052a720a6';
+  $display->panels['row1left'][2] = 'new-73fa800c-0689-4327-9927-1a7052a720a6';
   $pane = new stdClass();
   $pane->pid = 'new-cdff4819-3c0c-4d75-bb59-8b661abcbfa7';
   $pane->panel = 'row1left';
@@ -6481,29 +6369,29 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Sign up Today!',
-    'title' => 'SIGN UP TODAY!',
-    'title_heading' => 'h3',
     'body' => '<p>Did you know there is a Families Think College Facebook page? It is available only for family members of people with intellectual and/or developmental disabilities.</p>
 
 <p class="rtecenter"><a class="btn btn-primary" href="https://www.facebook.com/groups/1065141630294756/">Join</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'SIGN UP TODAY!',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'join',
     'css_class' => 'box',
+    'css_id' => 'join',
   );
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = 'cdff4819-3c0c-4d75-bb59-8b661abcbfa7';
   $display->content['new-cdff4819-3c0c-4d75-bb59-8b661abcbfa7'] = $pane;
-  $display->panels['row1left'][4] = 'new-cdff4819-3c0c-4d75-bb59-8b661abcbfa7';
+  $display->panels['row1left'][3] = 'new-cdff4819-3c0c-4d75-bb59-8b661abcbfa7';
   $pane = new stdClass();
   $pane->pid = 'new-451794eb-3ce3-42c9-8dde-759b6db6b913';
   $pane->panel = 'row1right';
@@ -6513,20 +6401,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'For Families',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Families play a pivotal role in preparing their sons and daughters for college. They also are there to support them while in college and to assist them in their transition out of college and into the rest of their lives. Think College has pulled together resources to give families some of the tools and information they need to support, encourage, and inform their daughters and sons as they seek out and pursue higher education.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6551,8 +6439,8 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -6568,23 +6456,23 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3624',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '3624',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -6622,16 +6510,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_3col';
@@ -6643,14 +6531,14 @@ a.orange {
       'middle' => NULL,
       'right' => NULL,
       'row1' => NULL,
-      'row2left' => NULL,
       'row2center' => NULL,
+      'row2left' => NULL,
       'row2right' => NULL,
-      'row3left' => NULL,
       'row3center' => NULL,
+      'row3left' => NULL,
       'row3right' => NULL,
-      'row4left' => NULL,
       'row4center' => NULL,
+      'row4left' => NULL,
       'row4right' => NULL,
     ),
   );
@@ -6670,8 +6558,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Welcome to Thinkcollege.net. This is a great place to start learning more about going to college. Below are some resources to help get you started.&nbsp;</p>
 
 <p>If you are looking for something specific our team can help you find it. Send an email to Kathy at our help desk at&nbsp;<a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a>&nbsp;and someone will get back to you soon.</p>
@@ -6680,6 +6566,8 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -6701,8 +6589,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'On the pathway!',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Group of students from still of video &quot;is college possible&quot;" class="img-responsive" src="/sites/default/files/images/Intellectual-Disability-and-College-It-Is-Possible.png" /></p>
 
 <h4><a href="https://thinkcollege.net/resource/inclusive-academics-campus-culture/intellectual-disability-and-college-it-is-possible">Intellectual Disability and College? It Is Possible!</a></h4>
@@ -6711,14 +6597,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'On the pathway!',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6735,8 +6623,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Getting help along the way',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Mentor sitting at a table with his mentee" class="img-responsive" src="/sites/default/files/images/mentorship.jpg" /></p>
 
 <h4><a href="/resource/mentoring/coaches-and-mentors-helping-college-students-thrive">Working with a coach or mentor</a></h4>
@@ -6747,14 +6633,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Getting help along the way',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6771,8 +6659,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Student Spotlight',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Peach" class="img-responsive" src="/sites/default/files/images/peach-spotlight.jpg" /></p>
 
 <h4><a href="https://thinkcollege.net/think-college-news/student-spotlight-get-to-know-what-students-think-about-their-life-in-college">10 questions with a college student</a></h4>
@@ -6783,14 +6669,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Student Spotlight',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6807,8 +6695,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'You Can Go to College',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Student Liz sitting on campus" class="img-responsive" src="/sites/default/files/images/liz-vanderbilt.jpg" /></p>
 
 <h4><a href="https://www.youtube.com/watch?v=nu3BSNOzUJw">Hear from students at Vanderbilt University</a></h4>
@@ -6817,14 +6703,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'You Can Go to College',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6841,8 +6729,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'What is Intelligence?',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Micah (student) walking to class" class="img-responsive" src="/sites/default/files/images/micah_walking_to_class_in_dan_habibs_intelligent_lives_.jpg" /></p>
 
 <h4><a href="https://intelligentlives.org/">Award-winning film explores intelligence in depth</a></h4>
@@ -6851,14 +6737,16 @@ a.orange {
 <p>&nbsp;</p>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'What is Intelligence?',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6875,8 +6763,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Spread the Word',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Matilda, a student" class="img-responsive" src="/sites/default/files/images/matilda.jpg" /></p>
 
 <h4><a href="/resources/think-college-public-awareness">Interviews with 5 Students</a></h4>
@@ -6887,14 +6773,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Spread the Word',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6911,8 +6799,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Emerging Advocates Group',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Liz Weintraub in front of the Capitol Building" class="img-responsive" src="/sites/default/files/images/liz-steps.jpg" /></p>
 
 <h4><a href="http://docs.google.com/forms/d/e/1FAIpQLSeySehuFFTp9mx7xGjUFfBG-iWohpxsxudbmnFdliE7esa6fw/viewform">Learn from a professional advocate</a></h4>
@@ -6925,14 +6811,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Emerging Advocates Group',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6949,8 +6837,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Planning for College',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Boy looking up with the word &quot;college&quot; written in the sky" class="img-responsive" src="/sites/default/files/images/going-to-college.jpg" /></p>
 
 <h4><a href="http://going-to-college.org/">This website will help you get ready for college</a></h4>
@@ -6960,14 +6846,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Planning for College',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -6984,8 +6872,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'College Search',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Magnifying Glass" class="img-responsive" src="/sites/default/files/images/magnifying-glass.jpg" /></p>
 
 <h4><a href="/college-search">Find one that’s right for you!</a></h4>
@@ -7001,14 +6887,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'College Search',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -7046,16 +6934,11 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
-    'no_blocks' => 1,
-    'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
+    'body_classes_to_remove' => '',
     'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'panel',
+    'css' => '',
+    'css_id' => '',
     'metatag_panels' => array(
       'enabled' => 1,
       'metatags' => array(
@@ -7064,6 +6947,11 @@ a.orange {
         ),
       ),
     ),
+    'name' => 'panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'relationships' => array(),
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -7083,39 +6971,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-e54c4af5-d4c9-45d9-b8d7-e8b4fd3479cd';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'e54c4af5-d4c9-45d9-b8d7-e8b4fd3479cd';
-  $display->content['new-e54c4af5-d4c9-45d9-b8d7-e8b4fd3479cd'] = $pane;
-  $display->panels['row1left'][0] = 'new-e54c4af5-d4c9-45d9-b8d7-e8b4fd3479cd';
-  $pane = new stdClass();
   $pane->pid = 'new-e4e734cb-7f4b-4e4c-bcaa-1eaa37038ca3';
   $pane->panel = 'row1left';
   $pane->type = 'custom';
@@ -7124,30 +6979,30 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://studentaid.ed.gov/sa/eligibility/intellectual-disabilities">Federal Student Aid for Students with Intellectual Disabilities</a></li>
 	<li><a href="https://rubysrainbow.org/">Ruby’s Rainbow: Scholarships for Students with Down Syndrome</a></li>
-	<li><a href="http://www.ndss.org/resources/education/college--postsecondary-options1/oneill-tabani-enrichment-fund/">O’Neill Tabani Enrichment Fund</a></li>
+	<li><a href="https://www.ndss.org/engage/ndss-scholarships/oneill-tabani-enrichment-fund/">O’Neill Tabani Enrichment Fund</a></li>
 	<li><a href="http://www.passonline.org/">PASS Plans – Plan for Achieving Self Support: A Social Security Program</a></li>
 </ul>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = 'e4e734cb-7f4b-4e4c-bcaa-1eaa37038ca3';
   $display->content['new-e4e734cb-7f4b-4e4c-bcaa-1eaa37038ca3'] = $pane;
-  $display->panels['row1left'][1] = 'new-e4e734cb-7f4b-4e4c-bcaa-1eaa37038ca3';
+  $display->panels['row1left'][0] = 'new-e4e734cb-7f4b-4e4c-bcaa-1eaa37038ca3';
   $pane = new stdClass();
   $pane->pid = 'new-4a9097f4-cac9-408c-ad20-ed4deed066b3';
   $pane->panel = 'row1left';
@@ -7163,15 +7018,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '4a9097f4-cac9-408c-ad20-ed4deed066b3';
   $display->content['new-4a9097f4-cac9-408c-ad20-ed4deed066b3'] = $pane;
-  $display->panels['row1left'][2] = 'new-4a9097f4-cac9-408c-ad20-ed4deed066b3';
+  $display->panels['row1left'][1] = 'new-4a9097f4-cac9-408c-ad20-ed4deed066b3';
   $pane = new stdClass();
   $pane->pid = 'new-4e16c326-1981-45c2-8b1b-2cc555a1dc0c';
   $pane->panel = 'row1right';
@@ -7181,18 +7036,18 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Paying for College',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>One of the greatest challenges for college attendance is how to pay for it, and this can be particularly true for students with intellectual disability. But there are several avenues to explore for funding the cost of a college program. Students may be able to use vocational rehabilitation funds, scholarships, or federal financial aid. They may also take advantage of PASS plans related to Social Security benefits, among other things.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -7215,8 +7070,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -7232,21 +7087,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3626',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '3626',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -7284,16 +7139,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -7313,39 +7168,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-094dc714-b3b7-4737-a846-75d95d5e635d';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this Page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '094dc714-b3b7-4737-a846-75d95d5e635d';
-  $display->content['new-094dc714-b3b7-4737-a846-75d95d5e635d'] = $pane;
-  $display->panels['row1left'][0] = 'new-094dc714-b3b7-4737-a846-75d95d5e635d';
-  $pane = new stdClass();
   $pane->pid = 'new-eaccff3b-1180-4445-a516-e4ed7147360f';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -7360,15 +7182,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = 'eaccff3b-1180-4445-a516-e4ed7147360f';
   $display->content['new-eaccff3b-1180-4445-a516-e4ed7147360f'] = $pane;
-  $display->panels['row1left'][1] = 'new-eaccff3b-1180-4445-a516-e4ed7147360f';
+  $display->panels['row1left'][0] = 'new-eaccff3b-1180-4445-a516-e4ed7147360f';
   $pane = new stdClass();
   $pane->pid = 'new-3903765c-2a66-4aa1-968b-e464048f0714';
   $pane->panel = 'row1left';
@@ -7378,8 +7200,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.routledge.com/Teaching-Including-and-Supporting-College-Students-with-Intellectual/Kelley-Westling/p/book/9781138618084">Teaching, Including, and Supporting College Students with Intellectual Disabilities (Book: Chapters 9 and 11) </a></li>
 	<li><a href="https://nationalmentoringresourcecenter.org/">National Mentoring Resource Center</a></li>
@@ -7388,19 +7208,21 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '3903765c-2a66-4aa1-968b-e464048f0714';
   $display->content['new-3903765c-2a66-4aa1-968b-e464048f0714'] = $pane;
-  $display->panels['row1left'][2] = 'new-3903765c-2a66-4aa1-968b-e464048f0714';
+  $display->panels['row1left'][1] = 'new-3903765c-2a66-4aa1-968b-e464048f0714';
   $pane = new stdClass();
   $pane->pid = 'new-9a2225d5-16f3-47f0-8852-bbc02b588021';
   $pane->panel = 'row1right';
@@ -7410,12 +7232,12 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Many, if not most, college programs offer peer mentor support to students attending their programs. Numerous studies have examined the impact and attitudinal changes with peer mentors as they learn together in shared college experiences with individuals with intellectual disability (ID). Studies show changes in attitudes, and increases in acceptance of individuals with disabilities in the college community. Mentors report valuing the hands-on training, career affirmations, and opportunities to advocate for more inclusive practices (Beattie, Anderson, &amp; Antonak, 1997; Carroll, Petroff, &amp; Blumberg, 2009; Carter, 2019; Casale-Giannola &amp; Kamens, 2006; Causton-Theoharris, Ashby, &amp; DeClouette, 2009; Culnane, Eisenman, &amp; Murphy, 2016; Eichinger, Rizzo, &amp; Sirotnik, 1991; Griffin, Mello, Glover, Carter, &amp; Hodapp, 2016; Hastings, Hewes, Lock, &amp; Witting, 1996; Rimmerman, Hozmi, &amp; Duvdevany, 2000; Sowell &amp; Maddox, 2015; Westling, Kelley, Cain, &amp; Prohn, 2013). In this Exchange, Think College offers a review of resources related to recruiting and training of peer mentors through video guides for note-taking, organizational skills, test taking strategies, and time management, online learning modules, research studies, and several peer mentoring handbooks to further define various peer mentor roles and responsibilities.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -7441,8 +7263,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -7458,21 +7280,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4426',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '4426',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -7510,16 +7332,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -7539,39 +7361,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-5e32322e-7b81-4de2-982f-a092c6cc012d';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this Page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '5e32322e-7b81-4de2-982f-a092c6cc012d';
-  $display->content['new-5e32322e-7b81-4de2-982f-a092c6cc012d'] = $pane;
-  $display->panels['row1left'][0] = 'new-5e32322e-7b81-4de2-982f-a092c6cc012d';
-  $pane = new stdClass();
   $pane->pid = 'new-9de76ce0-30f0-4f5b-b519-07f7562677b9';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -7586,15 +7375,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '9de76ce0-30f0-4f5b-b519-07f7562677b9';
   $display->content['new-9de76ce0-30f0-4f5b-b519-07f7562677b9'] = $pane;
-  $display->panels['row1left'][1] = 'new-9de76ce0-30f0-4f5b-b519-07f7562677b9';
+  $display->panels['row1left'][0] = 'new-9de76ce0-30f0-4f5b-b519-07f7562677b9';
   $pane = new stdClass();
   $pane->pid = 'new-a1c22a32-323c-4552-9105-d13c09083935';
   $pane->panel = 'row1left';
@@ -7604,8 +7393,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="/resource/transition-planning/preparing-students-with-idd-for-college-recommendations-for-educators">Preparing Students with ID/D for College: Recommendations for Educators &amp; Families</a></li>
 	<li><a href="/resource/admissions/the-college-application-process-it-takes-a-village-webinar-resources?utm_source=April+2020+NCC+Newsletter&amp;utm_campaign=April+2020+NCC+newsletter&amp;utm_medium=email">The College Application Process: It Takes a Village</a></li>
@@ -7619,19 +7406,21 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'a1c22a32-323c-4552-9105-d13c09083935';
   $display->content['new-a1c22a32-323c-4552-9105-d13c09083935'] = $pane;
-  $display->panels['row1left'][2] = 'new-a1c22a32-323c-4552-9105-d13c09083935';
+  $display->panels['row1left'][1] = 'new-a1c22a32-323c-4552-9105-d13c09083935';
   $pane = new stdClass();
   $pane->pid = 'new-c2fb1bf9-b415-4624-94de-0f04a3c27472';
   $pane->panel = 'row1right';
@@ -7641,12 +7430,12 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Planning for college takes time, preparation, and organization. With the wide variety of postsecondary education options available for students with intellectual disability (ID), exploring these choices can be an exciting but overwhelming process. Resources on this page will provide guidance on supporting students to prepare for college, planning and conducting the college search, and understanding the supports that can be accessed in college.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -7672,8 +7461,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -7689,21 +7478,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4469',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4469',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -7741,20 +7530,20 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
-    'no_blocks' => 1,
-    'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
+    'body_classes_to_remove' => '',
     'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'panel',
+    'css' => '',
+    'css_id' => '',
     'metatag_panels' => array(
       'enabled' => 1,
       'metatags' => array(),
     ),
+    'name' => 'panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'relationships' => array(),
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -7774,38 +7563,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-94bf4e9a-9f1a-43e5-8899-068ac6ec9080';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '94bf4e9a-9f1a-43e5-8899-068ac6ec9080';
-  $display->content['new-94bf4e9a-9f1a-43e5-8899-068ac6ec9080'] = $pane;
-  $display->panels['row1left'][0] = 'new-94bf4e9a-9f1a-43e5-8899-068ac6ec9080';
-  $pane = new stdClass();
   $pane->pid = 'new-2e6bc4ed-51b9-4a93-8453-21a9a9b84ffc';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -7820,15 +7577,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '2e6bc4ed-51b9-4a93-8453-21a9a9b84ffc';
   $display->content['new-2e6bc4ed-51b9-4a93-8453-21a9a9b84ffc'] = $pane;
-  $display->panels['row1left'][1] = 'new-2e6bc4ed-51b9-4a93-8453-21a9a9b84ffc';
+  $display->panels['row1left'][0] = 'new-2e6bc4ed-51b9-4a93-8453-21a9a9b84ffc';
   $pane = new stdClass();
   $pane->pid = 'new-8b6c48fe-5254-4f71-850f-95860640e1d5';
   $pane->panel = 'row1right';
@@ -7838,18 +7595,18 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Program Development',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>When getting started with the establishment of an inclusive postsecondary education option for students with ID, there are many things to consider. You need to articulate the overall vision for the new endeavor. Administrative issues such as gaining support at your college/university, developing an operating budget and staffing needs will need to be addressed. Equally important are details of the program operations, such as the course of study your students will follow, the credential students will earn, career development and the connection with the college or university’s career services and how students will be supported throughout all campus activities of their choosing.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -7872,8 +7629,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -7889,21 +7646,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3810',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '3810',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -7941,16 +7698,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -7970,39 +7727,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-3a806a4a-885e-4529-b8fe-9bb5f0ffa1f1';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this Page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '3a806a4a-885e-4529-b8fe-9bb5f0ffa1f1';
-  $display->content['new-3a806a4a-885e-4529-b8fe-9bb5f0ffa1f1'] = $pane;
-  $display->panels['row1left'][0] = 'new-3a806a4a-885e-4529-b8fe-9bb5f0ffa1f1';
-  $pane = new stdClass();
   $pane->pid = 'new-5d7e3826-f989-4d22-b7d8-2916ceccd962';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -8017,15 +7741,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '5d7e3826-f989-4d22-b7d8-2916ceccd962';
   $display->content['new-5d7e3826-f989-4d22-b7d8-2916ceccd962'] = $pane;
-  $display->panels['row1left'][1] = 'new-5d7e3826-f989-4d22-b7d8-2916ceccd962';
+  $display->panels['row1left'][0] = 'new-5d7e3826-f989-4d22-b7d8-2916ceccd962';
   $pane = new stdClass();
   $pane->pid = 'new-643417ce-911e-4e9b-b11a-eafa69180f43';
   $pane->panel = 'row1left';
@@ -8035,8 +7759,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'quick links',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.nationalskillscoalition.org">National Skills Coalition</a>: National Skills Coalition is a broad-based coalition working toward a vision of an America that grows its economy by investing in its people so that every worker and every industry has the skills to compete and prosper.</li>
 	<li><a href="/technical-assistance/affinity-groups/ncc-credentials">Student Credentials in Inclusive Higher Education Affinity Group</a>: The Student Credentials Affinity group brings together professionals, researchers, advocates, policymakers and educators interested in discussing the credential landscape in postsecondary education. This is an open-access special interest group targeted at individuals who want to contribute to the discussion of "meaningful credentials" for students with intellectual disabilities.</li>
@@ -8044,19 +7766,21 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '643417ce-911e-4e9b-b11a-eafa69180f43';
   $display->content['new-643417ce-911e-4e9b-b11a-eafa69180f43'] = $pane;
-  $display->panels['row1left'][2] = 'new-643417ce-911e-4e9b-b11a-eafa69180f43';
+  $display->panels['row1left'][1] = 'new-643417ce-911e-4e9b-b11a-eafa69180f43';
   $pane = new stdClass();
   $pane->pid = 'new-937e313b-fcdf-4633-97c6-1d90242cc97c';
   $pane->panel = 'row1left';
@@ -8066,27 +7790,27 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Sign up Today!',
-    'title' => 'Sign up Today!',
-    'title_heading' => 'h3',
     'body' => '<p>Sign Up Today! Check out the <strong>Student Credentials Group</strong>, where those with similar interests can connect with each other!</p>
 
 <p class="rtecenter"><a class="btn btn-primary" href="https://thinkcollege.net/technical-assistance/affinity-groups/ncc-credentials">Sign up</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Sign up Today!',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'join',
     'css_class' => 'box',
+    'css_id' => 'join',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '937e313b-fcdf-4633-97c6-1d90242cc97c';
   $display->content['new-937e313b-fcdf-4633-97c6-1d90242cc97c'] = $pane;
-  $display->panels['row1left'][3] = 'new-937e313b-fcdf-4633-97c6-1d90242cc97c';
+  $display->panels['row1left'][2] = 'new-937e313b-fcdf-4633-97c6-1d90242cc97c';
   $pane = new stdClass();
   $pane->pid = 'new-4c3e3a4f-290a-4d10-8d9a-5d47716419b9';
   $pane->panel = 'row1right';
@@ -8096,14 +7820,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>A growing number of institutions of higher education (IHE) are enrolling students with intellectual disability (ID). Programs for students with ID offer a range of credentials upon completion of programs of study. These credentials vary in their format and structure and the extent to which they are aligned with standard IHE credential development or provision structures. But in many cases, they represent the first credential available at these IHEs to this traditionally marginalized group of learners.</p>
 <p>The IHE credential landscape generally is expanding rapidly to include online credentials, micro and nanodegrees, and non-degree credentials of value. Students, employers, researchers, policymakers, educators and advocates are considering the question: What are the characteristics of a "meaningful credential"? The resources on this page provide information and insights about credentials for students with ID, and also offer context about the credential landscape nationally.
 </p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -8129,8 +7853,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -8146,21 +7870,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4354',
-    'links' => 1,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 1,
+    'nid' => '4354',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h3',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -8198,16 +7922,11 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
-    'no_blocks' => 1,
-    'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
+    'body_classes_to_remove' => '',
     'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'panel',
+    'css' => '',
+    'css_id' => '',
     'metatag_panels' => array(
       'enabled' => 1,
       'metatags' => array(
@@ -8216,6 +7935,11 @@ a.orange {
         ),
       ),
     ),
+    'name' => 'panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'relationships' => array(),
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -8235,39 +7959,6 @@ a.orange {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-e4affeb8-7efc-4f79-8bda-5dd06617997d';
-  $pane->panel = 'row1left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'On this page',
-    'title' => 'On this page',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="#featuredresources">Featured Resources</a></li>
-	<li><a href="#quicklinks">Quick Links</a></li>
-	<li><a href="#faq">Frequently Asked Questions</a></li>
-	<li><a href="#news">News &amp; Features</a></li>
-</ul>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'box infolist',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'e4affeb8-7efc-4f79-8bda-5dd06617997d';
-  $display->content['new-e4affeb8-7efc-4f79-8bda-5dd06617997d'] = $pane;
-  $display->panels['row1left'][0] = 'new-e4affeb8-7efc-4f79-8bda-5dd06617997d';
-  $pane = new stdClass();
   $pane->pid = 'new-3dbffebb-fb1b-4dd9-a22c-70c833cbc26b';
   $pane->panel = 'row1left';
   $pane->type = 'views_panes';
@@ -8282,15 +7973,15 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '3dbffebb-fb1b-4dd9-a22c-70c833cbc26b';
   $display->content['new-3dbffebb-fb1b-4dd9-a22c-70c833cbc26b'] = $pane;
-  $display->panels['row1left'][1] = 'new-3dbffebb-fb1b-4dd9-a22c-70c833cbc26b';
+  $display->panels['row1left'][0] = 'new-3dbffebb-fb1b-4dd9-a22c-70c833cbc26b';
   $pane = new stdClass();
   $pane->pid = 'new-b25a290f-fab0-4e0b-bb4c-6b18b135bd82';
   $pane->panel = 'row1left';
@@ -8300,31 +7991,32 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
-    'body' => '<ul>
-	<li><a href="https://vrpracticesandyouth.org/">Rehabilitation Research &amp; Training Center (RRTC) on VR Practices &amp; Youth</a></li>
+    'body' => '<p>&nbsp;</p>
+
+<ul>
 	<li><a href="https://www2.ed.gov/about/offices/list/osers/rsa/index.html">Rehabilitation Services Administration (RSA) </a></li>
-	<li><a href="http://www.rehabnetwork.org/about-us/">Council of State Administrators of Vocational Rehabilitation (CSAVR)</a></li>
+	<li><a href="https://www.csavr.org">Council of State Administrators of Vocational Rehabilitation (CSAVR)</a></li>
 	<li><a href="https://www.ssa.gov/work/">Social Security Administration: Ticket to Work</a></li>
 	<li><a href="https://nationalrehab.org">National Rehabilitation Association (NRA)</a></li>
 </ul>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'quicklinks',
     'css_class' => 'box external-links-list',
+    'css_id' => 'quicklinks',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'b25a290f-fab0-4e0b-bb4c-6b18b135bd82';
   $display->content['new-b25a290f-fab0-4e0b-bb4c-6b18b135bd82'] = $pane;
-  $display->panels['row1left'][2] = 'new-b25a290f-fab0-4e0b-bb4c-6b18b135bd82';
+  $display->panels['row1left'][1] = 'new-b25a290f-fab0-4e0b-bb4c-6b18b135bd82';
   $pane = new stdClass();
   $pane->pid = 'new-ce4fcef9-93bb-463a-939a-dd747649b7ab';
   $pane->panel = 'row1left';
@@ -8334,26 +8026,26 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Sign up today!',
-    'title' => 'Sign up today!',
-    'title_heading' => 'h3',
     'body' => '<p>Check out the <strong>Vocational Rehabilitation Affinity Group</strong>, where those who are interested in VR can connect with each other to network and connect!</p>
 
 <p class="rtecenter"><a class="btn btn-primary" href="http://www.surveygizmo.com/s3/3834983/VR-Affinity-Group-Participant-Survey">Sign up</a></p>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Sign up today!',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'join',
     'css_class' => 'box',
+    'css_id' => 'join',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = 'ce4fcef9-93bb-463a-939a-dd747649b7ab';
   $display->content['new-ce4fcef9-93bb-463a-939a-dd747649b7ab'] = $pane;
-  $display->panels['row1left'][3] = 'new-ce4fcef9-93bb-463a-939a-dd747649b7ab';
+  $display->panels['row1left'][2] = 'new-ce4fcef9-93bb-463a-939a-dd747649b7ab';
   $pane = new stdClass();
   $pane->pid = 'new-b30fe4df-b619-4915-8fb2-4fe3761d8ecc';
   $pane->panel = 'row1right';
@@ -8363,20 +8055,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Vocational Rehab',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Vocational rehabilitation, or VR, programs exist in each state and territory. VR agencies support people with disabilities to find and keep competitive, integrated employment.</p>
 
 <p>This VR mission aligns well with inclusive higher education programs, which support people with intellectual disability to access college. Building a strong relationship between VR and these college programs is essential for helping people with intellectual disability to increase their independence, find and keep fulfilling jobs, and boost their self-sufficiency.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -8399,8 +8091,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -8416,21 +8108,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '3625',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '3625',
     'override_title' => 1,
-    'override_title_text' => 'Frequently Asked Questions',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -8451,19 +8143,22 @@ a.orange {
   $page->task = 'page';
   $page->admin_title = 'Key Resources for TPSIDs';
   $page->admin_description = '';
-  $page->path = 'tpsid/key-resources-for-tpsids';
+  $page->path = 'about/tpsid/key-resources-for-tpsids';
   $page->access = array(
+    'logic' => 'and',
     'plugins' => array(
       0 => array(
+        'context' => 'logged-in-user',
         'name' => 'perm',
+        'not' => FALSE,
         'settings' => array(
           'perm' => 'access content',
         ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
       ),
       1 => array(
+        'context' => 'logged-in-user',
         'name' => 'role',
+        'not' => FALSE,
         'settings' => array(
           'rids' => array(
             0 => 7,
@@ -8471,23 +8166,20 @@ a.orange {
             2 => 14,
           ),
         ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
       ),
     ),
-    'logic' => 'and',
   );
   $page->menu = array(
-    'type' => 'normal',
-    'title' => 'Key Resources for TPSIDs',
     'name' => 'main-menu',
-    'weight' => '0',
     'parent' => array(
-      'type' => 'none',
-      'title' => '',
       'name' => 'navigation',
+      'title' => '',
+      'type' => 'none',
       'weight' => '0',
     ),
+    'title' => 'Key Resources for TPSIDs',
+    'type' => 'normal',
+    'weight' => '0',
   );
   $page->arguments = array();
   $page->conf = array(
@@ -8503,16 +8195,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -8546,8 +8238,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -8564,18 +8256,18 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'block2',
-    'title' => 'Innovation Exchange',
-    'title_heading' => 'h3',
-    'body' => '<p>The Think College website features a section called <strong><a href="https://thinkcollege.net/resources/innovation-exchange">Innovation Exchange</a></strong>, where you will find curated resources on multiple&nbsp;topics related to inclusive higher education.&nbsp; If you are looking for resources and ideas, check here first!</p>
+    'body' => '<p>In the&nbsp;<a href="https://thinkcollege.net/resources/resources-by-topic"><b>Resources by Topic</b></a>&nbsp;section of our website, you will find curated resources on several key topics related to the development and operation of college programs for students with ID.&nbsp;&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Resources by Topic',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -8592,18 +8284,18 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'block1',
-    'title' => 'Program Staff Facebook Group',
-    'title_heading' => 'h3',
     'body' => '<p>The National Coordinating Center has set up a <strong><a href="https://www.facebook.com/groups/786344151769234">Facebook group for staff of college programs</a> </strong>to touch base virtually both through posts on the page and regularly scheduled "virtual support groups" where program staff can ask questions and share resources. Join the group!</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Program Staff Facebook Group',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -8620,12 +8312,12 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'TPSID Resources',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>This page is a go to spot for all TPSID staff when looking for a resource shared by the Coordinating Center.&nbsp; Here you will find contact lists for all TPSID staff and Coordinating Center staff, important resources related to accreditation and applying to become a Comprehensive Transition Program, and resources shared during TPSID meetings and calls.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -8651,8 +8343,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -8668,21 +8360,21 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4589',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4589',
     'override_title' => 1,
-    'override_title_text' => 'FREQUENTLY ASKED QUESTIONS',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'FREQUENTLY ASKED QUESTIONS',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -8720,16 +8412,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -8759,12 +8451,12 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Moving Transition Forward Logo" class="img-responsive" src="/sites/default/files/images/MTF_2020_F.png" /></p>
 <br />',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -8784,14 +8476,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'nav buttons - mtf',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><a class="btn btn-block btn-huge btn-info" href="/projects/mtf/about-moving-transition-forward" type="button">ABOUT</a> <a class="btn btn-block btn-huge btn-info" href="/projects/mtf/moving-transition-forward-team-members" type="button">TEAM MEMBERS</a><a class="btn btn-block btn-huge btn-info" href="mailto:clare.papay@umb.edu" type="button"> CONTACT</a></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -8817,8 +8509,8 @@ a.orange {
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box box-border-light-blue',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -8835,8 +8527,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Quick Links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://www.mathematica.org/our-publications-and-findings/projects/national-longitudinal-transition-study" target="_blank">National Longitudinal Transition Study 2012</a></li>
 	<li><a href="https://thinkcollege.net/tpsid" target="_blank">Transition and Postsecondary Programs for Students with Intellectual Disabilities</a></li>
@@ -8845,12 +8535,14 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Quick Links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box infolist box-border-light-blue',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -8867,18 +8559,18 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>The Moving Transition Forward: Exploration of College-based and Conventional Transition Practices for Students with Intellectual Disability and Autism (ID/A) project examines the composition and impact of existing transition practices for students with ID/A. In this Institute for Education Sciences (IES)-funded project, we are conducting a series of seven secondary analysis studies with two national datasets.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'project-intro-box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -8895,8 +8587,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'About the Project',
-    'title_heading' => 'h3',
     'body' => '<p>Moving Transition Forward: Exploration of College-based and Conventional Transition Practices for Students with Intellectual Disability and Autism (ID/A) is a research project comprised of three-phases of analysis on data collected about students attending high schools and college-based transition programs across the U.S. to define, explore, and compare critical aspects of two transition approaches:&nbsp;</p>
 
 <ul>
@@ -8918,12 +8608,14 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'About the Project',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-light-blue',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -8940,18 +8632,18 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Funding Information',
-    'title_heading' => 'h3',
     'body' => '<p>This project is funded by Institute of Education Sciences, National Center for Special Education Research (NCSER), Special Education Research Grants competition (Award number: R324A190085).</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Funding Information',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box box-border-light-blue',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -8989,16 +8681,16 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -9028,13 +8720,13 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'NCC logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<br />
 <p><img alt="National Coordinating Center Logo" class="img-responsive" src="/sites/default/files/images/NCC-logo.png" /></p>
 <br />',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -9056,14 +8748,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'button nav - NCC Page',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<p><a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/think-college-national-coordinating-center">About</a> <a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/national-coordinating-center-team-members">Team Members</a> <a class="btn btn-block btn-huge btn-orange" href="/technical-assistance/technical-assistance-providers" type="button">Technical Assistance</a> <a class="btn btn-block btn-huge btn-orange" href="/resources/innovation-exchange/accreditation" type="button"> Accreditation Standards</a> <a class="btn btn-block btn-huge btn-orange" href="https://thinkcollege.net/about/ncc-project-advisory-committee" type="button"> Project&nbsp;Advisory Committee</a> <a class="btn btn-block btn-huge btn-orange" href="mailto:Cathryn.Weir@umb.edu" type="button"> Contact Us</a></p>
+    'body' => '<p><a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/think-college-national-coordinating-center">About</a> <a class="btn btn-block btn-huge btn-orange" href="/projects/national-coordinating-center/national-coordinating-center-team-members">Team Members</a> <a class="btn btn-block btn-huge btn-orange" href="/technical-assistance/technical-assistance-providers" type="button">Technical Assistance</a> <a class="btn btn-block btn-huge btn-orange" href="/projects/ncc/ncc-accreditation-workgroup-activities" type="button"> Accreditation Standards</a> <a class="btn btn-block btn-huge btn-orange" href="https://thinkcollege.net/about/ncc-project-advisory-committee" type="button"> Project&nbsp;Advisory Committee</a> <a class="btn btn-block btn-huge btn-orange" href="mailto:Cathryn.Weir@umb.edu" type="button"> Contact Us</a></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -9085,20 +8777,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Resources by Topic',
-    'title_heading' => 'h3',
-    'body' => '<p>The best way to get in-depth info on over a <a href="http://devel.thinkcollege.net/resources/innovation-exchange"><strong>dozen critical topics</strong></a>, including key resources, relevant news and expertly prepared FAQs.</p>
+    'body' => '<p>The best way to get in-depth info on over a <a href="http://thinkcollege.net/resources/innovation-exchange"><strong>dozen critical topics</strong></a>, including key resources, relevant news and expertly prepared FAQs.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Resources by Topic',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box-orange infolist',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -9114,27 +8806,27 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 0,
-    'nodes_per_page' => '8',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 0,
     'args' => '',
-    'url' => '',
     'display' => 'block_1',
+    'feed_icons' => 0,
+    'link_to_view' => 0,
+    'more_link' => 0,
+    'nodes_per_page' => '8',
+    'offset' => '0',
+    'override_pager_settings' => 0,
     'override_title' => 1,
-    'override_title_text' => 'UPCOMING NCC EVENTS',
     'override_title_heading' => 'h2',
+    'override_title_text' => 'UPCOMING NCC EVENTS',
+    'pager_id' => '0',
+    'panel_args' => 0,
+    'url' => '',
+    'use_pager' => 0,
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'vertical',
     'css_class' => '',
+    'css_id' => 'vertical',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -9159,8 +8851,8 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box-orange',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -9177,8 +8869,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'State Specific Information',
-    'title_heading' => 'h3',
     'body' => '<p>The NCC regularly tracks state legislative and policy efforts, as well as any other state or regional level activities, committees or organizations&nbsp;related to PSE for students with ID.&nbsp; Find out more about <a href="https://thinkcollege.net/resources/whats-happening-in-your-state"><strong>what is happening in YOUR state!</strong></a></p>
 
 <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">Choose State</button>
@@ -9190,7 +8880,7 @@ a.orange {
 	<li><a href="/resources/whats-happening-in-your-state/states/arizona">Arizona</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/arkansas">Arkansas</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/california">California</a></li>
-	<li><a href="/resources/whats-happening-in-your-state/states/colorado&lt;">Colorado</a></li>
+	<li><a href="/resources/whats-happening-in-your-state/states/colorado">Colorado</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/connecticut">Connecticut</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/delaware">Delaware</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/district-of-columbia">District Of Columbia</a></li>
@@ -9200,7 +8890,7 @@ a.orange {
 	<li><a href="/resources/whats-happening-in-your-state/states/idaho">Idaho</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/illinois">Illinois</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/indiana">Indiana</a></li>
-	<li><a href="/resources/whats-happening-in-your-state/states/iowa&lt;">Iowa</a></li>
+	<li><a href="/resources/whats-happening-in-your-state/states/iowa">Iowa</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/kansas">Kansas</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/kentucky">Kentucky</a></li>
 	<li><a href="/resources/whats-happening-in-your-state/states/louisiana">Louisiana</a></li>
@@ -9241,14 +8931,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'State Specific Information',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'states',
     'css_class' => 'box-orange ',
+    'css_id' => 'states',
   );
   $pane->extras = array();
   $pane->position = 5;
@@ -9265,20 +8957,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<p>The Think College National Coordinating Center is funded by the US Department of Education to provide&nbsp;coordination, training, and evaluation for Transition and Postsecondary Education Programs for Students with Intellectual Disabilities (TPSID) and national leadership, technical assistance and dissemination activities to increase knowledge of evidence-based practices needed to develop, implement, and evaluate high-quality higher education opportunities for students with intellectual disability.</p>
+    'body' => '<p>The Think College National Coordinating Center provides coordination, technical assistance, training, and evaluation for Transition and Postsecondary Education Programs for Students with Intellectual Disabilities (TPSID).&nbsp;The NCC also provides on-demand technical assistance, training&nbsp;resources, and support to all college programs for students with ID, families and students.&nbsp;We develop and disseminate&nbsp;resources aimed at increasing&nbsp;knowledge of the evidence-based practices needed to develop, implement, and evaluate high-quality higher education opportunities for students with intellectual disability.&nbsp;Think College NCC is funded by the US Department of Education, Office of Postsecondary Education.&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'project-intro-box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -9303,8 +8995,8 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'ie-news',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -9320,25 +9012,26 @@ a.orange {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'TPSID Grantees',
-    'title' => 'TPSID Grantees',
-    'title_heading' => 'h3',
-    'body' => '<p>Transition and Postsecondary Programs for Students with Intellectual Disability, or TPSID, are model demonstration projects funded by the US Department of Education. &nbsp;The NCC supports the work of TPSID grantees by collecting and analyzing data on&nbsp;program design and student experiences in order to increase knowledge about the impact and outcomes of postsecondary education for students with intellectual disability. &nbsp;<a href="http://devel.thinkcollege.net/about/what-is-a-tpsid"><strong>Learn more about the TPSID grantees.</strong></a></p>
+    'admin_title' => 'TPSID GRANTEES AND ASSOCIATED SITES',
+    'body' => '<p>Transition and Postsecondary Programs for Students with Intellectual Disability, or TPSID, are model demonstration projects funded by the US Department of Education. &nbsp;The NCC collects and analyzes data on&nbsp;program design and student experiences from each TPSID program in order to increase knowledge about the impact and outcomes of postsecondary education for students with intellectual disability. &nbsp;<br />
+<a href="/projects/national-coordinating-center/what-is-a-tpsid"><strong>Learn more about the TPSID grantees.</strong></a></p>
 
-<p><span style="font-size:12px;">This&nbsp;map illustrates the location of&nbsp;TPSID sites since funding for the TPSID programs began in 2010.</span></p>
+<p>The interactive map below shows the location of TPSID grantees and associated sites. Some grantees work statewide to develop multiple college programs, while others develop one program at their own institution. Since 2010, there have been 123 IHE involved as a TPSID grantee or program site.&nbsp; These have been funded in three rounds of funding: 2010-2015, 2015- 2020, and 2020 - 2025.&nbsp;</p>
 
-<p><img alt="TPSID US Grantees map" class="img-responsive" src="/sites/default/files/images/TPSID%20Cohorts%20Map.png" /></p>
-',
+<div class="tableauPlaceholder" id="viz1636566758569" style="position: relative"><noscript><a href=\'#\'><img alt=\'Dashboard 2 \' src=\'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TPSIDSites&#47;Dashboard2&#47;1_rss.png\' style=\'border: none\' /></a></noscript><object class="tableauViz" style="display:none;"><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /><param name="embed_code_version" value="3" /><param name="site_root" value="" /><param name="name" value="TPSIDSites/Dashboard2" /><param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https://public.tableau.com/static/images/TP/TPSIDSites/Dashboard2/1.png" /><param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /><param name="language" value="en-US" /><param name="filter" value="publish=yes" /></object></div>
+<script type=\'text/javascript\'>                    var divElement = document.getElementById(\'viz1636566758569\');                    var vizElement = divElement.getElementsByTagName(\'object\')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width=\'100%\';vizElement.style.height=(divElement.offsetWidth*0.75)+\'px\';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width=\'100%\';vizElement.style.height=(divElement.offsetWidth*0.75)+\'px\';} else { vizElement.style.width=\'100%\';vizElement.style.height=\'727px\';}                     var scriptElement = document.createElement(\'script\');                    scriptElement.src = \'https://public.tableau.com/javascripts/api/viz_v1.js\';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'TPSID GRANTEES AND ASSOCIATED SITES',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box-orange',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -9355,8 +9048,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'NCC Partners',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li class="pb20"><a href="https://www.ahead.org/home" target="_blank"><img alt="AHEAD logo" src="/sites/default/files/images/ahead-logo400x600.png" style="float: right; margin: 5px; height: 200px; width: 300px;" />Association On Higher Education And Disability (AHEAD)</a>: &nbsp;AHEAD is a member organization for&nbsp;disability resource professionals, student affairs personnel, ADA coordinators, diversity officers&nbsp;and others who are invested in creating welcoming higher education experiences for disabled individuals. AHEAD assists the NCC with arrangments for its annual TPSID Project Director Meeting&nbsp;and is conducting a&nbsp;survey of&nbsp;disability support professionals regarding their experiences with and attitudes toward college programs for students with ID.</li>
 	<li><a href="https://www.aucd.org/template/index.cfm" target="_blank"><img alt="AUCD logo" src="/sites/default/files/images/aucd_words_logo.png" style="float: right; margin: 5px; height: 200px; width: 300px;" />Association of University Centers on Disabilities (AUCD)</a>:&nbsp;The Association of University Centers on Disabilities (AUCD) is a membership organization that supports a national network of university-based interdisciplinary programs.&nbsp; AUCD supports the National Coordinating Center&nbsp;by tracking state and federal legislation&nbsp;related to postsecondary education for students with ID&nbsp;and coordinates&nbsp;activities related to&nbsp;the development of leadership and advocacy skills in students with disabilities.&nbsp;</li>
@@ -9364,14 +9055,16 @@ a.orange {
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'NCC Partners',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box-orange infolist',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -9388,20 +9081,20 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Funding Information',
-    'title_heading' => 'h3',
     'body' => '<p>NCC is funded by the US Department of Education, Office of Postsecondary Education, Grant # P407B200001. It is a project of the Institute for Community Inclusion at University of Massachusetts Boston.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Funding Information',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box-orange',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -9422,7 +9115,7 @@ a.orange {
   $page->task = 'page';
   $page->admin_title = 'Public Policy Affinity Group';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/public-policy';
+  $page->path = 'ta-training/affinity-groups/public-policy';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -9439,16 +9132,11 @@ a.orange {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
-    'no_blocks' => 1,
-    'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
+    'body_classes_to_remove' => '',
     'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'panel',
+    'css' => '',
+    'css_id' => '',
     'metatag_panels' => array(
       'enabled' => 1,
       'metatags' => array(
@@ -9457,6 +9145,11 @@ a.orange {
         ),
       ),
     ),
+    'name' => 'panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'relationships' => array(),
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -9484,14 +9177,14 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Public Policy Affinity Group Logo" class="img-responsive" src="/sites/default/files/images/Public%20Policy.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -9511,8 +9204,6 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Affinity Group Facilitator',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Denise Rozell" class="center-block img-thumbnail img-responsive" src="/sites/default/files/files/images/staff-photos/small_denise_rozell.jpg" style="height: 100px; width: 100px;" /><br />
 <strong>Denise Rozell</strong>, Director of Policy Innovation at the Association of University Centers on Disabilities (AUCD).<br />
 <a href="mailto:drozell@aucd.org">drozell@aucd.org</a><br />
@@ -9521,12 +9212,14 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Affinity Group Facilitator',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -9549,8 +9242,8 @@ Direct: 240.821.9465<br />
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -9567,8 +9260,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>The Public Policy Affinity Group was designed to allow online discussion related to policy and legislation affecting inclusive higher education at the state and federal levels. What we realized over time was that policy is an important aspect of all of the affinity group topics, and should&nbsp;be integrated&nbsp;in the regularly scheduled meetings.</p>
 
 <p><strong>Effective October 2020, the Public Policy Affinity Group will not hold regular meetings.</strong> You may continue to contact Denise Rozell with any questions, and consider joining other Affinity Groups to stay informed about important issues related to inclusive higher education.</p>
@@ -9577,6 +9268,8 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -9596,18 +9289,18 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Next Meeting',
-    'title_heading' => 'h3',
     'body' => '<p>The Public Policy Affinity Group will not be meeting anymore. Instead, policy issues will be addressed as appropriate within each of the other Affinity Groups.&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Next Meeting',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -9624,8 +9317,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Notes from past meetings ',
-    'title_heading' => 'h3',
     'body' => '<p>The last&nbsp;joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups was&nbsp;<strong>August 12, 2020</strong>. At this session we welcomed three&nbsp;guest speakers,&nbsp;<strong>Mary Hauff,</strong>&nbsp;advocate and parent from Minnesota, and&nbsp;<strong>Lauren Bruno and Jennifer Cremers</strong>, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID. The recording can be found&nbsp;<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">here</a></strong>.&nbsp;</p>
 
 <hr />
@@ -9672,12 +9363,14 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Notes from past meetings ',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -9694,18 +9387,18 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Have Any Other Ideas for the Public Policy Affinity Group?',
-    'title_heading' => 'h3',
     'body' => '<p>Email <a href="mailto:drozell@aucd.org">Denise Rozell</a> with your ideas!</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Have Any Other Ideas for the Public Policy Affinity Group?',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -9726,7 +9419,7 @@ Direct: 240.821.9465<br />
   $page->task = 'page';
   $page->admin_title = 'Affinity Group on Research in Inclusive Higher Education';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/research';
+  $page->path = 'ta-training/affinity-groups/research';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -9743,16 +9436,11 @@ Direct: 240.821.9465<br />
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
-    'no_blocks' => 1,
-    'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
+    'body_classes_to_remove' => '',
     'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'panel',
+    'css' => '',
+    'css_id' => '',
     'metatag_panels' => array(
       'enabled' => 1,
       'metatags' => array(
@@ -9761,6 +9449,11 @@ Direct: 240.821.9465<br />
         ),
       ),
     ),
+    'name' => 'panel',
+    'no_blocks' => 1,
+    'pipeline' => 'ipe',
+    'relationships' => array(),
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -9788,14 +9481,14 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Research Affinity Group Logo" class="img-responsive" src="/sites/default/files/images/Research.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -9815,24 +9508,28 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'AFFINITY GROUP FACILITATOR',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Clare Papay" class="center-block img-thumbnail img-responsive" src="/sites/default/files/files/images/staff-photos/clare-papay.png" style="width: 100px; height: 100px;" /></p>
 
-<p><strong>Clare Papay</strong>, Ph.D.</p>
+<p><strong>Clare Papay</strong>, Ph.D.<br />
+Senior Research Associate, Think College<br />
+<a href="mailto:clare.papay@umb.edu">clare.papay@umb.edu</a></p>
+<hr />
+<p><strong><img alt="" class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/research%20cofac.png" style="width: 100px; height: 100px;" /></strong></p>
 
-<p>Senior Research Associate at Think College</p>
-
-<p><a href="mailto:clare.papay@umb.edu">clare.papay@umb.edu</a></p>
+<p><strong>John Andresen, PhD</strong><br />
+Research Associate, Indiana University\'s UCEDD<br />
+<a href="mailto:andresjm@iu.edu" rel="noopener" target="_blank" title="null">andresjm@iu.edu</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'AFFINITY GROUP CO-FACILITATORs',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -9848,21 +9545,21 @@ Direct: 240.821.9465<br />
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => '',
-    'title' => 'How to join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the Affinity Group on Research?</p>
+    'admin_title' => 'ag-email-sub',
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://goo.gl/forms/ihckSyvTgRZKXb1N2" role="button" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Stay Informed by Email',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -9885,8 +9582,8 @@ Direct: 240.821.9465<br />
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -9903,8 +9600,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Member links',
-    'title_heading' => 'h3',
     'body' => '<ul>
 	<li><a href="https://docs.google.com/spreadsheets/d/1CmpZgklviyp33rsmNDbm19x4UKLNVyz2yj9natGti9w/edit?usp=sharing" target="_blank">Member directory</a></li>
 	<li><a href="https://docs.google.com/document/d/1bQMhj16DIw6A47udfDBTbUHKy8pSebb8Infh2Bp4Ksg/edit?usp=sharing" target="_blank">Agendas</a></li>
@@ -9914,12 +9609,14 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Member links',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box external-links-list',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -9936,8 +9633,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Welcome to the Think College Affinity Group on Research in Inclusive Higher Education</p>
 
 <p>The purpose of the Affinity Group is to support members to:</p>
@@ -9954,12 +9649,14 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'intro',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -9976,18 +9673,27 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Next meeting',
-    'title_heading' => 'h3',
-    'body' => '<p>Our next meeting will be held <strong>May 18, 2021 at 1pm</strong>. You may join the meeting <strong><a href="https://communityinclusion.zoom.us/j/92328719621?pwd=bnFkZGM1ekorL1QwcmRzMFltSGlMUT09">here;</a></strong> meeting agenda and notes may be found here.&nbsp;</p>
+    'body' => '<p><strong><a href="https://communityinclusion.zoom.us/j/99788743035?pwd=eFZaVXhzMzFXY2dPeDZsaVl1cElnZz09">Permanent Zoom meeting room</a></strong></p>
+
+<p><strong><a href="https://docs.google.com/document/d/1bQMhj16DIw6A47udfDBTbUHKy8pSebb8Infh2Bp4Ksg/edit">Rolling meeting agenda</a>&nbsp;</strong>all agendas and notes can be found here</p>
+
+<p>All meetings take place from 1-2pm ET unless otherwise noted</p>
+
+<ul>
+	<li>Thursday, April 21, 2022</li>
+	<li>Wednesday, July 27, 2022</li>
+</ul>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -10004,9 +9710,9 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Notes from past meetings',
-    'title_heading' => 'h3',
-    'body' => '<p>The Research Affinity Group hold meetings quarterly and typically includes&nbsp;a short presentation on related research as well as informal sharing at each meeting. You can find more detailed notes by opening the agenda or watching the recording.&nbsp;Click on this link for the&nbsp;<a href="https://docs.google.com/document/d/1bQMhj16DIw6A47udfDBTbUHKy8pSebb8Infh2Bp4Ksg/edit?usp=sharing" target="_blank">agenda for all our meetings</a>&nbsp;(most recent meeting is first in the document. Scroll down to see the agenda for previous meetings). Click on the links below to access recordings from past meetings.&nbsp;</p>
+    'body' => '<p>Click on the links below to access recordings from past meetings.&nbsp;</p>
+
+<p><strong>January 20, 2022 </strong>(recording upon request)</p>
 
 <p><strong><a href="https://icimedia.wistia.com/medias/4ysgmqswlt">February 25, 2021</a></strong></p>
 
@@ -10044,12 +9750,14 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -10066,18 +9774,18 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Have other ideas for the Affinity Group on Research?',
-    'title_heading' => 'h3',
     'body' => '<p><b>&nbsp;</b>Send an email to <a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Have other ideas for the Affinity Group on Research?',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -10098,7 +9806,7 @@ Direct: 240.821.9465<br />
   $page->task = 'page';
   $page->admin_title = 'statewide-alliances-affinity-group';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/statewide-alliances';
+  $page->path = 'ta-training/affinity-groups/statewide-alliances';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -10115,16 +9823,16 @@ Direct: 240.821.9465<br />
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -10152,14 +9860,14 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Student Credentials Affinity Group" class="img-responsive" src="/sites/default/files/images/statealliances_logo.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -10179,8 +9887,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'AFFINITY GROUP FACILITATOR',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Susanna Miller-Raines" class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/Susanna%20Miller-Raines.jpg" /></p>
 
 <p><strong>Susanna Miller-Raines</strong></p>
@@ -10193,12 +9899,14 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'AFFINITY GROUP FACILITATOR',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -10215,20 +9923,19 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'How to Join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the State Alliances Affinity Group?</p>
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeevlctgVucsq72Zj0mxUkxsoJGeGL_yqUQf7QDZrIs_PbOBg/viewform" role="button" target="_blank">Sign Up Now!</a></p>
-',
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'STAY INFORMED BY EMAIL',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -10251,8 +9958,8 @@ Direct: 240.821.9465<br />
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -10269,14 +9976,14 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>The purpose of this group is to give an opportunity to existing and potential inclusive postsecondary education programs and partners to discuss how and why these statewide alliances are important, how to maintain them, and more. Anyone working on any type of formal or informal state-level connection, proposing systems change through alliances and consortium, or those who are simply curious about how these alliances can work, are welcome.</p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -10296,20 +10003,31 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Next Meeting',
-    'title_heading' => 'h3',
-    'body' => '<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">The next meeting of the State Alliance Affinity Group will be <strong>Thursday, May 20, 2021&nbsp;at 3pm Eastern</strong>.&nbsp;</span></span></span>Click&nbsp;<a href="https://zoom.us/j/91750502598"><strong>here</strong>&nbsp;</a>to join the meeting in Zoom or <a href="https://docs.google.com/forms/d/e/1FAIpQLSeevlctgVucsq72Zj0mxUkxsoJGeGL_yqUQf7QDZrIs_PbOBg/viewform">sign up to&nbsp;join</a> the affinity group to receive full connection details. The agenda for the meeting can be found <strong><a href="https://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">here</a></strong>.&nbsp;</p>
+    'body' => '<p><strong><a href="http://zoom.us/j/91750502598"><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Permanent Zoom meeting room link</span></span></span></a></strong></p>
 
-<p>&nbsp;</p>
+<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333"><strong><a href="http://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">Rolling agenda link</a></strong> all agendas and notes can be found here</span></span></span></p>
+
+<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Meeting dates</span></span></span></p>
+
+<ul>
+	<li><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">March 21, 2022</span></span></span><br />
+	<b id="docs-internal-guid-4169fac4-7fff-d96e-7c54-9b5b4fef39a0">Topic: How do you decide on what schools to expand to next? </b></li>
+	<li><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">May 19, 2022</span></span></span><br />
+	<strong><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Topic: TBA</span></span></span></strong></li>
+</ul>
+
+<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">The group meets from 3-4pm ET, unless otherwise noted.</span></span></span></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Meeting Schedule',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -10326,22 +10044,18 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Notes from past meetings',
-    'title_heading' => 'h3',
-    'body' => '<p>Meetings of the State Alliance Affinity Group are held approximately quarterly.&nbsp;Notes from all past&nbsp;meetings can be found&nbsp;<strong><a href="https://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">here</a></strong>.&nbsp;</p>
-
-<p>The recordings from previous meetings can be found below:</p>
-
-<p><strong><a href="https://icimedia.wistia.com/medias/nf0a03tjun">January 21, 2021</a></strong></p>
+    'body' => '<p>Notes from past&nbsp;meetings are available at&nbsp;<strong><a href="https://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">here</a></strong>.&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -10362,19 +10076,22 @@ Direct: 240.821.9465<br />
   $page->task = 'page';
   $page->admin_title = 'tpsid-events';
   $page->admin_description = '';
-  $page->path = 'tpsid/tpsid-events';
+  $page->path = 'about/tpsid/tpsid-events';
   $page->access = array(
+    'logic' => 'and',
     'plugins' => array(
       0 => array(
+        'context' => 'logged-in-user',
         'name' => 'perm',
+        'not' => FALSE,
         'settings' => array(
           'perm' => 'access content',
         ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
       ),
       1 => array(
+        'context' => 'logged-in-user',
         'name' => 'role',
+        'not' => FALSE,
         'settings' => array(
           'rids' => array(
             0 => 7,
@@ -10382,23 +10099,20 @@ Direct: 240.821.9465<br />
             2 => 14,
           ),
         ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
       ),
     ),
-    'logic' => 'and',
   );
   $page->menu = array(
-    'type' => 'normal',
-    'title' => 'TPSID Events',
     'name' => 'main-menu',
-    'weight' => '0',
     'parent' => array(
-      'type' => 'none',
-      'title' => '',
       'name' => 'navigation',
+      'title' => '',
+      'type' => 'none',
       'weight' => '0',
     ),
+    'title' => 'TPSID Events',
+    'type' => 'normal',
+    'weight' => '0',
   );
   $page->arguments = array();
   $page->conf = array(
@@ -10414,16 +10128,16 @@ Direct: 240.821.9465<br />
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -10450,18 +10164,18 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Upcoming Events',
-    'title' => 'Upcoming Events',
-    'title_heading' => 'h3',
     'body' => '&nbsp;
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Upcoming Events',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'tc-home-twitter-block',
     'css_class' => 'box',
+    'css_id' => 'tc-home-twitter-block',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -10470,67 +10184,94 @@ Direct: 240.821.9465<br />
   $display->content['new-55ad164d-7cc6-4cde-be03-1eea8ae51e60'] = $pane;
   $display->panels['middle'][0] = 'new-55ad164d-7cc6-4cde-be03-1eea8ae51e60';
   $pane = new stdClass();
-  $pane->pid = 'new-0bc66e59-7e19-43de-98e2-37818bf0a162';
+  $pane->pid = 'new-ff1a8ba6-de71-4c80-8b68-a360a4c90252';
   $pane->panel = 'middle';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'FY21 Quarter 3 Online Meeting ',
-    'title' => 'FY21 Quarter 3 Online Meeting ',
-    'title_heading' => 'h3',
-    'body' => '<h4>Wednesday, April 28, 2021, 3:00 - 4:00 pm Eastern time</h4>
+    'admin_title' => ' ',
+    'body' => '<h4>Thursday, Jan 27, 2022,&nbsp; 3:00 - 4:00 pm eastern</h4>
 
-<h4><strong><a href="https://communityinclusion.zoom.us/j/95094637414">Link to join meeting</a></strong></h4>
+<p><strong><a href="https://communityinclusion.zoom.us/j/94671905316">LINK TO MEETING</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'FY22: Quarter 2 online meeting',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'info-box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = '0bc66e59-7e19-43de-98e2-37818bf0a162';
-  $display->content['new-0bc66e59-7e19-43de-98e2-37818bf0a162'] = $pane;
-  $display->panels['middle'][1] = 'new-0bc66e59-7e19-43de-98e2-37818bf0a162';
+  $pane->uuid = 'ff1a8ba6-de71-4c80-8b68-a360a4c90252';
+  $display->content['new-ff1a8ba6-de71-4c80-8b68-a360a4c90252'] = $pane;
+  $display->panels['middle'][1] = 'new-ff1a8ba6-de71-4c80-8b68-a360a4c90252';
   $pane = new stdClass();
-  $pane->pid = 'new-5653cafd-cf81-4ece-9031-fa52a6443691';
+  $pane->pid = 'new-7101c42c-9f2a-45cd-8440-3f2405cb0f94';
   $pane->panel = 'middle';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Project Director Meeting',
-    'title' => 'Project Director Meeting',
-    'title_heading' => 'h3',
-    'body' => '<h4>Monday July 19 and Tuesday, July 20, 2021</h4>
+    'admin_title' => '',
+    'body' => '<h4>​​​​​Wednesday April 20, 2022, 3:00 - 4:00&nbsp;pm eastern</h4>
 
-<h4>LOCATION TO BE DETERMINED by&nbsp;no later than 3/30/2021</h4>
-
-<p>Note that at this time (March 2021) it is most likely that this meeting will be held virtually.</p>
+<p><strong><a href="https://communityinclusion.zoom.us/j/99919813456">LINK TO MEETING</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'FY22: Quarter 3 online meeting',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'info-box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $pane->uuid = '5653cafd-cf81-4ece-9031-fa52a6443691';
-  $display->content['new-5653cafd-cf81-4ece-9031-fa52a6443691'] = $pane;
-  $display->panels['middle'][2] = 'new-5653cafd-cf81-4ece-9031-fa52a6443691';
+  $pane->uuid = '7101c42c-9f2a-45cd-8440-3f2405cb0f94';
+  $display->content['new-7101c42c-9f2a-45cd-8440-3f2405cb0f94'] = $pane;
+  $display->panels['middle'][2] = 'new-7101c42c-9f2a-45cd-8440-3f2405cb0f94';
+  $pane = new stdClass();
+  $pane->pid = 'new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<h4>July 18 and 19, 2022<br />
+Cleveland, OH</h4>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'TPSID Project Director Meeting',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'info-box',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = 'e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
+  $display->content['new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef'] = $pane;
+  $display->panels['middle'][3] = 'new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
   $pane = new stdClass();
   $pane->pid = 'new-b3a3c124-5abe-467a-8740-339081e8f33a';
   $pane->panel = 'middle';
@@ -10540,24 +10281,154 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'past events title',
-    'title' => 'Past Events',
-    'title_heading' => 'h3',
     'body' => '&nbsp;',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Events',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'tc-home-twitter-block',
     'css_class' => 'box',
+    'css_id' => 'tc-home-twitter-block',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = 'b3a3c124-5abe-467a-8740-339081e8f33a';
   $display->content['new-b3a3c124-5abe-467a-8740-339081e8f33a'] = $pane;
-  $display->panels['middle'][3] = 'new-b3a3c124-5abe-467a-8740-339081e8f33a';
+  $display->panels['middle'][4] = 'new-b3a3c124-5abe-467a-8740-339081e8f33a';
+  $pane = new stdClass();
+  $pane->pid = 'new-91df911a-448c-4e06-85e1-c7c4d0607959';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Data Collection, Analysis, and Reporting System webinar',
+    'body' => '<h4>Presented live on Monday, November 29, 2021 by Sean Nagamatsu and Eric Folk from the University of Hawaii</h4>
+
+<p>This webinar for TPSID staff shares&nbsp;a data collection tool&nbsp;developed by the TPSID staff at the University of Hawaii they call "DCARS". &nbsp;It is used to record and track student progress toward academic, personal, and project goals as well as to track support provision. Use of this system provides the ability to monitor project fidelity indicators, as well as progress toward TPSID, NIRS, and USDOE data collection and reporting. And since the system is continuously updated, it can be used to provide timely updates concerning individual student performance and program data&nbsp;between reporting periods.</p>
+
+<p style="margin: 0in;"><a href="https://fast.wistia.net/embed/channel/e0vajbd98r?wchannelid=e0vajbd98r&amp;wvideoid=vuseg04tob"><font face="Calibri, sans-serif"><span style="font-size: 14.6667px;"><b>Watch recording</b></span></font></a></p>
+
+<p style="margin:0in">&nbsp;</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'Data Collection, Analysis, and Reporting System (DCARS) Webinar',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'info-box',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $pane->uuid = '91df911a-448c-4e06-85e1-c7c4d0607959';
+  $display->content['new-91df911a-448c-4e06-85e1-c7c4d0607959'] = $pane;
+  $display->panels['middle'][5] = 'new-91df911a-448c-4e06-85e1-c7c4d0607959';
+  $pane = new stdClass();
+  $pane->pid = 'new-9cf9b2fa-4c44-48f7-9e3f-d9a5972c1dcc';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<h4>Tuesday, Oct. 26,&nbsp;2021, 3:00&nbsp; - 4:00 pm eastern</h4>
+
+<hr />
+<h4><a href="https://communityinclusion.zoom.us/rec/share/nPXzdq3CI_D_JwGR7BaWKbL4BBSmKSHvQE4UPHF4K7L0Tj_p88L9ek7ENvBZaDpZ.QWGIH5bZmE_P7T04">Meeting Recording</a></h4>
+
+<h4><a href="/sites/default/files/files/FY22_Q1_tpsidmtngPPT_handout.pdf">PPT handout</a></h4>
+
+<h4><a href="/sites/default/files/files/NCC_TSPID%20Survey_Report2021.pdf">TPSID Annual Survey: Report of Findings</a></h4>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'FY 2022 Quarter 1 online meeting',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'info-box',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = '9cf9b2fa-4c44-48f7-9e3f-d9a5972c1dcc';
+  $display->content['new-9cf9b2fa-4c44-48f7-9e3f-d9a5972c1dcc'] = $pane;
+  $display->panels['middle'][6] = 'new-9cf9b2fa-4c44-48f7-9e3f-d9a5972c1dcc';
+  $pane = new stdClass();
+  $pane->pid = 'new-5653cafd-cf81-4ece-9031-fa52a6443691';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Project Director Meeting',
+    'body' => '<h4>Monday July 19 and Tuesday, July 20, 2021</h4>
+
+<hr />
+<h4>Recordings of all PD Meeting sessions are <a href="https://fast.wistia.com/embed/channel/kaof5i0b7i">now available.</a></h4>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'Project Director Meeting',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'info-box',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 7;
+  $pane->locks = array();
+  $pane->uuid = '5653cafd-cf81-4ece-9031-fa52a6443691';
+  $display->content['new-5653cafd-cf81-4ece-9031-fa52a6443691'] = $pane;
+  $display->panels['middle'][7] = 'new-5653cafd-cf81-4ece-9031-fa52a6443691';
+  $pane = new stdClass();
+  $pane->pid = 'new-0bc66e59-7e19-43de-98e2-37818bf0a162';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'FY21 Quarter 3 Online Meeting ',
+    'body' => '<h4>Wednesday, April 28, 2021, 3:00 - 4:00 pm Eastern time</h4>
+
+<h4>&nbsp;</h4>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'FY21 Quarter 3 Online Meeting ',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'info-box',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 8;
+  $pane->locks = array();
+  $pane->uuid = '0bc66e59-7e19-43de-98e2-37818bf0a162';
+  $display->content['new-0bc66e59-7e19-43de-98e2-37818bf0a162'] = $pane;
+  $display->panels['middle'][8] = 'new-0bc66e59-7e19-43de-98e2-37818bf0a162';
   $pane = new stdClass();
   $pane->pid = 'new-98a63273-6abb-4f43-9ff5-2d0aa3edd582';
   $pane->panel = 'middle';
@@ -10567,8 +10438,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'FY21 Quarter 2 Online Meeting',
-    'title' => 'FY21 Quarter 2 Online Meeting',
-    'title_heading' => 'h3',
     'body' => '<h4>Tuesday, January 26, 2021, 3:00 - 4:00 pm Eastern time</h4>
 
 <h4><b><a href="https://communityinclusion.zoom.us/rec/play/gJkBrKSBfZnzPl2JQMZrERfMszyDknNOQEVbDDMe7X6QZhEhYydlLe3mI6iEX2pQNALPBs3QtftSL2qf.fUZIEmvpVdxUdNjC?continueMode=true">Link to meeting recording</a>&nbsp;</b>(Passcode: 60pC?.%9)</h4>
@@ -10577,19 +10446,21 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'FY21 Quarter 2 Online Meeting',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'info-box',
+    'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 9;
   $pane->locks = array();
   $pane->uuid = '98a63273-6abb-4f43-9ff5-2d0aa3edd582';
   $display->content['new-98a63273-6abb-4f43-9ff5-2d0aa3edd582'] = $pane;
-  $display->panels['middle'][4] = 'new-98a63273-6abb-4f43-9ff5-2d0aa3edd582';
+  $display->panels['middle'][9] = 'new-98a63273-6abb-4f43-9ff5-2d0aa3edd582';
   $pane = new stdClass();
   $pane->pid = 'new-8517b262-6b05-40a3-ba9f-44eca3352a2c';
   $pane->panel = 'middle';
@@ -10599,27 +10470,27 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Get to Know the TPSID Projects',
-    'title' => 'Get to Know the TPSID Projects',
-    'title_heading' => 'h3',
     'body' => '<h4>Recorded Thursday, November 12, 2020&nbsp; 3:00&nbsp;- 4:00 pm&nbsp;Eastern time</h4>
 
 <h4><a href="https://fast.wistia.net/embed/channel/e0vajbd98r?wchannelid=e0vajbd98r&amp;wvideoid=x7n2oecfwt"><strong>Link to meeting recording</strong></a></h4>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Get to Know the TPSID Projects',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'info-box',
+    'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 5;
+  $pane->position = 10;
   $pane->locks = array();
   $pane->uuid = '8517b262-6b05-40a3-ba9f-44eca3352a2c';
   $display->content['new-8517b262-6b05-40a3-ba9f-44eca3352a2c'] = $pane;
-  $display->panels['middle'][5] = 'new-8517b262-6b05-40a3-ba9f-44eca3352a2c';
+  $display->panels['middle'][10] = 'new-8517b262-6b05-40a3-ba9f-44eca3352a2c';
   $pane = new stdClass();
   $pane->pid = 'new-5ebd41c0-650e-4208-b114-82ff0b3dc439';
   $pane->panel = 'middle';
@@ -10629,27 +10500,27 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'FY21 Quarter 1 Online Meeting',
-    'title' => 'Get to Know the National Coordinating Center',
-    'title_heading' => 'h3',
     'body' => '<h4>Recorded Wednesday, October 27, 2020, 3:00 - 4:00 pm Eastern time</h4>
 
 <h4><a href="https://icimedia.wistia.com/medias/uf1fa6m4h5"><strong>Link to meeting recording</strong></a></h4>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Get to Know the National Coordinating Center',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'info-box',
+    'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 6;
+  $pane->position = 11;
   $pane->locks = array();
   $pane->uuid = '5ebd41c0-650e-4208-b114-82ff0b3dc439';
   $display->content['new-5ebd41c0-650e-4208-b114-82ff0b3dc439'] = $pane;
-  $display->panels['middle'][6] = 'new-5ebd41c0-650e-4208-b114-82ff0b3dc439';
+  $display->panels['middle'][11] = 'new-5ebd41c0-650e-4208-b114-82ff0b3dc439';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -10680,16 +10551,16 @@ Direct: 240.821.9465<br />
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -10719,14 +10590,14 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Transition Leadership Project Logo" class="img-responsive" src="/sites/default/files/images/transition-leadership_logo.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -10748,8 +10619,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><a class="btn btn-block btn-huge btn-dk-blue" href="/projects/transition-leadership/transition-leadership-program" type="button">About</a>
 <a class="btn btn-block btn-huge btn-dk-blue" href="/projects/transition-leadership/transition-leadership-team-members" type="button">Team Members</a>
 <a class="btn btn-block btn-huge btn-dk-blue" href="/projects/transition-leadership/testimonials" type="button">Testimonials</a><a class="btn btn-block btn-huge btn-dk-blue" href="mailto:maria.paiewonsky@umb.edu" type="button">Contact Us</a></p>
@@ -10757,6 +10626,8 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -10778,8 +10649,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Program Director',
-    'title_heading' => 'h3',
     'body' => '<p>&nbsp;</p>
 
 <p><img alt="Maria Paiewonsky." class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/maria-paiewonsky.png" style="height: 200px; width: 200px;" /></p>
@@ -10790,14 +10659,16 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Program Director',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -10820,8 +10691,8 @@ Direct: 240.821.9465<br />
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -10838,8 +10709,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Stay Up to Date ',
-    'title_heading' => 'h3',
     'body' => '<p>For individuals who want or need to keep up with their transition services professional development, here are a few suggestions:</p>
 
 <ul>
@@ -10855,14 +10724,16 @@ Direct: 240.821.9465<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Stay Up to Date ',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -10879,20 +10750,20 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p>Transition leadership involves the transition from high school to adult life for young people with a wide range of disabilities. Our certificate program bridges the gap between special education and adult services by creating a cohort of professionals who connect these two fields. Students who successfully complete the certificate track will be well positioned to excel in a new role: that of transition specialist.&nbsp; The UMB Transition Leadership program is a fully online, 18-credit course of study. Six courses are offered over four semesters, leading to the Graduate Certificate in Special Education with a Concentration in Transition Leadership. Candidates with this certification are prepared for transition specialist positions in schools, inclusive dual enrollment programs, and agencies and community provider agencies that offer pre-employment transition services.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'project-intro-box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -10915,8 +10786,8 @@ Direct: 240.821.9465<br />
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'news',
     'css_class' => 'tlp-article-panel ie-news ',
+    'css_id' => 'news',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -10932,21 +10803,21 @@ Direct: 240.821.9465<br />
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'nid' => '4894',
-    'links' => 0,
-    'leave_node_title' => 0,
-    'identifier' => '',
     'build_mode' => 'full',
+    'identifier' => '',
+    'leave_node_title' => 0,
     'link_node_title' => 0,
+    'links' => 0,
+    'nid' => '4894',
     'override_title' => 0,
-    'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'override_title_text' => '',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => 'faq',
     'css_class' => 'accordian',
+    'css_id' => 'faq',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -10963,20 +10834,22 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Standards',
-    'title' => 'National Transition Specialist Standards',
-    'title_heading' => 'h3',
-    'body' => '<p>This certificate is based on national transition specialist standards identified by the <a href="https://exceptionalchildren.org/standards">Council of Exceptional Children’s Division on Career Development and Transition’s Transition Specialist Standards</a>. Graduates of the program are eligible to apply for <a href="https://dcdt.org/dcdt-individual-teacher-certification">DCDT’s Provisional or Professional Certification in Transition Services</a>. For candidates in Massachusetts, eligible graduates will be instructed how to apply for the <a href="http://tps://www.doe.mass.edu/licensure/endorsements/transition-specialist.html">MA DESE Transition Specialist Endorsement.</a></p>
+    'body' => '<p>This certificate is based on national transition specialist standards identified by the <a href="https://exceptionalchildren.org/standards">Council of Exceptional Children’s Division on Career Development and Transition’s Transition Specialist Standards</a>. Graduates of the program are eligible to apply for <a href="https://dcdt.org/dcdt-individual-teacher-certification">DCDT’s Provisional or Professional Certification in Transition Services</a>. For candidates in Massachusetts, eligible graduates will be instructed how to apply for the <a href="https://www.doe.mass.edu/licensure/endorsements/transition-specialist.html">MA DESE Transition Specialist Endorsement</a></p>
+
+<p><img alt="" src="/sites/default/files/images/DCDT%20long.png" style="width: 300px; height: 85px;" /></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'National Transition Specialist Standards',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -10997,7 +10870,7 @@ Direct: 240.821.9465<br />
   $page->task = 'page';
   $page->admin_title = 'Vocational Rehabilitation Affinity Group';
   $page->admin_description = '';
-  $page->path = 'technical-assistance/affinity-groups/vocational-rehabilitation';
+  $page->path = 'ta-training/affinity-groups/vocational-rehabilitation';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -11014,16 +10887,16 @@ Direct: 240.821.9465<br />
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'body_classes_to_add' => '',
+    'body_classes_to_remove' => '',
+    'contexts' => array(),
+    'css' => '',
+    'css_id' => '',
+    'name' => 'panel',
     'no_blocks' => 1,
     'pipeline' => 'ipe',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
     'relationships' => array(),
-    'name' => 'panel',
+    'title' => 'Panel',
   );
   $display = new panels_display();
   $display->layout = 'tc_rubyrhod';
@@ -11051,14 +10924,14 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'logo',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p><img alt="Voc Rehab affinity group logo" class="img-responsive" src="/sites/default/files/images/Voc%20Rehab.png" /></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -11078,8 +10951,6 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'AFFINITY GROUP FACILITATOR',
-    'title_heading' => 'h3',
     'body' => '<p><img alt="Russell Thelin" class="center-block img-thumbnail img-responsive" src="/sites/default/files/files/images/staff-photos/russell-thelin-thumb.jpg" style="width: 100px; height: 100px;" /></p>
 
 <p><strong>Russell Thelin</strong>, MS, LVRC CRC<br />
@@ -11088,14 +10959,16 @@ Senior Policy Fellow<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'AFFINITY GROUP FACILITATOR',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -11112,22 +10985,22 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'How to join',
-    'title_heading' => 'h3',
-    'body' => '<p>Interested in joining the Affinity Group on Vocational Rehabilitation?</p>
+    'body' => '<p>Sign up to receive email updates for one or&nbsp;more Affinity Groups.</p>
 
-<p class="text-center"><a class="btn btn-primary" href="https://forms.gle/4E1kAB57jB6JacwGA" role="button" target="_blank">Sign Up Now!</a></p>
+<p><a class="btn btn-primary" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.gle%2FJe4msZRDoko3MkTk9&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C1c5ce26b3b6d4ecec8b708d97ed48538%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680273491490073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=E3TaxZFtHcw4W624XgIs%2BDfhaV7nSEMX3EdrEpH2Gvo%3D&amp;reserved=0" role="button" target="_blank">Sign Up Now!</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'STAY INFORMED BY EMAIL',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -11152,8 +11025,8 @@ Senior Policy Fellow<br />
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'featuredresources',
     'css_class' => 'ie-featuredresources box',
+    'css_id' => 'featuredresources',
   );
   $pane->extras = array();
   $pane->position = 3;
@@ -11170,8 +11043,6 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'h2',
     'body' => '<p class="lead">Welcome to the Think College Affinity Group on Vocational Rehabilitation. The purpose of the Affinity Group is to:</p>
 
 <ul>
@@ -11188,6 +11059,8 @@ Senior Policy Fellow<br />
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -11209,26 +11082,30 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Future Meetings',
-    'title_heading' => 'h3',
-    'body' => '<p dir="ltr" role="presentation">Save the date(s)! Join all meetings using <strong><a href="https://communityinclusion.zoom.us/j/98092070179">this link</a></strong>.&nbsp;</p>
+    'body' => '<p dir="ltr" role="presentation"><a href="http://communityinclusion.zoom.us/j/98092070179">Permanent Zoom meeting room</a></p>
 
-<p dir="ltr" role="presentation"><b id="docs-internal-guid-e43c00c8-7fff-5632-d88c-5fe0f96f1ce9">May 5, 2021&nbsp; 2:00-3:30pm Eastern</b></p>
+<p dir="ltr" role="presentation"><a href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit">Rolling agenda</a>&nbsp;&nbsp;all agendas and notes can be found here</p>
 
-<p dir="ltr" role="presentation"><b id="docs-internal-guid-e43c00c8-7fff-5632-d88c-5fe0f96f1ce9">August 4, 2021&nbsp; 2:00-3:30pm Eastern</b></p>
+<p dir="ltr" role="presentation"><b id="docs-internal-guid-e43c00c8-7fff-5632-d88c-5fe0f96f1ce9">All meetings are held from 2:00-3:30pm Eastern, unless otherwise noted</b></p>
 
-<p dir="ltr" role="presentation"><b id="docs-internal-guid-e43c00c8-7fff-5632-d88c-5fe0f96f1ce9">November 3, 2021&nbsp; 2:00-3:30pm Eastern</b></p>
+<ul dir="ltr">
+	<li role="presentation">February 2, 2022</li>
+	<li role="presentation">May 4, 2022</li>
+	<li role="presentation">August 3, 2022</li>
+</ul>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Future Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 1;
@@ -11245,49 +11122,82 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Notes from past meetings',
-    'title_heading' => 'h3',
-    'body' => '<p>The last meeting for the VR Affinity group was <strong>February 3</strong>; the recording from that meeting can be found <strong><a href="https://icimedia.wistia.com/medias/xddnwu28iq">here</a></strong>, and the notes are <strong><a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I%2Fedit&amp;data=04%7C01%7CRebecca.Lazo%40umb.edu%7C3c74daa1e2b546d30dd608d8dd9261fc%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637502968071327603%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=IYrzQkGzi3GFynvFIzl57aJ%2BqZO2biYoUR0Hn3sdrN4%3D&amp;reserved=0">here</a></strong>.&nbsp;The&nbsp;meeting before that was held on&nbsp;<strong>November 5.</strong></p>
+    'body' => '<p><em>The Vocational Rehabilitation Affinity Group holds meetings quarterly and typically includes&nbsp;a short presentation, legislative and policy updates,&nbsp;as well as informal sharing at each meeting. Click on the links below to access recordings, meeting agendas,&nbsp;and other resources&nbsp;from past meetings.&nbsp;</em></p>
+
+<p><strong>Date:</strong>&nbsp;November 3, 2021</p>
+
+<p><strong>Topic:</strong>&nbsp;Oklahoma VR and IPSE: History and Evolution</p>
+
+<p><strong>Presenter:</strong>&nbsp;Julie Lackey, Oklahoma</p>
+
+<p><strong>Summary:</strong>&nbsp;Julie Lackey of Oklahoma talk about their history and evolution of relationships to advance IPSE within Oklahoma, including the VR agency as a critical player. Covering the effort from 2018 to the current time, Julie talked about the skills and effort to build relationships with VR, higher education, legislators, Dept. of Education, and more that have moved VR IPSE support from none to supporting students in three different programs within the state.</p>
+
+<p><strong><a href="/sites/default/files/files/VR%20Affinity%20Group%2011_3_21%20summary.docx">Meeting notes</a></strong></p>
 
 <hr />
-<p>The last&nbsp;joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups was <strong>August 12, 2020</strong>. At this session we welcomed three&nbsp;guest speakers,&nbsp;<strong>Mary Hauff,</strong>&nbsp;advocate and parent from Minnesota, and&nbsp;<strong>Lauren Bruno and Jennifer Cremers</strong>, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID. The recording can be found <strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">here</a></strong>.&nbsp;</p>
+<p><strong>Date:</strong>&nbsp;February 3, 2021</p>
+
+<p><strong><a data-mce-href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit" href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit">Meeting notes</a>&nbsp;</strong></p>
 
 <hr />
-<p>A crossover Affinity Group meeting with the Public Policy&nbsp;and Student Credentials groups was held on&nbsp;<strong>April 1, 2020</strong>. All resources can be found&nbsp;<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">here</a></strong>, including the recording, transcript, a special PowerPoint, and a summary handout.</p>
+<p><strong>Date:</strong>&nbsp;November 5</p>
+
+<p><em>Details and meeting resources are unavailable</em></p>
 
 <hr />
-<p><strong>November 6</strong> was the date of the last Vocational Rehabiliation affinity group meeting. It was held in conjunction with the Student Credentials and the Public Policy affinity groups. The recording of the meeting can be found <a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity"><strong>here</strong></a>.&nbsp;</p>
+<p><strong>Date:</strong>&nbsp;August 12, 2020</p>
+
+<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
+
+<p><strong>Presenters:</strong>&nbsp;Mary Hauff,&nbsp;Lauren Bruno and Jennifer Cremers</p>
+
+<p><strong>Summary:</strong>&nbsp;Mary Hauff,&nbsp;advocate and parent from Minnesota, and&nbsp;Lauren Bruno and Jennifer Cremers, University of Iowa REACH program, shared an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID.</p>
+
+<p><strong><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">Meeting notes and recording are available here</a>.&nbsp;</strong></p>
 
 <hr />
-<p>The last meeting of this group was held <strong>August 7, 2019</strong> in conjunction with the Public Policy and Student Credentials Affinity groups as a special crossover event. The recording and transcript from that meeting can be found <a href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019"><strong>here</strong></a>.&nbsp;</p>
+<p><strong>Date:</strong>&nbsp;April 1, 2020</p>
+
+<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
+
+<p><strong><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">Meeting resources are available&nbsp;</a><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">here</a></strong></p>
 
 <hr />
-<p>The Vocational Rehabilitation Affinity Group holds meetings quarterly and typically includes&nbsp;a short presentation, legislative and policy updates,&nbsp;as well as informal sharing at each meeting. Click on the links below to access recordings, meeting agendas,&nbsp;and other resources&nbsp;from past meetings.&nbsp;</p>
+<p><strong>Date:</strong>&nbsp;November 6, 2019</p>
 
-<p><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-meeting-may-2019"><strong>May 1, 2019</strong></a></p>
+<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
 
-<p><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-meeting-february-2019"><strong>February 6, 2019</strong></a>&nbsp;</p>
+<p><strong><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">Meeting resources are available&nbsp;</a><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity">here</a></strong></p>
 
-<p>November 7, 2018</p>
+<hr />
+<p><strong>Date:</strong>&nbsp;August 7, 2019</p>
 
-<p>August 1, 2018</p>
+<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
 
-<p><a href="https://docs.google.com/document/d/1qh8SaoC7D8JTsWzOQfP-M2dClP8PJ4nckNMbYsEbPyQ/edit"><strong>May 2, 2018</strong></a> (no recording, agenda only)</p>
+<p><strong><a data-mce-href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019" href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019">Meeting resources are available&nbsp;here</a></strong></p>
 
-<p><a href="https://docs.google.com/document/d/1qh8SaoC7D8JTsWzOQfP-M2dClP8PJ4nckNMbYsEbPyQ/edit#bookmark=id.koh488i6sz6u"><strong>February 7, 2018</strong></a>. (no recording, agenda only)</p>
+<hr />
+<p style="margin-top:0in; margin-right:0in; margin-bottom:7.5pt; margin-left:0in"><b>Date:</b> May 1, 2019<br />
+<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-meeting-may-2019">Meeting resources available here</a></strong></p>
 
-<p><strong><a href="https://thinkcollege.net/events/vocational-rehabilitation-affinity-group-meeting/affinity-group-on-vocational-rehabilitation">November 1, 2017</a>&nbsp;</strong>(no recording, agenda only)</p>
+<hr />
+<p><b>Date: </b>February 6, 2019</p>
 
-<p>&nbsp;</p>
+<p><strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-meeting-february-2019">Meeting resources available here</a></strong></p>
+
+<hr />
+<p style="margin-top:0in; margin-right:0in; margin-bottom:7.5pt; margin-left:0in"><strong><span style="background:white"><span style="font-family:&quot;Lato&quot;,sans-serif"><span style="color:#333333"><a href="https://docs.google.com/document/d/1qh8SaoC7D8JTsWzOQfP-M2dClP8PJ4nckNMbYsEbPyQ/edit#bookmark=id.525ph4n37z82">See the agenda for notes on 2018 meetings.</a></span></span></span></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Past Meetings',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array();
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 2;
@@ -11304,20 +11214,20 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Have other ideas for the Affinity Group on Vocational Rehabilitation?',
-    'title_heading' => 'h3',
     'body' => '<p><b>&nbsp;</b>Send an email to <a href="mailto:Russ.Thelin@umb.edu?subject=Ideas%20for%20VR%20Affinity%20Group">Russ.Thelin@umb.edu</a> or&nbsp;<a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a>.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title' => 'Have other ideas for the Affinity Group on Vocational Rehabilitation?',
+    'title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => '',
     'css_class' => 'box',
+    'css_id' => '',
   );
   $pane->extras = array();
   $pane->position = 3;

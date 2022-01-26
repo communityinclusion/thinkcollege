@@ -2,18 +2,18 @@
 
 /**
  * @file
- * ymstuff.features.field_instance.inc
+ * article.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ymstuff_field_default_field_instances() {
+function article_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'.
-  $field_instances['node-page-body'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-article-body'.
+  $field_instances['node-article-body'] = array(
+    'bundle' => 'article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -23,7 +23,7 @@ function ymstuff_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'jquerymobile_teaser' => array(
         'label' => 'above',
@@ -37,14 +37,33 @@ function ymstuff_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => 1,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_link' => 0,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 200,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -67,9 +86,9 @@ function ymstuff_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_feature_in_section'.
-  $field_instances['node-page-field_feature_in_section'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-article-field_feature_in_section'.
+  $field_instances['node-article-field_feature_in_section'] = array(
+    'bundle' => 'article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -78,7 +97,7 @@ function ymstuff_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -86,23 +105,17 @@ function ymstuff_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
     ),
     'display_label' => '',
@@ -120,24 +133,25 @@ function ymstuff_field_default_field_instances() {
         'content_taxonomy_opt_groups' => 0,
       ),
       'type' => 'options_buttons',
-      'weight' => 44,
+      'weight' => 43,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_page_order_on_page'.
-  $field_instances['node-page-field_page_order_on_page'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
+  // Exported field_instance: 'node-article-field_image'.
+  $field_instances['node-article-field_image'] = array(
+    'bundle' => 'article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload an image to go with this article.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'large',
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'jquerymobile_teaser' => array(
         'label' => 'above',
@@ -151,44 +165,63 @@ function ymstuff_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
-        'label' => 'above',
+      'search_result' => array(
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_page_order_on_page',
-    'label' => 'Order on page',
-    'required' => 0,
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => FALSE,
     'settings' => array(
+      'alt_field' => TRUE,
+      'default_image' => 0,
+      'file_directory' => 'field/image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'options',
+      'module' => 'image',
       'settings' => array(
-        'content_taxonomy_opt_groups' => FALSE,
+        'imce_filefield_on' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'options_select',
-      'weight' => 5,
+      'type' => 'image_image',
+      'weight' => -1,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_resourc_topics'.
-  $field_instances['node-page-field_resourc_topics'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-article-field_project'.
+  $field_instances['node-article-field_project'] = array(
+    'bundle' => 'article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 4,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -196,31 +229,18 @@ function ymstuff_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_index' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 7,
       ),
     ),
     'display_label' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_resourc_topics',
-    'label' => 'Topics',
+    'field_name' => 'field_project',
+    'label' => 'Project',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -232,22 +252,68 @@ function ymstuff_field_default_field_instances() {
         'content_taxonomy_opt_groups' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 44,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_site_section'.
-  $field_instances['node-page-field_site_section'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-article-field_review'.
+  $field_instances['node-article-field_review'] = array(
+    'bundle' => 'article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 6,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_review',
+    'label' => 'Review',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 46,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_tags'.
+  $field_instances['node-article-field_tags'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter a comma-separated list of words to describe your content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
       ),
       'jquerymobile_teaser' => array(
         'label' => 'above',
@@ -261,41 +327,54 @@ function ymstuff_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
+      'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_site_section',
-    'label' => 'Section',
+    'field_name' => 'field_tags',
+    'label' => 'Tags',
     'required' => FALSE,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'options',
+      'module' => 'taxonomy',
       'settings' => array(
-        'content_taxonomy_opt_groups' => FALSE,
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'content_taxonomy_autocomplete_new_terms' => 'allow',
+        'size' => 60,
       ),
-      'type' => 'options_select',
-      'weight' => 4,
+      'type' => 'taxonomy_autocomplete',
+      'weight' => -4,
     ),
   );
 
-  // Exported field_instance: 'node-page-field_teaser_image'.
-  $field_instances['node-page-field_teaser_image'] = array(
-    'bundle' => 'page',
+  // Exported field_instance: 'node-article-field_teaser_image'.
+  $field_instances['node-article-field_teaser_image'] = array(
+    'bundle' => 'article',
     'deleted' => 0,
-    'description' => 'Use this to add an image for use on landing pages as a teaser image.',
+    'description' => 'Use this to upload an image for use on a landing page as a teaser image.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -303,23 +382,21 @@ function ymstuff_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_index' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
       'search_result' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 10,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
     ),
     'display_label' => '',
@@ -333,7 +410,7 @@ function ymstuff_field_default_field_instances() {
       'file_directory' => 'teasers',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '',
+      'max_resolution' => '500x500',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -347,19 +424,22 @@ function ymstuff_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 42,
+      'weight' => 41,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Enter a comma-separated list of words to describe your content.');
   t('Feature in Section');
-  t('Order on page');
-  t('Section');
+  t('Image');
+  t('Project');
+  t('Review');
+  t('Tags');
   t('Teaser image');
-  t('Topics');
-  t('Use this to add an image for use on landing pages as a teaser image.');
+  t('Upload an image to go with this article.');
+  t('Use this to upload an image for use on a landing page as a teaser image.');
 
   return $field_instances;
 }

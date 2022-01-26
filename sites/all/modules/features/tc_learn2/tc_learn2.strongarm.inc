@@ -86,12 +86,60 @@ function tc_learn2_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__tc_learn';
   $strongarm->value = array(
+    'extra_fields' => array(
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'visible' => TRUE,
+            'weight' => '4',
+          ),
+          'full' => array(
+            'visible' => TRUE,
+            'weight' => '3',
+          ),
+          'search_index' => array(
+            'visible' => TRUE,
+            'weight' => '4',
+          ),
+          'search_result' => array(
+            'visible' => TRUE,
+            'weight' => '4',
+          ),
+        ),
+      ),
+      'form' => array(
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'title' => array(
+          'weight' => '-5',
+        ),
+      ),
+    ),
     'view_modes' => array(
-      'teaser' => array(
-        'custom_settings' => TRUE,
+      'card' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'event_attachment' => array(
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => TRUE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -102,59 +150,11 @@ function tc_learn2_strongarm() {
       'search_result' => array(
         'custom_settings' => TRUE,
       ),
-      'ical' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'print' => array(
-        'custom_settings' => FALSE,
+      'teaser' => array(
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
-      ),
-      'card' => array(
-        'custom_settings' => FALSE,
-      ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-      'event_attachment' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(
-        'metatags' => array(
-          'weight' => '40',
-        ),
-        'title' => array(
-          'weight' => '-5',
-        ),
-        'path' => array(
-          'weight' => '30',
-        ),
-      ),
-      'display' => array(
-        'webform' => array(
-          'default' => array(
-            'weight' => '4',
-            'visible' => TRUE,
-          ),
-          'full' => array(
-            'weight' => '3',
-            'visible' => TRUE,
-          ),
-          'search_index' => array(
-            'weight' => '4',
-            'visible' => TRUE,
-          ),
-          'search_result' => array(
-            'weight' => '4',
-            'visible' => TRUE,
-          ),
-        ),
       ),
     ),
   );
@@ -198,6 +198,20 @@ function tc_learn2_strongarm() {
   $strongarm->name = 'node_submitted_tc_learn';
   $strongarm->value = 0;
   $export['node_submitted_tc_learn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_tc_learn_pattern';
+  $strongarm->value = 'training/[node:book:parents:join-path]/[node:title]';
+  $export['pathauto_node_tc_learn_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_think_college_learn_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_think_college_learn_pattern'] = $strongarm;
 
   return $export;
 }
