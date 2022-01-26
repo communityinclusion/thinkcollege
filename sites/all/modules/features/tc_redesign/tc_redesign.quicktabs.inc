@@ -21,20 +21,20 @@ function tc_redesign_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Events';
   $quicktabs->tabs = array(
     0 => array(
-      'vid' => 'tc_events_page',
-      'display' => 'page',
       'args' => '',
+      'display' => 'page',
       'title' => 'Upcoming Events',
-      'weight' => '-100',
       'type' => 'view',
+      'vid' => 'tc_events_page',
+      'weight' => '-100',
     ),
     1 => array(
-      'vid' => 'tc_events_page',
-      'display' => 'page_3',
       'args' => '',
+      'display' => 'page_3',
       'title' => 'Past Events',
-      'weight' => '-99',
       'type' => 'view',
+      'vid' => 'tc_events_page',
+      'weight' => '-99',
     ),
   );
   $quicktabs->renderer = 'quicktabs';

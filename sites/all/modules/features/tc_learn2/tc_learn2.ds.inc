@@ -19,9 +19,9 @@ function tc_learn2_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '0',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|tc_learn|full'] = $ds_fieldsetting;
@@ -43,6 +43,18 @@ function tc_learn2_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'fields' => array(
+      'body' => 'left',
+      'field_feature_in_section' => 'left',
+      'field_tc_learn_sidebar' => 'right',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'left' => array(
         0 => 'body',
@@ -52,22 +64,10 @@ function tc_learn2_ds_layout_settings_info() {
         2 => 'field_tc_learn_sidebar',
       ),
     ),
-    'fields' => array(
-      'body' => 'left',
-      'field_feature_in_section' => 'left',
-      'field_tc_learn_sidebar' => 'right',
-    ),
-    'classes' => array(),
     'wrappers' => array(
       'left' => 'div',
       'right' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|tc_learn|default'] = $ds_layout;
 
@@ -79,6 +79,19 @@ function tc_learn2_ds_layout_settings_info() {
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'fields' => array(
+      'body' => 'left',
+      'field_tc_learn_sidebar' => 'right',
+    ),
+    'hide_page_title' => '0',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
+    'page_option_title' => '',
     'regions' => array(
       'left' => array(
         0 => 'body',
@@ -87,23 +100,10 @@ function tc_learn2_ds_layout_settings_info() {
         1 => 'field_tc_learn_sidebar',
       ),
     ),
-    'fields' => array(
-      'body' => 'left',
-      'field_tc_learn_sidebar' => 'right',
-    ),
-    'classes' => array(),
     'wrappers' => array(
       'left' => 'div',
       'right' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => 0,
-    'hide_page_title' => '0',
-    'page_option_title' => '',
   );
   $export['node|tc_learn|full'] = $ds_layout;
 

@@ -34,7 +34,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_resources:uuid/node/66bee5c5-ae58-4ead-87f2-7213745ddd45',
+    'parent_identifier' => 'main-menu_resources:node/3785',
   );
   // Exported menu link: main-menu_for-families:resources/innovation-exchange/for-families.
   $menu_links['main-menu_for-families:resources/innovation-exchange/for-families'] = array(
@@ -59,7 +59,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -53,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_students--families:uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666',
+    'parent_identifier' => 'main-menu_students--families:node/4875',
   );
   // Exported menu link: main-menu_future-quest-island-explorations:projects/fqie.
   $menu_links['main-menu_future-quest-island-explorations:projects/fqie'] = array(
@@ -84,7 +84,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -55,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
+    'parent_identifier' => 'main-menu_projects:node/4876',
   );
   // Exported menu link: main-menu_moving-transition-forward:projects/mtf.
   $menu_links['main-menu_moving-transition-forward:projects/mtf'] = array(
@@ -109,7 +109,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -54,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
+    'parent_identifier' => 'main-menu_projects:node/4876',
   );
   // Exported menu link: main-menu_student-corner:resources/innovation-exchange/for-students.
   $menu_links['main-menu_student-corner:resources/innovation-exchange/for-students'] = array(
@@ -134,7 +134,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -55,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_students--families:uuid/node/da98abd4-c1ae-46d9-a71e-ad1b35768666',
+    'parent_identifier' => 'main-menu_students--families:node/4875',
   );
   // Exported menu link: main-menu_transition-leadership:projects/transition-leadership-project.
   $menu_links['main-menu_transition-leadership:projects/transition-leadership-project'] = array(
@@ -159,7 +159,7 @@ function tc_redesign_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -53,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_projects:uuid/node/ded003c3-bc3d-4f1d-9ac9-671a39abc83e',
+    'parent_identifier' => 'main-menu_projects:node/4876',
   );
 
   // Translatables
