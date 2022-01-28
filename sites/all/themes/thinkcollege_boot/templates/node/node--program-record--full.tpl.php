@@ -280,12 +280,12 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_when_will_progr_start']); ?>
           <?php print render($content['field_prog_summer_prog_name']); ?>
           <?php print render($content['field_summer_program_display']); ?>
-          <?php if(isset($content['field_prog_summer_info_link'])) { print"<tr><td><strong>Summer program link: </strong></td><td>"; 
-            print render($content['field_prog_summer_info_link'][0]); 
+          <?php if(isset($content['field_prog_summer_info_link'])) { print"<tr><td><strong>Summer program link: </strong></td><td>";
+            print render($content['field_prog_summer_info_link'][0]);
             print "</td></tr>"; } ?>
-  
-          
-          
+
+
+
         </tbody>
       </table>
     </div>
@@ -353,7 +353,7 @@ $classes .= ' node-program-record-full';
         </tr>
         </thead>
         <tbody>
-        
+
         <?php print render($content['field_prog_accept_rate']); ?>
         <?php print render($content['field_prog_retention_rate']); ?>
         <?php print render($content['field_prog_explain_nums']); ?>
@@ -493,6 +493,6 @@ $classes .= ' node-program-record-full';
     </div>
   <?php endif ?>
 
- 
+
 
 </article>
