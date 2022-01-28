@@ -150,7 +150,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 71,
+        'weight' => 70,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -378,6 +378,70 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'computed',
       'weight' => 26,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-program_record-field_all_students_in_course'.
+  $field_instances['node-program_record-field_all_students_in_course'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 90,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 83,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Did all students in your program enroll in at least one inclusive college/university course either for credit or audit?',
+    'entity_type' => 'node',
+    'field_name' => 'field_all_students_in_course',
+    'label' => 'Did all students in your program enroll in at least one inclusive college/university course either for credit or audit?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 99,
     ),
   );
 
@@ -809,7 +873,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 44,
+        'weight' => 43,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -859,7 +923,70 @@ function program_record_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 106,
+      'weight' => 110,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog__extracurr_activ'.
+  $field_instances['node-program_record-field_prog__extracurr_activ'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 96,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 78,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Students may participate in the following extra-curricular activities',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog__extracurr_activ',
+    'label' => 'Do students in this program have the opportunity to participate in any of the following?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 92,
     ),
   );
 
@@ -889,7 +1016,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 75,
+        'weight' => 74,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -923,7 +1050,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 100,
+      'weight' => 101,
     ),
   );
 
@@ -962,7 +1089,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 61,
+        'weight' => 60,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1030,7 +1157,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 54,
+        'weight' => 53,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1185,7 +1312,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 59,
+        'weight' => 58,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1248,7 +1375,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 60,
+        'weight' => 59,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1489,7 +1616,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 90,
+        'weight' => 97,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1539,6 +1666,69 @@ function program_record_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_campus_services'.
+  $field_instances['node-program_record-field_prog_campus_services'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 94,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 79,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Students in the program have access to the following campus-wide services:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_campus_services',
+    'label' => 'Students in this program have access to the following college/university services (check all that apply).',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 102,
     ),
   );
 
@@ -1619,6 +1809,69 @@ function program_record_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_college_events'.
+  $field_instances['node-program_record-field_prog_college_events'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 95,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 77,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Students participate in these campus-wide events',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_college_events',
+    'label' => 'Students in this program participate in the following college/university events: (check all that apply) ',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 116,
     ),
   );
 
@@ -1834,7 +2087,7 @@ function program_record_field_default_field_instances() {
         'weight' => 12,
       ),
     ),
-    'display_label' => 'Students take these types of "typical" courses (with students who don\'t have disabilities):',
+    'display_label' => 'Students enrolled in this program take the following types of inclusive courses (with students who don\'t have disabilities)',
     'entity_type' => 'node',
     'field_name' => 'field_prog_course_types',
     'label' => 'Students enrolled in this program take the following types of courses that are offered by the college/university',
@@ -1876,7 +2129,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 64,
+        'weight' => 63,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1910,7 +2163,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 107,
+      'weight' => 111,
     ),
   );
 
@@ -1941,7 +2194,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 56,
+        'weight' => 55,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1988,7 +2241,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 105,
+      'weight' => 109,
     ),
   );
 
@@ -2097,7 +2350,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 57,
+        'weight' => 56,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2237,7 +2490,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 91,
+        'weight' => 98,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2314,7 +2567,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 89,
+        'weight' => 96,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2393,7 +2646,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 52,
+        'weight' => 51,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2443,7 +2696,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 93,
+      'weight' => 94,
     ),
   );
 
@@ -2566,7 +2819,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 58,
+        'weight' => 57,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2632,7 +2885,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 48,
+        'weight' => 47,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2787,7 +3040,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 66,
+        'weight' => 65,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2849,7 +3102,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 80,
+        'weight' => 87,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2917,7 +3170,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 83,
+        'weight' => 90,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3041,7 +3294,70 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 35,
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_length_years2'.
+  $field_instances['node-program_record-field_prog_length_years2'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 97,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 76,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Program length',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_length_years2',
+    'label' => 'What is the planned length of this program?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 34,
     ),
   );
 
@@ -3122,7 +3438,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 99,
+      'weight' => 100,
     ),
   );
 
@@ -3152,7 +3468,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 55,
+        'weight' => 54,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3227,7 +3543,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 46,
+        'weight' => 45,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3298,7 +3614,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 73,
+        'weight' => 72,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3376,7 +3692,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 88,
+        'weight' => 95,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3455,7 +3771,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 74,
+        'weight' => 73,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3524,7 +3840,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 81,
+        'weight' => 88,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3561,7 +3877,7 @@ function program_record_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 108,
+      'weight' => 112,
     ),
   );
 
@@ -3588,7 +3904,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 96,
+        'weight' => 103,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3665,7 +3981,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 85,
+        'weight' => 92,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3832,7 +4148,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 67,
+        'weight' => 66,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3902,7 +4218,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 51,
+        'weight' => 50,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3949,7 +4265,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 92,
+      'weight' => 93,
     ),
   );
 
@@ -3978,7 +4294,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 86,
+        'weight' => 93,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4051,7 +4367,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 87,
+        'weight' => 94,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4104,12 +4420,10 @@ function program_record_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program_record-field_prog_perc_acad_time'.
-  $field_instances['node-program_record-field_prog_perc_acad_time'] = array(
+  // Exported field_instance: 'node-program_record-field_prog_perc_academic'.
+  $field_instances['node-program_record-field_prog_perc_academic'] = array(
     'bundle' => 'program_record',
     'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4117,39 +4431,27 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 16,
+        'weight' => 93,
       ),
       'full' => array(
         'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 43,
+        'weight' => 80,
       ),
       'live_results_search' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4159,16 +4461,15 @@ function program_record_field_default_field_instances() {
       ),
       'token' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 16,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
-    'display_label' => 'Percentage of academic time spent only with other students in this program:',
+    'display_label' => 'Percentage of academic time spent in inclusive courses (with students who don\'t have disabilities)',
     'entity_type' => 'node',
-    'field_name' => 'field_prog_perc_acad_time',
-    'label' => 'How much academic time is spent only with other students in this program?',
+    'field_name' => 'field_prog_perc_academic',
+    'label' => 'Of all the courses students take, what percentage of them are inclusive college/university courses? ',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4178,7 +4479,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 104,
+      'weight' => 107,
     ),
   );
 
@@ -4218,7 +4519,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 45,
+        'weight' => 44,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4804,6 +5105,145 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_remote_explain'.
+  $field_instances['node-program_record-field_prog_remote_explain'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 92,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_link' => FALSE,
+          'trim_options' => array(),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 81,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_remote_explain',
+    'label' => 'Briefly describe remote learning at your program',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 115,
+    ),
+  );
+
+  // Exported field_instance: 'node-program_record-field_prog_remote_learning'.
+  $field_instances['node-program_record-field_prog_remote_learning'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 91,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 82,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Remote learning at your program',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_remote_learning',
+    'label' => 'Describe remote learning at your program',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 114,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_retention_rate'.
   $field_instances['node-program_record-field_prog_retention_rate'] = array(
     'bundle' => 'program_record',
@@ -4839,7 +5279,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 62,
+        'weight' => 61,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4975,7 +5415,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 79,
+        'weight' => 86,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5383,7 +5823,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 53,
+        'weight' => 52,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5509,7 +5949,7 @@ function program_record_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 103,
+      'weight' => 105,
     ),
   );
 
@@ -5585,7 +6025,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 102,
+      'weight' => 104,
     ),
   );
 
@@ -5618,7 +6058,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 72,
+        'weight' => 71,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5696,7 +6136,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 78,
+        'weight' => 85,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5766,7 +6206,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 63,
+        'weight' => 62,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5800,7 +6240,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 110,
+      'weight' => 113,
     ),
   );
 
@@ -5829,7 +6269,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 68,
+        'weight' => 67,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5863,7 +6303,7 @@ function program_record_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 101,
+      'weight' => 103,
     ),
   );
 
@@ -5894,7 +6334,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 50,
+        'weight' => 49,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6040,7 +6480,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 49,
+        'weight' => 48,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6111,7 +6551,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 84,
+        'weight' => 91,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6196,7 +6636,7 @@ function program_record_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 69,
+        'weight' => 68,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6323,7 +6763,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 94,
+        'weight' => 101,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6511,7 +6951,7 @@ function program_record_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 65,
+        'weight' => 64,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6577,7 +7017,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 93,
+        'weight' => 100,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6731,7 +7171,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 70,
+        'weight' => 69,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6810,7 +7250,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 95,
+        'weight' => 102,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6886,7 +7326,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 47,
+        'weight' => 46,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6965,7 +7405,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 76,
+        'weight' => 75,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7108,7 +7548,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 92,
+        'weight' => 99,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7186,7 +7626,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 82,
+        'weight' => 89,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7545,7 +7985,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 77,
+        'weight' => 84,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7671,15 +8111,19 @@ function program_record_field_default_field_instances() {
   t('Are students required to have a regular high school diploma to be admitted to this program?');
   t('Average out-of-state tuition, current year, if applicable');
   t('Average student tuition and fees for the current school year (enter number only)');
+  t('Briefly describe remote learning at your program');
   t('Career development (display)');
   t('College/university where the program is located');
   t('Cost of the program (display)');
   t('Date program information was submitted (YYYY-mm-dd)');
   t('Describe any scholarships to students in your program');
+  t('Describe remote learning at your program');
+  t('Did all students in your program enroll in at least one inclusive college/university course either for credit or audit?');
   t('Disabilities (display)');
   t('Do any of your students attend classes related to STEM-Science, Technology, Engineering or Math? ');
   t('Do any of your students earn certificates related to STEM careers? (Science, Technology, Engineering or Math)');
   t('Do students earn a credential of any kind when they complete this program?');
+  t('Do students in this program have the opportunity to participate in any of the following?');
   t('Do students in your program join registered student organizations at the Institute of Higher Education (IHE)?');
   t('Do students take special courses that are only for students in this program? ');
   t('Do you accept out-of-state students? (question added January 2019)');
@@ -7698,7 +8142,6 @@ function program_record_field_default_field_instances() {
   t('How do students pay to attend this program (check all that apply)?');
   t('How do students pay, Other?');
   t('How many students, total, attended this program in the most recently completed academic year?');
-  t('How much academic time is spent only with other students in this program?');
   t('How much overall time on campus is spent only with other students in this program?');
   t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');
@@ -7711,6 +8154,7 @@ function program_record_field_default_field_instances() {
   t('Lat/Lon');
   t('Name of credential (degree/certificate) awarded to students who complete this program');
   t('Numbers only in this field');
+  t('Of all the courses students take, what percentage of them are inclusive college/university courses? ');
   t('Of students who completed your program last year, what percentage found paid competitive employment within 90 days of exiting?');
   t('Optional: include more details on college course access');
   t('Other costs (display)');
@@ -7745,6 +8189,8 @@ function program_record_field_default_field_instances() {
   t('Specify "other" disabilities');
   t('Students enrolled in this program take the following types of courses that are offered by the college/university');
   t('Students in this program (check all that apply)');
+  t('Students in this program have access to the following college/university services (check all that apply).');
+  t('Students in this program participate in the following college/university events: (check all that apply) ');
   t('Students pay (display)');
   t('Students take courses (display)');
   t('Summer program (display)');
