@@ -475,8 +475,8 @@ $classes .= ' node-program-record-full';
 
   <?php
   if (isset($content['field_prog_student_orgs_y_n']) ||
-    isset($content['field_prog_overall_time_dist']) ||
-    isset($content['field_prog_extracurric_explain'])):
+    isset($content['field_prog_extracurr_inclusive']) ||
+    isset($content['field_prog_extracurric_explain']) || isset($content['field_prog_extracurric_explain'])):
     ?>
     <div class="program-box" id="extracurricular">
       <table class="table table-striped">
@@ -487,7 +487,9 @@ $classes .= ' node-program-record-full';
         </thead>
         <tbody>
         <?php print render($content['field_prog_student_orgs_y_n']); ?>
+        <?php print render($content['field_prog_extracurr_inclusive']); ?>
         <?php print render($content['field_prog_overall_time_dist']); ?>
+        <?php print render($content['field_prog__extracurr_activ']); ?>
         <?php print render($content['field_prog_extracurric_explain']); ?>
         </tbody>
       </table>

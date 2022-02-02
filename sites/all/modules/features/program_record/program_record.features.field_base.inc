@@ -583,6 +583,60 @@ else {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_prog_remote_learning_displ'.
+  $field_bases['field_prog_remote_learning_displ'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_remote_learning_displ',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$type_values = field_get_items($entity_type, $entity, \'field_prog_remote_learning\');
+if (isset(field_get_items($entity_type, $entity, \'field_prog_remote_explain\')[0][\'value\'])) {
+  $remote_explain = field_get_items($entity_type, $entity, \'field_prog_remote_explain\')[0][\'value\'];
+}
+
+
+$output = array();
+foreach ($type_values as $key => $type_value) {
+  if ($type_value[\'value\'] == \'Other: explain.\') {
+    $output[] = $remote_explain;
+  }
+
+ 
+  else {
+    $output[] = $type_value[\'value\'];
+  }
+}
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
+}
+else {
+  unset($entity_field[0][\'value\']);
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'recalculate' => 0,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_prog_retention_rate'.
   $field_bases['field_prog_retention_rate'] = array(
     'active' => 1,

@@ -428,7 +428,7 @@ function program_record_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_label' => 'Did all students in your program enroll in at least one inclusive college/university course either for credit or audit?',
+    'display_label' => 'Did ALL students in your program enroll in at least one inclusive college/university course either for credit or audit?',
     'entity_type' => 'node',
     'field_name' => 'field_all_students_in_course',
     'label' => 'Did all students in your program enroll in at least one inclusive college/university course either for credit or audit?',
@@ -1616,7 +1616,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 97,
+        'weight' => 98,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2490,7 +2490,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 98,
+        'weight' => 99,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2567,7 +2567,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 96,
+        'weight' => 97,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3102,7 +3102,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 87,
+        'weight' => 88,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3170,7 +3170,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 90,
+        'weight' => 91,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3692,7 +3692,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 95,
+        'weight' => 96,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3840,7 +3840,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 88,
+        'weight' => 89,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3904,7 +3904,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 103,
+        'weight' => 104,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3981,7 +3981,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 92,
+        'weight' => 93,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4294,7 +4294,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 93,
+        'weight' => 94,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4367,7 +4367,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 94,
+        'weight' => 95,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5244,6 +5244,69 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-program_record-field_prog_remote_learning_displ'.
+  $field_instances['node-program_record-field_prog_remote_learning_displ'] = array(
+    'bundle' => 'program_record',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_plain',
+        'weight' => 98,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'computed_field',
+        'settings' => array(),
+        'type' => 'computed_field_unsanitized',
+        'weight' => 84,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Describe remote learning at your program',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_remote_learning_displ',
+    'label' => 'Remote learning display',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 128,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_retention_rate'.
   $field_instances['node-program_record-field_prog_retention_rate'] = array(
     'bundle' => 'program_record',
@@ -5415,7 +5478,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 86,
+        'weight' => 87,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6136,7 +6199,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 85,
+        'weight' => 86,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6551,7 +6614,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 91,
+        'weight' => 92,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6763,7 +6826,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 101,
+        'weight' => 102,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7017,7 +7080,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 100,
+        'weight' => 101,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7250,7 +7313,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 102,
+        'weight' => 103,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7548,7 +7611,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 99,
+        'weight' => 100,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7626,7 +7689,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 89,
+        'weight' => 90,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7985,7 +8048,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 84,
+        'weight' => 85,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -8179,6 +8242,7 @@ function program_record_field_default_field_instances() {
   t('Program website');
   t('Provide a link to information about your summer program, if available');
   t('Provide web links to scholarships available to students in your program');
+  t('Remote learning display');
   t('Requirements for Admission (display)');
   t('Retention rate (display)');
   t('Room and Board (display)');
