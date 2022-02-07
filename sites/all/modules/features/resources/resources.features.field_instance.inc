@@ -1194,70 +1194,6 @@ function resources_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_review'.
-  $field_instances['node-resource-field_review'] = array(
-    'bundle' => 'resource',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 26,
-      ),
-      'event_attachment' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'live_results_search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'display_label' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_review',
-    'label' => 'Review',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'content_taxonomy_opt_groups' => 0,
-      ),
-      'type' => 'options_select',
-      'weight' => 20,
-    ),
-  );
-
   // Exported field_instance: 'node-resource-field_teaser_image'.
   $field_instances['node-resource-field_teaser_image'] = array(
     'bundle' => 'resource',
@@ -1424,7 +1360,6 @@ function resources_field_default_field_instances() {
   t('Project');
   t('Publication Date');
   t('Publication Types');
-  t('Review');
   t('State-related');
   t('Teaser image');
   t('Topics');
