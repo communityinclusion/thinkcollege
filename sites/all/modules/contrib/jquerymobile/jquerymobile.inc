@@ -1,10 +1,4 @@
 <?php
-
-/**
- * @file
- * Includes for jquerymobile
- */
-
 /**
  * Menu callback; Generate a listing of promoted nodes.
  *
@@ -30,7 +24,7 @@ function jquerymobile_page_default() {
       $build = _jquerymobile_view_multiple($nodes);
     }
     else {
-      $build = node_view_multiple($nodes);
+      $build = node_view_multiple($nodes);      
     }
 
     // 'rss.xml' is a path, not a file, registered in node_menu().
@@ -60,75 +54,43 @@ function jquerymobile_page_default() {
       '#suffix' => '</div>',
     );
   }
-
+  
   return $build;
 
 }
 
 
 function jquerymobile_load_files() {
-  global $theme_key;
-
   drupal_add_library('jquerymobile', 'jquerymobile.jquery');
   drupal_add_js(_jquerymobile_build_js(), array('type' => 'inline', 'group' => JS_THEME, 'weight' => 102));
-  if (_jquerymobile_get_setting($theme_key, 'custom_themes') != NULL) {
-    drupal_add_css(variable_get('jquerymobile_custom_path', drupal_get_path('theme', $theme_key) . '/styles/jquery.mobile.overrides.css'), array(
-      'type' => 'file', 
-      'group' => CSS_THEME, 
-      'every_page' => TRUE, 
-      'media' => 'all', 
-      'preprocess' => FALSE, 
-      'weight' => 99,
-    ));
-    drupal_add_library('jquerymobile', 'jquerymobile.custom');
-  }
-  else {
-    drupal_add_library('jquerymobile', 'jquerymobile');
-  }
+  drupal_add_library('jquerymobile', 'jquerymobile');
 }
 
 function _jquerymobile_build_js() {
 global $theme_key;
 
   $settings = _jquerymobile_get_settings($theme_key);
-  if (isSet($settings)){
-    $output = '';
-    $output .= 'var jqm = jQuery.noConflict();' . "\n";
-    $output .= 'jqm(document).bind("mobileinit", function() {' . "\n";
-    if (isSet($settings['ns']))
-      $output .= "\n\t" . 'jqm.mobile.ns = "' . $settings['ns'] . '";';
-    if (isSet($settings['autoInitializePage']))
-      $output .= "\n\t" . 'jqm.mobile.autoInitializePage = ' . $settings['autoInitializePage'] . ';';   
-    if (isSet($settings['subPageUrlKey']))
-      $output .= "\n\t" . 'jqm.mobile.subPageUrlKey = "' . $settings['subPageUrlKey'] . '";';    
-    if (isSet($settings['activePageClass']))  
-      $output .= "\n\t" . 'jqm.mobile.activePageClass = "' . $settings['activePageClass'] . '";';
-    if (isSet($settings['activeBtnClass']))
-      $output .= "\n\t" . 'jqm.mobile.activeBtnClass = "' . $settings['activeBtnClass'] . '";';
-    if (isSet($settings['ajaxEnabled']))
-      $output .= "\n\t" . 'jqm.mobile.ajaxEnabled = ' . $settings['ajaxEnabled'] . ';';
-    if (isSet($settings['hashListeningEnabled']))
-      $output .= "\n\t" . 'jqm.mobile.hashListeningEnabled = ' . $settings['hashListeningEnabled'] . ';';
-    if (isSet($settings['defaultPageTransition']))
-      $output .= "\n\t" . 'jqm.mobile.defaultPageTransition = "' . $settings['defaultPageTransition'] . '";';
-    if (isSet($settings['defaultDialogTransition']))
-      $output .= "\n\t" . 'jqm.mobile.defaultDialogTransition = "' . $settings['defaultDialogTransition'] . '";';
-    if (isSet($settings['minScrollBack']))
-      $output .= "\n\t" . 'jqm.mobile.minScrollBack = "' . $settings['minScrollBack'] . '";';
-    if (isSet($settings['loadingMessage']))
-      $output .= "\n\t" . 'jqm.mobile.loadingMessage = "' . $settings['loadingMessage'] . '";';
-    if (isSet($settings['pageLoadErrorMessage']))
-      $output .= "\n\t" . 'jqm.mobile.pageLoadErrorMessage = "' . $settings['pageLoadErrorMessage'] . '";';
-    if (isSet($settings['linkBindingEnabled']))
-      $output .= "\n\t" . 'jqm.mobile.linkBindingEnabled = ' . $settings['linkBindingEnabled'] . ';';
-    if (isSet($settings['pushStateEnabled']))
-      $output .= "\n\t" . 'jqm.mobile.pushStateEnabled = ' . $settings['pushStateEnabled'] . ';';
-    if (isSet($settings['touchOverflowEnabled']))
-    $output .= "\n\t" . 'jqm.mobile.touchOverflowEnabled = ' . $settings['touchOverflowEnabled'] . ';';
-    
-    $output .= "\n});";
-  }                     
 
+  $output = '';
+  $output .= 'var jqm = jQuery.noConflict();' . "\n";
+  $output .= 'jqm(document).bind("mobileinit", function() {' . "\n";
+  $output .= "\n\t" . 'jqm.mobile.ns = "' . $settings['ns'] .'";';
+  $output .= "\n\t" . 'jqm.mobile.autoInitializePage = ' . $settings['autoinitializepage'] . ';';
+  $output .= "\n\t" . 'jqm.mobile.subPageUrlKey = "' . $settings['subpageurlkey'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.activePageClass = "' . $settings['activepageclass'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.activeBtnClass = "' . $settings['activebtnclass'] . '";'; 
+  $output .= "\n\t" . 'jqm.mobile.ajaxEnabled = ' . $settings['ajaxenabled'] . ';';
+  $output .= "\n\t" . 'jqm.mobile.hashListeningEnabled = ' . $settings['hashlisteningenabled'] . ';';
+  $output .= "\n\t" . 'jqm.mobile.defaultPageTransition = "' . $settings['defaultpagetransition'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.defaultDialogTransition = "' . $settings['defaultdialogtransition'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.minScrollBack = "' . $settings['loadingmessage'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.loadingMessage = "' . $settings['loadingmessage'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.pageLoadErrorMessage = "' . $settings['pageloaderrormessage'] . '";';
+  $output .= "\n\t" . 'jqm.mobile.linkBindingEnabled = ' . $settings['linkbindingenabled'] . ';';
+  $output .= "\n\t" . 'jqm.mobile.pushStateEnabled = ' . $settings['pushstateenabled'] . ';';
+  $output .= "\n\t" . 'jqm.mobile.touchOverflowEnabled = ' . $settings['touchoverflowenabled'] . ';';
+  $output .= "\n});";
+  
   return $output;
 }
 
@@ -137,22 +99,18 @@ global $theme_key;
  *
  * Allows renaming existing swatches or adding new ones.
  */
-function _jquerymobile_get_custom_themes() {
-  global $theme_key;
-  $custom_themes = _jquerymobile_get_setting($theme_key, 'custom_themes');
+ function _jquerymobile_get_custom_themes() {
+  $custom_themes = variable_get('jquerymobile_custom_themes', '');
   $options = array();
-
   if ($custom_themes) {
-    $themes = explode("\n", $custom_themes);
-
-    foreach ($themes as $theme) {
-      $set = explode("|", $theme);
+    foreach ($custom_theme_sets as $set_str) {
+      $set = explode("|", $set_str);
       $options[$set[0]] = $set[1];
     }
   }
   return $options;
-}
-
+ }
+ 
 function _jquerymobile_get_theme_list() {
   $option = array();
   $themes = list_themes();
@@ -174,11 +132,11 @@ function _jquerymobile_is_mobile_theme($theme = NULL) {
 
     return $result['status'];
   }
-  return FALSE;
+  return false;
 }
 
 function _jquerymobile_access_theme($theme = NULL) {
-  return _jquerymobile_is_mobile_theme($theme->name) && user_access('manage jquerymobile theme settings');
+ return _jquerymobile_is_mobile_theme($theme->name) && user_access('manage jquerymobile theme settings');
 }
 
 function _jquerymobile_get_settings($theme = NULL) {
@@ -186,10 +144,10 @@ function _jquerymobile_get_settings($theme = NULL) {
   if ($theme != NULL) {
     $result = db_select('jquerymobile', 'j')
       ->fields('j')
-      ->condition('theme', $theme, '=')
+      ->condition('theme', $theme, '=') 
       ->execute()
       ->fetchAssoc();
-
+      
     return $result;
   }
   return array();
@@ -218,7 +176,7 @@ function _jquerymobile_set_settings($settings = array()) {
       ->condition('theme', $settings['theme'])
       ->execute()
       ->fetchAssoc();
-
+   
     if ($result) {
       $updated = db_update('jquerymobile')
       ->fields($settings)
