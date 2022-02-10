@@ -11,6 +11,62 @@
 function program_record_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_all_students_in_course'.
+  $field_bases['field_all_students_in_course'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_all_students_in_course',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Yes' => 'Yes',
+        'No' => 'No',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog__extracurr_activ'.
+  $field_bases['field_prog__extracurr_activ'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog__extracurr_activ',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Registered student organizations' => 'Registered student organizations',
+        'Student government' => 'Student government',
+        'Club sports' => 'Club sports',
+        'Campus events' => 'Campus events',
+        'Study abroad' => 'Study abroad',
+        'Fraternities/sororities' => 'Fraternities/sororities',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_prog__ihe_support_svces'.
   $field_bases['field_prog__ihe_support_svces'] = array(
     'active' => 1,
@@ -144,6 +200,63 @@ else {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_prog_campus_services'.
+  $field_bases['field_prog_campus_services'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_campus_services',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Career services' => 'Career services',
+        'Disability/accessibility services' => 'Disability/accessibility services',
+        'Academic tutoring services' => 'Academic tutoring services',
+        'Health services' => 'Health services',
+        'Access to a transcript via the registrar' => 'Access to a transcript via the registrar',
+        'Academic advising services (not program staff)' => 'Academic advising services (not program staff)',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_college_events'.
+  $field_bases['field_prog_college_events'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_college_events',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'IHE Student orientation' => 'IHE Student orientation',
+        'IHE Family orientation' => 'IHE Family orientation',
+        'IHE Graduation' => 'IHE Graduation',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_prog_cred_ihe_approv'.
   $field_bases['field_prog_cred_ihe_approv'] = array(
     'active' => 1,
@@ -188,6 +301,36 @@ else {
       'allowed_values' => array(
         'Yes' => 'Yes',
         'No' => 'No',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_extracurr_inclusive'.
+  $field_bases['field_prog_extracurr_inclusive'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_extracurr_inclusive',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        '100%' => '100%',
+        '75-99%' => '75-99%',
+        '50-74%' => '50-74%',
+        '25-49%' => '25-49%',
+        '1-24%' => '1-24%',
+        '0%' => '0%',
       ),
       'allowed_values_function' => '',
       'profile2_private' => FALSE,
@@ -296,6 +439,35 @@ else {
     'type' => 'static_field',
   );
 
+  // Exported field_base: 'field_prog_length_years2'.
+  $field_bases['field_prog_length_years2'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_length_years2',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        '1 year' => '1 year',
+        '2 years' => '2 years',
+        '3 years' => '3 years',
+        '4 years' => '4 years',
+        'Varies from student to student' => 'Varies from student to student',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_prog_other_credent'.
   $field_bases['field_prog_other_credent'] = array(
     'active' => 1,
@@ -360,6 +532,139 @@ else {
     ),
     'translatable' => 0,
     'type' => 'number_float',
+  );
+
+  // Exported field_base: 'field_prog_perc_academic'.
+  $field_bases['field_prog_perc_academic'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_perc_academic',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        '100%' => '100%',
+        '75-99%' => '75-99%',
+        '50-74%' => '50-74%',
+        '25-49%' => '25-49%',
+        '1-24%' => '1-24%',
+        '0%' => '0%',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_remote_explain'.
+  $field_bases['field_prog_remote_explain'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_remote_explain',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_prog_remote_learning'.
+  $field_bases['field_prog_remote_learning'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_remote_learning',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Students enroll in all of their courses via remote learning' => 'Students enroll in all of their courses via remote learning',
+        'Students can enroll in select courses via remote learning if they choose' => 'Students can enroll in select courses via remote learning if they choose',
+        'Students are not permitted to take courses via remote learning ' => 'Students are not permitted to take courses via remote learning',
+        'Other: explain.' => 'Other,explain below',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_remote_learning_displ'.
+  $field_bases['field_prog_remote_learning_displ'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_remote_learning_displ',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '$type_values = field_get_items($entity_type, $entity, \'field_prog_remote_learning\');
+if (isset(field_get_items($entity_type, $entity, \'field_prog_remote_explain\')[0][\'value\'])) {
+  $remote_explain = field_get_items($entity_type, $entity, \'field_prog_remote_explain\')[0][\'value\'];
+}
+
+
+$output = array();
+foreach ($type_values as $key => $type_value) {
+  if ($type_value[\'value\'] == \'Other: explain.\') {
+    $output[] = $remote_explain;
+  }
+
+ 
+  else {
+    $output[] = $type_value[\'value\'];
+  }
+}
+
+if (count($output)) {
+  $entity_field[0][\'value\'] = theme(\'item_list\', array(\'items\' => $output));
+}
+else {
+  unset($entity_field[0][\'value\']);
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'longtext',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'recalculate' => 0,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_prog_retention_rate'.

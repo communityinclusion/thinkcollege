@@ -552,9 +552,15 @@ function qualtrics_feeds_import_feeds_importer_default() {
             'unique' => FALSE,
           ),
           83 => array(
+            'language' => 'und',
             'source' => 'Q126',
             'target' => 'nid',
             'unique' => 1,
+          ),
+          84 => array(
+            'source' => 'Q92',
+            'target' => 'field_prog_other_credent',
+            'unique' => FALSE,
           ),
         ),
         'skip_hash_check' => 0,
