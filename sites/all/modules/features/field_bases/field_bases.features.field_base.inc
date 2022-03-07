@@ -1095,36 +1095,6 @@ else {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prog_length_years'.
-  $field_bases['field_prog_length_years'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_length_years',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        '1 year' => '1 year',
-        '2 years' => '2 years',
-        '3 years' => '3 years',
-        '4 years' => '4 years',
-        'Varies' => 'Varies from student to student',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_prog_more_course_detail'.
   $field_bases['field_prog_more_course_detail'] = array(
     'active' => 1,

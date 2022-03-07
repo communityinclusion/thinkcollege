@@ -2766,12 +2766,7 @@ function program_record_field_default_field_instances() {
   // Exported field_instance: 'node-program_record-field_prog_facebook_page'.
   $field_instances['node-program_record-field_prog_facebook_page'] = array(
     'bundle' => 'program_record',
-    'default_value' => array(
-      0 => array(
-        'title' => 'Program Facebook link',
-        'url' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2829,9 +2824,9 @@ function program_record_field_default_field_instances() {
         'class' => '',
         'configurable_class' => 0,
         'configurable_title' => 0,
-        'rel' => '',
+        'rel' => 'nofollow',
         'target' => '_blank',
-        'title' => '',
+        'title' => 'Facebook page',
       ),
       'convert_aliases' => 0,
       'display' => array(
@@ -3280,84 +3275,6 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 26,
-    ),
-  );
-
-  // Exported field_instance: 'node-program_record-field_prog_length_years'.
-  $field_instances['node-program_record-field_prog_length_years'] = array(
-    'bundle' => 'program_record',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 50,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 38,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 32,
-      ),
-      'live_results_search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 77,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 38,
-      ),
-    ),
-    'display_label' => 'Program length:',
-    'entity_type' => 'node',
-    'field_name' => 'field_prog_length_years',
-    'label' => 'What is the planned length of this program?',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 33,
     ),
   );
 
@@ -5001,19 +4918,17 @@ function program_record_field_default_field_instances() {
   // Exported field_instance: 'node-program_record-field_prog_program_website'.
   $field_instances['node-program_record-field_prog_program_website'] = array(
     'bundle' => 'program_record',
-    'default_value' => array(
-      0 => array(
-        'url' => 'http://thinkcollege.net',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'card' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_url',
+        'settings' => array(
+          'custom_title' => '',
+        ),
+        'type' => 'link_default',
         'weight' => 10,
       ),
       'default' => array(
@@ -5026,8 +4941,10 @@ function program_record_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_url',
+        'settings' => array(
+          'custom_title' => '',
+        ),
+        'type' => 'link_default',
         'weight' => 8,
       ),
       'live_results_search' => array(
@@ -5068,14 +4985,14 @@ function program_record_field_default_field_instances() {
     'label' => 'Program website',
     'required' => 0,
     'settings' => array(
-      'absolute_url' => 1,
+      'absolute_url' => 0,
       'attributes' => array(
         'class' => '',
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => 'nofollow',
         'target' => '_blank',
-        'title' => '',
+        'title' => 'Program website',
       ),
       'convert_aliases' => 0,
       'display' => array(

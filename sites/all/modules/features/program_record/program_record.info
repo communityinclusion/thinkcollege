@@ -132,7 +132,6 @@ features[field_instance][] = node-program_record-field_prog_hs_coll
 features[field_instance][] = node-program_record-field_prog_hs_dipl_req
 features[field_instance][] = node-program_record-field_prog_instructions
 features[field_instance][] = node-program_record-field_prog_is_was_tpsid
-features[field_instance][] = node-program_record-field_prog_length_years
 features[field_instance][] = node-program_record-field_prog_length_years2
 features[field_instance][] = node-program_record-field_prog_more_course_detail
 features[field_instance][] = node-program_record-field_prog_other_career_dev

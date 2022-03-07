@@ -162,6 +162,11 @@ $classes .= ' node-program-record-card node-tc-card';
                 print '<div class="alert alert-info tc-selected-districts" role="alert">This program serves only students from selected school districts.</div>';
               }
             }
+            if (isset($content['field_prog_ctp_y_n'])) {
+              if ($content['field_prog_ctp_y_n']['#items'][0]['value'] == 'Yes') {
+                print '<div class="alert alert-info tc-ctp" role="alert">This program is able to provide federal financial aid as a Comprehensive Transition Program (CTP)</div>';
+              }
+            }
             ?>
           </div>
         </div>

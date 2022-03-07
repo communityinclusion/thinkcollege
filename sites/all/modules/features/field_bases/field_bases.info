@@ -60,7 +60,6 @@ features[field_base][] = field_prog_extracurric_explain
 features[field_base][] = field_prog_housing_y_n
 features[field_base][] = field_prog_hs_coll
 features[field_base][] = field_prog_is_was_tpsid
-features[field_base][] = field_prog_length_years
 features[field_base][] = field_prog_more_course_detail
 features[field_base][] = field_prog_other_career_dev
 features[field_base][] = field_prog_other_career_display
