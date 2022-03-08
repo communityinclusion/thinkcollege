@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/**
- * Default Variables. Jenkins Rawpower check
+/** Testing new deployment
+ * Default Variables. Jenkins Rawpower test
  *
  * Modify this file to provide default Bootstrap Framework variables. The
  * Bootstrap Framework will not override any variables defined here because it
@@ -5835,10 +5835,17 @@ a.thumbnail.active {
   color: #2b542c;
 }
 
+
 .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
+}
+
+.alert-info.tc-ctp {
+  background-color: #faddcf;
+  color: #331d35;
+  border-color: #ccc;
 }
 
 .alert-info hr {
@@ -7884,21 +7891,17 @@ article.node-program-record-card .program-box, article.node-program-record-full 
   color: #331d35;
 }
 
-article.node-program-record-card .program-box .alert.tc-selected-districts, article.node-program-record-full .program-box .alert.tc-selected-districts {
+article.node-program-record-card .program-box .alert.tc-selected-districts, article.node-program-record-full .program-box .alert.tc-selected-districts, article.node-program-record-card .program-box .alert.tc-ctp, article.node-program-record-full .program-box .alert.tc-ctp  {
   font-size: 1.4rem;
   background-image: url("/sites/all/themes/thinkcollege_boot/images/map-marker-blue.svg");
   background-repeat: no-repeat;
   background-position: 0.5em 50%;
   padding-left: 3em;
 }
-
 article.node-program-record-card .program-box .alert.tc-ctp, article.node-program-record-full .program-box .alert.tc-ctp {
-  font-size: 1.4rem;
   background-image: url("/sites/all/themes/thinkcollege_boot/images/map-marker-white.svg");
-  background-repeat: no-repeat;
-  background-position: 0.5em 50%;
-  padding-left: 3em;
 }
+
 
 article.node-program-record-card .program-box .program-heading, article.node-program-record-full .program-box .program-heading {
   border-bottom: #ccc 1px solid;
@@ -7970,10 +7973,6 @@ article.node-program-record-card .program-box table td, article.node-program-rec
   color: #555;
 }
 
-article.node-program-record-card .program_icon_box, article.node-program-record-full .program_icon_box {
-  margin-bottom: 10px;
-}
-
 article.node-program-record-card .program_icon_box .program_icon, article.node-program-record-full .program_icon_box .program_icon {
   margin: 3px;
   padding: 5px;
@@ -7986,6 +7985,14 @@ article.node-program-record-card .program_icon_box .program_icon, article.node-p
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   vertical-align: middle;
+}
+article.node-program-record-card .tc-ctp .program_icon_box .program_icon, article.node-program-record-full .tc-ctp .program_icon_box .program_icon {
+  background-color: #b02620;
+}
+
+
+.bs-callout-info.tc-ctp {
+  border-left-color: #b02620;
 }
 
 article.node-program-record-card .program_icon_box .tpsid_icon, article.node-program-record-full .program_icon_box .tpsid_icon {
@@ -8067,7 +8074,6 @@ article.node-program-record-full .bs-callout.tc-selected-districts div.tc-select
   display: inline-block;
   padding-left: 3em;
 }
-.alert-info.tc-ctp {background-color: #f2af90; color: #5d2b79; }
 
 /*---------------------------- HEADER ----------------------------*/
 .header {

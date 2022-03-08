@@ -152,6 +152,22 @@ $classes .= ' node-program-record-full';
           <?php
         }
       }
+      if (isset($content['field_prog_ctp_y_n'])) {
+        if ($content['field_prog_ctp_y_n']['#items'][0]['value'] == 'Yes') {
+          ?>
+            <div class="bs-callout bs-callout-info tc-ctp" role="alert">
+                <div class="program_icon_box">
+                    <div class="program_icon">
+                        <div class="map_icon">
+                            <img src="/sites/all/themes/thinkcollege_boot/images/map-marker-white.svg" alt="icon name">
+                        </div>
+                    </div>
+                </div>
+                <div class="tc-ctp-message"><strong>Note:</strong> This program is able to provide federal financial aid as a Comprehensive Transition Program (CTP).</div>
+            </div>
+          <?php
+        }
+      }
       ?>
 
       <div class="well">
@@ -317,7 +333,7 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_admiss_link']) ||
     isset($content['field_prog_admiss_crit_display']) ||
     isset($content['field_disabilities_display_']) ||
-    isset($content['field_prog_length_years2']) || isset($content['field_prog_have_left_hs']) || isset($content['field_requirements_display'])):
+    isset($content['field_prog_length_years']) || isset($content['field_prog_have_left_hs']) || isset($content['field_requirements_display'])):
     ?>
     <div class="program-box" id="requirements">
       <table class="table table-striped">
@@ -334,7 +350,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_admiss_crit_display']); ?>
         <?php print render($content['field_prog_out_of_stat']); ?>
         <?php print render($content['field_disabilities_display_']); ?>
-        <?php print render($content['field_prog_length_years2']); ?>
+        <?php print render($content['field_prog_length_years']); ?>
         </tbody>
       </table>
     </div>
@@ -401,9 +417,9 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_more_course_detail']) ||
     isset($content['field_students_take_courses_disp']) ||
     isset($content['field_prog_spec_courses_mor_info']) ||
-    isset($content['field_prog_perc_academic']) ||
+    isset($content['field_prog_perc_acad_time']) ||
     isset($content['field_name_of_credential_degree_']) ||
-     isset($content['field_prog_cred_ihe_approv']) || isset($content['field_prog_other_credent']) || isset($content['field_prog_stem_cert']) || isset($content['field_prog_stem_courses']) || isset($content['field_prog_remote_learning_displ']) || isset($content['field_prog_campus_services'])):
+     isset($content['field_prog_cred_ihe_approv']) || isset($content['field_prog_other_credent']) || isset($content['field_prog_stem_cert']) || isset($content['field_prog_stem_courses'])):
     ?>
     <div class="program-box" id="academic">
       <table class="table table-striped">
@@ -416,15 +432,14 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_course_types']); ?>
         <?php print render($content['field_prog_more_course_detail']); ?>
         <?php print render($content['field_students_take_courses_disp']); ?>
-        <?php print render($content['field_prog_spec_courses_mor_info']); ?>
-        <?php print render($content['field_prog_campus_services']); ?>
+        <?php print render($content['field_prog__ihe_support_svces']); ?>
         <?php print render($content['field_prog_stem_courses']); ?>
-        <?php print render($content['field_prog_perc_academic']); ?>
+        <?php print render($content['field_prog_spec_courses_mor_info']); ?>
+        <?php print render($content['field_prog_perc_acad_time']); ?>
         <?php print render($content['field_name_of_credential_degree_']); ?>
         <?php print render($content['field_prog_cred_ihe_approv']); ?>
         <?php print render($content['field_prog_other_credent']); ?>
         <?php print render($content['field_prog_stem_cert']); ?>
-        <?php print render($content['field_prog_remote_learning_displ']); ?>
         </tbody>
       </table>
     </div>
@@ -475,8 +490,8 @@ $classes .= ' node-program-record-full';
 
   <?php
   if (isset($content['field_prog_student_orgs_y_n']) ||
-    isset($content['field_prog_extracurr_inclusive']) ||
-    isset($content['field_prog_extracurric_explain']) || isset($content['field_prog_extracurric_explain'])):
+    isset($content['field_prog_overall_time_dist']) ||
+    isset($content['field_prog_extracurric_explain'])):
     ?>
     <div class="program-box" id="extracurricular">
       <table class="table table-striped">
@@ -487,9 +502,7 @@ $classes .= ' node-program-record-full';
         </thead>
         <tbody>
         <?php print render($content['field_prog_student_orgs_y_n']); ?>
-        <?php print render($content['field_prog_extracurr_inclusive']); ?>
         <?php print render($content['field_prog_overall_time_dist']); ?>
-        <?php print render($content['field_prog__extracurr_activ']); ?>
         <?php print render($content['field_prog_extracurric_explain']); ?>
         </tbody>
       </table>
