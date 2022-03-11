@@ -39,7 +39,15 @@ function field_bases_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'event_calendar_date',
-    'indexes' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+        1 => 'value2',
+      ),
+      'value2' => array(
+        0 => 'value2',
+      ),
+    ),
     'locked' => 0,
     'module' => 'date',
     'required' => TRUE,
@@ -132,6 +140,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -187,6 +196,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -826,6 +836,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 0,
     ),
     'translatable' => 0,
@@ -1084,36 +1095,6 @@ else {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prog_length_years'.
-  $field_bases['field_prog_length_years'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_length_years',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        '1 year' => '1 year',
-        '2 years' => '2 years',
-        '3 years' => '3 years',
-        '4 years' => '4 years',
-        'Varies' => 'Varies from student to student',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_prog_more_course_detail'.
   $field_bases['field_prog_more_course_detail'] = array(
     'active' => 1,
@@ -1201,6 +1182,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -1297,6 +1279,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -1431,38 +1414,6 @@ else {
     ),
     'translatable' => 0,
     'type' => 'text_long',
-  );
-
-  // Exported field_base: 'field_prog_perc_acad_time'.
-  $field_bases['field_prog_perc_acad_time'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_perc_acad_time',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'All of the time' => ' All of the time',
-        'About 75% of the time' => 'About 75% of the time',
-        'Between half the time and 75% of the time' => 'Between half the time and 75% of the time',
-        'About half the time' => 'About half the time',
-        'Between 25% of the time and half the time' => 'Between 25% of the time and half the time',
-        'Less than 25% of the time' => 'Less than 25% of the time',
-        'None of the time' => 'None of the time',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_prog_perc_employed_af_grad'.
@@ -1641,6 +1592,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -1686,6 +1638,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -1912,6 +1865,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -1991,6 +1945,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2042,6 +1997,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2187,6 +2143,7 @@ foreach ($tpsid_values as $key => $tpsid_value) {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2440,6 +2397,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2500,7 +2458,11 @@ else {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_resourc_date_received',
-    'indexes' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
     'locked' => 0,
     'module' => 'date',
     'settings' => array(
@@ -2583,7 +2545,11 @@ else {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_resourc_publication_date',
-    'indexes' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
     'locked' => 0,
     'module' => 'date',
     'settings' => array(
@@ -2757,6 +2723,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2803,6 +2770,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2894,6 +2862,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -2936,6 +2905,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
+      'recalculate' => FALSE,
       'store' => 1,
     ),
     'translatable' => 0,

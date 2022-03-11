@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * @file
+ * Code for the Field bases feature.
+ */
+
+include_once 'field_bases.features.inc';
 /**
  * @file
  * Drupal needs this blank file.
