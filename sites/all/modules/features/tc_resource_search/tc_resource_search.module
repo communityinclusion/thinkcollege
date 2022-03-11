@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TC Resource Search feature.
+ */
+
+include_once 'tc_resource_search.features.inc';
