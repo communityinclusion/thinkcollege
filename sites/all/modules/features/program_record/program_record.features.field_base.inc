@@ -603,7 +603,7 @@ else {
       'allowed_values' => array(
         'Students enroll in all of their courses via remote learning' => 'Students enroll in all of their courses via remote learning',
         'Students can enroll in select courses via remote learning if they choose' => 'Students can enroll in select courses via remote learning if they choose',
-        'Students are not permitted to take courses via remote learning ' => 'Students are not permitted to take courses via remote learning',
+        'Students are not permitted to take courses via remote learning' => 'Students are not permitted to take courses via remote learning',
         'Other: explain.' => 'Other,explain below',
       ),
       'allowed_values_function' => '',

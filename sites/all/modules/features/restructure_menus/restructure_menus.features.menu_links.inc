@@ -244,7 +244,7 @@ function restructure_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -56,
+    'weight' => -57,
     'customized' => 1,
     'parent_identifier' => 'main-menu_projects:node/4876',
   );

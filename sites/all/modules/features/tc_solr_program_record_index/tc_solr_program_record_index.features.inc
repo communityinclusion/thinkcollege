@@ -67,7 +67,6 @@ function tc_solr_program_record_index_default_search_api_index() {
         "field_prog_housing_y_n" : { "type" : "string" },
         "field_prog_hs_coll" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_is_was_tpsid" : { "type" : "list\\u003Cstring\\u003E" },
-        "field_prog_length_years" : { "type" : "string" },
         "field_prog_other_career_dev" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_other_costs" : { "type" : "string" },
         "field_prog_other_costs_amount" : { "type" : "decimal" },

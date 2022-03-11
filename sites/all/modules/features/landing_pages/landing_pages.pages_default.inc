@@ -159,33 +159,20 @@ function landing_pages_default_page_manager_pages() {
   $pane->configuration = array(
     'admin_title' => '',
     'body' => '<div class="row">
-<div class="bscol col-md-4 col-sm-12"><a href="/projects/ncc"><img alt="National Coordinating Center Logo" class="img-responsive" src="/sites/default/files/images/NCC-logo-300-180(1).png" /></a>
-<h3><a href="/projects/ncc">National Coordinating Center (NCC)</a></h3>
+<div class="col-xs-12 col-sm-6 col-md-4 logo-grid"><a class="shadow shadow-1" href="/projects/ncc" tabindex="1"><img alt="Visit The National Coordinating Center Project Page" class="img-responsive" src="/sites/default/files/images/NCC-logo-600w.png" /></a></div>
 
-<p>The only national center on college options for students with ID in the US, NCC collects data, creates resources, offers training and provides technical assistance for colleges and universities, transition professionals, K-12 educators, families, students and more.</p>
+<div class="col-xs-12 col-sm-6 col-md-4 logo-grid"><a class="shadow shadow-1" href="/projects/tcn" tabindex="2"><img alt="Visit The Inclusive Higher Education Network Project Page" class="img-responsive" src="https://devel.thinkcollege.net/sites/default/files/images/IHEN-logo-600w.png" /> </a></div>
+
+<div class="col-xs-12 col-sm-6 col-md-4 logo-grid"><a class="shadow shadow-1" href="/projects/fqie" tabindex="3"><img alt="Visit The Future Quest Island: Explorations Project Page" class="img-responsive" src="/sites/default/files/images/FQI-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6 col-md-4 logo-grid"><a class="shadow shadow-1" href="/projects/mtf" tabindex="4"><img alt="Visit The Moving Transition Forward Project Page" class="img-responsive" src="/sites/default/files/images/MTF-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6 col-md-4 logo-grid"><a class="shadow shadow-1" href="/projects/transition-leadership-project" tabindex="5"><img alt="Visit The Transition Leadership Project Page" class="img-responsive" src="/sites/default/files/images/TL-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6 col-md-4 logo-grid"><a class="shadow shadow-1" href="/about/what-is-think-college" tabindex="6"><img alt="Visit The Think College About Page" class="img-responsive" src="/sites/default/files/images/tc-logo-600w.png" /></a></div>
 </div>
 
-<div class="bscol col-md-4 col-sm-12 box-border-purple"><a href="/projects/fqie"><img alt="Future Quest Island Explorations Logo" class="img-responsive" src="/sites/default/files/images/FQI2021-300x180.png" /></a>
-
-<h3><a href="/projects/fqie">Future Quest Island Explorations (FQI-E)</a></h3>
-
-<p>An online, accessible curriculum supporting college and career awareness for children with and without disabilities in grades 3-5. FQI-E uses gaming strategies to motivate and support students to develop self-concept, social-emotional competence, and early college and career awareness.</p>
-</div>
-
-<div class="bscol col-md-4 col-sm-12 box-border-light-blue"><a href="/projects/mtf"><img alt="Moving Transition Forward Logo" class="img-responsive" src="/sites/default/files/images/mtf-logo-300-180.png" /></a>
-
-<h3><a href="/projects/mtf">Moving Transition Forward (MTF)</a></h3>
-
-<p>A research project comprised of three phases of analysis on data collected about students attending high schools and college-based transition programs across the U.S. to define, explore, and compare critical aspects of two models of transition services via secondary analysis of national datasets.</p>
-</div>
-
-<div class="bscol col-md-4 col-sm-12 box-border-gray"><a href="/projects/transition-leadership-project"><img alt="Transition Leadership Logo" class="img-responsive" src="/sites/default/files/images/trans-leadership-logo-300-180.png" /></a>
-
-<h3><a href="/projects/transition-leadership-project">Transition Leadership (TL)</a></h3>
-
-<p>An online, 18 credit certificate program offered by UMass Boston focuses on the transition from high school to adult life for young people with a wide range of disabilities. The program is based on the national standards produced by CEC’s Division on Career Development and Transition, and all graduates leave with a MA state endorsement or national transition certificate.</p>
-</div>
-</div>
+<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -204,6 +191,26 @@ function landing_pages_default_page_manager_pages() {
   $pane->uuid = '5f8cc240-df8c-4bd6-b74c-4558452d32d0';
   $display->content['new-5f8cc240-df8c-4bd6-b74c-4558452d32d0'] = $pane;
   $display->panels['row2'][0] = 'new-5f8cc240-df8c-4bd6-b74c-4558452d32d0';
+  $pane = new stdClass();
+  $pane->pid = 'new-54b6be28-d590-434b-b679-92beb0cd3ff9';
+  $pane->panel = 'row2';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'whats_new-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'home-featurednews',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '54b6be28-d590-434b-b679-92beb0cd3ff9';
+  $display->content['new-54b6be28-d590-434b-b679-92beb0cd3ff9'] = $pane;
+  $display->panels['row2'][1] = 'new-54b6be28-d590-434b-b679-92beb0cd3ff9';
   $pane = new stdClass();
   $pane->pid = 'new-142be058-3cc3-415e-8519-c6c83a7848df';
   $pane->panel = 'row3left';
