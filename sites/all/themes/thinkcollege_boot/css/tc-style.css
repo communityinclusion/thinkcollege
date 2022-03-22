@@ -31,6 +31,8 @@ h3.block-title,h3.pane-title, h2.block-title, h2.pane-title {
 /* Beta Alert Banner */
 
 .beta-banner .alert {width:100%;margin-bottom: 10px;border-radius:0}
+.region-top-header .beta-banner {overflow: hidden}
+
 
 /* removing padding for alert banner */
 
