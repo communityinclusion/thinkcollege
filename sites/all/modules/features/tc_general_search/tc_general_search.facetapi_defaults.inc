@@ -70,7 +70,7 @@ function tc_general_search_facetapi_default_facet_settings() {
     'facet_fewer_text' => 'Show fewer',
     'facet_more_text' => 'Show more',
     'filters' => array(),
-    'nofollow' => '1',
+    'nofollow' => 1,
     'show_expanded' => 0,
     'soft_limit' => '20',
     'sort_order' => array(
