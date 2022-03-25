@@ -10957,7 +10957,7 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   padding-bottom: 15px;
 }
 
-.thinkcollege-site-search .views-row .view-mode-search_result .thinkcollege-search-result-content-type, .thinkcollege-site-search .thinkcollege-search-result-content-type {
+.thinkcollege-site-search .views-row .view-mode-search_result .thinkcollege-search-result-content-type, .thinkcollege-site-search .thinkcollege-search-result-content-type, .thinkcollege-site-search .views-row  .views-field-type, .thinkcollege-site-search .views-row .views-field-created {
   font-family: "museo-sans-condensed", sans-serif;
   color: #C96B29;
   display: inline;
