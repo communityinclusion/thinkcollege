@@ -10957,7 +10957,7 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   padding-bottom: 15px;
 }
 
-.thinkcollege-site-search .views-row .view-mode-search_result .thinkcollege-search-result-content-type, .thinkcollege-site-search .thinkcollege-search-result-content-type {
+.thinkcollege-site-search .views-row .view-mode-search_result .thinkcollege-search-result-content-type, .thinkcollege-site-search .thinkcollege-search-result-content-type, .thinkcollege-site-search .views-row  .views-field-type {
   font-family: "museo-sans-condensed", sans-serif;
   color: #C96B29;
   display: inline;
@@ -10978,11 +10978,22 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   margin-top: 0;
 }
 
-.thinkcollege-site-search .views-row .view-mode-search_result .field-name-post-date {
+.thinkcollege-site-search .views-row .view-mode-search_result .field-name-post-date,  .thinkcollege-site-search .views-row .views-field-created {
   color: #999;
   font-size: .9em;
   line-height: 1.2;
   margin: .5rem 0;
+}
+
+
+.thinkcollege-site-search .views-row .views-label-event-calendar-date {
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 5px solid rgb(201, 107, 41);
+}
+
+.thinkcollege-site-search .views-row .views-field-event-calendar-date {
+  padding: 10px 0;
 }
 
 #views-exposed-form-tc-general-site-search-tc-general-search-block {
