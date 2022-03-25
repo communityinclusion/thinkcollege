@@ -10992,6 +10992,9 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   border-left: 5px solid rgb(201, 107, 41);
 }
 
+.thinkcollege-site-search .views-row .views-field-event-calendar-date {
+  padding: 10px 0;
+}
 
 #views-exposed-form-tc-general-site-search-tc-general-search-block {
   padding-top: 12px;
