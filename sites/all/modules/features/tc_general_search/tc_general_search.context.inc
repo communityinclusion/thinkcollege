@@ -27,22 +27,22 @@ function tc_general_search_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-a3e478246e735a290dd38acb398c1332' => array(
-          'module' => 'views',
-          'delta' => 'a3e478246e735a290dd38acb398c1332',
-          'region' => 'sidebar_first_top',
+        'facetapi-QrOtkF1o8fuRK6ZVfaUp5suTcu6A0JDS' => array(
+          'delta' => 'QrOtkF1o8fuRK6ZVfaUp5suTcu6A0JDS',
+          'module' => 'facetapi',
+          'region' => 'sidebar_first',
           'weight' => '-10',
         ),
         'search_api_sorts-search-sorts' => array(
-          'module' => 'search_api_sorts',
           'delta' => 'search-sorts',
+          'module' => 'search_api_sorts',
           'region' => 'sidebar_first_top',
           'weight' => '-9',
         ),
-        'facetapi-QrOtkF1o8fuRK6ZVfaUp5suTcu6A0JDS' => array(
-          'module' => 'facetapi',
-          'delta' => 'QrOtkF1o8fuRK6ZVfaUp5suTcu6A0JDS',
-          'region' => 'sidebar_first',
+        'views-a3e478246e735a290dd38acb398c1332' => array(
+          'delta' => 'a3e478246e735a290dd38acb398c1332',
+          'module' => 'views',
+          'region' => 'sidebar_first_top',
           'weight' => '-10',
         ),
       ),

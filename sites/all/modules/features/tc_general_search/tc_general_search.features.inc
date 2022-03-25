@@ -38,13 +38,12 @@ function tc_general_search_default_search_api_index() {
     "options" : {
       "datasource" : { "bundles" : [
           "article",
+          "blog_article",
           "page",
           "program_record",
           "resource",
           "tc_events",
           "tc_learn"
-          "blog_article"
-          
         ]
       },
       "index_directly" : 1,
