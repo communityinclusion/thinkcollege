@@ -3,8 +3,10 @@
  * @file
  * Bootstrap 12 template for Display Suite.
  */
-
 switch ($type) {
+  case 'blog_article':
+  $type_label = 'Blog Article';
+  break;
   case 'article':
     $type_label = 'Article';
     break;
