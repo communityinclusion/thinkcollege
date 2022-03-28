@@ -10996,6 +10996,12 @@ body.tc-college-search-results #block-tc-facets-tc-program-intro-and-map-mobile 
   padding: 10px 0;
 }
 
+
+.thinkcollege-site-search .views-row  .views-field-created .tc_events.field-content {
+  display: none;
+}
+
+
 #views-exposed-form-tc-general-site-search-tc-general-search-block {
   padding-top: 12px;
 }
