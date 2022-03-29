@@ -46,6 +46,13 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type']['format_name'] = 1;
+  /* Field: Indexed Node: Content type */
+  $handler->display->display_options['fields']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['fields']['type_1']['table'] = 'search_api_index_general_site_search';
+  $handler->display->display_options['fields']['type_1']['field'] = 'type';
+  $handler->display->display_options['fields']['type_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['type_1']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['type_1']['format_name'] = 0;
   /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_general_site_search';
@@ -78,9 +85,9 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['event_calendar_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => '12_hour_time',
     'custom_date_format' => '',
-    'fromto' => 'value',
+    'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
@@ -92,15 +99,27 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['created']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['created']['alter']['text'] = '<span class="[type_1] field-content">[created]</span>';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'search_api_facetapi_DAY';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'search_api_facetapi_YEAR';
   $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
+  /* Field: Date: End date (indexed) */
+  $handler->display->display_options['fields']['event_calendar_date_value2']['id'] = 'event_calendar_date_value2';
+  $handler->display->display_options['fields']['event_calendar_date_value2']['table'] = 'search_api_index_general_site_search';
+  $handler->display->display_options['fields']['event_calendar_date_value2']['field'] = 'event_calendar_date_value2';
+  $handler->display->display_options['fields']['event_calendar_date_value2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['event_calendar_date_value2']['date_format'] = 'search_api_facetapi_YEAR';
+  $handler->display->display_options['fields']['event_calendar_date_value2']['second_date_format'] = 'search_api_facetapi_YEAR';
+  $handler->display->display_options['fields']['event_calendar_date_value2']['link_to_entity'] = 0;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Search';
