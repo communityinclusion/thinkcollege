@@ -264,6 +264,20 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
           field_resourc_topics
           */
           break;
+          case 'blog_article':
+            /*
+             * Topics is a Taxonomy Term, we want it as a searchable string too.
+             */
+            $info['node']['bundles'][$bundle_type]['properties']['tc_searchable_term_topics'] = array(
+              'type' => 'text',
+              'label' => 'TC:Term Searchable Topics',
+              'sanitized' => TRUE,
+              'getter callback' => 'tc_program_record_properties_string_of_topics',
+            );
+            /*
+            field_resourc_topics
+            */
+            break;
 
       }
     }
