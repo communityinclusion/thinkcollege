@@ -11193,7 +11193,4 @@ svg {
   stroke-width: 5;
 }
 
-#block-menu-menu-program-record-scrollspy ul.navbar-nav li.leaf { 
-  float:none;
-  clear:both;}
-
+#block-menu-menu-program-record-scrollspy ul.navbar-nav li.leaf { clear:both;}
