@@ -1660,3 +1660,22 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 #home.pane-hero-tabs  .nav-tabs {text-transform: none;}
 
 
+/* college search button */
+
+.CSbtn {
+  display: block;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  text-shadow: 0px 3px 0px #c96b29;
+  -webkit-box-shadow: -4px 6px 0px #d1cdd1;
+  -moz-box-shadow: -4px 6px 0px #d1cdd1;
+  box-shadow: -4px 6px 0px #d1cdd1;
+  text-align: center;
+  color: #ffffff;
+  line-height: 38px;
+  font-size: 34px;
+  background: #21527c;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+}
