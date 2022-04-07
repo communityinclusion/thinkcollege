@@ -1651,13 +1651,18 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 
 
 /* Home page Tabs */
-
+#home.pane-hero-tabs  .nav-tabs {text-transform: none;}
 #home.pane-hero-tabs .tab-pane h2 {display:none;}
 #home.pane-hero-tabs ul.nav-tabs li a {
   background-color: #C96B29;
   color: #fff;
 }
-#home.pane-hero-tabs  .nav-tabs {text-transform: none;}
+#home.pane-hero-tabs ul.nav-tabs li a:hover, 
+#home.pane-hero-tabs ul.nav-tabs li a:focus {
+  color: #fff;
+  background-color: #20527C;
+}
+
 
 
 /* college search button */
