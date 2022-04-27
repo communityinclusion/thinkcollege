@@ -1664,8 +1664,12 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 }
 
 
-#research .nav-tabs {border: 1px solid #ddd;}
-#research .nav {text-transform: capitalize;}
+#research .nav-tabs {
+  text-transform: capitalize;
+}
+#research .nav-tabs > li.active > a,#research  .nav-tabs > li.active > a:hover,#research  .nav-tabs > li.active > a:focus{
+  border: 1px solid #ddd;
+}
 
 
 /* college search button */
