@@ -1650,7 +1650,7 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 }
 
 
-/* Home page Tabs */
+/* Home page and research page Tabs */
 #home.pane-hero-tabs  .nav-tabs {text-transform: none;}
 #home.pane-hero-tabs .tab-pane h2 {display:none;}
 #home.pane-hero-tabs ul.nav-tabs li a {
@@ -1663,6 +1663,9 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
   background-color: #20527C;
 }
 
+
+#research .nav-tabs {border: 1px solid #ddd;}
+#research .nav {text-transform: capitalize;}
 
 
 /* college search button */
