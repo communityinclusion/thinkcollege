@@ -1654,10 +1654,10 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 }
 
 
-#research .nav-tabs {
+#researcharticles .nav-tabs, #datasummaries .nav-tabs  {
   text-transform: capitalize;
 }
-#research .nav-tabs li a {
+#researcharticles .nav-tabs li a, #datasummaries .nav-tabs li a {
   border: 1px solid #ddd;
 }
 
