@@ -1646,7 +1646,7 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
   text-decoration: none;
 }
 
-p.CS {border-bottom: #fff solid 1px;
+span.CS {border-bottom: #fff solid 1px;
   line-height: 38px;
   font-size: 34px;
    padding-bottom:5px}
