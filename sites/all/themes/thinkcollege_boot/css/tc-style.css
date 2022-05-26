@@ -1647,7 +1647,9 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 }
 
 p.CS {border-bottom: #fff solid 1px;
-  line-height:38px; padding-bottom:5px}
+  line-height: 38px;
+  font-size: 34px;
+   padding-bottom:5px}
 
 .CSbtn:hover {
   background: #32669b;
@@ -1660,8 +1662,6 @@ p.CS {border-bottom: #fff solid 1px;
 }
 
 
-p.CS {  line-height: 38px;
-  font-size: 34px; }
   
   span.CStagline {font-size:18px;
 	line-height: 20px; 
