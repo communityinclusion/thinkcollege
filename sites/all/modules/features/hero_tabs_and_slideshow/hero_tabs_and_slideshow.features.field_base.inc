@@ -2,13 +2,13 @@
 
 /**
  * @file
- * june_2022_updates.features.field_base.inc
+ * hero_tabs_and_slideshow.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function june_2022_updates_field_default_field_bases() {
+function hero_tabs_and_slideshow_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_overlay_text'.

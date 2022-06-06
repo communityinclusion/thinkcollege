@@ -1,4 +1,4 @@
-name = June 2022 updates
+name = Hero tabs and front page slideshow
 core = 7.x
 package = Features
 dependencies[] = image

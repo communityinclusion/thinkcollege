@@ -2,13 +2,13 @@
 
 /**
  * @file
- * june_2022_updates.strongarm.inc
+ * hero_tabs_and_slideshow.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function june_2022_updates_strongarm() {
+function hero_tabs_and_slideshow_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

@@ -2,13 +2,13 @@
 
 /**
  * @file
- * june_2022_updates.features.field_instance.inc
+ * hero_tabs_and_slideshow.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function june_2022_updates_field_default_field_instances() {
+function hero_tabs_and_slideshow_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-hero_content-body'.

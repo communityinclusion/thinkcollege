@@ -2,13 +2,13 @@
 
 /**
  * @file
- * june_2022_updates.views_default.inc
+ * hero_tabs_and_slideshow.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function june_2022_updates_views_default_views() {
+function hero_tabs_and_slideshow_views_default_views() {
   $export = array();
 
   $view = new view();
