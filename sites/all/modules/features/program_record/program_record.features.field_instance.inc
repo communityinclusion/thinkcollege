@@ -183,10 +183,10 @@ function program_record_field_default_field_instances() {
         'weight' => 27,
       ),
     ),
-    'display_label' => 'Room and board:',
+    'display_label' => 'Annual room and board:',
     'entity_type' => 'node',
     'field_name' => 'field__prog_room_and_board',
-    'label' => 'Room and Board (numbers and decimals only, no commas or dollar signs)',
+    'label' => 'Annual room and Board (numbers and decimals only, no commas or dollar signs)',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -3278,6 +3278,84 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_length_years'.
+  $field_instances['node-program_record-field_prog_length_years'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 38,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 32,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 77,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 38,
+      ),
+    ),
+    'display_label' => 'Program length:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_length_years',
+    'label' => 'What is the planned length of this program?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_length_years2'.
   $field_instances['node-program_record-field_prog_length_years2'] = array(
     'bundle' => 'program_record',
@@ -4178,85 +4256,6 @@ function program_record_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 116,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'node-program_record-field_prog_overall_time_dist'.
-  $field_instances['node-program_record-field_prog_overall_time_dist'] = array(
-    'bundle' => 'program_record',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 67,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 76,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 50,
-      ),
-      'live_results_search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 65,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 98,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 76,
-      ),
-    ),
-    'display_label' => 'Proportion of social time spent only with other students in this program:',
-    'entity_type' => 'node',
-    'field_name' => 'field_prog_overall_time_dist',
-    'label' => 'How much overall time on campus is spent only with other students in this program?',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 93,
     ),
   );
 
@@ -5497,7 +5496,7 @@ function program_record_field_default_field_instances() {
         'weight' => 18,
       ),
     ),
-    'display_label' => 'Room and board:',
+    'display_label' => 'Annual room and board:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_room_and_board_displa',
     'label' => 'Room and Board (display)',
@@ -6145,10 +6144,10 @@ function program_record_field_default_field_instances() {
         'weight' => 42,
       ),
     ),
-    'display_label' => 'Program fees:',
+    'display_label' => 'Annual program fees:',
     'entity_type' => 'node',
     'field_name' => 'field_prog_specific_fees',
-    'label' => 'Program specific fees (numbers and decimals only, no commas or dollar signs)',
+    'label' => 'Annual program specific fees (numbers and decimals only, no commas or dollar signs)',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -8162,6 +8161,8 @@ function program_record_field_default_field_instances() {
   t('Admission criteria');
   t('Admission criteria (select all that apply)');
   t('Admission rate (display)');
+  t('Annual program specific fees (numbers and decimals only, no commas or dollar signs)');
+  t('Annual room and Board (numbers and decimals only, no commas or dollar signs)');
   t('Are students in this program able to access support services through your IHE disability services office?');
   t('Are students required to have a regular high school diploma to be admitted to this program?');
   t('Average out-of-state tuition, current year, if applicable');
@@ -8196,7 +8197,6 @@ function program_record_field_default_field_instances() {
   t('How do students pay to attend this program (check all that apply)?');
   t('How do students pay, Other?');
   t('How many students, total, attended this program in the most recently completed academic year?');
-  t('How much overall time on campus is spent only with other students in this program?');
   t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');
   t('If you selected "Other" for type of school, above, explain here.');
@@ -8230,7 +8230,6 @@ function program_record_field_default_field_instances() {
   t('Program Facebook page');
   t('Program contact person phone');
   t('Program specific fees (display)');
-  t('Program specific fees (numbers and decimals only, no commas or dollar signs)');
   t('Program website');
   t('Provide a link to information about your summer program, if available');
   t('Provide web links to scholarships available to students in your program');
@@ -8238,7 +8237,6 @@ function program_record_field_default_field_instances() {
   t('Requirements for Admission (display)');
   t('Retention rate (display)');
   t('Room and Board (display)');
-  t('Room and Board (numbers and decimals only, no commas or dollar signs)');
   t('School District or Agency Contact Person');
   t('School District or Agency Contact Person E-mail');
   t('School district or agency partner (if applicable)');

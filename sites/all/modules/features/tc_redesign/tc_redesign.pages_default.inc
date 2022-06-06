@@ -598,10 +598,7 @@ The purpose of the Affinity Group is to support members through:</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><strong>November 3, 2020</strong>: <a href="https://icimedia.wistia.com/medias/568jd8lkbm">recording of meeting</a> and <a href="https://docs.google.com/document/d/1ieehn3jGMBIzrYP1A-O8phhJp93anxykbTaiSgFgMgQ/edit?fbclid=IwAR3Dx4SD198hvJ-Ql7B1oRM_KuxBlYevNKK1-CiXGzyl9KS1Kox5g5uMDWw">meeting notes</a></p>
-
-<p><strong>August 19, 2020: </strong><a href="https://icimedia.wistia.com/medias/n7cazve2bt">meeting recording</a></p>
-',
+    'body' => '',
     'format' => 'full_html',
     'substitute' => TRUE,
     'title' => 'Past Meetings',
@@ -719,7 +716,7 @@ The purpose of the Affinity Group is to support members through:</p>
 
 <p><strong>Kathleen Becht, Ph.D.</strong><br />
 Technical Assistance Coordinator<br />
-<a href="mailto:kathleen.becht@umb.edu">kathleen.becht@umb.edu</a></p>
+<strong><a href="mailto:kathleen.becht@umb.edu">kathleen.becht@umb.edu</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -854,19 +851,17 @@ Technical Assistance Coordinator<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><strong><a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunityinclusion.zoom.us%2Fj%2F8786266140&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945626841%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=WOoS4bumKEKFc%2FqON%2FsDeLfmTzduaBARndV9egwZAEY%3D&amp;reserved=0">Permanent Zoom Meeting link</a></strong></p>
+    'body' => '<p><strong>Meeting Links</strong></p>
 
-<p><a href="https://docs.google.com/document/d/1o8B27pU_OKWerPviCpeZ0bIKlXJVLJEhPPntuqc6Bfo/edit"><strong>Rolling Agenda Link</strong></a>&nbsp;- all agendas and notes can be found here.</p>
+<p><strong><a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunityinclusion.zoom.us%2Fj%2F8786266140&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945626841%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=WOoS4bumKEKFc%2FqON%2FsDeLfmTzduaBARndV9egwZAEY%3D&amp;reserved=0">Zoom link for all meetings</a></strong></p>
 
-<p><strong>Meeting Dates</strong></p>
+<p><strong><a href="https://docs.google.com/document/d/1o8B27pU_OKWerPviCpeZ0bIKlXJVLJEhPPntuqc6Bfo/edit">Rolling agenda and meeting notes</a></strong></p>
 
-<ul>
-	<li>April 12, 2022, 2-3 p.m. ET<br />
-	Topic: TBA<br />
-	&nbsp;</li>
-	<li>June 7, 2022, 2-3 p.m. ET<br />
-	Topic: TBA</li>
-</ul>
+<p><strong>Upcoming Meeting Dates</strong></p>
+
+<p>October, 2022, date and time TBD<br />
+Topic: What’s in a Program of Study?<br />
+A typical program of study for any college student contains the courses (including internships) required and the number of electives needed to complete their degree. For students with intellectual disability (ID) attending college, they should also have required courses, internships, and electives, as well as any required co-curricular activities, such as attending weekly tutoring, mentoring or coaching sessions, and club or campus engagement activities, needed to complete their certificate requirements. Think College\'s Technical Assistance Coordinator, Kathy Becht, will discuss why these components are important and share a collection of Programs of Study and example documents.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -898,12 +893,25 @@ Technical Assistance Coordinator<br />
     'admin_title' => '',
     'body' => '<p class="MsoNoSpacing">Meetings are listed in date order, with the meeting topic noted in bold at the top of each listing.&nbsp;</p>
 
+<p class="MsoNoSpacing"><strong>Satisfactory Academic Progress<br />
+Date: </strong>April 12, 2022<br />
+<strong>Summary: </strong>The group discussed the components of a Satisfactory Academic Progress (SAP) plan, including important components for a CTP program SAP policy and how to balance those components. An example SAP was shared along with two advising/auditing sheets.</p>
+
+<p class="MsoNoSpacing"><strong>Resource Links</strong><br />
+<a href="https://docs.google.com/document/d/1Wbk56Ugzo3IxGls3OZO0bxaDdGGtugFI/edit?usp=sharing&amp;ouid=115938673063340630095&amp;rtpof=true&amp;sd=true"><strong>ASTEP SAP Policy Example</strong></a><br />
+<strong><a href="https://docs.google.com/document/d/1Wj2nq6M8lHamYx65uZJSY8tu6kzdqdOa/edit?usp=sharing&amp;ouid=115938673063340630095&amp;rtpof=true&amp;sd=true">ASTEP Program of Study/Advising form</a></strong><br />
+<strong><a href="https://docs.google.com/document/d/1ZoBtx30307lN4TcbCXz7hIOPDNVL452D/edit?usp=sharing&amp;ouid=115938673063340630095&amp;rtpof=true&amp;sd=true">UCF SAP Student Advising Form </a></strong></p>
+
+<hr />
 <p class="MsoNoSpacing"><strong>Colorado’s Portable IPSE Credential<br />
 Date: </strong>February 8, 2022<br />
 <strong>Presenter: </strong>Dr. Christi Kasa, University of Colorado<br />
 <strong>Summary: </strong>Presentation on Colorado’s portable credential available at 3 of Colorado’s IPSE programs. The process and philosophy behind this portable credential and the program of study it represents is provided. The presenters also share how the students are able to take courses for credit through a transcript designation of ‘modified course.’ A sample transcript is shared.</p>
 
-<p class="MsoNoSpacing"><strong><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-february-2022">Meeting recording and materials</a></strong></p>
+<p class="MsoNoSpacing"><strong>Resource Links</strong><br />
+<strong><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-february-2022">Meeting recording and transcript - Feb 2022</a><br />
+<a href="https://thinkcollege.net/sites/default/files/files/resources/Credential%20AG%208.2.22%20PPT.pdf">Portable Credential Powerpoint</a><br />
+<a href="https://thinkcollege.net/sites/default/files/files/resources/UCCS%20sample%20Transcript.pdf">UCCS Sample Transcript</a></strong></p>
 
 <hr />
 <p class="MsoNoSpacing"><b id="docs-internal-guid-1689082a-7fff-43dd-5511-82190983fc35">CAST e-Portfolio Tool</b><br />
@@ -911,8 +919,8 @@ Date: </strong>February 8, 2022<br />
 <strong>Presenters: </strong>Sam Johnston and Cara Wojcik<br />
 <strong>Summary: </strong>Dr. Sam Johnston and Cara Wojcik from CAST shared an e-portfolio tool that CAST has developed, with, of course, a UDL framework. The tool allows educators to create "challenges" for students to complete, showing student learning in various competency areas. The tool is clean visually while still providing accessibility tools for students to ‘show their work" through speech to text, video, pictures, and text. Cara developed an example of how an IPSE program might use the efolio tool by uploading the&nbsp;Foundations Skills for College and Career Learning Plan<strong>&nbsp;</strong>and then creating individual folios for students to share with employers during or prior to a job interview.</p>
 
-<p class="MsoNoSpacing"><strong><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-december-2021">Meeting recording and&nbsp;transcript - December 2021</a><br />
-<a href="https://https/thinkcollege.net/resource/campus-life-employment-supports/foundational-skills-for-college-and-career-learning-plan" target="_blank" title="null">Foundations Skills for College and Career Learning Plan</a></strong></p>
+<p class="MsoNoSpacing"><strong>Resource Links</strong><br />
+<strong><a href="https://thinkcollege.net/resource/campus-life-employment-supports/foundational-skills-for-college-and-career-learning-plan" target="_self" title="null">Foundations Skills for College and Career Learning Plan</a></strong></p>
 
 <hr />
 <p class="MsoNoSpacing"><strong>A Credential Approval Journey<br />
@@ -920,7 +928,21 @@ Date: </strong>September 8, 2021<br />
 <strong>Presenter: </strong>Dr. Kate Strater 2020 TPSID PI, Calvin University<br />
 <strong>Summary: </strong>Dr. Strater shares her journey through the University credential approval process. Kate’s work included not only starting a new inclusive postsecondary education (IPSE) program for 20 students at Calvin, but the realignment of established processes to CTP guidelines. While every IPSE program is unique, Dr. Strater outlined the governance process in establishing a new credential. There are many take-aways and great discussion!</p>
 
-<p class="MsoNoSpacing"><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-september-2021"><strong>Meeting recording and&nbsp;transcript - September 2021</strong></a></p>
+<p class="MsoNoSpacing"><strong>Resource Links</strong><br />
+<strong><a href="https://thinkcollege.net/resource/student-credentials/student-credentials-affinity-group-meeting-september-2021">Meeting recording and&nbsp;transcript - September 2021</a></strong></p>
+
+<hr />
+<p class="MsoNoSpacing"><strong>Credential Development</strong><br />
+<strong>Date: </strong>June 8, 2021<br />
+<strong>Summary: </strong>Dr. Becht shared 2 of 6 Credential Development Guidance Briefs developed in 2020 by the Florida Consortium on Inclusive Higher Education. At the time of product development programs of study examples were included from universities, state colleges, and career and technical colleges.</p>
+
+<p class="MsoNoSpacing"><strong>Resource Links<br />
+<a href="https://thinkcollege.net/resource/accreditation-and-credentials/florida-ipse-credential-guidance-brief-series">Florida Credential Guidance Brief Series</a></strong></p>
+
+<hr />
+<p><strong>Restarting the Affinity Group</strong><br />
+<strong>Date: </strong>April 15, 2021<br />
+<strong>Summary: </strong>This meeting focused on members’ backgrounds, interests, and needs for future meetings.</p>
 
 <hr />
 <p class="MsoNoSpacing"><strong>REACH Program<br />
@@ -928,8 +950,6 @@ Date: </strong>August 12, 2020<br />
 <b><strong>Presenters: </strong></b>Mary Hauff, Lauren Bruno, Jennifer Cremers<br />
 Crossover meeting with Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Group<br />
 <b>Summary:</b> The joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Group. At this session, we welcomed three guest speakers, Mary Hauff, advocate and parent from Minnesota, and Lauren Bruno and Jennifer Cremers, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID.</p>
-
-<p class="MsoNoSpacing"><strong><a href="http://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">Meeting recording - August 2020</a></strong></p>
 
 <div align="center" class="MsoNoSpacing" style="text-align:center">
 <hr align="center" size="0" width="100%" /></div>
@@ -939,7 +959,8 @@ Crossover meeting with Vocational Rehabilitation, Public Policy, and Student Cre
 <strong>Presenter: </strong>Kathy Becht<br />
 <b>Summary:</b> Kathy Becht shared an overview of the Florida Consortium on Inclusive Higher Education (a Transition and Postsecondary Program for Students with Intellectual Disabilities/TPSID) experience building a working partnership between FCIHE and the state Vocational Rehabilitation agency in Florida.</p>
 
-<p class="MsoNoSpacing"><b><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">Meeting recording and transcript - April 2020</a></b></p>
+<p class="MsoNoSpacing"><strong>Resource Links</strong><br />
+<strong><a href="https://thinkcollege.net/sites/default/files/files/resources/Tips%20and%20Takeaways_AG%20Meeting_040120.pdf">Tips and Takeaways from April 2020 Meeting</a></strong></p>
 
 <div align="center" class="MsoNoSpacing" style="text-align:center">
 <hr align="center" size="0" width="100%" /></div>
@@ -947,17 +968,11 @@ Crossover meeting with Vocational Rehabilitation, Public Policy, and Student Cre
 <p class="MsoNoSpacing"><b>The Intersection of Public Policy, Vocational Rehabilitation, and Student Credentials Part 2<br />
 Date: </b>November 6, 2019 | Crossover meeting with the Public Policy &amp; Vocational Rehabilitation Affinity Groups</p>
 
-<p class="MsoNoSpacing"><b><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity">Meeting transcript - November 2019</a></b></p>
-
 <div align="center" class="MsoNoSpacing" style="text-align:center">
 <hr align="center" size="0" width="100%" /></div>
 
 <p class="MsoNoSpacing"><b>The Intersection of Public Policy, Vocational Rehabilitation, and Student Credentials Part 1<br />
 Date: </b>August 7, 2019 | Crossover meeting with the Public Policy &amp; Vocational Rehabilitation Affinity Groups</p>
-
-<p class="MsoNoSpacing"><b><a href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019">Meeting recording and transcript - August 2019</a></b></p>
-
-<div align="center" class="MsoNoSpacing" style="text-align:center">&nbsp;</div>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -987,7 +1002,7 @@ Date: </b>August 7, 2019 | Crossover meeting with the Public Policy &amp; Vocati
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>Send an email to <a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a></p>
+    'body' => '<p>Send an email to <strong><a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -1250,7 +1265,7 @@ Date: </b>August 7, 2019 | Crossover meeting with the Public Policy &amp; Vocati
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'body' => '<p>Welcome to the Think College Technology &amp; UDL Affinity Group.</p>
+    'body' => '<p class="lead">Welcome to the Think College Technology &amp; UDL Affinity Group.</p>
 
 <p>The purpose of the Affinity Group is to support members to:</p>
 
@@ -1288,16 +1303,16 @@ Date: </b>August 7, 2019 | Crossover meeting with the Public Policy &amp; Vocati
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><strong><a data-mce-href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit" href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit">Rolling meeting agenda</a></strong>&nbsp;all agendas and notes can be found here</p>
+    'body' => '<p><strong>Upcoming Meeting Dates</strong></p>
 
-<p>This group meets from&nbsp;3-4pm Eastern</p>
+<p>September 15, 2022<strong>,</strong> 3-4pm ET, <a href="https://communityinclusion.zoom.us/j/96082165406">Sept meeting room link</a><br />
+Topic: Safety &amp; Transportation</p>
 
-<p><em>Note each meeting has a unique meeting room link</em></p>
+<p><strong>Meeting Links</strong></p>
 
-<ul>
-	<li>May 12, 2022 <a href="https://communityinclusion.zoom.us/j/96082165406">Meeting room link</a></li>
-	<li>September 15, 2022 <a href="http://https://communityinclusion.zoom.us/j/91446429336">Meeting room link</a></li>
-</ul>
+<p>Each meeting has a unique meeting room link listed above</p>
+
+<p><a data-mce-href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit" href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit">Rolling agenda and meeting notes</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -1327,94 +1342,79 @@ Date: </b>August 7, 2019 | Crossover meeting with the Public Policy &amp; Vocati
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>March 3, 2022</p>
+    'body' => '<p><a href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit">Google Doc with past meeting agendas</a></p>
 
-<ul>
-	<li><a href="http://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit?usp=sharing">Link to Agenda</a></li>
-</ul>
+<hr />
+<p><strong>Program Approaches to Technology and Digital Literacy </strong><br />
+<strong>Date: </strong>May 12, 2022<br />
+<strong>Summary: </strong>Group discussion of strategies to support students to learn day to day technology, such as digital calendars, two-factor authentication, task and reminder lists, ride share apps, etc.<br />
+<strong>Resources Links</strong><br />
+<a href="https://chrome.google.com/webstore/detail/voice-in-voice-typing/pjnefijmagpdjfhhkpljicbbpicelgko?hl=en">Voice in Voice Typing</a><br />
+<a href="https://www.simpleinout.com/">Simple In and Out App</a><br />
+<a href="https://www.digitalliteracyassessment.org/">Digital Literacy Assessment</a></p>
 
-<p>January 13, 2022</p>
+<hr />
+<p><strong>Communication Apps/Sites 10-minute Demos</strong><br />
+<strong>Date: </strong>March 3, 2022<br />
+<strong>Resource Links</strong><br />
+<a href="https://docs.google.com/presentation/d/17b-7wwwasAFrjzsk18Q5_MXapcat6KNkmH9-4ZrsEJ8/edit#slide=id.p">Read &amp; Write slides</a><br />
+<a href="https://www.texthelp.com/products/free-for-teachers/">Read &amp; Write website</a><br />
+<a href="https://chrome.google.com/webstore/detail/click2speech/djfpbemmcokhlllnafdmomgecdlicfhj?hl=en">click2speech</a><br />
+<a href="https://otter.ai/">Otter</a><br />
+<a href="https://www.textcompactor.com/">Text Compactor</a></p>
 
-<ul>
-	<li><a href="http://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit?usp=sharing">Link to Agenda</a></li>
-</ul>
+<hr />
+<p><strong>Accessible Communication</strong><br />
+<strong>Date: </strong>January 13, 2022<br />
+<strong>Presenter: </strong>Elizabeth Stewart, Ph.D., ATP is a Solutions Consultant for Tobii Dynavox specializing in Augmentative and Alternative Communication<br />
+<strong>Resource Links</strong><br />
+<a href="https://us.tobiidynavox.com/pages/td-snap-core-first">TD Snap</a><br />
+<a href="https://us.tobiidynavox.com/products/td-talk">TD Talk</a><br />
+<a href="https://support.apple.com/en-us/HT202658">Assistive Touch on iOS</a></p>
 
-<p>September 30, 2021</p>
+<hr />
+<p><strong>Communication and Collaboration Tools</strong><br />
+<strong>Date: </strong>November 4, 2021<br />
+<strong>Summary: </strong>VR Demo and chat, Mindmapping with Google Mindmaps, "almost in-person" meetings with Kumospace<br />
+<strong>Resource Links</strong><br />
+<a href="https://thinkcollege.net/resource/universal-design-for-learning-udl/technology-and-udl-using-google-my-maps-for-student">Using Google My Maps for Student Supports (video demo)</a></p>
 
-<ul>
-	<li><a href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit#" target="_blank">Link to Agenda</a>&nbsp;</li>
-</ul>
+<hr />
+<p><strong>Let\'s Get "Unstuck"</strong><br />
+<strong>Date: </strong>September 30, 2021<br />
+<strong>Presenters: </strong>Ela Ben-Hur, founder of the Innovators Compass and assistant adjunct professor at Olin College; Hillary Goldthwait-Fowles, Assistive Technology Specialist, consultant, and adjunct professor</p>
 
-<p>February 24, 2021</p>
+<hr />
+<p><strong>February 24, 2021 </strong><br />
+<a href="https://nearpod.com/">Nearpod</a></p>
 
-<ul>
-	<li><a href="https://icimedia.wistia.com/medias/c901axi7ks">Link to recording</a>&nbsp;</li>
-	<li><a href="https://docs.google.com/document/d/1qKgiqqDEVrqlGri9Ths03yWSW98ykZ28mjrxXNe2VTM/edit?usp=sharing">Link to Agenda</a></li>
-	<li><a href="https://app.nearpod.com/presentation?pin=EU9AD">Link to Nearpod presentation/agenda</a></li>
-</ul>
+<hr />
+<p><strong>December 2, 2020</strong><br />
+<a href="https://wakelet.com/">Wakelet for Assessment Tools</a></p>
 
-<p>December 2, 2020</p>
+<hr />
+<p><strong>September 23, 2020</strong><br />
+<a href="https://docs.google.com/presentation/d/1JUwHapej9pmVMO4efJchQZQuf-uUXFc2SWfypRtdOWM/edit?usp=slides_web">Tech-A-Licious Slides on Google</a></p>
 
-<ul>
-	<li><a href="https://icimedia.wistia.com/medias/mtm7rzp0p1">Link to A</a><a href="https://docs.google.com/document/d/17ghsrulirA4MeFTE-3a6nouoeHCd4-WfEw-pwSkQwBY/edit?usp=sharing">genda</a></li>
-</ul>
+<hr />
+<p><strong>Students Accessing Accommodations</strong><br />
+<strong>Date: </strong>February 27, 2020</p>
 
-<p>September 23, 2020</p>
+<hr />
+<p><strong>Minot State University UDL-It! and 5 Steps to UDLifying Your Syllabus</strong><br />
+<strong>Date: </strong>November 21, 2019</p>
 
-<ul>
-	<li><a href="https://icimedia.wistia.com/medias/mtm7rzp0p1">Link to Recording</a></li>
-	<li><a href="https://docs.google.com/presentation/d/1JUwHapej9pmVMO4efJchQZQuf-uUXFc2SWfypRtdOWM/edit?usp=slides_web">Link to Tech-A-Licious Slides on Google</a></li>
-	<li><a href="https://docs.google.com/document/d/1V1In8HyROxRe8M0mRbQRms6VBZQzs0PT5dppeU204TI/edit?usp=sharing">Link to Meeting Agenda</a><br />
-	&nbsp;</li>
-</ul>
+<hr />
+<p><strong>Student Success Standards and Resources</strong><br />
+<strong>Date: </strong>September&nbsp;20, 2019</p>
 
-<p>June 4, 2020&nbsp;</p>
+<hr />
+<p><strong>Instruction &amp; Assessment</strong><br />
+<strong>Date: </strong>May 23, 2019</p>
 
-<ul>
-	<li>Guest speakers: Olivia Hester and Lauren Perry</li>
-	<li><a href="https://icimedia.wistia.com/medias/7taswda0eo">Link to Presentation</a></li>
-	<li><a href="https://docs.google.com/document/d/1Hj-A_g6l3rHwyXkoDARwHF3VZs1MYH0DnVacOEBXNmc/edit?usp=sharing">Link to&nbsp;Agenda</a><br />
-	&nbsp;</li>
-</ul>
-
-<p>February 27, 2020&nbsp;</p>
-
-<ul>
-	<li>Topic: Student Accessing Accommodations</li>
-	<li><a href="https://docs.google.com/document/d/12_GO8dVZRRfQarp-W01j_pjzt62UW1QEiwlr-gckP4o/edit?usp=sharing">Link to&nbsp;Agenda</a></li>
-	<li><a href="https://docs.google.com/document/d/12_GO8dVZRRfQarp-W01j_pjzt62UW1QEiwlr-gckP4o/edit?usp=sharing">Link to&nbsp;P</a><a href="https://share.nearpod.com/vsph/ExqyT084Mu">resentation</a></li>
-	<li><a href="https://icimedia.wistia.com/medias/pm0ozoin18">Link to Recording</a><br />
-	&nbsp;</li>
-</ul>
-
-<p>November 21, 2019</p>
-
-<ul>
-	<li>Topic: Minot State University UDL-It! and 5 Steps to UDLifying Your Syllabus</li>
-	<li><a href="https://docs.google.com/document/d/1KlCebtNJ0ivh8PmlXDbs-hDxXC0uHFe6IkYwBke2PK0/edit">Link to&nbsp;Agenda</a></li>
-	<li><a href="https://icimedia.wistia.com/medias/jqe427243w">Link to recording</a><br />
-	&nbsp;</li>
-</ul>
-
-<p>September&nbsp;20, 2019</p>
-
-<ul>
-	<li>Topic: Student Success Standards and Resources</li>
-	<li><a href="http://docs.google.com/document/d/15QYyyTT0-XHOvgM5xVdpszeYr6uYPrktAFMPYBcQJrA/edit?usp=sharing">Link to&nbsp;Agenda</a></li>
-	<li><a href="https://icimedia.wistia.com/medias/w54oz1kdbf">Link to recording</a></li>
-</ul>
-
-<p><br />
-May 23, 2019</p>
-
-<ul>
-	<li>Topic: Instruction &amp; Assessment</li>
-	<li><a href="http://docs.google.com/document/d/15QYyyTT0-XHOvgM5xVdpszeYr6uYPrktAFMPYBcQJrA/edit?usp=sharing">Link to&nbsp;Agenda</a></li>
-	<li><a href="https://icimedia.wistia.com/medias/yv1gk1dmmw">Link to recording</a></li>
-</ul>
-
-<p><br />
-February 28, 2019 (sorry, meeting was not recorded)</p>
+<hr />
+<p><strong>Brief Introduction to Universal Design </strong><br />
+<strong>Date: </strong>February 28, 2019</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -1727,15 +1727,27 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
     'admin_title' => '',
     'body' => '<p><img alt="Maria Paiewonsky." class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/maria-paiewonsky.png" style="width: 100px; height: 100px;" /></p>
 
-<p><strong>Maria Paiewonsky,&nbsp;Ed.D.</strong></p>
+<p><strong>Maria Paiewonsky,&nbsp;Ed.D.</strong><br />
+Program Manager/Transition Specialist for Think College<br />
+<strong><a href="mailto:Maria.Paiewonsky@umb.edu">maria.paiewonsky@umb.edu</a></strong></p>
 
-<p>Program Manager/Transition Specialist for Think College</p>
+<hr />
+<p><strong><img alt="Woman with short gray hair sitting in legislative room" class="center-block img-responsive img-thumbnail" src="/sites/default/files/images/Mary%20Hauff%20profile.png" style="height: 129px; width: 100px;" /></strong></p>
 
-<p><a href="mailto:Maria.Paiewonsky@umb.edu">Maria.Paiewonsky@umb.edu</a></p>
+<p><strong>Mary Hauff</strong><br />
+Parent Advocate, Co-Leader of the Minnesota Inclusive Higher Education Consortium<br />
+<strong><a href="mailto:hauff004@umn.edu">hauff004@umn.edu</a></strong></p>
+
+<hr />
+<p><strong><img alt="Woman smiling with long brown hair and brown eyes" class="center-block img-responsive img-thumbnail" src="/sites/default/files/images/Ashley-luce.jpg" style="height: 100px; width: 100px;" /></strong></p>
+
+<p><strong>Ashley Luce</strong><br />
+Program Coordinator, Massachusetts Inclusive Concurrent Enrollment Initiative (MAICEI)<br />
+<strong><a href="mailto:ashley.luce@umb.edu">ashley.luce@umb.edu</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
-    'title' => 'AFFINITY GROUP FACILITATOR',
+    'title' => 'AFFINITY GROUP CO-FACILITATORS',
     'title_heading' => 'h3',
   );
   $pane->cache = array();
@@ -1849,27 +1861,19 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><strong><a href="http://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunityinclusion.zoom.us%2Fj%2F622180688&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945606850%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=FfockRhdZfJRkDJ8k7otCLA95cgA4%2FXA9zZ%2FNDzuFdw%3D&amp;reserved=0">Permanent Zoom meeting room</a></strong></p>
+    'body' => '<p><strong>Meeting Links</strong></p>
 
-<p><strong><a href="http://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk%2Fedit%3Fusp%3Dsharing&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945606850%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=GI2zmAxTkaGyYNuIbg3QjeTZv%2BSKAIlmcYVWdSu4oMk%3D&amp;reserved=0">Rolling meeting agenda</a></strong>&nbsp;- all agendas and meeting notes can be found here.</p>
+<p><strong><a href="http://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunityinclusion.zoom.us%2Fj%2F622180688&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945606850%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=FfockRhdZfJRkDJ8k7otCLA95cgA4%2FXA9zZ%2FNDzuFdw%3D&amp;reserved=0">Zoom link for all meetings</a></strong></p>
 
-<p><strong>The group meets from 2-3pm ET, unless otherwise noted</strong></p>
+<p><strong><a href="http://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk%2Fedit%3Fusp%3Dsharing&amp;data=04%7C01%7CSheila.Johnson%40umb.edu%7C7dc81967b7754a00229208d97ed5ca6a%7Cb97188711ee94425953c1ace1373eb38%7C0%7C0%7C637680278945606850%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=GI2zmAxTkaGyYNuIbg3QjeTZv%2BSKAIlmcYVWdSu4oMk%3D&amp;reserved=0">Rolling agenda and meeting notes</a></strong></p>
 
-<p>&nbsp;
+<p><strong>Upcoming Meeting Dates</strong></p>
+
+<p>June 9, 2022, 2-3pm ET<br />
+Topic: How state agencies can financially support students via VR, DD or IDEA funds</p>
+
 <ul>
 </ul>
-</p>
-
-<ul>
-	<li>April 14, 2022
-	<ul>
-		<li>Topic: Partner perspectives in CBTS</li>
-	</ul>
-	</li>
-	<li>June 9, 2022</li>
-</ul>
-
-<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -1897,10 +1901,26 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>Past meeting dates&nbsp;</p>
+    'body' => '<p><strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">Notes from all meetings are available here</a></strong></p>
+
+<hr />
+<p><strong>Student Selection and Preparation for College</strong><br />
+<strong>Date: </strong>April 14, 2022<br />
+<strong>Summary: </strong>This meeting focused on student recruitment and onboarding strategies as they relate to college-based transition services. The group reviewed a recruitment study from Texas that specifically looked at what efforts public institutes of higher education in Texas are making to recruit students with ID.</p>
+
+<p><strong>Resource Links<br />
+<a href="https://docs.google.com/presentation/d/1EgTc5jsY1Z5eIFa6qiTE8YQW2_RHHWLcSrNziLMeJtE/edit?usp=sharing">Slides from April 2022 Meeting</a></strong><br />
+<strong><a href="https://thinkcollege.net/resource/state-legislation/report-on-the-recruitment-of-persons-with-intellectual-and-developmenta-0">Report on the Recruitment of Persons with Intellectual and Developmental Disabilities at Public Institutions of Higher Education in Texas</a></strong></p>
+
+<hr />
+<p><strong>Panel of School Partners Involved in College-Based Transition Services</strong><br />
+<strong>Date: </strong>February 10, 2022<br />
+<strong>Summary: </strong>This meeting focused on the perspectives of three transition specialists in MA who have been school partners with local colleges to provide college-based transition services to students with ID. Panelists shared what they have experienced as positives of this model of services, as well as some ongoing issues they address.</p>
+
+<hr />
+<p>Additional past meeting dates&nbsp;</p>
 
 <ul>
-	<li>February 10, 2022</li>
 	<li>December 9, 2021</li>
 	<li>October 14, 2021</li>
 	<li>April 11, 2021</li>
@@ -1912,8 +1932,6 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 	<li>December 18, 2019</li>
 	<li>September 26, 2019</li>
 </ul>
-
-<p><strong><a href="https://docs.google.com/document/d/19zakHT219iPcDtWqzLShQvx5iSGLpi7dHV5a8a3QxLk/edit">Recordings and notes for all meetings are available here</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -2145,10 +2163,13 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
 <p>These documents will assist you in understanding key aspects of data reporting:</p>
 
 <ul>
-	<li><a href="/resource/federal-student-aid-federal-legislation-ctp-application-process/defining-and-documenting">Defining and Documenting Intellectual Disability</a> explains the definition and documentation of ID.&nbsp;</li>
-	<li>The <a href="/sites/default/files/files/Inclusive_vs_specialized_course_decision%20tree_020717.pdf">Inclusive course decision tree</a> is used to determine if a course can be considered a fully inclusive class.</li>
-	<li>The <a href="https://thinkcollege.net/resource/tpsid-data-collection-resources">data collection resources</a> page has Excel files to assist with data collection.&nbsp;</li>
+	<li><a href="/resource/federal-student-aid-federal-legislation-ctp-application-process/defining-and-documenting">Defining and Documenting Intellectual Disability</a>&nbsp;</li>
+	<li><a href="/sites/default/files/files/Inclusive_vs_specialized_course_decision%20tree_020717.pdf">Inclusive course decision tree</a></li>
+	<li><a href="http://thinkcollege.net/resource/tpsid-data-collection-resources">Data collection resources</a>&nbsp;</li>
+	<li><a href="/sites/default/files/files/GPRAhandout.pdf" target="_blank">GPRA measure explained</a></li>
 </ul>
+
+<p>Office hours 3rd Tues 3-4pm ET</p>
 </div>
 </div>
 </div>
@@ -2701,33 +2722,11 @@ February 28, 2019 (sorry, meeting was not recorded)</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<h3><strong>The next meeting is Thursday, March 10 from 2:00-3pm ET.&nbsp; The topic of the meeting is how students feel about this group.</strong></h3>
+    'body' => '<p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;"><strong>The next meeting is Thursday, May 5 from 3:00-4pm ET.&nbsp; We will announce the topic before the meeting.</strong></span></p>
 
-<p><strong><a data-mce-href="https://communityinclusion.zoom.us/meeting/register/tJAtde6urD0jE9AMHJ9g4mhwD_tDd_eabSV_" href="https://communityinclusion.zoom.us/meeting/register/tJAtde6urD0jE9AMHJ9g4mhwD_tDd_eabSV_">Sign up for the March meeting by clicking here</a>.</strong></p>
+<p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;"><strong><a href="https://communityinclusion.zoom.us/meeting/register/tJcod-Grpj4vGNwfggnajNL0fZd25OLZk2nz">Please sign up for the May&nbsp;meeting by clicking here</a>.</strong></span></p>
 
-<p><strong>We will talk about how you feel about being part of this group. This is a message from Liz who coordinates the group:</strong><br />
-<br />
-<em>Some of my co-workers and I have all been talking about if these calls are useful to you all.</em><br />
-<br />
-<em>We want you to come tell us what YOU think.</em><br />
-<br />
-<em>It’s REALLY ok to say what you think; in fact that’s part of self-advocacy, telling others what YOU need and what’s NOT working for you.</em><br />
-<br />
-<em>On the call we will talk about what you like about these calls and what you want to change so it can be BETTER for you and your friends. Because these calls are for YOU … NOT for us.</em><br />
-<br />
-<em>We will ask these 3 question and want you to think about them now. It would be good for you to be prepared to share your thoughts.</em><br />
-<br />
-<em>1. What do you like about these calls?</em><br />
-<em>2. What do you want from these calls?</em><br />
-<em>3. What don\'t you like about these calls?</em><br />
-<br />
-<em>Please bring some notes!</em><br />
-<br />
-If you want to know more, you can email Liz at lweintraub@aucd.org.&nbsp;</p>
-
-<p>2022 Meeting Schedule</p>
-
-<p>We will have a meeting on Tuesday, May 3&nbsp;from 2-3pm ET. We will also have a meeting on Monday, September 26 from 2-3pm ET.</p>
+<p><span style="font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;">We will also have a meeting on Monday, September 26 from 2-3pm ET.</span></p>
 
 <p>&nbsp;</p>
 ',
@@ -2757,7 +2756,18 @@ If you want to know more, you can email Liz at lweintraub@aucd.org.&nbsp;</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<h2>Date: December 8, 2021</h2>
+    'body' => '<h2><strong>Date: March 10, 2022</strong></h2>
+
+<h3><strong>Title:&nbsp;</strong>A discussion with students about the future of the group</h3>
+
+<p><strong>Host:</strong>&nbsp;Liz Weintraub</p>
+
+<p><strong>What happened:&nbsp;</strong>Students who have been part of the group for a long time and brand new students talked about what they like about the group and meetings. They also talked about how the group could be different. Liz will talk about what might change at the&nbsp;May 3 meeting.</p>
+
+<p>We did not have a guest presenter. We do not have a recording or transcript from this meeting.</p>
+
+<hr />
+<h2><strong>Date: December 8, 2021</strong></h2>
 
 <h3><strong>Title</strong>: Picking Topics<br />
 <strong>Host</strong>:&nbsp;Liz Weintraub</h3>
@@ -5265,7 +5275,9 @@ a.orange {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>Future Quest Island-Explorations (FQI-E) is an online accessible college &amp; career readiness curriculum that uses gaming strategies to motivate and support improved self-concept, social and emotional competence, and early college and career awareness for upper elementary students with and without disability in grades 3-5 using the evidenced-based “Possible Selves” framework.&nbsp;</p><br>
+    'body' => '<p>Future Quest Island-Explorations (FQI-E) is an online accessible college &amp; career awareness curriculum that uses gaming strategies to motivate and support improved self-concept, social and emotional competence, and early college and career awareness for upper elementary students with and without disability in grades 3-5 using the evidenced-based “Possible Selves” framework.&nbsp;</p>
+
+<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -7792,7 +7804,7 @@ a.orange {
     'admin_title' => 'quick links',
     'body' => '<ul>
 	<li><a href="https://www.nationalskillscoalition.org">National Skills Coalition</a>: National Skills Coalition is a broad-based coalition working toward a vision of an America that grows its economy by investing in its people so that every worker and every industry has the skills to compete and prosper.</li>
-	<li><a href="/technical-assistance/affinity-groups/ncc-credentials">Student Credentials in Inclusive Higher Education Affinity Group</a>: The Student Credentials Affinity group brings together professionals, researchers, advocates, policymakers and educators interested in discussing the credential landscape in postsecondary education. This is an open-access special interest group targeted at individuals who want to contribute to the discussion of "meaningful credentials" for students with intellectual disabilities.</li>
+	<li><a href="https://thinkcollege.net/ta-training/affinity-groups/ncc-credentials">Student Credentials in Inclusive Higher Education Affinity Group</a>: The Student Credentials Affinity group brings together professionals, researchers, advocates, policymakers and educators interested in discussing the credential landscape in postsecondary education. This is an open-access special interest group targeted at individuals who want to contribute to the discussion of "meaningful credentials" for students with intellectual disabilities.</li>
 </ul>
 ',
     'format' => 'full_html',
@@ -7823,7 +7835,7 @@ a.orange {
     'admin_title' => 'Sign up Today!',
     'body' => '<p>Sign Up Today! Check out the <strong>Student Credentials Group</strong>, where those with similar interests can connect with each other!</p>
 
-<p class="rtecenter"><a class="btn btn-primary" href="https://thinkcollege.net/technical-assistance/affinity-groups/ncc-credentials">Sign up</a></p>
+<p class="rtecenter"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeyuINvZWAn-mvpG12cELuRDypH0JAm0c1x5OMt3IDpjTV4Bw/viewform">Sign up</a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -8820,7 +8832,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange infolist',
+    'css_class' => 'box box-orange infolist',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -8882,7 +8894,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'ie-featuredresources box-orange',
+    'css_class' => 'ie-featuredresources box box-orange',
     'css_id' => 'featuredresources',
   );
   $pane->extras = array();
@@ -8970,7 +8982,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange ',
+    'css_class' => 'box box-orange ',
     'css_id' => 'states',
   );
   $pane->extras = array();
@@ -9061,7 +9073,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange',
+    'css_class' => 'box box-orange',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -9094,7 +9106,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange infolist',
+    'css_class' => 'box box-orange infolist',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -9124,7 +9136,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange',
+    'css_class' => 'box box-orange',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -9348,49 +9360,45 @@ Direct: 240.821.9465<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>The last&nbsp;joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups was&nbsp;<strong>August 12, 2020</strong>. At this session we welcomed three&nbsp;guest speakers,&nbsp;<strong>Mary Hauff,</strong>&nbsp;advocate and parent from Minnesota, and&nbsp;<strong>Lauren Bruno and Jennifer Cremers</strong>, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID. The recording can be found&nbsp;<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">here</a></strong>.&nbsp;</p>
+    'body' => '<p><strong>Joint Meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</strong><br />
+<strong>Date: </strong>August 12, 2020<br />
+<strong>Summary: </strong>At this session we welcomed three&nbsp;guest speakers,&nbsp;Mary Hauff,&nbsp;advocate and parent from Minnesota, and&nbsp;Lauren Bruno and Jennifer Cremers, University of Iowa REACH program, will share an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID.</p>
 
 <hr />
-<p>A crossover Affinity Group meeting with the Vocational Rehabilitation and Student Credentials groups was held on <strong>April 1, 2020</strong>. All resources can be found <strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">here</a></strong>, including the recording, transcript, a special PowerPoint, and a summary handout.</p>
+<p><strong>Crossover Affinity Group meeting with the Vocational Rehabilitation and Student Credentials groups</strong><br />
+<strong>Date: </strong>April 1, 2020; November 6, 2019, August 7, 2019</p>
 
 <hr />
-<p>The last meeting was a(nother) special crossover meeting with the Vocational Rehabilitation Affinity Group and the Student Credentials Affinity Group, held on <strong>Wednesday,&nbsp;November 6 at 2pm Eastern</strong>. The recording and agenda from that meeting can be found <strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity">here</a></strong>.&nbsp;</p>
+<p><strong>Special meeting about (IPEDS) Integrated Postsecondary Education Data System</strong><br />
+<strong>Date: </strong>May 7, 2019<br />
+<strong>Summary: </strong>At this meeting with TPSIDs, Frank Smith and Meg Grigal from the Think College National Coordinating Center, explained proposed changes to the Integrated Postsecondary Education Data System (IPEDS) and the impact this would have on inclusive PSE.<br />
+<strong><a href="https://thinkcollege.net/resource/advocacy-outreach/special-meeting-about-ipeds-integrated-postsecondary-education-data">Recording of IPEDS meeting and a summary document can be found here</a>.</strong></p>
 
 <hr />
-<p>The August 7, 2019 Public Policy group was a special combined Affinity Group meeting, along with the Student Credentials and Vocational Rehabilitation groups. The recording and transcript can be found <a href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019"><strong>here</strong></a>.&nbsp;</p>
+<p><strong>Congressional and State Legislative Sessions</strong><br />
+<strong>Date: </strong>January 17, 2019<br />
+<strong>Summary: </strong>During this call we&nbsp;discussed the new Congress, your new State legislative sessions, the Higher Ed Act, what to anticipate in the coming year, and some new material we have developed.<br />
+<strong><a href="https://thinkcollege.net/sites/default/files/files/resources/Talking%20Points%20on%20Higher%20Education%20Act%20Reauthorization%2001.docx">Talking points on HEA reauthorization</a>.</strong></p>
 
 <hr />
-<p>A special meeting was held on <strong>May 7</strong>.&nbsp;At this meeting with TPSIDs, Frank Smith and Meg Grigal from the Think College National Coordinating Center, explained proposed changes to the Integrated Postsecondary Education Data System (IPEDS) and the impact this would have on inclusive PSE.&nbsp;A recording of this meeting and a summary document can be found <a href="https://thinkcollege.net/resource/federal-legislation/special-meeting-about-ipeds-integrated-postsecondary-education-data">here</a>.&nbsp;</p>
+<p><strong>Vocational Rehabilitation </strong><br />
+<strong>Date: </strong>September 13, 2018<br />
+<strong>Summary: </strong>We discussed how to influence policy at&nbsp;Vocational Rehabilitation to better support inclusive postsecondary education.&nbsp;</p>
 
 <hr />
-<p>The Public Policy group met on&nbsp;<strong>Thursday, April 18 2019</strong>. You can find the recording and handouts <a href="https://thinkcollege.net/resource/advocacy-outreach/public-policy-affinity-group-meeting-april-2019">here</a>.&nbsp;</p>
+<p><strong>Reauthorization of the Higher Education Opportunity Act</strong><br />
+<strong>Date: </strong>February 22, 2018<br />
+<strong>Summary: </strong>At this meeting, we discussed the pending reauthorization of the federal Higher Education Opportunity Act, and considered the following questions:&nbsp;What does that mean for TPSIDs created under the law and others that have inclusive higher education programs for students with intellectual disabilities? What can you do? Who should you be talking to about your programs? What are you hearing in the field about HEOA?&nbsp;</p>
 
 <hr />
-<p>The group met on&nbsp;<strong>Thursday, January 17, 2019</strong>. During this call we&nbsp;discussed the new Congress, your new State legislative sessions, the Higher Ed Act, what to anticipate in the coming year, and some new material we have developed. You can find the recording and additional materials <a href="https://thinkcollege.net/resource/advocacy-outreach/public-policy-affinity-group-meeting-january-2019">here</a>.&nbsp;</p>
+<p><strong>CUNY TPSID Consortium</strong><br />
+<strong>Date: </strong>November 30, 2017<br />
+<strong>Summary: </strong>Invited guest,&nbsp;Chris Rosa, Interim Vice Chancellor of Student Affairs, City University of New York, spoke on behalf of CUNYs TPSID consortium on how they are moving forward to influence their legislature on behalf of all the programs.</p>
 
 <hr />
-<p>The Public Policy Affinity Group met on&nbsp;<strong>Thursday, September 13, 2018</strong>, where we discussed how to infuence policy at&nbsp;Vocational Rehabilitation to better support inclusive postsecondary education.&nbsp; The recording of the meeting and the meeting notes can be found <a href="https://thinkcollege.net/resource/federal-legislation/public-policy-affinity-group-meeting">here</a>.</p>
-
-<hr />
-<p>The Public Policy Affinity Group met on&nbsp;<strong>Thursday, February 22, 2018</strong>. All handouts, the Power Point, and the recording from the meeting, can be found in our <a href="https://thinkcollege.net/resource/advocacy-outreach/public-policy-affinity-group-meeting-november-2017">resource library</a>.&nbsp;</p>
-
-<p>At this meeting, we discussed the pending reauthorization of the federal Higher Education Opportunity Act, and considered the following questions:&nbsp;What does that mean for TPSIDs created under the law and others that have inclusive higher education programs for students with intellectual disabilities? What can you do? Who should you be talking to about your programs? What are you hearing in the field about HEOA?&nbsp;</p>
-
-<hr />
-<p>The second meeting of the Public Policy Affinity Group was held <strong>November 30, 2017</strong>. Invited guest,&nbsp;Chris Rosa, Interim Vice Chancellor of Student Affairs, City University of New York, spoke on behalf of CUNYs TPSID consortium on how they are moving forward to influence their legislature on behalf of all the programs.</p>
-
-<p>The recording and power point presentation can be found in our <a href="https://thinkcollege.net/resource/advocacy-outreach/public-policy-affinity-group-meeting-november-2017">resource library</a>.&nbsp;</p>
-
-<hr />
-<p>The first meeting was held on <strong>June 8, 2017</strong>.&nbsp;At the meeting we:</p>
-
-<ul>
-	<li>Reviewed the purpose of the Public Policy Affinity Group</li>
-	<li>Previewed materials being developed for the Project Directors meeting</li>
-	<li>Heard from Martha E. Mock, Ph.D. Director, Institute for Innovative Transition at the University of Rochester and Margo Vreeburg Izzo, Ph.D., Program Director, The Ohio State University Nisonger Center about their experiences with public policy related to inclusive higher education in their respective states.</li>
-</ul>
-
-<p>Listen to recording of first meeting: <a href="http://aucd.adobeconnect.com/pq7rublcjs3j/">http://aucd.adobeconnect.com/pq7rublcjs3j/</a></p>
+<p><strong>Kickoff Meeting</strong><br />
+<strong>Date: </strong>June 8, 2017<br />
+<strong>Summary: </strong>At the meeting we reviewed the purpose of the Public Policy Affinity Group, previewed materials being developed for the Project Directors meeting, and heard from Martha E. Mock, Ph.D. Director, Institute for Innovative Transition at the University of Rochester and Margo Vreeburg Izzo, Ph.D., Program Director, The Ohio State University Nisonger Center about their experiences with public policy related to inclusive higher education in their respective states.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -9704,16 +9712,15 @@ Research Associate, Indiana University\'s UCEDD<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><strong><a href="https://communityinclusion.zoom.us/j/99788743035?pwd=eFZaVXhzMzFXY2dPeDZsaVl1cElnZz09">Permanent Zoom meeting room</a></strong></p>
+    'body' => '<p><strong>Meeting Links</strong></p>
 
-<p><strong><a href="https://docs.google.com/document/d/1bQMhj16DIw6A47udfDBTbUHKy8pSebb8Infh2Bp4Ksg/edit">Rolling meeting agenda</a>&nbsp;</strong>all agendas and notes can be found here</p>
+<p><strong><a href="https://communityinclusion.zoom.us/j/95861564100?pwd=dDRRL3VJSk5HanljL3RUNmd5RHQ5dz09">Zoom link for all meetings</a></strong></p>
 
-<p>All meetings take place from 1-2pm ET unless otherwise noted</p>
+<p><strong><a href="https://docs.google.com/document/d/1bQMhj16DIw6A47udfDBTbUHKy8pSebb8Infh2Bp4Ksg/edit">Rolling meeting agenda and meeting notes</a> </strong></p>
 
-<ul>
-	<li>Thursday, April 21, 2022</li>
-	<li>Wednesday, July 27, 2022</li>
-</ul>
+<p><strong>Upcoming Meeting Dates</strong></p>
+
+<p>Wednesday, July 27, 2022, 1-2pm ET</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -9741,43 +9748,50 @@ Research Associate, Indiana University\'s UCEDD<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>Click on the links below to access recordings from past meetings.&nbsp;</p>
+    'body' => '<p>Meeting recordings available upon request.</p>
 
-<p><strong>January 20, 2022 </strong>(recording upon request)</p>
+<hr />
+<p><strong>April 21, 2022</strong><br />
+<strong>Summary: </strong>Attendees shared updates from ongoing research and upcoming conferences. The group discussed our idea for proposing a special issue of the Journal of Inclusive Postsecondary Education focused on research methodology. After, there was time for small groups to talk in breakout rooms.<br />
+<strong>Resource Links<br />
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfQbc4y87l513cxfeGWgrlicYBuWQZhUb0LRuxUJzvmQIvfEQ/viewform">New form for requesting Think College to announce study recruitment</a></strong></p>
 
-<p><strong><a href="https://icimedia.wistia.com/medias/4ysgmqswlt">February 25, 2021</a></strong></p>
+<hr />
+<p><strong>January 20, 2022 </strong></p>
 
-<p><strong><a href="https://icimedia.wistia.com/medias/nqvxqvqm7i">November 3, 2020</a></strong></p>
+<p><strong>February 25, 2021</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-august-2020">August 11, 2020</a></strong></p>
+<p><strong>November 3, 2020</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/doctoral-student-subgroup-of-research-affinity-group-may-2020">May 28, 2020:</a> </strong>this was a special meeting of the doctoral student subgroup.&nbsp;</p>
+<p><strong>August 11, 2020</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-may-2020">May 12, 2020</a></strong></p>
+<p><strong>May 28, 2020 </strong>(special meeting of the doctoral student subgroup)</p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-november-2019-0">February 11, 2020</a></strong></p>
+<p><strong>May 12, 2020</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-november-2019-0">November 13, 2019</a></strong></p>
+<p><strong>February 11, 2020</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-august-2019">August 13, 2019</a></strong></p>
+<p><strong>November 13, 2019</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-april-2019">April 2, 2019</a></strong></p>
+<p><strong>August 13, 2019</strong></p>
 
-<p><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-january-2019-0"><strong>January 22, 2019</strong></a></p>
+<p><strong>April 2, 2019</strong></p>
 
-<p><strong><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-october-2018">October 10, 2018</a></strong></p>
+<p><strong>January 22, 2019</strong></p>
 
-<p><a href="https://thinkcollege.net/resource/transition-research/research-affinity-group-meeting-july-2018"><strong>July 24, 2018</strong></a></p>
+<p><strong>October 10, 2018 </strong></p>
 
-<p><strong>April 24th, 2018.&nbsp;</strong>&nbsp;Sorry, no recording available!</p>
+<p><strong>July 24, 2018 </strong></p>
 
-<p><strong><a href="http://thinkcollege.net/events/research-affinity-group-meeting/research-affinity-group-meeting-0" target="_blank">January 31st, 2018</a></strong></p>
+<p><strong>April 24th, 2018&nbsp;</strong></p>
 
-<p><strong><a href="http://thinkcollege.net/events/research-affinity-group-meeting/research-affinity-group-meeting" target="_blank">September 12th, 2017</a></strong></p>
+<p><strong>January 31, 2018</strong></p>
 
-<p><strong><a href="http://connectpro97884399.adobeconnect.com/p9385swvaj3/" target="_blank">April 25th, 2017</a></strong></p>
+<p><strong>September 12, 2017</strong></p>
 
-<p><strong><a href="http://connectpro97884399.adobeconnect.com/p2pq6qtlc7j1/" target="_blank">June 13th, 2017</a></strong></p>
+<p><strong>April 25, 2017</strong></p>
+
+<p><strong>June 13, 2017</strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -9876,7 +9890,7 @@ Research Associate, Indiana University\'s UCEDD<br />
     ),
   );
   $display->cache = array();
-  $display->title = 'Statewide Alliances Affinity Group';
+  $display->title = 'State Alliance Affinity Group';
   $display->uuid = '4996ec2a-e4d2-44a4-9e4f-71d974d5caa6';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'page_statewide_alliances_affinity_group__panel';
@@ -9901,7 +9915,9 @@ Research Associate, Indiana University\'s UCEDD<br />
     'title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -9918,7 +9934,7 @@ Research Associate, Indiana University\'s UCEDD<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><img alt="Susanna Miller-Raines" class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/Susanna%20Miller-Raines.jpg" /></p>
+    'body' => '<p><img alt="Susanna Miller-Raines" class="center-block img-thumbnail img-responsive" src="/sites/default/files/images/Susanna%20Miller-Raines.jpg" style="height: 100px; width: 100px;" /></p>
 
 <p><strong>Susanna Miller-Raines</strong></p>
 
@@ -9933,7 +9949,9 @@ Think College Inclusive Higher Education Network</p>
     'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'box',
     'css_id' => '',
@@ -9962,7 +9980,9 @@ Think College Inclusive Higher Education Network</p>
     'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'box',
     'css_id' => '',
@@ -9986,7 +10006,9 @@ Think College Inclusive Higher Education Network</p>
     ),
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'ie-featuredresources box',
     'css_id' => 'featuredresources',
@@ -10006,7 +10028,7 @@ Think College Inclusive Higher Education Network</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'intro',
-    'body' => '<p>The purpose of this group is to give an opportunity to existing and potential inclusive postsecondary education programs and partners to discuss how and why these statewide alliances are important, how to maintain them, and more. Anyone working on any type of formal or informal state-level connection, proposing systems change through alliances and consortium, or those who are simply curious about how these alliances can work, are welcome.</p>
+    'body' => '<p>The purpose of this group is to give an opportunity to existing and potential inclusive postsecondary education programs and partners to discuss how and why these statewide alliances are important, how to maintain them, and more. Anyone working on any type of formal or informal state-level connection, proposing systems change through alliances and consortia, or those who are simply curious about how these alliances can work, are welcome.</p>
 
 <p>&nbsp;</p>
 ',
@@ -10016,7 +10038,9 @@ Think College Inclusive Higher Education Network</p>
     'title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
@@ -10033,20 +10057,19 @@ Think College Inclusive Higher Education Network</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><strong><a href="http://zoom.us/j/91750502598"><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Permanent Zoom meeting room link</span></span></span></a></strong></p>
+    'body' => '<p><span style="font-size:16px;"><strong><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Meeting Links</span></span></span></strong></span></p>
 
-<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333"><strong><a href="http://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">Rolling agenda link</a></strong> all agendas and notes can be found here</span></span></span></p>
+<p><strong><a href="https://umassboston.zoom.us/meeting/register/tJElc-GvqzwtE9FN70kS_4bnTUccmiPWXF2F">Zoom link for all meetings</a></strong></p>
 
-<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Meeting dates</span></span></span></p>
+<p><strong><a href="http://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">Rolling agenda and meeting notes</a></strong></p>
 
-<ul>
-	<li><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">March 21, 2022</span></span></span><br />
-	<b id="docs-internal-guid-4169fac4-7fff-d96e-7c54-9b5b4fef39a0">Topic: How do you decide on what schools to expand to next? </b></li>
-	<li><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">May 19, 2022</span></span></span><br />
-	<strong><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Topic: TBA</span></span></span></strong></li>
-</ul>
+<p><span style="font-size:16px;"><strong><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">Upcoming Meeting Dates</span></span></span></strong></span></p>
 
-<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">The group meets from 3-4pm ET, unless otherwise noted.</span></span></span></p>
+<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">September 15, 2022, 3-4pm ET<br />
+Topic: Lessons Learned</span></span></span></p>
+
+<p><span style="background-color:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:#333333">November 17, 2022, 3-4pm ET<br />
+Topic: TBD</span></span></span></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -10054,7 +10077,9 @@ Think College Inclusive Higher Education Network</p>
     'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'box',
     'css_id' => '',
@@ -10074,7 +10099,29 @@ Think College Inclusive Higher Education Network</p>
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p>Notes from past&nbsp;meetings are available at&nbsp;<strong><a href="https://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">here</a></strong>.&nbsp;</p>
+    'body' => '<p><strong><a href="http://docs.google.com/document/d/1_3ZO4c4UjLlmBz6UY8RFLkfv3UOWc9jdQSqDXZiuW8U/edit">Google Doc with past meeting notes</a></strong></p>
+
+<hr />
+<p><strong>Regional Alliances<br />
+Date: </strong>May 19, 2022<br />
+<strong>Summary: </strong>Susanna introduced the group to the draft plan for regional alliance as part of the Think College Inclusive Higher Education Network. The group discussed the stages of implementation through the Implementation Science Framework, as well as the alliance focused strands at the upcoming SEPSEA Conference and State of the Art pre-conference.</p>
+
+<hr />
+<p><strong>Deciding which Colleges to Expand to Next</strong><br />
+<strong>Date: </strong>March 17, 2022<br />
+<strong>Summary: </strong>This meeting was a group discussion of strategies for state alliances to support the growth of programs within their states. Georgia, Ohio, Missouri, Minnesota, and California shared their approaches over the years.</p>
+
+<hr />
+<p><strong>Think College Inclusive Higher Education Network (TCN) Project<br />
+Date: </strong>January 20, 2022<br />
+<strong>Presenter: </strong>Dr. Danie Roberts-Dahm, TCN Project Coordinator<br />
+<strong>Summary: </strong>Danie presented on the new Think College Network, which will focus on building capacity for more regional alliances across the country. There was discussion about TCN\'s upcoming public awareness campaign and the development of CTE and employment workgroups.</p>
+
+<p><strong>Resource Links</strong><br />
+<strong><a href="https://thinkcollege.net/projects/tcn">Think College Inclusive Higher Education Network</a></strong><br />
+<strong><a href="https://www.sepsea.org/">Southeast Postsecondary Education Alliance</a></strong> (annual conference June 23-25)<br />
+<strong><a href="https://www.inclusion-mipsa.org/">Midwest Inclusive Post Secondary Alliance</a></strong><br />
+&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -10082,7 +10129,9 @@ Think College Inclusive Higher Education Network</p>
     'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'box',
     'css_id' => '',
@@ -10214,36 +10263,6 @@ Think College Inclusive Higher Education Network</p>
   $display->content['new-55ad164d-7cc6-4cde-be03-1eea8ae51e60'] = $pane;
   $display->panels['middle'][0] = 'new-55ad164d-7cc6-4cde-be03-1eea8ae51e60';
   $pane = new stdClass();
-  $pane->pid = 'new-7101c42c-9f2a-45cd-8440-3f2405cb0f94';
-  $pane->panel = 'middle';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'body' => '<h4>​​​​​Wednesday April 20, 2022, 3:00 - 4:00&nbsp;pm eastern</h4>
-
-<p><strong><a href="https://communityinclusion.zoom.us/j/99919813456">LINK TO MEETING</a></strong></p>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-    'title' => 'FY22: Quarter 3 online meeting',
-    'title_heading' => 'h3',
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_class' => 'info-box',
-    'css_id' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '7101c42c-9f2a-45cd-8440-3f2405cb0f94';
-  $display->content['new-7101c42c-9f2a-45cd-8440-3f2405cb0f94'] = $pane;
-  $display->panels['middle'][1] = 'new-7101c42c-9f2a-45cd-8440-3f2405cb0f94';
-  $pane = new stdClass();
   $pane->pid = 'new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
   $pane->panel = 'middle';
   $pane->type = 'custom';
@@ -10254,6 +10273,8 @@ Think College Inclusive Higher Education Network</p>
     'admin_title' => '',
     'body' => '<h4>July 18 and 19, 2022<br />
 Cleveland, OH</h4>
+
+<p><strong><a href="https://whova.com/web/tpdm_202207/">Meeting website - Registration and Agenda details</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -10267,11 +10288,11 @@ Cleveland, OH</h4>
     'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
   $display->content['new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef'] = $pane;
-  $display->panels['middle'][2] = 'new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
+  $display->panels['middle'][1] = 'new-e7f5e974-3683-45f9-85c9-1ea656f7e1ef';
   $pane = new stdClass();
   $pane->pid = 'new-b3a3c124-5abe-467a-8740-339081e8f33a';
   $pane->panel = 'middle';
@@ -10294,11 +10315,45 @@ Cleveland, OH</h4>
     'css_id' => 'tc-home-twitter-block',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = 'b3a3c124-5abe-467a-8740-339081e8f33a';
   $display->content['new-b3a3c124-5abe-467a-8740-339081e8f33a'] = $pane;
-  $display->panels['middle'][3] = 'new-b3a3c124-5abe-467a-8740-339081e8f33a';
+  $display->panels['middle'][2] = 'new-b3a3c124-5abe-467a-8740-339081e8f33a';
+  $pane = new stdClass();
+  $pane->pid = 'new-7101c42c-9f2a-45cd-8440-3f2405cb0f94';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<h4>​​​​​Wednesday April 20, 2022, 3:00 - 4:00&nbsp;pm eastern</h4>
+
+<p><a href="https://communityinclusion.zoom.us/rec/share/rVz3PXlYxSF_KOCldvKt-sGoWztfkoS4H3P1LZ1r3J97GOiC6YGKe1k7PuQr8DbP.pxB8Skrn6Dje25lN"><strong>LINK TO MEETING RECORDING</strong></a></p>
+
+<p><strong>Powerpoint Handout from the 4/20/22 meeting</strong></p>
+
+<p><a href="/sites/default/files/files/2022NDSCCollegeFairInfoFlyer.pdf" target="_blank"><strong>Info Sheet for the 2022 NDSC College Fair</strong></a></p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'FY22: Quarter 3 online meeting',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'info-box',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '7101c42c-9f2a-45cd-8440-3f2405cb0f94';
+  $display->content['new-7101c42c-9f2a-45cd-8440-3f2405cb0f94'] = $pane;
+  $display->panels['middle'][3] = 'new-7101c42c-9f2a-45cd-8440-3f2405cb0f94';
   $pane = new stdClass();
   $pane->pid = 'new-ff1a8ba6-de71-4c80-8b68-a360a4c90252';
   $pane->panel = 'middle';
@@ -11076,7 +11131,7 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p class="lead">Welcome to the Think College Affinity Group on Vocational Rehabilitation. The purpose of the Affinity Group is to:</p>
+    'body' => '<p><strong>Welcome to the Think College Affinity Group on Vocational Rehabilitation. The purpose of this affinity group is to:</strong></p>
 
 <ul>
 	<li>Create an online community for review and discussion of issues,&nbsp;strategies and results related to&nbsp;the partnership between Vocational Rehabilitation (VR) agencies and colleges &amp; universities,</li>
@@ -11113,16 +11168,16 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p dir="ltr" role="presentation"><a href="http://communityinclusion.zoom.us/j/98092070179">Permanent Zoom meeting room</a></p>
+    'body' => '<p dir="ltr" role="presentation">The Vocational Rehabilitation Affinity Group holds meetings quarterly and typically includes&nbsp;a short presentation, legislative and policy updates,&nbsp;as well as informal sharing at each meeting.</p>
 
-<p dir="ltr" role="presentation"><a href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit">Rolling agenda</a>&nbsp;&nbsp;all agendas and notes can be found here</p>
+<p dir="ltr" role="presentation"><strong>Upcoming Meeting Dates</strong></p>
 
-<p dir="ltr" role="presentation"><b id="docs-internal-guid-e43c00c8-7fff-5632-d88c-5fe0f96f1ce9">All meetings are held from 2:00-3:30pm Eastern, unless otherwise noted</b></p>
+<p>August 3, 2022, 2-3pm ET, <strong><a href="https://zoom.us/j/8800776638">Zoom link</a></strong><br />
+Topic: Introduction to Neil McNeil, a new colleague helping to address issues regarding the interface between VR and IPSE programs</p>
 
-<ul dir="ltr">
-	<li role="presentation">May 4, 2022</li>
-	<li role="presentation">August 3, 2022</li>
-</ul>
+<p dir="ltr" role="presentation"><strong>Meeting Links</strong></p>
+
+<p dir="ltr" role="presentation"><strong><a href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit">Rolling agenda and meeting notes</a></strong></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -11152,81 +11207,68 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><em>The Vocational Rehabilitation Affinity Group holds meetings quarterly and typically includes&nbsp;a short presentation, legislative and policy updates,&nbsp;as well as informal sharing at each meeting. Click on the links below to access recordings, meeting agendas,&nbsp;and other resources&nbsp;from past meetings.&nbsp;</em></p>
+    'body' => '<p>Click on the links below to access recordings, meeting agendas,&nbsp;and other resources&nbsp;from past meetings.&nbsp;</p>
 
-<p><strong>Topic: Building Relationships with VR - Lessons from Groundhog Day</strong><br />
+<hr />
+<p><strong>Intersection of VR and IPSE Programs</strong><br />
+<strong>Date: </strong>May 4, 2022<br />
+<strong>Summary: </strong>Participants discussed the reoccurring issues that intersect VR and IPSE programs as denial of services, regime changes, the agency funding puzzle (how to fit it all together, who is first payor, etc.) and ways to build relationships with VR.</p>
+
+<p><strong>Resource Links</strong><br />
+<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation-transition-planning/vocational-rehabilitation-counselors-can">Vocational Rehabilitation Counselors Can Think College</a></strong><br />
+<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation/what-inclusive-higher-education-and-how-does-it-connect-vr">What is Inclusive Higher Education for People with Intellectual Disabilities, and How Does it Connect to Vocational Rehabilitation? A Primer for VR Leaders and Practitioners</a></strong></p>
+
+<hr />
+<p><strong>Building Relationships with VR - Lessons from Groundhog Day</strong><br />
 <strong>Date: </strong>February 2, 2022<br />
 <strong>Summary: </strong>The group discussed experiences and techniques to establish, build, and advance relationships between Vocational Rehabilitation (VR) and inclusive post-secondary education (IPSE). The group reviewed the Addressing the Policy Tangle report regarding needed alignment of services and collaboration among agencies and institutions of higher education. The group discussion included the most common reasons cited by VR agencies as to why they cannot or do not support IPSE.</p>
 
-<p><strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-2-2-2022">Meeting recording - February 2022</a><br />
-<a href="https://sites.ed.gov/idea/idea-files/qa-increasing-postsecondary-opportunities-success-for-students-youth-with-disabilities-sept-17-2019/">Regulatory intent language regarding the capacity for VR to support IPSE</a></strong><br />
-<strong><a href="https://thinkcollege.net/resource/federal-legislation/addressing-the-policy-tangle-students-with-intellectual-disability-and">Addressing the Policy Tangle</a></strong></p>
+<p><strong>Resource Links </strong><br />
+<strong><a href="https://sites.ed.gov/idea/idea-files/qa-increasing-postsecondary-opportunities-success-for-students-youth-with-disabilities-sept-17-2019/">Regulatory intent language regarding the capacity for VR to support IPSE</a><br />
+<a href="https://thinkcollege.net/resource/federal-legislation/addressing-the-policy-tangle-students-with-intellectual-disability-and">Addressing the Policy Tangle</a></strong></p>
 
 <hr />
-<p><strong>Date:</strong>&nbsp;November 3, 2021</p>
-
-<p><strong>Topic:</strong>&nbsp;Oklahoma VR and IPSE: History and Evolution</p>
-
-<p><strong>Presenter:</strong>&nbsp;Julie Lackey, Oklahoma</p>
-
-<p><strong>Summary:</strong>&nbsp;Julie Lackey spoke about the history and evolution of relationships to advance IPSE within Oklahoma, including their VR agency as a critical player. Covering the effort from 2018 to the current time, Julie talked about the skills and effort to build relationships with VR, higher education, legislators, Dept. of Education, and more that have moved VR IPSE support from none to supporting students in three different programs within the state.</p>
-
-<p><strong><a href="/sites/default/files/files/VR%20Affinity%20Group%2011_3_21%20summary.docx">Meeting notes</a></strong></p>
+<p><strong>Oklahoma VR and IPSE: History and Evolution<br />
+Date:</strong>&nbsp;November 3, 2021<br />
+<strong>Presenter:</strong>&nbsp;Julie Lackey, Oklahoma<br />
+<strong>Summary:</strong>&nbsp;Julie Lackey spoke about the history and evolution of relationships to advance IPSE within Oklahoma, including their VR agency as a critical player. Covering the effort from 2018 to the current time, Julie talked about the skills and effort to build relationships with VR, higher education, legislators, Dept. of Education, and more that have moved VR IPSE support from none to supporting students in three different programs within the state.<strong> </strong></p>
 
 <hr />
-<p><strong>Date:</strong>&nbsp;February 3, 2021</p>
-
-<p><strong><a data-mce-href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit" href="https://docs.google.com/document/d/1MVAHFiBdeR46WkJSIauaXCWnMCjr4b-HRl7SZM64r7I/edit">Meeting notes</a>&nbsp;</strong></p>
-
-<hr />
-<p><strong>Date:</strong>&nbsp;November 5</p>
-
-<p><em>Details and meeting resources are unavailable</em></p>
+<p><strong>Vocational Rehabilitation &amp; University of Iowa REACH Program Collaboration</strong><br />
+<strong>Date: </strong>August 4, 2021<br />
+<strong>Presenters: </strong>Brett Koenig, University of Iowa REACH Program, Program Specialist - Career Team<br />
+<strong>Summary: </strong>Brett shared a number of processes the REACH Program has established with VR to increase collaboration between the two entities. This included establishing liaisons in each VR office, establishing a standard operating procedure, holding PCP meetings with VR, communication with parents, having VR coming to classes to provide education, and more.</p>
 
 <hr />
-<p><strong>Date:</strong>&nbsp;August 12, 2020</p>
+<p><strong>PSE Pays Off </strong><br />
+<strong>Date:</strong> May 5, 2021<br />
+<strong>Presenters: </strong>Clare Papay and Meg Grigal<br />
+<strong>Summary: </strong>Meg and Clare presented on employment data for IPSE program participants.&nbsp;Sharing research findings, national data, and TPSID data, the value of IPSE for employment outcomes was presented.</p>
 
-<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
-
-<p><strong>Presenters:</strong>&nbsp;Mary Hauff,&nbsp;Lauren Bruno and Jennifer Cremers</p>
-
-<p><strong>Summary:</strong>&nbsp;Mary Hauff,&nbsp;advocate and parent from Minnesota, and&nbsp;Lauren Bruno and Jennifer Cremers, University of Iowa REACH program, shared an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID.</p>
-
-<p><strong><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-1">Meeting notes and recording are available here</a>.&nbsp;</strong></p>
-
-<hr />
-<p><strong>Date:</strong>&nbsp;April 1, 2020</p>
-
-<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
-
-<p><strong><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">Meeting resources are available&nbsp;</a><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">here</a></strong></p>
+<p><strong>Resource Links</strong><br />
+<strong><a href="https://www.nga.org/center/publications/aligning-state-systems-for-a-talent-driven-economy-a-road-map-for-states-2/">Aligning State Systems for a Talent-Driven Economy</a><br />
+<a href="https://thinkcollege.net/resource/vocational-rehabilitation/postsecondary-education-pays-off">Postsecondary Education Pays Off</a></strong></p>
 
 <hr />
-<p><strong>Date:</strong>&nbsp;November 6, 2019</p>
+<p><strong>State Differences in VR Support for IPSE</strong><br />
+<strong>Date:</strong>&nbsp;February 3, 2021<br />
+<strong>Summary:&nbsp;</strong>Discussed the varied degrees and ways VR supports IPSE with some states paying a certain amount per semester hour, others funding a certain amount per semester, some funding employment specific activities or classes, with others not funding anything. Some states will support in-state IPSE as well as programs out-of-state and others only support in-state. Some discussion was held on how IPSE were doing some Pre-Employment Transition Services.</p>
 
-<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
-
-<p><strong><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affini-0">Meeting resources are available&nbsp;</a><a data-mce-href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity" href="https://thinkcollege.net/resource/vocational-rehabilitation-advocacy-outreach-accreditation-and-credentials/combined-affinity">here</a></strong></p>
-
-<hr />
-<p><strong>Date:</strong>&nbsp;August 7, 2019</p>
-
-<p><strong>Topic:</strong>&nbsp;Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</p>
-
-<p><strong><a data-mce-href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019" href="https://thinkcollege.net/resource/combined-vr-policy-credentials-affinity-group-meeting-august-2019">Meeting resources are available&nbsp;here</a></strong></p>
+<p><strong>Resource Links</strong><br />
+<strong><a href="http://www.wintac.org/topic-areas/pre-employment-transition-services">Workforce Innovation Technical Assistance Center Pre-employment Transition Services Summary</a></strong></p>
 
 <hr />
-<p style="margin-top:0in; margin-right:0in; margin-bottom:7.5pt; margin-left:0in"><b>Date:</b> May 1, 2019<br />
-<strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-meeting-may-2019">Meeting resources available here</a></strong></p>
+<p><strong>Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</strong><br />
+<strong>Date:</strong>&nbsp;August 12, 2020<br />
+<strong>Presenters:</strong>&nbsp;Mary Hauff,&nbsp;Lauren Bruno and Jennifer Cremers<br />
+<strong>Summary:</strong>&nbsp;Mary Hauff,&nbsp;advocate and parent from Minnesota, and&nbsp;Lauren Bruno and Jennifer Cremers, University of Iowa REACH program, shared an overview of the program’s use of WorkKeys as a tool to increase access to evidence-based credentials earned by students with ID.</p>
 
 <hr />
-<p><b>Date: </b>February 6, 2019</p>
+<p><strong>Joint meeting of the Think College Vocational Rehabilitation, Public Policy, and Student Credentials Affinity Groups</strong><br />
+<strong>Date:</strong>&nbsp;April 1, 2020; November 6, 2019; August 7, 2019<br />
+<strong>Summary: </strong>The public policy, vocational rehabilitation, and student credentials groups met together several times to discuss the intersection of these three topics as they relate to inclusive higher education.</p>
 
-<p><strong><a href="https://thinkcollege.net/resource/vocational-rehabilitation/vocational-rehabilitation-affinity-group-meeting-february-2019">Meeting resources available here</a></strong></p>
-
-<hr />
-<p style="margin-top:0in; margin-right:0in; margin-bottom:7.5pt; margin-left:0in"><strong><span style="background:white"><span style="font-family:&quot;Lato&quot;,sans-serif"><span style="color:#333333"><a href="https://docs.google.com/document/d/1qh8SaoC7D8JTsWzOQfP-M2dClP8PJ4nckNMbYsEbPyQ/edit#bookmark=id.525ph4n37z82">See the agenda for notes on 2018 meetings.</a></span></span></span></strong></p>
-',
+<hr />',
     'format' => 'full_html',
     'substitute' => TRUE,
     'title' => 'Past Meetings',
@@ -11253,7 +11295,7 @@ Senior Policy Fellow<br />
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><b>&nbsp;</b>Send an email to <a href="mailto:Russ.Thelin@umb.edu?subject=Ideas%20for%20VR%20Affinity%20Group">Russ.Thelin@umb.edu</a> or&nbsp;<a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a>.</p>
+    'body' => '<p><b>&nbsp;</b>Send an email to <strong><a href="mailto:Russ.Thelin@umb.edu?subject=Ideas%20for%20VR%20Affinity%20Group">russ.thelin@umb.edu</a></strong> or&nbsp;<strong><a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeta@gmail.com</a></strong>.</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,

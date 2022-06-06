@@ -1328,38 +1328,6 @@ else {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_prog_overall_time_dist'.
-  $field_bases['field_prog_overall_time_dist'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_prog_overall_time_dist',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'All of the time' => 'All of the time',
-        'More than 75%' => 'More than 75%',
-        '75%' => '75%',
-        '50%' => '50%',
-        '25%' => '25%',
-        'Less than 25%' => 'Less than 25%',
-        'None of the time' => 'None of the time',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_php' => '',
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_prog_pay_methods'.
   $field_bases['field_prog_pay_methods'] = array(
     'active' => 1,
@@ -1638,7 +1606,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
-      'recalculate' => FALSE,
+      'recalculate' => 0,
       'store' => 1,
     ),
     'translatable' => 0,
