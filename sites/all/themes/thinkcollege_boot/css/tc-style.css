@@ -1413,41 +1413,6 @@ font-weight: 700;
 
 
 
-/*home page hero banner - image with text overlay */
-
-.hero-banner { position:relative;
-    display:inline-block;}
-.hero-banner-text  {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    background-color: #9AB28D;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    color: #fff;
-    text-align: center;
-    width: 40%;
-    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-    height: 100%;
-    font-size: 24px;
-    line-height: 32px;
-     font-family: 'museo-slab', serif;
-}
-
-
-
-/* home page - top row - right */
-
-.home-panel div{
-    text-align: center;
-    background-color: #ddd;
-    font-family: 'museo-sans', sans-serif;
-}
-
-.home-panel div p {padding:5px;}
-
 /* Resources results page project banner */
 
 .resource-box .field-name-field-project {
@@ -1653,6 +1618,7 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
   background-color: #20527C;
 }
 
+.view-id-hero_tabs .view-header {background-color:#fff}
 
 #researcharticles .nav-tabs, #datasummaries .nav-tabs  {
   text-transform: capitalize;
@@ -1664,7 +1630,7 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 
 /* college search button */
 
- .CSbtn {
+.CSbtn {
   display: block;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1680,6 +1646,11 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
   text-decoration: none;
 }
 
+span.CS {
+  line-height: 38px;
+  font-size: 34px;
+  border-bottom: #fff solid 1px;}
+
 .CSbtn:hover {
   background: #32669b;
   text-decoration: none;
@@ -1691,12 +1662,11 @@ a[href="/%3Cnolink%3E"] { pointer-events: none;
 }
 
 
-span.CS {  line-height: 38px;
-  font-size: 34px; }
   
   span.CStagline {font-size:18px;
 	line-height: 20px; 
-	padding: none; 
+  margin-top:20px;
+  display: flex;
 	text-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1733,3 +1703,80 @@ span.CS {  line-height: 38px;
         line-height: 1.2;    
         margin: 0.5rem 0;
     }
+
+
+
+
+/*home page hero banner - image with text overlay */
+
+.hero-banner { position:relative;
+  display:inline-block;}
+
+
+
+.hero-banner-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background: rgba(50,50,50,0.6);
+  z-index: 10;
+  height: 40%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  font-size: 22px;
+  line-height: 28px;
+  font-family: 'museo-slab', serif;
+}
+
+@media screen and (min-width: 768px) {
+   
+  .hero-banner-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(50,50,50,0.6);
+    z-index: 10;
+    height: 25%;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'museo-slab', serif;
+  }
+}    
+
+
+/* home page - top row - right */
+/*
+.home-panel div{
+  text-align: center;
+  background-color: #ddd;
+  font-family: 'museo-sans', sans-serif;
+}
+*/
+
+.home-panel div p {padding:5px;}
+
+
+
+    .img-caption-overlay {
+      position: absolute;
+        left: 0;
+        bottom: 0;
+          display: block;
+        background: rgba(50,50,50,0.4);
+        z-index: 10;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+    
+
+
