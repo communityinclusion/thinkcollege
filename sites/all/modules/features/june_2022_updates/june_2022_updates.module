@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the June 2022 updates feature.
+ */
+
+include_once 'june_2022_updates.features.inc';
