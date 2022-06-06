@@ -8820,7 +8820,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange infolist',
+    'css_class' => 'box box-orange infolist',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -8882,7 +8882,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'ie-featuredresources box-orange',
+    'css_class' => 'ie-featuredresources box box-orange',
     'css_id' => 'featuredresources',
   );
   $pane->extras = array();
@@ -8959,7 +8959,8 @@ a.orange {
 	<li><a href="/resources/whats-happening-in-your-state/states/wyoming">Wyoming</a></li>
 </ul>
 </div>
-',
+<br>
+<br>',
     'format' => 'full_html',
     'substitute' => TRUE,
     'title' => 'State Specific Information',
@@ -8970,7 +8971,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange ',
+    'css_class' => 'box box-orange ',
     'css_id' => 'states',
   );
   $pane->extras = array();
@@ -8979,6 +8980,36 @@ a.orange {
   $pane->uuid = 'ecc3aaf4-43af-48f6-8271-e399f17fe0f9';
   $display->content['new-ecc3aaf4-43af-48f6-8271-e399f17fe0f9'] = $pane;
   $display->panels['row1left'][5] = 'new-ecc3aaf4-43af-48f6-8271-e399f17fe0f9';
+  $pane = new stdClass();
+  $pane->pid = 'new-6263b151-74a7-4a17-ba0d-24a67b748ec4';
+  $pane->panel = 'row1left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<p><a href="https://thinkcollege.net/projects/national-coordinating-center/get-news-updates-from-national-coordinating-center"><img alt="Think College newsletter header" class="img-responsive" src="/sites/default/files/images/New-email-header-2021.jpg" /></a></p>
+
+<p>Learn all about our <strong><a href="/projects/national-coordinating-center/get-news-updates-from-national-coordinating-center">monthly newsletter</a></strong> and sign up for our mailing list.</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'OUR MONTHLY NEWSLETTER',
+    'title_heading' => 'h3',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'box box-orange',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = '6263b151-74a7-4a17-ba0d-24a67b748ec4';
+  $display->content['new-6263b151-74a7-4a17-ba0d-24a67b748ec4'] = $pane;
+  $display->panels['row1left'][6] = 'new-6263b151-74a7-4a17-ba0d-24a67b748ec4';
   $pane = new stdClass();
   $pane->pid = 'new-524259a0-7676-4a45-8aa2-8b186dc1a33a';
   $pane->panel = 'row1right';
@@ -9061,7 +9092,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange',
+    'css_class' => 'box box-orange',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -9094,7 +9125,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange infolist',
+    'css_class' => 'box box-orange infolist',
     'css_id' => '',
   );
   $pane->extras = array();
@@ -9124,7 +9155,7 @@ a.orange {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_class' => 'box-orange',
+    'css_class' => 'box box-orange',
     'css_id' => '',
   );
   $pane->extras = array();

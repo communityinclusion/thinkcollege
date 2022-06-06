@@ -99,7 +99,7 @@ function program_record_strongarm() {
           ),
           'full' => array(
             'visible' => FALSE,
-            'weight' => '105',
+            'weight' => '107',
           ),
           'modal' => array(
             'visible' => FALSE,

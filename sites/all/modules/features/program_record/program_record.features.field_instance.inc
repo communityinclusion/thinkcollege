@@ -150,7 +150,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 70,
+        'weight' => 72,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -407,7 +407,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 82,
+        'weight' => 84,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -873,7 +873,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 42,
+        'weight' => 44,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -952,7 +952,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 77,
+        'weight' => 79,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1016,7 +1016,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 74,
+        'weight' => 76,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1089,7 +1089,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 60,
+        'weight' => 62,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1157,7 +1157,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 53,
+        'weight' => 55,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1233,7 +1233,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 35,
+        'weight' => 37,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1312,7 +1312,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 58,
+        'weight' => 60,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1375,7 +1375,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 59,
+        'weight' => 61,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1616,7 +1616,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 98,
+        'weight' => 100,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1694,7 +1694,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 78,
+        'weight' => 80,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1837,7 +1837,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 76,
+        'weight' => 78,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1980,7 +1980,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 32,
+        'weight' => 34,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2052,7 +2052,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 38,
+        'weight' => 40,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2129,7 +2129,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 63,
+        'weight' => 65,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2194,7 +2194,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 55,
+        'weight' => 57,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2273,7 +2273,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 33,
+        'weight' => 35,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2350,7 +2350,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 56,
+        'weight' => 58,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2490,7 +2490,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 99,
+        'weight' => 101,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2567,7 +2567,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 97,
+        'weight' => 99,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2645,7 +2645,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 85,
+        'weight' => 87,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2709,7 +2709,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 51,
+        'weight' => 53,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2877,7 +2877,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 57,
+        'weight' => 59,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -2943,7 +2943,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 47,
+        'weight' => 49,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3098,7 +3098,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 65,
+        'weight' => 67,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3160,7 +3160,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 89,
+        'weight' => 91,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3228,7 +3228,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 91,
+        'weight' => 93,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3278,6 +3278,84 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_length_years'.
+  $field_instances['node-program_record-field_prog_length_years'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 38,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 32,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 77,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 38,
+      ),
+    ),
+    'display_label' => 'Program length:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_length_years',
+    'label' => 'What is the planned length of this program?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 35,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_length_years2'.
   $field_instances['node-program_record-field_prog_length_years2'] = array(
     'bundle' => 'program_record',
@@ -3303,7 +3381,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 43,
+        'weight' => 33,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3367,7 +3445,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 39,
+        'weight' => 41,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3448,7 +3526,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 54,
+        'weight' => 56,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3523,7 +3601,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 45,
+        'weight' => 47,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3594,7 +3672,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 72,
+        'weight' => 74,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3672,7 +3750,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 96,
+        'weight' => 98,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3751,7 +3829,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 73,
+        'weight' => 75,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3831,7 +3909,7 @@ function program_record_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 84,
+        'weight' => 86,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3895,7 +3973,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 104,
+        'weight' => 106,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -3972,7 +4050,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 93,
+        'weight' => 95,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4139,7 +4217,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 66,
+        'weight' => 68,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4209,7 +4287,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 50,
+        'weight' => 52,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4285,7 +4363,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 94,
+        'weight' => 96,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4358,7 +4436,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 95,
+        'weight' => 97,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4411,6 +4489,84 @@ function program_record_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program_record-field_prog_perc_acad_time'.
+  $field_instances['node-program_record-field_prog_perc_acad_time'] = array(
+    'bundle' => 'program_record',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'default_value_php' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 16,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 45,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'modal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 16,
+      ),
+    ),
+    'display_label' => 'Percentage of academic time spent only with other students in this program:',
+    'entity_type' => 'node',
+    'field_name' => 'field_prog_perc_acad_time',
+    'label' => 'How much academic time is spent only with other students in this program?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 104,
+    ),
+  );
+
   // Exported field_instance: 'node-program_record-field_prog_perc_academic'.
   $field_instances['node-program_record-field_prog_perc_academic'] = array(
     'bundle' => 'program_record',
@@ -4436,7 +4592,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 79,
+        'weight' => 81,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4510,7 +4666,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 44,
+        'weight' => 46,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -4606,7 +4762,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 37,
+        'weight' => 39,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5131,7 +5287,7 @@ function program_record_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 80,
+        'weight' => 82,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5197,7 +5353,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 81,
+        'weight' => 83,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5260,7 +5416,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 83,
+        'weight' => 85,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5333,7 +5489,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 61,
+        'weight' => 63,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5469,7 +5625,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 88,
+        'weight' => 90,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5619,7 +5775,7 @@ function program_record_field_default_field_instances() {
           'custom_title' => '',
         ),
         'type' => 'link_default',
-        'weight' => 36,
+        'weight' => 38,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5877,7 +6033,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 52,
+        'weight' => 54,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -5953,7 +6109,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 41,
+        'weight' => 43,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6112,7 +6268,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 71,
+        'weight' => 73,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6190,7 +6346,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 87,
+        'weight' => 89,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6260,7 +6416,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 62,
+        'weight' => 64,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6323,7 +6479,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 67,
+        'weight' => 69,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6388,7 +6544,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 49,
+        'weight' => 51,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6464,7 +6620,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 34,
+        'weight' => 36,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6534,7 +6690,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 48,
+        'weight' => 50,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6605,7 +6761,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 92,
+        'weight' => 94,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6690,7 +6846,7 @@ function program_record_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 68,
+        'weight' => 70,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -6817,7 +6973,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 102,
+        'weight' => 104,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7005,7 +7161,7 @@ function program_record_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 64,
+        'weight' => 66,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7071,7 +7227,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 101,
+        'weight' => 103,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7225,7 +7381,7 @@ function program_record_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 69,
+        'weight' => 71,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7304,7 +7460,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 103,
+        'weight' => 105,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7380,7 +7536,7 @@ function program_record_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 46,
+        'weight' => 48,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7459,7 +7615,7 @@ function program_record_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 75,
+        'weight' => 77,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7602,7 +7758,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 100,
+        'weight' => 102,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7680,7 +7836,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 90,
+        'weight' => 92,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -7901,7 +8057,7 @@ function program_record_field_default_field_instances() {
         'module' => 'computed_field',
         'settings' => array(),
         'type' => 'computed_field_unsanitized',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -8039,7 +8195,7 @@ function program_record_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 86,
+        'weight' => 88,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -8196,6 +8352,7 @@ function program_record_field_default_field_instances() {
   t('How do students pay to attend this program (check all that apply)?');
   t('How do students pay, Other?');
   t('How many students, total, attended this program in the most recently completed academic year?');
+  t('How much academic time is spent only with other students in this program?');
   t('How much overall time on campus is spent only with other students in this program?');
   t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');
