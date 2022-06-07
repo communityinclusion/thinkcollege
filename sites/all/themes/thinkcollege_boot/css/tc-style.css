@@ -1718,6 +1718,7 @@ span.CS {
   position: absolute;
   left: 0;
   bottom: 0;
+  margin-bottom: 0;
   display: block;
   background: rgba(50,50,50,0.6);
   z-index: 10;
