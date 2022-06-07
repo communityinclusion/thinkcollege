@@ -1777,38 +1777,36 @@ span.CS {
   display: block;
   background: rgba(50,50,50,0.6);
   z-index: 10;
-  height: 35%;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-  font-family: 'museo-slab', serif;
+ 
 }
 
-@media screen and (min-width: 320px) {
+ 
+  .hero-banner-text h3 {
+  
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    font-family: 'museo-slab', serif;
+  font-size: 13px;
+  line-height: 16px;
+  height: 35%;
+}
+ 
+
+@media screen and (min-width: 576px) {
    
   .hero-banner-text h3 {
     height: 30%;
-    font-size: 18px;
-    line-height: 22px;
-  }
-}    
-
-@media screen and (min-width:576px) {
-   
-  .hero-banner-text h3 {
     font-size: 20px;
     line-height: 24px;
-    height: 30%;
   }
 }    
-
 
 @media screen and (min-width:768px) {
    
   .hero-banner-text h3 {
     font-size: 24px;
     line-height: 32px;
-    height: 35%;
+    height: 25%;
   }
-}    
-
+}  
