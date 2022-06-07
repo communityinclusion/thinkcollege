@@ -1798,8 +1798,8 @@ span.CS {
 @media screen and (min-width:576px) {
    
   .hero-banner-text h3 {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 24px;
     height: 30%;
   }
 }    
@@ -1810,7 +1810,7 @@ span.CS {
   .hero-banner-text h3 {
     font-size: 24px;
     line-height: 32px;
-    height: 25%;
+    height: 35%;
   }
 }    
 
