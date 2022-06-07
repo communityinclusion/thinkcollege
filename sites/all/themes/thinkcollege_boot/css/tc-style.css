@@ -1780,12 +1780,6 @@ span.CS {
     }
     
 
-    .views-slideshow-cycle-main-frame-row {
-      max-width: 100%;
-      display: block;
-      height: auto;
-  }
-
 
   #views_slideshow_cycle_teaser_section_slideshow_text-block .views-slideshow-cycle-main-frame-row {
     width: 100% !important; 
