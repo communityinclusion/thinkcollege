@@ -1714,42 +1714,6 @@ span.CS {
 
 
 
-.hero-banner-text h3 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-bottom: 0;
-  display: block;
-  background: rgba(50,50,50,0.6);
-  z-index: 10;
-  height: 40%;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-  font-size: 13px;
-  line-height: 16px;
-  font-family: 'museo-slab', serif;
-}
-
-@media screen and (min-width: 576px) {
-   
-  .hero-banner-text h3 {
-    height: 30%;
-    font-size: 20px;
-    line-height: 24px;
-  }
-}    
-
-@media screen and (min-width:768px) {
-   
-  .hero-banner-text h3 {
-    font-size: 24px;
-    line-height: 32px;
-    height: 25%;
-  }
-}    
-
-
 
 /* home page - top row - right */
 /*
@@ -1804,8 +1768,49 @@ span.CS {
       padding: 0;
     }
 
-    /*
-  #views_slideshow_cycle_teaser_section_slideshow_text-block .views-slideshow-cycle-main-frame-row {
-    width: 100% !important; 
+ 
+.hero-banner-text h3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  display: block;
+  background: rgba(50,50,50,0.6);
+  z-index: 10;
+  height: 35%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  font-size: 13px;
+  line-height: 16px;
+  font-family: 'museo-slab', serif;
+}
+
+@media screen and (min-width: 320px) {
+   
+  .hero-banner-text h3 {
+    height: 30%;
+    font-size: 18px;
+    line-height: 22px;
   }
-  */
+}    
+
+@media screen and (min-width:576px) {
+   
+  .hero-banner-text h3 {
+    font-size: 22px;
+    line-height: 26px;
+    height: 30%;
+  }
+}    
+
+
+@media screen and (min-width:768px) {
+   
+  .hero-banner-text h3 {
+    font-size: 24px;
+    line-height: 32px;
+    height: 25%;
+  }
+}    
+
