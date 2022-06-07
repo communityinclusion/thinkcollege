@@ -1763,7 +1763,7 @@ span.CS {
 .home-panel div p {padding:5px;}
 
 
-
+/* Random Slideshow - Home Page */
     .img-caption-overlay {
       position: absolute;
         left: 0;
@@ -1784,4 +1784,9 @@ span.CS {
       max-width: 100%;
       display: block;
       height: auto;
+  }
+
+
+  #views_slideshow_cycle_teaser_section_slideshow_text-block .views-slideshow-cycle-main-frame-row {
+    width: 100% !important; 
   }
