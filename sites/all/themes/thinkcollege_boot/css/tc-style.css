@@ -1769,7 +1769,7 @@ span.CS {
     }
 
  
-.hero-banner-text h3 {
+.hero-banner-text  {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1781,8 +1781,6 @@ span.CS {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-  font-size: 13px;
-  line-height: 16px;
   font-family: 'museo-slab', serif;
 }
 
