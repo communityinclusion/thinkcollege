@@ -1714,7 +1714,61 @@ span.CS {
 
 
 
-.hero-banner-text h3 {
+
+/* home page - top row - right */
+/*
+.home-panel div{
+  text-align: center;
+  background-color: #ddd;
+  font-family: 'museo-sans', sans-serif;
+}
+*/
+
+.home-panel div p {padding:5px;}
+
+
+/* Random Slideshow - Home Page */
+    .img-caption-overlay {
+      position: absolute;
+        left: 0;
+        bottom: 0;
+          display: block;
+        background: rgba(50,50,50,0.4);
+        z-index: 10;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+    
+
+    .views_slideshow_cycle_main {
+      width: 100%;
+    }
+    .views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+      width: 100% !important;
+      height: auto;
+    }
+    .views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+      height: auto;
+    }
+    .views_slideshow_cycle_main .field-content {
+      max-width: 100%;
+      width: 100%;
+    }
+    .views_slideshow_cycle_main .field-content img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+ 
+.hero-banner-text  {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1722,14 +1776,21 @@ span.CS {
   display: block;
   background: rgba(50,50,50,0.6);
   z-index: 10;
-  height: 40%;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+ 
+}
+
+ 
+  .hero-banner-text h3 {
+  
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    font-family: 'museo-slab', serif;
   font-size: 13px;
   line-height: 16px;
-  font-family: 'museo-slab', serif;
+  height: 35%;
 }
+ 
 
 @media screen and (min-width: 576px) {
    
@@ -1747,35 +1808,4 @@ span.CS {
     line-height: 32px;
     height: 25%;
   }
-}    
-
-
-
-/* home page - top row - right */
-/*
-.home-panel div{
-  text-align: center;
-  background-color: #ddd;
-  font-family: 'museo-sans', sans-serif;
-}
-*/
-
-.home-panel div p {padding:5px;}
-
-
-
-    .img-caption-overlay {
-      position: absolute;
-        left: 0;
-        bottom: 0;
-          display: block;
-        background: rgba(50,50,50,0.4);
-        z-index: 10;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: #fff;
-        text-align: center;
-        width: 100%;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-    }
-    
+}  
