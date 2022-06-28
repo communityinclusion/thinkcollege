@@ -71,6 +71,7 @@ function tc_solr_program_record_index_default_search_api_index() {
         "field_prog_other_costs" : { "type" : "string" },
         "field_prog_other_costs_amount" : { "type" : "decimal" },
         "field_prog_other_costs_display" : { "type" : "text" },
+        "field_prog_overall_time_dist" : { "type" : "string" },
         "field_prog_pay_methods" : { "type" : "list\\u003Cstring\\u003E" },
         "field_prog_perc_employed_af_grad" : { "type" : "integer" },
         "field_prog_perc_w_compet_employ" : { "type" : "integer" },
