@@ -2,13 +2,13 @@
 
 /**
  * @file
- * qualtrics_program_import.feeds_tamper_default.inc
+ * qualtrics_feeds_import.feeds_tamper_default.inc
  */
 
 /**
  * Implements hook_feeds_tamper_default().
  */
-function qualtrics_program_import_feeds_tamper_default() {
+function qualtrics_feeds_import_feeds_tamper_default() {
   $export = array();
 
   $feeds_tamper = new stdClass();
@@ -462,86 +462,6 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper->weight = 5;
   $feeds_tamper->description = 'Find replace';
   $export['qualtrics_program_import-q80-find_replace_5'] = $feeds_tamper;
-
-  $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-  $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'qualtrics_program_import-q83-find_replace';
-  $feeds_tamper->importer = 'qualtrics_program_import';
-  $feeds_tamper->source = 'Q83';
-  $feeds_tamper->plugin_id = 'find_replace';
-  $feeds_tamper->settings = array(
-    'case_sensitive' => 0,
-    'find' => '100% of the time',
-    'func' => 'str_ireplace',
-    'regex' => FALSE,
-    'replace' => 'All of the time',
-    'whole' => 0,
-    'word_boundaries' => 0,
-  );
-  $feeds_tamper->weight = 0;
-  $feeds_tamper->description = 'Find replace';
-  $export['qualtrics_program_import-q83-find_replace'] = $feeds_tamper;
-
-  $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-  $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'qualtrics_program_import-q83-find_replace2';
-  $feeds_tamper->importer = 'qualtrics_program_import';
-  $feeds_tamper->source = 'Q83';
-  $feeds_tamper->plugin_id = 'find_replace';
-  $feeds_tamper->settings = array(
-    'case_sensitive' => 0,
-    'find' => '75% of the time',
-    'func' => 'str_ireplace',
-    'regex' => FALSE,
-    'replace' => '75%',
-    'whole' => 0,
-    'word_boundaries' => 0,
-  );
-  $feeds_tamper->weight = 1;
-  $feeds_tamper->description = 'Find replace';
-  $export['qualtrics_program_import-q83-find_replace2'] = $feeds_tamper;
-
-  $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-  $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'qualtrics_program_import-q83-find_replace3';
-  $feeds_tamper->importer = 'qualtrics_program_import';
-  $feeds_tamper->source = 'Q83';
-  $feeds_tamper->plugin_id = 'find_replace';
-  $feeds_tamper->settings = array(
-    'case_sensitive' => 0,
-    'find' => '50% of the time',
-    'func' => 'str_ireplace',
-    'regex' => FALSE,
-    'replace' => '50%',
-    'whole' => 0,
-    'word_boundaries' => 0,
-  );
-  $feeds_tamper->weight = 2;
-  $feeds_tamper->description = 'Find replace';
-  $export['qualtrics_program_import-q83-find_replace3'] = $feeds_tamper;
-
-  $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-  $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'qualtrics_program_import-q83-find_replace4';
-  $feeds_tamper->importer = 'qualtrics_program_import';
-  $feeds_tamper->source = 'Q83';
-  $feeds_tamper->plugin_id = 'find_replace';
-  $feeds_tamper->settings = array(
-    'case_sensitive' => 0,
-    'find' => '25% of the time',
-    'func' => 'str_ireplace',
-    'regex' => FALSE,
-    'replace' => '25%',
-    'whole' => 0,
-    'word_boundaries' => 0,
-  );
-  $feeds_tamper->weight = 3;
-  $feeds_tamper->description = 'Find replace';
-  $export['qualtrics_program_import-q83-find_replace4'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

@@ -31,7 +31,6 @@
  * - sites/drupal.org.mysite.test
  * - sites/org.mysite.test
  *
- *
  * - sites/8080.www.drupal.org.mysite
  * - sites/www.drupal.org.mysite
  * - sites/drupal.org.mysite

@@ -6,7 +6,7 @@
  */
 
 /**
- * Implementation of hook_drush_command().
+ * Implements hook_drush_command().
  *
  * In this hook, you specify which commands your
  * drush module makes available, what it does and
@@ -15,7 +15,8 @@
  * Notice how this structure closely resembles how
  * you define menu hooks.
  *
- * @See drush_parse_command() for a list of recognized keys.
+ * @see drush_parse_command()
+ * @see http://api.drush.ws/api/drush/includes%21command.inc/function/drush_parse_command
  *
  * @return
  *   An associative array describing your command(s).
@@ -32,7 +33,7 @@ function jquerymobile_drush_command() {
     ),
    'bootstrap' => DRUSH_BOOTSTRAP_FULL,
   );
-  
+
     return $items;
 }
 
@@ -51,7 +52,7 @@ function drush_jquerymobile() {
   $jqm = drush_get_option('jqm');
   $jquery = drush_get_option('jquery');
   $path = drush_get_option('path');
-  
+
   if (is_null($jqm)) {
     $jqm = '1.0.1';
   }
@@ -61,17 +62,17 @@ function drush_jquerymobile() {
   if (is_null($path)) {
     $path = 'sites/all/libraries';
   }
-  
+
   variable_set('jquerymobile_library_path', $path);
 
   $path = drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . $path;
-  
+
   // Download jQuery Mobile
   if (!is_dir($path)) {
     drush_op('mkdir', $path);
     drush_log(dt('Directory @path was created', array('@path' => $path)), 'notice');
   }
-  
+
   drush_op('chdir', $path);
   if (drush_shell_exec('wget http://code.jquery.com/mobile/' . $jqm . '/jquery.mobile-' . $jqm . '.zip')) {
     drush_log(dt('jquery.mobile-' . $jqm . '.zip has been downloaded to @path', array('@path' => $path)), 'success');
@@ -79,21 +80,21 @@ function drush_jquerymobile() {
   else {
     drush_log(dt('Drush was unable to download jquery.mobile-' . $jqm . '.zip to @path', array('@path' => $path)), 'error');
   }
-  
+
   if (drush_shell_exec('unzip jquery.mobile-' . $jqm . '.zip')) {
     drush_log(dt('jquery.mobile-' . $jqm . '.zip has been extacted to @path', array('@path' => $path)), 'success');
   }
   else {
     drush_log(dt('Drush was unable to extract jquery.mobile-' . $jqm . '.zip to @path', array('@path' => $path)), 'error');
   }
-  
+
   if (drush_shell_exec('rm jquery.mobile-' . $jqm . '.zip')) {
     drush_log(dt('jquery.mobile-' . $jqm . '.zip has been removed from @path', array('@path' => $path)), 'success');
   }
   else {
     drush_log(dt('Drush was unable to remove jquery.mobile-' . $jqm . '.zip from @path', array('@path' => $path)), 'error');
-  } 
-  
+  }
+
   // Download jQuery
   $files = array('.js', '.min.js');
 
@@ -101,7 +102,7 @@ function drush_jquerymobile() {
     drush_op('mkdir', $path . '/jquery-' . $jquery);
     drush_log(dt('Directory @path was created', array('@path' => $path . '/jquery-' . $jquery)), 'notice');
   }
-  
+
   drush_op('chdir', $path . '/jquery-' . $jquery);
 
   foreach ($files as $key => $file) {
@@ -112,7 +113,7 @@ function drush_jquerymobile() {
       drush_log(dt('Drush was unable to download jquery-' . $jquery . $file . ' to @path', array('@path' => $path . '/jquery-' . $jquery)), 'error');
     }
   }
-  
+
   variable_set('jquerymobile_jquerymobile_version', $jqm);
   variable_set('jquerymobile_jquery_version', $jquery);
 }

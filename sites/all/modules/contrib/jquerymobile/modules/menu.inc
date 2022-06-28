@@ -31,7 +31,7 @@ function jquerymobile_menu_item_alter(array &$form, array $item = array()) {
       '#weight' => 55,
     );
     $form['options']['attributes'] = array(
-      '#type' => 'fieldset', 
+      '#type' => 'fieldset',
       '#title' => t('Anchor Tag attributes'),
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
@@ -40,9 +40,9 @@ function jquerymobile_menu_item_alter(array &$form, array $item = array()) {
     );
   }
   $form['options']['attributes']['data-rel'] = array(
-    '#type' => 'select', 
+    '#type' => 'select',
     '#title' => t('data-rel attribute'),
-    '#default_value' => isset($item['options']['attributes']['data-rel']) ? $item['options']['attributes']['data-rel'] : '', 
+    '#default_value' => isset($item['options']['attributes']['data-rel']) ? $item['options']['attributes']['data-rel'] : '',
     '#required' => FALSE,
     '#options' => array(
       '' => t('default'),
@@ -50,20 +50,20 @@ function jquerymobile_menu_item_alter(array &$form, array $item = array()) {
     ),
   );
   $form['options']['attributes']['data-ajax'] = array(
-    '#type' => 'select', 
+    '#type' => 'select',
     '#title' => t('data-ajax attribute'),
-    '#default_value' => isset($item['options']['attributes']['data-ajax']) ? $item['options']['attributes']['data-ajax'] : '', 
+    '#default_value' => isset($item['options']['attributes']['data-ajax']) ? $item['options']['attributes']['data-ajax'] : '',
     '#required' => FALSE,
     '#options' => array(
       '' => t('default'),
       'true' => t('true'),
       'false' => t('false'),
     ),
-  );       
+  );
   $form['options']['attributes']['data-transition'] = array(
-    '#type' => 'select', 
+    '#type' => 'select',
     '#title' => t('data-transition attribute'),
-    '#default_value' => isset($item['options']['attributes']['data-transition']) ? $item['options']['attributes']['data-transition'] : '', 
+    '#default_value' => isset($item['options']['attributes']['data-transition']) ? $item['options']['attributes']['data-transition'] : '',
     '#required' => FALSE,
     '#options' => array(
       '' => t('default'),
@@ -72,30 +72,30 @@ function jquerymobile_menu_item_alter(array &$form, array $item = array()) {
       'slidedown' => t('slidedown'),
     ),
   );
-  
+
   $form['options']['jquerymobile_attributes'] = array(
-    '#type' => 'fieldset', 
+    '#type' => 'fieldset',
     '#title' => t('List Item attributes'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
     '#tree' => TRUE,
     '#weight' => 70,
     '#access' => TRUE,
-  );    
+  );
   $form['options']['jquerymobile_attributes']['data-role'] = array(
-    '#type' => 'select', 
+    '#type' => 'select',
     '#title' => t('data-role attribute'),
-    '#default_value' => isset($item['options']['jquerymobile_attributes']['data-role']) ? $item['options']['jquerymobile_attributes']['data-role'] : '', 
+    '#default_value' => isset($item['options']['jquerymobile_attributes']['data-role']) ? $item['options']['jquerymobile_attributes']['data-role'] : '',
     '#required' => FALSE,
     '#options' => array(
-      '' => t('default'), 
+      '' => t('default'),
       'list-divider' => t('List Divider')
     ),
   );
   $form['options']['jquerymobile_attributes']['data-theme'] = array(
-    '#type' => 'select', 
+    '#type' => 'select',
     '#title' => t('data-theme attribute'),
-    '#default_value' => isset($item['options']['jquerymobile_attributes']['data-theme']) ? $item['options']['jquerymobile_attributes']['data-theme'] : '', 
+    '#default_value' => isset($item['options']['jquerymobile_attributes']['data-theme']) ? $item['options']['jquerymobile_attributes']['data-theme'] : '',
     '#required' => FALSE,
     '#options' => array(
       '' => t('default'),
@@ -107,9 +107,9 @@ function jquerymobile_menu_item_alter(array &$form, array $item = array()) {
     ),
   );
   $form['options']['jquerymobile_attributes']['data-icon'] = array(
-    '#type'          => 'select', 
+    '#type'          => 'select',
     '#title'         => t('data-icon attribute'),
-    '#default_value' => isset($item['options']['jquerymobile_attributes']['data-icon']) ? $item['options']['jquerymobile_attributes']['data-icon'] : '', 
+    '#default_value' => isset($item['options']['jquerymobile_attributes']['data-icon']) ? $item['options']['jquerymobile_attributes']['data-icon'] : '',
     '#options'       => array(
       '' => t('default'),
       'arrow-l' => t('Left arrow'),
@@ -149,7 +149,7 @@ function jquerymobile_menu_link_alter(&$item, $menu) {
         }
       }
     }
-  
+
     if (isset($item['options']['jquerymobile_attributes']) && is_array($item['options']['jquerymobile_attributes'])) {
       // Filter out blank attributes.
       foreach ($item['options']['jquerymobile_attributes'] as $key => $value) {

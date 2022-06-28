@@ -68,6 +68,7 @@ features[field_base][] = field_prog_other_costs_amount
 features[field_base][] = field_prog_other_costs_display
 features[field_base][] = field_prog_other_explain
 features[field_base][] = field_prog_other_hous_explain
+features[field_base][] = field_prog_overall_time_dist
 features[field_base][] = field_prog_pay_methods
 features[field_base][] = field_prog_pay_other
 features[field_base][] = field_prog_perc_employed_af_grad
