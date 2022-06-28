@@ -48,7 +48,7 @@ function tc_solr_program_record_index_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Your search produced no results. Try different search terms or use the search filters on the left to find what you are looking for.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_program_records_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -57,11 +57,11 @@ function tc_solr_program_record_index_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_program_records_index';
   $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
   $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
-  /* Sort criterion: Indexed Node: TC:State/Province */
+  /* Sort criterion: Indexed Content: TC:State/Province */
   $handler->display->display_options['sorts']['tc_state_province']['id'] = 'tc_state_province';
   $handler->display->display_options['sorts']['tc_state_province']['table'] = 'search_api_index_program_records_index';
   $handler->display->display_options['sorts']['tc_state_province']['field'] = 'tc_state_province';
-  /* Sort criterion: Indexed Node: TC:School Title */
+  /* Sort criterion: Indexed Content: TC:School Title */
   $handler->display->display_options['sorts']['tc_school_title']['id'] = 'tc_school_title';
   $handler->display->display_options['sorts']['tc_school_title']['table'] = 'search_api_index_program_records_index';
   $handler->display->display_options['sorts']['tc_school_title']['field'] = 'tc_school_title';

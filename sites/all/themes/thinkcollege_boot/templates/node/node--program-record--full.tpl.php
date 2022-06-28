@@ -418,7 +418,6 @@ $classes .= ' node-program-record-full';
     isset($content['field_students_take_courses_disp']) ||
     isset($content['field_all_students_in_course']) ||
     isset($content['field_prog_spec_courses_mor_info']) ||
-    isset($content['field_prog_perc_acad_time']) ||
     isset($content['field_name_of_credential_degree_']) ||
     isset($content['field_prog_campus_services']) ||
     isset($content['field_prog_remote_explain']) ||
@@ -441,7 +440,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog__ihe_support_svces']); ?>
         <?php print render($content['field_prog_stem_courses']); ?>
         <?php print render($content['field_prog_spec_courses_mor_info']); ?>
-        <?php print render($content['field_prog_perc_acad_time']); ?>
+        <?php // print render($content['field_prog_perc_acad_time']); ?>
         <?php print render($content['field_prog_perc_academic']); ?>
         <?php print render($content['field_prog_campus_services']); ?>
         <?php print render($content['field_prog_remote_explain']); ?>
