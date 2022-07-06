@@ -72,6 +72,11 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
       $build['Yes']["#markup"] = "Program is a federally funded TPSID program";
     }
   }
+  else if ($settings->facet == "tc_credit_courses") {
+    if (array_key_exists('Yes', $build)) {
+      $build['Yes']["#markup"] = "Students take courses for credit";
+    }
+  }
   else if ($settings->facet == "field_prog_length_years") {
     if (array_key_exists('Yes', $build)) {
       $build['Varies']["#markup"] = "Varies by student";
