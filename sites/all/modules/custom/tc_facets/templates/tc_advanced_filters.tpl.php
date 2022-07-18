@@ -12,7 +12,8 @@ if (sizeof($params) != 0) {
     $pubpri = preg_grep('/(field_prog_public_or_privat)/', $params['f']);
     $school = preg_grep('/(tc_school_type:2-year community college or junior college)/', $params['f']);
     $length = preg_grep('/(field_prog_length_years:1 year)/', $params['f']);
-    if ((sizeof($tpsid) > 0) || (sizeof($pubpri) > 0) || (sizeof($school) > 0) || (sizeof($length) > 0)) {
+    $coursetype = preg_grep('/(tc_credit_courses/', $params['f']);
+    if ((sizeof($tpsid) > 0) || (sizeof($pubpri) > 0) || (sizeof($school) > 0) || (sizeof($length) > 0) || (sizeof($coursetype) > 0)) {
       $adv_classes = "collapse in";
     }
   }
@@ -28,7 +29,10 @@ if (sizeof($params) != 0) {
     $whole_block = block_load('facetapi','vqmkt1ucjsq01vwf5numawcjhodoiedi');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
-
+    //Courses for credit
+    $whole_block = block_load('facetapi','astiugfdmhurkhhjux4bljbzotqnpfrf');
+    $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
+    print drupal_render($renderable_array);
     // type of school
     $whole_block = block_load('facetapi','3qrtavafumrt3dyzncd7af23zwtwlwr4');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));

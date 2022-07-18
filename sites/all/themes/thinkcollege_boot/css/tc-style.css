@@ -1714,6 +1714,41 @@ span.CS {
 
 
 
+.hero-banner-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background: rgba(50,50,50,0.6);
+  z-index: 10;
+  height: 40%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  font-size: 22px;
+  line-height: 28px;
+  font-family: 'museo-slab', serif;
+}
+
+@media screen and (min-width: 768px) {
+   
+  .hero-banner-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(50,50,50,0.6);
+    z-index: 10;
+    height: 25%;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'museo-slab', serif;
+  }
+}    
+
 
 /* home page - top row - right */
 /*
@@ -1727,7 +1762,7 @@ span.CS {
 .home-panel div p {padding:5px;}
 
 
-/* Random Slideshow - Home Page */
+
     .img-caption-overlay {
       position: absolute;
         left: 0;
@@ -1744,68 +1779,4 @@ span.CS {
     }
     
 
-    .views_slideshow_cycle_main {
-      width: 100%;
-    }
-    .views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
-      width: 100% !important;
-      height: auto;
-    }
-    .views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
-      width: 100% !important;
-      height: auto;
-    }
-    .views_slideshow_cycle_main .field-content {
-      max-width: 100%;
-      width: 100%;
-    }
-    .views_slideshow_cycle_main .field-content img {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-    }
 
- 
-.hero-banner-text  {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-bottom: 0;
-  display: block;
-  background: rgba(50,50,50,0.6);
-  z-index: 10;
- 
-}
-
- 
-  .hero-banner-text h3 {
-  
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-    font-family: 'museo-slab', serif;
-  font-size: 13px;
-  line-height: 16px;
-  height: 35%;
-}
- 
-
-@media screen and (min-width: 576px) {
-   
-  .hero-banner-text h3 {
-    height: 30%;
-    font-size: 20px;
-    line-height: 24px;
-  }
-}    
-
-@media screen and (min-width:768px) {
-   
-  .hero-banner-text h3 {
-    font-size: 24px;
-    line-height: 32px;
-    height: 25%;
-  }
-}  
