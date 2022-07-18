@@ -7929,7 +7929,7 @@ article.node-program-record-card .program-box .program-search-info .row, article
   padding-top: 5px;
   padding-bottom: 10px;
   border-bottom: 3px #fff solid;
-  flex-grow: !important;
+ /* flex-grow: !important;*/
   margin-right: 5px;
   margin-left: 5px;
   background-color: #F7F7F7;
@@ -9366,8 +9366,9 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   border-radius: 0;
 }
 
-#faq p {
+#faq p, #faq ol li, #faq ul li {
   font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 
 #faq .ui-state-active a, #faq .ui-state-active a:link, #faq .ui-state-active a:visited {
@@ -10669,11 +10670,14 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   width: 24rem;
 }
 
+
 .page-general-site-search,
 .page-resource-search,
 .page-college-search {
   /* Hide search button on resource search page */
 }
+
+
 
 .page-general-site-search #edit-search-api-views-fulltext-wrapper,
 .page-resource-search #edit-search-api-views-fulltext-wrapper,
