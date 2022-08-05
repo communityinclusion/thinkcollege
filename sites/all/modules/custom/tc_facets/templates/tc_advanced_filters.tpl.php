@@ -39,7 +39,7 @@ if (sizeof($params) != 0) {
     print drupal_render($renderable_array);
 
     // length of programme
-    $whole_block = block_load('facetapi','c4qkveebjlarazcqu7ooayqzqb56k9tf');
+    $whole_block = block_load('facetapi','bnovxlwqhbzj2dcar0un5zrvskatr4ti');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
 

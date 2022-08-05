@@ -77,7 +77,7 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
       $build['Yes']["#markup"] = "Students take courses for credit";
     }
   }
-  else if ($settings->facet == "field_prog_length_years") {
+  else if ($settings->facet == "field_prog_length_years2") {
     if (array_key_exists('Yes', $build)) {
       $build['Varies']["#markup"] = "Varies by student";
     }
