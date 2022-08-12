@@ -89,7 +89,30 @@ var Drupal = Drupal || {};
     }
   };
 
+  Drupal.behaviors.slideshowResponsive = {
+      attach: function (context) {
 
+        $(window).resize(function() {
+               $('.views-slideshow-cycle-main-frame').each(function(){
+                   var heightImgNow = '';
+
+                   $(this).find('.views-slideshow-cycle-main-frame-row').each(function(){
+                           var thisDisplay = $(this).prop("style").display;
+                           var thisImgHeight = $(this).find('img').height();
+                           if(thisDisplay == 'block') {
+                               heightImgNow = thisImgHeight;
+                           }
+                   });
+
+                   if(heightImgNow != '') {
+                       // set div height    = now image height.
+                       $(this).height(heightImgNow);
+                   }
+               });
+           });
+
+    }
+  }
 
   Drupal.behaviors.tcLearnVidWidth = {
       attach: function (context) {
@@ -126,5 +149,6 @@ function resizeVids() {
   });
 
 }
+
 
 })(jQuery, Drupal);
