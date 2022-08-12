@@ -11201,3 +11201,8 @@ svg {
 #block-menu-menu-program-record-scrollspy ul.navbar-nav li.leaf {
   float:none;
   clear:both;}
+  .views-slideshow-cycle-main-frame,
+.views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    margin: auto;
+}
