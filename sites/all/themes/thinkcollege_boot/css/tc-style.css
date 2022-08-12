@@ -1714,7 +1714,7 @@ span.CS {
 
 
 
-.hero-banner-text h3 {
+.hero-banner-text  {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1732,7 +1732,7 @@ span.CS {
 
 @media screen and (min-width: 768px) {
    
-  .hero-banner-text h3 {
+  .hero-banner-text {
     position: absolute;
     left: 0;
     bottom: 0;
