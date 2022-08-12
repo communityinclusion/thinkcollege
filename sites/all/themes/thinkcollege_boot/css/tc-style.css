@@ -1714,25 +1714,25 @@ span.CS {
 
 
 
-.hero-banner-text {
+.hero-banner-text h3 {
   position: absolute;
   left: 0;
   bottom: 0;
   display: block;
   background: rgba(50,50,50,0.6);
   z-index: 10;
-  height: 40%;
+  /* height: 40%;*/
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 22px;
   font-family: 'museo-slab', serif;
 }
 
 @media screen and (min-width: 768px) {
    
-  .hero-banner-text {
+  .hero-banner-text h3 {
     position: absolute;
     left: 0;
     bottom: 0;
