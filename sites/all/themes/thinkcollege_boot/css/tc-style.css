@@ -1714,40 +1714,45 @@ span.CS {
 
 
 
-.hero-banner-text {
+.hero-banner-text  {
+  font-family: 'museo-sans',sans-serif;
   position: absolute;
   left: 0;
   bottom: 0;
+  padding: 10px;
   display: block;
   background: rgba(50,50,50,0.6);
   z-index: 10;
-  height: 40%;
+  /* height: 40%;*/
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-  font-size: 22px;
-  line-height: 28px;
-  font-family: 'museo-slab', serif;
+  font-size: 12px;
+  line-height: 16px;
+ 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
    
   .hero-banner-text {
+    font-family: 'museo-sans',sans-serif;
     position: absolute;
     left: 0;
     bottom: 0;
     display: block;
+    padding: 10px;
     background: rgba(50,50,50,0.6);
     z-index: 10;
-    height: 25%;
+   /*  height: 25%;*/
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
     font-size: 24px;
     line-height: 32px;
-    font-family: 'museo-slab', serif;
+   
   }
 }    
+
 
 
 /* home page - top row - right */
@@ -1778,5 +1783,7 @@ span.CS {
         text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     }
     
-
-
+/* This will hopefully fix resposnive hero image on home page */
+    div#views_slideshow_cycle_teaser_section_slideshow_test-block {
+      max-width: 100%!important;
+  }

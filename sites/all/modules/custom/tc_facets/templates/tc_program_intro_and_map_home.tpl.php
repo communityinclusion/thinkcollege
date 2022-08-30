@@ -29,5 +29,5 @@
     with an accredited college or university and serve students with
     intellectual disabilities. To let us know about a new program, or to
     make changes to a current program listing,
-    please email <a href="mailto:thinkcollege@umb.edu">thinkcollege@umb.edu.</a>
+    please email <a href="mailto:shelby.bates@umb.edu">shelby.bates@umb.edu.</a>
   </p>

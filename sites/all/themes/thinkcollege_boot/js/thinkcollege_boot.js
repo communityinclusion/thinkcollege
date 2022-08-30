@@ -109,7 +109,7 @@ var Drupal = Drupal || {};
                        $(this).height(heightImgNow);
                    }
                });
-           });    
+           });
 
     }
   }
