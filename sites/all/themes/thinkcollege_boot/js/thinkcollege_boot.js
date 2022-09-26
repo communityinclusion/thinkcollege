@@ -33,6 +33,14 @@ var Drupal = Drupal || {};
       });
     }
   };
+  Drupal.behaviors.thinkcollegeHideLoadSlideshow = {
+    attach: function (context) {
+      $(window).load(function() {
+  // When the page has loaded
+  $('#views_slideshow_cycle_main_slideshow_test-block').fadeIn(1700);
+});
+    }
+  };
 
   /*
    * Set the width of menu blocks that use Bootstrap "affix".

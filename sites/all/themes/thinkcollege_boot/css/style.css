@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /** Nudging new deployment
- * Default Variables. Jenkins Rawpower test 4
+ * Default Variables. Jenkins Rawpower test 2
  *
  * Modify this file to provide default Bootstrap Framework variables. The
  * Bootstrap Framework will not override any variables defined here because it
@@ -11207,3 +11207,4 @@ svg {
     width: 100% !important;
     margin: auto;
 }
+#views_slideshow_cycle_main_slideshow_test-block { display: none;}
