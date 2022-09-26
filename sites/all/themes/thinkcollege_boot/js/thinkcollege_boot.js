@@ -37,7 +37,7 @@ var Drupal = Drupal || {};
     attach: function (context) {
       $(window).load(function() {
   // When the page has loaded
-  $('#views_slideshow_cycle_main_slideshow_test-block').fadeIn(1700);
+  $('#views_slideshow_cycle_main_slideshow_test-block').fadeIn(1400);
 });
     }
   };
