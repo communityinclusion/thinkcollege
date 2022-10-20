@@ -935,6 +935,10 @@ div.field-name-field-tags div.field-items div:last-child:after {
     padding-bottom:10px;
         margin-bottom: 0;
 }
+/* bold links in blog and article body */
+.node-type-blog-article .node-blog-article a, .node-type-article .node-article a {
+  font-weight: bold;
+}
 
 
 /* Blog Tag Styles */
