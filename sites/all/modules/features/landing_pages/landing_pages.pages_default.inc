@@ -87,7 +87,7 @@ function landing_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
+  $pane->pid = 'new-ce6b3f15-a73d-44c1-a898-7049f3222673';
   $pane->panel = 'row1left';
   $pane->type = 'views';
   $pane->subtype = 'slideshow_test';
@@ -99,11 +99,11 @@ function landing_pages_default_page_manager_pages() {
     'feed_icons' => 0,
     'link_to_view' => 0,
     'more_link' => 0,
-    'nodes_per_page' => '7',
+    'nodes_per_page' => '5',
     'offset' => '0',
     'override_pager_settings' => 0,
     'override_title' => 1,
-    'override_title_heading' => 'span',
+    'override_title_heading' => 'h2',
     'override_title_text' => '',
     'pager_id' => '0',
     'panel_args' => 0,
@@ -116,11 +116,11 @@ function landing_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '51991429-d311-4e3f-b31e-ee26a4d24bbd';
-  $display->content['new-51991429-d311-4e3f-b31e-ee26a4d24bbd'] = $pane;
-  $display->panels['row1left'][0] = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
+  $pane->uuid = 'ce6b3f15-a73d-44c1-a898-7049f3222673';
+  $display->content['new-ce6b3f15-a73d-44c1-a898-7049f3222673'] = $pane;
+  $display->panels['row1left'][0] = 'new-ce6b3f15-a73d-44c1-a898-7049f3222673';
   $pane = new stdClass();
-  $pane->pid = 'new-af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9';
+  $pane->pid = 'new-86fb5c18-79d8-4b80-a7a2-b5846a03c9b9';
   $pane->panel = 'row1right';
   $pane->type = 'views';
   $pane->subtype = 'home_page_content_feed';
@@ -152,9 +152,9 @@ function landing_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9';
-  $display->content['new-af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9'] = $pane;
-  $display->panels['row1right'][0] = 'new-af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9';
+  $pane->uuid = '86fb5c18-79d8-4b80-a7a2-b5846a03c9b9';
+  $display->content['new-86fb5c18-79d8-4b80-a7a2-b5846a03c9b9'] = $pane;
+  $display->panels['row1right'][0] = 'new-86fb5c18-79d8-4b80-a7a2-b5846a03c9b9';
   $pane = new stdClass();
   $pane->pid = 'new-54b6be28-d590-434b-b679-92beb0cd3ff9';
   $pane->panel = 'row2';
@@ -176,7 +176,7 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-54b6be28-d590-434b-b679-92beb0cd3ff9'] = $pane;
   $display->panels['row2'][0] = 'new-54b6be28-d590-434b-b679-92beb0cd3ff9';
   $pane = new stdClass();
-  $pane->pid = 'new-ce57d81d-23f5-443b-a7ee-a1179b195cbb';
+  $pane->pid = 'new-2b869770-3b45-43eb-9fe4-8bd52a6adb99';
   $pane->panel = 'row3left';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
@@ -184,15 +184,14 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'college search button',
-    'body' => '<p><a class="CSbtn" href="/college-search" role="button"><span class="CS">COLLEGE SEARCH</span><br />
-<span class="CStagline">The only directory of programs for students with intellectual disabilities in the US</span></a></p>
+    'body' => '<p><a class="CSbtn" href="/college-search" role="button"><span class="CS">COLLEGE SEARCH</span><br><span class="CStagline">The only directory of programs for students with intellectual disabilities</span></a></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
     'title' => '',
-    'title_heading' => 'span',
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array();
@@ -200,9 +199,9 @@ function landing_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'ce57d81d-23f5-443b-a7ee-a1179b195cbb';
-  $display->content['new-ce57d81d-23f5-443b-a7ee-a1179b195cbb'] = $pane;
-  $display->panels['row3left'][0] = 'new-ce57d81d-23f5-443b-a7ee-a1179b195cbb';
+  $pane->uuid = '2b869770-3b45-43eb-9fe4-8bd52a6adb99';
+  $display->content['new-2b869770-3b45-43eb-9fe4-8bd52a6adb99'] = $pane;
+  $display->panels['row3left'][0] = 'new-2b869770-3b45-43eb-9fe4-8bd52a6adb99';
   $pane = new stdClass();
   $pane->pid = 'new-142be058-3cc3-415e-8519-c6c83a7848df';
   $pane->panel = 'row3left';
@@ -212,7 +211,7 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><img alt="Photo of Kathy Becht saying &quot;I Can Help&quot;" class="img-responsive" src="/sites/default/files/images/Becht-cutout-help.jpg" />If you have a question, Ask Kathy! Email her at <strong><a href="mailto:thinkcollegeta@gmail.com?subject=Help%20request">thinkcollegeta@gmail.com</a></strong>. If she doesn’t know, she’ll ask her <a href="/technical-assistance/technical-assistance-providers"><b>team</b></a>!&nbsp;</p>
+    'body' => '<p><img alt="Kathy Becht" class="img-responsive" src="/sites/default/files/images/Becht-cutout-help.png" />If you have a question, Ask Kathy! Email her at <strong><a href="mailto:thinkcollegeta@gmail.com?subject=Help%20request">thinkcollegeta@gmail.com</a></strong>. If she doesn’t know, she’ll ask her <a href="/technical-assistance/technical-assistance-providers"><b>team</b></a>!&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -240,7 +239,7 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Twitter',
-    'body' => '<p><a class="twitter-timeline" data-height="700" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+    'body' => '<p><a class="twitter-timeline" data-height="500" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -262,7 +261,7 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-a5ca0924-aa75-4b9b-81f0-51b7528ee206'] = $pane;
   $display->panels['row3left'][2] = 'new-a5ca0924-aa75-4b9b-81f0-51b7528ee206';
   $pane = new stdClass();
-  $pane->pid = 'new-45152c5e-909e-46b4-beae-ea49e1f5e434';
+  $pane->pid = 'new-5f5101b3-43c6-420f-835d-fe9d72553124';
   $pane->panel = 'row3right';
   $pane->type = 'views';
   $pane->subtype = 'hero_tabs';
@@ -278,7 +277,7 @@ function landing_pages_default_page_manager_pages() {
     'offset' => '0',
     'override_pager_settings' => 0,
     'override_title' => 1,
-    'override_title_heading' => 'span',
+    'override_title_heading' => 'h2',
     'override_title_text' => '',
     'pager_id' => '0',
     'panel_args' => 0,
@@ -294,9 +293,78 @@ function landing_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '45152c5e-909e-46b4-beae-ea49e1f5e434';
-  $display->content['new-45152c5e-909e-46b4-beae-ea49e1f5e434'] = $pane;
-  $display->panels['row3right'][0] = 'new-45152c5e-909e-46b4-beae-ea49e1f5e434';
+  $pane->uuid = '5f5101b3-43c6-420f-835d-fe9d72553124';
+  $display->content['new-5f5101b3-43c6-420f-835d-fe9d72553124'] = $pane;
+  $display->panels['row3right'][0] = 'new-5f5101b3-43c6-420f-835d-fe9d72553124';
+  $pane = new stdClass();
+  $pane->pid = 'new-0ecddeab-4db2-4bec-a8d4-2073b2065327';
+  $pane->panel = 'row3right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<p style="margin-bottom: 25px;"><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/images/collegesearch.png" /></a></p>',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'hide',
+    'css_id' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '0ecddeab-4db2-4bec-a8d4-2073b2065327';
+  $display->content['new-0ecddeab-4db2-4bec-a8d4-2073b2065327'] = $pane;
+  $display->panels['row3right'][1] = 'new-0ecddeab-4db2-4bec-a8d4-2073b2065327';
+  $pane = new stdClass();
+  $pane->pid = 'new-5f8cc240-df8c-4bd6-b74c-4558452d32d0';
+  $pane->panel = 'row3right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<div class="row">
+<div class="col-xs-12 col-sm-6 logo-grid"><a class="shadow shadow-1" href="/projects/ncc" tabindex="1"><img alt="Visit The National Coordinating Center Project Page" class="img-responsive" src="/sites/default/files/images/NCC-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6   logo-grid"><a class="shadow shadow-1" href="/projects/tcn" tabindex="2"><img alt="Visit The Inclusive Higher Education Network Project Page" class="img-responsive" src="https://devel.thinkcollege.net/sites/default/files/images/IHEN-logo-600w.png" /> </a></div>
+
+<div class="col-xs-12 col-sm-6   logo-grid"><a class="shadow shadow-1" href="/projects/fqie" tabindex="3"><img alt="Visit The Future Quest Island: Explorations Project Page" class="img-responsive" src="/sites/default/files/images/FQI-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6  logo-grid"><a class="shadow shadow-1" href="/projects/mtf" tabindex="4"><img alt="Visit The Moving Transition Forward Project Page" class="img-responsive" src="/sites/default/files/images/MTF-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6 logo-grid"><a class="shadow shadow-1" href="/projects/transition-leadership-project" tabindex="5"><img alt="Visit The Transition Leadership Project Page" class="img-responsive" src="/sites/default/files/images/TL-logo-600w.png" /></a></div>
+
+<div class="col-xs-12 col-sm-6  logo-grid"><a class="shadow shadow-1" href="/about/what-is-think-college" tabindex="6"><img alt="Visit The Think College About Page" class="img-responsive" src="/sites/default/files/images/tc-logo-600w.png" /></a></div>
+</div>
+
+<p>&nbsp;</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => 'Current Think College Projects',
+    'title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array(
+    'css_class' => 'hide home-featuredblock',
+    'css_id' => 'home-projects',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '5f8cc240-df8c-4bd6-b74c-4558452d32d0';
+  $display->content['new-5f8cc240-df8c-4bd6-b74c-4558452d32d0'] = $pane;
+  $display->panels['row3right'][2] = 'new-5f8cc240-df8c-4bd6-b74c-4558452d32d0';
   $pane = new stdClass();
   $pane->pid = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
   $pane->panel = 'row3right';
@@ -328,11 +396,11 @@ function landing_pages_default_page_manager_pages() {
     'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '7cce9073-4200-4949-abc1-e0a8602e2ff7';
   $display->content['new-7cce9073-4200-4949-abc1-e0a8602e2ff7'] = $pane;
-  $display->panels['row3right'][1] = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
+  $display->panels['row3right'][3] = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
   $pane = new stdClass();
   $pane->pid = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $pane->panel = 'row3right';
@@ -350,11 +418,11 @@ function landing_pages_default_page_manager_pages() {
     'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = '5f60030e-d864-4f92-b158-7fa0a5083588';
   $display->content['new-5f60030e-d864-4f92-b158-7fa0a5083588'] = $pane;
-  $display->panels['row3right'][2] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
+  $display->panels['row3right'][4] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

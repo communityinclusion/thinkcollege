@@ -99,7 +99,7 @@ function program_record_strongarm() {
           ),
           'full' => array(
             'visible' => FALSE,
-            'weight' => '105',
+            'weight' => '107',
           ),
           'modal' => array(
             'visible' => FALSE,
@@ -421,16 +421,6 @@ function program_record_strongarm() {
   $strongarm->name = 'print_robots_noindex';
   $strongarm->value = 1;
   $export['print_robots_noindex'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_settings_node_program_record';
-  $strongarm->value = array(
-    'priority' => '0.5',
-    'status' => '1',
-  );
-  $export['xmlsitemap_settings_node_program_record'] = $strongarm;
 
   return $export;
 }

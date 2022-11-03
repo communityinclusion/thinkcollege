@@ -38,7 +38,7 @@ function hero_tabs_and_slideshow_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Use these tabs to find some of the most frequently used resources on our site';
+  $handler->display->display_options['header']['area']['content'] = 'Use these tabs to find some of the most frequently used resources on our site, organized by: State, Project, and Topic';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -166,6 +166,7 @@ function hero_tabs_and_slideshow_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
     'blog_article' => 'blog_article',
     'page' => 'page',
     'resource' => 'resource',
