@@ -42,8 +42,8 @@ if (sizeof($params) != 0) {
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
     // Language
-  /*  $whole_block = block_load('facetapi','mvjzpscrdq85e5vtt68axvmggix7gzax');
+  $whole_block = block_load('facetapi','tgxd0gfahysde8tl7sbcdnvh0isdog0s');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
-    print drupal_render($renderable_array); */
+    print drupal_render($renderable_array);
     ?>
 </div>
