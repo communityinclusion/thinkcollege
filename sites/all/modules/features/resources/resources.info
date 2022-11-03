@@ -75,6 +75,7 @@ features[variable][] = menu_parent_resource
 features[variable][] = node_options_resource
 features[variable][] = node_preview_resource
 features[variable][] = node_submitted_resource
+features[variable][] = xmlsitemap_settings_node_resource
 features[views_view][] = innovation_exchange
 features_exclude[field_base][field_review] = field_review
 features_exclude[field_instance][node-resource-field_review] = node-resource-field_review

@@ -101,6 +101,9 @@ function article_strongarm() {
         'title' => array(
           'weight' => '-5',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
     ),
     'view_modes' => array(
@@ -118,6 +121,9 @@ function article_strongarm() {
       ),
       'ical' => array(
         'custom_settings' => FALSE,
+      ),
+      'live_results_search' => array(
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -190,6 +196,16 @@ function article_strongarm() {
   $strongarm->name = 'pathauto_node_article_pattern';
   $strongarm->value = 'think-college-news/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_article';
+  $strongarm->value = array(
+    'priority' => '0.5',
+    'status' => '1',
+  );
+  $export['xmlsitemap_settings_node_article'] = $strongarm;
 
   return $export;
 }

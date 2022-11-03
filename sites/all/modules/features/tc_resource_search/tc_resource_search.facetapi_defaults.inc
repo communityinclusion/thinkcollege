@@ -54,7 +54,7 @@ function tc_resource_search_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->hash = 'f70ZuuFzE1DZ81VFRq1Tqxidg7U2mFkn';
   $facet->settings = array(
-    'default_true' => '1',
+    'default_true' => TRUE,
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
@@ -358,7 +358,7 @@ function tc_resource_search_facetapi_default_facet_settings() {
     'facet_fewer_text' => 'Show fewer',
     'facet_more_text' => 'Show more',
     'filters' => array(),
-    'nofollow' => 1,
+    'nofollow' => '1',
     'show_expanded' => 1,
     'soft_limit' => '20',
     'sort_order' => array(

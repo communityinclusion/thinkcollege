@@ -4489,84 +4489,6 @@ function program_record_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program_record-field_prog_perc_acad_time'.
-  $field_instances['node-program_record-field_prog_perc_acad_time'] = array(
-    'bundle' => 'program_record',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'default_value_php' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 27,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 16,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 45,
-      ),
-      'live_results_search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'modal' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 31,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 16,
-      ),
-    ),
-    'display_label' => 'Percentage of academic time spent only with other students in this program:',
-    'entity_type' => 'node',
-    'field_name' => 'field_prog_perc_acad_time',
-    'label' => 'How much academic time is spent only with other students in this program?',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 104,
-    ),
-  );
-
   // Exported field_instance: 'node-program_record-field_prog_perc_academic'.
   $field_instances['node-program_record-field_prog_perc_academic'] = array(
     'bundle' => 'program_record',
@@ -8352,7 +8274,6 @@ function program_record_field_default_field_instances() {
   t('How do students pay to attend this program (check all that apply)?');
   t('How do students pay, Other?');
   t('How many students, total, attended this program in the most recently completed academic year?');
-  t('How much academic time is spent only with other students in this program?');
   t('How much overall time on campus is spent only with other students in this program?');
   t('If no address is available, set the "Country" to "None".');
   t('If this program has not yet started serving students, please specify the school year when the first class will be accepted: ');

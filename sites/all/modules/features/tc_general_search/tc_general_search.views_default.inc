@@ -38,7 +38,7 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['header']['result']['id'] = 'result';
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
-  /* Field: Indexed Node: Content type */
+  /* Field: Indexed Content: Content type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['type']['field'] = 'type';
@@ -46,20 +46,20 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type']['format_name'] = 1;
-  /* Field: Indexed Node: Content type */
+  /* Field: Indexed Content: Content type */
   $handler->display->display_options['fields']['type_1']['id'] = 'type_1';
   $handler->display->display_options['fields']['type_1']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['type_1']['field'] = 'type';
   $handler->display->display_options['fields']['type_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['type_1']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type_1']['format_name'] = 0;
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -68,7 +68,16 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h2>[title]</h2>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: The main body text */
+  /* Field: Indexed Content: College/university where the program is located */
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['id'] = 'field_prog_col_univ_name';
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['table'] = 'search_api_index_general_site_search';
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['field'] = 'field_prog_col_univ_name';
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['label'] = '';
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['alter']['text'] = '<strong>Program\'s parent Institution: [field_prog_col_univ_name-value] </strong>';
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_prog_col_univ_name']['hide_empty'] = TRUE;
+  /* Field: Indexed Content: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -79,7 +88,7 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Field: Indexed Node: Date */
+  /* Field: Indexed Content: Date */
   $handler->display->display_options['fields']['event_calendar_date']['id'] = 'event_calendar_date';
   $handler->display->display_options['fields']['event_calendar_date']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['event_calendar_date']['field'] = 'event_calendar_date';
@@ -94,7 +103,7 @@ function tc_general_search_views_default_views() {
     'show_remaining_days' => 0,
     'show_repeat_rule' => 'show',
   );
-  /* Field: Indexed Node: Date created */
+  /* Field: Indexed Content: Date created */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -113,12 +122,14 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['fields']['event_calendar_date_value2']['date_format'] = 'search_api_facetapi_YEAR';
   $handler->display->display_options['fields']['event_calendar_date_value2']['second_date_format'] = 'search_api_facetapi_YEAR';
   $handler->display->display_options['fields']['event_calendar_date_value2']['link_to_entity'] = 0;
-  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_general_site_search';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
   $handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
@@ -127,13 +138,22 @@ function tc_general_search_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
-    5 => 0,
-    7 => 0,
-    12 => 0,
-    3 => 0,
-    14 => 0,
   );
+  /* Filter criterion: Date: End date (indexed) */
+  $handler->display->display_options['filters']['event_calendar_date_value2']['id'] = 'event_calendar_date_value2';
+  $handler->display->display_options['filters']['event_calendar_date_value2']['table'] = 'search_api_index_general_site_search';
+  $handler->display->display_options['filters']['event_calendar_date_value2']['field'] = 'event_calendar_date_value2';
+  $handler->display->display_options['filters']['event_calendar_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['event_calendar_date_value2']['value']['value'] = 'now';
+  $handler->display->display_options['filters']['event_calendar_date_value2']['group'] = 2;
+  $handler->display->display_options['filters']['event_calendar_date_value2']['year_range'] = '-10:+3';
+  /* Filter criterion: Date: End date (indexed) */
+  $handler->display->display_options['filters']['event_calendar_date_value2_1']['id'] = 'event_calendar_date_value2_1';
+  $handler->display->display_options['filters']['event_calendar_date_value2_1']['table'] = 'search_api_index_general_site_search';
+  $handler->display->display_options['filters']['event_calendar_date_value2_1']['field'] = 'event_calendar_date_value2';
+  $handler->display->display_options['filters']['event_calendar_date_value2_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['event_calendar_date_value2_1']['group'] = 2;
+  $handler->display->display_options['filters']['event_calendar_date_value2_1']['year_range'] = '-10:+3';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'tc_general_search_block');

@@ -231,9 +231,8 @@ function article_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'hidden',
         'weight' => 7,
       ),
     ),
@@ -364,7 +363,7 @@ function article_field_default_field_instances() {
   $field_instances['node-article-field_teaser_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => 'Use this to upload an image for use on a landing page as a teaser image.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -428,18 +427,73 @@ function article_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_thumbnail'.
+  $field_instances['node-article-field_thumbnail'] = array(
+    'bundle' => 'article',
+    'deleted' => 0,
+    'description' => '<big>**Please only upload images that are 600px by 360px or 300px by 180px. **</big>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_thumbnail',
+    'label' => 'REAL Thumbnail',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => 'thumbnails',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '600x360',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'imce_filefield_on' => 1,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 42,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('<big>**Please only upload images that are 600px by 360px or 300px by 180px. **</big>');
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
   t('Feature in Section');
   t('Image');
   t('Project');
+  t('REAL Thumbnail');
   t('Review');
   t('Tags');
   t('Teaser image');
   t('Upload an image to go with this article.');
-  t('Use this to upload an image for use on a landing page as a teaser image.');
 
   return $field_instances;
 }

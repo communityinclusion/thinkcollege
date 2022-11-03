@@ -128,7 +128,7 @@ function resources_strongarm() {
       ),
       'form' => array(
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'path' => array(
           'weight' => '2',
@@ -138,6 +138,9 @@ function resources_strongarm() {
         ),
         'title' => array(
           'weight' => '0',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
         ),
       ),
     ),
@@ -221,6 +224,16 @@ function resources_strongarm() {
   $strongarm->name = 'node_submitted_resource';
   $strongarm->value = 0;
   $export['node_submitted_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_resource';
+  $strongarm->value = array(
+    'priority' => '0.5',
+    'status' => '1',
+  );
+  $export['xmlsitemap_settings_node_resource'] = $strongarm;
 
   return $export;
 }
