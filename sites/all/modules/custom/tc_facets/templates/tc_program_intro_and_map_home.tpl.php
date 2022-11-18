@@ -1,7 +1,7 @@
 <div class="row is-flex">
 	<div class="col-xs-2 ">
 		 
-					<i class="vertical-align fa fa-folder-open-o fa-3x fa-fw"></i>
+					<i style="color:#4C8EC9" class="vertical-align fa fa-folder-open-o fa-3x fa-fw"></i>
 				 
 		</div>
 			<div class="col-xs-10">
@@ -14,7 +14,7 @@
 
 	<div class="row is-flex">
 <div class="col-xs-2">
-		<i class="vertical-align fa fa-question-circle fa-3x fa-fw"></i>
+		<i style="color:#4C8EC9" class="vertical-align fa fa-question-circle fa-3x fa-fw"></i>
 	</div>
 		<div class="col-xs-10">
 
@@ -27,7 +27,7 @@
 
 	<div class="row is-flex">
 <div class="col-xs-2">
-		<i class="vertical-align fa fa-search fa-3x fa-fw"></i>
+		<i style="color:#4C8EC9" class="vertical-align fa fa-search fa-3x fa-fw"></i>
 	</div>
 		<div class="col-xs-10">
 
@@ -56,3 +56,6 @@
   <p class="small clearfix">
   This database was created for use by students, families, and teachers to explore college options for students with ID. It was not designed for research purposes. It may not be used for commercial purposes.
 </p>
+<p><img alt="Join In Logo"
+        src="<?php echo $joinlogo_img; ?>"
+        style="float:left;padding:20px;" width="200px" /> Looking for a program or resources in Europe? Check out <a href="https://joinin.education">JoinIN!</a> This website offers a searchable directory of EU programs. </p>
