@@ -21,6 +21,7 @@
   ?>
 
    <hr/>
+  
    <p class="small clearfix">
     The information included here was submitted to Think College by the
     college programs. Being listed here does not indicate or imply a
@@ -31,3 +32,6 @@
     make changes to a current program listing,
     please email <a href="mailto:shelby.bates@umb.edu">shelby.bates@umb.edu.</a>
   </p>
+  <p class="small clearfix">
+  This database was created for use by students, families, and teachers to explore college options for students with ID. It was not designed for research purposes. It may not be used for commercial purposes.
+</p>
