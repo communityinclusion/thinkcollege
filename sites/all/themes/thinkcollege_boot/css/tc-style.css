@@ -1792,3 +1792,9 @@ span.CS {
     div#views_slideshow_cycle_teaser_section_slideshow_test-block {
       max-width: 100%!important;
   }
+  .vertical-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }

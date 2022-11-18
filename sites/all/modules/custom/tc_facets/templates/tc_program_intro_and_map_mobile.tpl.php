@@ -8,11 +8,10 @@
         src="<?php echo $info_img; ?>"
         style="float:right;padding:20px;" width="200px" /> -->
 
-   
-<div class="row is-flex">
+		<div class="row is-flex">
 	<div class="col-xs-2 ">
 		 
-					<i class="vertical-align fa fa-folder-open-o fa-3x fa-fw"></i>
+					<i style="color:#4C8EC9" class="vertical-align fa fa-folder-open-o fa-3x fa-fw"></i>
 				 
 		</div>
 			<div class="col-xs-10">
@@ -25,7 +24,7 @@
 
 	<div class="row is-flex">
 <div class="col-xs-2">
-		<i class="vertical-align fa fa-question-circle fa-3x fa-fw"></i>
+		<i style="color:#4C8EC9" class="vertical-align fa fa-question-circle fa-3x fa-fw"></i>
 	</div>
 		<div class="col-xs-10">
 
@@ -38,7 +37,7 @@
 
 	<div class="row is-flex">
 <div class="col-xs-2">
-		<i class="vertical-align fa fa-search fa-3x fa-fw"></i>
+		<i style="color:#4C8EC9" class="vertical-align fa fa-search fa-3x fa-fw"></i>
 	</div>
 		<div class="col-xs-10">
 
