@@ -56,6 +56,7 @@
   <p class="small clearfix">
   This database was created for use by students, families, and teachers to explore college options for students with ID. It was not designed for research purposes. It may not be used for commercial purposes.
 </p>
+<hr/>
 <p class="clearfix"><img alt="Join In Logo"
         src="<?php echo $joinlogo_img; ?>"
         style="float:left;padding:20px;padding-top:5px" width="200px" /> Looking for a program or resources in Europe? Check out <a href="https://joinin.education">JoinIN!</a> This website offers a searchable directory of EU programs. </p>
