@@ -1,20 +1,41 @@
+<div class="row is-flex">
+	<div class="col-xs-2 ">
+		 
+					<i class="vertical-align fa fa-folder-open-o fa-3x fa-fw"></i>
+				 
+		</div>
+			<div class="col-xs-10">
+
+				<h4>The only directory of its kind</h4>
+				<p>The only directory of its kind, Think College Search features information on <b><span style="color:#20527C"><?php echo $count; ?></span> postsecondary education programs</b> for students with intellectual disability.</p>
+			</div>
+</div>
 
 
-  <p>
-    The only directory of its kind, Think College Search features <span style="color:#20527C"><?php echo $count; ?></span>
-    colleges and universities that offer postsecondary education programs for students with intellectual disability. Users of this searchable online database can filter by state, length of program, type of school, options for living on campus, and more.  To learn more, view these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a> about college programs, how we gather the information in the directory, and how to use the features of College Search.
-  </p>
+	<div class="row is-flex">
+<div class="col-xs-2">
+		<i class="vertical-align fa fa-question-circle fa-3x fa-fw"></i>
+	</div>
+		<div class="col-xs-10">
 
-  <p>Ready to start a college search? You may find this guide helpful - <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf"> Conducting a College Search: Questions to ask College Programs</a>, developed by Think College with input from families and students. It includes dozens of questions to consider asking to learn more about the programs you are interested in.  </p>
-  <!-- <p>Review these <a title="Frequently Asked Questions" href="/faq">Frequently Asked Questions</a>
-     for answers to some general questions on college programs, how we gather the information
-     in the directory, and how to use the features of College Search.</p>
+				<h4>Frequently Asked Questions</h4>
+      <p>The most <b><a href="/faq" title="Frequently Asked Questions">commonly asked questions</a></b> about college options for students with intellectual disability and how to use this directory.
+</p>
+			</div>
+</div>
 
-<p>Once you have located colleges you are interested in, download
-  the <a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">How To Think College Guide to Conducting a College Search [PDF]</a>.
-  It provides you with the right questions to ask in order to get the answers
-  you need about each program on your list. The How To guide is also <a href="/sites/default/files/files/resources/HowTo%20TC_spanish_FR.PDF">available in Spanish.</a></p> -->
-     <hr/>
+
+	<div class="row is-flex">
+<div class="col-xs-2">
+		<i class="vertical-align fa fa-search fa-3x fa-fw"></i>
+	</div>
+		<div class="col-xs-10">
+
+				<h4>Conducting a College Search</h4>
+				<p><b><a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">Questions to ask College Programs: A downloadable guide</a></b>, featuring over 50 different questions to ask colleges during your college search.</p>
+			</div>
+		</div>
+ <hr/>
 
   <?php
   include(drupal_get_path('module', 'tc_facets') . '/templates/tc_state_program_count_map.tpl.php');
