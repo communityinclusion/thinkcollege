@@ -62,5 +62,5 @@
 </p>
 <p class="clearfix"><img alt="Join In Logo"
         src="<?php echo $joinlogo_img; ?>"
-        style="float:left;padding:20px;paddint-top:5px" width="200px" /> Looking for a program or resources in Europe? Check out <a href="https://joinin.education">JoinIN!</a> This website offers a searchable directory of EU programs. </p>
+        style="float:left;padding:20px;padding-top:5px" width="200px" /> Looking for a program or resources in Europe? Check out <a href="https://joinin.education">JoinIN!</a> This website offers a searchable directory of EU programs. </p>
 </div>
