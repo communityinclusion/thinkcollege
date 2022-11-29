@@ -426,7 +426,7 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_campus_services']) ||
     isset($content['field_prog_perc_academic']) ||
     isset($content['field_prog_college_events']) ||
-     isset($content['field_prog_cred_ihe_approv']) || isset($content['field_prog_other_credent']) || isset($content['field_prog_stem_cert']) || isset($content['field_prog_stem_courses'])):
+     isset($content['field_prog_cred_ihe_approv']) || isset($content['field_prog_other_credent']) || isset($content['field_prog_stem_courses'])):
     ?>
     <div class="program-box" id="academic">
       <table class="table table-striped">
@@ -449,7 +449,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_name_of_credential_degree_']); ?>
         <?php print render($content['field_prog_cred_ihe_approv']); ?>
         <?php print render($content['field_prog_other_credent']); ?>
-        <?php print render($content['field_prog_stem_cert']); ?>
+        <?php // print render($content['field_prog_stem_cert']); ?>
         <?php
         if(isset($content['field_prog_campus_services'])) {
           $showarray =  $content['field_prog_campus_services']['#items'];
