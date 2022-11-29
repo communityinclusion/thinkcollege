@@ -189,15 +189,18 @@ $classes .= ' node-program-record-full';
             <tr>
               <td>
                 <?php
-                if (isset($content['field_prog_program_contact_email']['#display_label'])) {
-                  print $content['field_prog_program_contact_email']['#display_label'];
+                if (isset($content['field_prog_program_email']['#display_label'])) {
+                  print $content['field_prog_program_email']['#display_label'];
                 }
                 else {
                   print $content['field_prog_program_contact_email']['#title'];
                 }
                 ?>
               </td>
-              <td><?php print $content['field_prog_program_contact_email'][0]['#markup']; ?></td>
+              <td><?php
+                    if(isset($content['field_prog_program_email']) && isset($content['field_prog_program_email'][0]['#markup'])) {print $content['field_prog_program_email'][0]['#markup'];}
+                    else {print $content['field_prog_program_contact_email'][0]['#markup'];}
+                      ?></td>
             </tr>
             <tr>
               <td>
