@@ -226,16 +226,28 @@ $classes .= ' node-program-record-card node-tc-card';
           </div>
         <?php endif ?>
 
-        <?php if (isset($content['field_prog_program_contact_email'])): ?>
+        <?php if (isset($content['field_prog_program_email'])){ ?>
           <div class="row">
             <div class="col-xs-3">
               Email
             </div>
             <div class="col-xs-9">
-              <?php print render($content['field_prog_program_contact_email']); ?>
+              <?php print render($content['field_prog_program_email']); ?>
             </div>
           </div>
-        <?php endif ?>
+
+        <?php } else {
+          if(isset($content['field_prog_program_contact_email'])) { ?>
+            <div class="row">
+              <div class="col-xs-3">
+                Email
+              </div>
+              <div class="col-xs-9">
+                <?php print render($content['field_prog_program_contact_email']); ?>
+              </div>
+            </div>
+          <?php } ?>
+        <?php } ?>
       </div>
     </div>
 
