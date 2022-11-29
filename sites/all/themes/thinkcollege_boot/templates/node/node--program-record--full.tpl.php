@@ -441,18 +441,31 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_more_course_detail']); ?>
         <?php print render($content['field_all_students_in_course']); ?>
         <?php print render($content['field_students_take_courses_disp']); ?>
-        <?php print render($content['field_prog__ihe_support_svces']); ?>
+        <?php // print render($content['field_prog__ihe_support_svces']); ?>
         <?php print render($content['field_prog_stem_courses']); ?>
         <?php print render($content['field_prog_spec_courses_mor_info']); ?>
         <?php print render($content['field_prog_perc_acad_time']); ?>
         <?php print render($content['field_prog_perc_academic']); ?>
-        <?php print render($content['field_prog_campus_services']); ?>
         <?php print render($content['field_prog_remote_explain']); ?>
         <?php print render($content['field_name_of_credential_degree_']); ?>
         <?php print render($content['field_prog_cred_ihe_approv']); ?>
         <?php print render($content['field_prog_other_credent']); ?>
         <?php print render($content['field_prog_stem_cert']); ?>
         <?php print render($content['field_prog_college_events']); ?>
+        <?php
+        if(isset($content['field_prog_campus_services'])) {
+          $showarray =  $content['field_prog_campus_services']['#items'];
+          $count = count($showarray);
+          $showservices = true;
+          for ($i = 0; $i < $count; $i++) {
+            if($showarray[$i]['value'] == 'None of the above') {
+              $showservices = false;
+              break;
+            }
+          }
+        if($showservices) print render($content['field_prog_campus_services']);
+
+       } ?>
         </tbody>
       </table>
     </div>
