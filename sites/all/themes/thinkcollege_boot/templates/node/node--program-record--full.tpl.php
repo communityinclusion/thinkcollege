@@ -424,7 +424,6 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_perc_acad_time']) ||
     isset($content['field_name_of_credential_degree_']) ||
     isset($content['field_prog_campus_services']) ||
-    isset($content['field_prog_remote_explain']) ||
     isset($content['field_prog_perc_academic']) ||
     isset($content['field_prog_college_events']) ||
      isset($content['field_prog_cred_ihe_approv']) || isset($content['field_prog_other_credent']) || isset($content['field_prog_stem_cert']) || isset($content['field_prog_stem_courses'])):
@@ -446,7 +445,7 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_perc_acad_time']); ?>
         <?php print render($content['field_prog_perc_academic']); ?>
         <?php print render($content['field_all_students_in_course']); ?>
-        <?php print render($content['field_prog_remote_explain']); ?>
+        <?php // print render($content['field_prog_remote_explain']); ?>
         <?php print render($content['field_name_of_credential_degree_']); ?>
         <?php print render($content['field_prog_cred_ihe_approv']); ?>
         <?php print render($content['field_prog_other_credent']); ?>
@@ -515,7 +514,7 @@ $classes .= ' node-program-record-full';
 
   <?php
   if (isset($content['field_prog_student_orgs_y_n']) ||
-    isset($content['field_prog_overall_time_dist']) ||
+    isset($content['field_prog_extracurr_inclusive']) ||
     isset($content['field_prog__extracurr_activ']) ||
     isset($content['field_prog_college_events'])):
     ?>
@@ -528,8 +527,22 @@ $classes .= ' node-program-record-full';
         </thead>
         <tbody>
         <?php print render($content['field_prog_student_orgs_y_n']); ?>
-        <?php print render($content['field_prog_overall_time_dist']); ?>
-        <?php print render($content['field_prog__extracurr_activ']); ?>
+        <?php print render($content['field_prog_extracurr_inclusive']); ?>
+        <?php
+        if(isset($content['field_prog__extracurr_activ'])) {
+          $showarray =  $content['field_prog__extracurr_activ']['#items'];
+          $count = count($showarray);
+          $showservices = true;
+          for ($i = 0; $i < $count; $i++) {
+            if($showarray[$i]['value'] == 'None of the above' || $showarray[$i]['value'] == 'Not applicable') {
+              $showservices = false;
+              break;
+            }
+          }
+        if($showservices) print render($content['field_prog__extracurr_activ']);
+
+       } ?>
+
         <?php
         if(isset($content['field_prog_college_events'])) {
           $showarray =  $content['field_prog_college_events']['#items'];
