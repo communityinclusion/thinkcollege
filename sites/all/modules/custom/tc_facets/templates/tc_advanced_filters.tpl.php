@@ -7,13 +7,13 @@
 $adv_classes="collapse";
 $params = drupal_get_query_parameters();
 if (sizeof($params) != 0) {
-  if (array_key_exists('f', $params)) {
+  if (isset($params['f'])) {
     $tpsid = preg_grep('/(tc_tpsid)/', $params['f']);
     $pubpri = preg_grep('/(field_prog_public_or_privat)/', $params['f']);
     $school = preg_grep('/(tc_school_type:2-year community college or junior college)/', $params['f']);
     $length = preg_grep('/(field_prog_length_years:1 year)/', $params['f']);
     $coursetype = preg_grep('/(tc_credit_courses/', $params['f']);
-    if ((sizeof($tpsid) > 0) || (sizeof($pubpri) > 0) || (sizeof($school) > 0) || (sizeof($length) > 0) || (sizeof($coursetype) > 0)) {
+    if (($tpsid && sizeof($tpsid) > 0) || ($pubpri && sizeof($pubpri) > 0) || ($school && sizeof($school) > 0) || ($length && sizeof($length) > 0) || ($coursetype && sizeof($coursetype) > 0)) {
       $adv_classes = "collapse in";
     }
   }
