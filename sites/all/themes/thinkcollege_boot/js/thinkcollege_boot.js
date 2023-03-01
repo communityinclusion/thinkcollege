@@ -65,7 +65,7 @@ var Drupal = Drupal || {};
 
         // Loop through all the sections and show ScrollSpy menu items for each one.
         $('.node-program-record-full .program-box').each(function( index ) {
-          $('#block-menu-menu-program-record-scrollspy ul.menu li a[href=#' + $(this).attr('id') + ']').show();
+          $('#block-menu-menu-program-record-scrollspy ul.menu li a[href="#' + $(this).attr('id') + '"]').show();
         });
       }
     }
