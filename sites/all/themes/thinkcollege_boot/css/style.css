@@ -8954,7 +8954,7 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
 
 /* Landing Page blocks/panel pane's */
 
-.box-blue, .pane-tc-resource-tc-resource-find-blue, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row, .info-box, .box, .pane-tc-resource-tc-resource-find, .home-featuredblock .pane-content .row .bscol {
+.box-blue, .pane-tc-resource-tc-resource-find-blue, .region-sidebar-first .info-box, .home-featurednews .view-whats-new.content-pane .views-row, .ie-news .view-whats-new.content-pane .views-row, .info-box, .box, .pane-tc-resource-tc-resource-find, .home-featuredblock .pane-content .row .bscol {
   -webkit-box-shadow: 0 0 7px 0 #AAA;
   -moz-box-shadow: 0 0 7px 0 #AAA;
   box-shadow: 0 0 7px 0 #AAA;
