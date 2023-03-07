@@ -1803,14 +1803,13 @@ span.CS {
     /* Whats happening in your state State pages links */
 
   .stateLinks {
-    padding: 0 20px 20px;}
+    padding-bottom: 20px;}
 
-    .stateLinks .col-md-4 {
-      margin:5px;
+    .stateLinks > [class*='col-']  {
       justify-content: center;
-      font-size: 1rem;
       }
-      .stateLinks .col-md-4 .btn {
+
+      .stateLinks .col-md-4 p a.btn {
         font-size: 1rem;
         }  
 
