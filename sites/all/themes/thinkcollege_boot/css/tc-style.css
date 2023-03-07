@@ -1808,7 +1808,10 @@ span.CS {
     .stateLinks .col-md-4 {
       margin:5px;
       justify-content: center;
-      border:2px solid #bbb;
+      font-size: 1rem;
       }
+      .stateLinks .col-md-4 .btn {
+        font-size: 1rem;
+        }  
 
 .pb5 {padding-bottom:5px;}
