@@ -1802,15 +1802,15 @@ span.CS {
 
     /* Whats happening in your state State pages links */
 
-  .stateLinks {
+.stateLinks {
     padding-bottom: 20px;}
 
-    .stateLinks > [class*='col-']  {
+ .stateLinks > [class*='col-']  {
       justify-content: center;
       }
 
-      .stateLinks .col-md-4 p a.btn {
-        font-size: 1rem;
+ .stateLinks .col-md-4 p a.btn {
+        text-transform: inherit;
         }  
 
 .pb5 {padding-bottom:5px;}
