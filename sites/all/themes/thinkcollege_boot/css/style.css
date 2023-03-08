@@ -8613,12 +8613,6 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
   background-color: #fff;
 }
 
-.external-link a:after {
-  content: '\f08e';
-  /* fa-external-link  */
-  font-family: FontAwesome;
-}
-
 #tc-home-twitter-block {
   -webkit-box-shadow: 0 0 7px 0 #AAA;
   -moz-box-shadow: 0 0 7px 0 #AAA;
