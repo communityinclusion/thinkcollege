@@ -1804,11 +1804,7 @@ span.CS {
 
 .stateLinks {
     padding-bottom: 20px;}
-
- .stateLinks > [class*='col-']  {
-      justify-content: center;
-      }
-
+    
  .stateLinks .col-md-4 p a.btn {
         text-transform: inherit;
         }  
