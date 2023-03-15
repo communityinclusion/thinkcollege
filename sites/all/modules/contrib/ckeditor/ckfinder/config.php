@@ -175,7 +175,7 @@ $config['csrfProtection'] = true;
 $config['headers'] = array();
 
 /*============================== End of Configuration =================================*/
-require_once '/var/www/pantheon-think-college/sites/all/modules/contrib/ckeditor/includes/filemanager.config.php';
+require_once(__DIR__.'/../includes/filemanager.config.php');
 $config['authentication'] = 'CheckAuthentication';
 $config['backends'][0]['root'] = $baseDir;
 $config['backends'][0]['baseUrl'] = $baseUrl;
