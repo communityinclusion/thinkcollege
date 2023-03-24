@@ -240,7 +240,7 @@ h3.block-title,h3.pane-title, h2.block-title, h2.pane-title {
 }
 
   .btn-network:hover, .btn-network:focus {
-	background-color:#559197;
+    background-color:#C96B1E;
   color:#fff;
 }
 
@@ -1798,3 +1798,26 @@ span.CS {
     left: 50%;
     transform: translate(-50%,-50%);
     }
+
+
+    /* Whats happening in your state State pages links and policy header */
+
+.stateLinks {
+    padding-bottom: 20px;}
+
+ .stateLinks .col-md-4 p a.btn {
+        text-transform: inherit;
+        }  
+
+.pb5 {padding-bottom:5px;}
+
+.vocabulary-states h3 {
+  border-bottom: #ccc 1px solid;
+  padding-bottom: 10px;
+}
+
+a.external-link:before {
+  padding-right: 5px;
+  content: ' \f08e';
+  font-family: FontAwesome;
+}

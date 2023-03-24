@@ -356,6 +356,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * with a leading dot, as per RFC 2109.
  */
 //$cookie_domain = '.thinkcollege.net';
+$cookie_domain = 'thinkcollege.local';
 
 /**
  * Variable overrides:
