@@ -76,7 +76,7 @@
 
   <?php if ($page['top_header']) : ?>
     <div id="top-header" class="top-header-region <?php print $top_header_classes; ?>">
-    <div class="container text-right">
+    <div class="container-fluid text-right">
         <?php if ($page['top_header']) { print render($page['top_header']); } ?>
       </div> <!-- /container -->
     </div> <!-- /top-header-single-region -->
