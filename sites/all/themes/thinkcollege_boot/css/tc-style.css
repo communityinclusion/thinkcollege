@@ -1857,7 +1857,7 @@ a.external-link:before {
   }
 }
 
-@media (min-width: 990px) {
+@media (min-width: 991px) {
 
   .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     padding-left: 0;
