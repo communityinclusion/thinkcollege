@@ -1830,7 +1830,7 @@ a.external-link:before {
 
 /* Change nav breakpoint */
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .navbar-header {
       float: none;
   }
@@ -1841,9 +1841,13 @@ a.external-link:before {
       border-top: 1px solid transparent;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
   }
- /* .navbar-collapse.collapse {
+  .navbar-collapse.collapse {
       display: none!important;
-  }*/
+  } 
+
+  .navbar-collapse.in {
+    overflow-y: auto!important;
+}
   .navbar-nav {
       float: none!important;
       margin: 7.5px -15px;
@@ -1857,7 +1861,7 @@ a.external-link:before {
   }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
 
   .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     padding-left: 0;
