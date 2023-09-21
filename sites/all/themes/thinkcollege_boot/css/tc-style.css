@@ -1851,11 +1851,33 @@ a.external-link:before {
   .navbar-nav>li {
       float: none;
   }
-  .navbar-collapse.in {
-    overflow-y: visible;
-}
   .navbar-nav>li>a {
       padding-top: 10px;
       padding-bottom: 10px;
   }
+}
+
+@media (min-width: 990px) {
+
+  .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+  .navbar-collapse.in {
+    overflow-y: visible;
+}
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+.navbar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+}
+
 }
