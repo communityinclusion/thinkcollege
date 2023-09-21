@@ -37,7 +37,7 @@
 		<div class="col-xs-10">
 
 				<h4>Conducting a College Search</h4>
-				<p><b><a href="/sites/default/files/files/resources/Conducting_College_Search_HTTC1v2.pdf">Questions to ask College Programs: A downloadable guide</a></b>, featuring over 50 different questions to ask colleges during your college search.</p>
+				<p><b><a href="/sites/default/files/files/resources/HTTC1_UPDATE_2023_R.pdf">Questions to ask College Programs: A downloadable guide</a></b>, featuring over 50 different questions to ask colleges during your college search.</p>
 			</div>
 		</div>
    <hr/>
