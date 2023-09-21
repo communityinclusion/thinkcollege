@@ -1875,7 +1875,7 @@ a.external-link:before {
 }
 
 .navbar-collapse {
-    width: auto;
+    width: auto!important;
     border-top: 0;
     box-shadow: none;
 }
