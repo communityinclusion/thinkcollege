@@ -1857,7 +1857,7 @@ a.external-link:before {
       padding-bottom: 10px;
   }
 
-  .navbar-collapse.collapse.in {  /* NEW */
+  .navbar-collapse.collapse.in {  
     display: block!important; 
 }
 .navbar-nav .open .dropdown-menu {
@@ -1891,5 +1891,12 @@ a.external-link:before {
 .navbar-nav .open .dropdown-menu > li > a {
   line-height: 20px;
 }
+	.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+
+.navbar-default .navbar-nav .open .dropdown-menu .dropdown-menu {
+    text-indent: 40px;
+  }
 
 }
