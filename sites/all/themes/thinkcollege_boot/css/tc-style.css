@@ -1845,12 +1845,9 @@ a.external-link:before {
       display: none!important;
   } 
 
-  .navbar-collapse.in {
-    overflow-y: auto!important;
-}
   .navbar-nav {
       float: none!important;
-      margin: 7.5px -15px;
+      margin: 7.5px 0;
   }
   .navbar-nav>li {
       float: none;
@@ -1859,29 +1856,9 @@ a.external-link:before {
       padding-top: 10px;
       padding-bottom: 10px;
   }
-}
 
-@media (min-width: 992px) {
-
-  .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-  .navbar-collapse.in {
-    overflow-y: visible;
-}
-  .navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-}
-
-.navbar-collapse {
-    width: auto!important;
-    border-top: 0;
-    box-shadow: none;
+  .navbar-collapse.collapse.in {  /* NEW */
+    display: block!important; 
 }
 
 }
