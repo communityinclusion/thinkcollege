@@ -130,8 +130,14 @@ function landing_pages_strongarm() {
         'path' => array(
           'weight' => '30',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
         'title' => array(
           'weight' => '-5',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
         ),
       ),
     ),

@@ -28,131 +28,6 @@ function restructure_menus_menu_default_menu_links() {
     'weight' => -45,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_academic-access:resources/innovation-exchange/academic-access.
-  $menu_links['main-menu_academic-access:resources/innovation-exchange/academic-access'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/academic-access',
-    'router_path' => 'resources/innovation-exchange/academic-access',
-    'link_title' => 'Academic Access',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_academic-access:resources/innovation-exchange/academic-access',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -62,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_campus-housing:resources/innovation-exchange/campus-housing.
-  $menu_links['main-menu_campus-housing:resources/innovation-exchange/campus-housing'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/campus-housing',
-    'router_path' => 'resources/innovation-exchange/campus-housing',
-    'link_title' => 'Campus Housing',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_campus-housing:resources/innovation-exchange/campus-housing',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -60,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_college-based-transition-services:resources/innovation-exchange/dual-enrollment.
-  $menu_links['main-menu_college-based-transition-services:resources/innovation-exchange/dual-enrollment'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/dual-enrollment',
-    'router_path' => 'resources/innovation-exchange/dual-enrollment',
-    'link_title' => 'College-Based Transition Services',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_college-based-transition-services:resources/innovation-exchange/dual-enrollment',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 1,
-    'weight' => -59,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_comprehensive-transition-and-postsecondary-ctp-programs:resources/innovation-exchange/ctp-programs.
-  $menu_links['main-menu_comprehensive-transition-and-postsecondary-ctp-programs:resources/innovation-exchange/ctp-programs'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/ctp-programs',
-    'router_path' => 'resources/innovation-exchange/ctp-programs',
-    'link_title' => 'Comprehensive Transition and Postsecondary (CTP) Programs',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_comprehensive-transition-and-postsecondary-ctp-programs:resources/innovation-exchange/ctp-programs',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -58,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_employment:resources/innovation-exchange/employment.
-  $menu_links['main-menu_employment:resources/innovation-exchange/employment'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/employment',
-    'router_path' => 'resources/innovation-exchange/employment',
-    'link_title' => 'Employment',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_employment:resources/innovation-exchange/employment',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -57,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
   // Exported menu link: main-menu_family-resources:family-resources.
   $menu_links['main-menu_family-resources:family-resources'] = array(
     'menu_name' => 'main-menu',
@@ -248,131 +123,6 @@ function restructure_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_projects:node/4876',
   );
-  // Exported menu link: main-menu_paying-for-college:resources/innovation-exchange/paying-for-college.
-  $menu_links['main-menu_paying-for-college:resources/innovation-exchange/paying-for-college'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/paying-for-college',
-    'router_path' => 'resources/innovation-exchange/paying-for-college',
-    'link_title' => 'Paying for College',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_paying-for-college:resources/innovation-exchange/paying-for-college',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 1,
-    'weight' => -56,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_peer-mentors:resources/innovation-exchange/peer-mentors.
-  $menu_links['main-menu_peer-mentors:resources/innovation-exchange/peer-mentors'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/peer-mentors',
-    'router_path' => 'resources/innovation-exchange/peer-mentors',
-    'link_title' => 'Peer Mentors',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_peer-mentors:resources/innovation-exchange/peer-mentors',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -55,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_preparing-for-college:resources/innovation-exchange/preparing-for-college.
-  $menu_links['main-menu_preparing-for-college:resources/innovation-exchange/preparing-for-college'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/preparing-for-college',
-    'router_path' => 'resources/innovation-exchange/preparing-for-college',
-    'link_title' => 'Preparing for College',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_preparing-for-college:resources/innovation-exchange/preparing-for-college',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -54,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_program-accreditation:resources/innovation-exchange/accreditation.
-  $menu_links['main-menu_program-accreditation:resources/innovation-exchange/accreditation'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/accreditation',
-    'router_path' => 'resources/innovation-exchange/accreditation',
-    'link_title' => 'Program Accreditation',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_program-accreditation:resources/innovation-exchange/accreditation',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 1,
-    'weight' => -53,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
-  // Exported menu link: main-menu_program-development:resources/innovation-exchange/program-development.
-  $menu_links['main-menu_program-development:resources/innovation-exchange/program-development'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/program-development',
-    'router_path' => 'resources/innovation-exchange/program-development',
-    'link_title' => 'Program Development',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_program-development:resources/innovation-exchange/program-development',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 1,
-    'weight' => -52,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
   // Exported menu link: main-menu_search-resource-library:resource-search.
   $menu_links['main-menu_search-resource-library:resource-search'] = array(
     'menu_name' => 'main-menu',
@@ -402,31 +152,6 @@ function restructure_menus_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_resources:node/3785',
   );
-  // Exported menu link: main-menu_student-credentials:resources/innovation-exchange/student-credentials.
-  $menu_links['main-menu_student-credentials:resources/innovation-exchange/student-credentials'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/student-credentials',
-    'router_path' => 'resources/innovation-exchange/student-credentials',
-    'link_title' => 'Student Credentials',
-    'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_student-credentials:resources/innovation-exchange/student-credentials',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -51,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
-  );
   // Exported menu link: main-menu_upcoming-events:tc-events-upcoming.
   $menu_links['main-menu_upcoming-events:tc-events-upcoming'] = array(
     'menu_name' => 'main-menu',
@@ -450,31 +175,6 @@ function restructure_menus_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 1,
-  );
-  // Exported menu link: main-menu_vocational-rehabilitation:resources/innovation-exchange/vocational-rehabilitation.
-  $menu_links['main-menu_vocational-rehabilitation:resources/innovation-exchange/vocational-rehabilitation'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'resources/innovation-exchange/vocational-rehabilitation',
-    'router_path' => 'resources/innovation-exchange/vocational-rehabilitation',
-    'link_title' => 'Vocational Rehabilitation',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
-      'identifier' => 'main-menu_vocational-rehabilitation:resources/innovation-exchange/vocational-rehabilitation',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 1,
-    'weight' => -49,
-    'customized' => 1,
-    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
   );
   // Exported menu link: menu-temporary-main-menu_about:http://www.thinkcollege.net/about-us.
   $menu_links['menu-temporary-main-menu_about:http://www.thinkcollege.net/about-us'] = array(
@@ -621,29 +321,17 @@ function restructure_menus_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('A-Z list of terms');
   t('About');
-  t('Academic Access');
-  t('Campus Housing');
   t('College Search');
-  t('College-Based Transition Services');
-  t('Comprehensive Transition and Postsecondary (CTP) Programs');
   t('Contact');
-  t('Employment');
   t('Family Resources');
   t('Glossary');
   t('Home');
   t('National Coordinating Center');
-  t('Paying for College');
-  t('Peer Mentors');
-  t('Preparing for College');
-  t('Program Accreditation');
-  t('Program Development');
   t('Publications');
   t('Search Resource Library');
-  t('Student Credentials');
   t('Topics');
   t('Training');
   t('Upcoming Events');
-  t('Vocational Rehabilitation');
 
   return $menu_links;
 }

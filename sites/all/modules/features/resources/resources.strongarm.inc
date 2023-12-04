@@ -110,7 +110,7 @@ function resources_strongarm() {
           ),
           'full' => array(
             'visible' => FALSE,
-            'weight' => '25',
+            'weight' => '27',
           ),
           'search_index' => array(
             'visible' => FALSE,
@@ -128,16 +128,19 @@ function resources_strongarm() {
       ),
       'form' => array(
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '16',
         ),
         'path' => array(
           'weight' => '2',
         ),
         'redirect' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
         'title' => array(
           'weight' => '0',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '22',
         ),
       ),
     ),
@@ -221,6 +224,26 @@ function resources_strongarm() {
   $strongarm->name = 'node_submitted_resource';
   $strongarm->value = 0;
   $export['node_submitted_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_resource';
+  $strongarm->value = array(
+    'priority' => '0.5',
+    'status' => '1',
+  );
+  $export['xmlsitemap_settings_node_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_resource_language';
+  $strongarm->value = array(
+    'priority' => '0.5',
+    'status' => '0',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_resource_language'] = $strongarm;
 
   return $export;
 }

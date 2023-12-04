@@ -220,9 +220,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'events',
-          'parent' => 0,
           'depth' => '',
+          'parent' => 0,
+          'vocabulary' => 'events',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -371,9 +371,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'feature_in_section',
-          'parent' => 0,
           'depth' => 3,
+          'parent' => 0,
+          'vocabulary' => 'feature_in_section',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -494,6 +494,29 @@ else {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_policy_header'.
+  $field_bases['field_policy_header'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_id_type' => NULL,
+    'entity_types' => array(),
+    'field_name' => 'field_policy_header',
+    'indexes' => array(
+      'moddelta' => array(
+        0 => 'moddelta',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'blockreference',
+    'settings' => array(
+      'profile2_private' => FALSE,
+      'referenceable_modules' => array(),
+    ),
+    'translatable' => 0,
+    'type' => 'blockreference',
   );
 
   // Exported field_base: 'field_prof_name'.
@@ -2244,6 +2267,7 @@ foreach ($tpsid_values as $key => $tpsid_value) {
         '2021-2022' => '2021-2022',
         '2022-2023' => '2022-2023',
         '2023-2024' => '2023-2024',
+        '2024-2025' => '2024-2025',
       ),
       'allowed_values_function' => '',
       'allowed_values_php' => '',
@@ -2440,8 +2464,8 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'authors',
           'parent' => 0,
+          'vocabulary' => 'authors',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2526,9 +2550,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'media_types',
-          'parent' => 0,
           'depth' => '',
+          'parent' => 0,
+          'vocabulary' => 'media_types',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2590,9 +2614,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'publication_types',
-          'parent' => 0,
           'depth' => '',
+          'parent' => 0,
+          'vocabulary' => 'publication_types',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2619,9 +2643,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'states',
-          'parent' => 0,
           'depth' => '',
+          'parent' => 0,
+          'vocabulary' => 'states',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2647,9 +2671,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'topics',
-          'parent' => 0,
           'depth' => '',
+          'parent' => 0,
+          'vocabulary' => 'topics',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2676,9 +2700,9 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'audience',
-          'parent' => 0,
           'depth' => '',
+          'parent' => 0,
+          'vocabulary' => 'audience',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',
@@ -2794,8 +2818,8 @@ else {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'categories',
           'parent' => 0,
+          'vocabulary' => 'categories',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',

@@ -2,5 +2,7 @@
 
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Restructure menus feature.
  */
+
+include_once 'restructure_menus.features.inc';

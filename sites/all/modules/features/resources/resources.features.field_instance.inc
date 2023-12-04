@@ -179,7 +179,7 @@ function resources_field_default_field_instances() {
         'module' => 'tc_resource',
         'settings' => array(),
         'type' => 'field_external_link',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -275,7 +275,7 @@ function resources_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 26,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -317,7 +317,7 @@ function resources_field_default_field_instances() {
         'content_taxonomy_opt_groups' => 0,
       ),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -572,7 +572,7 @@ function resources_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 22,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -662,7 +662,7 @@ function resources_field_default_field_instances() {
         'module' => 'tc_resource',
         'settings' => array(),
         'type' => 'field_download_resource',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -961,7 +961,7 @@ function resources_field_default_field_instances() {
         'content_taxonomy_opt_groups' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 13,
     ),
   );
 
@@ -994,7 +994,7 @@ function resources_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 25,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1148,7 +1148,7 @@ function resources_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 23,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1190,7 +1190,136 @@ function resources_field_default_field_instances() {
         'content_taxonomy_opt_groups' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-resource-field_resource_language'.
+  $field_instances['node-resource-field_resource_language'] = array(
+    'bundle' => 'resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 27,
+      ),
+      'event_attachment' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => 'Language',
+    'entity_type' => 'node',
+    'field_name' => 'field_resource_language',
+    'label' => 'Resource language',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-resource-field_review'.
+  $field_instances['node-resource-field_review'] = array(
+    'bundle' => 'resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 26,
+      ),
+      'event_attachment' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'live_results_search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_label' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_review',
+    'label' => 'Review',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 21,
     ),
   );
 
@@ -1222,7 +1351,7 @@ function resources_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 24,
       ),
       'live_results_search' => array(
         'label' => 'above',
@@ -1274,7 +1403,7 @@ function resources_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -1360,6 +1489,8 @@ function resources_field_default_field_instances() {
   t('Project');
   t('Publication Date');
   t('Publication Types');
+  t('Resource language');
+  t('Review');
   t('State-related');
   t('Teaser image');
   t('Topics');

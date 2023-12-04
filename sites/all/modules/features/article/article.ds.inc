@@ -115,7 +115,6 @@ function article_ds_layout_settings_info() {
     'fields' => array(
       'body' => 'ds_content',
       'field_image' => 'ds_content',
-      'field_project' => 'ds_content',
       'field_tags' => 'ds_content',
       'field_teaser_image' => 'ds_content',
       'node_link' => 'ds_content',
@@ -137,7 +136,6 @@ function article_ds_layout_settings_info() {
         4 => 'body',
         5 => 'node_link',
         6 => 'field_tags',
-        7 => 'field_project',
       ),
     ),
     'wrappers' => array(
