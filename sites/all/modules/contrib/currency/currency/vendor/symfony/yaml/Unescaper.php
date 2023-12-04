@@ -72,7 +72,9 @@ class Unescaper
      */
     public function unescapeCharacter($value)
     {
-        switch ($value{1}) {
+      // Hack PF, from here:  https://www.drupal.org/files/issues/2021-02-26/currency-php7-deprecation-3199297-2.patch
+      // switch ($value{1}) {
+        switch ($value[1]) {
             case '0':
                 return "\x0";
             case 'a':
