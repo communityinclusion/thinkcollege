@@ -66,11 +66,11 @@ function hero_tabs_and_slideshow_field_default_field_instances() {
     'bundle' => 'random_slideshow',
     'default_value' => array(
       0 => array(
+        'format' => 'full_html',
         'value' => '<div class="hero-banner-text randomized">
 <h3>Think College is dedicated to developing, expanding, and improving research and practice in inclusive higher education for students with intellectual disability.</h3>
 </div>
 ',
-        'format' => 'full_html',
       ),
     ),
     'deleted' => 0,

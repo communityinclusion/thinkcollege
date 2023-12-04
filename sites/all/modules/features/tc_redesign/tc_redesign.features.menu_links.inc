@@ -43,23 +43,23 @@ function tc_redesign_menu_default_menu_links() {
     'router_path' => 'resources/innovation-exchange/for-families',
     'link_title' => 'For Families',
     'options' => array(
-      'roles_for_menu' => array(
-        'show' => array(),
-        'hide' => array(),
-      ),
       'attributes' => array(
         'title' => '',
       ),
       'identifier' => 'main-menu_for-families:resources/innovation-exchange/for-families',
+      'roles_for_menu' => array(
+        'show' => array(),
+        'hide' => array(),
+      ),
     ),
     'module' => 'menu',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -53,
+    'weight' => -15,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_students--families:node/4875',
+    'parent_identifier' => 'main-menu_resources-by-topic:node/3503',
   );
   // Exported menu link: main-menu_future-quest-island-explorations:projects/fqie.
   $menu_links['main-menu_future-quest-island-explorations:projects/fqie'] = array(

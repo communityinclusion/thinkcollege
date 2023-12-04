@@ -73,10 +73,12 @@ function landing_pages_default_page_manager_pages() {
       'row3' => NULL,
       'row3left' => NULL,
       'row3right' => NULL,
+      'row4' => NULL,
       'row4left' => NULL,
       'row4right' => NULL,
       'row5left' => NULL,
       'row5right' => NULL,
+      'row6' => NULL,
     ),
   );
   $display->cache = array();
@@ -87,7 +89,7 @@ function landing_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-ce6b3f15-a73d-44c1-a898-7049f3222673';
+  $pane->pid = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
   $pane->panel = 'row1left';
   $pane->type = 'views';
   $pane->subtype = 'slideshow_test';
@@ -99,11 +101,11 @@ function landing_pages_default_page_manager_pages() {
     'feed_icons' => 0,
     'link_to_view' => 0,
     'more_link' => 0,
-    'nodes_per_page' => '5',
+    'nodes_per_page' => '7',
     'offset' => '0',
     'override_pager_settings' => 0,
     'override_title' => 1,
-    'override_title_heading' => 'h2',
+    'override_title_heading' => 'span',
     'override_title_text' => '',
     'pager_id' => '0',
     'panel_args' => 0,
@@ -111,16 +113,49 @@ function landing_pages_default_page_manager_pages() {
     'use_pager' => 0,
   );
   $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '51991429-d311-4e3f-b31e-ee26a4d24bbd';
+  $display->content['new-51991429-d311-4e3f-b31e-ee26a4d24bbd'] = $pane;
+  $display->panels['row1left'][0] = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
+  $pane = new stdClass();
+  $pane->pid = 'new-7e4107b3-5975-4f9d-b9bd-784fe7d3b953';
+  $pane->panel = 'row1right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<div style="background-color:#ececec;padding:10px;">
+<h3>Learn about the “Think Higher. Think College” Campaign <b><a href="https://thinkhighered.net/">HERE</a></b></h3>
+
+<p><img alt="Think Higher. Think College. Logo" class="img-responsive" src="/sites/default/files/files/images/thinkhigher-long.png" /></p>
+</div>
+
+<p>&nbsp;</p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'div',
+  );
+  $pane->cache = array();
   $pane->style = array();
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'ce6b3f15-a73d-44c1-a898-7049f3222673';
-  $display->content['new-ce6b3f15-a73d-44c1-a898-7049f3222673'] = $pane;
-  $display->panels['row1left'][0] = 'new-ce6b3f15-a73d-44c1-a898-7049f3222673';
+  $pane->uuid = '7e4107b3-5975-4f9d-b9bd-784fe7d3b953';
+  $display->content['new-7e4107b3-5975-4f9d-b9bd-784fe7d3b953'] = $pane;
+  $display->panels['row1right'][0] = 'new-7e4107b3-5975-4f9d-b9bd-784fe7d3b953';
   $pane = new stdClass();
-  $pane->pid = 'new-86fb5c18-79d8-4b80-a7a2-b5846a03c9b9';
+  $pane->pid = 'new-af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9';
   $pane->panel = 'row1right';
   $pane->type = 'views';
   $pane->subtype = 'home_page_content_feed';
@@ -132,9 +167,9 @@ function landing_pages_default_page_manager_pages() {
     'feed_icons' => 0,
     'link_to_view' => 0,
     'more_link' => 0,
-    'nodes_per_page' => '5',
+    'nodes_per_page' => '3',
     'offset' => '0',
-    'override_pager_settings' => 0,
+    'override_pager_settings' => 1,
     'override_title' => 0,
     'override_title_heading' => 'h2',
     'override_title_text' => '',
@@ -144,17 +179,19 @@ function landing_pages_default_page_manager_pages() {
     'use_pager' => 0,
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'home-featuredblock',
     'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = '86fb5c18-79d8-4b80-a7a2-b5846a03c9b9';
-  $display->content['new-86fb5c18-79d8-4b80-a7a2-b5846a03c9b9'] = $pane;
-  $display->panels['row1right'][0] = 'new-86fb5c18-79d8-4b80-a7a2-b5846a03c9b9';
+  $pane->uuid = 'af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9';
+  $display->content['new-af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9'] = $pane;
+  $display->panels['row1right'][1] = 'new-af0760ef-b24d-4656-bf2f-6cc8d2f8bdf9';
   $pane = new stdClass();
   $pane->pid = 'new-54b6be28-d590-434b-b679-92beb0cd3ff9';
   $pane->panel = 'row2';
@@ -164,7 +201,9 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array();
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'home-featurednews',
     'css_id' => '',
@@ -176,7 +215,7 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-54b6be28-d590-434b-b679-92beb0cd3ff9'] = $pane;
   $display->panels['row2'][0] = 'new-54b6be28-d590-434b-b679-92beb0cd3ff9';
   $pane = new stdClass();
-  $pane->pid = 'new-2b869770-3b45-43eb-9fe4-8bd52a6adb99';
+  $pane->pid = 'new-ce57d81d-23f5-443b-a7ee-a1179b195cbb';
   $pane->panel = 'row3left';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
@@ -184,24 +223,27 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'college search button',
-    'body' => '<p><a class="CSbtn" href="/college-search" role="button"><span class="CS">COLLEGE SEARCH</span><br><span class="CStagline">The only directory of programs for students with intellectual disabilities</span></a></p>
+    'body' => '<p><a class="CSbtn" href="/college-search" role="button"><span class="CS">COLLEGE SEARCH</span><br />
+<span class="CStagline">The only directory of programs for students with intellectual disabilities in the US</span></a></p>
 
 <p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
     'title' => '',
-    'title_heading' => 'h2',
+    'title_heading' => 'span',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '2b869770-3b45-43eb-9fe4-8bd52a6adb99';
-  $display->content['new-2b869770-3b45-43eb-9fe4-8bd52a6adb99'] = $pane;
-  $display->panels['row3left'][0] = 'new-2b869770-3b45-43eb-9fe4-8bd52a6adb99';
+  $pane->uuid = 'ce57d81d-23f5-443b-a7ee-a1179b195cbb';
+  $display->content['new-ce57d81d-23f5-443b-a7ee-a1179b195cbb'] = $pane;
+  $display->panels['row3left'][0] = 'new-ce57d81d-23f5-443b-a7ee-a1179b195cbb';
   $pane = new stdClass();
   $pane->pid = 'new-142be058-3cc3-415e-8519-c6c83a7848df';
   $pane->panel = 'row3left';
@@ -211,15 +253,17 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'body' => '<p><img alt="Kathy Becht" class="img-responsive" src="/sites/default/files/images/Becht-cutout-help.png" />If you have a question, Ask Kathy! Email her at <strong><a href="mailto:thinkcollegeta@gmail.com?subject=Help%20request">thinkcollegeta@gmail.com</a></strong>. If she doesn’t know, she’ll ask her <a href="/technical-assistance/technical-assistance-providers"><b>team</b></a>!&nbsp;</p>
+    'body' => '<p><img alt="Think College logo graphic" class="img-responsive" src="/sites/default/files/files/images/TC_long_F.png" />If you have a question, Ask Think College! Email us at <strong><a href="mailto:thinkcollegeta@gmail.com?subject=Help%20request">thinkcollegeta@gmail.com</a></strong>. <!--If she doesn’t know, she’ll ask her <a href="/technical-assistance/technical-assistance-providers"><b>team</b></a>!&nbsp; --></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
-    'title' => 'Have Questions? Ask Kathy!',
+    'title' => 'Have Questions? ',
     'title_heading' => 'h3',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'box',
     'css_id' => '',
@@ -239,7 +283,7 @@ function landing_pages_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Twitter',
-    'body' => '<p><a class="twitter-timeline" data-height="500" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+    'body' => '<p><a class="twitter-timeline" data-height="700" href="https://twitter.com/thinkcollegeICI">Tweets by thinkcollegeICI</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -261,7 +305,7 @@ function landing_pages_default_page_manager_pages() {
   $display->content['new-a5ca0924-aa75-4b9b-81f0-51b7528ee206'] = $pane;
   $display->panels['row3left'][2] = 'new-a5ca0924-aa75-4b9b-81f0-51b7528ee206';
   $pane = new stdClass();
-  $pane->pid = 'new-5f5101b3-43c6-420f-835d-fe9d72553124';
+  $pane->pid = 'new-45152c5e-909e-46b4-beae-ea49e1f5e434';
   $pane->panel = 'row3right';
   $pane->type = 'views';
   $pane->subtype = 'hero_tabs';
@@ -277,7 +321,7 @@ function landing_pages_default_page_manager_pages() {
     'offset' => '0',
     'override_pager_settings' => 0,
     'override_title' => 1,
-    'override_title_heading' => 'h2',
+    'override_title_heading' => 'span',
     'override_title_text' => '',
     'pager_id' => '0',
     'panel_args' => 0,
@@ -285,7 +329,9 @@ function landing_pages_default_page_manager_pages() {
     'use_pager' => 0,
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'heroTab box',
     'css_id' => 'home',
@@ -293,78 +339,9 @@ function landing_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '5f5101b3-43c6-420f-835d-fe9d72553124';
-  $display->content['new-5f5101b3-43c6-420f-835d-fe9d72553124'] = $pane;
-  $display->panels['row3right'][0] = 'new-5f5101b3-43c6-420f-835d-fe9d72553124';
-  $pane = new stdClass();
-  $pane->pid = 'new-0ecddeab-4db2-4bec-a8d4-2073b2065327';
-  $pane->panel = 'row3right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'body' => '<p style="margin-bottom: 25px;"><a href="/college-search"><img alt="College Search: Find the college that\'s right for you!" class="img-responsive" src="/sites/default/files/images/collegesearch.png" /></a></p>',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-    'title' => '',
-    'title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_class' => 'hide',
-    'css_id' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '0ecddeab-4db2-4bec-a8d4-2073b2065327';
-  $display->content['new-0ecddeab-4db2-4bec-a8d4-2073b2065327'] = $pane;
-  $display->panels['row3right'][1] = 'new-0ecddeab-4db2-4bec-a8d4-2073b2065327';
-  $pane = new stdClass();
-  $pane->pid = 'new-5f8cc240-df8c-4bd6-b74c-4558452d32d0';
-  $pane->panel = 'row3right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'body' => '<div class="row">
-<div class="col-xs-12 col-sm-6 logo-grid"><a class="shadow shadow-1" href="/projects/ncc" tabindex="1"><img alt="Visit The National Coordinating Center Project Page" class="img-responsive" src="/sites/default/files/images/NCC-logo-600w.png" /></a></div>
-
-<div class="col-xs-12 col-sm-6   logo-grid"><a class="shadow shadow-1" href="/projects/tcn" tabindex="2"><img alt="Visit The Inclusive Higher Education Network Project Page" class="img-responsive" src="https://devel.thinkcollege.net/sites/default/files/images/IHEN-logo-600w.png" /> </a></div>
-
-<div class="col-xs-12 col-sm-6   logo-grid"><a class="shadow shadow-1" href="/projects/fqie" tabindex="3"><img alt="Visit The Future Quest Island: Explorations Project Page" class="img-responsive" src="/sites/default/files/images/FQI-logo-600w.png" /></a></div>
-
-<div class="col-xs-12 col-sm-6  logo-grid"><a class="shadow shadow-1" href="/projects/mtf" tabindex="4"><img alt="Visit The Moving Transition Forward Project Page" class="img-responsive" src="/sites/default/files/images/MTF-logo-600w.png" /></a></div>
-
-<div class="col-xs-12 col-sm-6 logo-grid"><a class="shadow shadow-1" href="/projects/transition-leadership-project" tabindex="5"><img alt="Visit The Transition Leadership Project Page" class="img-responsive" src="/sites/default/files/images/TL-logo-600w.png" /></a></div>
-
-<div class="col-xs-12 col-sm-6  logo-grid"><a class="shadow shadow-1" href="/about/what-is-think-college" tabindex="6"><img alt="Visit The Think College About Page" class="img-responsive" src="/sites/default/files/images/tc-logo-600w.png" /></a></div>
-</div>
-
-<p>&nbsp;</p>
-',
-    'format' => 'full_html',
-    'substitute' => TRUE,
-    'title' => 'Current Think College Projects',
-    'title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array(
-    'css_class' => 'hide home-featuredblock',
-    'css_id' => 'home-projects',
-  );
-  $pane->extras = array();
-  $pane->position = 2;
-  $pane->locks = array();
-  $pane->uuid = '5f8cc240-df8c-4bd6-b74c-4558452d32d0';
-  $display->content['new-5f8cc240-df8c-4bd6-b74c-4558452d32d0'] = $pane;
-  $display->panels['row3right'][2] = 'new-5f8cc240-df8c-4bd6-b74c-4558452d32d0';
+  $pane->uuid = '45152c5e-909e-46b4-beae-ea49e1f5e434';
+  $display->content['new-45152c5e-909e-46b4-beae-ea49e1f5e434'] = $pane;
+  $display->panels['row3right'][0] = 'new-45152c5e-909e-46b4-beae-ea49e1f5e434';
   $pane = new stdClass();
   $pane->pid = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
   $pane->panel = 'row3right';
@@ -390,17 +367,19 @@ function landing_pages_default_page_manager_pages() {
     'use_pager' => 0,
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'box-blue home-blogblock',
     'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '7cce9073-4200-4949-abc1-e0a8602e2ff7';
   $display->content['new-7cce9073-4200-4949-abc1-e0a8602e2ff7'] = $pane;
-  $display->panels['row3right'][3] = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
+  $display->panels['row3right'][1] = 'new-7cce9073-4200-4949-abc1-e0a8602e2ff7';
   $pane = new stdClass();
   $pane->pid = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $pane->panel = 'row3right';
@@ -418,11 +397,11 @@ function landing_pages_default_page_manager_pages() {
     'css_id' => '',
   );
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '5f60030e-d864-4f92-b158-7fa0a5083588';
   $display->content['new-5f60030e-d864-4f92-b158-7fa0a5083588'] = $pane;
-  $display->panels['row3right'][4] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
+  $display->panels['row3right'][2] = 'new-5f60030e-d864-4f92-b158-7fa0a5083588';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -436,9 +415,20 @@ function landing_pages_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Innovation Exchange - Employment';
   $page->admin_description = '';
-  $page->path = 'resources/innovation-exchange/employment';
+  $page->path = 'resources/resources-by-topic/job-development';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'name' => 'main-menu',
+    'parent' => array(
+      'name' => 'navigation',
+      'title' => '',
+      'type' => 'none',
+      'weight' => '0',
+    ),
+    'title' => '',
+    'type' => 'none',
+    'weight' => '0',
+  );
   $page->arguments = array();
   $page->conf = array(
     'admin_paths' => FALSE,
@@ -483,7 +473,7 @@ function landing_pages_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Employment';
+  $display->title = 'Job Development';
   $display->uuid = '6b11f481-cda2-4750-99cd-939d1bf3c16c';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'page_innovation_exchange_employment__panel';
@@ -502,7 +492,9 @@ function landing_pages_default_page_manager_pages() {
     ),
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'ie-featuredresources box',
     'css_id' => 'featuredresources',
@@ -523,11 +515,11 @@ function landing_pages_default_page_manager_pages() {
   $pane->configuration = array(
     'admin_title' => 'Quick links',
     'body' => '<ul>
-	<li><a href="http://apse.org/">Association of People Supporting EmploymentFirst (APSE)</a></li>
+	<li> <a href="https://aoddisabilityemploymenttacenter.com/">Disability Employment Technical Assistance Center (DETAC)</a></li>
 	<li><a href="https://www.dol.gov/odep/">Office of Disability Employment Policy (ODEP)</a></li>
-	<li><a href="http://www.leadcenter.org/">LEAD Center</a></li>
+	<li><a href="https://www.nod.org/">National Organization on Disability</a></li>
 	<li><a href="http://askjan.org/">Job Accommodation Network (JAN)</a></li>
-	<li><a href="https://www.ada.gov/employment.htm">Information &amp; Technical Assistance on the Americans with Disabilities Act</a></li>
+	<li><a href="https://seed.csg.org/">Disability Employment Policy - The Council of State Governments</a></li>
 </ul>
 ',
     'format' => 'full_html',
@@ -557,16 +549,12 @@ function landing_pages_default_page_manager_pages() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Employment',
-    'body' => '<p>Competitive, integrated employment is a reachable outcome for people with intellectual disability. Like anyone else, students with&nbsp;intellectual disability attend college to prepare them for the career of their choice.&nbsp;</p>
+    'admin_title' => 'Job Development',
+    'body' => '<p><span style="color:black">Employment is an essential outcome of college for all students, including those with intellectual disability attending postsecondary education programs. Students with intellectual disability who participate in an inclusive postsecondary education program have a 59% competitive integrated employment rate one year after leaving college (Think College, 2023). As such, job development is a core component of inclusive postsecondary education programming. Job development focuses not only on gaining the skills needed for employment but also attaining and sustaining competitive integrated employment during and after college. Therefore, programs must plan for how job development is integrated into their support from the beginning. </span></p>
 
-<p>Through person-centered planning and skills evaluation, students can choose a field in which to pursue paid or unpaid internships, part-time or full-time work, and volunteer opportunities -- with the ultimate goal of leaving college with a paid job in the field of their choice.</p>
+<p><span style="color:black">This page answers some frequently asked questions regarding job development, highlights helpful resources, and shares recommendations on successful collaborative efforts between programs and partners on and off campus. </span></p>
 
-<p>Employment for people with&nbsp;intellectual disability is supported by legislation and advocacy. For example, Employment First is an initiative which advises that employment be the first goal for people with intellectual disability. Most states now have some kind of Employment First policy or initiative.</p>
-
-<p>&nbsp;The Americans with Disabilities Act is a federal law that prohibits discrimination on the basis of disability, and Title I is specific to employment. The Individuals with Disabilities Education Act requires transition planning that addresses goals after high school, including training, education, and employment.</p>
-
-<p>Another important law about employment is the Workforce Innovation and Opportunity Act, or WIOA. WIOA increases the focus on improving service delivery to individuals with barriers to employment, including youth and adults with intellectual disability.</p>
+<p>&nbsp;</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
@@ -600,7 +588,9 @@ function landing_pages_default_page_manager_pages() {
     ),
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'ie-news',
     'css_id' => 'news',
@@ -630,7 +620,9 @@ function landing_pages_default_page_manager_pages() {
     'override_title_text' => 'Frequently Asked Questions',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array(
     'css_class' => 'accordian',
     'css_id' => 'faq',

@@ -11,33 +11,28 @@
 function article_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_review'.
-  $field_bases['field_review'] = array(
+  // Exported field_base: 'field_thumbnail'.
+  $field_bases['field_thumbnail'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
+    'entity_id_type' => NULL,
     'entity_types' => array(),
-    'field_name' => 'field_review',
+    'field_name' => 'field_thumbnail',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'image',
     'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'internal_review_maintenance',
-          'parent' => 0,
-          'depth' => '',
-        ),
-      ),
-      'options_list_callback' => 'content_taxonomy_allowed_values',
+      'default_image' => 0,
       'profile2_private' => FALSE,
+      'uri_scheme' => 'public',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'image',
   );
 
   return $field_bases;

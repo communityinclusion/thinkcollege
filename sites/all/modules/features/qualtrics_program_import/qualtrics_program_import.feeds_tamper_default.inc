@@ -34,6 +34,106 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q110-find_replace';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q110';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Our program is fully remote with no in person requirements',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Students enroll in all of their courses via remote learning',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q110-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q110-find_replace86568909';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q110';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Our program is fully remote with no in person requirements',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Students enroll in all of their courses via remote learning',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 3;
+  $feeds_tamper->description = 'Find replace65435';
+  $export['qualtrics_program_import-q110-find_replace86568909'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q110-find_replace879';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q110';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'We allow remote learning if students request it, but we really don’t encourage it',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Students can enroll in select courses via remote learning if they choose',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q110-find_replace879'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q110-find_replace99900';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q110';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'No remote learning is allowed / All classes are in person only',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Students are not permitted to take courses via remote learning',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Find replace7658';
+  $export['qualtrics_program_import-q110-find_replace99900'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q110_4_text-find_replace';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q110_4_TEXT';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Our program is fully remote with no in person requirements',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Students enroll in all of their courses via remote learning',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q110_4_text-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'qualtrics_program_import-q116-explode';
   $feeds_tamper->importer = 'qualtrics_program_import';
   $feeds_tamper->source = 'Q116';
@@ -62,6 +162,66 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
   $export['qualtrics_program_import-q117-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q117-find_replace';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q117';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'College/University\'s Student Orientation',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'IHE Student orientation',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q117-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q117-find_replace_grad';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q117';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'College/University\'s Graduation',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'IHE Graduation',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 3;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q117-find_replace_grad'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q117-find_replace_orientation';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q117';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'College/University\'s Family Orientation',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'IHE Family orientation',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q117-find_replace_orientation'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -163,7 +323,7 @@ function qualtrics_program_import_feeds_tamper_default() {
     'real_separator' => ',',
     'separator' => ',',
   );
-  $feeds_tamper->weight = 2;
+  $feeds_tamper->weight = 7;
   $feeds_tamper->description = 'Explode';
   $export['qualtrics_program_import-q38-explode'] = $feeds_tamper;
 
@@ -176,7 +336,7 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper->plugin_id = 'find_replace';
   $feeds_tamper->settings = array(
     'case_sensitive' => 0,
-    'find' => 'Age range (enter ages below)',
+    'find' => 'Specific age range (enter ages below)',
     'func' => 'str_ireplace',
     'regex' => FALSE,
     'replace' => 'Age range',
@@ -186,6 +346,26 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper->weight = 3;
   $feeds_tamper->description = 'Find replace';
   $export['qualtrics_program_import-q38-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q38-find_replace_18';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q38';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Student must be 18 or older',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => '18 plus',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 5;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q38-find_replace_18'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -206,6 +386,26 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper->weight = 4;
   $feeds_tamper->description = 'Find replace';
   $export['qualtrics_program_import-q38-find_replace_2'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q38-find_replace_specific';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q38';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Specific age range (enter ages below)',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Age range',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 6;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q38-find_replace_specific'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -310,6 +510,46 @@ function qualtrics_program_import_feeds_tamper_default() {
   $feeds_tamper->weight = 1;
   $feeds_tamper->description = 'Find replace';
   $export['qualtrics_program_import-q65-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q72-find_replace';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q72';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Yes, this credential has been through a formal approval process at the college/university',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Yes, this credential has been through a formal approval process at the IHE',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q72-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'qualtrics_program_import-q72-find_replace_q72_no';
+  $feeds_tamper->importer = 'qualtrics_program_import';
+  $feeds_tamper->source = 'Q72';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'case_sensitive' => 0,
+    'find' => 'Awarded by program, not officially recognized by the college/university',
+    'func' => 'str_ireplace',
+    'regex' => FALSE,
+    'replace' => 'Awarded by program, not officially recognized by the IHE',
+    'whole' => 0,
+    'word_boundaries' => 0,
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Find replace';
+  $export['qualtrics_program_import-q72-find_replace_q72_no'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

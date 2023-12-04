@@ -184,6 +184,7 @@ function resources_ds_layout_settings_info() {
       'field_resourc_publication_date' => 'left',
       'field_resourc_publication_types' => 'left',
       'field_resourc_topics' => 'left',
+      'field_resource_language' => 'left',
       'field_video_embed' => 'left',
       'title' => 'left',
     ),
@@ -207,10 +208,11 @@ function resources_ds_layout_settings_info() {
         7 => 'field_resourc_media_types',
         8 => 'field_resourc_publication_types',
         9 => 'field_project',
+        10 => 'field_resource_language',
       ),
       'right' => array(
-        10 => 'field_resourc_file',
-        11 => 'field_external_link',
+        11 => 'field_resourc_file',
+        12 => 'field_external_link',
       ),
     ),
     'wrappers' => array(

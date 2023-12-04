@@ -54,7 +54,7 @@ function tc_resource_search_facetapi_default_facet_settings() {
   $facet->enabled = FALSE;
   $facet->hash = 'f70ZuuFzE1DZ81VFRq1Tqxidg7U2mFkn';
   $facet->settings = array(
-    'default_true' => '1',
+    'default_true' => TRUE,
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
@@ -358,7 +358,7 @@ function tc_resource_search_facetapi_default_facet_settings() {
     'facet_fewer_text' => 'Show fewer',
     'facet_more_text' => 'Show more',
     'filters' => array(),
-    'nofollow' => 1,
+    'nofollow' => '1',
     'show_expanded' => 1,
     'soft_limit' => '20',
     'sort_order' => array(
@@ -573,29 +573,45 @@ function tc_resource_search_facetapi_default_facet_settings() {
       'active' => 'active',
       'count' => 'count',
       'display' => 'display',
+      'indexed' => 0,
+      'natural' => 0,
+      'tc_disability_sort' => 0,
+      'tc_school_type_sort' => 0,
     ),
-    'display_count' => TRUE,
+    'display_count' => 1,
     'empty_behavior' => 'none',
+    'empty_text' => array(
+      'format' => 'full_html',
+      'value' => '',
+    ),
     'facet_fewer_text' => 'Show fewer',
     'facet_more_text' => 'Show more',
     'filters' => array(),
-    'nofollow' => 1,
+    'nofollow' => '1',
     'show_expanded' => 0,
-    'soft_limit' => 20,
+    'soft_limit' => '20',
     'sort_order' => array(
-      'active' => 3,
-      'count' => 3,
-      'display' => 4,
+      'active' => '3',
+      'count' => '3',
+      'display' => '4',
+      'indexed' => '4',
+      'natural' => '4',
+      'tc_disability_sort' => '4',
+      'tc_school_type_sort' => '4',
     ),
     'sort_weight' => array(
-      'active' => -50,
-      'count' => -49,
-      'display' => -48,
+      'active' => '-50',
+      'count' => '-49',
+      'display' => '-48',
+      'indexed' => '0',
+      'natural' => '0',
+      'tc_disability_sort' => '0',
+      'tc_school_type_sort' => '0',
     ),
     'title' => 'Item language',
     'title_override' => 0,
     'weight' => 0,
-    'widget' => 'facetapi_links',
+    'widget' => 'facetapi_checkbox_links',
   );
   $export['search_api@tc_resource_index:block:search_api_language'] = $facet;
 

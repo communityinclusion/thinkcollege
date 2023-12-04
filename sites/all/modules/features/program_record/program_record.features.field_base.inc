@@ -59,6 +59,8 @@ function program_record_field_default_field_bases() {
         'Campus events' => 'Campus events',
         'Study abroad' => 'Study abroad',
         'Fraternities/sororities' => 'Fraternities/sororities',
+        'Not applicable' => 'Not applicable',
+        'None of the above' => 'None of the above',
       ),
       'allowed_values_function' => '',
       'profile2_private' => FALSE,
@@ -142,6 +144,9 @@ foreach ($type_values as $key => $type_value) {
   else if ($type_value[\'value\'] == \'Other\') {
     $output[] = $other_value;
   }
+  else if ($type_value[\'value\'] == \'18 plus\') {
+    $output[] = \' Student must be 18 or older\';
+  }
   else {
     $output[] = $type_value[\'value\'];
   }
@@ -166,7 +171,7 @@ else {
       ),
       'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'profile2_private' => FALSE,
-      'recalculate' => FALSE,
+      'recalculate' => 0,
       'store' => 1,
     ),
     'translatable' => 0,
@@ -189,7 +194,8 @@ else {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'Age range' => 'Age range (enter ages below)',
+        '18 plus' => 'Age 18 or older',
+        'Age range' => 'Specific age range (enter ages below)',
         'legal guardian' => 'Student must be their own legal guardian',
         'Other' => 'Other',
       ),
@@ -222,6 +228,8 @@ else {
         'Health services' => 'Health services',
         'Access to a transcript via the registrar' => 'Access to a transcript via the registrar',
         'Academic advising services (not program staff)' => 'Academic advising services (not program staff)',
+        'Not applicable' => 'Not applicable',
+        'None of the above' => 'None of the above',
       ),
       'allowed_values_function' => '',
       'profile2_private' => FALSE,
@@ -246,9 +254,11 @@ else {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'IHE Student orientation' => 'IHE Student orientation',
-        'IHE Family orientation' => 'IHE Family orientation',
-        'IHE Graduation' => 'IHE Graduation',
+        'IHE Student orientation' => 'College/University\'s Student orientation',
+        'IHE Family orientation' => 'College/University\'s Family orientation',
+        'IHE Graduation' => 'College/University\'s Graduation',
+        'Not applicable' => 'Not applicable',
+        'None of the above' => 'None of the above',
       ),
       'allowed_values_function' => '',
       'profile2_private' => FALSE,
@@ -602,9 +612,13 @@ else {
     'settings' => array(
       'allowed_values' => array(
         'Students enroll in all of their courses via remote learning' => 'Students enroll in all of their courses via remote learning',
-        'Students can enroll in select courses via remote learning if they choose' => 'Students can enroll in select courses via remote learning if they choose',
+        'Students can enroll in select courses via remote learning if they choose' => 'We allow remote learning if students request it, but we really don’t encourage it',
         'Students are not permitted to take courses via remote learning' => 'Students are not permitted to take courses via remote learning',
         'Other: explain.' => 'Other,explain below',
+        'We allow remote learning if it’s the only way a course is being offered' => 'We allow remote learning if it’s the only way a course is being offered',
+        'We allow remote learning for special circumstances (e.g., distance, medical accommodation, commuters, etc)' => 'We allow remote learning for special circumstances (e.g., distance, medical accommodation, commuters, etc)',
+        'We have some remote learning that is required for all students in our program' => 'We have some remote learning that is required for all students in our program',
+        'Remote learning is a COVID specific occurrence and is not how our program generally operates' => 'Remote learning is a COVID specific occurrence and is not how our program generally operates',
       ),
       'allowed_values_function' => '',
       'profile2_private' => FALSE,
