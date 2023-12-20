@@ -443,34 +443,21 @@ function tc_program_record_properties_property_credit_courses($item) {
  */
 function tc_program_record_properties_property_dual_enroll($item) {
 
-  if (isset($item->field_prog_hs_coll)) {
-    if (isset( $item->field_prog_hs_coll[LANGUAGE_NONE])) {
+  if (isset($item->field_prog_have_left_hs)) {
+    if (isset( $item->field_prog_have_left_hs[LANGUAGE_NONE])) {
 
-      // If there are 2 values checked.
-      if (isset($item->field_prog_hs_coll[LANGUAGE_NONE][1])) {
-        if (($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value'] == "Are still enrolled in high school") ||
-          ($item->field_prog_hs_coll[LANGUAGE_NONE][1]['value'] == "Are still enrolled in high school")
+        if (($item->field_prog_have_left_hs[LANGUAGE_NONE][0]['value'] == "Some of our students have left high school") ||
+          ($item->field_prog_have_left_hs[LANGUAGE_NONE][0]['value'] == "No, all of our students are still in high school")
         ) {
           return ("Yes");
         }
-        else {
+        elseif($item->field_prog_have_left_hs[LANGUAGE_NONE][0]['value'] == "Yes, all of our students have left high school") {
           return ("No");
         }
-      }
-      // If there is only 1 value checked.
-      else if (isset($item->field_prog_hs_coll[LANGUAGE_NONE])) {
-        if ($item->field_prog_hs_coll[LANGUAGE_NONE][0]['value'] == "Are still enrolled in high school") {
-          return ("Yes");
-        }
-        else {
-          return ("No");
-        }
-      }
-      // If none are checked.
-      else {
-        return ("No");
-      }
 
+        else {
+          return ("No");
+        }
     }
   }
   // will be N/A
