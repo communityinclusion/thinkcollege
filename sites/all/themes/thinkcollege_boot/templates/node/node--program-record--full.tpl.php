@@ -296,7 +296,7 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_prog_when_will_progr_start']); ?>
           <?php print render($content['field_prog_summer_prog_name']); ?>
           <?php print render($content['field_summer_program_display']); ?>
-            print "</td></tr>"; } ?>
+
 
 
 
