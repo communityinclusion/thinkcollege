@@ -274,12 +274,10 @@ $classes .= ' node-program-record-full';
       isset($content['field_type_of_school_display']) ||
       isset($content['field_prog_other_explain']) ||
       isset($content['field_prog_tpsid_display']) ||
-      isset($content['field_prog_hs_coll']) ||
       isset($content['field_how_many_students_total_at']) ||
       isset($content['field_prog_when_will_progr_start']) ||
       isset($content['field_prog_summer_prog_y_n']) ||
-      isset($content['field_prog_summer_descrip']) ||
-      isset($content['field_prog_summer_info_link']) || isset($content['field_prog_summer_prog_name'])):
+      isset($content['field_prog_summer_descrip']) || isset($content['field_prog_summer_prog_name'])):
   ?>
     <div class="program-box" id="general">
       <table class="table table-striped">
@@ -294,14 +292,11 @@ $classes .= ' node-program-record-full';
           <?php print render($content['field_type_of_school_display']); ?>
           <?php print render($content['field_prog_other_explain']); ?>
           <?php print render($content['field_prog_tpsid_display']); ?>
-          <?php print render($content['field_prog_hs_coll']); ?>
           <?php print render($content['field_how_many_students_total_at']); ?>
           <?php print render($content['field_prog_when_will_progr_start']); ?>
           <?php print render($content['field_prog_summer_prog_name']); ?>
           <?php print render($content['field_summer_program_display']); ?>
-          <?php if(isset($content['field_prog_summer_info_link'])) { print"<tr><td><strong>Summer program link: </strong></td><td>";
-            print render($content['field_prog_summer_info_link'][0]);
-            print "</td></tr>"; } ?>
+
 
 
 
