@@ -89,6 +89,31 @@ function landing_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
+  $pane->pid = 'new-30ea2372-8bad-498c-861d-0a456aff2452';
+  $pane->panel = 'row1left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'body' => '<p><a href="https://thinkcollege.net/node/5689"><img alt="Image of Debra Hart, a white woman in her 70s, wearing a white button down shirt, eyeglasses, and long hair pulled back in a ponytail, with the words In Loving Memory of Debra Hart, June 5, 1951-December 12, 2023." class="img-responsive" src="/sites/default/files/files/images/debra-hart-in-memory.png" /></a></p>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
+    'title' => '',
+    'title_heading' => 'div',
+  );
+  $pane->cache = array();
+  $pane->style = array();
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '30ea2372-8bad-498c-861d-0a456aff2452';
+  $display->content['new-30ea2372-8bad-498c-861d-0a456aff2452'] = $pane;
+  $display->panels['row1left'][0] = 'new-30ea2372-8bad-498c-861d-0a456aff2452';
+  $pane = new stdClass();
   $pane->pid = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
   $pane->panel = 'row1left';
   $pane->type = 'views';
@@ -116,13 +141,16 @@ function landing_pages_default_page_manager_pages() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_class' => 'hide',
+    'css_id' => '',
+  );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '51991429-d311-4e3f-b31e-ee26a4d24bbd';
   $display->content['new-51991429-d311-4e3f-b31e-ee26a4d24bbd'] = $pane;
-  $display->panels['row1left'][0] = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
+  $display->panels['row1left'][1] = 'new-51991429-d311-4e3f-b31e-ee26a4d24bbd';
   $pane = new stdClass();
   $pane->pid = 'new-7e4107b3-5975-4f9d-b9bd-784fe7d3b953';
   $pane->panel = 'row1right';
