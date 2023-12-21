@@ -95,7 +95,7 @@ function program_record_strongarm() {
           ),
           'default' => array(
             'visible' => FALSE,
-            'weight' => '45',
+            'weight' => '62',
           ),
           'full' => array(
             'visible' => FALSE,
@@ -124,19 +124,19 @@ function program_record_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '18',
+          'weight' => '9',
         ),
         'path' => array(
-          'weight' => '15',
+          'weight' => '5',
         ),
         'redirect' => array(
-          'weight' => '24',
+          'weight' => '15',
         ),
         'title' => array(
           'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '21',
         ),
       ),
     ),
@@ -155,6 +155,9 @@ function program_record_strongarm() {
       ),
       'ical' => array(
         'custom_settings' => FALSE,
+      ),
+      'live_results_search' => array(
+        'custom_settings' => TRUE,
       ),
       'modal' => array(
         'custom_settings' => FALSE,

@@ -331,7 +331,7 @@ $classes .= ' node-program-record-full';
     isset($content['field_prog_admiss_link']) ||
     isset($content['field_prog_admiss_crit_display']) ||
     isset($content['field_disabilities_display_']) ||
-    isset($content['field_prog_length_years2']) || isset($content['field_prog_have_left_hs']) || isset($content['field_requirements_display'])):
+    isset($content['field_prog_length_years2']) || isset($content['field_prog_length_years2_display']) || isset($content['field_prog_have_left_hs']) || isset($content['field_requirements_display'])):
     ?>
     <div class="program-box" id="requirements">
       <table class="table table-striped">
@@ -349,6 +349,8 @@ $classes .= ' node-program-record-full';
         <?php print render($content['field_prog_out_of_stat']); ?>
         <?php print render($content['field_disabilities_display_']); ?>
         <?php print render($content['field_prog_length_years2']); ?>
+        <?php print render($content['field_prog_length_years2_display']); ?>
+        
         </tbody>
       </table>
     </div>

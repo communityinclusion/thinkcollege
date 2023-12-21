@@ -217,347 +217,335 @@ function qualtrics_program_import_feeds_importer_default() {
           ),
           27 => array(
             'language' => 'und',
-            'source' => 'Q30',
-            'target' => 'field_prog_summer_info_link:url',
-            'unique' => FALSE,
-          ),
-          28 => array(
-            'language' => 'und',
-            'source' => 'Q102',
-            'target' => 'field_prog_summer_info_link:title',
-            'unique' => FALSE,
-          ),
-          29 => array(
-            'language' => 'und',
             'source' => 'Q32',
             'target' => 'field_prog_district_only',
             'unique' => FALSE,
           ),
-          30 => array(
+          28 => array(
             'language' => 'und',
             'source' => 'Q31',
             'target' => 'field_prog_school_dist',
             'unique' => FALSE,
           ),
-          31 => array(
+          29 => array(
             'language' => 'und',
             'source' => 'Q33',
             'target' => 'field_prog_school_dist_contact',
             'unique' => FALSE,
           ),
-          32 => array(
+          30 => array(
             'language' => 'und',
             'source' => 'Q34',
             'target' => 'field_prog_schl_dist_email',
             'unique' => FALSE,
           ),
-          33 => array(
+          31 => array(
             'language' => 'und',
             'source' => 'Q87',
             'target' => 'field_prog_have_left_hs',
             'unique' => FALSE,
           ),
-          34 => array(
+          32 => array(
             'language' => 'und',
             'source' => 'Q38',
             'target' => 'field_prog_admiss_criteria',
             'unique' => FALSE,
           ),
-          35 => array(
+          33 => array(
             'language' => 'und',
             'source' => 'Q86',
             'target' => 'field_prog_hs_dipl_req',
             'unique' => FALSE,
           ),
-          36 => array(
+          34 => array(
             'language' => 'und',
             'source' => 'Q39',
             'target' => 'field_prog_age_range',
             'unique' => FALSE,
           ),
-          37 => array(
+          35 => array(
             'language' => 'und',
             'source' => 'Q88',
             'target' => 'field_prog_explain_other',
             'unique' => FALSE,
           ),
-          38 => array(
+          36 => array(
             'language' => 'und',
             'source' => 'Q36',
             'target' => 'field_prog_admit_deadline',
             'unique' => FALSE,
           ),
-          39 => array(
+          37 => array(
             'language' => 'und',
             'source' => 'Q37',
             'target' => 'field_prog_admiss_link:url',
             'unique' => FALSE,
           ),
-          40 => array(
+          38 => array(
             'language' => 'und',
             'source' => 'Q35',
             'target' => 'field_prog_out_of_stat',
             'unique' => FALSE,
           ),
-          41 => array(
+          39 => array(
             'language' => 'und',
             'source' => 'Q41',
             'target' => 'field_prog_which_disabilities',
             'unique' => FALSE,
           ),
-          42 => array(
+          40 => array(
             'language' => 'und',
             'source' => 'Q42',
             'target' => 'field_prog_which_dis_specify',
             'unique' => FALSE,
           ),
-          43 => array(
+          41 => array(
             'language' => 'und',
             'source' => 'Q105',
             'target' => 'field_prog_accept_rate',
             'unique' => FALSE,
           ),
-          44 => array(
+          42 => array(
             'language' => 'und',
             'source' => 'Q106',
             'target' => 'field_prog_retention_rate',
             'unique' => FALSE,
           ),
-          45 => array(
+          43 => array(
             'language' => 'und',
             'source' => 'Q97',
             'target' => 'field_prog_explain_nums',
             'unique' => FALSE,
           ),
-          46 => array(
+          44 => array(
             'language' => 'und',
             'source' => 'Q89_4',
             'target' => 'field_prog_tuition',
             'unique' => FALSE,
           ),
-          47 => array(
+          45 => array(
             'language' => 'und',
             'source' => 'Q95_4',
             'target' => 'field_prog_out_of_stat_tuition',
             'unique' => FALSE,
           ),
-          48 => array(
+          46 => array(
             'language' => 'und',
             'source' => 'Q90_4',
             'target' => 'field_prog_specific_fees',
             'unique' => FALSE,
           ),
-          49 => array(
+          47 => array(
             'language' => 'und',
             'source' => 'Q91_4',
             'target' => 'field__prog_room_and_board',
             'unique' => FALSE,
           ),
-          50 => array(
+          48 => array(
             'language' => 'und',
             'source' => 'Q54',
             'target' => 'field_prog_other_costs',
             'unique' => FALSE,
           ),
-          51 => array(
+          49 => array(
             'language' => 'und',
             'source' => 'Q56',
             'target' => 'field_prog_explain_other_costs',
             'unique' => FALSE,
           ),
-          52 => array(
+          50 => array(
             'language' => 'und',
             'source' => 'Q57',
             'target' => 'field_prog_ctp_y_n',
             'unique' => FALSE,
           ),
-          53 => array(
+          51 => array(
             'language' => 'und',
             'source' => 'Q58',
             'target' => 'field_prog_pay_methods',
             'unique' => FALSE,
           ),
-          54 => array(
+          52 => array(
             'language' => 'und',
             'source' => 'Q59',
             'target' => 'field_prog_pay_other',
             'unique' => FALSE,
           ),
-          55 => array(
+          53 => array(
             'language' => 'und',
             'source' => 'Q60',
             'target' => 'field_prog_addl_scholarships',
             'unique' => FALSE,
           ),
-          56 => array(
+          54 => array(
             'language' => 'und',
             'source' => 'Q65',
             'target' => 'field_prog_course_types',
             'unique' => FALSE,
           ),
-          57 => array(
+          55 => array(
             'language' => 'und',
             'source' => 'Q66',
             'target' => 'field_prog_more_course_detail',
             'unique' => FALSE,
           ),
-          58 => array(
+          56 => array(
             'language' => 'und',
             'source' => 'Q67',
             'target' => 'field_prog_special_courses',
             'unique' => FALSE,
           ),
-          59 => array(
+          57 => array(
             'language' => 'und',
             'source' => 'Q68',
             'target' => 'field_prog_spec_courses_mor_info',
             'unique' => FALSE,
           ),
-          60 => array(
+          58 => array(
             'language' => 'und',
             'source' => 'Q70',
             'target' => 'field_prog_credential',
             'unique' => FALSE,
           ),
-          61 => array(
+          59 => array(
             'language' => 'und',
             'source' => 'Q71',
             'target' => 'field_name_of_credential_degree_',
             'unique' => FALSE,
           ),
-          62 => array(
+          60 => array(
             'language' => 'und',
             'source' => 'Q72',
             'target' => 'field_prog_cred_ihe_approv',
             'unique' => FALSE,
           ),
-          63 => array(
+          61 => array(
             'language' => 'und',
             'source' => 'Q74',
             'target' => 'field_prog_perc_w_compet_employ',
             'unique' => FALSE,
           ),
-          64 => array(
+          62 => array(
             'language' => 'und',
             'source' => 'Q75',
             'target' => 'field_prog_other_career_dev',
             'unique' => FALSE,
           ),
-          65 => array(
+          63 => array(
             'language' => 'und',
             'source' => 'Q101',
             'target' => 'field_prog_vocational_credential',
             'unique' => FALSE,
           ),
-          66 => array(
+          64 => array(
             'language' => 'und',
             'source' => 'Q76',
             'target' => 'field_prog_perc_employed_af_grad',
             'unique' => FALSE,
           ),
-          67 => array(
+          65 => array(
             'language' => 'und',
             'source' => 'Q78',
             'target' => 'field_prog_vr_partner',
             'unique' => FALSE,
           ),
-          68 => array(
+          66 => array(
             'language' => 'und',
             'source' => 'Q79',
             'target' => 'field_prog_housing_y_n',
             'unique' => FALSE,
           ),
-          69 => array(
+          67 => array(
             'language' => 'und',
             'source' => 'Q80',
             'target' => 'field_prog_studt_housing_options',
             'unique' => FALSE,
           ),
-          70 => array(
+          68 => array(
             'language' => 'und',
             'source' => 'Q81',
             'target' => 'field_prog_other_hous_explain',
             'unique' => FALSE,
           ),
-          71 => array(
+          69 => array(
             'language' => 'und',
             'source' => 'Q20_Name',
             'target' => 'field_prog_photo:uri',
             'unique' => FALSE,
           ),
-          72 => array(
+          70 => array(
             'language' => 'und',
             'source' => 'submit_date',
             'target' => 'field_prog_submit_date',
             'unique' => FALSE,
           ),
-          73 => array(
+          71 => array(
             'language' => 'und',
             'source' => 'Q109',
             'target' => 'field_all_students_in_course',
             'unique' => FALSE,
           ),
-          74 => array(
+          72 => array(
             'language' => 'und',
             'source' => 'Q110',
             'target' => 'field_prog_remote_learning',
             'unique' => FALSE,
           ),
-          75 => array(
+          73 => array(
             'language' => 'und',
             'source' => 'Q116',
             'target' => 'field_prog_campus_services',
             'unique' => FALSE,
           ),
-          76 => array(
+          74 => array(
             'language' => 'und',
             'source' => 'Q117',
             'target' => 'field_prog_college_events',
             'unique' => FALSE,
           ),
-          77 => array(
+          75 => array(
             'language' => 'und',
             'source' => 'Q118',
             'target' => 'field_prog__extracurr_activ',
             'unique' => FALSE,
           ),
-          78 => array(
+          76 => array(
             'language' => 'und',
             'source' => 'Q119',
             'target' => 'field_prog_perc_academic',
             'unique' => FALSE,
           ),
-          79 => array(
+          77 => array(
             'language' => 'und',
             'source' => 'Q49',
             'target' => 'field_prog_length_years2',
             'unique' => FALSE,
           ),
-          80 => array(
+          78 => array(
             'language' => 'und',
             'source' => 'Q110_4_TEXT',
             'target' => 'field_prog_remote_explain',
             'unique' => FALSE,
           ),
-          81 => array(
+          79 => array(
             'language' => 'und',
             'source' => 'Q100',
             'target' => 'field_prog_stem_cert',
             'unique' => FALSE,
           ),
-          82 => array(
+          80 => array(
             'language' => 'und',
             'source' => 'Q99',
             'target' => 'field_prog_stem_courses',
             'unique' => FALSE,
           ),
-          83 => array(
+          81 => array(
             'language' => 'und',
             'source' => 'Q83',
             'target' => 'field_prog_extracurr_inclusive',
             'unique' => FALSE,
           ),
-          84 => array(
+          82 => array(
             'language' => 'und',
             'source' => 'Q92',
             'target' => 'field_prog_other_credent',
