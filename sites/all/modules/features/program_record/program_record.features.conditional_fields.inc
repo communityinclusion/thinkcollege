@@ -550,6 +550,140 @@ function program_record_conditional_fields_default_fields() {
     array(
       'entity' => 'node',
       'bundle' => 'program_record',
+      'dependent' => 'field_prog_length_other_explain',
+      'dependee' => 'field_prog_length_years2',
+      'options' => array(
+        'state' => 'visible',
+        'condition' => 'value',
+        'grouping' => 'AND',
+        'effect' => 'show',
+        'effect_options' => array(),
+        'element_view' => array(
+          1 => 1,
+          2 => 2,
+          5 => 0,
+          3 => 0,
+          4 => 0,
+        ),
+        'element_view_per_role' => 0,
+        'element_view_roles' => array(
+          1 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          2 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          5 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          7 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          12 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          3 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          14 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+          15 => array(
+            1 => 1,
+            2 => 2,
+            5 => 0,
+            3 => 0,
+            4 => 0,
+          ),
+        ),
+        'element_edit' => array(
+          1 => 1,
+          3 => 0,
+        ),
+        'element_edit_per_role' => 0,
+        'element_edit_roles' => array(
+          1 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          2 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          5 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          7 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          12 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          3 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          14 => array(
+            1 => 1,
+            3 => 0,
+          ),
+          15 => array(
+            1 => 1,
+            3 => 0,
+          ),
+        ),
+        'selector' => '',
+        'values_set' => 1,
+        'value_form' => array(
+          'Other length' => 'Other length',
+          '1 year' => NULL,
+          '2 years' => NULL,
+          '3 years' => NULL,
+          '4 years' => NULL,
+          'Varies from student to student' => NULL,
+        ),
+        'value' => array(
+          0 => array(
+            'value' => 'Other length',
+          ),
+        ),
+        'values' => array(),
+      ),
+    ),
+    array(
+      'entity' => 'node',
+      'bundle' => 'program_record',
       'dependent' => 'field_prog_other_costs_amount',
       'dependee' => 'field_prog_other_costs',
       'options' => array(

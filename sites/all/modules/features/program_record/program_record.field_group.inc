@@ -97,11 +97,11 @@ function program_record_field_group_info() {
   $field_group->parent_name = 'group_sections';
   $field_group->data = array(
     'children' => array(
-      0 => 'field_prog_length_years',
-      1 => 'field_prog_explain_nums',
-      2 => 'field_prog_accept_rate',
-      3 => 'field_prog_retention_rate',
-      4 => 'field_prog_length_years2',
+      0 => 'field_prog_explain_nums',
+      1 => 'field_prog_accept_rate',
+      2 => 'field_prog_retention_rate',
+      3 => 'field_prog_length_years2',
+      4 => 'field_prog_length_other_explain',
     ),
     'format_settings' => array(
       'formatter' => 'closed',
@@ -132,6 +132,8 @@ function program_record_field_group_info() {
       1 => 'field_prog_explain_nums',
       2 => 'field_admission_rate_display',
       3 => 'field_prog_retention_rate_displa',
+      4 => 'field_prog_length_years2',
+      5 => 'field_prog_length_other_explain',
     ),
     'format_settings' => array(
       'formatter' => 'open',

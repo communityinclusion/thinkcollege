@@ -551,6 +551,11 @@ function qualtrics_program_import_feeds_importer_default() {
             'target' => 'field_prog_other_credent',
             'unique' => FALSE,
           ),
+          83 => array(
+            'source' => 'Q134',
+            'target' => 'field_prog_length_other_explain',
+            'unique' => FALSE,
+          ),
         ),
         'skip_hash_check' => 0,
         'update_existing' => '2',

@@ -449,6 +449,28 @@ else {
     'type' => 'static_field',
   );
 
+  // Exported field_base: 'field_prog_length_other_explain'.
+  $field_bases['field_prog_length_other_explain'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_id_type' => NULL,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_length_other_explain',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_prog_length_years2'.
   $field_bases['field_prog_length_years2'] = array(
     'active' => 1,
@@ -469,6 +491,7 @@ else {
         '2 years' => '2 years',
         '3 years' => '3 years',
         '4 years' => '4 years',
+        'Other length' => 'Other length',
         'Varies from student to student' => 'Varies from student to student',
       ),
       'allowed_values_function' => '',
@@ -476,6 +499,53 @@ else {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_prog_length_years2_display'.
+  $field_bases['field_prog_length_years2_display'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_id_type' => NULL,
+    'entity_types' => array(),
+    'field_name' => 'field_prog_length_years2_display',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => 'if (isset(field_get_items($entity_type, $entity, \'field_prog_length_other_explain\')[0][\'value\'])) {
+  $other_value = field_get_items($entity_type, $entity, \'field_prog_length_other_explain\')[0][\'value\'];
+} else { $other_value = ""; }
+
+// If the length of program is "other length", show the "other" text, otherwise show the lengths selected.
+$field_count = 5;
+$i = 0;
+for($i=0;$i < $field_count; $i++){
+	if (isset(field_get_items($entity_type, $entity, \'field_prog_length_years2\')[$i][\'value\'] ) && field_get_items($entity_type, $entity, \'field_prog_length_years2\')[$i][\'value\'] == "Other planned length") {
+	  $entity_field[$i][\'value\'] = $other_value;
+	} elseif (isset(field_get_items($entity_type, $entity, \'field_prog_length_years2\')[$i][\'value\']) && field_get_items($entity_type, $entity, \'field_prog_length_years2\')[$i][\'value\'] != "Other planned length" ) {
+                   $entity_field[$i][\'value\'] = field_get_items($entity_type, $entity, \'field_prog_length_years2\')[$i][\'value\'] ;
+        } else {
+              break;
+       }
+}',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'profile2_private' => FALSE,
+      'recalculate' => 0,
+      'store' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_prog_other_credent'.
