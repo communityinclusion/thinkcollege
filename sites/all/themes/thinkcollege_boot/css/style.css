@@ -9244,6 +9244,11 @@ article.node-resource.view-mode-full .col-sm-4 .field .field-items .field-item .
   top: -36px;
 }
 
+.vertical .view-upcoming-events .view-all {
+  position: static;
+
+}
+
 @media screen and (min-width: 992px) {
   .view-upcoming-events .view-content {
     display: -webkit-box;
