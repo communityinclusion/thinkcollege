@@ -51,7 +51,7 @@
     with an accredited college or university and serve students with
     intellectual disabilities. To let us know about a new program, or to
     make changes to a current program listing,
-    please email <a href="mailto:shelby.bates@umb.edu">shelby.bates@umb.edu.</a>
+    please email <a href="mailto:thinkcollege@umb.edu">thinkcollege@umb.edu</a>.
   </p>
   <p class="small clearfix">
   This database was created for use by students, families, and teachers to explore college options for students with ID. It was not designed for research purposes. It may not be used for commercial purposes.
