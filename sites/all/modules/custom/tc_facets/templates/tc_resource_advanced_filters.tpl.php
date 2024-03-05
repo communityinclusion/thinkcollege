@@ -1,8 +1,4 @@
-<button id="tc-adv-filters" class="btn btn-primary" type="button"
-        data-toggle="collapse" data-target="#collapseAdvancedFilters"
-        aria-expanded="false" aria-controls="collapseAdvancedFilters">
-  ADVANCED FILTERS
-</button>
+
 <?php
 $adv_classes="collapse";
 $params = drupal_get_query_parameters();
@@ -19,7 +15,7 @@ if (sizeof($params) != 0) {
   }
 }
 ?>
-<div class="<?php echo $adv_classes; ?>" id="collapseAdvancedFilters">
+<div class="" id="collapseAdvancedFilters">
     <?php
     // Media Types
     $whole_block = block_load('facetapi','jty8nubvowm0ptx7go5humldpaf9tb4j');
