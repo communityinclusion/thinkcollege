@@ -1949,3 +1949,19 @@ a.external-link:before {
 	margin-top:0;
 	margin-bottom:0;
 	}
+
+
+  /* Home page THTC banner */
+
+  .thtc-border {
+    border-style: solid;
+    border-top-color: #24517c;
+    border-bottom-color: #75c043;
+    border-left-color: #ee8831;
+    border-right-color: #00aeef;
+    background-color:#ececec;
+    border-width:20px;
+}
+
+.buffer {border:5px solid #fff;
+   padding:10px;}
