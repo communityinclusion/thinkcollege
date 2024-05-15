@@ -148,7 +148,6 @@
 <div class="main-container container">
 
 
-
   <div class="row">
      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
     <?php if (!empty($page['sidebar_first']) || !empty($page['sidebar_first_top'])): ?>
