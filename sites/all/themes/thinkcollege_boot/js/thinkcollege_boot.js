@@ -1,4 +1,4 @@
-/**
+/***
  * @file
  * thinkcollege_boot.js
  *
