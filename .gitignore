@@ -7,3 +7,4 @@ sites/*/private
 
 #ignore ddev files
 .ddev/
+robots.txt
