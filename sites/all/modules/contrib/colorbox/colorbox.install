@@ -68,7 +68,8 @@ function colorbox_requirements($phase) {
     $error_message = isset($library['error message']) ? $library['error message'] : '';
 
     if (empty($library['installed'])) {
-      if (empty(variable_get('colorbox_dompurify_hide_warning', 0))) {
+      $colorbox_dompurify_hide_warning = variable_get('colorbox_dompurify_hide_warning', 0);
+      if (empty($colorbox_dompurify_hide_warning)) {
         $requirements['dompurify'] = array(
           'title' => $t('DOMPurify library'),
           'value' => $t('@e: At least @a', array('@e' => $error_type, '@a' => COLORBOX_DOMPURIFY_MIN_PLUGIN_VERSION)),
@@ -77,7 +78,9 @@ function colorbox_requirements($phase) {
             'Without this library, all captions will be treated as plain text. ' .
             'If you intend to have HTML captions in Colorbox content, ' .
             'download the !library, extract the archive, and place the ' .
-            'DOMPurify directory in the %path directory on your server.<br /><br />' .
+            'purify.min.js file in the %path directory on your server. ' .
+            'To avoid potential security issues, please only install purify.min.js and not ' .
+            'any other files from the archive.<br /><br />' .
             'If you do not intend to use HTML captions, you can suppress this warning on the ' .
             '!colorbox_config_page .',
             array(
@@ -86,7 +89,7 @@ function colorbox_requirements($phase) {
               $library['download url']),
             '!colorbox_config_page' => l($t('Colorbox configuration page'),
               '/admin/config/media/colorbox'),
-            '%path' => 'sites/all/libraries',
+            '%path' => 'sites/all/libraries/DOMPurify',
           )),
         );
       }

@@ -325,7 +325,7 @@ function geocoder_service_check_request($handler, $format, $check_ac = TRUE) {
     exit();
   }
   if (($format && $format !== 'default') && !in_array($format, array_keys(geoPHP::getAdapterMap()), TRUE)) {
-    throw new Exception(t('Could not find output-format @format', array('@format' => $format)), 'error');
+    throw new Exception(t('Could not find output-format @format', array('@format' => $format)));
     exit();
   }
   if (!geocoder_service_check_perms($handler)) {

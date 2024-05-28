@@ -114,16 +114,16 @@ function colorbox_libraries_info() {
   $libraries['DOMPurify'] = array(
     'name' => 'DOMPurify',
     'vendor url' => 'https://github.com/cure53/DOMPurify',
-    'download url' => 'https://github.com/cure53/DOMPurify/releases/latest',
-    'version arguments' => array(
-      'file' => 'purify.min.js',
-      'pattern' => '@(?i:DOMPurify)\s+([0-9a-zA-Z\.-]+)@',
-      'lines' => 5,
-    ),
+    'download url' => 'https://raw.githubusercontent.com/cure53/DOMPurify/3.x/dist/purify.min.js',
     'files' => array(
       'js' => array(
         'purify.min.js',
       ),
+    ),
+    'version arguments' => array(
+      'file' => 'purify.min.js',
+      'pattern' => '@(?i:DOMPurify)\s+([0-9a-zA-Z\.-]+)@',
+      'lines' => 5,
     ),
     'variants' => array(
       'minified' => array(
@@ -195,10 +195,14 @@ function _colorbox_active() {
 
 /**
  * Loads the various js and css files.
+ *
+ * @param boolean $on_demand
+ *   Force the Colorbox code to be loaded on the current page, unless they
+ *   have already been loaded.
  */
-function _colorbox_doheader() {
+function _colorbox_doheader($on_demand = FALSE) {
   static $already_added = FALSE;
-  if ($already_added) {
+  if (!$on_demand && !_colorbox_active()) {
     // Don't add the JavaScript and CSS multiple times.
     return;
   }

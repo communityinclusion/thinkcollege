@@ -28,5 +28,13 @@ function geocoder_uninstall() {
  * Create geocoder's caching table.
  */
 function geocoder_update_7101() {
-  drupal_install_schema('geocoder');
+  // Avoid installing the table twice.
+  if (db_table_exists('cache_geocoder')) {
+    return;
+  }
+
+  $schema['cache_geocoder'] = drupal_get_schema_unprocessed('system', 'cache');
+  $schema['cache_geocoder']['description'] = 'Cache table for the geocoder module to store geocoded locations.';
+
+  db_create_table('cache_geocoder', $schema['cache_geocoder']);
 }

@@ -45,7 +45,7 @@ Drupal.behaviors.initColorbox = {
       });
 
     $(context).bind('cbox_complete', function () {
-      Drupal.attachBehaviors('#cboxLoadedContent');
+      Drupal.attachBehaviors($('#cboxLoadedContent'));
     });
   }
 };
