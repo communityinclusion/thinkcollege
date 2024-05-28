@@ -281,8 +281,7 @@ class SearchApiEntityDataSourceController extends SearchApiAbstractDataSourceCon
       '#description' => t('Restrict the entity bundles that will be included in this index. Leave blank to include all bundles. This setting cannot be changed for enabled indexes.'),
       '#options' => array_map('check_plain', $options),
       '#attributes' => array('class' => array('search-api-checkboxes-list')),
-      // Patch from Drupal Hack PF
-      // '#disabled' => !empty($form_state['index']) && $form_state['index']->enabled,
+      '#disabled' => !empty($form_state['index']) && $form_state['index']->enabled,
     );
     if (!empty($form_state['index']->options['datasource'])) {
       $form['bundles']['#default_value'] = drupal_map_assoc($form_state['index']->options['datasource']['bundles']);
