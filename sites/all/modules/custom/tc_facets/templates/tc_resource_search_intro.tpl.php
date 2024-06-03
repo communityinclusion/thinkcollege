@@ -8,6 +8,6 @@
     <p class="lead">Welcome to the Think College resource library!</p>
     <p> The library includes carefully selected resources on a wide range of topics related to postsecondary education for people with intellectual disability.
 </p><p>
-Use the filters on the left to narrow your search by topic, and click on Advanced Filters to refine by project, audience, media type, or publication type. If you are having trouble finding the resources you need, please contact us at <a href="mailto:thinkcollegeTA@gmail.com">thinkcollegeTA@gmail.com</a></p>
+Use the filters on the left to narrow your search by topic, and click on Advanced Filters to refine by project, audience, media type, or publication type. If you are having trouble finding the resources you need, please contact us at <a href="mailto:thinkcollegeTA@umb.edu">thinkcollegeTA@umb.edu</a></p>
   </div>
 <?php endif; ?>
