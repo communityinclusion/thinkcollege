@@ -16,6 +16,7 @@ define('MEMCACHE_CONTENT_CLEAR', 'MEMCACHE_CONTENT_CLEAR');
 /**
  * Implementation of cache.inc with memcache logic included
  */
+#[AllowDynamicProperties]
 class MemCacheDrupal implements DrupalCacheInterface {
   protected $memcache;
 
