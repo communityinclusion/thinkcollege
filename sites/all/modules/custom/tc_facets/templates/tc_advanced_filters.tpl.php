@@ -1,8 +1,8 @@
-<button id="tc-adv-filters" class="btn btn-primary" type="button"
+<!-- <button id="tc-adv-filters" class="btn btn-primary" type="button"
         data-toggle="collapse" data-target="#collapseAdvancedFilters"
         aria-expanded="false" aria-controls="collapseAdvancedFilters">
   ADVANCED FILTERS
-</button>
+</button> -->
 <?php
 $adv_classes="collapse";
 $params = drupal_get_query_parameters();
@@ -19,7 +19,7 @@ if (sizeof($params) != 0) {
   }
 }
 ?>
-<div class="<?php echo $adv_classes; ?>" id="collapseAdvancedFilters">
+<div class="" id="collapseAdvancedFilters">
     <?php
     // Type of Disability
     $whole_block = block_load('facetapi','xebpqfp0bvfa3ornoj5qoimterfrxoot');
