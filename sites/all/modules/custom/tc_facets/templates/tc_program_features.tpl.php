@@ -23,9 +23,9 @@
   print render($z);
 
   // Particular school district
-  $delta = 'Msm1jZU9r6FFAzfFekVp0Syud67glduW';
-  $a = module_invoke($module, $hook, $delta);
-  print render($a);
+ // $delta = 'Msm1jZU9r6FFAzfFekVp0Syud67glduW';
+//  $a = module_invoke($module, $hook, $delta);
+  //print render($a);
 
   // Only put Dual enrollment note on if dual enroll facet is shown.
   if ($x != null) {

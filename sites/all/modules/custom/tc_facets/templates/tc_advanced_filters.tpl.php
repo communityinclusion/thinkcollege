@@ -10,10 +10,11 @@ if (sizeof($params) != 0) {
   if (isset($params['f'])) {
     $tpsid = preg_grep('/(tc_tpsid)/', $params['f']);
     $pubpri = preg_grep('/(field_prog_public_or_privat)/', $params['f']);
+    $schooldist = preg_grep('/(field_prog_district_only)/', $params['f']);
     $school = preg_grep('/(tc_school_type:2-year community college or junior college)/', $params['f']);
     $length = preg_grep('/(field_prog_length_years:1 year)/', $params['f']);
     $coursetype = preg_grep('/(tc_credit_courses/', $params['f']);
-    if (($tpsid && sizeof($tpsid) > 0) || ($pubpri && sizeof($pubpri) > 0) || ($school && sizeof($school) > 0) || ($length && sizeof($length) > 0) || ($coursetype && sizeof($coursetype) > 0)) {
+    if (($tpsid && sizeof($tpsid) > 0) || ($pubpri && sizeof($pubpri) > 0) || ($schooldist && sizeof($schooldist) > 0) || ($school && sizeof($school) > 0) || ($length && sizeof($length) > 0) || ($coursetype && sizeof($coursetype) > 0)) {
       $adv_classes = "collapse in";
     }
   }
@@ -27,6 +28,10 @@ if (sizeof($params) != 0) {
     print drupal_render($renderable_array);
     // public / private
     $whole_block = block_load('facetapi','vqmkt1ucjsq01vwf5numawcjhodoiedi');
+    $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
+    //school district only
+    print drupal_render($renderable_array);
+    $whole_block = block_load('facetapi','msm1jzu9r6ffazffekvp0syud67glduw');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
     //Courses for credit
