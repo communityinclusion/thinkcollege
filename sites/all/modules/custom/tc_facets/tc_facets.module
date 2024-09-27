@@ -94,11 +94,11 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "field_prog_district_only") {
     if (array_key_exists('No', $build)) {
-      $build['No']["#markup"] = "Accepts students from selected districts only";
+      $build['No']["#markup"] = "Admission not limited by school district";
      
     }
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Admission not limited by school district";
+      $build['Yes']["#markup"] = "Accepts students from selected districts only";
     }
   }
 }
