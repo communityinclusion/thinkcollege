@@ -55,12 +55,12 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
            * Financial Aid has a yes-no-N/A-kinda/maybe, and we just want yes/no.
            * No & N/A & kinda/maybe are No.
            */
-          $info['node']['bundles'][$bundle_type]['properties']['tc_financial_aid'] = array(
+        $info['node']['bundles'][$bundle_type]['properties']['tc_financial_aid'] = array(
             'type' => 'text',
             'label' => 'TC:Financial Aid',
             'sanitized' => TRUE,
             'getter callback' => 'tc_program_record_properties_property_financial_aid',
-          );
+          ); 
           /*
            * TPSID has a yes-no-N/A-kinda/maybe, and we just want yes/no.
            * No & N/A & kinda/maybe are No.
@@ -371,7 +371,7 @@ function tc_program_record_properties_property_housing($item) {
  * @return string
  *    'Yes' or 'No'.
  */
-function tc_program_record_properties_property_financial_aid($item) {
+ function tc_program_record_properties_property_financial_aid($item) {
 
   if (isset($item->field_prog_ctp_y_n)) {
     if (isset($item->field_prog_ctp_y_n[LANGUAGE_NONE])) {
@@ -386,7 +386,7 @@ function tc_program_record_properties_property_financial_aid($item) {
   // will be N/A
   return "No";
 
-}
+} 
 
 function tc_program_record_properties_property_alpha_sort_title($item) {
   return $item->title;

@@ -13,9 +13,9 @@
   print render($x);
 
   // Financial Aid.
-  $delta = 'GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc';
-  $y = module_invoke($module, $hook, $delta);
-  print render($y);
+  //$delta = 'GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc';
+  //$y = module_invoke($module, $hook, $delta);
+  //print render($y);
 
   // Housing
   $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';

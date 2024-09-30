@@ -61,6 +61,9 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
     if (array_key_exists('Yes', $build)) {
       $build['Yes']["#markup"] = "Offers Financial Aid (CTP)";
     }
+    if (array_key_exists('No', $build)) {
+      $build['No']["#markup"] = "Does not offer financial aid";
+    }
   }
   else if ($settings->facet == "tc_housing") {
     if (array_key_exists('Yes', $build)) {

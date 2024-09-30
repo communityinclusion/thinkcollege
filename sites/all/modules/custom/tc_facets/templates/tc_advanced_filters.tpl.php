@@ -29,8 +29,12 @@ if (sizeof($params) != 0) {
     // public / private
     $whole_block = block_load('facetapi','vqmkt1ucjsq01vwf5numawcjhodoiedi');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
-    //school district only
     print drupal_render($renderable_array);
+    // financial aid
+    $whole_block = block_load('facetapi','gkkn44mzr0b0a0uvm7labhst3ymihpyc');
+    $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
+    print drupal_render($renderable_array);
+      //school district only
     $whole_block = block_load('facetapi','msm1jzu9r6ffazffekvp0syud67glduw');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
