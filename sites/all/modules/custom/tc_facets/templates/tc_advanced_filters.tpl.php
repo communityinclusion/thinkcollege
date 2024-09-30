@@ -30,6 +30,10 @@ if (sizeof($params) != 0) {
     $whole_block = block_load('facetapi','vqmkt1ucjsq01vwf5numawcjhodoiedi');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
     print drupal_render($renderable_array);
+    // housing
+    $whole_block = block_load('facetapi','qvtddqhn4mirms8bzmvb8kcxeq6bq3yg');
+    $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));
+    print drupal_render($renderable_array);
     // financial aid
     $whole_block = block_load('facetapi','gkkn44mzr0b0a0uvm7labhst3ymihpyc');
     $renderable_array = _block_get_renderable_array(_block_render_blocks(array($whole_block)));

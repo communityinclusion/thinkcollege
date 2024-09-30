@@ -67,7 +67,10 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "tc_housing") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Offers Housing";
+      $build['Yes']["#markup"] = "Offers housing";
+    }
+    if (array_key_exists('No', $build)) {
+      $build['No']["#markup"] = "Does not offer housing";
     }
   }
   else if ($settings->facet == "tc_tpsid") {
