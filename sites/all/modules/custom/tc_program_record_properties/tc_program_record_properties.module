@@ -44,6 +44,12 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
            * "Serves students from all school districts" has a yes-no-N/A, and we just want yes/no.
            * No & N/A are No.
            */
+          $info['node']['bundles'][$bundle_type]['properties']['field_prog_district_only'] = array(
+            'type' => 'text',
+            'label' => 'TC:Particular school district',
+            'sanitized' => TRUE,
+            'getter callback' => 'tc_program_record_properties_property_prog_district_only',
+          );
       
           $info['node']['bundles'][$bundle_type]['properties']['tc_housing'] = array(
             'type' => 'text',
@@ -296,7 +302,7 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
  * @return string
  *    'Yes' or 'No'.
  */
-/* function tc_program_record_properties_property_prog_district_only($item) {
+function tc_program_record_properties_property_prog_district_only($item) {
   if (isset($item->field_prog_district_only)) {
     if (isset($item->field_prog_district_only[LANGUAGE_NONE])) {
       if ($item->field_prog_district_only[LANGUAGE_NONE][0]['value']== "Yes") {
@@ -309,7 +315,7 @@ function tc_program_record_properties_entity_property_info_alter(&$info) {
   }
   // will be N/A
   return "Yes";
-} */
+} 
 /*function tc_program_record_properties_property_prog_district_only_affirm($item) {
   if (isset($item->field_prog_district_only)) {
     if (isset($item->field_prog_district_only[LANGUAGE_NONE])) {
