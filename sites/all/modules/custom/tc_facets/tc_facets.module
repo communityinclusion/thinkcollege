@@ -98,7 +98,7 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
       $build['Yes']["#markup"] = "Serves students in High School *";
     }
     if (array_key_exists('No', $build)) {
-      $build['No']["#markup"] = "Does not serve students in High School *";
+      $build['No']["#markup"] = "Does not serve students in High School";
     }
   }
   else if ($settings->facet == "field_prog_district_only") {
