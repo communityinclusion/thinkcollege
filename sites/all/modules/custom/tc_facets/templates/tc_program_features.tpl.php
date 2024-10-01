@@ -1,6 +1,6 @@
 <h3 class="block-title">
   <div class="tc-facet-title">
-    <span class="facet-title">Program Features</span>
+    <span class="facet-title">Dual Enrollment</span>
   </div>
 </h3>
 <?php
@@ -13,19 +13,19 @@
   print render($x);
 
   // Financial Aid.
-  $delta = 'GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc';
-  $y = module_invoke($module, $hook, $delta);
-  print render($y);
+  //$delta = 'GKkN44mzr0b0a0Uvm7LabhsT3ymIHPyc';
+  //$y = module_invoke($module, $hook, $delta);
+  //print render($y);
 
   // Housing
-  $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';
-  $z = module_invoke($module, $hook, $delta);
-  print render($z);
+  // $delta = 'QvTDdqhn4mIrmS8bZMVB8KCXEQ6bq3YG';
+  // $z = module_invoke($module, $hook, $delta);
+  // print render($z);
 
   // Particular school district
-  $delta = 'Msm1jZU9r6FFAzfFekVp0Syud67glduW';
-  $a = module_invoke($module, $hook, $delta);
-  print render($a);
+  // $delta = 'Msm1jZU9r6FFAzfFekVp0Syud67glduW';
+  //  $a = module_invoke($module, $hook, $delta);
+  //print render($a);
 
   // Only put Dual enrollment note on if dual enroll facet is shown.
   if ($x != null) {

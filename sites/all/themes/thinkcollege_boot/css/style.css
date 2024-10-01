@@ -8461,7 +8461,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu li.expanded:hover ul.dropdown-menu {
   font-family: 'museo-sans-condensed', sans-serif;
 }
 
-.region-sidebar-first .block .tc_financial_aid .block-title, .region-sidebar-first .block .tc_housing .block-title,
+
 .region-sidebar-first-top .block .tc_financial_aid .block-title,
 .region-sidebar-first-top .block .tc_housing .block-title,
 .node-resource.view-mode-full .col-sm-4 .field .tc_financial_aid .block-title,
@@ -10917,10 +10917,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   height: 0;
 }
 
-#block-facetapi-gkkn44mzr0b0a0uvm7labhst3ymihpyc .block-title,
-#block-facetapi-qvtddqhn4mirms8bzmvb8kcxeq6bq3yg .block-title {
-  display: none;
-}
+
 
 .block-facetapi li a.tc-select-all {
   font-weight: 800;

@@ -61,10 +61,16 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
     if (array_key_exists('Yes', $build)) {
       $build['Yes']["#markup"] = "Offers Financial Aid (CTP)";
     }
+    if (array_key_exists('No', $build)) {
+      $build['No']["#markup"] = "Does not offer financial aid";
+    }
   }
   else if ($settings->facet == "tc_housing") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Offers Housing";
+      $build['Yes']["#markup"] = "Offers housing";
+    }
+    if (array_key_exists('No', $build)) {
+      $build['No']["#markup"] = "Does not offer housing";
     }
   }
   else if ($settings->facet == "tc_tpsid") {
@@ -89,12 +95,19 @@ function tc_facets_facet_items_alter(&$build, &$settings) {
   }
   else if ($settings->facet == "tc_dual_enroll") {
     if (array_key_exists('Yes', $build)) {
-      $build['Yes']["#markup"] = "Serves Students in High School *";
+      $build['Yes']["#markup"] = "Serves students in High School *";
+    }
+    if (array_key_exists('No', $build)) {
+      $build['No']["#markup"] = "Does not serve students in High School";
     }
   }
   else if ($settings->facet == "field_prog_district_only") {
-    if (array_key_exists("Yes", $build)) {
-      $build["Yes"]["#markup"] = "Program not limited by students' school districts";
+    if (array_key_exists('No', $build)) {
+      $build['No']["#markup"] = "Accepts students from selected districts only";
+     
+    }
+    if (array_key_exists('Yes', $build)) {
+      $build['Yes']["#markup"] = "Admission not limited by school district";
     }
   }
 }
