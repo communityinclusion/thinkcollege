@@ -130,7 +130,7 @@ $classes .= ' node-program-record-card node-tc-card';
         </div>
 
         <div class="program-university">
-          <?php print render($content['field_prog_col_univ_name']); ?>
+        {{node.field_prog_col_univ_name}}
         </div>
 
         <div class="program-location">
