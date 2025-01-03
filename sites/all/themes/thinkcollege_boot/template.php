@@ -137,31 +137,6 @@ function thinkcollege_boot_form_element(&$variables) {
   return $output;
 }
 
-
-/**
-* Preprocesses the wrapping HTML.
-*
-* @param array &$variables
-*   Template variables.
-*/
-function thinkcollege_boot_preprocess_html(&$vars) {
-  
-  // Setup Google Webmasters Verification Meta Tag.
-  $google_webmasters_verification = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'google-site-verification',
-      // REPLACE THIS CODE WITH THE ONE GOOGLE SUPPLIED YOU WITH
-      'content' => 'mK3tUPCwBHF3uP7dwMc4UXulOpbowbyYFDIMhu9ghbE',
-    ),
-  );
-  
-  // Add Google Webmasters Verification Meta Tag to head.
-  drupal_add_html_head($google_webmasters_verification, 'google_webmasters_verification');
-}
-
-
 /**
  * Implements template_preprocess_page().
  *
